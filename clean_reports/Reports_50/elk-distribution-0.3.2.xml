@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445880990" analysisTimestamp="1699447517892" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\elk-distribution-0.3.2.jar</Jar>
+  </Project>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="e73569e75995df59f40233ca12f99040" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions.main(String[])</LongMessage>
+    <Class classname="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" start="53" end="106" sourcefile="QueryingUnnamedClassExpressions.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingUnnamedClassExpressions.java">
+        <Message>At QueryingUnnamedClassExpressions.java:[lines 53-106]</Message>
+      </SourceLine>
+      <Message>In class org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions</Message>
+    </Class>
+    <Method classname="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" start="56" end="106" startBytecode="0" endBytecode="95" sourcefile="QueryingUnnamedClassExpressions.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingUnnamedClassExpressions.java"/>
+      <Message>In method org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions.main(String[])</Message>
+    </Method>
+    <String value="c:/ontologies/ontology.owl" role="FILE_NAME">
+      <Message>File name c:/ontologies/ontology.owl</Message>
+    </String>
+    <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" primary="true" start="60" end="60" startBytecode="18" endBytecode="18" sourcefile="QueryingUnnamedClassExpressions.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingUnnamedClassExpressions.java">
+      <Message>At QueryingUnnamedClassExpressions.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="82f2ef06c60e32f4847941d0d486ff43" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses at new org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" start="68" end="146" sourcefile="QueryingWithNamedClasses.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingWithNamedClasses.java">
+        <Message>At QueryingWithNamedClasses.java:[lines 68-146]</Message>
+      </SourceLine>
+      <Message>In class org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses</Message>
+    </Class>
+    <Method classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" start="68" end="88" startBytecode="0" endBytecode="276" sourcefile="QueryingWithNamedClasses.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingWithNamedClasses.java"/>
+      <Message>In method new org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses()</Message>
+    </Method>
+    <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" primary="true" start="68" end="68" startBytecode="0" endBytecode="0" sourcefile="QueryingWithNamedClasses.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingWithNamedClasses.java">
+      <Message>At QueryingWithNamedClasses.java:[line 68]</Message>
+    </SourceLine>
+    <SourceLine classname="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" start="68" end="68" startBytecode="0" endBytecode="0" sourcefile="QueryingWithNamedClasses.java" sourcepath="org/semanticweb/elk/owlapi/examples/QueryingWithNamedClasses.java">
+      <Message>At QueryingWithNamedClasses.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="53e1b7bde2f022f89694691d64490155" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in org.semanticweb.elk.owlapi.examples.SavingInferredAxioms.main(String[])</LongMessage>
+    <Class classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" start="57" end="92" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java">
+        <Message>At SavingInferredAxioms.java:[lines 57-92]</Message>
+      </SourceLine>
+      <Message>In class org.semanticweb.elk.owlapi.examples.SavingInferredAxioms</Message>
+    </Class>
+    <Method classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" start="61" end="92" startBytecode="0" endBytecode="65" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java"/>
+      <Message>In method org.semanticweb.elk.owlapi.examples.SavingInferredAxioms.main(String[])</Message>
+    </Method>
+    <String value="c:/ontologies/ontology.owl" role="FILE_NAME">
+      <Message>File name c:/ontologies/ontology.owl</Message>
+    </String>
+    <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" primary="true" start="64" end="64" startBytecode="11" endBytecode="11" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java">
+      <Message>At SavingInferredAxioms.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="39700f95cf94e8ad114cce5ef95919b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in org.semanticweb.elk.owlapi.examples.SavingInferredAxioms.main(String[])</LongMessage>
+    <Class classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" start="57" end="92" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java">
+        <Message>At SavingInferredAxioms.java:[lines 57-92]</Message>
+      </SourceLine>
+      <Message>In class org.semanticweb.elk.owlapi.examples.SavingInferredAxioms</Message>
+    </Class>
+    <Method classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" name="main" signature="([Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" start="61" end="92" startBytecode="0" endBytecode="65" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java"/>
+      <Message>In method org.semanticweb.elk.owlapi.examples.SavingInferredAxioms.main(String[])</Message>
+    </Method>
+    <String value="c:/ontologies/result.owl" role="FILE_NAME">
+      <Message>File name c:/ontologies/result.owl</Message>
+    </String>
+    <SourceLine classname="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" primary="true" start="87" end="87" startBytecode="131" endBytecode="131" sourcefile="SavingInferredAxioms.java" sourcepath="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java">
+      <Message>At SavingInferredAxioms.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="DMI_HARDCODED_ABSOLUTE_FILENAME" abbrev="DMI" category="STYLE">
+    <ShortDescription>Code contains a hard coded reference to an absolute pathname</ShortDescription>
+    <Details><![CDATA[
+
+<p>This code constructs a File object using a hard coded to an absolute pathname
+(e.g., <code>new File("/home/dannyc/workspace/j2ee/src/share/com/sun/enterprise/deployment");</code>
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DMI" cweid="440">
+    <Description>Dubious method invocation</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>org.coode.owlapi.manchesterowlsyntax.ManchesterOWLSyntaxEditorParser</MissingClass>
+    <MissingClass>org.semanticweb.elk.owlapi.ElkReasonerFactory</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.apibinding.OWLManager</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.expression.OWLEntityChecker</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.expression.ParserException</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.expression.ShortFormEntityChecker</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.IRI</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLAxiom</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLClass</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLClassExpression</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLDataFactory</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLEntity</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLObjectPropertyExpression</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLOntology</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLOntologyCreationException</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLOntologyManager</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.OWLOntologyStorageException</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.model.PrefixManager</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.reasoner.InferenceType</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.reasoner.Node</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.reasoner.NodeSet</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.reasoner.OWLReasoner</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.reasoner.OWLReasonerFactory</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.BidirectionalShortFormProvider</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.BidirectionalShortFormProviderAdapter</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.DefaultPrefixManager</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.InferredEquivalentClassAxiomGenerator</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.InferredOntologyGenerator</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.ShortFormProvider</MissingClass>
+    <MissingClass>org.semanticweb.owlapi.util.SimpleShortFormProvider</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:00 +0900" total_classes="4" referenced_classes="24" total_bugs="4" total_size="96" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.44" clock_seconds="0.96" peak_mbytes="222.09" alloc_mbytes="4078.00" gc_seconds="0.01" priority_2="4">
+    <FileStats path="org/semanticweb/elk/owlapi/examples/QueryingUnnamedClassExpressions.java" bugCount="1" size="24" bugHash="1934e897d1d2f5168ab9642111e957aa"/>
+    <FileStats path="org/semanticweb/elk/owlapi/examples/QueryingWithNamedClasses.java" bugCount="1" size="40" bugHash="1a655e2900f1a482498b107bd35a6168"/>
+    <FileStats path="org/semanticweb/elk/owlapi/examples/RetrievingInstances.java" bugCount="0" size="14"/>
+    <FileStats path="org/semanticweb/elk/owlapi/examples/SavingInferredAxioms.java" bugCount="2" size="18" bugHash="2f239c76eee97598090f0d605d25caed"/>
+    <PackageStats package="org.semanticweb.elk.owlapi.examples" total_bugs="4" total_types="4" total_size="96" priority_2="4">
+      <ClassStats class="org.semanticweb.elk.owlapi.examples.QueryingUnnamedClassExpressions" sourceFile="QueryingUnnamedClassExpressions.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="org.semanticweb.elk.owlapi.examples.QueryingWithNamedClasses" sourceFile="QueryingWithNamedClasses.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="org.semanticweb.elk.owlapi.examples.RetrievingInstances" sourceFile="RetrievingInstances.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.semanticweb.elk.owlapi.examples.SavingInferredAxioms" sourceFile="SavingInferredAxioms.java" interface="false" size="18" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="184" invocations="488" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="21678" standardDeviationMicrosecondsPerInvocation="1200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="42" invocations="24" avgMicrosecondsPerInvocation="1754" maxMicrosecondsPerInvocation="7844" standardDeviationMicrosecondsPerInvocation="2169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="33" invocations="119" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="2584" standardDeviationMicrosecondsPerInvocation="353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="32" invocations="492" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="8427" standardDeviationMicrosecondsPerInvocation="402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="24" invocations="24" avgMicrosecondsPerInvocation="1020" maxMicrosecondsPerInvocation="3859" standardDeviationMicrosecondsPerInvocation="1201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="20" invocations="65" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="11719" standardDeviationMicrosecondsPerInvocation="1451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="417" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="875" standardDeviationMicrosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="18" invocations="4" avgMicrosecondsPerInvocation="4530" maxMicrosecondsPerInvocation="16398" standardDeviationMicrosecondsPerInvocation="6852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="16" invocations="10" avgMicrosecondsPerInvocation="1662" maxMicrosecondsPerInvocation="8294" standardDeviationMicrosecondsPerInvocation="2439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="24" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="5402" standardDeviationMicrosecondsPerInvocation="1104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="16" invocations="10" avgMicrosecondsPerInvocation="1615" maxMicrosecondsPerInvocation="14556" standardDeviationMicrosecondsPerInvocation="4317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="15" invocations="10" avgMicrosecondsPerInvocation="1562" maxMicrosecondsPerInvocation="5915" standardDeviationMicrosecondsPerInvocation="1669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="14" invocations="10" avgMicrosecondsPerInvocation="1429" maxMicrosecondsPerInvocation="10601" standardDeviationMicrosecondsPerInvocation="3064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="10" avgMicrosecondsPerInvocation="1355" maxMicrosecondsPerInvocation="7899" standardDeviationMicrosecondsPerInvocation="2257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="13" invocations="24" avgMicrosecondsPerInvocation="555" maxMicrosecondsPerInvocation="2599" standardDeviationMicrosecondsPerInvocation="745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="11" invocations="24" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="5796" standardDeviationMicrosecondsPerInvocation="1150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="11" invocations="10" avgMicrosecondsPerInvocation="1140" maxMicrosecondsPerInvocation="3875" standardDeviationMicrosecondsPerInvocation="1153"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

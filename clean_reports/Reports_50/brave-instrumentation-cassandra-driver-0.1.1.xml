@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445902355" analysisTimestamp="1699447469811" release="">
+  <Project projectName="">
+    <Jar>./clean50\\brave-instrumentation-cassandra-driver-0.1.1.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="33">
+    <MissingClass>brave.Span</MissingClass>
+    <MissingClass>brave.Span$Kind</MissingClass>
+    <MissingClass>brave.SpanCustomizer</MissingClass>
+    <MissingClass>brave.Tracer</MissingClass>
+    <MissingClass>brave.Tracing</MissingClass>
+    <MissingClass>brave.propagation.Propagation</MissingClass>
+    <MissingClass>brave.propagation.Propagation$Setter</MissingClass>
+    <MissingClass>brave.propagation.SamplingFlags</MissingClass>
+    <MissingClass>brave.propagation.TraceContext</MissingClass>
+    <MissingClass>brave.propagation.TraceContext$Injector</MissingClass>
+    <MissingClass>com.datastax.driver.core.AbstractSession</MissingClass>
+    <MissingClass>com.datastax.driver.core.BoundStatement</MissingClass>
+    <MissingClass>com.datastax.driver.core.Cluster</MissingClass>
+    <MissingClass>com.datastax.driver.core.Configuration</MissingClass>
+    <MissingClass>com.datastax.driver.core.ExecutionInfo</MissingClass>
+    <MissingClass>com.datastax.driver.core.Host</MissingClass>
+    <MissingClass>com.datastax.driver.core.PreparedStatement</MissingClass>
+    <MissingClass>com.datastax.driver.core.ProtocolOptions</MissingClass>
+    <MissingClass>com.datastax.driver.core.ProtocolVersion</MissingClass>
+    <MissingClass>com.datastax.driver.core.RegularStatement</MissingClass>
+    <MissingClass>com.datastax.driver.core.ResultSet</MissingClass>
+    <MissingClass>com.datastax.driver.core.ResultSetFuture</MissingClass>
+    <MissingClass>com.datastax.driver.core.Session</MissingClass>
+    <MissingClass>com.datastax.driver.core.Session$State</MissingClass>
+    <MissingClass>com.datastax.driver.core.SimpleStatement</MissingClass>
+    <MissingClass>com.datastax.driver.core.Statement</MissingClass>
+    <MissingClass>com.google.common.base.CaseFormat</MissingClass>
+    <MissingClass>com.google.common.util.concurrent.FutureCallback</MissingClass>
+    <MissingClass>com.google.common.util.concurrent.Futures</MissingClass>
+    <MissingClass>com.google.common.util.concurrent.ListenableFuture</MissingClass>
+    <MissingClass>zipkin.Endpoint</MissingClass>
+    <MissingClass>zipkin.Endpoint$Builder</MissingClass>
+    <MissingClass>zipkin.internal.Util</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:22 +0900" total_classes="14" referenced_classes="41" total_bugs="0" total_size="280" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.58" clock_seconds="1.17" peak_mbytes="219.24" alloc_mbytes="4078.00" gc_seconds="0.01">
+    <FileStats path="brave/cassandra/driver/&lt;Unknown&gt;" bugCount="0" size="9"/>
+    <FileStats path="brave/cassandra/driver/AutoValue_CassandraClientTracing.java" bugCount="0" size="94"/>
+    <FileStats path="brave/cassandra/driver/CassandraClientParser.java" bugCount="0" size="20"/>
+    <FileStats path="brave/cassandra/driver/CassandraClientSampler.java" bugCount="0" size="23"/>
+    <FileStats path="brave/cassandra/driver/CassandraClientTracing.java" bugCount="0" size="27"/>
+    <FileStats path="brave/cassandra/driver/CassandraTraceKeys.java" bugCount="0" size="6"/>
+    <FileStats path="brave/cassandra/driver/TracingSession.java" bugCount="0" size="100"/>
+    <FileStats path="brave/cassandra/driver/package-info.java" bugCount="0" size="1"/>
+    <PackageStats package="brave.cassandra.driver" total_bugs="0" total_types="14" total_size="280">
+      <ClassStats class="brave.cassandra.driver.AutoValue_CassandraClientTracing" sourceFile="AutoValue_CassandraClientTracing.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.AutoValue_CassandraClientTracing$1" sourceFile="AutoValue_CassandraClientTracing.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.AutoValue_CassandraClientTracing$Builder" sourceFile="AutoValue_CassandraClientTracing.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientParser" sourceFile="CassandraClientParser.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientSampler" sourceFile="CassandraClientSampler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientSampler$1" sourceFile="CassandraClientSampler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientSampler$2" sourceFile="CassandraClientSampler.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientTracing" sourceFile="CassandraClientTracing.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraClientTracing$Builder" sourceFile="CassandraClientTracing.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.CassandraTraceKeys" sourceFile="CassandraTraceKeys.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.TracingSession" sourceFile="TracingSession.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.TracingSession$$Lambda$1" sourceFile="&lt;Unknown&gt;" interface="false" size="9" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.TracingSession$1" sourceFile="TracingSession.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="brave.cassandra.driver.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="225" invocations="523" avgMicrosecondsPerInvocation="430" maxMicrosecondsPerInvocation="12312" standardDeviationMicrosecondsPerInvocation="990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="53" invocations="41" avgMicrosecondsPerInvocation="1298" maxMicrosecondsPerInvocation="9557" standardDeviationMicrosecondsPerInvocation="2318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="41" avgMicrosecondsPerInvocation="1079" maxMicrosecondsPerInvocation="14697" standardDeviationMicrosecondsPerInvocation="2500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="161" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="2267" standardDeviationMicrosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="31" invocations="533" avgMicrosecondsPerInvocation="58" maxMicrosecondsPerInvocation="2304" standardDeviationMicrosecondsPerInvocation="141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="85" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="11891" standardDeviationMicrosecondsPerInvocation="1322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="452" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="934" standardDeviationMicrosecondsPerInvocation="98"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="21" invocations="72" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="15618" standardDeviationMicrosecondsPerInvocation="1823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="19" invocations="61" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="3755" standardDeviationMicrosecondsPerInvocation="601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="19" invocations="62" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="7130" standardDeviationMicrosecondsPerInvocation="912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="41" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="6085" standardDeviationMicrosecondsPerInvocation="1023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="16" invocations="61" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="6334" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="16" invocations="62" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="5584" standardDeviationMicrosecondsPerInvocation="728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="15" invocations="60" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="2195" standardDeviationMicrosecondsPerInvocation="367"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="41" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="2749" standardDeviationMicrosecondsPerInvocation="695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="41" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="7584" standardDeviationMicrosecondsPerInvocation="1181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="13" invocations="61" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="1749" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="12" invocations="41" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="2086" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="11" invocations="14" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="5996" standardDeviationMicrosecondsPerInvocation="1993"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

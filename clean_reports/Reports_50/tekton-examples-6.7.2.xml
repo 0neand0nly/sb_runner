@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699448050293" analysisTimestamp="1699448144536" release="">
+  <Project projectName="">
+    <Jar>./clean50/temp\\tekton-examples-6.7.2.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="46718468e3e13b12a39add3483ddb0c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.fabric8.tekton.api.examples.ClientFactory at new io.fabric8.tekton.api.examples.ClientFactory() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.fabric8.tekton.api.examples.ClientFactory" primary="true">
+      <SourceLine classname="io.fabric8.tekton.api.examples.ClientFactory" start="23" end="64" sourcefile="ClientFactory.java" sourcepath="io/fabric8/tekton/api/examples/ClientFactory.java">
+        <Message>At ClientFactory.java:[lines 23-64]</Message>
+      </SourceLine>
+      <Message>In class io.fabric8.tekton.api.examples.ClientFactory</Message>
+    </Class>
+    <Method classname="io.fabric8.tekton.api.examples.ClientFactory" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.fabric8.tekton.api.examples.ClientFactory" start="23" end="24" startBytecode="0" endBytecode="59" sourcefile="ClientFactory.java" sourcepath="io/fabric8/tekton/api/examples/ClientFactory.java"/>
+      <Message>In method new io.fabric8.tekton.api.examples.ClientFactory()</Message>
+    </Method>
+    <SourceLine classname="io.fabric8.tekton.api.examples.ClientFactory" primary="true" start="24" end="24" startBytecode="13" endBytecode="13" sourcefile="ClientFactory.java" sourcepath="io/fabric8/tekton/api/examples/ClientFactory.java">
+      <Message>At ClientFactory.java:[line 24]</Message>
+    </SourceLine>
+    <SourceLine classname="io.fabric8.tekton.api.examples.ClientFactory" start="24" end="24" startBytecode="13" endBytecode="13" sourcefile="ClientFactory.java" sourcepath="io/fabric8/tekton/api/examples/ClientFactory.java">
+      <Message>At ClientFactory.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="54">
+    <MissingClass>io.fabric8.knative.internal.pkg.apis.Condition</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.api.model.ObjectMeta</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.Config</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.ConfigBuilder</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.MixedOperation</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.NonNamespaceOperation</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.Resource</MissingClass>
+    <MissingClass>io.fabric8.tekton.client.DefaultTektonClient</MissingClass>
+    <MissingClass>io.fabric8.tekton.client.TektonClient</MissingClass>
+    <MissingClass>io.fabric8.tekton.client.dsl.V1APIGroupDSL</MissingClass>
+    <MissingClass>io.fabric8.tekton.client.dsl.V1beta1APIGroupDSL</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.PipelineList</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.Step</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.StepBuilder</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.Task</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskBuilder</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskFluent$MetadataNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskFluent$SpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRun</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunBuilder</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunFluent$MetadataNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunFluent$SpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunList</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunSpecFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunSpecFluent$TaskRefNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1.TaskRunStatus</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.Task</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskBuilder</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskFluent$MetadataNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskFluent$SpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskList</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskResourceBindingFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskResourceBindingFluent$ResourceSpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskResourcesFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskResourcesFluent$InputsNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRun</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunBuilder</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunFluent$MetadataNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunFluent$SpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunList</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunResourcesFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunResourcesFluent$InputsNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunSpecFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunSpecFluent$ResourcesNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskRunSpecFluent$TaskSpecNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskSpecFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskSpecFluent$ResourcesNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.pipeline.v1beta1.TaskSpecFluent$StepsNested</MissingClass>
+    <MissingClass>io.fabric8.tekton.v1beta1.internal.pipeline.pkg.apis.resource.v1alpha1.PipelineResourceSpecFluent</MissingClass>
+    <MissingClass>io.fabric8.tekton.v1beta1.internal.pipeline.pkg.apis.resource.v1alpha1.PipelineResourceSpecFluent$ParamsNested</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:54:10 +0900" total_classes="6" referenced_classes="31" total_bugs="1" total_size="143" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.69" clock_seconds="1.16" peak_mbytes="222.49" alloc_mbytes="4078.00" gc_seconds="0.02" priority_2="1">
+    <FileStats path="io/fabric8/tekton/api/examples/ClientFactory.java" bugCount="1" size="27" bugHash="cf22e428443d02f9239f5ae3deb73fbb"/>
+    <FileStats path="io/fabric8/tekton/api/examples/PipelineList.java" bugCount="0" size="11"/>
+    <FileStats path="io/fabric8/tekton/api/examples/TaskCreate.java" bugCount="0" size="25"/>
+    <FileStats path="io/fabric8/tekton/api/examples/TaskRunCancel.java" bugCount="0" size="18"/>
+    <FileStats path="io/fabric8/tekton/api/examples/TaskRunCreate.java" bugCount="0" size="28"/>
+    <FileStats path="io/fabric8/tekton/api/examples/v1beta1/TaskRunCreate.java" bugCount="0" size="34"/>
+    <PackageStats package="io.fabric8.tekton.api.examples" total_bugs="1" total_types="5" total_size="109" priority_2="1">
+      <ClassStats class="io.fabric8.tekton.api.examples.ClientFactory" sourceFile="ClientFactory.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="io.fabric8.tekton.api.examples.PipelineList" sourceFile="PipelineList.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.fabric8.tekton.api.examples.TaskCreate" sourceFile="TaskCreate.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="io.fabric8.tekton.api.examples.TaskRunCancel" sourceFile="TaskRunCancel.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.fabric8.tekton.api.examples.TaskRunCreate" sourceFile="TaskRunCreate.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.fabric8.tekton.api.examples.v1beta1" total_bugs="0" total_types="1" total_size="34">
+      <ClassStats class="io.fabric8.tekton.api.examples.v1beta1.TaskRunCreate" sourceFile="TaskRunCreate.java" interface="false" size="34" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="190" invocations="556" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="14356" standardDeviationMicrosecondsPerInvocation="925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="31" avgMicrosecondsPerInvocation="1899" maxMicrosecondsPerInvocation="10323" standardDeviationMicrosecondsPerInvocation="2514"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="40" invocations="89" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="28221" standardDeviationMicrosecondsPerInvocation="2980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="31" avgMicrosecondsPerInvocation="1101" maxMicrosecondsPerInvocation="5990" standardDeviationMicrosecondsPerInvocation="1415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="31" invocations="128" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="2102" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="6" avgMicrosecondsPerInvocation="5114" maxMicrosecondsPerInvocation="15826" standardDeviationMicrosecondsPerInvocation="5710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="27" invocations="559" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="3559" standardDeviationMicrosecondsPerInvocation="166"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="31" avgMicrosecondsPerInvocation="848" maxMicrosecondsPerInvocation="21014" standardDeviationMicrosecondsPerInvocation="3692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="13" avgMicrosecondsPerInvocation="1951" maxMicrosecondsPerInvocation="8515" standardDeviationMicrosecondsPerInvocation="2863"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="25" invocations="13" avgMicrosecondsPerInvocation="1935" maxMicrosecondsPerInvocation="12791" standardDeviationMicrosecondsPerInvocation="3325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="13" avgMicrosecondsPerInvocation="1764" maxMicrosecondsPerInvocation="11531" standardDeviationMicrosecondsPerInvocation="3035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="21" invocations="13" avgMicrosecondsPerInvocation="1659" maxMicrosecondsPerInvocation="11308" standardDeviationMicrosecondsPerInvocation="2960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="20" invocations="13" avgMicrosecondsPerInvocation="1610" maxMicrosecondsPerInvocation="16902" standardDeviationMicrosecondsPerInvocation="4425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="20" invocations="13" avgMicrosecondsPerInvocation="1602" maxMicrosecondsPerInvocation="7988" standardDeviationMicrosecondsPerInvocation="2408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="19" invocations="13" avgMicrosecondsPerInvocation="1533" maxMicrosecondsPerInvocation="5736" standardDeviationMicrosecondsPerInvocation="1914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="457" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="605" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="18" invocations="31" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="5310" standardDeviationMicrosecondsPerInvocation="993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="31" avgMicrosecondsPerInvocation="525" maxMicrosecondsPerInvocation="2159" standardDeviationMicrosecondsPerInvocation="662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="31" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="1586" standardDeviationMicrosecondsPerInvocation="433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="321" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="7755" standardDeviationMicrosecondsPerInvocation="440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="12" invocations="31" avgMicrosecondsPerInvocation="401" maxMicrosecondsPerInvocation="5299" standardDeviationMicrosecondsPerInvocation="962"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

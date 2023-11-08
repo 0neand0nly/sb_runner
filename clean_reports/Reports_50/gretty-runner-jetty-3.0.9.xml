@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445894961" analysisTimestamp="1699447524396" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\gretty-runner-jetty-3.0.9.jar</Jar>
+  </Project>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="d07c8a1ad5c0b0eb135d7958f60aa03e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerConfigurer.$callSiteArray in org.akhikhl.gretty.JettyServerConfigurer.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="27" end="136" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[lines 27-136]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerConfigurer" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" startBytecode="0" endBytecode="17" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerConfigurer.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerConfigurer.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" startBytecode="0" endBytecode="32" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="ebe63246df2ff62fde05a63f07660c0c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method $getStaticMetaClass is called from constructor new org.akhikhl.gretty.JettyServerConfigurer(JettyConfigurer, Map).</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="27" end="136" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[lines 27-136]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerConfigurer" name="&lt;init&gt;" signature="(Lorg/akhikhl/gretty/JettyConfigurer;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="27" end="29" startBytecode="0" endBytecode="177" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy"/>
+      <Message>In method new org.akhikhl.gretty.JettyServerConfigurer(JettyConfigurer, Map)</Message>
+    </Method>
+    <String value="$getStaticMetaClass">
+      <Message>Value $getStaticMetaClass</Message>
+    </String>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" startBytecode="9" endBytecode="9" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="e7752fa12ab8ae373a08985b2fae6dbd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerConfigurer.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="27" end="136" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[lines 27-136]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerConfigurer.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy" synthetic="true">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="3" rank="19" abbrev="NP" category="STYLE" instanceHash="ec5e8e5a4755a4bde16e05e07cec4416" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.akhikhl.gretty.JettyServerConfigurer.configureWithBaseResource(Map, Object)</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="27" end="136" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[lines 27-136]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerConfigurer" name="configureWithBaseResource" signature="(Ljava/util/Map;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" start="34" end="58" startBytecode="0" endBytecode="288" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerConfigurer.configureWithBaseResource(Map, Object)</Message>
+    </Method>
+    <LocalVariable name="realmConfigFile" register="8" pc="214" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from realmConfigFile</Message>
+    </LocalVariable>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer" primary="true" start="40" end="40" startBytecode="214" endBytecode="214" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+      <Message>At JettyServerConfigurer.groovy:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="954f774cc432ce612eae93fe15a846df" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.$callSiteArray in org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" start="80" end="80" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[line 80]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" startBytecode="0" endBytecode="17" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" startBytecode="0" endBytecode="32" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="959e6af50e486ed3c370891f7f64d666" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" start="80" end="80" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[line 80]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy" synthetic="true">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="c621280fd3ab2365c6d68fd9a037d58a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.$callSiteArray in org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" start="96" end="96" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[line 96]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" startBytecode="0" endBytecode="17" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" startBytecode="0" endBytecode="32" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="38fe25c391abfc5608cc8918243a0b89" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" start="96" end="96" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>At JettyServerConfigurer.groovy:[line 96]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy">
+        <Message>In JettyServerConfigurer.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" sourcefile="JettyServerConfigurer.groovy" sourcepath="org/akhikhl/gretty/JettyServerConfigurer.groovy" synthetic="true">
+      <Message>In JettyServerConfigurer.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" instanceHash="aa08af74e8e254aa67c8304e2cdf1092" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is final but declares protected field</ShortMessage>
+    <LongMessage>Class org.akhikhl.gretty.JettyServerManager is final but declares protected field org.akhikhl.gretty.JettyServerManager.params</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="23" end="114" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 23-114]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager" name="params" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager.params</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" instanceHash="19d4ac264b067565ac49cdeb7c57c93a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is final but declares protected field</ShortMessage>
+    <LongMessage>Class org.akhikhl.gretty.JettyServerManager is final but declares protected field org.akhikhl.gretty.JettyServerManager.server</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="23" end="114" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 23-114]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager" name="server" signature="Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager.server</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="5de3fec1dc0b75adc852a1208efeecc7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerManager.$callSiteArray in org.akhikhl.gretty.JettyServerManager.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="23" end="114" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 23-114]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" startBytecode="0" endBytecode="17" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerManager.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager" startBytecode="0" endBytecode="32" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="8b83b4b98eb780517b3a3242172bf75" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerManager.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="23" end="114" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 23-114]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="3" rank="19" abbrev="NP" category="STYLE" instanceHash="ec37ff0479fffbce9d5bfe835f68c57a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.akhikhl.gretty.JettyServerManager.stopServer()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="23" end="114" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 23-114]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager" name="stopServer" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" start="97" end="102" startBytecode="0" endBytecode="48" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager.stopServer()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager" name="server" signature="Ljava/lang/Object;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.akhikhl.gretty.JettyServerManager.server</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager" primary="true" start="100" end="100" startBytecode="65" endBytecode="65" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>At JettyServerManager.groovy:[line 100]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="5a8ead0ddc935f8c2e0af868985e62a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.$callSiteArray in org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" start="110" end="111" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 110-111]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure1</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" startBytecode="0" endBytecode="17" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" startBytecode="0" endBytecode="32" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="b2595d466dc7ff1c9b09b4a1cf979d59" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" start="110" end="111" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 110-111]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure1</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager$_redeploy_closure1.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="72dc71624cf1be9b656a10007a090b0d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.$callSiteArray in org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" start="115" end="115" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[line 115]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure2</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" startBytecode="0" endBytecode="17" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" startBytecode="0" endBytecode="32" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="cc560b2b5c1913244537d3c2a3921ff5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" start="115" end="115" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[line 115]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure2</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="4c69ec7d707f8d5879ab0036fbafed8d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.$callSiteArray in org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" start="115" end="115" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[line 115]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" startBytecode="0" endBytecode="17" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" startBytecode="0" endBytecode="32" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="86b8c8a7f0150509623d1f9613dbdd15" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" start="115" end="115" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[line 115]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="b4dc80bfc5e69a930a65861d53aa31fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.$callSiteArray in org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" start="117" end="119" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 117-119]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure3</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" startBytecode="0" endBytecode="17" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" startBytecode="0" endBytecode="32" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="25f23176a2e34ca82f56416495da95e5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" start="117" end="119" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>At JettyServerManager.groovy:[lines 117-119]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerManager$_redeploy_closure3</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy">
+        <Message>In JettyServerManager.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerManager$_redeploy_closure3.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" sourcefile="JettyServerManager.groovy" sourcepath="org/akhikhl/gretty/JettyServerManager.groovy" synthetic="true">
+      <Message>In JettyServerManager.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="edfbd269bc3d2a4d6757884884b42959" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerStartInfo.$callSiteArray in org.akhikhl.gretty.JettyServerStartInfo.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" start="26" end="91" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerStartInfo" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" startBytecode="0" endBytecode="17" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerStartInfo.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerStartInfo.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" startBytecode="0" endBytecode="32" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="1e858ed69365e63d4f0436b3b5422230" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method $getStaticMetaClass is called from constructor new org.akhikhl.gretty.JettyServerStartInfo().</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" start="26" end="91" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerStartInfo" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" start="26" end="26" startBytecode="0" endBytecode="101" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy"/>
+      <Message>In method new org.akhikhl.gretty.JettyServerStartInfo()</Message>
+    </Method>
+    <String value="$getStaticMetaClass">
+      <Message>Value $getStaticMetaClass</Message>
+    </String>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" startBytecode="9" endBytecode="9" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="9cb83cc9cd212f7412452378b55fbc41" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerStartInfo.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" start="26" end="91" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerStartInfo.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy" synthetic="true">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="b30957665fd7ec218ec41473f34afadb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.$callSiteArray in org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" start="31" end="31" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[line 31]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" startBytecode="0" endBytecode="17" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" startBytecode="0" endBytecode="32" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="cfcbb165e6cf60596b0fd372677df695" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" start="31" end="31" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[line 31]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy" synthetic="true">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="32237be6c1b82a9c5503a4d1ffbf89c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.$callSiteArray in org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" start="42" end="73" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[lines 42-73]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" startBytecode="0" endBytecode="17" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy"/>
+      <Message>In method org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" startBytecode="0" endBytecode="32" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="feef3d52321944040b502c03e2e0258b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" start="42" end="73" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>At JettyServerStartInfo.groovy:[lines 42-73]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy">
+        <Message>In JettyServerStartInfo.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" sourcefile="JettyServerStartInfo.groovy" sourcepath="org/akhikhl/gretty/JettyServerStartInfo.groovy" synthetic="true">
+      <Message>In JettyServerStartInfo.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="3c87949ded0d1d3c782dcaec04880007" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.akhikhl.gretty.ServerManagerFactory.$callSiteArray in org.akhikhl.gretty.ServerManagerFactory.$getCallSiteArray()</LongMessage>
+    <Class classname="org.akhikhl.gretty.ServerManagerFactory" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" start="22" end="23" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+        <Message>At ServerManagerFactory.groovy:[lines 22-23]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.ServerManagerFactory</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.ServerManagerFactory" name="$getCallSiteArray" signature="()[Lorg/codehaus/groovy/runtime/callsite/CallSite;" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" startBytecode="0" endBytecode="17" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy"/>
+      <Message>In method org.akhikhl.gretty.ServerManagerFactory.$getCallSiteArray()</Message>
+    </Method>
+    <Field classname="org.akhikhl.gretty.ServerManagerFactory" name="$callSiteArray" signature="Ljava/lang/ref/SoftReference;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+        <Message>In ServerManagerFactory.groovy</Message>
+      </SourceLine>
+      <Message>On field org.akhikhl.gretty.ServerManagerFactory.$callSiteArray</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" startBytecode="0" endBytecode="32" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+      <Message>In ServerManagerFactory.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="9aae7c6b71da7759468affe1b9701fe0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method $getStaticMetaClass is called from constructor new org.akhikhl.gretty.ServerManagerFactory().</LongMessage>
+    <Class classname="org.akhikhl.gretty.ServerManagerFactory" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" start="22" end="23" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+        <Message>At ServerManagerFactory.groovy:[lines 22-23]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.ServerManagerFactory</Message>
+    </Class>
+    <Method classname="org.akhikhl.gretty.ServerManagerFactory" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy"/>
+      <Message>In method new org.akhikhl.gretty.ServerManagerFactory()</Message>
+    </Method>
+    <String value="$getStaticMetaClass">
+      <Message>Value $getStaticMetaClass</Message>
+    </String>
+    <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" startBytecode="9" endBytecode="9" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+      <Message>In ServerManagerFactory.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="113099aac28ac7f0d76a739a2bf8e4ce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.akhikhl.gretty.ServerManagerFactory.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.akhikhl.gretty.ServerManagerFactory" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" start="22" end="23" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+        <Message>At ServerManagerFactory.groovy:[lines 22-23]</Message>
+      </SourceLine>
+      <Message>In class org.akhikhl.gretty.ServerManagerFactory</Message>
+    </Class>
+    <Field classname="org.akhikhl.gretty.ServerManagerFactory" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy">
+        <Message>In ServerManagerFactory.groovy</Message>
+      </SourceLine>
+      <Message>Field org.akhikhl.gretty.ServerManagerFactory.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.akhikhl.gretty.ServerManagerFactory" sourcefile="ServerManagerFactory.groovy" sourcepath="org/akhikhl/gretty/ServerManagerFactory.groovy" synthetic="true">
+      <Message>In ServerManagerFactory.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="LI_LAZY_INIT_STATIC" abbrev="LI" category="MT_CORRECTNESS" cweid="543">
+    <ShortDescription>Incorrect lazy initialization of static field</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains an unsynchronized lazy initialization of a non-volatile static field.
+Because the compiler or processor may reorder instructions,
+threads are not guaranteed to see a completely initialized object,
+<em>if the method can be called by multiple threads</em>.
+You can make the field volatile to correct the problem.
+For more information, see the
+<a href="http://www.cs.umd.edu/~pugh/java/memoryModel/">Java Memory Model web site</a>.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CI_CONFUSED_INHERITANCE" abbrev="CI" category="STYLE">
+    <ShortDescription>Class is final but declares protected field</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This class is declared to be final, but declares fields to be protected. Since the class
+      is final, it cannot be derived from, and the use of protected is confusing. The access
+      modifier for the field should be changed to private or public to represent the true
+      use for the field.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="CI">
+    <Description>Confused Inheritance</Description>
+  </BugCode>
+  <BugCode abbrev="LI">
+    <Description>Unsynchronized Lazy Initialization</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>groovy.lang.Closure</MissingClass>
+    <MissingClass>groovy.lang.GroovyObject</MissingClass>
+    <MissingClass>groovy.lang.MetaClass</MissingClass>
+    <MissingClass>groovy.lang.Reference</MissingClass>
+    <MissingClass>org.akhikhl.gretty.ServerManager</MissingClass>
+    <MissingClass>org.akhikhl.gretty.ServerStartEvent</MissingClass>
+    <MissingClass>org.codehaus.groovy.reflection.ClassInfo</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.BytecodeInterface8</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.GStringImpl</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.GeneratedClosure</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.ScriptBytecodeAdapter</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.callsite.CallSite</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.callsite.CallSiteArray</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.powerassert.AssertionRenderer</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.powerassert.ValueRecorder</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.typehandling.ShortTypeHandling</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:14 +0900" total_classes="14" referenced_classes="35" total_bugs="31" total_size="386" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.25" clock_seconds="1.62" peak_mbytes="235.67" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="31">
+    <FileStats path="org/akhikhl/gretty/BaseResourceConfiguration.groovy" bugCount="0" size="3"/>
+    <FileStats path="org/akhikhl/gretty/JettyConfigurer.groovy" bugCount="0" size="20"/>
+    <FileStats path="org/akhikhl/gretty/JettyServerConfigurer.groovy" bugCount="8" size="129" bugHash="32c368b69332bcba964d1b8ab945d3c0"/>
+    <FileStats path="org/akhikhl/gretty/JettyServerManager.groovy" bugCount="13" size="129" bugHash="a0f0a7d4c24b92efb6992a5cfcc1c287"/>
+    <FileStats path="org/akhikhl/gretty/JettyServerStartInfo.groovy" bugCount="7" size="87" bugHash="a9478b067c12de1635c016fc29be5f63"/>
+    <FileStats path="org/akhikhl/gretty/ServerManagerFactory.groovy" bugCount="3" size="18" bugHash="1c6545caeaf93597471658210447f26f"/>
+    <PackageStats package="org.akhikhl.gretty" total_bugs="31" total_types="14" total_size="386" priority_3="31">
+      <ClassStats class="org.akhikhl.gretty.BaseResourceConfiguration" sourceFile="BaseResourceConfiguration.groovy" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.akhikhl.gretty.JettyConfigurer" sourceFile="JettyConfigurer.groovy" interface="true" size="20" bugs="0"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerConfigurer" sourceFile="JettyServerConfigurer.groovy" interface="false" size="104" bugs="4" priority_3="4"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure1" sourceFile="JettyServerConfigurer.groovy" interface="false" size="11" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerConfigurer$_createContext_closure2" sourceFile="JettyServerConfigurer.groovy" interface="false" size="14" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerManager" sourceFile="JettyServerManager.groovy" interface="false" size="77" bugs="5" priority_3="5"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerManager$_redeploy_closure1" sourceFile="JettyServerManager.groovy" interface="false" size="13" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2" sourceFile="JettyServerManager.groovy" interface="false" size="11" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerManager$_redeploy_closure2$_closure4" sourceFile="JettyServerManager.groovy" interface="false" size="14" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerManager$_redeploy_closure3" sourceFile="JettyServerManager.groovy" interface="false" size="14" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerStartInfo" sourceFile="JettyServerStartInfo.groovy" interface="false" size="37" bugs="3" priority_3="3"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure1" sourceFile="JettyServerStartInfo.groovy" interface="false" size="12" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.JettyServerStartInfo$_getInfo_closure2" sourceFile="JettyServerStartInfo.groovy" interface="false" size="38" bugs="2" priority_3="2"/>
+      <ClassStats class="org.akhikhl.gretty.ServerManagerFactory" sourceFile="ServerManagerFactory.groovy" interface="false" size="18" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="171" invocations="470" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="12181" standardDeviationMicrosecondsPerInvocation="916"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="68" invocations="114" avgMicrosecondsPerInvocation="603" maxMicrosecondsPerInvocation="12421" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="62" invocations="116" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="16869" standardDeviationMicrosecondsPerInvocation="1970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="59" invocations="114" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="10367" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="114" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="12680" standardDeviationMicrosecondsPerInvocation="1501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="48" invocations="114" avgMicrosecondsPerInvocation="421" maxMicrosecondsPerInvocation="11656" standardDeviationMicrosecondsPerInvocation="1258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="44" invocations="35" avgMicrosecondsPerInvocation="1274" maxMicrosecondsPerInvocation="6916" standardDeviationMicrosecondsPerInvocation="1766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="36" invocations="200" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="2842" standardDeviationMicrosecondsPerInvocation="323"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="35" invocations="35" avgMicrosecondsPerInvocation="1011" maxMicrosecondsPerInvocation="6451" standardDeviationMicrosecondsPerInvocation="1404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="35" invocations="114" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="7573" standardDeviationMicrosecondsPerInvocation="774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="32" invocations="14" avgMicrosecondsPerInvocation="2289" maxMicrosecondsPerInvocation="19436" standardDeviationMicrosecondsPerInvocation="4797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="99" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="6772" standardDeviationMicrosecondsPerInvocation="793"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="135" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="17114" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="25" invocations="478" avgMicrosecondsPerInvocation="53" maxMicrosecondsPerInvocation="2513" standardDeviationMicrosecondsPerInvocation="139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="77" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="12724" standardDeviationMicrosecondsPerInvocation="1453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="415" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="1465" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="35" avgMicrosecondsPerInvocation="536" maxMicrosecondsPerInvocation="2922" standardDeviationMicrosecondsPerInvocation="673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="17" invocations="114" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="4471" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="35" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="3076" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="7240" standardDeviationMicrosecondsPerInvocation="1227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="35" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="3753" standardDeviationMicrosecondsPerInvocation="766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="12" invocations="14" avgMicrosecondsPerInvocation="899" maxMicrosecondsPerInvocation="3345" standardDeviationMicrosecondsPerInvocation="994"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="12" invocations="14" avgMicrosecondsPerInvocation="891" maxMicrosecondsPerInvocation="6036" standardDeviationMicrosecondsPerInvocation="1444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="12" invocations="14" avgMicrosecondsPerInvocation="887" maxMicrosecondsPerInvocation="8004" standardDeviationMicrosecondsPerInvocation="2000"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

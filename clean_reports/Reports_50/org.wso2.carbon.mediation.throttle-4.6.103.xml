@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445376775" analysisTimestamp="1699447552721" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\org.wso2.carbon.mediation.throttle-4.6.103.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ba104f38ae2335d0f524fcaae358413a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediation.throttle.ThrottlePolicy.getInternalConfigs() may expose internal representation by returning ThrottlePolicy.internalConfigs</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" start="23" end="63" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+        <Message>At ThrottlePolicy.java:[lines 23-63]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.ThrottlePolicy</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" name="getInternalConfigs" signature="()[Lorg/wso2/carbon/mediation/throttle/InternalData;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" start="50" end="50" startBytecode="0" endBytecode="46" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.ThrottlePolicy.getInternalConfigs()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" name="internalConfigs" signature="[Lorg/wso2/carbon/mediation/throttle/InternalData;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+        <Message>In ThrottlePolicy.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.ThrottlePolicy.internalConfigs</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" primary="true" start="50" end="50" startBytecode="4" endBytecode="4" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+      <Message>At ThrottlePolicy.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3255d9c5f882f9f875d029f76e587157" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediation.throttle.ThrottlePolicy.setInternalConfigs(InternalData[]) may expose internal representation by storing an externally mutable object into ThrottlePolicy.internalConfigs</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" start="23" end="63" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+        <Message>At ThrottlePolicy.java:[lines 23-63]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.ThrottlePolicy</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" name="setInternalConfigs" signature="([Lorg/wso2/carbon/mediation/throttle/InternalData;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" start="54" end="55" startBytecode="0" endBytecode="61" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.ThrottlePolicy.setInternalConfigs(InternalData[])</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" name="internalConfigs" signature="[Lorg/wso2/carbon/mediation/throttle/InternalData;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+        <Message>In ThrottlePolicy.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.ThrottlePolicy.internalConfigs</Message>
+    </Field>
+    <LocalVariable name="internalConfigs" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named internalConfigs</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.ThrottlePolicy" primary="true" start="54" end="54" startBytecode="2" endBytecode="2" sourcefile="ThrottlePolicy.java" sourcepath="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java">
+      <Message>At ThrottlePolicy.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="59d3e8a26f6dfe0c201d2d494eba22de" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.realmService from instance method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.setRealmService(RealmService)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="setRealmService" signature="(Lorg/wso2/carbon/user/core/service/RealmService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="79" end="80" startBytecode="0" endBytecode="62" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.setRealmService(RealmService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="realmService" signature="Lorg/wso2/carbon/user/core/service/RealmService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.realmService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="79" end="79" startBytecode="3" endBytecode="3" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="7259aa4aae725379291065e4470c598" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.registryServiceInstance from instance method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.setRegistryService(RegistryService)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="setRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="87" end="88" startBytecode="0" endBytecode="60" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.setRegistryService(RegistryService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="registryServiceInstance" signature="Lorg/wso2/carbon/registry/core/service/RegistryService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.registryServiceInstance</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="87" end="87" startBytecode="1" endBytecode="1" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="89ce2172873161e648aa2ed09141689f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.realmService from instance method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.unsetRealmService(RealmService)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="unsetRealmService" signature="(Lorg/wso2/carbon/user/core/service/RealmService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="83" end="84" startBytecode="0" endBytecode="62" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.unsetRealmService(RealmService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="realmService" signature="Lorg/wso2/carbon/user/core/service/RealmService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.realmService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="83" end="83" startBytecode="3" endBytecode="3" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="6300a9d806e847b45764ef77e3f2bb4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.registryServiceInstance from instance method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.unsetRegistryService(RegistryService)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="unsetRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="91" end="92" startBytecode="0" endBytecode="60" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.unsetRegistryService(RegistryService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="registryServiceInstance" signature="Lorg/wso2/carbon/registry/core/service/RegistryService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.registryServiceInstance</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="91" end="91" startBytecode="1" endBytecode="1" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="588d511ea67984a84cebec821b816c6f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.bundleContext from instance method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.activate(ComponentContext)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="activate" signature="(Lorg/osgi/service/component/ComponentContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="55" end="71" startBytecode="0" endBytecode="218" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.activate(ComponentContext)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="bundleContext" signature="Lorg/osgi/framework/BundleContext;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.bundleContext</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="59" end="59" startBytecode="23" endBytecode="23" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="1842b965d16516f0d36f31c55b8da886" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ThrottleServiceComponent.axisConfigContextObserverServiceReg not initialized in constructor and dereferenced in org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.deactivate(ComponentContext)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="46" end="138" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>At ThrottleServiceComponent.java:[lines 46-138]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent</Message>
+    </Class>
+    <Field classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="axisConfigContextObserverServiceReg" signature="Lorg/osgi/framework/ServiceRegistration;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+        <Message>In ThrottleServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.axisConfigContextObserverServiceReg</Message>
+    </Field>
+    <Method classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" name="deactivate" signature="(Lorg/osgi/service/component/ComponentContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" start="74" end="76" startBytecode="0" endBytecode="79" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent.deactivate(ComponentContext)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" primary="true" start="74" end="74" startBytecode="4" endBytecode="4" sourcefile="ThrottleServiceComponent.java" sourcepath="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java">
+      <Message>At ThrottleServiceComponent.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" instanceHash="94cfedd686770a4dcf9e874b0db3a07d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of policyElement, which is known to be non-null in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.throttlePolicyToString(ThrottlePolicy)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="throttlePolicyToString" signature="(Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="937" end="942" startBytecode="0" endBytecode="110" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.throttlePolicyToString(ThrottlePolicy)</Message>
+    </Method>
+    <LocalVariable name="policyElement" register="2" pc="9" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from policyElement</Message>
+    </LocalVariable>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="buildPolicy" signature="(Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;Lorg/apache/neethi/builders/xml/XmlPrimtiveAssertion;Ljava/lang/String;)Lorg/apache/axiom/om/OMElement;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="1104" end="1208" startBytecode="0" endBytecode="1328" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>Return value of org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.buildPolicy(ThrottlePolicy, XmlPrimtiveAssertion, String) of type org.apache.axiom.om.OMElement</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="939" end="939" startBytecode="10" endBytecode="10" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ThrottleConfigAdminService.java:[line 939]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="4411a9d80c3c80c78d88a873ff9ed13b" instanceOccurrenceNum="0" instanceOccurrenceMax="1" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.enableThrottling(String, ThrottlePolicy)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="enableThrottling" signature="(Ljava/lang/String;Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="124" end="272" startBytecode="0" endBytecode="2044" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.enableThrottling(String, ThrottlePolicy)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="259" end="259" startBytecode="865" endBytecode="865" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 259]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="300670cc483cc1cede030dff852c12d6" instanceOccurrenceNum="0" instanceOccurrenceMax="1" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.globallyEngageThrottling(ThrottlePolicy)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="globallyEngageThrottling" signature="(Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="284" end="404" startBytecode="0" endBytecode="1737" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.globallyEngageThrottling(ThrottlePolicy)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="399" end="399" startBytecode="851" endBytecode="851" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 399]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="4411a9d80c3c80c78d88a873ff9ed13b" instanceOccurrenceNum="1" instanceOccurrenceMax="1" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.enableThrottling(String, ThrottlePolicy)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="enableThrottling" signature="(Ljava/lang/String;Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="124" end="272" startBytecode="0" endBytecode="2044" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.enableThrottling(String, ThrottlePolicy)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="242" end="242" startBytecode="772" endBytecode="772" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 242]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="eaab799482e679fd89380a718014f3d2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.engageThrottlingForOperation(ThrottlePolicy, String, String)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="engageThrottlingForOperation" signature="(Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="420" end="573" startBytecode="0" endBytecode="2058" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.engageThrottlingForOperation(ThrottlePolicy, String, String)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="565" end="565" startBytecode="967" endBytecode="967" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 565]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="23dc9fd5467e8088b4853e73f8710ef5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.getTemplatePolicy(String)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="getTemplatePolicy" signature="(Ljava/lang/String;)Lorg/apache/axiom/om/OMElement;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="1256" end="1275" startBytecode="0" endBytecode="413" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.getTemplatePolicy(String)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="1270" end="1270" startBytecode="83" endBytecode="83" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 1270]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="300670cc483cc1cede030dff852c12d6" instanceOccurrenceNum="1" instanceOccurrenceMax="1" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.globallyEngageThrottling(ThrottlePolicy)</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="globallyEngageThrottling" signature="(Lorg/wso2/carbon/mediation/throttle/ThrottlePolicy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="284" end="404" startBytecode="0" endBytecode="1737" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java"/>
+      <Message>In method org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.globallyEngageThrottling(ThrottlePolicy)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="394" end="394" startBytecode="813" endBytecode="813" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 394]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE" instanceHash="6cf6a8f748ce4d23c2a909ecd99057d7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.wSO2MediatorThrottlingPolicyId</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Field classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="wSO2MediatorThrottlingPolicyId" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>In ThrottleConfigAdminService.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.wSO2MediatorThrottlingPolicyId</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="93" end="93" startBytecode="35" endBytecode="35" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE" instanceHash="cca178bfe6de77b17eaa2d24e1240f65" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.wSO2ModuleThrottlingPolicyId</LongMessage>
+    <Class classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" start="76" end="1325" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>At ThrottleConfigAdminService.java:[lines 76-1325]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService</Message>
+    </Class>
+    <Field classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" name="wSO2ModuleThrottlingPolicyId" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+        <Message>In ThrottleConfigAdminService.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService.wSO2ModuleThrottlingPolicyId</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" primary="true" start="92" end="92" startBytecode="29" endBytecode="29" sourcefile="ThrottleConfigAdminService.java" sourcepath="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java">
+      <Message>At ThrottleConfigAdminService.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="55">
+    <MissingClass>org.apache.axiom.om.OMAbstractFactory</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMAttribute</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMElement</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMFactory</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNamespace</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNode</MissingClass>
+    <MissingClass>org.apache.axiom.om.impl.builder.StAXOMBuilder</MissingClass>
+    <MissingClass>org.apache.axis2.AxisFault</MissingClass>
+    <MissingClass>org.apache.axis2.context.ConfigurationContext</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisDescription</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisModule</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisOperation</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisService</MissingClass>
+    <MissingClass>org.apache.axis2.description.AxisServiceGroup</MissingClass>
+    <MissingClass>org.apache.axis2.description.Parameter</MissingClass>
+    <MissingClass>org.apache.axis2.description.PolicyInclude</MissingClass>
+    <MissingClass>org.apache.axis2.description.PolicySubject</MissingClass>
+    <MissingClass>org.apache.axis2.description.Version</MissingClass>
+    <MissingClass>org.apache.axis2.engine.AxisConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.neethi.Constants</MissingClass>
+    <MissingClass>org.apache.neethi.Policy</MissingClass>
+    <MissingClass>org.apache.neethi.PolicyEngine</MissingClass>
+    <MissingClass>org.apache.neethi.builders.xml.XmlPrimtiveAssertion</MissingClass>
+    <MissingClass>org.apache.synapse.commons.throttle.core.ThrottleConstants</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.osgi.service.component.ComponentContext</MissingClass>
+    <MissingClass>org.wso2.carbon.context.PrivilegedCarbonContext</MissingClass>
+    <MissingClass>org.wso2.carbon.core.AbstractAdmin</MissingClass>
+    <MissingClass>org.wso2.carbon.core.RegistryResources</MissingClass>
+    <MissingClass>org.wso2.carbon.core.Resources</MissingClass>
+    <MissingClass>org.wso2.carbon.core.Resources$Associations</MissingClass>
+    <MissingClass>org.wso2.carbon.core.Resources$ModuleProperties</MissingClass>
+    <MissingClass>org.wso2.carbon.core.Resources$ServiceProperties</MissingClass>
+    <MissingClass>org.wso2.carbon.core.multitenancy.utils.TenantUtils</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.PersistenceException</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.PersistenceFactory</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.PersistenceUtils</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.ServicePersistenceManager</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.file.ModuleFilePersistenceManager</MissingClass>
+    <MissingClass>org.wso2.carbon.core.persistence.file.ServiceGroupFilePersistenceManager</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.Registry</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.Resource</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.exceptions.RegistryException</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.jdbc.utils.Transaction</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.service.RegistryService</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.session.UserRegistry</MissingClass>
+    <MissingClass>org.wso2.carbon.user.core.service.RealmService</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.AbstractAxis2ConfigurationContextObserver</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.Axis2ConfigurationContextObserver</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.CarbonUtils</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.multitenancy.MultitenantConstants</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:09:36 +0900" total_classes="8" referenced_classes="62" total_bugs="17" total_size="894" num_packages="3" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.11" clock_seconds="1.95" peak_mbytes="240.95" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="8" priority_2="9">
+    <FileStats path="org/wso2/carbon/mediation/throttle/InternalData.java" bugCount="0" size="41"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/ThrottleComponentConstants.java" bugCount="0" size="16"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/ThrottleComponentException.java" bugCount="0" size="26"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/ThrottlePolicy.java" bugCount="2" size="22" bugHash="d6ae7f71e9c66cbd6118bbd3c11c2bfc"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/ThrottlingAxis2ConfigurationContextObserver.java" bugCount="0" size="13"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/ThrottlingUtils.java" bugCount="0" size="30"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/internal/ThrottleServiceComponent.java" bugCount="6" size="61" bugHash="7403a99d3796915aece1f5d6c9254c0b"/>
+    <FileStats path="org/wso2/carbon/mediation/throttle/service/ThrottleConfigAdminService.java" bugCount="9" size="685" bugHash="29c82c8e8d0d9d0986f42085b27cf73c"/>
+    <PackageStats package="org.wso2.carbon.mediation.throttle" total_bugs="2" total_types="6" total_size="148" priority_2="2">
+      <ClassStats class="org.wso2.carbon.mediation.throttle.InternalData" sourceFile="InternalData.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediation.throttle.ThrottleComponentConstants" sourceFile="ThrottleComponentConstants.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediation.throttle.ThrottleComponentException" sourceFile="ThrottleComponentException.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediation.throttle.ThrottlePolicy" sourceFile="ThrottlePolicy.java" interface="false" size="22" bugs="2" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.mediation.throttle.ThrottlingAxis2ConfigurationContextObserver" sourceFile="ThrottlingAxis2ConfigurationContextObserver.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediation.throttle.ThrottlingUtils" sourceFile="ThrottlingUtils.java" interface="false" size="30" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.mediation.throttle.internal" total_bugs="6" total_types="1" total_size="61" priority_3="2" priority_2="4">
+      <ClassStats class="org.wso2.carbon.mediation.throttle.internal.ThrottleServiceComponent" sourceFile="ThrottleServiceComponent.java" interface="false" size="61" bugs="6" priority_3="2" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.mediation.throttle.service" total_bugs="9" total_types="1" total_size="685" priority_3="6" priority_2="3">
+      <ClassStats class="org.wso2.carbon.mediation.throttle.service.ThrottleConfigAdminService" sourceFile="ThrottleConfigAdminService.java" interface="false" size="685" bugs="9" priority_3="6" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="241" invocations="705" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="8789" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="92" invocations="68" avgMicrosecondsPerInvocation="1353" maxMicrosecondsPerInvocation="11563" standardDeviationMicrosecondsPerInvocation="2873"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="82" invocations="69" avgMicrosecondsPerInvocation="1194" maxMicrosecondsPerInvocation="27548" standardDeviationMicrosecondsPerInvocation="3614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="75" invocations="66" avgMicrosecondsPerInvocation="1147" maxMicrosecondsPerInvocation="11622" standardDeviationMicrosecondsPerInvocation="2264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="73" invocations="269" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="2688" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="62" avgMicrosecondsPerInvocation="1094" maxMicrosecondsPerInvocation="8593" standardDeviationMicrosecondsPerInvocation="1767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="67" invocations="66" avgMicrosecondsPerInvocation="1025" maxMicrosecondsPerInvocation="12045" standardDeviationMicrosecondsPerInvocation="2335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="59" invocations="44" avgMicrosecondsPerInvocation="1351" maxMicrosecondsPerInvocation="9571" standardDeviationMicrosecondsPerInvocation="2453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="58" invocations="62" avgMicrosecondsPerInvocation="945" maxMicrosecondsPerInvocation="9634" standardDeviationMicrosecondsPerInvocation="1706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="51" invocations="8" avgMicrosecondsPerInvocation="6435" maxMicrosecondsPerInvocation="51355" standardDeviationMicrosecondsPerInvocation="16978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="51" invocations="66" avgMicrosecondsPerInvocation="774" maxMicrosecondsPerInvocation="6356" standardDeviationMicrosecondsPerInvocation="1287"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="48" invocations="66" avgMicrosecondsPerInvocation="732" maxMicrosecondsPerInvocation="8217" standardDeviationMicrosecondsPerInvocation="1558"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="34" invocations="713" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2905" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="130" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="13765" standardDeviationMicrosecondsPerInvocation="1218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="28" invocations="8" avgMicrosecondsPerInvocation="3582" maxMicrosecondsPerInvocation="21724" standardDeviationMicrosecondsPerInvocation="7055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="62" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="5176" standardDeviationMicrosecondsPerInvocation="767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="62" avgMicrosecondsPerInvocation="407" maxMicrosecondsPerInvocation="9802" standardDeviationMicrosecondsPerInvocation="1422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="24" invocations="66" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="15831" standardDeviationMicrosecondsPerInvocation="1928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="609" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="640" standardDeviationMicrosecondsPerInvocation="68"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="62" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="3598" standardDeviationMicrosecondsPerInvocation="747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="62" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="6214" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="19" invocations="8" avgMicrosecondsPerInvocation="2458" maxMicrosecondsPerInvocation="13618" standardDeviationMicrosecondsPerInvocation="4361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="16" invocations="66" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="3269" standardDeviationMicrosecondsPerInvocation="593"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

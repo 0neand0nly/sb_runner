@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445405714" analysisTimestamp="1699447655345" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\shedlock-micronaut-4.35.0.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="d4dbc868d2d3e7776a8d6d0167cf0046" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L4 in net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition.injectBean(BeanResolutionContext, BeanContext, Object)</LongMessage>
+    <Class classname="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition" primary="true" classAnnotationNames="io.micronaut.core.annotation.Generated">
+      <SourceLine classname="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition">
+        <Message>In &lt;Unknown&gt;</Message>
+      </SourceLine>
+      <Message>In class net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition</Message>
+    </Class>
+    <Method classname="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition" name="injectBean" signature="(Lio/micronaut/context/BeanResolutionContext;Lio/micronaut/context/BeanContext;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="io.micronaut.core.annotation.Generated">
+      <SourceLine classname="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition" startBytecode="0" endBytecode="11"/>
+      <Message>In method net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition.injectBean(BeanResolutionContext, BeanContext, Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="4" pc="6" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 4</Message>
+    </LocalVariable>
+    <SourceLine classname="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition" startBytecode="4" endBytecode="4">
+      <Message>In &lt;Unknown&gt;</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>io.micronaut.aop.Interceptor</MissingClass>
+    <MissingClass>io.micronaut.aop.InvocationContext</MissingClass>
+    <MissingClass>io.micronaut.aop.MethodInterceptor</MissingClass>
+    <MissingClass>io.micronaut.aop.MethodInvocationContext</MissingClass>
+    <MissingClass>io.micronaut.context.AbstractBeanDefinition</MissingClass>
+    <MissingClass>io.micronaut.context.AbstractBeanDefinitionReference</MissingClass>
+    <MissingClass>io.micronaut.context.BeanContext</MissingClass>
+    <MissingClass>io.micronaut.context.BeanResolutionContext</MissingClass>
+    <MissingClass>io.micronaut.context.DefaultBeanContext</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationClassValue</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationMetadata</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationUtil</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.AnnotationValue</MissingClass>
+    <MissingClass>io.micronaut.core.annotation.Indexed</MissingClass>
+    <MissingClass>io.micronaut.core.convert.ConversionService</MissingClass>
+    <MissingClass>io.micronaut.core.type.Argument</MissingClass>
+    <MissingClass>io.micronaut.core.type.ReturnType</MissingClass>
+    <MissingClass>io.micronaut.core.util.CollectionUtils</MissingClass>
+    <MissingClass>io.micronaut.core.util.StringUtils</MissingClass>
+    <MissingClass>io.micronaut.inject.BeanDefinition</MissingClass>
+    <MissingClass>io.micronaut.inject.BeanFactory</MissingClass>
+    <MissingClass>io.micronaut.inject.ExecutableMethod</MissingClass>
+    <MissingClass>io.micronaut.inject.annotation.AnnotationMetadataSupport</MissingClass>
+    <MissingClass>io.micronaut.inject.annotation.DefaultAnnotationMetadata</MissingClass>
+    <MissingClass>javax.inject.Singleton</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.core.ClockProvider</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.core.DefaultLockingTaskExecutor</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.core.LockConfiguration</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.core.LockProvider</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.core.LockingTaskExecutor</MissingClass>
+    <MissingClass>net.javacrumbs.shedlock.support.LockException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:10:05 +0900" total_classes="6" referenced_classes="42" total_bugs="1" total_size="169" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.81" clock_seconds="1.08" peak_mbytes="221.74" alloc_mbytes="4078.00" gc_seconds="0.02" priority_3="1">
+    <FileStats path="net/javacrumbs/shedlock/micronaut/SchedulerLock.java" bugCount="0" size="4"/>
+    <FileStats path="net/javacrumbs/shedlock/micronaut/internal/&lt;Unknown&gt;" bugCount="1" size="105" bugHash="4bc856f052c0ed3e38e72cf45c6bb365"/>
+    <FileStats path="net/javacrumbs/shedlock/micronaut/internal/LockingNotSupportedException.java" bugCount="0" size="4"/>
+    <FileStats path="net/javacrumbs/shedlock/micronaut/internal/MicronautLockConfigurationExtractor.java" bugCount="0" size="34"/>
+    <FileStats path="net/javacrumbs/shedlock/micronaut/internal/SchedulerLockInterceptor.java" bugCount="0" size="22"/>
+    <PackageStats package="net.javacrumbs.shedlock.micronaut" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.SchedulerLock" sourceFile="SchedulerLock.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.javacrumbs.shedlock.micronaut.internal" total_bugs="1" total_types="5" total_size="165" priority_3="1">
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinition" sourceFile="&lt;Unknown&gt;" interface="false" size="68" bugs="1" priority_3="1"/>
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.internal.$SchedulerLockInterceptorDefinitionClass" sourceFile="&lt;Unknown&gt;" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.internal.LockingNotSupportedException" sourceFile="LockingNotSupportedException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.internal.MicronautLockConfigurationExtractor" sourceFile="MicronautLockConfigurationExtractor.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.javacrumbs.shedlock.micronaut.internal.SchedulerLockInterceptor" sourceFile="SchedulerLockInterceptor.java" interface="false" size="22" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="196" invocations="600" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="17071" standardDeviationMicrosecondsPerInvocation="922"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="42" avgMicrosecondsPerInvocation="1506" maxMicrosecondsPerInvocation="9422" standardDeviationMicrosecondsPerInvocation="2390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="54" invocations="42" avgMicrosecondsPerInvocation="1289" maxMicrosecondsPerInvocation="16083" standardDeviationMicrosecondsPerInvocation="2664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="158" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="4129" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="29" invocations="606" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2314" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="29" invocations="42" avgMicrosecondsPerInvocation="696" maxMicrosecondsPerInvocation="23072" standardDeviationMicrosecondsPerInvocation="3502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="87" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="9189" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="42" avgMicrosecondsPerInvocation="512" maxMicrosecondsPerInvocation="5066" standardDeviationMicrosecondsPerInvocation="946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="521" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="687" standardDeviationMicrosecondsPerInvocation="78"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="42" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="2820" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="20" invocations="35" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="11478" standardDeviationMicrosecondsPerInvocation="1901"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="18" invocations="35" avgMicrosecondsPerInvocation="520" maxMicrosecondsPerInvocation="4213" standardDeviationMicrosecondsPerInvocation="794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="17" invocations="38" avgMicrosecondsPerInvocation="466" maxMicrosecondsPerInvocation="15055" standardDeviationMicrosecondsPerInvocation="2399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="7165" standardDeviationMicrosecondsPerInvocation="1213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="14" invocations="35" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="5977" standardDeviationMicrosecondsPerInvocation="1041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="42" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="1989" standardDeviationMicrosecondsPerInvocation="448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="42" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="1865" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="12" invocations="42" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="5353" standardDeviationMicrosecondsPerInvocation="832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="12" invocations="35" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="1752" standardDeviationMicrosecondsPerInvocation="453"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

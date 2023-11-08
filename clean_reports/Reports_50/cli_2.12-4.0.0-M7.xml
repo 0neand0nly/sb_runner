@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445910384" analysisTimestamp="1699447472119" release="">
+  <Project projectName="">
+    <Jar>./clean50\\cli_2.12-4.0.0-M7.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="49d97bf43ec86fb7c7ff512f0c3ea866" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>scala.meta.cli.Reporter.err() may expose internal representation by returning Reporter.err</LongMessage>
+    <Class classname="scala.meta.cli.Reporter" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" start="5" end="23" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>At Reporter.scala:[lines 5-23]</Message>
+      </SourceLine>
+      <Message>In class scala.meta.cli.Reporter</Message>
+    </Class>
+    <Method classname="scala.meta.cli.Reporter" name="err" signature="()Ljava/io/PrintStream;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" start="5" end="5" startBytecode="0" endBytecode="46" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala"/>
+      <Message>In method scala.meta.cli.Reporter.err()</Message>
+    </Method>
+    <Field classname="scala.meta.cli.Reporter" name="err" signature="Ljava/io/PrintStream;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>In Reporter.scala</Message>
+      </SourceLine>
+      <Message>Field scala.meta.cli.Reporter.err</Message>
+    </Field>
+    <SourceLine classname="scala.meta.cli.Reporter" primary="true" start="5" end="5" startBytecode="4" endBytecode="4" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+      <Message>At Reporter.scala:[line 5]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b06eff9f61e0147c6a86a4f345e181fd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>scala.meta.cli.Reporter.out() may expose internal representation by returning Reporter.out</LongMessage>
+    <Class classname="scala.meta.cli.Reporter" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" start="5" end="23" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>At Reporter.scala:[lines 5-23]</Message>
+      </SourceLine>
+      <Message>In class scala.meta.cli.Reporter</Message>
+    </Class>
+    <Method classname="scala.meta.cli.Reporter" name="out" signature="()Ljava/io/PrintStream;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" start="5" end="5" startBytecode="0" endBytecode="46" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala"/>
+      <Message>In method scala.meta.cli.Reporter.out()</Message>
+    </Method>
+    <Field classname="scala.meta.cli.Reporter" name="out" signature="Ljava/io/PrintStream;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="scala.meta.cli.Reporter" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>In Reporter.scala</Message>
+      </SourceLine>
+      <Message>Field scala.meta.cli.Reporter.out</Message>
+    </Field>
+    <SourceLine classname="scala.meta.cli.Reporter" primary="true" start="5" end="5" startBytecode="4" endBytecode="4" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+      <Message>At Reporter.scala:[line 5]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="eb52e84ec52c5a338d62a6250a5c3db8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>scala.meta.cli.Reporter$.MODULE$ should be package protected</LongMessage>
+    <Class classname="scala.meta.cli.Reporter$" primary="true">
+      <SourceLine classname="scala.meta.cli.Reporter$" start="23" end="27" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>At Reporter.scala:[lines 23-27]</Message>
+      </SourceLine>
+      <Message>In class scala.meta.cli.Reporter$</Message>
+    </Class>
+    <Field classname="scala.meta.cli.Reporter$" name="MODULE$" signature="Lscala/meta/cli/Reporter$;" isStatic="true" primary="true">
+      <SourceLine classname="scala.meta.cli.Reporter$" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>In Reporter.scala</Message>
+      </SourceLine>
+      <Message>Field scala.meta.cli.Reporter$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="scala.meta.cli.Reporter$" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala" synthetic="true">
+      <Message>In Reporter.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="79fe7a5b4364f59936cec8883a995e2f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field scala.meta.cli.Reporter$.MODULE$ from instance method new scala.meta.cli.Reporter$()</LongMessage>
+    <Class classname="scala.meta.cli.Reporter$" primary="true">
+      <SourceLine classname="scala.meta.cli.Reporter$" start="23" end="27" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>At Reporter.scala:[lines 23-27]</Message>
+      </SourceLine>
+      <Message>In class scala.meta.cli.Reporter$</Message>
+    </Class>
+    <Method classname="scala.meta.cli.Reporter$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="scala.meta.cli.Reporter$" start="27" end="23" startBytecode="0" endBytecode="54" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala"/>
+      <Message>In method new scala.meta.cli.Reporter$()</Message>
+    </Method>
+    <Field classname="scala.meta.cli.Reporter$" name="MODULE$" signature="Lscala/meta/cli/Reporter$;" isStatic="true" primary="true">
+      <SourceLine classname="scala.meta.cli.Reporter$" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+        <Message>In Reporter.scala</Message>
+      </SourceLine>
+      <Message>Field scala.meta.cli.Reporter$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="scala.meta.cli.Reporter$" primary="true" start="27" end="27" startBytecode="5" endBytecode="5" sourcefile="Reporter.scala" sourcepath="scala/meta/cli/Reporter.scala">
+      <Message>At Reporter.scala:[line 27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:30 +0900" total_classes="2" referenced_classes="15" total_bugs="4" total_size="29" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.44" clock_seconds="0.75" peak_mbytes="203.36" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="1" priority_2="3">
+    <FileStats path="scala/meta/cli/Reporter.scala" bugCount="4" size="29" bugHash="ad12f77dff850c0fdc0d1d0fad130b46"/>
+    <PackageStats package="scala.meta.cli" total_bugs="4" total_types="2" total_size="29" priority_3="1" priority_2="3">
+      <ClassStats class="scala.meta.cli.Reporter" sourceFile="Reporter.scala" interface="false" size="21" bugs="2" priority_2="2"/>
+      <ClassStats class="scala.meta.cli.Reporter$" sourceFile="Reporter.scala" interface="false" size="8" bugs="2" priority_3="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="156" invocations="361" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="12629" standardDeviationMicrosecondsPerInvocation="966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="26" invocations="15" avgMicrosecondsPerInvocation="1771" maxMicrosecondsPerInvocation="8093" standardDeviationMicrosecondsPerInvocation="2308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="22" invocations="2" avgMicrosecondsPerInvocation="11279" maxMicrosecondsPerInvocation="22074" standardDeviationMicrosecondsPerInvocation="10794"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="21" invocations="15" avgMicrosecondsPerInvocation="1436" maxMicrosecondsPerInvocation="7770" standardDeviationMicrosecondsPerInvocation="2001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="21" invocations="13" avgMicrosecondsPerInvocation="1653" maxMicrosecondsPerInvocation="16199" standardDeviationMicrosecondsPerInvocation="4359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="19" invocations="60" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="2368" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="19" invocations="363" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="2285" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="10077" standardDeviationMicrosecondsPerInvocation="1698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="17" invocations="327" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="804" standardDeviationMicrosecondsPerInvocation="96"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="14" invocations="15" avgMicrosecondsPerInvocation="962" maxMicrosecondsPerInvocation="6659" standardDeviationMicrosecondsPerInvocation="1664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="13" invocations="13" avgMicrosecondsPerInvocation="1054" maxMicrosecondsPerInvocation="11814" standardDeviationMicrosecondsPerInvocation="3107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="11" invocations="13" avgMicrosecondsPerInvocation="862" maxMicrosecondsPerInvocation="8803" standardDeviationMicrosecondsPerInvocation="2293"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

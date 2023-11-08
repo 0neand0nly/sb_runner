@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445909334" analysisTimestamp="1699447519966" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\geronimo-servicemix-1.0-M4.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="4f42bdb8038f95890151f8816a8cd323" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.apache.geronimo.servicemix.ServiceMixDeployment(ClassLoader, URL) may expose internal representation by storing an externally mutable object into ServiceMixDeployment.classLoader</LongMessage>
+    <Class classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="15" end="62" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+        <Message>At ServiceMixDeployment.java:[lines 15-62]</Message>
+      </SourceLine>
+      <Message>In class org.apache.geronimo.servicemix.ServiceMixDeployment</Message>
+    </Class>
+    <Method classname="org.apache.geronimo.servicemix.ServiceMixDeployment" name="&lt;init&gt;" signature="(Ljava/lang/ClassLoader;Ljava/net/URL;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="30" end="33" startBytecode="0" endBytecode="88" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java"/>
+      <Message>In method new org.apache.geronimo.servicemix.ServiceMixDeployment(ClassLoader, URL)</Message>
+    </Method>
+    <Field classname="org.apache.geronimo.servicemix.ServiceMixDeployment" name="classLoader" signature="Ljava/lang/ClassLoader;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+        <Message>In ServiceMixDeployment.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.geronimo.servicemix.ServiceMixDeployment.classLoader</Message>
+    </Field>
+    <LocalVariable name="classLoader" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named classLoader</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true" start="31" end="31" startBytecode="6" endBytecode="6" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+      <Message>At ServiceMixDeployment.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SSD_DO_NOT_USE_INSTANCE_LOCK_ON_SHARED_STATIC_DATA" priority="2" rank="14" abbrev="SSD" category="MT_CORRECTNESS" instanceHash="84b921ffd6d933f30fb643ca8eae1a51" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Instance level lock was used on a shared static data</ShortMessage>
+    <LongMessage>Static field &quot;class$java$lang$String&quot; is modified by an instance level synchronized method.</LongMessage>
+    <Class classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="15" end="62" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+        <Message>At ServiceMixDeployment.java:[lines 15-62]</Message>
+      </SourceLine>
+      <Message>In class org.apache.geronimo.servicemix.ServiceMixDeployment</Message>
+    </Class>
+    <Method classname="org.apache.geronimo.servicemix.ServiceMixDeployment" name="doStart" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="36" end="50" startBytecode="0" endBytecode="306" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java"/>
+      <Message>In method org.apache.geronimo.servicemix.ServiceMixDeployment.doStart()</Message>
+    </Method>
+    <String value="class$java$lang$String">
+      <Message>Value class$java$lang$String</Message>
+    </String>
+    <String value="synchronized method">
+      <Message>Value synchronized method</Message>
+    </String>
+    <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true" start="43" end="43" startBytecode="64" endBytecode="64" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+      <Message>At ServiceMixDeployment.java:[line 43]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="45" end="45" startBytecode="116" endBytecode="116" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ServiceMixDeployment.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE" instanceHash="4edf64101c10a4a1eaed1e3fbf1ccd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: org.apache.geronimo.servicemix.ServiceMixDeployment.configurationBaseUrl</LongMessage>
+    <Class classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" start="15" end="62" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+        <Message>At ServiceMixDeployment.java:[lines 15-62]</Message>
+      </SourceLine>
+      <Message>In class org.apache.geronimo.servicemix.ServiceMixDeployment</Message>
+    </Class>
+    <Field classname="org.apache.geronimo.servicemix.ServiceMixDeployment" name="configurationBaseUrl" signature="Ljava/net/URL;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+        <Message>In ServiceMixDeployment.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.geronimo.servicemix.ServiceMixDeployment.configurationBaseUrl</Message>
+    </Field>
+    <SourceLine classname="org.apache.geronimo.servicemix.ServiceMixDeployment" primary="true" start="32" end="32" startBytecode="11" endBytecode="11" sourcefile="ServiceMixDeployment.java" sourcepath="org/apache/geronimo/servicemix/ServiceMixDeployment.java">
+      <Message>At ServiceMixDeployment.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SSD_DO_NOT_USE_INSTANCE_LOCK_ON_SHARED_STATIC_DATA" abbrev="SSD" category="MT_CORRECTNESS">
+    <ShortDescription>Instance level lock was used on a shared static data</ShortDescription>
+    <Details><![CDATA[
+      <p>
+        If the lock or the synchronized method is not static, that modifies the static field,
+        that could leave the shared static data unprotected against concurrent access.
+        This could occur in two ways, if a synchronization method uses a non-static lock object,
+        or a synchronized method is declared as non-static. Both ways are ineffective.
+        Best solution is to use a private static final lock object to secure the shared static data.</p>
+      <p>
+      See SEI CERT rule
+      <a href="https://wiki.sei.cmu.edu/confluence/display/java/LCK06-J.+Do+not+use+an+instance+lock+to+protect+shared+static+data">
+      LCK06-J. Do not use an instance lock to protect shared static data</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SSD">
+    <Description>Do not use an instance lock to protect shared static data</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.apache.geronimo.gbean.GBeanInfo</MissingClass>
+    <MissingClass>org.apache.geronimo.gbean.GBeanInfoBuilder</MissingClass>
+    <MissingClass>org.apache.geronimo.gbean.GBeanLifecycle</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:29 +0900" total_classes="1" referenced_classes="24" total_bugs="3" total_size="46" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.72" clock_seconds="0.94" peak_mbytes="221.00" alloc_mbytes="4078.00" gc_seconds="0.02" priority_3="1" priority_2="2">
+    <FileStats path="org/apache/geronimo/servicemix/ServiceMixDeployment.java" bugCount="3" size="46" bugHash="0d9ad16deef50a79bbe7697b92f601df"/>
+    <PackageStats package="org.apache.geronimo.servicemix" total_bugs="3" total_types="1" total_size="46" priority_3="1" priority_2="2">
+      <ClassStats class="org.apache.geronimo.servicemix.ServiceMixDeployment" sourceFile="ServiceMixDeployment.java" interface="false" size="46" bugs="3" priority_3="1" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="213" invocations="473" avgMicrosecondsPerInvocation="450" maxMicrosecondsPerInvocation="19167" standardDeviationMicrosecondsPerInvocation="1158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="24" avgMicrosecondsPerInvocation="2436" maxMicrosecondsPerInvocation="14758" standardDeviationMicrosecondsPerInvocation="3944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="91" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="4246" standardDeviationMicrosecondsPerInvocation="548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="29" invocations="24" avgMicrosecondsPerInvocation="1209" maxMicrosecondsPerInvocation="5625" standardDeviationMicrosecondsPerInvocation="1358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="475" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="2051" standardDeviationMicrosecondsPerInvocation="124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="21" invocations="1" avgMicrosecondsPerInvocation="21241" maxMicrosecondsPerInvocation="21241" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="21" invocations="53" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="11016" standardDeviationMicrosecondsPerInvocation="1521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="20" invocations="437" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="924" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="18" invocations="24" avgMicrosecondsPerInvocation="783" maxMicrosecondsPerInvocation="7232" standardDeviationMicrosecondsPerInvocation="1469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="24" avgMicrosecondsPerInvocation="690" maxMicrosecondsPerInvocation="4516" standardDeviationMicrosecondsPerInvocation="1182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="15" invocations="7" avgMicrosecondsPerInvocation="2271" maxMicrosecondsPerInvocation="13615" standardDeviationMicrosecondsPerInvocation="4648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="12" invocations="7" avgMicrosecondsPerInvocation="1835" maxMicrosecondsPerInvocation="4009" standardDeviationMicrosecondsPerInvocation="1677"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="24" avgMicrosecondsPerInvocation="524" maxMicrosecondsPerInvocation="3535" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="12" invocations="7" avgMicrosecondsPerInvocation="1789" maxMicrosecondsPerInvocation="7480" standardDeviationMicrosecondsPerInvocation="2444"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

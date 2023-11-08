@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445921957" analysisTimestamp="1699447482692" release="">
+  <Project projectName="">
+    <Jar>./clean50\\confluence-xmlrpc-api-7.0-rc2.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="25412ca2b46617395cef5360374957c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.bsc.confluence.xmlrpc.Confluence at new org.bsc.confluence.xmlrpc.Confluence(String, ConfluenceProxy) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.Confluence" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence" start="44" end="909" sourcefile="Confluence.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence.java">
+        <Message>At Confluence.java:[lines 44-909]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.Confluence</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.Confluence" name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/bsc/confluence/ConfluenceProxy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence" start="85" end="120" startBytecode="0" endBytecode="530" sourcefile="Confluence.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.Confluence(String, ConfluenceProxy)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence" primary="true" start="110" end="110" startBytecode="169" endBytecode="169" sourcefile="Confluence.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence.java">
+      <Message>At Confluence.java:[line 110]</Message>
+    </SourceLine>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence" start="110" end="110" startBytecode="169" endBytecode="169" sourcefile="Confluence.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence.java">
+      <Message>At Confluence.java:[line 110]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="812e51b53e8a714d79c59bb19f60eca0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.bsc.confluence.xmlrpc.Confluence2 at new org.bsc.confluence.xmlrpc.Confluence2(String, ConfluenceProxy) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.Confluence2" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence2" start="20" end="29" sourcefile="Confluence2.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence2.java">
+        <Message>At Confluence2.java:[lines 20-29]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.Confluence2</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.Confluence2" name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/bsc/confluence/ConfluenceProxy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence2" start="24" end="25" startBytecode="0" endBytecode="72" sourcefile="Confluence2.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence2.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.Confluence2(String, ConfluenceProxy)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence2" primary="true" start="24" end="24" startBytecode="5" endBytecode="5" sourcefile="Confluence2.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence2.java">
+      <Message>At Confluence2.java:[line 24]</Message>
+    </SourceLine>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.Confluence2" start="24" end="24" startBytecode="5" endBytecode="5" sourcefile="Confluence2.java" sourcepath="org/bsc/confluence/xmlrpc/Confluence2.java">
+      <Message>At Confluence2.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="ef3e22fdf193dc2d62ac6202e2cbe5f2" instanceOccurrenceNum="0" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/ConfluenceService;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="49" end="62" startBytecode="0" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="50" end="50" startBytecode="11" endBytecode="11" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="ef3e22fdf193dc2d62ac6202e2cbe5f2" instanceOccurrenceNum="1" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/ConfluenceService;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="49" end="62" startBytecode="0" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="51" end="51" startBytecode="29" endBytecode="29" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="5ef520b4af0975d7b2f0dfe88dd44371" instanceOccurrenceNum="0" instanceOccurrenceMax="3">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="73" end="73" startBytecode="7" endBytecode="7" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="5ef520b4af0975d7b2f0dfe88dd44371" instanceOccurrenceNum="1" instanceOccurrenceMax="3">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="74" end="74" startBytecode="25" endBytecode="25" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="5ef520b4af0975d7b2f0dfe88dd44371" instanceOccurrenceNum="2" instanceOccurrenceMax="3">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="75" end="75" startBytecode="43" endBytecode="43" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="5ef520b4af0975d7b2f0dfe88dd44371" instanceOccurrenceNum="3" instanceOccurrenceMax="3">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="76" end="76" startBytecode="62" endBytecode="62" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="207c843d76a86c6e26f0f947409f610e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator at new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/ConfluenceService;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="49" end="62" startBytecode="0" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="50" end="50" startBytecode="21" endBytecode="21" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 50]</Message>
+    </SourceLine>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="50" end="50" startBytecode="21" endBytecode="21" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="25231ba0698dc100e34bf94eb658456f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.login(HttpClient, String, ConfluenceExportDecorator$RedirectTask): new String(byte[])</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="login" signature="(Lorg/apache/commons/httpclient/HttpClient;Ljava/lang/String;Lorg/bsc/confluence/xmlrpc/ConfluenceExportDecorator$RedirectTask;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="135" end="181" startBytecode="0" endBytecode="620" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.login(HttpClient, String, ConfluenceExportDecorator$RedirectTask)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1439" end="1440" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="169" end="169" startBytecode="203" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="5448bb8e34b04379e41c2693f007b8bf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of confluence, which is known to be non-null in new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/ConfluenceService;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="49" end="62" startBytecode="0" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</Message>
+    </Method>
+    <LocalVariable name="confluence" register="1" pc="40" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from confluence</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="53" end="53" startBytecode="41" endBytecode="41" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="642f4b12582f4d3f712fc558e1d39367" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of url, which is known to be non-null in new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/ConfluenceService;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="49" end="62" startBytecode="0" endBytecode="203" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.ConfluenceExportDecorator(ConfluenceService, String)</Message>
+    </Method>
+    <LocalVariable name="url" register="2" pc="54" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from url</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="56" end="56" startBytecode="55" endBytecode="55" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="14d08bac7b7f1503112105a08b0c8a1e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of format, which is known to be non-null in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <LocalVariable name="format" register="3" pc="101" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from format</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="84" end="84" startBytecode="102" endBytecode="102" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="b937552d9989c7dc4ee34b613f16d5e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of outputFile, which is known to be non-null in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <LocalVariable name="outputFile" register="4" pc="115" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from outputFile</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="87" end="87" startBytecode="117" endBytecode="117" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="fb67324432d3f097e853cf1dad08f506" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of pageTitle, which is known to be non-null in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <LocalVariable name="pageTitle" register="2" pc="87" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from pageTitle</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="81" end="81" startBytecode="88" endBytecode="88" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 81]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="3573cbe981ee1a087f27ae748e4e693d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of space, which is known to be non-null in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="exportPage" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/bsc/confluence/ExportFormat;Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="73" end="121" startBytecode="0" endBytecode="356" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.exportPage(String, String, ExportFormat, File)</Message>
+    </Method>
+    <LocalVariable name="space" register="1" pc="73" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from space</Message>
+    </LocalVariable>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="78" end="78" startBytecode="74" endBytecode="74" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ConfluenceExportDecorator.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="ae24dffce689d5b58bc96cb0809d3d70" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.lambda$exportPage$1(HttpClient, File, String)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="lambda$exportPage$1" signature="(Lorg/apache/commons/httpclient/HttpClient;Ljava/io/File;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="105" end="110" startBytecode="0" endBytecode="142" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.lambda$exportPage$1(HttpClient, File, String)</Message>
+    </Method>
+    <Method classname="java.io.PrintStream" name="printf" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="1105" end="1105" startBytecode="0" endBytecode="68" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+      <Message>Called method java.io.PrintStream.printf(String, Object[])</Message>
+    </Method>
+    <String value="==&gt; EXPORT URL [%s]\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;==&gt; EXPORT URL [%s]\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="107" end="107" startBytecode="33" endBytecode="33" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 107]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="1e25217548c26a29447341b916c1ece" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.login(HttpClient, String, ConfluenceExportDecorator$RedirectTask)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="30" end="224" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+        <Message>At ConfluenceExportDecorator.java:[lines 30-224]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.ConfluenceExportDecorator</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" name="login" signature="(Lorg/apache/commons/httpclient/HttpClient;Ljava/lang/String;Lorg/bsc/confluence/xmlrpc/ConfluenceExportDecorator$RedirectTask;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" start="135" end="181" startBytecode="0" endBytecode="620" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.ConfluenceExportDecorator.login(HttpClient, String, ConfluenceExportDecorator$RedirectTask)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="no redirect to url found\n[%s]" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;no redirect to url found\n[%s]&quot;</Message>
+    </String>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" primary="true" start="168" end="168" startBytecode="207" endBytecode="207" sourcefile="ConfluenceExportDecorator.java" sourcepath="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java">
+      <Message>At ConfluenceExportDecorator.java:[line 168]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="3f58471dbb7763a19cbec64e4b2edb05" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.bsc.confluence.xmlrpc.XMLRPCConfluenceService at new org.bsc.confluence.xmlrpc.XMLRPCConfluenceService(Confluence, ConfluenceService$Credentials) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="60" end="337" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+        <Message>At XMLRPCConfluenceService.java:[lines 60-337]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.XMLRPCConfluenceService</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" name="&lt;init&gt;" signature="(Lorg/bsc/confluence/xmlrpc/Confluence;Lorg/bsc/confluence/ConfluenceService$Credentials;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="91" end="100" startBytecode="0" endBytecode="157" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java"/>
+      <Message>In method new org.bsc.confluence.xmlrpc.XMLRPCConfluenceService(Confluence, ConfluenceService$Credentials)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true" start="93" end="93" startBytecode="17" endBytecode="17" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+      <Message>At XMLRPCConfluenceService.java:[line 93]</Message>
+    </SourceLine>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="93" end="93" startBytecode="17" endBytecode="17" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+      <Message>At XMLRPCConfluenceService.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="138eacd7719402ac33d7f717708948ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.bsc.confluence.xmlrpc.XMLRPCConfluenceService.lambda$addLabelsByName$12(ConfluenceService$Model$ID, String) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="60" end="337" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+        <Message>At XMLRPCConfluenceService.java:[lines 60-337]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.XMLRPCConfluenceService</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" name="lambda$addLabelsByName$12" signature="(Lorg/bsc/confluence/ConfluenceService$Model$ID;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="252" end="256" startBytecode="0" endBytecode="115" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.XMLRPCConfluenceService.lambda$addLabelsByName$12(ConfluenceService$Model$ID, String)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true" start="253" end="253" startBytecode="19" endBytecode="19" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+      <Message>At XMLRPCConfluenceService.java:[line 253]</Message>
+    </SourceLine>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true" start="253" end="253" startBytecode="19" endBytecode="19" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+      <Message>At XMLRPCConfluenceService.java:[line 253]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" priority="3" rank="19" abbrev="PA" category="BAD_PRACTICE" instanceHash="48b75a2507af7190af3cc96f68a5fc3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Mutable object-type field is public</ShortMessage>
+    <LongMessage>Mutable object-type field org.bsc.confluence.xmlrpc.XMLRPCConfluenceService.connection is public, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" start="60" end="337" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+        <Message>At XMLRPCConfluenceService.java:[lines 60-337]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.XMLRPCConfluenceService</Message>
+    </Class>
+    <Field classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" name="connection" signature="Lorg/bsc/confluence/xmlrpc/Confluence;" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+        <Message>In XMLRPCConfluenceService.java</Message>
+      </SourceLine>
+      <Message>Field org.bsc.confluence.xmlrpc.XMLRPCConfluenceService.connection</Message>
+    </Field>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" primary="true" start="98" end="98" startBytecode="34" endBytecode="34" sourcefile="XMLRPCConfluenceService.java" sourcepath="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java">
+      <Message>At XMLRPCConfluenceService.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="9700e485e5ebce396c65705e8a1504a7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive org.bsc.confluence.xmlrpc.model.MapObject.getInt(String)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="37" end="286" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+        <Message>At MapObject.java:[lines 37-286]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.model.MapObject</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.model.MapObject" name="getInt" signature="(Ljava/lang/String;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="83" end="94" startBytecode="0" endBytecode="204" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.model.MapObject.getInt(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true" start="88" end="88" startBytecode="42" endBytecode="42" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+      <Message>At MapObject.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="a401927b15a07efdc460f95b666d4a82" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive org.bsc.confluence.xmlrpc.model.MapObject.getLong(String)</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="37" end="286" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+        <Message>At MapObject.java:[lines 37-286]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.model.MapObject</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.model.MapObject" name="getLong" signature="(Ljava/lang/String;)J" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="102" end="113" startBytecode="0" endBytecode="203" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.model.MapObject.getLong(String)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1384" end="1384" startBytecode="0" endBytecode="46" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Called method Long.longValue()</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Long.parseLong(String) instead</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true" start="107" end="107" startBytecode="42" endBytecode="42" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+      <Message>At MapObject.java:[line 107]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="2c99283029ab39485d2c8f63974d7898" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.bsc.confluence.xmlrpc.model.MapObject.checkXmlRpcTypes(Object) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="37" end="286" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+        <Message>At MapObject.java:[lines 37-286]</Message>
+      </SourceLine>
+      <Message>In class org.bsc.confluence.xmlrpc.model.MapObject</Message>
+    </Class>
+    <Method classname="org.bsc.confluence.xmlrpc.model.MapObject" name="checkXmlRpcTypes" signature="(Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" start="191" end="230" startBytecode="0" endBytecode="618" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java"/>
+      <Message>In method org.bsc.confluence.xmlrpc.model.MapObject.checkXmlRpcTypes(Object)</Message>
+    </Method>
+    <SourceLine classname="org.bsc.confluence.xmlrpc.model.MapObject" primary="true" start="212" end="212" startBytecode="142" endBytecode="142" sourcefile="MapObject.java" sourcepath="org/bsc/confluence/xmlrpc/model/MapObject.java">
+      <Message>At MapObject.java:[line 212]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="AA_ASSERTION_OF_ARGUMENTS" abbrev="AA" category="BAD_PRACTICE">
+    <ShortDescription>Assertion is used to validate an argument of a public method</ShortDescription>
+    <Details><![CDATA[
+      
+        <p>Asssertions must not be used to validate arguments of public methods because the validations are
+        not performed if assertions are disabled.</p>
+
+        <p>
+        See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET01-J.+Never+use+assertions+to+validate+method+arguments">MET01-J. Never use assertions to validate method arguments</a>
+        for more information.
+        </p>
+        
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="VA_FORMAT_STRING_USES_NEWLINE" abbrev="FS" category="BAD_PRACTICE">
+    <ShortDescription>Format string should use %n rather than \n</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This format string includes a newline character (\n). In format strings, it is generally
+ preferable to use %n, which will produce the platform-specific line separator.
+</p>
+
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Mutable object-type field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility of fields must be limited.
+    Making a mutable object-type field final does not prevent other classes from modifying the
+    contents of the object. However, in general, requiring that no fields are allowed to be public
+    is overkill and unrealistic. There may be usages for public fields: some public fields may
+    serve as "flags" that affect the behavior of the class. Such flag fields are expected to be
+    read by the current instance (or the current class, in case of static fields), but written by
+    others. If a field is both written by the methods of the current instance (or the current
+    class, in case of static fields) and from the outside, the code is suspicious. Consider making
+    these fields private and provide appropriate setters, if necessary. Please note that
+    constructors, initializers and finalizers are exceptions, if only they write the field inside
+    the class, the field is not considered as written by the class itself. In case of object-type
+    fields "writing" means calling methods whose name suggest modification.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_BOXED_PRIMITIVE_FOR_PARSING" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxing/unboxing to parse a primitive</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="AA">
+    <Description>Misuse of assertions for checking arguments of public methods</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="FS">
+    <Description>Format string problem</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="35">
+    <MissingClass>org.apache.commons.httpclient.Credentials</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.Header</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HostConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpException</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpState</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpStatus</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.UsernamePasswordCredentials</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.auth.AuthScope</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.cookie.CookiePolicy</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.PostMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpClientParams</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.xmlrpc.XmlRpcException</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcClient</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcClientConfig</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcClientConfigImpl</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory</MissingClass>
+    <MissingClass>org.apache.xmlrpc.client.XmlRpcTransportFactory</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceProxy</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Credentials</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model$Attachment</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model$Blogpost</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model$ID</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model$Page</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Model$PageSummary</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Protocol</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceService$Storage</MissingClass>
+    <MissingClass>org.bsc.confluence.ConfluenceUtils</MissingClass>
+    <MissingClass>org.bsc.confluence.ExportFormat</MissingClass>
+    <MissingClass>org.bsc.ssl.SSLCertificateInfo</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:41 +0900" total_classes="23" referenced_classes="95" total_bugs="24" total_size="1367" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.42" clock_seconds="2.01" peak_mbytes="239.30" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="14" priority_2="7" priority_1="3">
+    <FileStats path="org/bsc/confluence/xmlrpc/Confluence.java" bugCount="1" size="345" bugHash="2e89522fddabd24e425c0b40fd8a7e47"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/Confluence2.java" bugCount="1" size="10" bugHash="1bac8dd64529155f097000a08ecada8f"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/ConfluenceExportDecorator.java" bugCount="16" size="99" bugHash="d3a01ef4d06c9d226f6f4c3e333aeabd"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/XMLRPCConfluenceService.java" bugCount="3" size="154" bugHash="57f6e1be47de908df3416d40c1b78bef"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Attachment.java" bugCount="0" size="85"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/BlogEntry.java" bugCount="0" size="52"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/BlogEntrySummary.java" bugCount="0" size="42"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Comment.java" bugCount="0" size="46"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Label.java" bugCount="0" size="27"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/MapObject.java" bugCount="3" size="155" bugHash="2888ca82a1cc9281be5f5f9a0c4b418b"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Page.java" bugCount="0" size="60"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/PageHistorySummary.java" bugCount="0" size="27"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/PageSummary.java" bugCount="0" size="36"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Permission.java" bugCount="0" size="17"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/RSSFeed.java" bugCount="0" size="17"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/SearchResult.java" bugCount="0" size="32"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/ServerInfo.java" bugCount="0" size="44"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/Space.java" bugCount="0" size="17"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/SpaceSummary.java" bugCount="0" size="22"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/User.java" bugCount="0" size="27"/>
+    <FileStats path="org/bsc/confluence/xmlrpc/model/UserInformation.java" bugCount="0" size="53"/>
+    <PackageStats package="org.bsc.confluence.xmlrpc" total_bugs="21" total_types="6" total_size="608" priority_3="14" priority_2="6" priority_1="1">
+      <ClassStats class="org.bsc.confluence.xmlrpc.Confluence" sourceFile="Confluence.java" interface="false" size="345" bugs="1" priority_2="1"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.Confluence2" sourceFile="Confluence2.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator" sourceFile="ConfluenceExportDecorator.java" interface="false" size="97" bugs="16" priority_3="12" priority_2="3" priority_1="1"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.ConfluenceExportDecorator$RedirectTask" sourceFile="ConfluenceExportDecorator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.TrySupplier" sourceFile="XMLRPCConfluenceService.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.XMLRPCConfluenceService" sourceFile="XMLRPCConfluenceService.java" interface="false" size="152" bugs="3" priority_3="2" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.bsc.confluence.xmlrpc.model" total_bugs="3" total_types="17" total_size="759" priority_2="1" priority_1="2">
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Attachment" sourceFile="Attachment.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.BlogEntry" sourceFile="BlogEntry.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.BlogEntrySummary" sourceFile="BlogEntrySummary.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Comment" sourceFile="Comment.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Label" sourceFile="Label.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.MapObject" sourceFile="MapObject.java" interface="false" size="155" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Page" sourceFile="Page.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.PageHistorySummary" sourceFile="PageHistorySummary.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.PageSummary" sourceFile="PageSummary.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Permission" sourceFile="Permission.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.RSSFeed" sourceFile="RSSFeed.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.SearchResult" sourceFile="SearchResult.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.ServerInfo" sourceFile="ServerInfo.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.Space" sourceFile="Space.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.SpaceSummary" sourceFile="SpaceSummary.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.User" sourceFile="User.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.bsc.confluence.xmlrpc.model.UserInformation" sourceFile="UserInformation.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="240" invocations="878" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="8242" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="91" invocations="95" avgMicrosecondsPerInvocation="964" maxMicrosecondsPerInvocation="8022" standardDeviationMicrosecondsPerInvocation="1636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="79" invocations="396" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="10774" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="73" invocations="95" avgMicrosecondsPerInvocation="776" maxMicrosecondsPerInvocation="8632" standardDeviationMicrosecondsPerInvocation="1286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="681" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="2301" standardDeviationMicrosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="399" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="9358" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="60" invocations="396" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="3825" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="56" invocations="396" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="3981" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="52" invocations="396" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="5477" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="49" invocations="402" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="7107" standardDeviationMicrosecondsPerInvocation="405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="46" invocations="398" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="27055" standardDeviationMicrosecondsPerInvocation="1354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="36" invocations="23" avgMicrosecondsPerInvocation="1584" maxMicrosecondsPerInvocation="15842" standardDeviationMicrosecondsPerInvocation="3262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="884" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="2039" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="34" invocations="390" avgMicrosecondsPerInvocation="87" maxMicrosecondsPerInvocation="1988" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="95" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="5918" standardDeviationMicrosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="796" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="8574" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="28" invocations="165" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="9826" standardDeviationMicrosecondsPerInvocation="790"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="25" invocations="95" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="2683" standardDeviationMicrosecondsPerInvocation="522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="25" invocations="95" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="15597" standardDeviationMicrosecondsPerInvocation="1592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="20" invocations="95" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="3418" standardDeviationMicrosecondsPerInvocation="454"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="19" invocations="95" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="1882" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="95" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="1657" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="95" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="5742" standardDeviationMicrosecondsPerInvocation="626"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="19" invocations="396" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="1875" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="3291" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="567" standardDeviationMicrosecondsPerInvocation="15"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="14" invocations="23" avgMicrosecondsPerInvocation="636" maxMicrosecondsPerInvocation="7967" standardDeviationMicrosecondsPerInvocation="1981"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="12" invocations="23" avgMicrosecondsPerInvocation="536" maxMicrosecondsPerInvocation="4769" standardDeviationMicrosecondsPerInvocation="1023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="12" invocations="95" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="2314" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="12" invocations="95" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="1353" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="23" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="3256" standardDeviationMicrosecondsPerInvocation="846"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,1487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445908180" analysisTimestamp="1699447694024" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\wildfly-controller-client-3.0.0.Beta3.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5d9931010f6e0178dc9e2e9685738fce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder.setSaslOptions(Map) may expose internal representation by storing an externally mutable object into ModelControllerClientConfiguration$Builder.saslOptions</LongMessage>
+    <Class classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" start="122" end="220" sourcefile="ModelControllerClientConfiguration.java" sourcepath="org/jboss/as/controller/client/ModelControllerClientConfiguration.java">
+        <Message>At ModelControllerClientConfiguration.java:[lines 122-220]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" name="setSaslOptions" signature="(Ljava/util/Map;)Lorg/jboss/as/controller/client/ModelControllerClientConfiguration$Builder;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" start="177" end="178" startBytecode="0" endBytecode="80" sourcefile="ModelControllerClientConfiguration.java" sourcepath="org/jboss/as/controller/client/ModelControllerClientConfiguration.java"/>
+      <Message>In method org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder.setSaslOptions(Map)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" name="saslOptions" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" sourcefile="ModelControllerClientConfiguration.java" sourcepath="org/jboss/as/controller/client/ModelControllerClientConfiguration.java">
+        <Message>In ModelControllerClientConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder.saslOptions</Message>
+    </Field>
+    <LocalVariable name="saslOptions" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named saslOptions</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" primary="true" start="177" end="177" startBytecode="2" endBytecode="2" sourcefile="ModelControllerClientConfiguration.java" sourcepath="org/jboss/as/controller/client/ModelControllerClientConfiguration.java">
+      <Message>At ModelControllerClientConfiguration.java:[line 177]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="49db055459c00e02e3f88c97062def6e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.OperationBuilder$FileStreamEntry at new org.jboss.as.controller.client.OperationBuilder$FileStreamEntry(File) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" start="147" end="169" sourcefile="OperationBuilder.java" sourcepath="org/jboss/as/controller/client/OperationBuilder.java">
+        <Message>At OperationBuilder.java:[lines 147-169]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.OperationBuilder$FileStreamEntry</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" start="151" end="153" startBytecode="0" endBytecode="77" sourcefile="OperationBuilder.java" sourcepath="org/jboss/as/controller/client/OperationBuilder.java"/>
+      <Message>In method new org.jboss.as.controller.client.OperationBuilder$FileStreamEntry(File)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" primary="true" start="151" end="151" startBytecode="5" endBytecode="5" sourcefile="OperationBuilder.java" sourcepath="org/jboss/as/controller/client/OperationBuilder.java">
+      <Message>At OperationBuilder.java:[line 151]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" start="151" end="151" startBytecode="5" endBytecode="5" sourcefile="OperationBuilder.java" sourcepath="org/jboss/as/controller/client/OperationBuilder.java">
+      <Message>At OperationBuilder.java:[line 151]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="611492344814d2ba5498ba4139eb4a97" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult.getDomainFailure() may expose internal representation by returning BasicDomainUpdateResult.domainFailure</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" start="45" end="89" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+        <Message>At BasicDomainUpdateResult.java:[lines 45-89]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" name="getDomainFailure" signature="()Lorg/jboss/as/controller/client/helpers/domain/UpdateFailedException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" start="85" end="85" startBytecode="0" endBytecode="46" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult.getDomainFailure()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" name="domainFailure" signature="Lorg/jboss/as/controller/client/helpers/domain/UpdateFailedException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+        <Message>In BasicDomainUpdateResult.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult.domainFailure</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" primary="true" start="85" end="85" startBytecode="4" endBytecode="4" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+      <Message>At BasicDomainUpdateResult.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="b0fd6d75c8efe000311f45e37246b5dd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult(UpdateFailedException, boolean) may expose internal representation by storing an externally mutable object into BasicDomainUpdateResult.domainFailure</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" start="45" end="89" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+        <Message>At BasicDomainUpdateResult.java:[lines 45-89]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/UpdateFailedException;Z)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" start="55" end="59" startBytecode="0" endBytecode="112" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult(UpdateFailedException, boolean)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" name="domainFailure" signature="Lorg/jboss/as/controller/client/helpers/domain/UpdateFailedException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+        <Message>In BasicDomainUpdateResult.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult.domainFailure</Message>
+    </Field>
+    <LocalVariable name="domainFailure" register="1" pc="17" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named domainFailure</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" primary="true" start="56" end="56" startBytecode="17" endBytecode="17" sourcefile="BasicDomainUpdateResult.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java">
+      <Message>At BasicDomainUpdateResult.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="d17a6da8d00633af6e55dcc9dcc6344a" instanceOccurrenceNum="0" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getAddAction(String, String, byte[]). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="35" end="114" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 35-114]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="getAddAction" signature="(Ljava/lang/String;Ljava/lang/String;[B)Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl;" isStatic="true" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="40" end="42" startBytecode="0" endBytecode="134" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getAddAction(String, String, byte[])</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true" start="40" end="40" startBytecode="7" endBytecode="7" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="d17a6da8d00633af6e55dcc9dcc6344a" instanceOccurrenceNum="1" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getAddAction(String, String, byte[]). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="35" end="114" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 35-114]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="getAddAction" signature="(Ljava/lang/String;Ljava/lang/String;[B)Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl;" isStatic="true" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="40" end="42" startBytecode="0" endBytecode="134" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getAddAction(String, String, byte[])</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true" start="41" end="41" startBytecode="27" endBytecode="27" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="8cd1572d6aab92cb6cddb34302965ee6" instanceOccurrenceNum="0" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getFullReplaceAction(String, String, byte[]). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="35" end="114" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 35-114]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="getFullReplaceAction" signature="(Ljava/lang/String;Ljava/lang/String;[B)Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl;" isStatic="true" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="63" end="65" startBytecode="0" endBytecode="134" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getFullReplaceAction(String, String, byte[])</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true" start="63" end="63" startBytecode="7" endBytecode="7" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="8cd1572d6aab92cb6cddb34302965ee6" instanceOccurrenceNum="1" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getFullReplaceAction(String, String, byte[]). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="35" end="114" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 35-114]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="getFullReplaceAction" signature="(Ljava/lang/String;Ljava/lang/String;[B)Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl;" isStatic="true" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="63" end="65" startBytecode="0" endBytecode="134" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getFullReplaceAction(String, String, byte[])</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true" start="64" end="64" startBytecode="27" endBytecode="27" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d775242ef8fdd23544fad77260f02b28" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getNewContentHash() may expose internal representation by returning DeploymentActionImpl.newContentHash</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="35" end="114" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 35-114]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="getNewContentHash" signature="()[B" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" start="114" end="114" startBytecode="0" endBytecode="46" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.getNewContentHash()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" name="newContentHash" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+        <Message>In DeploymentActionImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl.newContentHash</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" primary="true" start="114" end="114" startBytecode="4" endBytecode="4" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="81fc138486c85253fa8dfe94851f68ec" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl(DeploymentAction, BasicDomainUpdateResult) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" start="42" end="113" sourcefile="DeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionResultImpl.java">
+        <Message>At DeploymentActionResultImpl.java:[lines 42-113]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentAction;Lorg/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" start="50" end="55" startBytecode="0" endBytecode="176" sourcefile="DeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl(DeploymentAction, BasicDomainUpdateResult)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" primary="true" start="51" end="51" startBytecode="34" endBytecode="34" sourcefile="DeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionResultImpl.java">
+      <Message>At DeploymentActionResultImpl.java:[line 51]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" start="51" end="51" startBytecode="34" endBytecode="34" sourcefile="DeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionResultImpl.java">
+      <Message>At DeploymentActionResultImpl.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="1" rank="14" abbrev="DE" category="BAD_PRACTICE" instanceHash="fffc8d45b02c5d99c5ad365fc65b8f4f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.add(String, String, URL) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="59" end="284" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 59-284]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" name="add" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/net/URL;)Lorg/jboss/as/controller/client/helpers/domain/AddDeploymentPlanBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="232" end="239" startBytecode="0" endBytecode="297" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.add(String, String, URL)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="239" end="239" startBytecode="36" endBytecode="36" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 239]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="239" end="239" startBytecode="36" endBytecode="36" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 239]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="1" rank="14" abbrev="DE" category="BAD_PRACTICE" instanceHash="9036395a8649e76b362253aa29c3da51" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.replace(String, String, URL) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="59" end="284" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 59-284]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" name="replace" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/net/URL;)Lorg/jboss/as/controller/client/helpers/domain/RemoveDeploymentPlanBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="244" end="251" startBytecode="0" endBytecode="297" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.replace(String, String, URL)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="251" end="251" startBytecode="36" endBytecode="36" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 251]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="251" end="251" startBytecode="36" endBytecode="36" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 251]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE" instanceHash="b50f0e5ccc32b5b9f31f93e01158c485" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.add(String, File) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="59" end="284" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 59-284]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" name="add" signature="(Ljava/lang/String;Ljava/io/File;)Lorg/jboss/as/controller/client/helpers/domain/AddDeploymentPlanBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="88" end="92" startBytecode="0" endBytecode="240" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.add(String, File)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="92" end="92" startBytecode="26" endBytecode="26" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 92]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="92" end="92" startBytecode="26" endBytecode="26" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE" instanceHash="34dfb035fb23b9f88cbf4c56711503b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.replace(String, File) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="59" end="284" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 59-284]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" name="replace" signature="(Ljava/lang/String;Ljava/io/File;)Lorg/jboss/as/controller/client/helpers/domain/RemoveDeploymentPlanBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" start="184" end="188" startBytecode="0" endBytecode="240" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl.replace(String, File)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="188" end="188" startBytecode="26" endBytecode="26" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 188]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" primary="true" start="188" end="188" startBytecode="26" endBytecode="26" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 188]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ae025a7e3d566fe9684dc71966f3962" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry at new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry(File) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="288" end="310" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 288-310]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="292" end="294" startBytecode="0" endBytecode="77" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry(File)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" primary="true" start="294" end="294" startBytecode="109" endBytecode="109" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 294]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="294" end="294" startBytecode="109" endBytecode="109" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 294]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="505dc3cb59d72307d54c026771e2ee04" instanceOccurrenceNum="0" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentPlan;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="51" end="57" startBytecode="0" endBytecode="188" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="52" end="52" startBytecode="11" endBytecode="11" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="505dc3cb59d72307d54c026771e2ee04" instanceOccurrenceNum="1" instanceOccurrenceMax="1">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentPlan;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="51" end="57" startBytecode="0" endBytecode="188" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="53" end="53" startBytecode="31" endBytecode="31" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="e14cde3a1f59d40a7d8b222886ca3f6f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentPlan;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="51" end="57" startBytecode="0" endBytecode="188" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="52" end="52" startBytecode="23" endBytecode="23" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 52]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="52" end="52" startBytecode="23" endBytecode="23" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="12634d7e0e0a0080ee2d996fc2a66fac" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl.getInvalidDeploymentPlanException() may expose internal representation by returning DeploymentPlanResultImpl.idpe</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="getInvalidDeploymentPlanException" signature="()Lorg/jboss/as/controller/client/helpers/domain/InvalidDeploymentPlanException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="85" end="85" startBytecode="0" endBytecode="46" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl.getInvalidDeploymentPlanException()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="idpe" signature="Lorg/jboss/as/controller/client/helpers/domain/InvalidDeploymentPlanException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>In DeploymentPlanResultImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl.idpe</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="85" end="85" startBytecode="4" endBytecode="4" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c7388ca11ebe4da37ca051ddeb9ae092" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map) may expose internal representation by storing an externally mutable object into DeploymentPlanResultImpl.results</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentPlan;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="51" end="57" startBytecode="0" endBytecode="188" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, Map)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="results" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>In DeploymentPlanResultImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl.results</Message>
+    </Field>
+    <LocalVariable name="results" register="2" pc="56" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named results</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="56" end="56" startBytecode="56" endBytecode="56" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9de4dc5c4f3d03a2a78d67f78a5b0050" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, InvalidDeploymentPlanException) may expose internal representation by storing an externally mutable object into DeploymentPlanResultImpl.idpe</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="44" end="132" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 44-132]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/DeploymentPlan;Lorg/jboss/as/controller/client/helpers/domain/InvalidDeploymentPlanException;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" start="59" end="66" startBytecode="0" endBytecode="119" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl(DeploymentPlan, InvalidDeploymentPlanException)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" name="idpe" signature="Lorg/jboss/as/controller/client/helpers/domain/InvalidDeploymentPlanException;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+        <Message>In DeploymentPlanResultImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl.idpe</Message>
+    </Field>
+    <LocalVariable name="invalidPlanException" register="2" pc="30" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named invalidPlanException</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" primary="true" start="65" end="65" startBytecode="30" endBytecode="30" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f0a3b076a1ca6fc3d01f3e3df205a3e3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl at new org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl(DomainClientImpl) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" start="74" end="298" sourcefile="DomainDeploymentManagerImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentManagerImpl.java">
+        <Message>At DomainDeploymentManagerImpl.java:[lines 74-298]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/impl/DomainClientImpl;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" start="79" end="99" startBytecode="0" endBytecode="130" sourcefile="DomainDeploymentManagerImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentManagerImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl(DomainClientImpl)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" primary="true" start="80" end="80" startBytecode="23" endBytecode="23" sourcefile="DomainDeploymentManagerImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentManagerImpl.java">
+      <Message>At DomainDeploymentManagerImpl.java:[line 80]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" start="80" end="80" startBytecode="23" endBytecode="23" sourcefile="DomainDeploymentManagerImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentManagerImpl.java">
+      <Message>At DomainDeploymentManagerImpl.java:[line 80]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="809fb805e518b367f9a93a5b0e02d03a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" start="38" end="68" sourcefile="ServerDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerDeploymentPlanResultImpl.java">
+        <Message>At ServerDeploymentPlanResultImpl.java:[lines 38-68]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" start="43" end="46" startBytecode="0" endBytecode="129" sourcefile="ServerDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerDeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl(String)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" primary="true" start="44" end="44" startBytecode="34" endBytecode="34" sourcefile="ServerDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerDeploymentPlanResultImpl.java">
+      <Message>At ServerDeploymentPlanResultImpl.java:[line 44]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" start="44" end="44" startBytecode="34" endBytecode="34" sourcefile="ServerDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerDeploymentPlanResultImpl.java">
+      <Message>At ServerDeploymentPlanResultImpl.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="12d6abb367301dca7036a6cabeafee10" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" start="37" end="59" sourcefile="ServerGroupDeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentActionResultImpl.java">
+        <Message>At ServerGroupDeploymentActionResultImpl.java:[lines 37-59]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" start="42" end="45" startBytecode="0" endBytecode="129" sourcefile="ServerGroupDeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentActionResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl(String)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" primary="true" start="43" end="43" startBytecode="34" endBytecode="34" sourcefile="ServerGroupDeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentActionResultImpl.java">
+      <Message>At ServerGroupDeploymentActionResultImpl.java:[line 43]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" start="43" end="43" startBytecode="34" endBytecode="34" sourcefile="ServerGroupDeploymentActionResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentActionResultImpl.java">
+      <Message>At ServerGroupDeploymentActionResultImpl.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="114acda86a76e494b0130fecc3eb4318" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" start="38" end="68" sourcefile="ServerGroupDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanResultImpl.java">
+        <Message>At ServerGroupDeploymentPlanResultImpl.java:[lines 38-68]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" start="43" end="46" startBytecode="0" endBytecode="129" sourcefile="ServerGroupDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl(String)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" primary="true" start="44" end="44" startBytecode="34" endBytecode="34" sourcefile="ServerGroupDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanResultImpl.java">
+      <Message>At ServerGroupDeploymentPlanResultImpl.java:[line 44]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" start="44" end="44" startBytecode="34" endBytecode="34" sourcefile="ServerGroupDeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanResultImpl.java">
+      <Message>At ServerGroupDeploymentPlanResultImpl.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="3f8cb3f28eb313eed4a979f34cd31976" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl at new org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl(UUID, ServerIdentity, UpdateResultHandlerResponse) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" start="38" end="115" sourcefile="ServerUpdateResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerUpdateResultImpl.java">
+        <Message>At ServerUpdateResultImpl.java:[lines 38-115]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" name="&lt;init&gt;" signature="(Ljava/util/UUID;Lorg/jboss/as/controller/client/helpers/domain/ServerIdentity;Lorg/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" start="47" end="54" startBytecode="0" endBytecode="208" sourcefile="ServerUpdateResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerUpdateResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl(UUID, ServerIdentity, UpdateResultHandlerResponse)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" primary="true" start="48" end="48" startBytecode="23" endBytecode="23" sourcefile="ServerUpdateResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerUpdateResultImpl.java">
+      <Message>At ServerUpdateResultImpl.java:[line 48]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" start="48" end="48" startBytecode="23" endBytecode="23" sourcefile="ServerUpdateResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/ServerUpdateResultImpl.java">
+      <Message>At ServerUpdateResultImpl.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="e352f33601fd0bdb3be52ba77165e5f1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl at new org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl(DeploymentPlanBuilderImpl, DeploymentSetPlanImpl) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" start="44" end="65" sourcefile="UndeployDeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UndeployDeploymentPlanBuilderImpl.java">
+        <Message>At UndeployDeploymentPlanBuilderImpl.java:[lines 44-65]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" name="&lt;init&gt;" signature="(Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl;Lorg/jboss/as/controller/client/helpers/domain/impl/DeploymentSetPlanImpl;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" start="44" end="50" startBytecode="0" endBytecode="162" sourcefile="UndeployDeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UndeployDeploymentPlanBuilderImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl(DeploymentPlanBuilderImpl, DeploymentSetPlanImpl)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" primary="true" start="47" end="47" startBytecode="37" endBytecode="37" sourcefile="UndeployDeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UndeployDeploymentPlanBuilderImpl.java">
+      <Message>At UndeployDeploymentPlanBuilderImpl.java:[line 47]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" start="47" end="47" startBytecode="37" endBytecode="37" sourcefile="UndeployDeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UndeployDeploymentPlanBuilderImpl.java">
+      <Message>At UndeployDeploymentPlanBuilderImpl.java:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="e413c1e2de1a0701472ba46ef2119b10" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.getFailureResult() may expose internal representation by returning UpdateResultHandlerResponse.failureResult</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" start="52" end="163" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+        <Message>At UpdateResultHandlerResponse.java:[lines 52-163]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" name="getFailureResult" signature="()Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" start="147" end="147" startBytecode="0" endBytecode="46" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.getFailureResult()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" name="failureResult" signature="Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+        <Message>In UpdateResultHandlerResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.failureResult</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" primary="true" start="147" end="147" startBytecode="4" endBytecode="4" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+      <Message>At UpdateResultHandlerResponse.java:[line 147]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d0ea5ec5d54c9d444bcdaaf23cd870c5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.getRollbackFailure() may expose internal representation by returning UpdateResultHandlerResponse.rollbackFailure</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" start="52" end="163" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+        <Message>At UpdateResultHandlerResponse.java:[lines 52-163]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" name="getRollbackFailure" signature="()Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" start="139" end="139" startBytecode="0" endBytecode="46" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.getRollbackFailure()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" name="rollbackFailure" signature="Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+        <Message>In UpdateResultHandlerResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse.rollbackFailure</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" primary="true" start="139" end="139" startBytecode="4" endBytecode="4" sourcefile="UpdateResultHandlerResponse.java" sourcepath="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java">
+      <Message>At UpdateResultHandlerResponse.java:[line 139]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4921fad2c1bb7b5985d90cc08daf777e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult.getDeploymentException() may expose internal representation by returning AbstractServerUpdateActionResult.deploymentException</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" start="43" end="92" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+        <Message>At AbstractServerUpdateActionResult.java:[lines 43-92]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" name="getDeploymentException" signature="()Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" start="71" end="71" startBytecode="0" endBytecode="64" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult.getDeploymentException()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" name="deploymentException" signature="Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+        <Message>In AbstractServerUpdateActionResult.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult.deploymentException</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" primary="true" start="71" end="71" startBytecode="4" endBytecode="4" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+      <Message>At AbstractServerUpdateActionResult.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f18ab0ae00fd3cffdc147b8ab2e81594" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult(UUID, ServerUpdateActionResult$Result, Throwable) may expose internal representation by storing an externally mutable object into AbstractServerUpdateActionResult.deploymentException</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" start="43" end="92" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+        <Message>At AbstractServerUpdateActionResult.java:[lines 43-92]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" name="&lt;init&gt;" signature="(Ljava/util/UUID;Lorg/jboss/as/controller/client/helpers/standalone/ServerUpdateActionResult$Result;Ljava/lang/Throwable;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" start="56" end="62" startBytecode="0" endBytecode="147" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult(UUID, ServerUpdateActionResult$Result, Throwable)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" name="deploymentException" signature="Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+        <Message>In AbstractServerUpdateActionResult.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult.deploymentException</Message>
+    </Field>
+    <LocalVariable name="deploymentException" register="3" pc="30" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named deploymentException</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" primary="true" start="61" end="61" startBytecode="30" endBytecode="30" sourcefile="AbstractServerUpdateActionResult.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java">
+      <Message>At AbstractServerUpdateActionResult.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="15fe327a755688fe0da1fc18316f4d8b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl.getContents() may expose internal representation by returning DeploymentActionImpl.contents</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" start="43" end="164" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 43-164]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" name="getContents" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" start="160" end="160" startBytecode="0" endBytecode="46" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl.getContents()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" name="contents" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>In DeploymentActionImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl.contents</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" primary="true" start="160" end="160" startBytecode="4" endBytecode="4" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+      <Message>At DeploymentActionImpl.java:[line 160]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" instanceHash="a95a4343199bf53238981a9b8cf50734" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-transient non-serializable instance field in serializable class</ShortMessage>
+    <LongMessage>Class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl defines non-transient non-serializable instance field contentStream</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" start="43" end="164" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 43-164]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" name="contentStream" signature="Ljava/io/InputStream;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>In DeploymentActionImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl.contentStream</Message>
+    </Field>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_FOUND">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Actual type java.io.InputStream</Message>
+    </Type>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java" synthetic="true">
+      <Message>In DeploymentActionImpl.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" instanceHash="fe03c4237d770885d342829cd72e914f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-transient non-serializable instance field in serializable class</ShortMessage>
+    <LongMessage>Class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl defines non-transient non-serializable instance field contents</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" start="43" end="164" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>At DeploymentActionImpl.java:[lines 43-164]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl</Message>
+    </Class>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" name="contents" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java">
+        <Message>In DeploymentActionImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl.contents</Message>
+    </Field>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_FOUND">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Actual type java.io.InputStream</Message>
+    </Type>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourcefile="DeploymentActionImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java" synthetic="true">
+      <Message>In DeploymentActionImpl.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="be3b0e68c7a11af4168a6299467b4d98" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry at new org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry(File) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="442" end="464" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanBuilderImpl.java">
+        <Message>At DeploymentPlanBuilderImpl.java:[lines 442-464]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="446" end="448" startBytecode="0" endBytecode="77" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanBuilderImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry(File)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" primary="true" start="446" end="446" startBytecode="10" endBytecode="10" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 446]</Message>
+    </SourceLine>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" start="446" end="446" startBytecode="10" endBytecode="10" sourcefile="DeploymentPlanBuilderImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanBuilderImpl.java">
+      <Message>At DeploymentPlanBuilderImpl.java:[line 446]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="100d21ce3165454fece97a52181963d2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl(UUID, Map) may expose internal representation by storing an externally mutable object into DeploymentPlanResultImpl.actionResults</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" start="45" end="65" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanResultImpl.java">
+        <Message>At DeploymentPlanResultImpl.java:[lines 45-65]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" name="&lt;init&gt;" signature="(Ljava/util/UUID;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" start="45" end="50" startBytecode="0" endBytecode="128" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanResultImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl(UUID, Map)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" name="actionResults" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanResultImpl.java">
+        <Message>In DeploymentPlanResultImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl.actionResults</Message>
+    </Field>
+    <LocalVariable name="actionResults" register="2" pc="25" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named actionResults</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" primary="true" start="49" end="49" startBytecode="25" endBytecode="25" sourcefile="DeploymentPlanResultImpl.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanResultImpl.java">
+      <Message>At DeploymentPlanResultImpl.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RI_REDUNDANT_INTERFACES" priority="3" rank="20" abbrev="RI" category="STYLE" instanceHash="5feb4e15de11929dc38cb64b185a627b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class implements same interface as superclass</ShortMessage>
+    <LongMessage>Class org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager implements same interface as superclass</LongMessage>
+    <Class classname="org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager" start="40" end="58" sourcefile="ModelControllerClientServerDeploymentManager.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/ModelControllerClientServerDeploymentManager.java">
+        <Message>At ModelControllerClientServerDeploymentManager.java:[lines 40-58]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager</Message>
+    </Class>
+    <Class classname="java.io.Closeable" role="INTERFACE_TYPE">
+      <SourceLine classname="java.io.Closeable" sourcefile="Closeable.java" sourcepath="java/io/Closeable.java">
+        <Message>In Closeable.java</Message>
+      </SourceLine>
+      <Message>Interface java.io.Closeable</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager" start="40" end="58" sourcefile="ModelControllerClientServerDeploymentManager.java" sourcepath="org/jboss/as/controller/client/helpers/standalone/impl/ModelControllerClientServerDeploymentManager.java" synthetic="true">
+      <Message>At ModelControllerClientServerDeploymentManager.java:[lines 40-58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="c482d11e8f8f730d24e8a0f8e024de49" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler$1" start="211" end="238" sourcefile="AbstractModelControllerClient.java" sourcepath="org/jboss/as/controller/client/impl/AbstractModelControllerClient.java">
+        <Message>At AbstractModelControllerClient.java:[lines 211-238]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler$1</Message>
+    </Class>
+    <Class classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" start="203" end="240" sourcefile="AbstractModelControllerClient.java" sourcepath="org/jboss/as/controller/client/impl/AbstractModelControllerClient.java">
+        <Message>At AbstractModelControllerClient.java:[lines 203-240]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" name="handleRequest" signature="(Ljava/io/DataInput;Lorg/jboss/as/protocol/mgmt/ActiveOperation$ResultHandler;Lorg/jboss/as/protocol/mgmt/ManagementRequestContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" start="209" end="240" startBytecode="0" endBytecode="153" sourcefile="AbstractModelControllerClient.java" sourcepath="org/jboss/as/controller/client/impl/AbstractModelControllerClient.java"/>
+      <Message>In method org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler.handleRequest(DataInput, ActiveOperation$ResultHandler, ManagementRequestContext)</Message>
+    </Method>
+    <SourceLine classname="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" primary="true" start="211" end="211" startBytecode="22" endBytecode="22" sourcefile="AbstractModelControllerClient.java" sourcepath="org/jboss/as/controller/client/impl/AbstractModelControllerClient.java">
+      <Message>At AbstractModelControllerClient.java:[line 211]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ef98df34419d7b4bd193b1f8485d75f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.jboss.as.controller.client.impl.ClientConfigurationImpl.getSaslOptions() may expose internal representation by returning ClientConfigurationImpl.saslOptions</LongMessage>
+    <Class classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" start="50" end="113" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+        <Message>At ClientConfigurationImpl.java:[lines 50-113]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.impl.ClientConfigurationImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" name="getSaslOptions" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" start="86" end="86" startBytecode="0" endBytecode="46" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java"/>
+      <Message>In method org.jboss.as.controller.client.impl.ClientConfigurationImpl.getSaslOptions()</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" name="saslOptions" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+        <Message>In ClientConfigurationImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.impl.ClientConfigurationImpl.saslOptions</Message>
+    </Field>
+    <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" primary="true" start="86" end="86" startBytecode="4" endBytecode="4" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+      <Message>At ClientConfigurationImpl.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="550e655e787ec4d2393ff2e7434066dd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.jboss.as.controller.client.impl.ClientConfigurationImpl(String, int, CallbackHandler, Map, SSLContext, ExecutorService, boolean, int, String, String) may expose internal representation by storing an externally mutable object into ClientConfigurationImpl.saslOptions</LongMessage>
+    <Class classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" start="50" end="113" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+        <Message>At ClientConfigurationImpl.java:[lines 50-113]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.impl.ClientConfigurationImpl</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" name="&lt;init&gt;" signature="(Ljava/lang/String;ILjavax/security/auth/callback/CallbackHandler;Ljava/util/Map;Ljavax/net/ssl/SSLContext;Ljava/util/concurrent/ExecutorService;ZILjava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" start="50" end="61" startBytecode="0" endBytecode="359" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java"/>
+      <Message>In method new org.jboss.as.controller.client.impl.ClientConfigurationImpl(String, int, CallbackHandler, Map, SSLContext, ExecutorService, boolean, int, String, String)</Message>
+    </Method>
+    <Field classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" name="saslOptions" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+        <Message>In ClientConfigurationImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.jboss.as.controller.client.impl.ClientConfigurationImpl.saslOptions</Message>
+    </Field>
+    <LocalVariable name="saslOptions" register="4" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named saslOptions</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.impl.ClientConfigurationImpl" primary="true" start="54" end="54" startBytecode="22" endBytecode="22" sourcefile="ClientConfigurationImpl.java" sourcepath="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java">
+      <Message>At ClientConfigurationImpl.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="16dc9b1a257e9f49b5d3d4dd830c1fbd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to size in org.jboss.as.controller.client.impl.Pipe$1.read(byte[], int, int)</LongMessage>
+    <Class classname="org.jboss.as.controller.client.impl.Pipe$1" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.Pipe$1" start="85" end="183" sourcefile="Pipe.java" sourcepath="org/jboss/as/controller/client/impl/Pipe.java">
+        <Message>At Pipe.java:[lines 85-183]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.impl.Pipe$1</Message>
+    </Class>
+    <Method classname="org.jboss.as.controller.client.impl.Pipe$1" name="read" signature="([BII)I" isStatic="false" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.impl.Pipe$1" start="115" end="163" startBytecode="0" endBytecode="164" sourcefile="Pipe.java" sourcepath="org/jboss/as/controller/client/impl/Pipe.java"/>
+      <Message>In method org.jboss.as.controller.client.impl.Pipe$1.read(byte[], int, int)</Message>
+    </Method>
+    <LocalVariable name="size" register="6" pc="87" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named size</Message>
+    </LocalVariable>
+    <SourceLine classname="org.jboss.as.controller.client.impl.Pipe$1" primary="true" start="127" end="127" startBytecode="85" endBytecode="85" sourcefile="Pipe.java" sourcepath="org/jboss/as/controller/client/impl/Pipe.java">
+      <Message>At Pipe.java:[line 127]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="size"/>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="3b1148752c17efeabf2ec9e2fc4688c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name org.jboss.as.controller.client.logging.ControllerClientLogger_$logger doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="org.jboss.as.controller.client.logging.ControllerClientLogger_$logger" primary="true">
+      <SourceLine classname="org.jboss.as.controller.client.logging.ControllerClientLogger_$logger" start="27" end="390" sourcefile="ControllerClientLogger_$logger.java" sourcepath="org/jboss/as/controller/client/logging/ControllerClientLogger_$logger.java">
+        <Message>At ControllerClientLogger_$logger.java:[lines 27-390]</Message>
+      </SourceLine>
+      <Message>In class org.jboss.as.controller.client.logging.ControllerClientLogger_$logger</Message>
+    </Class>
+    <SourceLine classname="org.jboss.as.controller.client.logging.ControllerClientLogger_$logger" start="27" end="390" sourcefile="ControllerClientLogger_$logger.java" sourcepath="org/jboss/as/controller/client/logging/ControllerClientLogger_$logger.java" synthetic="true">
+      <Message>At ControllerClientLogger_$logger.java:[lines 27-390]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="AA_ASSERTION_OF_ARGUMENTS" abbrev="AA" category="BAD_PRACTICE">
+    <ShortDescription>Assertion is used to validate an argument of a public method</ShortDescription>
+    <Details><![CDATA[
+      
+        <p>Asssertions must not be used to validate arguments of public methods because the validations are
+        not performed if assertions are disabled.</p>
+
+        <p>
+        See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET01-J.+Never+use+assertions+to+validate+method+arguments">MET01-J. Never use assertions to validate method arguments</a>
+        for more information.
+        </p>
+        
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RI_REDUNDANT_INTERFACES" abbrev="RI" category="STYLE">
+    <ShortDescription>Class implements same interface as superclass</ShortDescription>
+    <Details><![CDATA[
+   
+    <p>
+    This class declares that it implements an interface that is also implemented by a superclass.
+    This is redundant because once a superclass implements an interface, all subclasses by default also
+    implement this interface. It may point out that the inheritance hierarchy has changed since
+    this class was created, and consideration should be given to the ownership of
+    the interface's implementation.
+    </p>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_BAD_FIELD" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Non-transient non-serializable instance field in serializable class</ShortDescription>
+    <Details><![CDATA[
+
+<p> This Serializable class defines a non-primitive instance field which is neither transient,
+Serializable, or <code>java.lang.Object</code>, and does not appear to implement
+the <code>Externalizable</code> interface or the
+<code>readObject()</code> and <code>writeObject()</code> methods.&nbsp;
+Objects of this class will not be deserialized correctly if a non-Serializable
+object is stored in this field.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="AA">
+    <Description>Misuse of assertions for checking arguments of public methods</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="RI">
+    <Description>Redundant Interfaces</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="41">
+    <MissingClass>org.jboss.as.protocol.ProtocolConnectionConfiguration</MissingClass>
+    <MissingClass>org.jboss.as.protocol.StreamUtils</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.AbstractManagementRequest</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ActiveOperation</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ActiveOperation$CompletedCallback</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ActiveOperation$ResultHandler</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.FlushableDataOutput</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementChannelAssociation</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementChannelHandler</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementClientChannelStrategy</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementMessageHandler</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementProtocol</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementProtocolHeader</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequest</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestContext</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestContext$AsyncTask</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestHandler</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestHandlerFactory</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestHandlerFactory$RequestHandlerChain</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementRequestHeader</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ManagementResponseHeader</MissingClass>
+    <MissingClass>org.jboss.as.protocol.mgmt.ProtocolUtils</MissingClass>
+    <MissingClass>org.jboss.dmr.ModelNode</MissingClass>
+    <MissingClass>org.jboss.dmr.ModelType</MissingClass>
+    <MissingClass>org.jboss.logging.BasicLogger</MissingClass>
+    <MissingClass>org.jboss.logging.DelegatingBasicLogger</MissingClass>
+    <MissingClass>org.jboss.logging.Logger</MissingClass>
+    <MissingClass>org.jboss.logging.Logger$Level</MissingClass>
+    <MissingClass>org.jboss.remoting3.Channel</MissingClass>
+    <MissingClass>org.jboss.remoting3.Channel$Receiver</MissingClass>
+    <MissingClass>org.jboss.remoting3.CloseHandler</MissingClass>
+    <MissingClass>org.jboss.remoting3.Endpoint</MissingClass>
+    <MissingClass>org.jboss.remoting3.EndpointBuilder</MissingClass>
+    <MissingClass>org.jboss.remoting3.HandleableCloseable</MissingClass>
+    <MissingClass>org.jboss.remoting3.HandleableCloseable$Key</MissingClass>
+    <MissingClass>org.jboss.threads.AsyncFuture</MissingClass>
+    <MissingClass>org.jboss.threads.AsyncFuture$Listener</MissingClass>
+    <MissingClass>org.jboss.threads.AsyncFuture$Status</MissingClass>
+    <MissingClass>org.jboss.threads.JBossThreadFactory</MissingClass>
+    <MissingClass>org.wildfly.common.Assert</MissingClass>
+    <MissingClass>org.xnio.OptionMap</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:28 +0900" total_classes="168" referenced_classes="275" total_bugs="42" total_size="4865" num_packages="8" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.81" clock_seconds="3.32" peak_mbytes="262.69" alloc_mbytes="4078.00" gc_seconds="0.07" priority_3="9" priority_2="31" priority_1="2">
+    <FileStats path="org/jboss/as/controller/client/MessageSeverity.java" bugCount="0" size="13"/>
+    <FileStats path="org/jboss/as/controller/client/ModelControllerClient.java" bugCount="0" size="164"/>
+    <FileStats path="org/jboss/as/controller/client/ModelControllerClientConfiguration.java" bugCount="1" size="203" bugHash="5f5e41923d947520bf9ff05742d56bfd"/>
+    <FileStats path="org/jboss/as/controller/client/Operation.java" bugCount="0" size="13"/>
+    <FileStats path="org/jboss/as/controller/client/OperationAttachments.java" bugCount="0" size="15"/>
+    <FileStats path="org/jboss/as/controller/client/OperationBuilder.java" bugCount="1" size="60" bugHash="a2e024d049a3a556cbf3a3cfd950954b"/>
+    <FileStats path="org/jboss/as/controller/client/OperationImpl.java" bugCount="0" size="36"/>
+    <FileStats path="org/jboss/as/controller/client/OperationMessageHandler.java" bugCount="0" size="27"/>
+    <FileStats path="org/jboss/as/controller/client/OperationResponse.java" bugCount="0" size="27"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/ClientConstants.java" bugCount="0" size="79"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/DelegatingModelControllerClient.java" bugCount="0" size="36"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/MeasurementUnit.java" bugCount="0" size="258"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/Operations.java" bugCount="0" size="114"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/AddDeploymentPlanBuilder.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeployDeploymentPlanBuilder.java" bugCount="0" size="1"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentAction.java" bugCount="0" size="26"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentActionResult.java" bugCount="0" size="10"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentActionsCompleteBuilder.java" bugCount="0" size="2"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentPlan.java" bugCount="0" size="9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentPlanBuilder.java" bugCount="0" size="21"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentPlanResult.java" bugCount="0" size="7"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentSetPlan.java" bugCount="0" size="8"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DeploymentSetPlanResult.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DomainClient.java" bugCount="0" size="21"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DomainDeploymentManager.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/DuplicateDeploymentNameException.java" bugCount="0" size="9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/IncompleteDeploymentReplaceException.java" bugCount="0" size="12"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/InitialDeploymentPlanBuilder.java" bugCount="0" size="6"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/InitialDeploymentSetBuilder.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/InvalidDeploymentPlanException.java" bugCount="0" size="8"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/RemoveDeploymentPlanBuilder.java" bugCount="0" size="1"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ReplaceDeploymentPlanBuilder.java" bugCount="0" size="2"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/RollbackCancelledException.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/RollbackDeploymentPlanBuilder.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerDeploymentPlanResult.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerGroupDeploymentActionResult.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerGroupDeploymentPlan.java" bugCount="0" size="56"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerGroupDeploymentPlanBuilder.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerGroupDeploymentPlanResult.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerIdentity.java" bugCount="0" size="39"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerStatus.java" bugCount="0" size="23"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/ServerUpdateResult.java" bugCount="0" size="10"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/UndeployDeploymentPlanBuilder.java" bugCount="0" size="2"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/UpdateFailedException.java" bugCount="0" size="14"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/AbstractDeploymentPlanBuilder.java" bugCount="0" size="24"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/AddDeploymentPlanBuilderImpl.java" bugCount="0" size="17"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/BasicDomainUpdateResult.java" bugCount="2" size="41" bugHash="54028716a1e9c3c6e14adeba780df204"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeployDeploymentPlanBuilderImpl.java" bugCount="0" size="6"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionImpl.java" bugCount="5" size="53" bugHash="ee5588e59c7ea5c1c78c148f5daae034"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentActionResultImpl.java" bugCount="1" size="44" bugHash="41cf29b5f27e68e83c3466dc13b71c9c"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentContentDistributor.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanBuilderImpl.java" bugCount="5" size="151" bugHash="6a6c4480e51f21d8e67536aa098ef1e3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanImpl.java" bugCount="0" size="34"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentPlanResultImpl.java" bugCount="6" size="62" bugHash="bfc657efbab6a6a83a603f1e650f71b9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DeploymentSetPlanImpl.java" bugCount="0" size="91"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DomainClientImpl.java" bugCount="0" size="150"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DomainClientProtocol.java" bugCount="0" size="71"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentManagerImpl.java" bugCount="1" size="169" bugHash="7c8e795901812dd1fd1cd9a03748161a"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/DomainDeploymentPlanResultFuture.java" bugCount="0" size="94"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/InitialDeploymentPlanBuilderFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/InitialDeploymentPlanBuilderImpl.java" bugCount="0" size="9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/InitialDeploymentSetBuilderImpl.java" bugCount="0" size="50"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/RemoveDeploymentPlanBuilderImpl.java" bugCount="0" size="6"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ReplaceDeploymentPlanBuilderImpl.java" bugCount="0" size="15"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/RollbackDeploymentPlanBuilderImpl.java" bugCount="0" size="20"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ServerDeploymentPlanResultImpl.java" bugCount="1" size="25" bugHash="7a9a94c8826df22c60befcf0edb9b933"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentActionResultImpl.java" bugCount="1" size="19" bugHash="f65e7a0344eef5e0b409f9baeb8fba38"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanBuilderImpl.java" bugCount="0" size="30"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ServerGroupDeploymentPlanResultImpl.java" bugCount="1" size="25" bugHash="5b00d306793423e69990b22af4446562"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/ServerUpdateResultImpl.java" bugCount="1" size="47" bugHash="3ff89f20b029091101afa72b9c654161"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/UndeployDeploymentPlanBuilderImpl.java" bugCount="1" size="18" bugHash="507907716143a84dd40aa217721905df"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/domain/impl/UpdateResultHandlerResponse.java" bugCount="2" size="73" bugHash="19319a06355b31aa73d4c1113df0a08a"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/AbstractServerUpdateActionResult.java" bugCount="2" size="40" bugHash="4f50bb293af388f50b8c37dde3621b9f"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/AddDeploymentPlanBuilder.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/DeploymentAction.java" bugCount="0" size="32"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/DeploymentPlan.java" bugCount="0" size="7"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/DeploymentPlanBuilder.java" bugCount="0" size="28"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/DuplicateDeploymentNameException.java" bugCount="0" size="9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/InitialDeploymentPlanBuilder.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ReplaceDeploymentPlanBuilder.java" bugCount="0" size="2"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ServerDeploymentActionResult.java" bugCount="0" size="4"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ServerDeploymentHelper.java" bugCount="0" size="88"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ServerDeploymentManager.java" bugCount="0" size="18"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ServerDeploymentPlanResult.java" bugCount="0" size="3"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/ServerUpdateActionResult.java" bugCount="0" size="22"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/SimpleServerDeploymentActionResult.java" bugCount="0" size="15"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/SimpleServerUpdateActionResult.java" bugCount="0" size="13"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/UndeployDeploymentPlanBuilder.java" bugCount="0" size="2"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/AbstractServerDeploymentManager.java" bugCount="0" size="92"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentActionImpl.java" bugCount="3" size="83" bugHash="64a2e14a3019e3da757acff77bb76c21"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanBuilderImpl.java" bugCount="1" size="235" bugHash="34a57d5b6f9a4234fa3de0bfa6ba3895"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanImpl.java" bugCount="0" size="41"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/DeploymentPlanResultImpl.java" bugCount="1" size="15" bugHash="1182755e8f2787942bdf64a69f578f58"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/InitialDeploymentPlanBuilderFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/ModelControllerClientServerDeploymentManager.java" bugCount="1" size="14" bugHash="a11ac9e9455f2f720305600c81a9e546"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/ReplaceDeploymentPlanBuilderImpl.java" bugCount="0" size="9"/>
+    <FileStats path="org/jboss/as/controller/client/helpers/standalone/impl/ServerDeploymentPlanResultFuture.java" bugCount="0" size="70"/>
+    <FileStats path="org/jboss/as/controller/client/impl/AbstractDelegatingAsyncFuture.java" bugCount="0" size="24"/>
+    <FileStats path="org/jboss/as/controller/client/impl/AbstractModelControllerClient.java" bugCount="1" size="217" bugHash="5e3c767347c7451a2d4925ae99c1358f"/>
+    <FileStats path="org/jboss/as/controller/client/impl/BasicDelegatingAsyncFuture.java" bugCount="0" size="23"/>
+    <FileStats path="org/jboss/as/controller/client/impl/ClientConfigurationImpl.java" bugCount="2" size="47" bugHash="4e5bdd597c4f52033b0f35393bd2707b"/>
+    <FileStats path="org/jboss/as/controller/client/impl/ConvertingDelegatingAsyncFuture.java" bugCount="0" size="46"/>
+    <FileStats path="org/jboss/as/controller/client/impl/ExistingChannelModelControllerClient.java" bugCount="0" size="36"/>
+    <FileStats path="org/jboss/as/controller/client/impl/InputStreamEntry.java" bugCount="0" size="71"/>
+    <FileStats path="org/jboss/as/controller/client/impl/ModelControllerProtocol.java" bugCount="0" size="25"/>
+    <FileStats path="org/jboss/as/controller/client/impl/OperationResponseProxy.java" bugCount="0" size="179"/>
+    <FileStats path="org/jboss/as/controller/client/impl/Pipe.java" bugCount="1" size="200" bugHash="24de75ebc923f984c5f1da4dba09dd31"/>
+    <FileStats path="org/jboss/as/controller/client/impl/ProtocolConfigurationFactory.java" bugCount="0" size="26"/>
+    <FileStats path="org/jboss/as/controller/client/impl/RemotingModelControllerClient.java" bugCount="0" size="79"/>
+    <FileStats path="org/jboss/as/controller/client/logging/ControllerClientLogger.java" bugCount="0" size="49"/>
+    <FileStats path="org/jboss/as/controller/client/logging/ControllerClientLogger_$logger.java" bugCount="1" size="266" bugHash="b0086f901a756788a1acab07d7a8671c"/>
+    <PackageStats package="org.jboss.as.controller.client" total_bugs="2" total_types="24" total_size="558" priority_2="2">
+      <ClassStats class="org.jboss.as.controller.client.MessageSeverity" sourceFile="MessageSeverity.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClient" sourceFile="ModelControllerClient.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClient$Factory" sourceFile="ModelControllerClient.java" interface="false" size="155" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClientConfiguration" sourceFile="ModelControllerClientConfiguration.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClientConfiguration$Builder" sourceFile="ModelControllerClientConfiguration.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClientConfiguration$Factory" sourceFile="ModelControllerClientConfiguration.java" interface="false" size="140" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClientConfiguration$Factory$1" sourceFile="ModelControllerClientConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.ModelControllerClientConfiguration$Factory$2" sourceFile="ModelControllerClientConfiguration.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.Operation" sourceFile="Operation.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.Operation$Factory" sourceFile="Operation.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationAttachments" sourceFile="OperationAttachments.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationAttachments$1" sourceFile="OperationAttachments.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationBuilder" sourceFile="OperationBuilder.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationBuilder$1" sourceFile="OperationBuilder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationBuilder$FileStreamEntry" sourceFile="OperationBuilder.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationImpl" sourceFile="OperationImpl.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationMessageHandler" sourceFile="OperationMessageHandler.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationMessageHandler$1" sourceFile="OperationMessageHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationMessageHandler$2" sourceFile="OperationMessageHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationMessageHandler$3" sourceFile="OperationMessageHandler.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationResponse" sourceFile="OperationResponse.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationResponse$Factory" sourceFile="OperationResponse.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationResponse$Factory$1" sourceFile="OperationResponse.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.OperationResponse$StreamEntry" sourceFile="OperationResponse.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.helpers" total_bugs="0" total_types="11" total_size="487">
+      <ClassStats class="org.jboss.as.controller.client.helpers.ClientConstants" sourceFile="ClientConstants.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.DelegatingModelControllerClient" sourceFile="DelegatingModelControllerClient.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.DelegatingModelControllerClient$1" sourceFile="DelegatingModelControllerClient.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.DelegatingModelControllerClient$DelegateProvider" sourceFile="DelegatingModelControllerClient.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.MeasurementUnit" sourceFile="MeasurementUnit.java" interface="false" size="118" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.MeasurementUnit$Family" sourceFile="MeasurementUnit.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.MeasurementUnit$MeasurementConversionException" sourceFile="MeasurementUnit.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.MeasurementUnit$Scale" sourceFile="MeasurementUnit.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.MeasurementUnit$Scale$Type" sourceFile="MeasurementUnit.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.Operations" sourceFile="Operations.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.Operations$CompositeOperationBuilder" sourceFile="Operations.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.helpers.domain" total_bugs="0" total_types="33" total_size="325">
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.AddDeploymentPlanBuilder" sourceFile="AddDeploymentPlanBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeployDeploymentPlanBuilder" sourceFile="DeployDeploymentPlanBuilder.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentAction" sourceFile="DeploymentAction.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentAction$Type" sourceFile="DeploymentAction.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentActionResult" sourceFile="DeploymentActionResult.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentActionsCompleteBuilder" sourceFile="DeploymentActionsCompleteBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentPlan" sourceFile="DeploymentPlan.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentPlanBuilder" sourceFile="DeploymentPlanBuilder.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentPlanResult" sourceFile="DeploymentPlanResult.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentSetPlan" sourceFile="DeploymentSetPlan.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DeploymentSetPlanResult" sourceFile="DeploymentSetPlanResult.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DomainClient" sourceFile="DomainClient.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DomainClient$Factory" sourceFile="DomainClient.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DomainDeploymentManager" sourceFile="DomainDeploymentManager.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.DuplicateDeploymentNameException" sourceFile="DuplicateDeploymentNameException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.IncompleteDeploymentReplaceException" sourceFile="IncompleteDeploymentReplaceException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.InitialDeploymentPlanBuilder" sourceFile="InitialDeploymentPlanBuilder.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.InitialDeploymentSetBuilder" sourceFile="InitialDeploymentSetBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.InvalidDeploymentPlanException" sourceFile="InvalidDeploymentPlanException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.RemoveDeploymentPlanBuilder" sourceFile="RemoveDeploymentPlanBuilder.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ReplaceDeploymentPlanBuilder" sourceFile="ReplaceDeploymentPlanBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.RollbackCancelledException" sourceFile="RollbackCancelledException.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.RollbackDeploymentPlanBuilder" sourceFile="RollbackDeploymentPlanBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerDeploymentPlanResult" sourceFile="ServerDeploymentPlanResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerGroupDeploymentActionResult" sourceFile="ServerGroupDeploymentActionResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerGroupDeploymentPlan" sourceFile="ServerGroupDeploymentPlan.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerGroupDeploymentPlanBuilder" sourceFile="ServerGroupDeploymentPlanBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerGroupDeploymentPlanResult" sourceFile="ServerGroupDeploymentPlanResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerIdentity" sourceFile="ServerIdentity.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerStatus" sourceFile="ServerStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.ServerUpdateResult" sourceFile="ServerUpdateResult.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.UndeployDeploymentPlanBuilder" sourceFile="UndeployDeploymentPlanBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.UpdateFailedException" sourceFile="UpdateFailedException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.helpers.domain.impl" total_bugs="27" total_types="32" total_size="1352" priority_3="6" priority_2="19" priority_1="2">
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.AbstractDeploymentPlanBuilder" sourceFile="AbstractDeploymentPlanBuilder.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.AddDeploymentPlanBuilderImpl" sourceFile="AddDeploymentPlanBuilderImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.BasicDomainUpdateResult" sourceFile="BasicDomainUpdateResult.java" interface="false" size="41" bugs="2" priority_2="2"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeployDeploymentPlanBuilderImpl" sourceFile="DeployDeploymentPlanBuilderImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionImpl" sourceFile="DeploymentActionImpl.java" interface="false" size="53" bugs="5" priority_3="4" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentActionResultImpl" sourceFile="DeploymentActionResultImpl.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentContentDistributor" sourceFile="DeploymentContentDistributor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="133" bugs="4" priority_2="2" priority_1="2"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$1" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanBuilderImpl$FileStreamEntry" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanImpl" sourceFile="DeploymentPlanImpl.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentPlanResultImpl" sourceFile="DeploymentPlanResultImpl.java" interface="false" size="62" bugs="6" priority_3="2" priority_2="4"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DeploymentSetPlanImpl" sourceFile="DeploymentSetPlanImpl.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainClientImpl" sourceFile="DomainClientImpl.java" interface="false" size="150" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainClientProtocol" sourceFile="DomainClientProtocol.java" interface="true" size="71" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl" sourceFile="DomainDeploymentManagerImpl.java" interface="false" size="154" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl$1" sourceFile="DomainDeploymentManagerImpl.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentManagerImpl$2" sourceFile="DomainDeploymentManagerImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.DomainDeploymentPlanResultFuture" sourceFile="DomainDeploymentPlanResultFuture.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.InitialDeploymentPlanBuilderFactory" sourceFile="InitialDeploymentPlanBuilderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.InitialDeploymentPlanBuilderImpl" sourceFile="InitialDeploymentPlanBuilderImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.InitialDeploymentSetBuilderImpl" sourceFile="InitialDeploymentSetBuilderImpl.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.RemoveDeploymentPlanBuilderImpl" sourceFile="RemoveDeploymentPlanBuilderImpl.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ReplaceDeploymentPlanBuilderImpl" sourceFile="ReplaceDeploymentPlanBuilderImpl.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.RollbackDeploymentPlanBuilderImpl" sourceFile="RollbackDeploymentPlanBuilderImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ServerDeploymentPlanResultImpl" sourceFile="ServerDeploymentPlanResultImpl.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentActionResultImpl" sourceFile="ServerGroupDeploymentActionResultImpl.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanBuilderImpl" sourceFile="ServerGroupDeploymentPlanBuilderImpl.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ServerGroupDeploymentPlanResultImpl" sourceFile="ServerGroupDeploymentPlanResultImpl.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.ServerUpdateResultImpl" sourceFile="ServerUpdateResultImpl.java" interface="false" size="47" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.UndeployDeploymentPlanBuilderImpl" sourceFile="UndeployDeploymentPlanBuilderImpl.java" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.domain.impl.UpdateResultHandlerResponse" sourceFile="UpdateResultHandlerResponse.java" interface="false" size="73" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.helpers.standalone" total_bugs="2" total_types="21" total_size="291" priority_2="2">
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.AbstractServerUpdateActionResult" sourceFile="AbstractServerUpdateActionResult.java" interface="false" size="40" bugs="2" priority_2="2"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.AddDeploymentPlanBuilder" sourceFile="AddDeploymentPlanBuilder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.DeploymentAction" sourceFile="DeploymentAction.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.DeploymentAction$Type" sourceFile="DeploymentAction.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.DeploymentPlan" sourceFile="DeploymentPlan.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.DeploymentPlanBuilder" sourceFile="DeploymentPlanBuilder.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.DuplicateDeploymentNameException" sourceFile="DuplicateDeploymentNameException.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.InitialDeploymentPlanBuilder" sourceFile="InitialDeploymentPlanBuilder.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ReplaceDeploymentPlanBuilder" sourceFile="ReplaceDeploymentPlanBuilder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentActionResult" sourceFile="ServerDeploymentActionResult.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentHelper" sourceFile="ServerDeploymentHelper.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentHelper$1" sourceFile="ServerDeploymentHelper.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentHelper$ServerDeploymentException" sourceFile="ServerDeploymentHelper.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentManager" sourceFile="ServerDeploymentManager.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentManager$Factory" sourceFile="ServerDeploymentManager.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerDeploymentPlanResult" sourceFile="ServerDeploymentPlanResult.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerUpdateActionResult" sourceFile="ServerUpdateActionResult.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.ServerUpdateActionResult$Result" sourceFile="ServerUpdateActionResult.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.SimpleServerDeploymentActionResult" sourceFile="SimpleServerDeploymentActionResult.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.SimpleServerUpdateActionResult" sourceFile="SimpleServerUpdateActionResult.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.UndeployDeploymentPlanBuilder" sourceFile="UndeployDeploymentPlanBuilder.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.helpers.standalone.impl" total_bugs="6" total_types="13" total_size="564" priority_3="1" priority_2="5">
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.AbstractServerDeploymentManager" sourceFile="AbstractServerDeploymentManager.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.AbstractServerDeploymentManager$1" sourceFile="AbstractServerDeploymentManager.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl" sourceFile="DeploymentActionImpl.java" interface="false" size="78" bugs="3" priority_2="3"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentActionImpl$1" sourceFile="DeploymentActionImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="217" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$1" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanBuilderImpl$FileStreamEntry" sourceFile="DeploymentPlanBuilderImpl.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanImpl" sourceFile="DeploymentPlanImpl.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.DeploymentPlanResultImpl" sourceFile="DeploymentPlanResultImpl.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.InitialDeploymentPlanBuilderFactory" sourceFile="InitialDeploymentPlanBuilderFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.ModelControllerClientServerDeploymentManager" sourceFile="ModelControllerClientServerDeploymentManager.java" interface="false" size="14" bugs="1" priority_3="1"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.ReplaceDeploymentPlanBuilderImpl" sourceFile="ReplaceDeploymentPlanBuilderImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.helpers.standalone.impl.ServerDeploymentPlanResultFuture" sourceFile="ServerDeploymentPlanResultFuture.java" interface="false" size="70" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.impl" total_bugs="4" total_types="31" total_size="973" priority_3="2" priority_2="2">
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractDelegatingAsyncFuture" sourceFile="AbstractDelegatingAsyncFuture.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient" sourceFile="AbstractModelControllerClient.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$1" sourceFile="AbstractModelControllerClient.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$CancelAsyncRequest" sourceFile="AbstractModelControllerClient.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$DelegatingCancellableAsyncFuture" sourceFile="AbstractModelControllerClient.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$HandleReportRequestHandler" sourceFile="AbstractModelControllerClient.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$OperationExecutionContext" sourceFile="AbstractModelControllerClient.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler" sourceFile="AbstractModelControllerClient.java" interface="false" size="9" bugs="1" priority_3="1"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.AbstractModelControllerClient$ReadAttachmentInputStreamRequestHandler$1" sourceFile="AbstractModelControllerClient.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.BasicDelegatingAsyncFuture" sourceFile="BasicDelegatingAsyncFuture.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ClientConfigurationImpl" sourceFile="ClientConfigurationImpl.java" interface="false" size="47" bugs="2" priority_2="2"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ConvertingDelegatingAsyncFuture" sourceFile="ConvertingDelegatingAsyncFuture.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ConvertingDelegatingAsyncFuture$1" sourceFile="ConvertingDelegatingAsyncFuture.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ExistingChannelModelControllerClient" sourceFile="ExistingChannelModelControllerClient.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ExistingChannelModelControllerClient$1" sourceFile="ExistingChannelModelControllerClient.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.InputStreamEntry" sourceFile="InputStreamEntry.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.InputStreamEntry$1" sourceFile="InputStreamEntry.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.InputStreamEntry$CachingStreamEntry" sourceFile="InputStreamEntry.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.InputStreamEntry$InMemoryEntry" sourceFile="InputStreamEntry.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ModelControllerProtocol" sourceFile="ModelControllerProtocol.java" interface="true" size="25" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.OperationResponseProxy" sourceFile="OperationResponseProxy.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.OperationResponseProxy$ProxiedInputStream" sourceFile="OperationResponseProxy.java" interface="false" size="90" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.OperationResponseProxy$ProxiedInputStream$1" sourceFile="OperationResponseProxy.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.OperationResponseProxy$ProxiedInputStream$2" sourceFile="OperationResponseProxy.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.Pipe" sourceFile="Pipe.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.Pipe$1" sourceFile="Pipe.java" interface="false" size="76" bugs="1" priority_3="1"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.Pipe$2" sourceFile="Pipe.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.ProtocolConfigurationFactory" sourceFile="ProtocolConfigurationFactory.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.RemotingModelControllerClient" sourceFile="RemotingModelControllerClient.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.RemotingModelControllerClient$1" sourceFile="RemotingModelControllerClient.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.impl.RemotingModelControllerClient$2" sourceFile="RemotingModelControllerClient.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.jboss.as.controller.client.logging" total_bugs="1" total_types="3" total_size="315" priority_2="1">
+      <ClassStats class="org.jboss.as.controller.client.logging.ControllerClientLogger" sourceFile="ControllerClientLogger.java" interface="true" size="39" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.logging.ControllerClientLogger$LeakDescription" sourceFile="ControllerClientLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.jboss.as.controller.client.logging.ControllerClientLogger_$logger" sourceFile="ControllerClientLogger_$logger.java" interface="false" size="266" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="318" invocations="1013" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="23807" standardDeviationMicrosecondsPerInvocation="1026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="142" invocations="881" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="7081" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="135" invocations="927" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="6037" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="124" invocations="952" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="8093" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="123" invocations="960" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="7386" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="111" invocations="275" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="7908" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="108" invocations="910" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="5986" standardDeviationMicrosecondsPerInvocation="335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="102" invocations="275" avgMicrosecondsPerInvocation="372" maxMicrosecondsPerInvocation="4605" standardDeviationMicrosecondsPerInvocation="744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="91" invocations="1320" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="2314" standardDeviationMicrosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="90" invocations="927" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="6377" standardDeviationMicrosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="79" invocations="753" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="3262" standardDeviationMicrosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="74" invocations="168" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="33943" standardDeviationMicrosecondsPerInvocation="2612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="52" invocations="1157" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="16773" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="44" invocations="1023" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="3324" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="38" invocations="275" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="2385" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="353" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="10710" standardDeviationMicrosecondsPerInvocation="583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="34" invocations="927" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="3842" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="32" invocations="14518" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="728" standardDeviationMicrosecondsPerInvocation="10"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="28" invocations="275" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="2384" standardDeviationMicrosecondsPerInvocation="227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="28" invocations="275" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="1431" standardDeviationMicrosecondsPerInvocation="176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="28" invocations="168" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="3817" standardDeviationMicrosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="27" invocations="275" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="2990" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="27" invocations="168" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="1115" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="913" avgMicrosecondsPerInvocation="30" maxMicrosecondsPerInvocation="531" standardDeviationMicrosecondsPerInvocation="57"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="25" invocations="275" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="2490" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="24" invocations="168" avgMicrosecondsPerInvocation="144" maxMicrosecondsPerInvocation="1723" standardDeviationMicrosecondsPerInvocation="257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="23" invocations="168" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="7940" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="275" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="3836" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="168" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="799" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="19" invocations="850" avgMicrosecondsPerInvocation="23" maxMicrosecondsPerInvocation="1184" standardDeviationMicrosecondsPerInvocation="68"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="19" invocations="168" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="1230" standardDeviationMicrosecondsPerInvocation="157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="19" invocations="168" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="1814" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="18" invocations="168" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="6089" standardDeviationMicrosecondsPerInvocation="478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="18" invocations="881" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="533" standardDeviationMicrosecondsPerInvocation="38"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="17" invocations="168" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="1824" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="168" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="3576" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="17" invocations="267" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="806" standardDeviationMicrosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="16" invocations="168" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="623" standardDeviationMicrosecondsPerInvocation="129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="15" invocations="168" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="1651" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="15" invocations="168" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="695" standardDeviationMicrosecondsPerInvocation="134"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

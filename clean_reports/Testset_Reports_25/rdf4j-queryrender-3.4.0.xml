@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699429558705" analysisTimestamp="1699430497120" release="">
+  <Project projectName="">
+    <Jar>cleans/temp\rdf4j-queryrender-3.4.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7667e077c5a3c15c6d0c72dce287c827" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getExtensions() may expose internal representation by returning BaseTupleExprRenderer.mExtensions</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="38" end="302" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>At BaseTupleExprRenderer.java:[lines 38-302]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="getExtensions" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="88" end="88" startBytecode="0" endBytecode="46" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getExtensions()</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="mExtensions" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>In BaseTupleExprRenderer.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.mExtensions</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true" start="88" end="88" startBytecode="4" endBytecode="4" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+      <Message>At BaseTupleExprRenderer.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="e9a077eb12d71dcc7aca58e1d77e9a50" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getOrdering() may expose internal representation by returning BaseTupleExprRenderer.mOrdering</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="38" end="302" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>At BaseTupleExprRenderer.java:[lines 38-302]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="getOrdering" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="96" end="96" startBytecode="0" endBytecode="46" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getOrdering()</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="mOrdering" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>In BaseTupleExprRenderer.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.mOrdering</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true" start="96" end="96" startBytecode="4" endBytecode="4" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+      <Message>At BaseTupleExprRenderer.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="eb5da96cef2e6ccdfdd9d238aaf5e0dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getProjection() may expose internal representation by returning BaseTupleExprRenderer.mProjection</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="38" end="302" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>At BaseTupleExprRenderer.java:[lines 38-302]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="getProjection" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" start="92" end="92" startBytecode="0" endBytecode="46" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.getProjection()</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" name="mProjection" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+        <Message>In BaseTupleExprRenderer.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer.mProjection</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" primary="true" start="92" end="92" startBytecode="4" endBytecode="4" sourcefile="BaseTupleExprRenderer.java" sourcepath="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java">
+      <Message>At BaseTupleExprRenderer.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="3" rank="19" abbrev="NP" category="STYLE" instanceHash="cee6cdab5207689c87a3fc22c3dd4415" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder.projection()</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" start="55" end="625" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java">
+        <Message>At AbstractQueryBuilder.java:[lines 55-625]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" name="projection" signature="()Lorg/eclipse/rdf4j/query/algebra/UnaryTupleOperator;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" start="387" end="405" startBytecode="0" endBytecode="44" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder.projection()</Message>
+    </Method>
+    <LocalVariable name="aExt" register="1" pc="83" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from aExt</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" primary="true" start="401" end="401" startBytecode="86" endBytecode="86" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java">
+      <Message>At AbstractQueryBuilder.java:[line 401]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" instanceHash="e37d0c71f256b8597ca40c21b8695689" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be null</ShortMessage>
+    <LongMessage>Redundant nullcheck of aExt which is known to be null in org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder.projection()</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" start="55" end="625" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java">
+        <Message>At AbstractQueryBuilder.java:[lines 55-625]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" name="projection" signature="()Lorg/eclipse/rdf4j/query/algebra/UnaryTupleOperator;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" start="387" end="405" startBytecode="0" endBytecode="270" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder.projection()</Message>
+    </Method>
+    <LocalVariable name="aExt" register="1" pc="86" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from aExt</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" primary="true" start="401" end="401" startBytecode="87" endBytecode="87" sourcefile="AbstractQueryBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at AbstractQueryBuilder.java:[line 401]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d1be68d134cf9d3ed6cf6b57c3dffbb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.builder.GroupBuilder.closeGroup() may expose internal representation by returning GroupBuilder.mBuilder</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="39" end="209" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>At GroupBuilder.java:[lines 39-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.GroupBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="closeGroup" signature="()Lorg/eclipse/rdf4j/queryrender/builder/SupportsGroups;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="82" end="90" startBytecode="0" endBytecode="135" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.GroupBuilder.closeGroup()</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="mBuilder" signature="Lorg/eclipse/rdf4j/queryrender/builder/SupportsGroups;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>In GroupBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.GroupBuilder.mBuilder</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" start="90" end="90" startBytecode="49" endBytecode="49" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+      <Message>At GroupBuilder.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ac1f651348a0445086949490bcc3d12f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.builder.GroupBuilder.getGroup() may expose internal representation by returning GroupBuilder.mGroup</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="39" end="209" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>At GroupBuilder.java:[lines 39-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.GroupBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="getGroup" signature="()Lorg/eclipse/rdf4j/queryrender/builder/Group;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="70" end="70" startBytecode="0" endBytecode="64" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.GroupBuilder.getGroup()</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="mGroup" signature="Lorg/eclipse/rdf4j/queryrender/builder/BasicGroup;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>In GroupBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.GroupBuilder.mGroup</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" start="70" end="70" startBytecode="4" endBytecode="4" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+      <Message>At GroupBuilder.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f9625285e009da8687575a20da2755b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.eclipse.rdf4j.queryrender.builder.GroupBuilder(SupportsGroups, boolean, BasicGroup) may expose internal representation by storing an externally mutable object into GroupBuilder.mBuilder</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="39" end="209" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>At GroupBuilder.java:[lines 39-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.GroupBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="&lt;init&gt;" signature="(Lorg/eclipse/rdf4j/queryrender/builder/SupportsGroups;ZLorg/eclipse/rdf4j/queryrender/builder/BasicGroup;)V" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="55" end="67" startBytecode="0" endBytecode="240" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java"/>
+      <Message>In method new org.eclipse.rdf4j.queryrender.builder.GroupBuilder(SupportsGroups, boolean, BasicGroup)</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="mBuilder" signature="Lorg/eclipse/rdf4j/queryrender/builder/SupportsGroups;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>In GroupBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.GroupBuilder.mBuilder</Message>
+    </Field>
+    <LocalVariable name="theBuilder" register="1" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named theBuilder</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" start="56" end="56" startBytecode="18" endBytecode="18" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+      <Message>At GroupBuilder.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ae8b1e582b92ae3c6a8610dfd57b35bc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.eclipse.rdf4j.queryrender.builder.GroupBuilder(SupportsGroups, boolean, BasicGroup) may expose internal representation by storing an externally mutable object into GroupBuilder.mParent</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="39" end="209" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>At GroupBuilder.java:[lines 39-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.GroupBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="&lt;init&gt;" signature="(Lorg/eclipse/rdf4j/queryrender/builder/SupportsGroups;ZLorg/eclipse/rdf4j/queryrender/builder/BasicGroup;)V" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" start="55" end="67" startBytecode="0" endBytecode="240" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java"/>
+      <Message>In method new org.eclipse.rdf4j.queryrender.builder.GroupBuilder(SupportsGroups, boolean, BasicGroup)</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" name="mParent" signature="Lorg/eclipse/rdf4j/queryrender/builder/BasicGroup;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+        <Message>In GroupBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.GroupBuilder.mParent</Message>
+    </Field>
+    <LocalVariable name="theParent" register="3" pc="63" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named theParent</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" primary="true" start="64" end="64" startBytecode="63" endBytecode="63" sourcefile="GroupBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java">
+      <Message>At GroupBuilder.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="fb9f6de5f80a9aca7f2eb52452fe9694" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.builder.UnionBuilder.addGroup(Group) may expose internal representation by storing an externally mutable object into UnionBuilder.mLeft</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" start="22" end="140" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+        <Message>At UnionBuilder.java:[lines 22-140]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.UnionBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" name="addGroup" signature="(Lorg/eclipse/rdf4j/queryrender/builder/Group;)Lorg/eclipse/rdf4j/queryrender/builder/UnionBuilder;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" start="85" end="93" startBytecode="0" endBytecode="142" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.UnionBuilder.addGroup(Group)</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" name="mLeft" signature="Lorg/eclipse/rdf4j/queryrender/builder/Group;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+        <Message>In UnionBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.UnionBuilder.mLeft</Message>
+    </Field>
+    <LocalVariable name="theGroup" register="1" pc="9" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named theGroup</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" primary="true" start="86" end="86" startBytecode="9" endBytecode="9" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+      <Message>At UnionBuilder.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7379a717329b7776ff6a553967e68693" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.rdf4j.queryrender.builder.UnionBuilder.addGroup(Group) may expose internal representation by storing an externally mutable object into UnionBuilder.mRight</LongMessage>
+    <Class classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" start="22" end="140" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+        <Message>At UnionBuilder.java:[lines 22-140]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.rdf4j.queryrender.builder.UnionBuilder</Message>
+    </Class>
+    <Method classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" name="addGroup" signature="(Lorg/eclipse/rdf4j/queryrender/builder/Group;)Lorg/eclipse/rdf4j/queryrender/builder/UnionBuilder;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" start="85" end="93" startBytecode="0" endBytecode="142" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java"/>
+      <Message>In method org.eclipse.rdf4j.queryrender.builder.UnionBuilder.addGroup(Group)</Message>
+    </Method>
+    <Field classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" name="mRight" signature="Lorg/eclipse/rdf4j/queryrender/builder/Group;" isStatic="false" primary="true" classAnnotationNames="java.lang.Deprecated">
+      <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+        <Message>In UnionBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.rdf4j.queryrender.builder.UnionBuilder.mRight</Message>
+    </Field>
+    <LocalVariable name="theGroup" register="1" pc="24" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named theGroup</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" primary="true" start="88" end="88" startBytecode="24" endBytecode="24" sourcefile="UnionBuilder.java" sourcepath="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java">
+      <Message>At UnionBuilder.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="77">
+    <MissingClass>org.eclipse.rdf4j.model.BNode</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.model.IRI</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.model.Literal</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.model.Value</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.model.impl.SimpleValueFactory</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.model.util.Literals</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.Dataset</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.QueryLanguage</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.And</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.BNodeGenerator</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.BinaryTupleOperator</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.BinaryValueOperator</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Bound</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Compare</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Compare$CompareOp</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.CompareAll</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.CompareAny</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Count</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Datatype</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Difference</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Distinct</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.EmptySet</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Exists</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Extension</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.ExtensionElem</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Filter</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.FunctionCall</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.In</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Intersection</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.IsBNode</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.IsLiteral</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.IsResource</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.IsURI</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Join</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Label</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Lang</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.LangMatches</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.LeftJoin</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Like</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.LocalName</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.MathExpr</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.MathExpr$MathOp</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Max</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Min</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.MultiProjection</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Namespace</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Not</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Or</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Order</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.OrderElem</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Projection</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.ProjectionElem</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.ProjectionElemList</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.QueryModelVisitor</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Reduced</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Regex</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.SameTerm</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Slice</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.StatementPattern</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.StatementPattern$Scope</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Str</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.TupleExpr</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.UnaryTupleOperator</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.UnaryValueOperator</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Union</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.ValueConstant</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.ValueExpr</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.Var</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.helpers.AbstractQueryModelVisitor</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.helpers.StatementPatternCollector</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.algebra.helpers.VarNameCollector</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.impl.SimpleDataset</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.parser.ParsedBooleanQuery</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.parser.ParsedDescribeQuery</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.parser.ParsedGraphQuery</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.parser.ParsedQuery</MissingClass>
+    <MissingClass>org.eclipse.rdf4j.query.parser.ParsedTupleQuery</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 16:45:58 +0900" total_classes="22" referenced_classes="59" total_bugs="11" total_size="1629" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.91" clock_seconds="3.18" peak_mbytes="245.93" alloc_mbytes="3984.00" gc_seconds="0.04" priority_3="1" priority_2="10">
+    <FileStats path="org/eclipse/rdf4j/queryrender/BaseTupleExprRenderer.java" bugCount="3" size="109" bugHash="53212074ad4fc434157a815f7590363b"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/QueryRenderer.java" bugCount="0" size="3"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/RenderUtils.java" bugCount="0" size="47"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/AbstractQueryBuilder.java" bugCount="2" size="271" bugHash="9c5900ec0cd8f63f89b1d54e21841bb8"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/BasicGroup.java" bugCount="0" size="113"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/FilterBuilder.java" bugCount="0" size="54"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/Group.java" bugCount="0" size="4"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/GroupBuilder.java" bugCount="4" size="105" bugHash="6c8536a8d0edc7e1619624fc840ea971"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/QueryBuilder.java" bugCount="0" size="21"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/QueryBuilderFactory.java" bugCount="0" size="36"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/SupportsExpr.java" bugCount="0" size="2"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/SupportsGroups.java" bugCount="0" size="3"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/UnionBuilder.java" bugCount="2" size="45" bugHash="4d89a1642a9a57449711557cd9995b64"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/ValueExprFactory.java" bugCount="0" size="44"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/builder/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/serql/SeRQLQueryRenderer.java" bugCount="0" size="11"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/serql/SerqlTupleExprRenderer.java" bugCount="0" size="133"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/serql/SerqlValueExprRenderer.java" bugCount="0" size="175"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/sparql/ContextCollector.java" bugCount="0" size="56"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/sparql/SPARQLQueryRenderer.java" bugCount="0" size="79"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/sparql/SparqlTupleExprRenderer.java" bugCount="0" size="138"/>
+    <FileStats path="org/eclipse/rdf4j/queryrender/sparql/SparqlValueExprRenderer.java" bugCount="0" size="179"/>
+    <PackageStats package="org.eclipse.rdf4j.queryrender" total_bugs="3" total_types="3" total_size="159" priority_2="3">
+      <ClassStats class="org.eclipse.rdf4j.queryrender.BaseTupleExprRenderer" sourceFile="BaseTupleExprRenderer.java" interface="false" size="109" bugs="3" priority_2="3"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.QueryRenderer" sourceFile="QueryRenderer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.RenderUtils" sourceFile="RenderUtils.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.rdf4j.queryrender.builder" total_bugs="8" total_types="12" total_size="699" priority_3="1" priority_2="7">
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.AbstractQueryBuilder" sourceFile="AbstractQueryBuilder.java" interface="false" size="271" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.BasicGroup" sourceFile="BasicGroup.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.FilterBuilder" sourceFile="FilterBuilder.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.Group" sourceFile="Group.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.GroupBuilder" sourceFile="GroupBuilder.java" interface="false" size="105" bugs="4" priority_2="4"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.QueryBuilder" sourceFile="QueryBuilder.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.QueryBuilderFactory" sourceFile="QueryBuilderFactory.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.SupportsExpr" sourceFile="SupportsExpr.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.SupportsGroups" sourceFile="SupportsGroups.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.UnionBuilder" sourceFile="UnionBuilder.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.ValueExprFactory" sourceFile="ValueExprFactory.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.builder.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.rdf4j.queryrender.serql" total_bugs="0" total_types="3" total_size="319">
+      <ClassStats class="org.eclipse.rdf4j.queryrender.serql.SeRQLQueryRenderer" sourceFile="SeRQLQueryRenderer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.serql.SerqlTupleExprRenderer" sourceFile="SerqlTupleExprRenderer.java" interface="false" size="133" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.serql.SerqlValueExprRenderer" sourceFile="SerqlValueExprRenderer.java" interface="false" size="175" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.rdf4j.queryrender.sparql" total_bugs="0" total_types="4" total_size="452">
+      <ClassStats class="org.eclipse.rdf4j.queryrender.sparql.ContextCollector" sourceFile="ContextCollector.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.sparql.SPARQLQueryRenderer" sourceFile="SPARQLQueryRenderer.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.sparql.SparqlTupleExprRenderer" sourceFile="SparqlTupleExprRenderer.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="org.eclipse.rdf4j.queryrender.sparql.SparqlValueExprRenderer" sourceFile="SparqlValueExprRenderer.java" interface="false" size="179" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="302" invocations="677" avgMicrosecondsPerInvocation="446" maxMicrosecondsPerInvocation="45234" standardDeviationMicrosecondsPerInvocation="2017"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="111" invocations="319" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="63520" standardDeviationMicrosecondsPerInvocation="3602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="104" invocations="289" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="20295" standardDeviationMicrosecondsPerInvocation="1502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="102" invocations="289" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="17430" standardDeviationMicrosecondsPerInvocation="1285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="89" invocations="293" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="12709" standardDeviationMicrosecondsPerInvocation="998"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="85" invocations="289" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="17173" standardDeviationMicrosecondsPerInvocation="1239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="79" invocations="289" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="30958" standardDeviationMicrosecondsPerInvocation="1818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="77" invocations="151" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="47013" standardDeviationMicrosecondsPerInvocation="3879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="77" invocations="59" avgMicrosecondsPerInvocation="1312" maxMicrosecondsPerInvocation="11027" standardDeviationMicrosecondsPerInvocation="2120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="70" invocations="553" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="7888" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="68" invocations="59" avgMicrosecondsPerInvocation="1157" maxMicrosecondsPerInvocation="60640" standardDeviationMicrosecondsPerInvocation="7813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="65" invocations="22" avgMicrosecondsPerInvocation="2967" maxMicrosecondsPerInvocation="28521" standardDeviationMicrosecondsPerInvocation="6980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="64" invocations="285" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="3356" standardDeviationMicrosecondsPerInvocation="392"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="55" invocations="59" avgMicrosecondsPerInvocation="941" maxMicrosecondsPerInvocation="8666" standardDeviationMicrosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="682" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="3368" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="47" invocations="270" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="4839" standardDeviationMicrosecondsPerInvocation="399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="35" invocations="59" avgMicrosecondsPerInvocation="601" maxMicrosecondsPerInvocation="12008" standardDeviationMicrosecondsPerInvocation="1852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="35" invocations="59" avgMicrosecondsPerInvocation="597" maxMicrosecondsPerInvocation="24786" standardDeviationMicrosecondsPerInvocation="3189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="59" avgMicrosecondsPerInvocation="582" maxMicrosecondsPerInvocation="13688" standardDeviationMicrosecondsPerInvocation="1785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="31" invocations="4676" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="4223" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="30" invocations="22" avgMicrosecondsPerInvocation="1384" maxMicrosecondsPerInvocation="12721" standardDeviationMicrosecondsPerInvocation="2654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="29" invocations="22" avgMicrosecondsPerInvocation="1350" maxMicrosecondsPerInvocation="21814" standardDeviationMicrosecondsPerInvocation="4481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="28" invocations="59" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="2868" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="27" invocations="289" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="8127" standardDeviationMicrosecondsPerInvocation="500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="26" invocations="560" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="2102" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="24" invocations="22" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="7192" standardDeviationMicrosecondsPerInvocation="1534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="24" invocations="22" avgMicrosecondsPerInvocation="1111" maxMicrosecondsPerInvocation="16254" standardDeviationMicrosecondsPerInvocation="3375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="21" invocations="22" avgMicrosecondsPerInvocation="975" maxMicrosecondsPerInvocation="5898" standardDeviationMicrosecondsPerInvocation="1683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="20" invocations="319" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="6021" standardDeviationMicrosecondsPerInvocation="481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="19" invocations="22" avgMicrosecondsPerInvocation="899" maxMicrosecondsPerInvocation="19382" standardDeviationMicrosecondsPerInvocation="4033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="17" invocations="22" avgMicrosecondsPerInvocation="793" maxMicrosecondsPerInvocation="5626" standardDeviationMicrosecondsPerInvocation="1358"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

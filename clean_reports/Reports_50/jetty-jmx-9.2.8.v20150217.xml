@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445878584" analysisTimestamp="1699447534152" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\jetty-jmx-9.2.8.v20150217.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="268734572f7a091ce45db3707c534b6c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.eclipse.jetty.jmx.ConnectorServer at new org.eclipse.jetty.jmx.ConnectorServer(JMXServiceURL, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ConnectorServer" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="47" end="194" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+        <Message>At ConnectorServer.java:[lines 47-194]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ConnectorServer</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ConnectorServer" name="&lt;init&gt;" signature="(Ljavax/management/remote/JMXServiceURL;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="65" end="66" startBytecode="0" endBytecode="73" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java"/>
+      <Message>In method new org.eclipse.jetty.jmx.ConnectorServer(JMXServiceURL, String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" primary="true" start="65" end="65" startBytecode="0" endBytecode="0" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+      <Message>At ConnectorServer.java:[line 65]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="65" end="65" startBytecode="0" endBytecode="0" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+      <Message>At ConnectorServer.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ed7cc0ae8c9915ea454d4a8f2e5ce3a9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.eclipse.jetty.jmx.ConnectorServer at new org.eclipse.jetty.jmx.ConnectorServer(JMXServiceURL, Map, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ConnectorServer" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="47" end="194" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+        <Message>At ConnectorServer.java:[lines 47-194]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ConnectorServer</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ConnectorServer" name="&lt;init&gt;" signature="(Ljavax/management/remote/JMXServiceURL;Ljava/util/Map;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="84" end="99" startBytecode="0" endBytecode="349" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java"/>
+      <Message>In method new org.eclipse.jetty.jmx.ConnectorServer(JMXServiceURL, Map, String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" primary="true" start="85" end="85" startBytecode="7" endBytecode="7" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+      <Message>At ConnectorServer.java:[line 85]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.jmx.ConnectorServer" start="85" end="85" startBytecode="7" endBytecode="7" sourcefile="ConnectorServer.java" sourcepath="org/eclipse/jetty/jmx/ConnectorServer.java">
+      <Message>At ConnectorServer.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="dd2ebe3606b56a5e2c8ef9e6bc16d908" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.jmx.MBeanContainer.getMBeanServer() may expose internal representation by returning MBeanContainer._mbeanServer</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="46" end="285" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+        <Message>At MBeanContainer.java:[lines 46-285]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.MBeanContainer</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.MBeanContainer" name="getMBeanServer" signature="()Ljavax/management/MBeanServer;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="104" end="104" startBytecode="0" endBytecode="46" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java"/>
+      <Message>In method org.eclipse.jetty.jmx.MBeanContainer.getMBeanServer()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.jmx.MBeanContainer" name="_mbeanServer" signature="Ljavax/management/MBeanServer;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+        <Message>In MBeanContainer.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.jmx.MBeanContainer._mbeanServer</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true" start="104" end="104" startBytecode="4" endBytecode="4" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+      <Message>At MBeanContainer.java:[line 104]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="da4246f672dbdbce2c86d0a05387b961" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.eclipse.jetty.jmx.MBeanContainer(MBeanServer) may expose internal representation by storing an externally mutable object into MBeanContainer._mbeanServer</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="46" end="285" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+        <Message>At MBeanContainer.java:[lines 46-285]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.MBeanContainer</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.MBeanContainer" name="&lt;init&gt;" signature="(Ljavax/management/MBeanServer;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="93" end="95" startBytecode="0" endBytecode="93" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java"/>
+      <Message>In method new org.eclipse.jetty.jmx.MBeanContainer(MBeanServer)</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.jmx.MBeanContainer" name="_mbeanServer" signature="Ljavax/management/MBeanServer;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+        <Message>In MBeanContainer.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.jmx.MBeanContainer._mbeanServer</Message>
+    </Field>
+    <LocalVariable name="server" register="1" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named server</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true" start="94" end="94" startBytecode="22" endBytecode="22" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+      <Message>At MBeanContainer.java:[line 94]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="11c90f9f3b96da079d15af1c53855a3d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.jmx.MBeanContainer.beanAdded(Container, Object)</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="46" end="285" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+        <Message>At MBeanContainer.java:[lines 46-285]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.MBeanContainer</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.MBeanContainer" name="beanAdded" signature="(Lorg/eclipse/jetty/util/component/Container;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" start="131" end="219" startBytecode="0" endBytecode="1100" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java"/>
+      <Message>In method org.eclipse.jetty.jmx.MBeanContainer.beanAdded(Container, Object)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.MBeanContainer" primary="true" start="215" end="215" startBytecode="532" endBytecode="532" sourcefile="MBeanContainer.java" sourcepath="org/eclipse/jetty/jmx/MBeanContainer.java">
+      <Message>At MBeanContainer.java:[line 215]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fcd1e167abddd40d01b06892d4af1ad9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.jmx.ObjectMBean.getMBeanContainer() may expose internal representation by returning ObjectMBean._mbeanContainer</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="getMBeanContainer" signature="()Lorg/eclipse/jetty/jmx/MBeanContainer;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="225" end="225" startBytecode="0" endBytecode="46" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.getMBeanContainer()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.jmx.ObjectMBean" name="_mbeanContainer" signature="Lorg/eclipse/jetty/jmx/MBeanContainer;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>In ObjectMBean.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.jmx.ObjectMBean._mbeanContainer</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="225" end="225" startBytecode="4" endBytecode="4" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 225]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="cd39b25fb417f8f97aee4271a170b2d3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.jmx.ObjectMBean.getMBeanInfo() may expose internal representation by returning ObjectMBean._info</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="getMBeanInfo" signature="()Ljavax/management/MBeanInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="233" end="329" startBytecode="0" endBytecode="1281" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.getMBeanInfo()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.jmx.ObjectMBean" name="_info" signature="Ljavax/management/MBeanInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>In ObjectMBean.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.jmx.ObjectMBean._info</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="329" end="329" startBytecode="625" endBytecode="625" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 329]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="1" rank="9" abbrev="RCN" category="CORRECTNESS" instanceHash="34e773b4f1a6c0fc68b1953587097c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of component_type at line 703 of value previously dereferenced in org.eclipse.jetty.jmx.ObjectMBean.defineAttribute(Method, ManagedAttribute)</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="defineAttribute" signature="(Ljava/lang/reflect/Method;Lorg/eclipse/jetty/util/annotation/ManagedAttribute;)Ljavax/management/MBeanAttributeInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="608" end="750" startBytecode="0" endBytecode="1793" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.defineAttribute(Method, ManagedAttribute)</Message>
+    </Method>
+    <LocalVariable name="component_type" register="9" pc="598" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from component_type</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="631" end="631" startBytecode="79" endBytecode="79" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 631]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="703" end="703" startBytecode="600" endBytecode="600" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ObjectMBean.java:[line 703]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="8e10851a091ee70f746264dc9e20f6c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.jmx.ObjectMBean.defineOperation(Method, ManagedOperation)</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="defineOperation" signature="(Ljava/lang/reflect/Method;Lorg/eclipse/jetty/util/annotation/ManagedOperation;)Ljavax/management/MBeanOperationInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="772" end="865" startBytecode="0" endBytecode="1568" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.defineOperation(Method, ManagedOperation)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="862" end="862" startBytecode="634" endBytecode="634" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 862]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="df6256799cdfc95f8c49cf837e804a33" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.jmx.ObjectMBean.mbeanFor(Object)</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="mbeanFor" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="122" end="188" startBytecode="0" endBytecode="828" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.mbeanFor(Object)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="183" end="183" startBytecode="315" endBytecode="315" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 183]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="5c48a57031c6504908764043d8961778" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.jmx.ObjectMBean.setAttributes(AttributeList)</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="setAttributes" signature="(Ljavax/management/AttributeList;)Ljavax/management/AttributeList;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="493" end="511" startBytecode="0" endBytecode="303" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.setAttributes(AttributeList)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="506" end="506" startBytecode="96" endBytecode="96" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 506]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" instanceHash="10bc9fb576e94afeb866eaf42ce43dca" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>org.eclipse.jetty.jmx.ObjectMBean.defineOperation(Method, ManagedOperation) concatenates strings using + in a loop</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="defineOperation" signature="(Ljava/lang/reflect/Method;Lorg/eclipse/jetty/util/annotation/ManagedOperation;)Ljavax/management/MBeanOperationInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="772" end="865" startBytecode="0" endBytecode="1568" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.defineOperation(Method, ManagedOperation)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="841" end="841" startBytecode="451" endBytecode="451" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 841]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" instanceHash="2a5370cc31809eb966921b26bbe1a519" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>org.eclipse.jetty.jmx.ObjectMBean.invoke(String, Object[], String[]) concatenates strings using + in a loop</LongMessage>
+    <Class classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="77" end="903" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+        <Message>At ObjectMBean.java:[lines 77-903]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.jmx.ObjectMBean</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.jmx.ObjectMBean" name="invoke" signature="(Ljava/lang/String;[Ljava/lang/Object;[Ljava/lang/String;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" start="517" end="559" startBytecode="0" endBytecode="736" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java"/>
+      <Message>In method org.eclipse.jetty.jmx.ObjectMBean.invoke(String, Object[], String[])</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.jmx.ObjectMBean" primary="true" start="523" end="523" startBytecode="77" endBytecode="77" sourcefile="ObjectMBean.java" sourcepath="org/eclipse/jetty/jmx/ObjectMBean.java">
+      <Message>At ObjectMBean.java:[line 523]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
+    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 5) explicitly.</p>
+
+<p> For example:</p>
+<pre><code>// This is bad
+String s = "";
+for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+}
+
+// This is better
+StringBuffer buf = new StringBuffer();
+for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+}
+String s = buf.toString();
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" abbrev="RCN" category="CORRECTNESS">
+    <ShortDescription>Nullcheck of value previously dereferenced</ShortDescription>
+    <Details><![CDATA[
+
+<p> A value is checked here to see whether it is null, but this value cannot
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="SBSC">
+    <Description>String concatenation in loop using + operator</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="15">
+    <MissingClass>org.eclipse.jetty.util.Loader</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.TypeUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.annotation.ManagedAttribute</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.annotation.ManagedObject</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.annotation.ManagedOperation</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.annotation.Name</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.AbstractLifeCycle</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.Container</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.Container$InheritedListener</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.ContainerLifeCycle</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.Dumpable</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.LifeCycle</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.log.Log</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.log.Logger</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.thread.ShutdownThread</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:17:58 +0900" total_classes="4" referenced_classes="79" total_bugs="13" total_size="584" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.17" clock_seconds="1.65" peak_mbytes="240.84" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="3" priority_2="9" priority_1="1">
+    <FileStats path="org/eclipse/jetty/jmx/ConnectorServer.java" bugCount="2" size="63" bugHash="bbb954c2759eb630776fbb7741f4019b"/>
+    <FileStats path="org/eclipse/jetty/jmx/MBeanContainer.java" bugCount="3" size="118" bugHash="e16c9ca1b68875748fc9b716cac02fbf"/>
+    <FileStats path="org/eclipse/jetty/jmx/ObjectMBean.java" bugCount="8" size="391" bugHash="cf267511de353ddc33c75f0abcbf508f"/>
+    <FileStats path="org/eclipse/jetty/util/log/jmx/LogMBean.java" bugCount="0" size="12"/>
+    <PackageStats package="org.eclipse.jetty.jmx" total_bugs="13" total_types="3" total_size="572" priority_3="3" priority_2="9" priority_1="1">
+      <ClassStats class="org.eclipse.jetty.jmx.ConnectorServer" sourceFile="ConnectorServer.java" interface="false" size="63" bugs="2" priority_2="2"/>
+      <ClassStats class="org.eclipse.jetty.jmx.MBeanContainer" sourceFile="MBeanContainer.java" interface="false" size="118" bugs="3" priority_2="3"/>
+      <ClassStats class="org.eclipse.jetty.jmx.ObjectMBean" sourceFile="ObjectMBean.java" interface="false" size="391" bugs="8" priority_3="3" priority_2="4" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.jetty.util.log.jmx" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="org.eclipse.jetty.util.log.jmx.LogMBean" sourceFile="LogMBean.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="186" invocations="739" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="12423" standardDeviationMicrosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="80" invocations="51" avgMicrosecondsPerInvocation="1575" maxMicrosecondsPerInvocation="13589" standardDeviationMicrosecondsPerInvocation="3013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="69" invocations="51" avgMicrosecondsPerInvocation="1356" maxMicrosecondsPerInvocation="9936" standardDeviationMicrosecondsPerInvocation="2150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="65" invocations="79" avgMicrosecondsPerInvocation="831" maxMicrosecondsPerInvocation="7563" standardDeviationMicrosecondsPerInvocation="1413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="60" invocations="45" avgMicrosecondsPerInvocation="1351" maxMicrosecondsPerInvocation="11366" standardDeviationMicrosecondsPerInvocation="2469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="260" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="1743" standardDeviationMicrosecondsPerInvocation="283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="52" invocations="45" avgMicrosecondsPerInvocation="1161" maxMicrosecondsPerInvocation="11297" standardDeviationMicrosecondsPerInvocation="2250"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="48" invocations="79" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="4184" standardDeviationMicrosecondsPerInvocation="919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="746" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="13201" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="38" invocations="45" avgMicrosecondsPerInvocation="865" maxMicrosecondsPerInvocation="8639" standardDeviationMicrosecondsPerInvocation="1594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="45" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="5808" standardDeviationMicrosecondsPerInvocation="1222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="142" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="11910" standardDeviationMicrosecondsPerInvocation="1011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="26" invocations="36" avgMicrosecondsPerInvocation="745" maxMicrosecondsPerInvocation="5250" standardDeviationMicrosecondsPerInvocation="1274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="24" invocations="45" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="17349" standardDeviationMicrosecondsPerInvocation="2542"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="79" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="3057" standardDeviationMicrosecondsPerInvocation="506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="22" invocations="45" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="8326" standardDeviationMicrosecondsPerInvocation="1362"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="79" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="7751" standardDeviationMicrosecondsPerInvocation="879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="682" avgMicrosecondsPerInvocation="28" maxMicrosecondsPerInvocation="469" standardDeviationMicrosecondsPerInvocation="57"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="79" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="7422" standardDeviationMicrosecondsPerInvocation="843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="17" invocations="4" avgMicrosecondsPerInvocation="4458" maxMicrosecondsPerInvocation="12006" standardDeviationMicrosecondsPerInvocation="4683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="17" invocations="79" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="4304" standardDeviationMicrosecondsPerInvocation="673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="4" avgMicrosecondsPerInvocation="4192" maxMicrosecondsPerInvocation="14907" standardDeviationMicrosecondsPerInvocation="6197"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="79" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="2340" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="14" invocations="79" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="1419" standardDeviationMicrosecondsPerInvocation="274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="79" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1412" standardDeviationMicrosecondsPerInvocation="315"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

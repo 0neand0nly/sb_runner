@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445879700" analysisTimestamp="1699447522030" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\grails-datastore-gorm-mongodb-ext-7.2.1.jar</Jar>
+  </Project>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="b853e09961a047130f536a9a4fc43490" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method $getStaticMetaClass is called from constructor new org.grails.datastore.gorm.mongo.extensions.MongoExtensions().</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" start="63" end="610" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[lines 63-610]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions</Message>
+    </Class>
+    <Method classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy"/>
+      <Message>In method new org.grails.datastore.gorm.mongo.extensions.MongoExtensions()</Message>
+    </Method>
+    <String value="$getStaticMetaClass">
+      <Message>Value $getStaticMetaClass</Message>
+    </String>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" startBytecode="5" endBytecode="5" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="64f751a84bf54d33c0301701d6085c46" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" start="63" end="610" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[lines 63-610]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="992a5c47bb4c6054f6c348d363dae5ec" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" start="533" end="533" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[line 533]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="479ee220e4db8b347c71b398541d1924" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" start="550" end="550" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[line 550]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="e62aa774c93a6b3e4d7c8d5bf861f2ac" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" start="561" end="561" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[line 561]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="449886d160f01c463f3a7ccabea63aed" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" start="566" end="566" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[line 566]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="a9dfe9f052c2ceaa27ba8c1b3c1048f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1.__$stMC isn&apos;t final but should be</LongMessage>
+    <Class classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" start="169" end="169" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>At MongoExtensions.groovy:[line 169]</Message>
+      </SourceLine>
+      <Message>In class org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1</Message>
+    </Class>
+    <Field classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" name="__$stMC" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy">
+        <Message>In MongoExtensions.groovy</Message>
+      </SourceLine>
+      <Message>Field org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1.__$stMC</Message>
+    </Field>
+    <SourceLine classname="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" sourcefile="MongoExtensions.groovy" sourcepath="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" synthetic="true">
+      <Message>In MongoExtensions.groovy</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="45">
+    <MissingClass>com.mongodb.BasicDBObject</MissingClass>
+    <MissingClass>com.mongodb.DBObject</MissingClass>
+    <MissingClass>com.mongodb.MongoNamespace</MissingClass>
+    <MissingClass>com.mongodb.ReadPreference</MissingClass>
+    <MissingClass>com.mongodb.WriteConcern</MissingClass>
+    <MissingClass>com.mongodb.client.DistinctIterable</MissingClass>
+    <MissingClass>com.mongodb.client.FindIterable</MissingClass>
+    <MissingClass>com.mongodb.client.MongoCollection</MissingClass>
+    <MissingClass>com.mongodb.client.MongoCursor</MissingClass>
+    <MissingClass>com.mongodb.client.MongoDatabase</MissingClass>
+    <MissingClass>com.mongodb.client.MongoIterable</MissingClass>
+    <MissingClass>com.mongodb.client.model.CountOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.CreateCollectionOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.DeleteOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.DropIndexOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.FindOneAndDeleteOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.FindOneAndReplaceOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.FindOneAndUpdateOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.IndexOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.InsertManyOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.ReplaceOptions</MissingClass>
+    <MissingClass>com.mongodb.client.model.UpdateOptions</MissingClass>
+    <MissingClass>com.mongodb.client.result.DeleteResult</MissingClass>
+    <MissingClass>com.mongodb.client.result.InsertManyResult</MissingClass>
+    <MissingClass>groovy.lang.Closure</MissingClass>
+    <MissingClass>groovy.lang.GroovyObject</MissingClass>
+    <MissingClass>groovy.lang.MetaClass</MissingClass>
+    <MissingClass>org.bson.Document</MissingClass>
+    <MissingClass>org.bson.conversions.Bson</MissingClass>
+    <MissingClass>org.bson.types.ObjectId</MissingClass>
+    <MissingClass>org.codehaus.groovy.reflection.ClassInfo</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.DefaultGroovyMethods</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.GStringImpl</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.GeneratedClosure</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.ScriptBytecodeAdapter</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation</MissingClass>
+    <MissingClass>org.codehaus.groovy.runtime.typehandling.ShortTypeHandling</MissingClass>
+    <MissingClass>org.grails.datastore.gorm.GormEnhancer</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.core.Datastore</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.engine.EntityPersister</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.mongo.AbstractMongoSession</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.mongo.MongoConstants</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.mongo.engine.AbstractMongoObectEntityPersister</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.mongo.engine.MongoEntityPersister</MissingClass>
+    <MissingClass>org.grails.datastore.mapping.mongo.query.MongoQuery$MongoResultList</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:17:59 +0900" total_classes="6" referenced_classes="26" total_bugs="7" total_size="351" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.95" clock_seconds="1.19" peak_mbytes="224.05" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="7">
+    <FileStats path="org/grails/datastore/gorm/mongo/extensions/MongoExtensions.groovy" bugCount="7" size="351" bugHash="3485d09b0b7cabf6f5125bdb5638f851"/>
+    <PackageStats package="org.grails.datastore.gorm.mongo.extensions" total_bugs="7" total_types="6" total_size="351" priority_3="7">
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions" sourceFile="MongoExtensions.groovy" interface="false" size="309" bugs="2" priority_3="2"/>
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure2" sourceFile="MongoExtensions.groovy" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure3" sourceFile="MongoExtensions.groovy" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure4" sourceFile="MongoExtensions.groovy" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_insert_closure5" sourceFile="MongoExtensions.groovy" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.grails.datastore.gorm.mongo.extensions.MongoExtensions$_toBson_closure1" sourceFile="MongoExtensions.groovy" interface="false" size="10" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="168" invocations="475" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="9752" standardDeviationMicrosecondsPerInvocation="895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="42" invocations="26" avgMicrosecondsPerInvocation="1627" maxMicrosecondsPerInvocation="9702" standardDeviationMicrosecondsPerInvocation="2665"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="39" invocations="124" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="6667" standardDeviationMicrosecondsPerInvocation="704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="37" invocations="266" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="3430" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="34" invocations="124" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="3887" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="66" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="19120" standardDeviationMicrosecondsPerInvocation="2343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="28" invocations="26" avgMicrosecondsPerInvocation="1102" maxMicrosecondsPerInvocation="7999" standardDeviationMicrosecondsPerInvocation="1813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="27" invocations="124" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="9351" standardDeviationMicrosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="26" invocations="124" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="1730" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="25" invocations="124" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="17752" standardDeviationMicrosecondsPerInvocation="1584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="22" invocations="485" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="2033" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="22" invocations="124" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="4993" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="124" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="3770" standardDeviationMicrosecondsPerInvocation="372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="6" avgMicrosecondsPerInvocation="3608" maxMicrosecondsPerInvocation="15825" standardDeviationMicrosecondsPerInvocation="5594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="20" invocations="1622" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="8426" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="17" invocations="389" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="812" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="16" invocations="123" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="1697" standardDeviationMicrosecondsPerInvocation="169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="26" avgMicrosecondsPerInvocation="625" maxMicrosecondsPerInvocation="4864" standardDeviationMicrosecondsPerInvocation="1124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="555" maxMicrosecondsPerInvocation="3870" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="13" invocations="26" avgMicrosecondsPerInvocation="513" maxMicrosecondsPerInvocation="5388" standardDeviationMicrosecondsPerInvocation="1151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="12" invocations="26" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="3284" standardDeviationMicrosecondsPerInvocation="797"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="26" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="3989" standardDeviationMicrosecondsPerInvocation="820"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

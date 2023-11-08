@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445373330" analysisTimestamp="1699447667919" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\temporal-testing-1.17.0.jar</Jar>
+  </Project>
+  <BugInstance type="NN_NAKED_NOTIFY" priority="2" rank="14" abbrev="NN" category="MT_CORRECTNESS" instanceHash="6112af9f818242e48e23ccd397424d26" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Naked notify</ShortMessage>
+    <LongMessage>Naked notify in io.temporal.internal.Signal.signal()</LongMessage>
+    <Class classname="io.temporal.internal.Signal" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="31" end="128" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+        <Message>At Signal.java:[lines 31-128]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.Signal</Message>
+    </Class>
+    <Method classname="io.temporal.internal.Signal" name="signal" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="37" end="43" startBytecode="0" endBytecode="184" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java"/>
+      <Message>In method io.temporal.internal.Signal.signal()</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.Signal" primary="true" start="41" end="41" startBytecode="27" endBytecode="27" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+      <Message>At Signal.java:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" rank="14" abbrev="UW" category="MT_CORRECTNESS" instanceHash="aea38b19b06ee0f82d43a44e004bbc58" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unconditional wait</ShortMessage>
+    <LongMessage>Unconditional wait in io.temporal.internal.Signal.waitForSignal()</LongMessage>
+    <Class classname="io.temporal.internal.Signal" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="31" end="128" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+        <Message>At Signal.java:[lines 31-128]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.Signal</Message>
+    </Class>
+    <Method classname="io.temporal.internal.Signal" name="waitForSignal" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="113" end="118" startBytecode="0" endBytecode="131" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java"/>
+      <Message>In method io.temporal.internal.Signal.waitForSignal()</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.Signal" primary="true" start="115" end="115" startBytecode="12" endBytecode="12" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+      <Message>At Signal.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="3" rank="17" abbrev="UW" category="MT_CORRECTNESS" instanceHash="7afd2c68e87a3e1c66d2704887fdf3c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unconditional wait</ShortMessage>
+    <LongMessage>Unconditional wait in io.temporal.internal.Signal.waitForSignal(long)</LongMessage>
+    <Class classname="io.temporal.internal.Signal" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="31" end="128" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+        <Message>At Signal.java:[lines 31-128]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.Signal</Message>
+    </Class>
+    <Method classname="io.temporal.internal.Signal" name="waitForSignal" signature="(J)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="98" end="103" startBytecode="0" endBytecode="144" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java"/>
+      <Message>In method io.temporal.internal.Signal.waitForSignal(long)</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.Signal" primary="true" start="100" end="100" startBytecode="13" endBytecode="13" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+      <Message>At Signal.java:[line 100]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="3" rank="17" abbrev="Wa" category="MT_CORRECTNESS" instanceHash="fcc13508c1f2005cc358d1169b7132e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Wait not in loop</ShortMessage>
+    <LongMessage>Wait not in loop in io.temporal.internal.Signal.waitForSignal(long)</LongMessage>
+    <Class classname="io.temporal.internal.Signal" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="31" end="128" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+        <Message>At Signal.java:[lines 31-128]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.Signal</Message>
+    </Class>
+    <Method classname="io.temporal.internal.Signal" name="waitForSignal" signature="(J)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.internal.Signal" start="98" end="103" startBytecode="0" endBytecode="144" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java"/>
+      <Message>In method io.temporal.internal.Signal.waitForSignal(long)</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.Signal" primary="true" start="100" end="100" startBytecode="13" endBytecode="13" sourcefile="Signal.java" sourcepath="io/temporal/internal/Signal.java">
+      <Message>At Signal.java:[line 100]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="3" rank="19" abbrev="Dm" category="BAD_PRACTICE" instanceHash="27bab1f780a52226ef046523e68e0485" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="382">
+    <ShortMessage>Method invokes System.exit(...)</ShortMessage>
+    <LongMessage>io.temporal.internal.docker.RegisterTestNamespace.registerNamespace(WorkflowServiceStubs) invokes System.exit(...), which shuts down the entire virtual machine</LongMessage>
+    <Class classname="io.temporal.internal.docker.RegisterTestNamespace" primary="true">
+      <SourceLine classname="io.temporal.internal.docker.RegisterTestNamespace" start="34" end="115" sourcefile="RegisterTestNamespace.java" sourcepath="io/temporal/internal/docker/RegisterTestNamespace.java">
+        <Message>At RegisterTestNamespace.java:[lines 34-115]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.docker.RegisterTestNamespace</Message>
+    </Class>
+    <Method classname="io.temporal.internal.docker.RegisterTestNamespace" name="registerNamespace" signature="(Lio/temporal/serviceclient/WorkflowServiceStubs;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.temporal.internal.docker.RegisterTestNamespace" start="70" end="94" startBytecode="0" endBytecode="321" sourcefile="RegisterTestNamespace.java" sourcepath="io/temporal/internal/docker/RegisterTestNamespace.java"/>
+      <Message>In method io.temporal.internal.docker.RegisterTestNamespace.registerNamespace(WorkflowServiceStubs)</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.docker.RegisterTestNamespace" primary="true" start="91" end="91" startBytecode="114" endBytecode="114" sourcefile="RegisterTestNamespace.java" sourcepath="io/temporal/internal/docker/RegisterTestNamespace.java">
+      <Message>At RegisterTestNamespace.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="5a8c2459ebd938d17cf760dac4af8b8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext$1" start="195" end="199" sourcefile="DummySyncWorkflowContext.java" sourcepath="io/temporal/internal/sync/DummySyncWorkflowContext.java">
+        <Message>At DummySyncWorkflowContext.java:[lines 195-199]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext$1</Message>
+    </Class>
+    <Class classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" primary="true">
+      <SourceLine classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" start="61" end="290" sourcefile="DummySyncWorkflowContext.java" sourcepath="io/temporal/internal/sync/DummySyncWorkflowContext.java">
+        <Message>At DummySyncWorkflowContext.java:[lines 61-290]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext</Message>
+    </Class>
+    <Method classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" name="newTimer" signature="(Ljava/time/Duration;Lio/temporal/workflow/Functions$Proc1;)Lio/temporal/workflow/Functions$Proc1;" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" start="194" end="202" startBytecode="0" endBytecode="118" sourcefile="DummySyncWorkflowContext.java" sourcepath="io/temporal/internal/sync/DummySyncWorkflowContext.java"/>
+      <Message>In method io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext.newTimer(Duration, Functions$Proc1)</Message>
+    </Method>
+    <SourceLine classname="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" primary="true" start="194" end="194" startBytecode="10" endBytecode="10" sourcefile="DummySyncWorkflowContext.java" sourcepath="io/temporal/internal/sync/DummySyncWorkflowContext.java">
+      <Message>At DummySyncWorkflowContext.java:[line 194]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="23db984ef5eeb671bc581b68c6558eca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.temporal.testing.TestEnvironmentOptions.getSearchAttributes() may expose internal representation by returning TestEnvironmentOptions.searchAttributes</LongMessage>
+    <Class classname="io.temporal.testing.TestEnvironmentOptions" primary="true" classAnnotationNames="com.google.common.annotations.VisibleForTesting">
+      <SourceLine classname="io.temporal.testing.TestEnvironmentOptions" start="36" end="305" sourcefile="TestEnvironmentOptions.java" sourcepath="io/temporal/testing/TestEnvironmentOptions.java">
+        <Message>At TestEnvironmentOptions.java:[lines 36-305]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.testing.TestEnvironmentOptions</Message>
+    </Class>
+    <Method classname="io.temporal.testing.TestEnvironmentOptions" name="getSearchAttributes" signature="()Ljava/util/Map;" isStatic="false" primary="true" classAnnotationNames="com.google.common.annotations.VisibleForTesting">
+      <SourceLine classname="io.temporal.testing.TestEnvironmentOptions" start="300" end="300" startBytecode="0" endBytecode="46" sourcefile="TestEnvironmentOptions.java" sourcepath="io/temporal/testing/TestEnvironmentOptions.java"/>
+      <Message>In method io.temporal.testing.TestEnvironmentOptions.getSearchAttributes()</Message>
+    </Method>
+    <Field classname="io.temporal.testing.TestEnvironmentOptions" name="searchAttributes" signature="Ljava/util/Map;" isStatic="false" primary="true" classAnnotationNames="com.google.common.annotations.VisibleForTesting">
+      <SourceLine classname="io.temporal.testing.TestEnvironmentOptions" sourcefile="TestEnvironmentOptions.java" sourcepath="io/temporal/testing/TestEnvironmentOptions.java">
+        <Message>In TestEnvironmentOptions.java</Message>
+      </SourceLine>
+      <Message>Field io.temporal.testing.TestEnvironmentOptions.searchAttributes</Message>
+    </Field>
+    <SourceLine classname="io.temporal.testing.TestEnvironmentOptions" primary="true" start="300" end="300" startBytecode="4" endBytecode="4" sourcefile="TestEnvironmentOptions.java" sourcepath="io/temporal/testing/TestEnvironmentOptions.java">
+      <Message>At TestEnvironmentOptions.java:[line 300]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="6b82074c66b374783c7a469db918c2b1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to ignored in new io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture(TimeLockingInterceptor$TimeLockingWorkflowStub, CompletableFuture)</LongMessage>
+    <Class classname="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" primary="true">
+      <SourceLine classname="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" start="189" end="230" sourcefile="TimeLockingInterceptor.java" sourcepath="io/temporal/testing/TimeLockingInterceptor.java">
+        <Message>At TimeLockingInterceptor.java:[lines 189-230]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture</Message>
+    </Class>
+    <Method classname="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" name="&lt;init&gt;" signature="(Lio/temporal/testing/TimeLockingInterceptor$TimeLockingWorkflowStub;Ljava/util/concurrent/CompletableFuture;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" start="189" end="200" startBytecode="0" endBytecode="10" sourcefile="TimeLockingInterceptor.java" sourcepath="io/temporal/testing/TimeLockingInterceptor.java"/>
+      <Message>In method new io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture(TimeLockingInterceptor$TimeLockingWorkflowStub, CompletableFuture)</Message>
+    </Method>
+    <LocalVariable name="ignored" register="3" pc="20" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named ignored</Message>
+    </LocalVariable>
+    <SourceLine classname="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" primary="true" start="192" end="192" startBytecode="19" endBytecode="19" sourcefile="TimeLockingInterceptor.java" sourcepath="io/temporal/testing/TimeLockingInterceptor.java">
+      <Message>At TimeLockingInterceptor.java:[line 192]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="ignored"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DP_DO_INSIDE_DO_PRIVILEGED" priority="3" rank="20" abbrev="DP" category="MALICIOUS_CODE" instanceHash="23f61d7524d4980eadd8bb7d57c8527" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invoked that should be only be invoked inside a doPrivileged block</ShortMessage>
+    <LongMessage>Invocation of reflect.Method.setAccessible(boolean), which should be invoked from within a doPrivileged block, in io.temporal.testing.internal.SDKTestWorkflowRule.invalidateWorkflowCache()</LongMessage>
+    <Class classname="io.temporal.testing.internal.SDKTestWorkflowRule" primary="true">
+      <SourceLine classname="io.temporal.testing.internal.SDKTestWorkflowRule" start="76" end="503" sourcefile="SDKTestWorkflowRule.java" sourcepath="io/temporal/testing/internal/SDKTestWorkflowRule.java">
+        <Message>At SDKTestWorkflowRule.java:[lines 76-503]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.testing.internal.SDKTestWorkflowRule</Message>
+    </Class>
+    <Method classname="io.temporal.testing.internal.SDKTestWorkflowRule" name="invalidateWorkflowCache" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.testing.internal.SDKTestWorkflowRule" start="471" end="483" startBytecode="0" endBytecode="249" sourcefile="SDKTestWorkflowRule.java" sourcepath="io/temporal/testing/internal/SDKTestWorkflowRule.java"/>
+      <Message>In method io.temporal.testing.internal.SDKTestWorkflowRule.invalidateWorkflowCache()</Message>
+    </Method>
+    <Method classname="java.lang.reflect.Method" name="setAccessible" signature="(Z)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.reflect.Method" start="192" end="195" startBytecode="0" endBytecode="93" sourcefile="Method.java" sourcepath="java/lang/reflect/Method.java"/>
+      <Message>Called method reflect.Method.setAccessible(boolean)</Message>
+    </Method>
+    <SourceLine classname="io.temporal.testing.internal.SDKTestWorkflowRule" primary="true" start="474" end="474" startBytecode="27" endBytecode="27" sourcefile="SDKTestWorkflowRule.java" sourcepath="io/temporal/testing/internal/SDKTestWorkflowRule.java">
+      <Message>At SDKTestWorkflowRule.java:[line 474]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="eeba4219cd85e9ee5dbe552077e1d558" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.temporal.testing.internal.TracingWorkerInterceptor(TracingWorkerInterceptor$FilteredTrace) may expose internal representation by storing an externally mutable object into TracingWorkerInterceptor.trace</LongMessage>
+    <Class classname="io.temporal.testing.internal.TracingWorkerInterceptor" primary="true">
+      <SourceLine classname="io.temporal.testing.internal.TracingWorkerInterceptor" start="44" end="130" sourcefile="TracingWorkerInterceptor.java" sourcepath="io/temporal/testing/internal/TracingWorkerInterceptor.java">
+        <Message>At TracingWorkerInterceptor.java:[lines 44-130]</Message>
+      </SourceLine>
+      <Message>In class io.temporal.testing.internal.TracingWorkerInterceptor</Message>
+    </Class>
+    <Method classname="io.temporal.testing.internal.TracingWorkerInterceptor" name="&lt;init&gt;" signature="(Lio/temporal/testing/internal/TracingWorkerInterceptor$FilteredTrace;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.testing.internal.TracingWorkerInterceptor" start="51" end="53" startBytecode="0" endBytecode="69" sourcefile="TracingWorkerInterceptor.java" sourcepath="io/temporal/testing/internal/TracingWorkerInterceptor.java"/>
+      <Message>In method new io.temporal.testing.internal.TracingWorkerInterceptor(TracingWorkerInterceptor$FilteredTrace)</Message>
+    </Method>
+    <Field classname="io.temporal.testing.internal.TracingWorkerInterceptor" name="trace" signature="Lio/temporal/testing/internal/TracingWorkerInterceptor$FilteredTrace;" isStatic="false" primary="true">
+      <SourceLine classname="io.temporal.testing.internal.TracingWorkerInterceptor" sourcefile="TracingWorkerInterceptor.java" sourcepath="io/temporal/testing/internal/TracingWorkerInterceptor.java">
+        <Message>In TracingWorkerInterceptor.java</Message>
+      </SourceLine>
+      <Message>Field io.temporal.testing.internal.TracingWorkerInterceptor.trace</Message>
+    </Field>
+    <LocalVariable name="trace" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named trace</Message>
+    </LocalVariable>
+    <SourceLine classname="io.temporal.testing.internal.TracingWorkerInterceptor" primary="true" start="52" end="52" startBytecode="6" endBytecode="6" sourcefile="TracingWorkerInterceptor.java" sourcepath="io/temporal/testing/internal/TracingWorkerInterceptor.java">
+      <Message>At TracingWorkerInterceptor.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="WA_NOT_IN_LOOP" abbrev="Wa" category="MT_CORRECTNESS">
+    <ShortDescription>Wait not in loop</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a call to <code>java.lang.Object.wait()</code>
+  which is not in a loop.&nbsp; If the monitor is used for multiple conditions,
+  the condition the caller intended to wait for might not be the one
+  that actually occurred.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DP_DO_INSIDE_DO_PRIVILEGED" abbrev="DP" category="MALICIOUS_CODE">
+    <ShortDescription>Method invoked that should be only be invoked inside a doPrivileged block</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code invokes a method that requires a security permission check.
+  If this code will be granted security permissions, but might be invoked by code that does not
+  have security permissions, then the invocation needs to occur inside a doPrivileged block.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UW_UNCOND_WAIT" abbrev="UW" category="MT_CORRECTNESS">
+    <ShortDescription>Unconditional wait</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a call to <code>java.lang.Object.wait()</code> which
+    is not guarded by conditional control flow. The code should
+    verify that condition it intends to wait for is not already satisfied
+    before calling wait; any previous notifications will be ignored.
+  </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_EXIT" abbrev="Dm" category="BAD_PRACTICE" cweid="382">
+    <ShortDescription>Method invokes System.exit(...)</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Invoking System.exit shuts down the entire Java virtual machine. This
+   should only been done when it is appropriate. Such calls make it
+   hard or impossible for your code to be invoked by other code.
+   Consider throwing a RuntimeException instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NN_NAKED_NOTIFY" abbrev="NN" category="MT_CORRECTNESS">
+    <ShortDescription>Naked notify</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A call to <code>notify()</code> or <code>notifyAll()</code>
+  was made without any (apparent) accompanying
+  modification to mutable object state.&nbsp; In general, calling a notify
+  method on a monitor is done because some condition another thread is
+  waiting for has become true.&nbsp; However, for the condition to be meaningful,
+  it must involve a heap object that is visible to both threads.</p>
+
+  <p> This bug does not necessarily indicate an error, since the change to
+  mutable object state may have taken place in a method which then called
+  the method containing the notification.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NN">
+    <Description>Naked notify</Description>
+  </BugCode>
+  <BugCode abbrev="UW">
+    <Description>Unconditional wait</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="Wa">
+    <Description>Wait not in loop</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="DP">
+    <Description>Use doPrivileged</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="225">
+    <MissingClass>com.google.common.base.Defaults</MissingClass>
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.collect.ObjectArrays</MissingClass>
+    <MissingClass>com.google.common.io.CharStreams</MissingClass>
+    <MissingClass>com.google.protobuf.ByteString</MissingClass>
+    <MissingClass>com.google.protobuf.Duration</MissingClass>
+    <MissingClass>com.google.protobuf.Empty</MissingClass>
+    <MissingClass>com.google.protobuf.Empty$Builder</MissingClass>
+    <MissingClass>com.google.protobuf.Timestamp</MissingClass>
+    <MissingClass>com.google.protobuf.util.Durations</MissingClass>
+    <MissingClass>com.uber.m3.tally.NoopScope</MissingClass>
+    <MissingClass>com.uber.m3.tally.Scope</MissingClass>
+    <MissingClass>io.grpc.Context</MissingClass>
+    <MissingClass>io.grpc.ManagedChannel</MissingClass>
+    <MissingClass>io.grpc.Status</MissingClass>
+    <MissingClass>io.grpc.Status$Code</MissingClass>
+    <MissingClass>io.grpc.StatusRuntimeException</MissingClass>
+    <MissingClass>io.grpc.stub.StreamObserver</MissingClass>
+    <MissingClass>io.temporal.activity.ActivityExecutionContext</MissingClass>
+    <MissingClass>io.temporal.activity.ActivityInfo</MissingClass>
+    <MissingClass>io.temporal.activity.ActivityOptions</MissingClass>
+    <MissingClass>io.temporal.activity.ActivityOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.activity.DynamicActivity</MissingClass>
+    <MissingClass>io.temporal.activity.LocalActivityOptions</MissingClass>
+    <MissingClass>io.temporal.activity.LocalActivityOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.api.command.v1.ContinueAsNewWorkflowExecutionCommandAttributes</MissingClass>
+    <MissingClass>io.temporal.api.command.v1.SignalExternalWorkflowExecutionCommandAttributes</MissingClass>
+    <MissingClass>io.temporal.api.command.v1.SignalExternalWorkflowExecutionCommandAttributes$Builder</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.ActivityType</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.ActivityType$Builder</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.SearchAttributes</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.WorkflowExecution</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.WorkflowExecution$Builder</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.WorkflowType</MissingClass>
+    <MissingClass>io.temporal.api.common.v1.WorkflowType$Builder</MissingClass>
+    <MissingClass>io.temporal.api.enums.v1.EventType</MissingClass>
+    <MissingClass>io.temporal.api.enums.v1.IndexedValueType</MissingClass>
+    <MissingClass>io.temporal.api.enums.v1.RetryState</MissingClass>
+    <MissingClass>io.temporal.api.failure.v1.Failure</MissingClass>
+    <MissingClass>io.temporal.api.history.v1.History</MissingClass>
+    <MissingClass>io.temporal.api.history.v1.HistoryEvent</MissingClass>
+    <MissingClass>io.temporal.api.history.v1.WorkflowExecutionStartedEventAttributes</MissingClass>
+    <MissingClass>io.temporal.api.namespace.v1.NamespaceInfo</MissingClass>
+    <MissingClass>io.temporal.api.operatorservice.v1.AddSearchAttributesRequest</MissingClass>
+    <MissingClass>io.temporal.api.operatorservice.v1.AddSearchAttributesRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.operatorservice.v1.AddSearchAttributesResponse</MissingClass>
+    <MissingClass>io.temporal.api.operatorservice.v1.OperatorServiceGrpc</MissingClass>
+    <MissingClass>io.temporal.api.operatorservice.v1.OperatorServiceGrpc$OperatorServiceBlockingStub</MissingClass>
+    <MissingClass>io.temporal.api.taskqueue.v1.StickyExecutionAttributes</MissingClass>
+    <MissingClass>io.temporal.api.taskqueue.v1.StickyExecutionAttributes$Builder</MissingClass>
+    <MissingClass>io.temporal.api.taskqueue.v1.TaskQueue</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.GetCurrentTimeResponse</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.LockTimeSkippingRequest</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.LockTimeSkippingRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.LockTimeSkippingResponse</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.SleepRequest</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.SleepRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.SleepResponse</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.TestServiceGrpc</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.TestServiceGrpc$TestServiceBlockingStub</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.UnlockTimeSkippingRequest</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.UnlockTimeSkippingRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.testservice.v1.UnlockTimeSkippingResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.DescribeNamespaceResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.GetWorkflowExecutionHistoryRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.GetWorkflowExecutionHistoryRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.GetWorkflowExecutionHistoryResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.ListNamespacesRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.ListNamespacesRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.ListNamespacesResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.PollActivityTaskQueueResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.PollActivityTaskQueueResponse$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.PollWorkflowTaskQueueRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.PollWorkflowTaskQueueRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RecordActivityTaskHeartbeatRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RecordActivityTaskHeartbeatResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RecordActivityTaskHeartbeatResponse$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RegisterNamespaceRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RegisterNamespaceRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RegisterNamespaceResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondActivityTaskCanceledRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondActivityTaskCompletedRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondActivityTaskFailedRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskCompletedRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskCompletedRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskCompletedResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskFailedRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskFailedRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.RespondWorkflowTaskFailedResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.SignalWorkflowExecutionRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.SignalWorkflowExecutionRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.SignalWorkflowExecutionResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.StartWorkflowExecutionRequest</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.StartWorkflowExecutionRequest$Builder</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.StartWorkflowExecutionResponse</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.WorkflowServiceGrpc</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceBlockingStub</MissingClass>
+    <MissingClass>io.temporal.api.workflowservice.v1.WorkflowServiceGrpc$WorkflowServiceImplBase</MissingClass>
+    <MissingClass>io.temporal.client.ActivityCompletionException</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowClient</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowClientOptions</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowClientOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowOptions</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowQueryException</MissingClass>
+    <MissingClass>io.temporal.client.WorkflowStub</MissingClass>
+    <MissingClass>io.temporal.common.converter.DataConverter</MissingClass>
+    <MissingClass>io.temporal.common.converter.DefaultDataConverter</MissingClass>
+    <MissingClass>io.temporal.common.converter.EncodedValues</MissingClass>
+    <MissingClass>io.temporal.common.converter.Values</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.ActivityExecutionContextBase</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.ActivityInboundCallsInterceptor</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.ActivityInboundCallsInterceptor$ActivityInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.ActivityInboundCallsInterceptor$ActivityOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkerInterceptor</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowClientInterceptorBase</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor$QueryInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor$QueryOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor$SignalInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor$WorkflowInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptor$WorkflowOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowInboundCallsInterceptorBase</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$ActivityInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$ActivityOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$CancelWorkflowInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$CancelWorkflowOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$ChildWorkflowInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$ChildWorkflowOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$ContinueAsNewInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$LocalActivityInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$LocalActivityOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$RegisterDynamicQueryHandlerInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$RegisterDynamicSignalHandlerInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$RegisterQueryInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$RegisterSignalHandlersInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$SignalExternalInput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$SignalExternalOutput</MissingClass>
+    <MissingClass>io.temporal.common.interceptors.WorkflowOutboundCallsInterceptor$SignalRegistrationRequest</MissingClass>
+    <MissingClass>io.temporal.common.metadata.POJOActivityImplMetadata</MissingClass>
+    <MissingClass>io.temporal.common.metadata.POJOActivityInterfaceMetadata</MissingClass>
+    <MissingClass>io.temporal.common.metadata.POJOWorkflowImplMetadata</MissingClass>
+    <MissingClass>io.temporal.common.metadata.POJOWorkflowInterfaceMetadata</MissingClass>
+    <MissingClass>io.temporal.failure.ActivityFailure</MissingClass>
+    <MissingClass>io.temporal.failure.CanceledFailure</MissingClass>
+    <MissingClass>io.temporal.failure.FailureConverter</MissingClass>
+    <MissingClass>io.temporal.internal.activity.ActivityExecutionContextFactory</MissingClass>
+    <MissingClass>io.temporal.internal.activity.ActivityExecutionContextFactoryImpl</MissingClass>
+    <MissingClass>io.temporal.internal.activity.ActivityTaskHandlerImpl</MissingClass>
+    <MissingClass>io.temporal.internal.common.DebugModeUtils</MissingClass>
+    <MissingClass>io.temporal.internal.common.InternalUtils</MissingClass>
+    <MissingClass>io.temporal.internal.common.ProtobufTimeUtils</MissingClass>
+    <MissingClass>io.temporal.internal.common.WorkflowExecutionHistory</MissingClass>
+    <MissingClass>io.temporal.internal.common.WorkflowExecutionUtils</MissingClass>
+    <MissingClass>io.temporal.internal.replay.ReplayWorkflowContext</MissingClass>
+    <MissingClass>io.temporal.internal.statemachines.ExecuteActivityParameters</MissingClass>
+    <MissingClass>io.temporal.internal.statemachines.ExecuteLocalActivityParameters</MissingClass>
+    <MissingClass>io.temporal.internal.statemachines.StartChildWorkflowExecutionParameters</MissingClass>
+    <MissingClass>io.temporal.internal.sync.ActivityInvocationHandler</MissingClass>
+    <MissingClass>io.temporal.internal.sync.ActivityInvocationHandlerBase</MissingClass>
+    <MissingClass>io.temporal.internal.sync.BaseRootWorkflowInboundCallsInterceptor</MissingClass>
+    <MissingClass>io.temporal.internal.sync.DeterministicRunner</MissingClass>
+    <MissingClass>io.temporal.internal.sync.DeterministicRunnerImpl</MissingClass>
+    <MissingClass>io.temporal.internal.sync.LocalActivityInvocationHandler</MissingClass>
+    <MissingClass>io.temporal.internal.sync.SyncWorkflowContext</MissingClass>
+    <MissingClass>io.temporal.internal.sync.WorkflowClientInternal</MissingClass>
+    <MissingClass>io.temporal.internal.sync.WorkflowMethodThreadNameStrategy</MissingClass>
+    <MissingClass>io.temporal.internal.sync.WorkflowThreadExecutor</MissingClass>
+    <MissingClass>io.temporal.internal.testservice.InProcessGRPCServer</MissingClass>
+    <MissingClass>io.temporal.internal.testservice.TestWorkflowService</MissingClass>
+    <MissingClass>io.temporal.internal.worker.ActivityTask</MissingClass>
+    <MissingClass>io.temporal.internal.worker.ActivityTaskHandler</MissingClass>
+    <MissingClass>io.temporal.internal.worker.ActivityTaskHandler$Result</MissingClass>
+    <MissingClass>io.temporal.internal.worker.ActivityTaskHandler$Result$TaskFailedResult</MissingClass>
+    <MissingClass>io.temporal.internal.worker.WorkflowExecutorCache</MissingClass>
+    <MissingClass>io.temporal.serviceclient.OperatorServiceStubs</MissingClass>
+    <MissingClass>io.temporal.serviceclient.OperatorServiceStubsOptions</MissingClass>
+    <MissingClass>io.temporal.serviceclient.OperatorServiceStubsOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.serviceclient.ServiceStubsOptions</MissingClass>
+    <MissingClass>io.temporal.serviceclient.ServiceStubsOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.serviceclient.TestServiceStubs</MissingClass>
+    <MissingClass>io.temporal.serviceclient.TestServiceStubsOptions</MissingClass>
+    <MissingClass>io.temporal.serviceclient.TestServiceStubsOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.serviceclient.WorkflowServiceStubs</MissingClass>
+    <MissingClass>io.temporal.serviceclient.WorkflowServiceStubsOptions</MissingClass>
+    <MissingClass>io.temporal.serviceclient.WorkflowServiceStubsOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.testserver.TestServer</MissingClass>
+    <MissingClass>io.temporal.testserver.TestServer$InProcessTestServer</MissingClass>
+    <MissingClass>io.temporal.worker.Worker</MissingClass>
+    <MissingClass>io.temporal.worker.WorkerFactory</MissingClass>
+    <MissingClass>io.temporal.worker.WorkerFactoryOptions</MissingClass>
+    <MissingClass>io.temporal.worker.WorkerFactoryOptions$Builder</MissingClass>
+    <MissingClass>io.temporal.worker.WorkerOptions</MissingClass>
+    <MissingClass>io.temporal.worker.WorkflowImplementationOptions</MissingClass>
+    <MissingClass>io.temporal.workflow.DynamicWorkflow</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions$Func</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions$Func1</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions$Proc</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions$Proc1</MissingClass>
+    <MissingClass>io.temporal.workflow.Functions$Proc2</MissingClass>
+    <MissingClass>io.temporal.workflow.Promise</MissingClass>
+    <MissingClass>io.temporal.workflow.Workflow</MissingClass>
+    <MissingClass>io.temporal.workflow.WorkflowInfo</MissingClass>
+    <MissingClass>io.temporal.workflow.unsafe.WorkflowUnsafe</MissingClass>
+    <MissingClass>org.junit.Assert</MissingClass>
+    <MissingClass>org.junit.Test</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.AfterEachCallback</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.BeforeEachCallback</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext$Namespace</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ExtensionContext$Store</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ParameterContext</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ParameterResolutionException</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.ParameterResolver</MissingClass>
+    <MissingClass>org.junit.jupiter.api.extension.TestWatcher</MissingClass>
+    <MissingClass>org.junit.platform.commons.support.AnnotationSupport</MissingClass>
+    <MissingClass>org.junit.rules.TestRule</MissingClass>
+    <MissingClass>org.junit.rules.TestWatcher</MissingClass>
+    <MissingClass>org.junit.rules.Timeout</MissingClass>
+    <MissingClass>org.junit.runner.Description</MissingClass>
+    <MissingClass>org.junit.runners.model.Statement</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:09:33 +0900" total_classes="47" referenced_classes="202" total_bugs="10" total_size="2188" num_packages="5" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.03" clock_seconds="2.51" peak_mbytes="249.59" alloc_mbytes="4078.00" gc_seconds="0.05" priority_3="5" priority_2="5">
+    <FileStats path="io/temporal/internal/Issue.java" bugCount="0" size="2"/>
+    <FileStats path="io/temporal/internal/Signal.java" bugCount="4" size="41" bugHash="14d93ae4d8562676c2f2e179635fd689"/>
+    <FileStats path="io/temporal/internal/docker/RegisterTestNamespace.java" bugCount="1" size="61" bugHash="9c0541a0973ced9030adc191c2b26190"/>
+    <FileStats path="io/temporal/internal/sync/DeterministicRunnerWrapper.java" bugCount="0" size="22"/>
+    <FileStats path="io/temporal/internal/sync/DummySyncWorkflowContext.java" bugCount="1" size="114" bugHash="7feac3b59f84fb36ffe240fa7bc7b092"/>
+    <FileStats path="io/temporal/testing/IdempotentTimeLocker.java" bugCount="0" size="28"/>
+    <FileStats path="io/temporal/testing/TestActivityEnvironment.java" bugCount="0" size="13"/>
+    <FileStats path="io/temporal/testing/TestActivityEnvironmentInternal.java" bugCount="0" size="279"/>
+    <FileStats path="io/temporal/testing/TestActivityExtension.java" bugCount="0" size="87"/>
+    <FileStats path="io/temporal/testing/TestEnvironmentOptions.java" bugCount="1" size="135" bugHash="d72ecf313c2c79b5053e56d1015df9e6"/>
+    <FileStats path="io/temporal/testing/TestWorkflowEnvironment.java" bugCount="0" size="27"/>
+    <FileStats path="io/temporal/testing/TestWorkflowEnvironmentInternal.java" bugCount="0" size="169"/>
+    <FileStats path="io/temporal/testing/TestWorkflowExtension.java" bugCount="0" size="231"/>
+    <FileStats path="io/temporal/testing/TestWorkflowRule.java" bugCount="0" size="231"/>
+    <FileStats path="io/temporal/testing/TimeLockingInterceptor.java" bugCount="1" size="101" bugHash="9d1936f1391e390161be25f51e851472"/>
+    <FileStats path="io/temporal/testing/WorkflowHistoryLoader.java" bugCount="0" size="15"/>
+    <FileStats path="io/temporal/testing/WorkflowInitialTime.java" bugCount="0" size="2"/>
+    <FileStats path="io/temporal/testing/WorkflowReplayer.java" bugCount="0" size="43"/>
+    <FileStats path="io/temporal/testing/internal/SDKTestOptions.java" bugCount="0" size="34"/>
+    <FileStats path="io/temporal/testing/internal/SDKTestWorkflowRule.java" bugCount="1" size="277" bugHash="59a79bf08afbe8996c6ef512465b29e2"/>
+    <FileStats path="io/temporal/testing/internal/TestServiceUtils.java" bugCount="0" size="51"/>
+    <FileStats path="io/temporal/testing/internal/TracingWorkerInterceptor.java" bugCount="1" size="225" bugHash="15871fb5d0fd5aa06aa012a623ef7cbb"/>
+    <PackageStats package="io.temporal.internal" total_bugs="4" total_types="2" total_size="43" priority_3="2" priority_2="2">
+      <ClassStats class="io.temporal.internal.Issue" sourceFile="Issue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.temporal.internal.Signal" sourceFile="Signal.java" interface="false" size="41" bugs="4" priority_3="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="io.temporal.internal.docker" total_bugs="1" total_types="1" total_size="61" priority_3="1">
+      <ClassStats class="io.temporal.internal.docker.RegisterTestNamespace" sourceFile="RegisterTestNamespace.java" interface="false" size="61" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="io.temporal.internal.sync" total_bugs="1" total_types="5" total_size="136" priority_3="1">
+      <ClassStats class="io.temporal.internal.sync.DeterministicRunnerWrapper" sourceFile="DeterministicRunnerWrapper.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.temporal.internal.sync.DummySyncWorkflowContext" sourceFile="DummySyncWorkflowContext.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.temporal.internal.sync.DummySyncWorkflowContext$1" sourceFile="DummySyncWorkflowContext.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext" sourceFile="DummySyncWorkflowContext.java" interface="false" size="92" bugs="1" priority_3="1"/>
+      <ClassStats class="io.temporal.internal.sync.DummySyncWorkflowContext$DummyReplayWorkflowContext$1" sourceFile="DummySyncWorkflowContext.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.temporal.testing" total_bugs="2" total_types="28" total_size="1361" priority_2="2">
+      <ClassStats class="io.temporal.testing.IdempotentTimeLocker" sourceFile="IdempotentTimeLocker.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironment" sourceFile="TestActivityEnvironment.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironmentInternal" sourceFile="TestActivityEnvironmentInternal.java" interface="false" size="98" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironmentInternal$1" sourceFile="TestActivityEnvironmentInternal.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironmentInternal$ClassConsumerPair" sourceFile="TestActivityEnvironmentInternal.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironmentInternal$HeartbeatInterceptingService" sourceFile="TestActivityEnvironmentInternal.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityEnvironmentInternal$TestActivityExecutor" sourceFile="TestActivityEnvironmentInternal.java" interface="false" size="145" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityExtension" sourceFile="TestActivityExtension.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityExtension$1" sourceFile="TestActivityExtension.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestActivityExtension$Builder" sourceFile="TestActivityExtension.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestEnvironmentOptions" sourceFile="TestEnvironmentOptions.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="io.temporal.testing.TestEnvironmentOptions$1" sourceFile="TestEnvironmentOptions.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestEnvironmentOptions$Builder" sourceFile="TestEnvironmentOptions.java" interface="false" size="75" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowEnvironment" sourceFile="TestWorkflowEnvironment.java" interface="true" size="27" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowEnvironmentInternal" sourceFile="TestWorkflowEnvironmentInternal.java" interface="false" size="169" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowExtension" sourceFile="TestWorkflowExtension.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowExtension$1" sourceFile="TestWorkflowExtension.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowExtension$Builder" sourceFile="TestWorkflowExtension.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowRule" sourceFile="TestWorkflowRule.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowRule$1" sourceFile="TestWorkflowRule.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowRule$2" sourceFile="TestWorkflowRule.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TestWorkflowRule$Builder" sourceFile="TestWorkflowRule.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TimeLockingInterceptor" sourceFile="TimeLockingInterceptor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub" sourceFile="TimeLockingInterceptor.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="io.temporal.testing.TimeLockingInterceptor$TimeLockingWorkflowStub$TimeLockingFuture" sourceFile="TimeLockingInterceptor.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="io.temporal.testing.WorkflowHistoryLoader" sourceFile="WorkflowHistoryLoader.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.temporal.testing.WorkflowInitialTime" sourceFile="WorkflowInitialTime.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.temporal.testing.WorkflowReplayer" sourceFile="WorkflowReplayer.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.temporal.testing.internal" total_bugs="2" total_types="11" total_size="587" priority_3="1" priority_2="1">
+      <ClassStats class="io.temporal.testing.internal.SDKTestOptions" sourceFile="SDKTestOptions.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.SDKTestWorkflowRule" sourceFile="SDKTestWorkflowRule.java" interface="false" size="203" bugs="1" priority_3="1"/>
+      <ClassStats class="io.temporal.testing.internal.SDKTestWorkflowRule$1" sourceFile="SDKTestWorkflowRule.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.SDKTestWorkflowRule$Builder" sourceFile="SDKTestWorkflowRule.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TestServiceUtils" sourceFile="TestServiceUtils.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor" sourceFile="TracingWorkerInterceptor.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor$1" sourceFile="TracingWorkerInterceptor.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor$FilteredTrace" sourceFile="TracingWorkerInterceptor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor$TracingActivityInboundCallsInterceptor" sourceFile="TracingWorkerInterceptor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor$TracingActivityInboundCallsInterceptor$1" sourceFile="TracingWorkerInterceptor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.temporal.testing.internal.TracingWorkerInterceptor$TracingWorkflowOutboundCallsInterceptor" sourceFile="TracingWorkerInterceptor.java" interface="false" size="127" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="302" invocations="1185" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="23106" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="126" invocations="202" avgMicrosecondsPerInvocation="624" maxMicrosecondsPerInvocation="16639" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="124" invocations="202" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="7172" standardDeviationMicrosecondsPerInvocation="1129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="95" invocations="476" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="6662" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="87" invocations="476" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="3103" standardDeviationMicrosecondsPerInvocation="312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="75" invocations="847" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="2293" standardDeviationMicrosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="71" invocations="480" avgMicrosecondsPerInvocation="148" maxMicrosecondsPerInvocation="6601" standardDeviationMicrosecondsPerInvocation="390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="68" invocations="476" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="3417" standardDeviationMicrosecondsPerInvocation="285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="63" invocations="485" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="5648" standardDeviationMicrosecondsPerInvocation="329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="60" invocations="476" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="5323" standardDeviationMicrosecondsPerInvocation="282"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="46" invocations="353" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="2587" standardDeviationMicrosecondsPerInvocation="250"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="46" invocations="388" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="10651" standardDeviationMicrosecondsPerInvocation="698"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="41" invocations="1199" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1991" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="202" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="2632" standardDeviationMicrosecondsPerInvocation="338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="508" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="14976" standardDeviationMicrosecondsPerInvocation="664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="202" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="2734" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="31" invocations="202" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="18356" standardDeviationMicrosecondsPerInvocation="1289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="202" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="1523" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="202" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2538" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="26" invocations="6385" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="1037" standardDeviationMicrosecondsPerInvocation="18"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="25" invocations="908" avgMicrosecondsPerInvocation="28" maxMicrosecondsPerInvocation="707" standardDeviationMicrosecondsPerInvocation="60"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="202" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="4035" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="24" invocations="47" avgMicrosecondsPerInvocation="523" maxMicrosecondsPerInvocation="3135" standardDeviationMicrosecondsPerInvocation="629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="23" invocations="47" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="13383" standardDeviationMicrosecondsPerInvocation="2116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="476" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1435" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="19" invocations="202" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1395" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="18" invocations="47" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="7145" standardDeviationMicrosecondsPerInvocation="1028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="16" invocations="47" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="1582" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="47" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="4097" standardDeviationMicrosecondsPerInvocation="654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="14" invocations="47" avgMicrosecondsPerInvocation="307" maxMicrosecondsPerInvocation="1016" standardDeviationMicrosecondsPerInvocation="263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="47" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="1426" standardDeviationMicrosecondsPerInvocation="315"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

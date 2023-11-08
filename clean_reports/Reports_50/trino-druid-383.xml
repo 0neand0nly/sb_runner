@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445898943" analysisTimestamp="1699447689560" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\trino-druid-383.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="62">
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList</MissingClass>
+    <MissingClass>com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>com.google.inject.Binder</MissingClass>
+    <MissingClass>com.google.inject.Module</MissingClass>
+    <MissingClass>com.google.inject.Scope</MissingClass>
+    <MissingClass>com.google.inject.Scopes</MissingClass>
+    <MissingClass>com.google.inject.binder.AnnotatedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.LinkedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.ScopedBindingBuilder</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.BaseJdbcClient</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.BaseJdbcConfig</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.BooleanWriteFunction</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.ConnectionFactory</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.DoubleWriteFunction</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.DriverConnectionFactory</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.ForBaseJdbc</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcClient</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcColumnHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcErrorCode</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcNamedRelationHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcOutputTableHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcPlugin</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcRelationHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcTableHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.JdbcTypeHandle</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.LongWriteFunction</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.ObjectWriteFunction</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.PreparedQuery</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.QueryBuilder</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.RemoteTableName</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.SliceWriteFunction</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.StandardColumnMappings</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.TypeHandlingJdbcSessionProperties</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.UnsupportedTypeHandling</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.WriteMapping</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.credential.CredentialProvider</MissingClass>
+    <MissingClass>io.trino.plugin.jdbc.mapping.IdentifierMapping</MissingClass>
+    <MissingClass>io.trino.spi.ErrorCodeSupplier</MissingClass>
+    <MissingClass>io.trino.spi.StandardErrorCode</MissingClass>
+    <MissingClass>io.trino.spi.TrinoException</MissingClass>
+    <MissingClass>io.trino.spi.connector.ColumnMetadata</MissingClass>
+    <MissingClass>io.trino.spi.connector.ConnectorSession</MissingClass>
+    <MissingClass>io.trino.spi.connector.ConnectorTableMetadata</MissingClass>
+    <MissingClass>io.trino.spi.connector.SchemaTableName</MissingClass>
+    <MissingClass>io.trino.spi.predicate.TupleDomain</MissingClass>
+    <MissingClass>io.trino.spi.type.BigintType</MissingClass>
+    <MissingClass>io.trino.spi.type.BooleanType</MissingClass>
+    <MissingClass>io.trino.spi.type.CharType</MissingClass>
+    <MissingClass>io.trino.spi.type.DateType</MissingClass>
+    <MissingClass>io.trino.spi.type.DecimalType</MissingClass>
+    <MissingClass>io.trino.spi.type.Decimals</MissingClass>
+    <MissingClass>io.trino.spi.type.DoubleType</MissingClass>
+    <MissingClass>io.trino.spi.type.IntegerType</MissingClass>
+    <MissingClass>io.trino.spi.type.RealType</MissingClass>
+    <MissingClass>io.trino.spi.type.SmallintType</MissingClass>
+    <MissingClass>io.trino.spi.type.TimestampType</MissingClass>
+    <MissingClass>io.trino.spi.type.TinyintType</MissingClass>
+    <MissingClass>io.trino.spi.type.Type</MissingClass>
+    <MissingClass>io.trino.spi.type.VarbinaryType</MissingClass>
+    <MissingClass>io.trino.spi.type.VarcharType</MissingClass>
+    <MissingClass>org.apache.calcite.avatica.remote.Driver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:18 +0900" total_classes="3" referenced_classes="37" total_bugs="0" total_size="170" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.77" clock_seconds="1.23" peak_mbytes="222.38" alloc_mbytes="4078.00" gc_seconds="0.02">
+    <FileStats path="io/trino/plugin/druid/DruidJdbcClient.java" bugCount="0" size="156"/>
+    <FileStats path="io/trino/plugin/druid/DruidJdbcClientModule.java" bugCount="0" size="10"/>
+    <FileStats path="io/trino/plugin/druid/DruidJdbcPlugin.java" bugCount="0" size="4"/>
+    <PackageStats package="io.trino.plugin.druid" total_bugs="0" total_types="3" total_size="170">
+      <ClassStats class="io.trino.plugin.druid.DruidJdbcClient" sourceFile="DruidJdbcClient.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="io.trino.plugin.druid.DruidJdbcClientModule" sourceFile="DruidJdbcClientModule.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.trino.plugin.druid.DruidJdbcPlugin" sourceFile="DruidJdbcPlugin.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="233" invocations="589" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="14975" standardDeviationMicrosecondsPerInvocation="975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="57" invocations="37" avgMicrosecondsPerInvocation="1559" maxMicrosecondsPerInvocation="8356" standardDeviationMicrosecondsPerInvocation="2076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="162" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="3460" standardDeviationMicrosecondsPerInvocation="406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="39" invocations="37" avgMicrosecondsPerInvocation="1064" maxMicrosecondsPerInvocation="5921" standardDeviationMicrosecondsPerInvocation="1393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="35" invocations="32" avgMicrosecondsPerInvocation="1097" maxMicrosecondsPerInvocation="22554" standardDeviationMicrosecondsPerInvocation="3912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="28" invocations="594" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2333" standardDeviationMicrosecondsPerInvocation="118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="28" invocations="37" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="22023" standardDeviationMicrosecondsPerInvocation="3551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="24" invocations="32" avgMicrosecondsPerInvocation="759" maxMicrosecondsPerInvocation="5517" standardDeviationMicrosecondsPerInvocation="1356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="485" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="1508" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="88" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="10120" standardDeviationMicrosecondsPerInvocation="1090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="22" invocations="32" avgMicrosecondsPerInvocation="706" maxMicrosecondsPerInvocation="17111" standardDeviationMicrosecondsPerInvocation="2963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="3" avgMicrosecondsPerInvocation="7285" maxMicrosecondsPerInvocation="19443" standardDeviationMicrosecondsPerInvocation="8652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="37" avgMicrosecondsPerInvocation="562" maxMicrosecondsPerInvocation="4822" standardDeviationMicrosecondsPerInvocation="875"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="20" invocations="32" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="6612" standardDeviationMicrosecondsPerInvocation="1349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="37" avgMicrosecondsPerInvocation="506" maxMicrosecondsPerInvocation="2444" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="18" invocations="32" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="5520" standardDeviationMicrosecondsPerInvocation="1087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="16" invocations="32" avgMicrosecondsPerInvocation="523" maxMicrosecondsPerInvocation="7056" standardDeviationMicrosecondsPerInvocation="1299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="37" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="1714" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="13" invocations="32" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="5159" standardDeviationMicrosecondsPerInvocation="920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="37" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="1751" standardDeviationMicrosecondsPerInvocation="474"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="12" invocations="37" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="5661" standardDeviationMicrosecondsPerInvocation="912"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

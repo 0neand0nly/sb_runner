@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699429580983" analysisTimestamp="1699430295735" release="">
+  <Project projectName="">
+    <Jar>cleans\temp\fhAspects-4.6.13.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="a1275fcd6f45df8ec67275411bc8958a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field pl.fhframework.aspects.ApplicationContextHolder.applicationContext from instance method pl.fhframework.aspects.ApplicationContextHolder.setApplicationContext(ApplicationContext)</LongMessage>
+    <Class classname="pl.fhframework.aspects.ApplicationContextHolder" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="pl.fhframework.aspects.ApplicationContextHolder" start="9" end="20" sourcefile="ApplicationContextHolder.java" sourcepath="pl/fhframework/aspects/ApplicationContextHolder.java">
+        <Message>At ApplicationContextHolder.java:[lines 9-20]</Message>
+      </SourceLine>
+      <Message>In class pl.fhframework.aspects.ApplicationContextHolder</Message>
+    </Class>
+    <Method classname="pl.fhframework.aspects.ApplicationContextHolder" name="setApplicationContext" signature="(Lorg/springframework/context/ApplicationContext;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="pl.fhframework.aspects.ApplicationContextHolder" start="19" end="20" startBytecode="0" endBytecode="60" sourcefile="ApplicationContextHolder.java" sourcepath="pl/fhframework/aspects/ApplicationContextHolder.java"/>
+      <Message>In method pl.fhframework.aspects.ApplicationContextHolder.setApplicationContext(ApplicationContext)</Message>
+    </Method>
+    <Field classname="pl.fhframework.aspects.ApplicationContextHolder" name="applicationContext" signature="Lorg/springframework/context/ApplicationContext;" isStatic="true" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="pl.fhframework.aspects.ApplicationContextHolder" sourcefile="ApplicationContextHolder.java" sourcepath="pl/fhframework/aspects/ApplicationContextHolder.java">
+        <Message>In ApplicationContextHolder.java</Message>
+      </SourceLine>
+      <Message>Field pl.fhframework.aspects.ApplicationContextHolder.applicationContext</Message>
+    </Field>
+    <SourceLine classname="pl.fhframework.aspects.ApplicationContextHolder" primary="true" start="19" end="19" startBytecode="1" endBytecode="1" sourcefile="ApplicationContextHolder.java" sourcepath="pl/fhframework/aspects/ApplicationContextHolder.java">
+      <Message>At ApplicationContextHolder.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="9b4aacaefc5d738d8f05eb699966e143" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field pl.fhframework.aspects.snapshots.SnapshotsModelAspect.ajc$cflowCounter$0 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" start="1" end="181" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+        <Message>At SnapshotsModelAspect.java:[lines 1-181]</Message>
+      </SourceLine>
+      <Message>In class pl.fhframework.aspects.snapshots.SnapshotsModelAspect</Message>
+    </Class>
+    <Field classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" name="ajc$cflowCounter$0" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+        <Message>In SnapshotsModelAspect.java</Message>
+      </SourceLine>
+      <Message>Field pl.fhframework.aspects.snapshots.SnapshotsModelAspect.ajc$cflowCounter$0</Message>
+    </Field>
+    <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" primary="true" start="1" end="1" startBytecode="7" endBytecode="7" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+      <Message>At SnapshotsModelAspect.java:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="11d033423604a69e45bf0a631fe29c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field pl.fhframework.aspects.snapshots.SnapshotsModelAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" start="1" end="181" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+        <Message>At SnapshotsModelAspect.java:[lines 1-181]</Message>
+      </SourceLine>
+      <Message>In class pl.fhframework.aspects.snapshots.SnapshotsModelAspect</Message>
+    </Class>
+    <Field classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" name="ajc$perSingletonInstance" signature="Lpl/fhframework/aspects/snapshots/SnapshotsModelAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+        <Message>In SnapshotsModelAspect.java</Message>
+      </SourceLine>
+      <Message>Field pl.fhframework.aspects.snapshots.SnapshotsModelAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="SnapshotsModelAspect.java" sourcepath="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java">
+      <Message>At SnapshotsModelAspect.java:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="2" rank="16" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="d04f9ce3302156fe83c5d6bb774ae27f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlTransient,java.lang.Deprecated">
+      <SourceLine classname="pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject" start="1" end="11" sourcefile="SnapshotEnabledObject.java" sourcepath="pl/fhframework/aspects/snapshots/model/SnapshotEnabledObject.java">
+        <Message>At SnapshotEnabledObject.java:[lines 1-11]</Message>
+      </SourceLine>
+      <Message>In class pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject</Message>
+    </Class>
+    <SourceLine classname="pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject" start="1" end="11" sourcefile="SnapshotEnabledObject.java" sourcepath="pl/fhframework/aspects/snapshots/model/SnapshotEnabledObject.java" synthetic="true">
+      <Message>At SnapshotEnabledObject.java:[lines 1-11]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint$StaticPart</MissingClass>
+    <MissingClass>org.aspectj.lang.NoAspectBoundException</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.FieldSignature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.SourceLocation</MissingClass>
+    <MissingClass>org.aspectj.runtime.internal.CFlowCounter</MissingClass>
+    <MissingClass>org.aspectj.runtime.reflect.Factory</MissingClass>
+    <MissingClass>org.springframework.beans.BeansException</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 16:46:20 +0900" total_classes="14" referenced_classes="37" total_bugs="4" total_size="177" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.28" clock_seconds="1.87" peak_mbytes="220.64" alloc_mbytes="3984.00" gc_seconds="0.01" priority_2="3" priority_1="1">
+    <FileStats path="pl/fhframework/aspects/ApplicationContextHolder.java" bugCount="1" size="11" bugHash="5edb75a30b57af9047e53e9694676567"/>
+    <FileStats path="pl/fhframework/aspects/conversation/IUseCaseConversation.java" bugCount="0" size="9"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/ModelListener.java" bugCount="0" size="21"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/ModelListenerFactory.java" bugCount="0" size="2"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/SnapshotsManager.java" bugCount="0" size="4"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/SnapshotsManagerAspect.java" bugCount="0" size="13"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/SnapshotsModelAspect.java" bugCount="2" size="104" bugHash="de3d6901b41a8b9070413b57856104be"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/CreateSnapshot.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/DropSnapshot.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/ISnapshotEnabled.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/IUnmanagedUseCaseParameter.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/RestoreSnapshot.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/SkipSnapshot.java" bugCount="0" size="1"/>
+    <FileStats path="pl/fhframework/aspects/snapshots/model/SnapshotEnabledObject.java" bugCount="1" size="7" bugHash="0cba9db3b3d80694b8bd8cc322f13e0b"/>
+    <PackageStats package="pl.fhframework.aspects" total_bugs="1" total_types="1" total_size="11" priority_1="1">
+      <ClassStats class="pl.fhframework.aspects.ApplicationContextHolder" sourceFile="ApplicationContextHolder.java" interface="false" size="11" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="pl.fhframework.aspects.conversation" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="pl.fhframework.aspects.conversation.IUseCaseConversation" sourceFile="IUseCaseConversation.java" interface="true" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.fhframework.aspects.snapshots" total_bugs="2" total_types="5" total_size="144" priority_2="2">
+      <ClassStats class="pl.fhframework.aspects.snapshots.ModelListener" sourceFile="ModelListener.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.ModelListenerFactory" sourceFile="ModelListenerFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.SnapshotsManager" sourceFile="SnapshotsManager.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.SnapshotsManagerAspect" sourceFile="SnapshotsManagerAspect.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.SnapshotsModelAspect" sourceFile="SnapshotsModelAspect.java" interface="false" size="104" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="pl.fhframework.aspects.snapshots.model" total_bugs="1" total_types="7" total_size="13" priority_2="1">
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.CreateSnapshot" sourceFile="CreateSnapshot.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.DropSnapshot" sourceFile="DropSnapshot.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.ISnapshotEnabled" sourceFile="ISnapshotEnabled.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.IUnmanagedUseCaseParameter" sourceFile="IUnmanagedUseCaseParameter.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.RestoreSnapshot" sourceFile="RestoreSnapshot.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.SkipSnapshot" sourceFile="SkipSnapshot.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="pl.fhframework.aspects.snapshots.model.SnapshotEnabledObject" sourceFile="SnapshotEnabledObject.java" interface="false" size="7" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="224" invocations="435" avgMicrosecondsPerInvocation="516" maxMicrosecondsPerInvocation="44467" standardDeviationMicrosecondsPerInvocation="2247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="60" invocations="63" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="48926" standardDeviationMicrosecondsPerInvocation="6109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="56" invocations="14" avgMicrosecondsPerInvocation="4027" maxMicrosecondsPerInvocation="46051" standardDeviationMicrosecondsPerInvocation="11841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="53" invocations="71" avgMicrosecondsPerInvocation="756" maxMicrosecondsPerInvocation="34750" standardDeviationMicrosecondsPerInvocation="4162"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="46" invocations="37" avgMicrosecondsPerInvocation="1263" maxMicrosecondsPerInvocation="12515" standardDeviationMicrosecondsPerInvocation="2781"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="46" invocations="31" avgMicrosecondsPerInvocation="1501" maxMicrosecondsPerInvocation="36681" standardDeviationMicrosecondsPerInvocation="6432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="39" invocations="99" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="13401" standardDeviationMicrosecondsPerInvocation="1373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="38" invocations="31" avgMicrosecondsPerInvocation="1257" maxMicrosecondsPerInvocation="28583" standardDeviationMicrosecondsPerInvocation="5010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="37" invocations="440" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="2768" standardDeviationMicrosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="35" invocations="31" avgMicrosecondsPerInvocation="1146" maxMicrosecondsPerInvocation="19703" standardDeviationMicrosecondsPerInvocation="3432"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="35" invocations="31" avgMicrosecondsPerInvocation="1136" maxMicrosecondsPerInvocation="20659" standardDeviationMicrosecondsPerInvocation="3605"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="37" avgMicrosecondsPerInvocation="937" maxMicrosecondsPerInvocation="11521" standardDeviationMicrosecondsPerInvocation="2297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="37" avgMicrosecondsPerInvocation="892" maxMicrosecondsPerInvocation="26686" standardDeviationMicrosecondsPerInvocation="4316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="31" invocations="27" avgMicrosecondsPerInvocation="1179" maxMicrosecondsPerInvocation="20006" standardDeviationMicrosecondsPerInvocation="3715"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="27" invocations="14" avgMicrosecondsPerInvocation="1929" maxMicrosecondsPerInvocation="20471" standardDeviationMicrosecondsPerInvocation="5327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="37" avgMicrosecondsPerInvocation="594" maxMicrosecondsPerInvocation="13432" standardDeviationMicrosecondsPerInvocation="2183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="379" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="1104" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="17" invocations="31" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="7920" standardDeviationMicrosecondsPerInvocation="1380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="15" invocations="14" avgMicrosecondsPerInvocation="1127" maxMicrosecondsPerInvocation="12003" standardDeviationMicrosecondsPerInvocation="3137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="37" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="8330" standardDeviationMicrosecondsPerInvocation="1371"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

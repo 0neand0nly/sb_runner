@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699448054305" analysisTimestamp="1699448141482" release="">
+  <Project projectName="">
+    <Jar>./clean50/temp\\sudoor-server-lib-1.0.4.jar</Jar>
+  </Project>
+  <BugInstance type="DB_DUPLICATE_SWITCH_CLAUSES" priority="3" rank="20" abbrev="DB" category="STYLE" instanceHash="8728024269ed6eddabe115dea171fc82" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method uses the same code for two switch clauses</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.decorateCORSProperties(HttpServletRequest, CorsFilter$CORSRequestType) uses the same code for two switch clauses</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="decorateCORSProperties" signature="(Ljavax/servlet/http/HttpServletRequest;Lnet/gplatform/sudoor/server/cors/CorsFilter$CORSRequestType;)V" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="474" end="510" startBytecode="0" endBytecode="431" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.decorateCORSProperties(HttpServletRequest, CorsFilter$CORSRequestType)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="484" end="487" startBytecode="80" endBytecode="124" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[lines 484-487]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="489" end="492" startBytecode="125" endBytecode="169" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[lines 489-492]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DB_DUPLICATE_SWITCH_CLAUSES" priority="3" rank="20" abbrev="DB" category="STYLE" instanceHash="ac8c78c6f411ab70bcaff7090a65c9be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method uses the same code for two switch clauses</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.doFilter(ServletRequest, ServletResponse, FilterChain) uses the same code for two switch clauses</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="doFilter" signature="(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="174" end="211" startBytecode="0" endBytecode="359" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.doFilter(ServletRequest, ServletResponse, FilterChain)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="192" end="193" startBytecode="104" endBytecode="115" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[lines 192-193]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="196" end="197" startBytecode="116" endBytecode="127" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[lines 196-197]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="5e23dfc7a7d49f651891fe7d3ed95285" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.gplatform.sudoor.server.cors.CorsFilter.checkRequestType(HttpServletRequest)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="checkRequestType" signature="(Ljavax/servlet/http/HttpServletRequest;)Lnet/gplatform/sudoor/server/cors/CorsFilter$CORSRequestType;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="554" end="598" startBytecode="0" endBytecode="548" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.checkRequestType(HttpServletRequest)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="582" end="582" startBytecode="210" endBytecode="210" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 582]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="2a0c74e0ccbc3c1325b4ae2188679ca0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.gplatform.sudoor.server.cors.CorsFilter.decorateCORSProperties(HttpServletRequest, CorsFilter$CORSRequestType)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="decorateCORSProperties" signature="(Ljavax/servlet/http/HttpServletRequest;Lnet/gplatform/sudoor/server/cors/CorsFilter$CORSRequestType;)V" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="474" end="510" startBytecode="0" endBytecode="431" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.decorateCORSProperties(HttpServletRequest, CorsFilter$CORSRequestType)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="486" end="486" startBytecode="114" endBytecode="114" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 486]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="491" end="491" startBytecode="159" endBytecode="159" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CorsFilter.java:[line 491]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="496" end="496" startBytecode="204" endBytecode="204" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CorsFilter.java:[line 496]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="a202928db950bbfa3c6b4a54dbd0f135" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="handlePreflightCORS" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="320" end="394" startBytecode="0" endBytecode="918" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="322" end="322" startBytecode="36" endBytecode="36" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 322]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="348" end="348" startBytecode="200" endBytecode="200" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CorsFilter.java:[line 348]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="e6147fc94ed46a18f604fa52c68a9af9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.gplatform.sudoor.server.cors.CorsFilter.parseAndStore(String, String, String, String, String, String, String)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="parseAndStore" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="642" end="697" startBytecode="0" endBytecode="743" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.parseAndStore(String, String, String, String, String, String, String)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="663" end="663" startBytecode="142" endBytecode="142" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 663]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="2c93535da38fc2c2909e116660f57c0d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.getAllowedHttpHeaders() may expose internal representation by returning CorsFilter.allowedHttpHeaders</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="getAllowedHttpHeaders" signature="()Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="815" end="815" startBytecode="0" endBytecode="46" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.getAllowedHttpHeaders()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="allowedHttpHeaders" signature="Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.allowedHttpHeaders</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="815" end="815" startBytecode="4" endBytecode="4" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 815]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="30505cb2b2ca3ce826ec583b03a7c9b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.getAllowedHttpMethods() may expose internal representation by returning CorsFilter.allowedHttpMethods</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="getAllowedHttpMethods" signature="()Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="806" end="806" startBytecode="0" endBytecode="46" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.getAllowedHttpMethods()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="allowedHttpMethods" signature="Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.allowedHttpMethods</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="806" end="806" startBytecode="4" endBytecode="4" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 806]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="2cbf1e5ef2144fe4d63cd9927c6fca8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.getAllowedOrigins() may expose internal representation by returning CorsFilter.allowedOrigins</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="getAllowedOrigins" signature="()Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="797" end="797" startBytecode="0" endBytecode="46" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.getAllowedOrigins()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="allowedOrigins" signature="Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.allowedOrigins</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="797" end="797" startBytecode="4" endBytecode="4" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 797]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8aca9cc4165b58bda1be481bc6bdf87f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.getExposedHeaders() may expose internal representation by returning CorsFilter.exposedHeaders</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="getExposedHeaders" signature="()Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="771" end="771" startBytecode="0" endBytecode="46" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.getExposedHeaders()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="exposedHeaders" signature="Ljava/util/Collection;" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.exposedHeaders</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="771" end="771" startBytecode="4" endBytecode="4" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 771]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" priority="2" rank="7" abbrev="HRS" category="SECURITY" instanceHash="4a71895a38f37db7a1561d0fed3e20be" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="113">
+    <ShortMessage>HTTP Response splitting vulnerability</ShortMessage>
+    <LongMessage>HTTP parameter directly written to HTTP header output in net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="handlePreflightCORS" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="320" end="394" startBytecode="0" endBytecode="918" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</Message>
+    </Method>
+    <LocalVariable name="accessControlRequestMethod" register="6" pc="391" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named accessControlRequestMethod</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="386" end="386" startBytecode="392" endBytecode="392" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 386]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" priority="2" rank="7" abbrev="HRS" category="SECURITY" instanceHash="5f501e147e487f963d216b827481718b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="113">
+    <ShortMessage>HTTP Response splitting vulnerability</ShortMessage>
+    <LongMessage>HTTP parameter directly written to HTTP header output in net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="handlePreflightCORS" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="320" end="394" startBytecode="0" endBytecode="918" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.handlePreflightCORS(HttpServletRequest, HttpServletResponse, FilterChain)</Message>
+    </Method>
+    <LocalVariable name="origin" register="5" pc="314" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named origin</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="370" end="370" startBytecode="315" endBytecode="315" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 370]</Message>
+    </SourceLine>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="376" end="376" startBytecode="358" endBytecode="358" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CorsFilter.java:[line 376]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" priority="2" rank="7" abbrev="HRS" category="SECURITY" instanceHash="9b6e0acefbdc7289c3eba5e21e75431d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="113">
+    <ShortMessage>HTTP Response splitting vulnerability</ShortMessage>
+    <LongMessage>HTTP parameter directly written to HTTP header output in net.gplatform.sudoor.server.cors.CorsFilter.handleSimpleCORS(HttpServletRequest, HttpServletResponse, FilterChain)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cors.CorsFilter" name="handleSimpleCORS" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="250" end="303" startBytecode="0" endBytecode="434" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.cors.CorsFilter.handleSimpleCORS(HttpServletRequest, HttpServletResponse, FilterChain)</Message>
+    </Method>
+    <LocalVariable name="origin" register="5" pc="143" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named origin</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="281" end="281" startBytecode="144" endBytecode="144" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 281]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="cd40f24522081cf90bcab0dd31108011" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.COMPLEX_HTTP_METHODS is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="COMPLEX_HTTP_METHODS" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.COMPLEX_HTTP_METHODS</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="948" end="948" startBytecode="111" endBytecode="111" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 948]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="f1e5064b0e9e5cf1a307fb2fa20054fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.HTTP_METHODS is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="HTTP_METHODS" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.HTTP_METHODS</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="943" end="943" startBytecode="74" endBytecode="74" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 943]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="bfbf822bc823298d960028e1cd7a7454" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_REQUEST_CONTENT_TYPE_VALUES is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="SIMPLE_HTTP_REQUEST_CONTENT_TYPE_VALUES" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_REQUEST_CONTENT_TYPE_VALUES</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="981" end="981" startBytecode="255" endBytecode="255" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 981]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="a8e579c6964bb2004874435323309f86" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_METHODS is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="SIMPLE_HTTP_METHODS" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_METHODS</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="955" end="955" startBytecode="143" endBytecode="143" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 955]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="51570c06c27558f41c82f3ff74056cfe" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_REQUEST_HEADERS is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="SIMPLE_HTTP_REQUEST_HEADERS" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_REQUEST_HEADERS</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="963" end="963" startBytecode="175" endBytecode="175" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 963]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="3d49d535e642117ad6634612a4fb29b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_RESPONSE_HEADERS is a mutable collection which should be package protected</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" start="112" end="981" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>At CorsFilter.java:[lines 112-981]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cors.CorsFilter</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.cors.CorsFilter" name="SIMPLE_HTTP_RESPONSE_HEADERS" signature="Ljava/util/Collection;" isStatic="true" primary="true" classAnnotationNames="javax.servlet.annotation.WebFilter">
+      <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+        <Message>In CorsFilter.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cors.CorsFilter.SIMPLE_HTTP_RESPONSE_HEADERS</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cors.CorsFilter" primary="true" start="972" end="972" startBytecode="223" endBytecode="223" sourcefile="CorsFilter.java" sourcepath="net/gplatform/sudoor/server/cors/CorsFilter.java">
+      <Message>At CorsFilter.java:[line 972]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="53eccbea14783ef6334e7a361b1802dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to username in net.gplatform.sudoor.server.cxf.ServerPasswordCallback.handle(Callback[])</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" start="43" end="61" sourcefile="ServerPasswordCallback.java" sourcepath="net/gplatform/sudoor/server/cxf/ServerPasswordCallback.java">
+        <Message>At ServerPasswordCallback.java:[lines 43-61]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cxf.ServerPasswordCallback</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" name="handle" signature="([Ljavax/security/auth/callback/Callback;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" start="58" end="61" startBytecode="0" endBytecode="12" sourcefile="ServerPasswordCallback.java" sourcepath="net/gplatform/sudoor/server/cxf/ServerPasswordCallback.java"/>
+      <Message>In method net.gplatform.sudoor.server.cxf.ServerPasswordCallback.handle(Callback[])</Message>
+    </Method>
+    <LocalVariable name="username" register="3" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named username</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" primary="true" start="59" end="59" startBytecode="11" endBytecode="11" sourcefile="ServerPasswordCallback.java" sourcepath="net/gplatform/sudoor/server/cxf/ServerPasswordCallback.java">
+      <Message>At ServerPasswordCallback.java:[line 59]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="username"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="93c2ac4a2b81d68e4be7a52f2bf90aa8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.util.List to java.util.Vector of return value in net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.handleMessage(SoapMessage)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="51" end="102" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>At WSAuthenticationInInterceptor.java:[lines 51-102]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="handleMessage" signature="(Lorg/apache/cxf/binding/soap/SoapMessage;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="77" end="102" startBytecode="0" endBytecode="74" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java"/>
+      <Message>In method net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.handleMessage(SoapMessage)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/List;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.List</Message>
+    </Type>
+    <Type descriptor="Ljava/util/Vector;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.Vector" start="142" end="1487" sourcefile="Vector.java" sourcepath="java/util/Vector.java">
+        <Message>At Vector.java:[lines 142-1487]</Message>
+      </SourceLine>
+      <Message>Expected java.util.Vector</Message>
+    </Type>
+    <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true" start="82" end="82" startBytecode="56" endBytecode="56" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+      <Message>At WSAuthenticationInInterceptor.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="7a8869c864baf33b0467be4b9457a8b3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.handleMessage(SoapMessage)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="51" end="102" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>At WSAuthenticationInInterceptor.java:[lines 51-102]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="handleMessage" signature="(Lorg/apache/cxf/binding/soap/SoapMessage;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="77" end="102" startBytecode="0" endBytecode="452" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java"/>
+      <Message>In method net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.handleMessage(SoapMessage)</Message>
+    </Method>
+    <String value="0x1 (1)">
+      <Message>Value 0x1 (1)</Message>
+    </String>
+    <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true" start="85" end="85" startBytecode="105" endBytecode="105" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+      <Message>At WSAuthenticationInInterceptor.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="81b895f857d6962016708abbe98645bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.getSSAuth() may expose internal representation by returning WSAuthenticationInInterceptor.SSAuth</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="51" end="102" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>At WSAuthenticationInInterceptor.java:[lines 51-102]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="getSSAuth" signature="()Lnet/gplatform/sudoor/server/security/model/auth/SSAuth;" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="67" end="67" startBytecode="0" endBytecode="46" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java"/>
+      <Message>In method net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.getSSAuth()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="SSAuth" signature="Lnet/gplatform/sudoor/server/security/model/auth/SSAuth;" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>In WSAuthenticationInInterceptor.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.SSAuth</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true" start="67" end="67" startBytecode="4" endBytecode="4" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+      <Message>At WSAuthenticationInInterceptor.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="fe713af892f8a882c5186cd70f5625ba" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.setSSAuth(SSAuth) may expose internal representation by storing an externally mutable object into WSAuthenticationInInterceptor.SSAuth</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="51" end="102" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>At WSAuthenticationInInterceptor.java:[lines 51-102]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="setSSAuth" signature="(Lnet/gplatform/sudoor/server/security/model/auth/SSAuth;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" start="71" end="72" startBytecode="0" endBytecode="61" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java"/>
+      <Message>In method net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.setSSAuth(SSAuth)</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" name="SSAuth" signature="Lnet/gplatform/sudoor/server/security/model/auth/SSAuth;" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+        <Message>In WSAuthenticationInInterceptor.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor.SSAuth</Message>
+    </Field>
+    <LocalVariable name="sSAuth" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named sSAuth</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" primary="true" start="71" end="71" startBytecode="2" endBytecode="2" sourcefile="WSAuthenticationInInterceptor.java" sourcepath="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java">
+      <Message>At WSAuthenticationInInterceptor.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="9adfe4cb8cb333ce1751a9d26753fd2e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper$1" start="58" end="60" sourcefile="MultipleReadRequestWrapper.java" sourcepath="net/gplatform/sudoor/server/security/model/MultipleReadRequestWrapper.java">
+        <Message>At MultipleReadRequestWrapper.java:[lines 58-60]</Message>
+      </SourceLine>
+      <Message>Anonymous class net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper$1</Message>
+    </Class>
+    <Class classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" start="45" end="75" sourcefile="MultipleReadRequestWrapper.java" sourcepath="net/gplatform/sudoor/server/security/model/MultipleReadRequestWrapper.java">
+        <Message>At MultipleReadRequestWrapper.java:[lines 45-75]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" name="getInputStream" signature="()Ljavax/servlet/ServletInputStream;" isStatic="false" primary="true">
+      <SourceLine classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" start="55" end="63" startBytecode="0" endBytecode="101" sourcefile="MultipleReadRequestWrapper.java" sourcepath="net/gplatform/sudoor/server/security/model/MultipleReadRequestWrapper.java"/>
+      <Message>In method net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper.getInputStream()</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" primary="true" start="58" end="58" startBytecode="22" endBytecode="22" sourcefile="MultipleReadRequestWrapper.java" sourcepath="net/gplatform/sudoor/server/security/model/MultipleReadRequestWrapper.java">
+      <Message>At MultipleReadRequestWrapper.java:[line 58]</Message>
+    </SourceLine>
+    <LocalVariable name="inputStream" register="2" pc="26" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named inputStream</Message>
+    </LocalVariable>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="d302c131416a65fd60e5da62439584e8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter.doFilter(ServletRequest, ServletResponse, FilterChain)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" start="42" end="90" sourcefile="CustomizeRequestFilter.java" sourcepath="net/gplatform/sudoor/server/security/model/filter/CustomizeRequestFilter.java">
+        <Message>At CustomizeRequestFilter.java:[lines 42-90]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" name="doFilter" signature="(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" start="64" end="84" startBytecode="0" endBytecode="349" sourcefile="CustomizeRequestFilter.java" sourcepath="net/gplatform/sudoor/server/security/model/filter/CustomizeRequestFilter.java"/>
+      <Message>In method net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter.doFilter(ServletRequest, ServletResponse, FilterChain)</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" primary="true" start="72" end="72" startBytecode="73" endBytecode="73" sourcefile="CustomizeRequestFilter.java" sourcepath="net/gplatform/sudoor/server/security/model/filter/CustomizeRequestFilter.java">
+      <Message>At CustomizeRequestFilter.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="f345b444992e48b25138dfeed659c19d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field net.gplatform.sudoor.server.spring.SpringContextsUtil.applicationContext from instance method net.gplatform.sudoor.server.spring.SpringContextsUtil.setApplicationContext(ApplicationContext)</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" start="41" end="131" sourcefile="SpringContextsUtil.java" sourcepath="net/gplatform/sudoor/server/spring/SpringContextsUtil.java">
+        <Message>At SpringContextsUtil.java:[lines 41-131]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.spring.SpringContextsUtil</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" name="setApplicationContext" signature="(Lorg/springframework/context/ApplicationContext;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" start="57" end="59" startBytecode="0" endBytecode="76" sourcefile="SpringContextsUtil.java" sourcepath="net/gplatform/sudoor/server/spring/SpringContextsUtil.java"/>
+      <Message>In method net.gplatform.sudoor.server.spring.SpringContextsUtil.setApplicationContext(ApplicationContext)</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" name="applicationContext" signature="Lorg/springframework/context/ApplicationContext;" isStatic="true" primary="true" classAnnotationNames="org.springframework.stereotype.Component">
+      <SourceLine classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" sourcefile="SpringContextsUtil.java" sourcepath="net/gplatform/sudoor/server/spring/SpringContextsUtil.java">
+        <Message>In SpringContextsUtil.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.spring.SpringContextsUtil.applicationContext</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.spring.SpringContextsUtil" primary="true" start="58" end="58" startBytecode="13" endBytecode="13" sourcefile="SpringContextsUtil.java" sourcepath="net/gplatform/sudoor/server/spring/SpringContextsUtil.java">
+      <Message>At SpringContextsUtil.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="fbfcf4964c777bd9aa3ba467edc3f9e6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ThymeleafConfig.environment not initialized in constructor and dereferenced in net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig.xmlTemplateResolver()</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration">
+      <SourceLine classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" start="36" end="60" sourcefile="ThymeleafConfig.java" sourcepath="net/gplatform/sudoor/server/thymeleaf/ThymeleafConfig.java">
+        <Message>At ThymeleafConfig.java:[lines 36-60]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig</Message>
+    </Class>
+    <Field classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" name="environment" signature="Lorg/springframework/boot/bind/RelaxedPropertyResolver;" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration">
+      <SourceLine classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" sourcefile="ThymeleafConfig.java" sourcepath="net/gplatform/sudoor/server/thymeleaf/ThymeleafConfig.java">
+        <Message>In ThymeleafConfig.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig.environment</Message>
+    </Field>
+    <Method classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" name="xmlTemplateResolver" signature="()Lorg/thymeleaf/templateresolver/ITemplateResolver;" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration">
+      <SourceLine classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" start="53" end="60" startBytecode="0" endBytecode="174" sourcefile="ThymeleafConfig.java" sourcepath="net/gplatform/sudoor/server/thymeleaf/ThymeleafConfig.java"/>
+      <Message>In method net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig.xmlTemplateResolver()</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" primary="true" start="55" end="55" startBytecode="25" endBytecode="25" sourcefile="ThymeleafConfig.java" sourcepath="net/gplatform/sudoor/server/thymeleaf/ThymeleafConfig.java">
+      <Message>At ThymeleafConfig.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="6ded3ec42ee10cc7ef90612274dab299" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.tools.fileupload.controller.FileResource.getFile(String) invokes inefficient new Long(String) constructor; use Long.valueOf(String) instead</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" primary="true" classAnnotationNames="javax.ws.rs.Path">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" start="53" end="68" sourcefile="FileResource.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/controller/FileResource.java">
+        <Message>At FileResource.java:[lines 53-68]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.tools.fileupload.controller.FileResource</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" name="getFile" signature="(Ljava/lang/String;)Ljavax/ws/rs/core/Response;" isStatic="false" primary="true" classAnnotationNames="javax.ws.rs.Path">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" start="64" end="68" startBytecode="0" endBytecode="130" sourcefile="FileResource.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/controller/FileResource.java"/>
+      <Message>In method net.gplatform.sudoor.server.tools.fileupload.controller.FileResource.getFile(String)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1347" end="1349" startBytecode="0" endBytecode="74" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Called method new Long(String)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Long;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1163" end="1163" startBytecode="0" endBytecode="51" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Should call Long.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" primary="true" start="64" end="64" startBytecode="9" endBytecode="9" sourcefile="FileResource.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/controller/FileResource.java">
+      <Message>At FileResource.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="f09c8d5aa8b75d4906490704d8d9c1f9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.tools.fileupload.model.File.getData() may expose internal representation by returning File.data</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.tools.fileupload.model.File" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" start="40" end="82" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+        <Message>At File.java:[lines 40-82]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.tools.fileupload.model.File</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.tools.fileupload.model.File" name="getData" signature="()[B" isStatic="false" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" start="69" end="69" startBytecode="0" endBytecode="46" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java"/>
+      <Message>In method net.gplatform.sudoor.server.tools.fileupload.model.File.getData()</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.tools.fileupload.model.File" name="data" signature="[B" isStatic="false" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+        <Message>In File.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.tools.fileupload.model.File.data</Message>
+    </Field>
+    <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" primary="true" start="69" end="69" startBytecode="4" endBytecode="4" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+      <Message>At File.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="85285091e734e146b77bf5b16cf513ae" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>net.gplatform.sudoor.server.tools.fileupload.model.File.setData(byte[]) may expose internal representation by storing an externally mutable object into File.data</LongMessage>
+    <Class classname="net.gplatform.sudoor.server.tools.fileupload.model.File" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" start="40" end="82" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+        <Message>At File.java:[lines 40-82]</Message>
+      </SourceLine>
+      <Message>In class net.gplatform.sudoor.server.tools.fileupload.model.File</Message>
+    </Class>
+    <Method classname="net.gplatform.sudoor.server.tools.fileupload.model.File" name="setData" signature="([B)V" isStatic="false" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" start="73" end="74" startBytecode="0" endBytecode="61" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java"/>
+      <Message>In method net.gplatform.sudoor.server.tools.fileupload.model.File.setData(byte[])</Message>
+    </Method>
+    <Field classname="net.gplatform.sudoor.server.tools.fileupload.model.File" name="data" signature="[B" isStatic="false" primary="true" classAnnotationNames="javax.persistence.Entity">
+      <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+        <Message>In File.java</Message>
+      </SourceLine>
+      <Message>Field net.gplatform.sudoor.server.tools.fileupload.model.File.data</Message>
+    </Field>
+    <LocalVariable name="data" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named data</Message>
+    </LocalVariable>
+    <SourceLine classname="net.gplatform.sudoor.server.tools.fileupload.model.File" primary="true" start="73" end="73" startBytecode="2" endBytecode="2" sourcefile="File.java" sourcepath="net/gplatform/sudoor/server/tools/fileupload/model/File.java">
+      <Message>At File.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="SECURITY">
+    <Description>Security</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DB_DUPLICATE_SWITCH_CLAUSES" abbrev="DB" category="STYLE">
+    <ShortDescription>Method uses the same code for two switch clauses</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method uses the same code to implement two clauses of a switch statement.
+    This could be a case of duplicate code, but it might also indicate
+    a coding mistake.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" abbrev="BC" category="STYLE">
+    <ShortDescription>Unchecked/unconfirmed cast of return value from method</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code performs an unchecked cast of the return value of a method.
+The code might be calling the method in such a way that the cast is guaranteed to be
+safe, but SpotBugs is unable to verify that the cast is safe.  Check that your program logic ensures that this
+cast will not fail.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BIT_SIGNED_CHECK" abbrev="BIT" category="BAD_PRACTICE">
+    <ShortDescription>Check for sign of bitwise operation</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method compares an expression such as
+<code>((event.detail &amp; SWT.SELECTED) &gt; 0)</code>.
+Using bit arithmetic and then comparing with the greater than operator can
+lead to unexpected results (of course depending on the value of
+SWT.SELECTED). If SWT.SELECTED is a negative number, this is a candidate
+for a bug. Even when SWT.SELECTED is not negative, it seems good practice
+to use '!= 0' instead of '&gt; 0'.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" abbrev="HRS" category="SECURITY" cweid="113">
+    <ShortDescription>HTTP Response splitting vulnerability</ShortDescription>
+    <Details><![CDATA[
+            
+    <p>This code directly writes an HTTP parameter to an HTTP header, which allows for a HTTP response splitting
+vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
+for more information.</p>
+<p>SpotBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If SpotBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that SpotBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Integer(int)</code> is guaranteed to always result in a new object whereas
+      <code>Integer.valueOf(int)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Values between -128 and 127 are guaranteed to have corresponding cached instances
+      and using <code>valueOf</code> is approximately 3.5 times faster than using constructor.
+      For values outside the constant range the performance of both styles is the same.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of
+      <code>Long</code>, <code>Integer</code>, <code>Short</code>, <code>Character</code>, and <code>Byte</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="HRS" cweid="113">
+    <Description>HTTP Response splitting vulnerability</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="BIT">
+    <Description>Suspicious bitwise logical expression</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="DB">
+    <Description>Duplicate Branches</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="103">
+    <MissingClass>com.google.code.kaptcha.Producer</MissingClass>
+    <MissingClass>javax.mail.MessagingException</MissingClass>
+    <MissingClass>javax.mail.internet.MimeMessage</MissingClass>
+    <MissingClass>javax.persistence.Cache</MissingClass>
+    <MissingClass>javax.persistence.EntityManagerFactory</MissingClass>
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletInputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequestWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.cxf.binding.soap.SoapMessage</MissingClass>
+    <MissingClass>org.apache.cxf.interceptor.Fault</MissingClass>
+    <MissingClass>org.apache.cxf.message.Message</MissingClass>
+    <MissingClass>org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor</MissingClass>
+    <MissingClass>org.apache.juli.logging.Log</MissingClass>
+    <MissingClass>org.apache.juli.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.ODataJPAContext</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.ODataJPAServiceFactory</MissingClass>
+    <MissingClass>org.apache.olingo.odata2.jpa.processor.api.exception.ODataJPARuntimeException</MissingClass>
+    <MissingClass>org.apache.wss4j.common.ext.WSPasswordCallback</MissingClass>
+    <MissingClass>org.apache.wss4j.common.principal.WSUsernameTokenPrincipalImpl</MissingClass>
+    <MissingClass>org.apache.wss4j.dom.WSSecurityEngineResult</MissingClass>
+    <MissingClass>org.apache.wss4j.dom.handler.WSHandlerResult</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.BeansException</MissingClass>
+    <MissingClass>org.springframework.beans.factory.NoSuchBeanDefinitionException</MissingClass>
+    <MissingClass>org.springframework.boot.SpringApplication</MissingClass>
+    <MissingClass>org.springframework.boot.bind.RelaxedPropertyResolver</MissingClass>
+    <MissingClass>org.springframework.boot.builder.SpringApplicationBuilder</MissingClass>
+    <MissingClass>org.springframework.boot.context.web.SpringBootServletInitializer</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.context.ConfigurableApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.EnvironmentAware</MissingClass>
+    <MissingClass>org.springframework.core.env.Environment</MissingClass>
+    <MissingClass>org.springframework.core.env.PropertyResolver</MissingClass>
+    <MissingClass>org.springframework.data.jpa.repository.JpaRepository</MissingClass>
+    <MissingClass>org.springframework.expression.EvaluationContext</MissingClass>
+    <MissingClass>org.springframework.expression.Expression</MissingClass>
+    <MissingClass>org.springframework.expression.ExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.standard.SpelExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.support.StandardEvaluationContext</MissingClass>
+    <MissingClass>org.springframework.http.HttpMethod</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.JavaMailSender</MissingClass>
+    <MissingClass>org.springframework.mail.javamail.MimeMessageHelper</MissingClass>
+    <MissingClass>org.springframework.security.access.PermissionEvaluator</MissingClass>
+    <MissingClass>org.springframework.security.authentication.AuthenticationManager</MissingClass>
+    <MissingClass>org.springframework.security.authentication.UsernamePasswordAuthenticationToken</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.SecurityBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.GlobalAuthenticationConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.authentication.configurers.provisioning.JdbcUserDetailsManagerConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.WebSecurityConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.HttpSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.builders.WebSecurity$IgnoredRequestConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$AuthorizedUrl</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.LogoutConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.config.annotation.web.configurers.RememberMeConfigurer</MissingClass>
+    <MissingClass>org.springframework.security.core.Authentication</MissingClass>
+    <MissingClass>org.springframework.security.core.AuthenticationException</MissingClass>
+    <MissingClass>org.springframework.security.core.GrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.authority.SimpleGrantedAuthority</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContext</MissingClass>
+    <MissingClass>org.springframework.security.core.context.SecurityContextHolder</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.User</MissingClass>
+    <MissingClass>org.springframework.security.core.userdetails.UserDetails</MissingClass>
+    <MissingClass>org.springframework.security.provisioning.UserDetailsManager</MissingClass>
+    <MissingClass>org.springframework.security.web.AuthenticationEntryPoint</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.AuthenticationFailureHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.authentication.logout.LogoutSuccessHandler</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.HttpSessionRequestCache</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.RequestCache</MissingClass>
+    <MissingClass>org.springframework.security.web.savedrequest.SavedRequest</MissingClass>
+    <MissingClass>org.springframework.social.RateLimitExceededException</MissingClass>
+    <MissingClass>org.springframework.social.connect.Connection</MissingClass>
+    <MissingClass>org.springframework.social.connect.web.SignInAdapter</MissingClass>
+    <MissingClass>org.springframework.ui.Model</MissingClass>
+    <MissingClass>org.springframework.web.context.request.NativeWebRequest</MissingClass>
+    <MissingClass>org.thymeleaf.resourceresolver.IResourceResolver</MissingClass>
+    <MissingClass>org.thymeleaf.templateresolver.TemplateResolver</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:54:14 +0900" total_classes="43" referenced_classes="174" total_bugs="31" total_size="1039" num_packages="26" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.52" clock_seconds="1.84" peak_mbytes="239.09" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="14" priority_2="16" priority_1="1">
+    <FileStats path="net/gplatform/sudoor/server/Application.java" bugCount="0" size="8"/>
+    <FileStats path="net/gplatform/sudoor/server/captcha/controller/CaptchaImageCreateController.java" bugCount="0" size="23"/>
+    <FileStats path="net/gplatform/sudoor/server/captcha/model/CaptchaValidator.java" bugCount="0" size="9"/>
+    <FileStats path="net/gplatform/sudoor/server/cors/CorsFilter.java" bugCount="19" size="345" bugHash="f384e3da619152073c0bfe6ba9be38f2"/>
+    <FileStats path="net/gplatform/sudoor/server/cors/StringManager.java" bugCount="0" size="79"/>
+    <FileStats path="net/gplatform/sudoor/server/cxf/ClientPasswordCallback.java" bugCount="0" size="13"/>
+    <FileStats path="net/gplatform/sudoor/server/cxf/ServerPasswordCallback.java" bugCount="1" size="14" bugHash="8005c90cd6875dfb2b7e8a35d789433d"/>
+    <FileStats path="net/gplatform/sudoor/server/cxf/WSAuthenticationInInterceptor.java" bugCount="4" size="36" bugHash="344d87fe0a8771d337c2a8848758bdbc"/>
+    <FileStats path="net/gplatform/sudoor/server/jaxrs/PATCH.java" bugCount="0" size="1"/>
+    <FileStats path="net/gplatform/sudoor/server/jaxrs/cache/CacheControlDecorator.java" bugCount="0" size="12"/>
+    <FileStats path="net/gplatform/sudoor/server/jaxrs/cache/Cacheable.java" bugCount="0" size="2"/>
+    <FileStats path="net/gplatform/sudoor/server/jpa/controller/JPAManagerServlet.java" bugCount="0" size="16"/>
+    <FileStats path="net/gplatform/sudoor/server/jpa/model/Constants.java" bugCount="0" size="5"/>
+    <FileStats path="net/gplatform/sudoor/server/mail/MailClient.java" bugCount="0" size="17"/>
+    <FileStats path="net/gplatform/sudoor/server/olingo/JPAServiceFactory.java" bugCount="0" size="9"/>
+    <FileStats path="net/gplatform/sudoor/server/security/controller/AuthService.java" bugCount="0" size="3"/>
+    <FileStats path="net/gplatform/sudoor/server/security/controller/AuthServiceImpl.java" bugCount="0" size="10"/>
+    <FileStats path="net/gplatform/sudoor/server/security/controller/SpringSecurityResource.java" bugCount="0" size="6"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/DefaultPermissionEvaluator.java" bugCount="0" size="59"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/MultipleReadRequestWrapper.java" bugCount="1" size="27" bugHash="cd04c6d3c0c84efd8c197c06c1a12998"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/ResponseCodeHandler.java" bugCount="0" size="28"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/SSChecker.java" bugCount="0" size="8"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/auth/SSAuth.java" bugCount="0" size="82"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/config/SecurityConfig.java" bugCount="0" size="30"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/entity/CredentialAuthority.java" bugCount="0" size="21"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/entity/CredentialUser.java" bugCount="0" size="21"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/filter/CustomizeRequestFilter.java" bugCount="1" size="33" bugHash="bb930c5a11e9e4a1c659f9e97ae58e23"/>
+    <FileStats path="net/gplatform/sudoor/server/security/model/repository/CredentialUserRepository.java" bugCount="0" size="1"/>
+    <FileStats path="net/gplatform/sudoor/server/social/config/SocialConfig.java" bugCount="0" size="7"/>
+    <FileStats path="net/gplatform/sudoor/server/social/controller/ExceptionHandlingControllerAdvice.java" bugCount="0" size="6"/>
+    <FileStats path="net/gplatform/sudoor/server/social/model/SimpleSignInAdapter.java" bugCount="0" size="24"/>
+    <FileStats path="net/gplatform/sudoor/server/spring/SpringContextsUtil.java" bugCount="1" size="26" bugHash="95eecdd18aeb873d3603df8a6b8a3b5b"/>
+    <FileStats path="net/gplatform/sudoor/server/thymeleaf/ThymeleafConfig.java" bugCount="1" size="19" bugHash="f1d7299b901bd3f88e4c96746938100a"/>
+    <FileStats path="net/gplatform/sudoor/server/tools/fileupload/controller/FileResource.java" bugCount="1" size="11" bugHash="fa87f3972c57bf31b62eaf9b73ef2e2c"/>
+    <FileStats path="net/gplatform/sudoor/server/tools/fileupload/model/File.java" bugCount="2" size="27" bugHash="2d5769927f34e2bb372bd9b26d8ad19d"/>
+    <FileStats path="net/gplatform/sudoor/server/tools/fileupload/model/repository/FileRepository.java" bugCount="0" size="1"/>
+    <PackageStats package="net.gplatform.sudoor.server" total_bugs="0" total_types="1" total_size="8">
+      <ClassStats class="net.gplatform.sudoor.server.Application" sourceFile="Application.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.captcha.controller" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="net.gplatform.sudoor.server.captcha.controller.CaptchaImageCreateController" sourceFile="CaptchaImageCreateController.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.captcha.model" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="net.gplatform.sudoor.server.captcha.model.CaptchaValidator" sourceFile="CaptchaValidator.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.cors" total_bugs="19" total_types="5" total_size="424" priority_3="9" priority_2="10">
+      <ClassStats class="net.gplatform.sudoor.server.cors.CorsFilter" sourceFile="CorsFilter.java" interface="false" size="324" bugs="19" priority_3="9" priority_2="10"/>
+      <ClassStats class="net.gplatform.sudoor.server.cors.CorsFilter$1" sourceFile="CorsFilter.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.cors.CorsFilter$CORSRequestType" sourceFile="CorsFilter.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.cors.StringManager" sourceFile="StringManager.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.cors.StringManager$1" sourceFile="StringManager.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.cxf" total_bugs="5" total_types="3" total_size="63" priority_3="2" priority_2="3">
+      <ClassStats class="net.gplatform.sudoor.server.cxf.ClientPasswordCallback" sourceFile="ClientPasswordCallback.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.cxf.ServerPasswordCallback" sourceFile="ServerPasswordCallback.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="net.gplatform.sudoor.server.cxf.WSAuthenticationInInterceptor" sourceFile="WSAuthenticationInInterceptor.java" interface="false" size="36" bugs="4" priority_3="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.jaxrs" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.gplatform.sudoor.server.jaxrs.PATCH" sourceFile="PATCH.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.jaxrs.cache" total_bugs="0" total_types="2" total_size="14">
+      <ClassStats class="net.gplatform.sudoor.server.jaxrs.cache.CacheControlDecorator" sourceFile="CacheControlDecorator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.jaxrs.cache.Cacheable" sourceFile="Cacheable.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.jpa.controller" total_bugs="0" total_types="1" total_size="16">
+      <ClassStats class="net.gplatform.sudoor.server.jpa.controller.JPAManagerServlet" sourceFile="JPAManagerServlet.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.jpa.model" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="net.gplatform.sudoor.server.jpa.model.Constants" sourceFile="Constants.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.mail" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="net.gplatform.sudoor.server.mail.MailClient" sourceFile="MailClient.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.olingo" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="net.gplatform.sudoor.server.olingo.JPAServiceFactory" sourceFile="JPAServiceFactory.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.controller" total_bugs="0" total_types="3" total_size="19">
+      <ClassStats class="net.gplatform.sudoor.server.security.controller.AuthService" sourceFile="AuthService.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.controller.AuthServiceImpl" sourceFile="AuthServiceImpl.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.controller.SpringSecurityResource" sourceFile="SpringSecurityResource.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model" total_bugs="1" total_types="5" total_size="122" priority_3="1">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.DefaultPermissionEvaluator" sourceFile="DefaultPermissionEvaluator.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper" sourceFile="MultipleReadRequestWrapper.java" interface="false" size="20" bugs="1" priority_3="1"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.MultipleReadRequestWrapper$1" sourceFile="MultipleReadRequestWrapper.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.ResponseCodeHandler" sourceFile="ResponseCodeHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.SSChecker" sourceFile="SSChecker.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model.auth" total_bugs="0" total_types="1" total_size="82">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.auth.SSAuth" sourceFile="SSAuth.java" interface="false" size="82" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model.config" total_bugs="0" total_types="4" total_size="30">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.config.SecurityConfig" sourceFile="SecurityConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.config.SecurityConfig$AuthenticationSecurity" sourceFile="SecurityConfig.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.config.SecurityConfig$CommonWebSecurityConfigurationAdapter" sourceFile="SecurityConfig.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.config.SecurityConfig$IgnoredPathsWebSecurityConfigurerAdapter" sourceFile="SecurityConfig.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model.entity" total_bugs="0" total_types="2" total_size="42">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.entity.CredentialAuthority" sourceFile="CredentialAuthority.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.gplatform.sudoor.server.security.model.entity.CredentialUser" sourceFile="CredentialUser.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model.filter" total_bugs="1" total_types="1" total_size="33" priority_3="1">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.filter.CustomizeRequestFilter" sourceFile="CustomizeRequestFilter.java" interface="false" size="33" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.security.model.repository" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.gplatform.sudoor.server.security.model.repository.CredentialUserRepository" sourceFile="CredentialUserRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.social.config" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="net.gplatform.sudoor.server.social.config.SocialConfig" sourceFile="SocialConfig.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.social.controller" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="net.gplatform.sudoor.server.social.controller.ExceptionHandlingControllerAdvice" sourceFile="ExceptionHandlingControllerAdvice.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.social.model" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="net.gplatform.sudoor.server.social.model.SimpleSignInAdapter" sourceFile="SimpleSignInAdapter.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.spring" total_bugs="1" total_types="1" total_size="26" priority_1="1">
+      <ClassStats class="net.gplatform.sudoor.server.spring.SpringContextsUtil" sourceFile="SpringContextsUtil.java" interface="false" size="26" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.thymeleaf" total_bugs="1" total_types="1" total_size="19" priority_3="1">
+      <ClassStats class="net.gplatform.sudoor.server.thymeleaf.ThymeleafConfig" sourceFile="ThymeleafConfig.java" interface="false" size="19" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.tools.fileupload.controller" total_bugs="1" total_types="1" total_size="11" priority_2="1">
+      <ClassStats class="net.gplatform.sudoor.server.tools.fileupload.controller.FileResource" sourceFile="FileResource.java" interface="false" size="11" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.tools.fileupload.model" total_bugs="2" total_types="1" total_size="27" priority_2="2">
+      <ClassStats class="net.gplatform.sudoor.server.tools.fileupload.model.File" sourceFile="File.java" interface="false" size="27" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="net.gplatform.sudoor.server.tools.fileupload.model.repository" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="net.gplatform.sudoor.server.tools.fileupload.model.repository.FileRepository" sourceFile="FileRepository.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="231" invocations="1024" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="20236" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="97" invocations="174" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="8155" standardDeviationMicrosecondsPerInvocation="1237"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="74" invocations="561" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="1832" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="73" invocations="174" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="5257" standardDeviationMicrosecondsPerInvocation="836"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="47" invocations="174" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="3332" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="44" invocations="174" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="8238" standardDeviationMicrosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="44" invocations="174" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="9695" standardDeviationMicrosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="40" invocations="170" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="2699" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="39" invocations="174" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="7227" standardDeviationMicrosecondsPerInvocation="652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="1036" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1719" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="34" invocations="174" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="3600" standardDeviationMicrosecondsPerInvocation="404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="33" invocations="174" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="11283" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="31" invocations="174" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="3144" standardDeviationMicrosecondsPerInvocation="397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="303" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="11276" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="27" invocations="174" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="16889" standardDeviationMicrosecondsPerInvocation="1277"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="26" invocations="177" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="14267" standardDeviationMicrosecondsPerInvocation="1070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="131" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="2144" standardDeviationMicrosecondsPerInvocation="309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="836" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="724" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="21" invocations="174" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="9686" standardDeviationMicrosecondsPerInvocation="755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="174" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="1474" standardDeviationMicrosecondsPerInvocation="189"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="174" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="1684" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="19" invocations="174" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="4556" standardDeviationMicrosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="174" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="1414" standardDeviationMicrosecondsPerInvocation="227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="15" invocations="174" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="2938" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="13" invocations="43" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="7544" standardDeviationMicrosecondsPerInvocation="1156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="12" invocations="43" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="1437" standardDeviationMicrosecondsPerInvocation="338"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="2192" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="835" standardDeviationMicrosecondsPerInvocation="26"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

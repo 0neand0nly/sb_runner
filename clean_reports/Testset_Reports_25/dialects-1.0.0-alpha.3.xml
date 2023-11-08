@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699429371761" analysisTimestamp="1699430382125" release="">
+  <Project projectName="">
+    <Jar>cleans\dialects-1.0.0-alpha.3.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="9">
+    <MissingClass>org.hibernate.dialect.Dialect</MissingClass>
+    <MissingClass>org.hibernate.internal.util.StringHelper</MissingClass>
+    <MissingClass>org.hibernate.mapping.Column</MissingClass>
+    <MissingClass>org.hibernate.mapping.Index</MissingClass>
+    <MissingClass>org.hibernate.mapping.Table</MissingClass>
+    <MissingClass>org.hibernate.spatial.dialect.h2geodb.GeoDBDialect</MissingClass>
+    <MissingClass>org.hibernate.spatial.dialect.oracle.OracleSpatial10gDialect</MissingClass>
+    <MissingClass>org.hibernate.spatial.dialect.postgis.PostgisPG95Dialect</MissingClass>
+    <MissingClass>org.hibernate.spatial.dialect.sqlserver.SqlServer2008SpatialDialect</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 16:42:51 +0900" total_classes="4" referenced_classes="11" total_bugs="0" total_size="43" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.98" clock_seconds="1.49" peak_mbytes="184.49" alloc_mbytes="3984.00" gc_seconds="0.00">
+    <FileStats path="org/n52/hibernate/spatial/dialect/h2geodb/TimestampWithTimeZoneGeoDBDialect.java" bugCount="0" size="6"/>
+    <FileStats path="org/n52/hibernate/spatial/dialect/oracle/TimestampWithTimeZoneOracleSpatial10gDialect.java" bugCount="0" size="7"/>
+    <FileStats path="org/n52/hibernate/spatial/dialect/postgis/TimestampWithTimeZonePostgisPG95Dialect.java" bugCount="0" size="24"/>
+    <FileStats path="org/n52/hibernate/spatial/dialect/sqlserver/TimestampWithTimeZoneSqlServer2008SpatialDialect.java" bugCount="0" size="6"/>
+    <PackageStats package="org.n52.hibernate.spatial.dialect.h2geodb" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.n52.hibernate.spatial.dialect.h2geodb.TimestampWithTimeZoneGeoDBDialect" sourceFile="TimestampWithTimeZoneGeoDBDialect.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.n52.hibernate.spatial.dialect.oracle" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="org.n52.hibernate.spatial.dialect.oracle.TimestampWithTimeZoneOracleSpatial10gDialect" sourceFile="TimestampWithTimeZoneOracleSpatial10gDialect.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.n52.hibernate.spatial.dialect.postgis" total_bugs="0" total_types="1" total_size="24">
+      <ClassStats class="org.n52.hibernate.spatial.dialect.postgis.TimestampWithTimeZonePostgisPG95Dialect" sourceFile="TimestampWithTimeZonePostgisPG95Dialect.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.n52.hibernate.spatial.dialect.sqlserver" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.n52.hibernate.spatial.dialect.sqlserver.TimestampWithTimeZoneSqlServer2008SpatialDialect" sourceFile="TimestampWithTimeZoneSqlServer2008SpatialDialect.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="224" invocations="316" avgMicrosecondsPerInvocation="711" maxMicrosecondsPerInvocation="57487" standardDeviationMicrosecondsPerInvocation="3389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="64" invocations="34" avgMicrosecondsPerInvocation="1905" maxMicrosecondsPerInvocation="52578" standardDeviationMicrosecondsPerInvocation="8883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="48" invocations="11" avgMicrosecondsPerInvocation="4395" maxMicrosecondsPerInvocation="24612" standardDeviationMicrosecondsPerInvocation="7629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="11" avgMicrosecondsPerInvocation="3341" maxMicrosecondsPerInvocation="28096" standardDeviationMicrosecondsPerInvocation="7935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="5" avgMicrosecondsPerInvocation="7328" maxMicrosecondsPerInvocation="33294" standardDeviationMicrosecondsPerInvocation="13036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="321" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="2936" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="51" avgMicrosecondsPerInvocation="687" maxMicrosecondsPerInvocation="4009" standardDeviationMicrosecondsPerInvocation="761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="11" avgMicrosecondsPerInvocation="2545" maxMicrosecondsPerInvocation="18986" standardDeviationMicrosecondsPerInvocation="5350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="20" invocations="5" avgMicrosecondsPerInvocation="4159" maxMicrosecondsPerInvocation="10276" standardDeviationMicrosecondsPerInvocation="4908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="278" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="1420" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="17" invocations="11" avgMicrosecondsPerInvocation="1596" maxMicrosecondsPerInvocation="9422" standardDeviationMicrosecondsPerInvocation="2623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="17" invocations="5" avgMicrosecondsPerInvocation="3450" maxMicrosecondsPerInvocation="10426" standardDeviationMicrosecondsPerInvocation="4098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="11" avgMicrosecondsPerInvocation="1501" maxMicrosecondsPerInvocation="10087" standardDeviationMicrosecondsPerInvocation="2938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="16" invocations="4" avgMicrosecondsPerInvocation="4108" maxMicrosecondsPerInvocation="16008" standardDeviationMicrosecondsPerInvocation="6871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="5" avgMicrosecondsPerInvocation="2780" maxMicrosecondsPerInvocation="7978" standardDeviationMicrosecondsPerInvocation="3301"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

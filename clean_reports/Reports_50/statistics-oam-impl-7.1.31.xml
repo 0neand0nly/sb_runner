@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699448059233" analysisTimestamp="1699448138617" release="">
+  <Project projectName="">
+    <Jar>./clean50/temp\\statistics-oam-impl-7.1.31.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1c19223a18f17255ebc06f207cff2e82" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.getStartTime() may expose internal representation by returning CounterCampaignImpl.startTime</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" start="41" end="136" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+        <Message>At CounterCampaignImpl.java:[lines 41-136]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" name="getStartTime" signature="()Ljava/util/Date;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" start="110" end="110" startBytecode="0" endBytecode="46" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.getStartTime()</Message>
+    </Method>
+    <Field classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" name="startTime" signature="Ljava/util/Date;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+        <Message>In CounterCampaignImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.startTime</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" primary="true" start="110" end="110" startBytecode="4" endBytecode="4" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+      <Message>At CounterCampaignImpl.java:[line 110]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="e4634223b0e126b107eb6ebc99f8959c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.setStartTime(Date) may expose internal representation by storing an externally mutable object into CounterCampaignImpl.startTime</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" start="41" end="136" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+        <Message>At CounterCampaignImpl.java:[lines 41-136]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" name="setStartTime" signature="(Ljava/util/Date;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" start="114" end="115" startBytecode="0" endBytecode="61" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.setStartTime(Date)</Message>
+    </Method>
+    <Field classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" name="startTime" signature="Ljava/util/Date;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+        <Message>In CounterCampaignImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl.startTime</Message>
+    </Field>
+    <LocalVariable name="startTime" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named startTime</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" primary="true" start="114" end="114" startBytecode="2" endBytecode="2" sourcefile="CounterCampaignImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java">
+      <Message>At CounterCampaignImpl.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DB_DUPLICATE_SWITCH_CLAUSES" priority="3" rank="20" abbrev="DB" category="STYLE" instanceHash="2dee8bb3f78597c7b3ef37860a3594b5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method uses the same code for two switch clauses</ShortMessage>
+    <LongMessage>org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date) uses the same code for two switch clauses</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="processCampaign" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl;Ljava/util/Date;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="318" end="433" startBytecode="0" endBytecode="1804" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="395" end="396" startBytecode="746" endBytecode="773" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[lines 395-396]</Message>
+    </SourceLine>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="398" end="399" startBytecode="774" endBytecode="801" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[lines 398-399]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" priority="2" rank="17" abbrev="ICAST" category="STYLE" instanceHash="f61f7eaab895f924bf73cd4dc21ca80" instanceOccurrenceNum="0" instanceOccurrenceMax="1" cweid="192">
+    <ShortMessage>Result of integer multiplication cast to long</ShortMessage>
+    <LongMessage>Result of integer multiplication cast to long in org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date)</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="processCampaign" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl;Ljava/util/Date;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="318" end="433" startBytecode="0" endBytecode="1804" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="357" end="357" startBytecode="316" endBytecode="316" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[line 357]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" priority="3" rank="20" abbrev="ICAST" category="STYLE" instanceHash="f61f7eaab895f924bf73cd4dc21ca80" instanceOccurrenceNum="1" instanceOccurrenceMax="1" cweid="192">
+    <ShortMessage>Result of integer multiplication cast to long</ShortMessage>
+    <LongMessage>Result of integer multiplication cast to long in org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date)</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="processCampaign" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl;Ljava/util/Date;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="318" end="433" startBytecode="0" endBytecode="1804" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.processCampaign(CounterCampaignImpl, Date)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="353" end="353" startBytecode="272" endBytecode="272" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[line 353]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="aacf4e27ca591cedd0519e67a15ac930" instanceOccurrenceNum="0" instanceOccurrenceMax="2">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="load" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="462" end="478" startBytecode="0" endBytecode="325" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="Failed to load the CounterProvider configuration file. \n%s" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;Failed to load the CounterProvider configuration file. \n%s&quot;</Message>
+    </String>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="472" end="472" startBytecode="89" endBytecode="89" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[line 472]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="aacf4e27ca591cedd0519e67a15ac930" instanceOccurrenceNum="1" instanceOccurrenceMax="2">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="load" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="462" end="478" startBytecode="0" endBytecode="325" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="Failed to load the CounterProvider configuration file. \n%s" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;Failed to load the CounterProvider configuration file. \n%s&quot;</Message>
+    </String>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="474" end="474" startBytecode="116" endBytecode="116" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[line 474]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="aacf4e27ca591cedd0519e67a15ac930" instanceOccurrenceNum="2" instanceOccurrenceMax="2">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="59" end="478" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+        <Message>At CounterProviderManagement.java:[lines 59-478]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" name="load" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" start="462" end="478" startBytecode="0" endBytecode="325" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement.load()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="Failed to load the CounterProvider configuration file. \n%s" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;Failed to load the CounterProvider configuration file. \n%s&quot;</Message>
+    </String>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" primary="true" start="476" end="476" startBytecode="143" endBytecode="143" sourcefile="CounterProviderManagement.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java">
+      <Message>At CounterProviderManagement.java:[line 476]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" priority="3" rank="19" abbrev="PA" category="BAD_PRACTICE" instanceHash="6a146704f54ca00320ad9bc20e751d04" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Mutable object-type field is public</ShortMessage>
+    <LongMessage>Mutable object-type field org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl.counterValues is public, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" start="42" end="79" sourcefile="CounterValueSetImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterValueSetImpl.java">
+        <Message>At CounterValueSetImpl.java:[lines 42-79]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl</Message>
+    </Class>
+    <Field classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" name="counterValues" signature="Ljava/util/ArrayList;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" sourcefile="CounterValueSetImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterValueSetImpl.java">
+        <Message>In CounterValueSetImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl.counterValues</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" primary="true" start="42" end="42" startBytecode="12" endBytecode="12" sourcefile="CounterValueSetImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/CounterValueSetImpl.java">
+      <Message>At CounterValueSetImpl.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3bcfaa5bff3ad5c10cbca746d33494ad" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.getComplexValue() may expose internal representation by returning SourceValueObjectImpl.complexValue</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" start="43" end="87" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+        <Message>At SourceValueObjectImpl.java:[lines 43-87]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" name="getComplexValue" signature="()[Lorg/mobicents/protocols/ss7/oam/common/statistics/api/ComplexValue;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" start="82" end="82" startBytecode="0" endBytecode="46" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.getComplexValue()</Message>
+    </Method>
+    <Field classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" name="complexValue" signature="[Lorg/mobicents/protocols/ss7/oam/common/statistics/api/ComplexValue;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+        <Message>In SourceValueObjectImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.complexValue</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" primary="true" start="82" end="82" startBytecode="4" endBytecode="4" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+      <Message>At SourceValueObjectImpl.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="65ab3ccd525d697c494a55fdd98d9b8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.setComplexValue(ComplexValue[]) may expose internal representation by storing an externally mutable object into SourceValueObjectImpl.complexValue</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" start="43" end="87" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+        <Message>At SourceValueObjectImpl.java:[lines 43-87]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" name="setComplexValue" signature="([Lorg/mobicents/protocols/ss7/oam/common/statistics/api/ComplexValue;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" start="57" end="58" startBytecode="0" endBytecode="61" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.setComplexValue(ComplexValue[])</Message>
+    </Method>
+    <Field classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" name="complexValue" signature="[Lorg/mobicents/protocols/ss7/oam/common/statistics/api/ComplexValue;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+        <Message>In SourceValueObjectImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl.complexValue</Message>
+    </Field>
+    <LocalVariable name="val" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named val</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" primary="true" start="57" end="57" startBytecode="2" endBytecode="2" sourcefile="SourceValueObjectImpl.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java">
+      <Message>At SourceValueObjectImpl.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="891aa97f3cda25abc392257d0033676f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to counterDefSet in org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign)</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="38" end="130" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+        <Message>At StatsPrinter.java:[lines 38-130]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" name="printStats" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/api/CounterCampaign;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="64" end="130" startBytecode="0" endBytecode="201" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign)</Message>
+    </Method>
+    <LocalVariable name="counterDefSet" register="6" pc="48" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named counterDefSet</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true" start="71" end="71" startBytecode="46" endBytecode="46" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+      <Message>At StatsPrinter.java:[line 71]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="counterDefSet"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="12f28a477ebf38e9211a6f8c5c3950a5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to isShortCampaign in org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign)</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="38" end="130" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+        <Message>At StatsPrinter.java:[lines 38-130]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" name="printStats" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/api/CounterCampaign;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="64" end="130" startBytecode="0" endBytecode="201" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign)</Message>
+    </Method>
+    <LocalVariable name="isShortCampaign" register="5" pc="40" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named isShortCampaign</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true" start="69" end="69" startBytecode="38" endBytecode="38" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+      <Message>At StatsPrinter.java:[line 69]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="isShortCampaign"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="b75ba3656fe62c56d8d490b13327a21b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign) where default case is missing</LongMessage>
+    <Class classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="38" end="130" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+        <Message>At StatsPrinter.java:[lines 38-130]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter</Message>
+    </Class>
+    <Method classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" name="printStats" signature="(Lorg/mobicents/protocols/ss7/oam/common/statistics/api/CounterCampaign;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" start="64" end="130" startBytecode="0" endBytecode="893" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java"/>
+      <Message>In method org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter.printStats(CounterCampaign)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" primary="true" start="97" end="119" startBytecode="286" endBytecode="480" sourcefile="StatsPrinter.java" sourcepath="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java">
+      <Message>At StatsPrinter.java:[lines 97-119]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="VA_FORMAT_STRING_USES_NEWLINE" abbrev="FS" category="BAD_PRACTICE">
+    <ShortDescription>Format string should use %n rather than \n</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This format string includes a newline character (\n). In format strings, it is generally
+ preferable to use %n, which will produce the platform-specific line separator.
+</p>
+
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Mutable object-type field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility of fields must be limited.
+    Making a mutable object-type field final does not prevent other classes from modifying the
+    contents of the object. However, in general, requiring that no fields are allowed to be public
+    is overkill and unrealistic. There may be usages for public fields: some public fields may
+    serve as "flags" that affect the behavior of the class. Such flag fields are expected to be
+    read by the current instance (or the current class, in case of static fields), but written by
+    others. If a field is both written by the methods of the current instance (or the current
+    class, in case of static fields) and from the outside, the code is suspicious. Consider making
+    these fields private and provide appropriate setters, if necessary. Please note that
+    constructors, initializers and finalizers are exceptions, if only they write the field inside
+    the class, the field is not considered as written by the class itself. In case of object-type
+    fields "writing" means calling methods whose name suggest modification.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DB_DUPLICATE_SWITCH_CLAUSES" abbrev="DB" category="STYLE">
+    <ShortDescription>Method uses the same code for two switch clauses</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method uses the same code to implement two clauses of a switch statement.
+    This could be a case of duplicate code, but it might also indicate
+    a coding mistake.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="ICAST_INTEGER_MULTIPLY_CAST_TO_LONG" abbrev="ICAST" category="STYLE">
+    <ShortDescription>Result of integer multiplication cast to long</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code performs integer multiply and then converts the result to a long,
+as in:</p>
+<pre><code>long convertDaysToMilliseconds(int days) { return 1000*3600*24*days; }
+</code></pre>
+<p>
+If the multiplication is done using long arithmetic, you can avoid
+the possibility that the result will overflow. For example, you
+could fix the above code to:</p>
+<pre><code>long convertDaysToMilliseconds(int days) { return 1000L*3600*24*days; }
+</code></pre>
+<p>
+or
+</p>
+<pre><code>static final long MILLISECONDS_PER_DAY = 24L*3600*1000;
+long convertDaysToMilliseconds(int days) { return days * MILLISECONDS_PER_DAY; }
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="ICAST" cweid="192">
+    <Description>Casting from integer values</Description>
+  </BugCode>
+  <BugCode abbrev="FS">
+    <Description>Format string problem</Description>
+  </BugCode>
+  <BugCode abbrev="DB">
+    <Description>Duplicate Branches</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>javolution.text.TextBuilder</MissingClass>
+    <MissingClass>javolution.util.FastMap</MissingClass>
+    <MissingClass>javolution.xml.XMLBinding</MissingClass>
+    <MissingClass>javolution.xml.XMLFormat</MissingClass>
+    <MissingClass>javolution.xml.XMLFormat$InputElement</MissingClass>
+    <MissingClass>javolution.xml.XMLFormat$OutputElement</MissingClass>
+    <MissingClass>javolution.xml.XMLObjectReader</MissingClass>
+    <MissingClass>javolution.xml.XMLObjectWriter</MissingClass>
+    <MissingClass>javolution.xml.stream.XMLStreamException</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.jmx.MBeanHost</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.jmx.MBeanLayer</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.jmx.MBeanType</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.ComplexValue</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterCampaign</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterDef</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterDefSet</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterMediator</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterProvider</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterType</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterValue</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.CounterValueSet</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.SourceValueCounter</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.SourceValueObject</MissingClass>
+    <MissingClass>org.mobicents.protocols.ss7.oam.common.statistics.api.SourceValueSet</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:54:19 +0900" total_classes="19" referenced_classes="67" total_bugs="14" total_size="707" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.14" clock_seconds="1.66" peak_mbytes="240.26" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="3" priority_2="11">
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/ComplexValueImpl.java" bugCount="0" size="12"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignImpl.java" bugCount="2" size="84" bugHash="cc89d1d1f372e0340e3338c16214b3d6"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterCampaignMap.java" bugCount="0" size="3"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterDefImpl.java" bugCount="0" size="18"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterDefSetImpl.java" bugCount="0" size="17"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterLayer.java" bugCount="0" size="20"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagement.java" bugCount="6" size="357" bugHash="d0a341a8985e0b57ddd218953adc3059"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterProviderManagementMBean.java" bugCount="0" size="1"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterValueImpl.java" bugCount="0" size="31"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/CounterValueSetImpl.java" bugCount="1" size="29" bugHash="e8f6af285f84325267f217a51f74e9d8"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueCounterImpl.java" bugCount="0" size="17"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueObjectImpl.java" bugCount="2" size="32" bugHash="729248a3224a630ec36a5948b5689b59"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/SourceValueSetImpl.java" bugCount="0" size="17"/>
+    <FileStats path="org/mobicents/protocols/ss7/oam/common/statistics/StatsPrinter.java" bugCount="3" size="69" bugHash="6e7773b037202c113027cf3c4ad4851d"/>
+    <PackageStats package="org.mobicents.protocols.ss7.oam.common.statistics" total_bugs="14" total_types="19" total_size="707" priority_3="3" priority_2="11">
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.ComplexValueImpl" sourceFile="ComplexValueImpl.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl" sourceFile="CounterCampaignImpl.java" interface="false" size="67" bugs="2" priority_2="2"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignImpl$1" sourceFile="CounterCampaignImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterCampaignMap" sourceFile="CounterCampaignMap.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterDefImpl" sourceFile="CounterDefImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterDefSetImpl" sourceFile="CounterDefSetImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterLayer" sourceFile="CounterLayer.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement" sourceFile="CounterProviderManagement.java" interface="false" size="287" bugs="6" priority_3="2" priority_2="4"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement$1" sourceFile="CounterProviderManagement.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement$CounterManagementType" sourceFile="CounterProviderManagement.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagement$CouterProcessingClass" sourceFile="CounterProviderManagement.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterProviderManagementMBean" sourceFile="CounterProviderManagementMBean.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueImpl" sourceFile="CounterValueImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.CounterValueSetImpl" sourceFile="CounterValueSetImpl.java" interface="false" size="29" bugs="1" priority_3="1"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueCounterImpl" sourceFile="SourceValueCounterImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueObjectImpl" sourceFile="SourceValueObjectImpl.java" interface="false" size="32" bugs="2" priority_2="2"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.SourceValueSetImpl" sourceFile="SourceValueSetImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter" sourceFile="StatsPrinter.java" interface="false" size="65" bugs="3" priority_2="3"/>
+      <ClassStats class="org.mobicents.protocols.ss7.oam.common.statistics.StatsPrinter$1" sourceFile="StatsPrinter.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="209" invocations="620" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="14749" standardDeviationMicrosecondsPerInvocation="944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="69" invocations="67" avgMicrosecondsPerInvocation="1033" maxMicrosecondsPerInvocation="9592" standardDeviationMicrosecondsPerInvocation="1984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="64" invocations="120" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="21925" standardDeviationMicrosecondsPerInvocation="2213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="60" invocations="118" avgMicrosecondsPerInvocation="515" maxMicrosecondsPerInvocation="10813" standardDeviationMicrosecondsPerInvocation="1702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="55" invocations="121" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="12551" standardDeviationMicrosecondsPerInvocation="1583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="51" invocations="121" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="10457" standardDeviationMicrosecondsPerInvocation="1263"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="51" invocations="120" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="15974" standardDeviationMicrosecondsPerInvocation="1744"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="49" invocations="319" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="1483" standardDeviationMicrosecondsPerInvocation="232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="46" invocations="67" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="7527" standardDeviationMicrosecondsPerInvocation="1240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="32" invocations="120" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="6325" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="120" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="19004" standardDeviationMicrosecondsPerInvocation="1733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="30" invocations="628" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="3888" standardDeviationMicrosecondsPerInvocation="174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="64" avgMicrosecondsPerInvocation="430" maxMicrosecondsPerInvocation="7990" standardDeviationMicrosecondsPerInvocation="1118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="25" invocations="19" avgMicrosecondsPerInvocation="1340" maxMicrosecondsPerInvocation="25168" standardDeviationMicrosecondsPerInvocation="5616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="67" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="4818" standardDeviationMicrosecondsPerInvocation="830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="119" avgMicrosecondsPerInvocation="204" maxMicrosecondsPerInvocation="11521" standardDeviationMicrosecondsPerInvocation="1073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="556" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="676" standardDeviationMicrosecondsPerInvocation="82"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="18" invocations="19" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="13557" standardDeviationMicrosecondsPerInvocation="2991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="67" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2128" standardDeviationMicrosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="67" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="2558" standardDeviationMicrosecondsPerInvocation="507"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="67" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="3783" standardDeviationMicrosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="67" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="1879" standardDeviationMicrosecondsPerInvocation="348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="13" invocations="120" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="10197" standardDeviationMicrosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="12" invocations="19" avgMicrosecondsPerInvocation="683" maxMicrosecondsPerInvocation="9012" standardDeviationMicrosecondsPerInvocation="1986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="12" invocations="19" avgMicrosecondsPerInvocation="662" maxMicrosecondsPerInvocation="4871" standardDeviationMicrosecondsPerInvocation="1074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="120" avgMicrosecondsPerInvocation="102" maxMicrosecondsPerInvocation="3445" standardDeviationMicrosecondsPerInvocation="361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="67" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="3135" standardDeviationMicrosecondsPerInvocation="422"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

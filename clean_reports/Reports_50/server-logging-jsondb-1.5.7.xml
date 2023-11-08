@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445379549" analysisTimestamp="1699447652478" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\server-logging-jsondb-1.5.7.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="93e6c5e0d468470ca633fc38bb653516" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.syndesis.server.logging.jsondb.controller.KubernetesSupport$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport$1" start="81" end="108" sourcefile="KubernetesSupport.java" sourcepath="io/syndesis/server/logging/jsondb/controller/KubernetesSupport.java">
+        <Message>At KubernetesSupport.java:[lines 81-108]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.syndesis.server.logging.jsondb.controller.KubernetesSupport$1</Message>
+    </Class>
+    <Class classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" start="41" end="119" sourcefile="KubernetesSupport.java" sourcepath="io/syndesis/server/logging/jsondb/controller/KubernetesSupport.java">
+        <Message>At KubernetesSupport.java:[lines 41-119]</Message>
+      </SourceLine>
+      <Message>In class io.syndesis.server.logging.jsondb.controller.KubernetesSupport</Message>
+    </Class>
+    <Method classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" name="watchLog" signature="(Ljava/lang/String;Ljava/util/function/Consumer;Ljava/lang/String;Ljava/util/concurrent/Executor;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" start="67" end="115" startBytecode="0" endBytecode="513" sourcefile="KubernetesSupport.java" sourcepath="io/syndesis/server/logging/jsondb/controller/KubernetesSupport.java"/>
+      <Message>In method io.syndesis.server.logging.jsondb.controller.KubernetesSupport.watchLog(String, Consumer, String, Executor)</Message>
+    </Method>
+    <SourceLine classname="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" primary="true" start="81" end="81" startBytecode="164" endBytecode="164" sourcefile="KubernetesSupport.java" sourcepath="io/syndesis/server/logging/jsondb/controller/KubernetesSupport.java">
+      <Message>At KubernetesSupport.java:[line 81]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c724e75b84052125892e9bb0f00b76dd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.syndesis.server.logging.jsondb.controller.PodLogMonitor at new io.syndesis.server.logging.jsondb.controller.PodLogMonitor(ActivityTrackingController, Pod) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="51" end="355" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+        <Message>At PodLogMonitor.java:[lines 51-355]</Message>
+      </SourceLine>
+      <Message>In class io.syndesis.server.logging.jsondb.controller.PodLogMonitor</Message>
+    </Class>
+    <Method classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" name="&lt;init&gt;" signature="(Lio/syndesis/server/logging/jsondb/controller/ActivityTrackingController;Lio/fabric8/kubernetes/api/model/Pod;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="69" end="86" startBytecode="0" endBytecode="381" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java"/>
+      <Message>In method new io.syndesis.server.logging.jsondb.controller.PodLogMonitor(ActivityTrackingController, Pod)</Message>
+    </Method>
+    <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true" start="73" end="73" startBytecode="83" endBytecode="83" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+      <Message>At PodLogMonitor.java:[line 73]</Message>
+    </SourceLine>
+    <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="73" end="73" startBytecode="83" endBytecode="83" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+      <Message>At PodLogMonitor.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="11eb1ee08d4f3b2ad78c55e3fbd369f4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>PodLogMonitor.state not initialized in constructor and dereferenced in io.syndesis.server.logging.jsondb.controller.PodLogMonitor.run()</LongMessage>
+    <Class classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="51" end="355" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+        <Message>At PodLogMonitor.java:[lines 51-355]</Message>
+      </SourceLine>
+      <Message>In class io.syndesis.server.logging.jsondb.controller.PodLogMonitor</Message>
+    </Class>
+    <Field classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" name="state" signature="Lio/syndesis/server/logging/jsondb/controller/PodLogState;" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+        <Message>In PodLogMonitor.java</Message>
+      </SourceLine>
+      <Message>Field io.syndesis.server.logging.jsondb.controller.PodLogMonitor.state</Message>
+    </Field>
+    <Method classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="106" end="119" startBytecode="0" endBytecode="209" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java"/>
+      <Message>In method io.syndesis.server.logging.jsondb.controller.PodLogMonitor.run()</Message>
+    </Method>
+    <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true" start="114" end="114" startBytecode="77" endBytecode="77" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+      <Message>At PodLogMonitor.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="6dfd0e4e33eb0ad5aa3e457acb00a515" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>PodLogMonitor.state not initialized in constructor and dereferenced in io.syndesis.server.logging.jsondb.controller.PodLogMonitor.trackState(String, Map)</LongMessage>
+    <Class classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="51" end="355" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+        <Message>At PodLogMonitor.java:[lines 51-355]</Message>
+      </SourceLine>
+      <Message>In class io.syndesis.server.logging.jsondb.controller.PodLogMonitor</Message>
+    </Class>
+    <Field classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" name="state" signature="Lio/syndesis/server/logging/jsondb/controller/PodLogState;" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+        <Message>In PodLogMonitor.java</Message>
+      </SourceLine>
+      <Message>Field io.syndesis.server.logging.jsondb.controller.PodLogMonitor.state</Message>
+    </Field>
+    <Method classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" name="trackState" signature="(Ljava/lang/String;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" start="331" end="335" startBytecode="0" endBytecode="181" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java"/>
+      <Message>In method io.syndesis.server.logging.jsondb.controller.PodLogMonitor.trackState(String, Map)</Message>
+    </Method>
+    <SourceLine classname="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" primary="true" start="331" end="331" startBytecode="5" endBytecode="5" sourcefile="PodLogMonitor.java" sourcepath="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java">
+      <Message>At PodLogMonitor.java:[line 331]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="47">
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectReader</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectWriter</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.ObjectNode</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.api.model.ObjectMeta</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.api.model.Pod</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.api.model.PodList</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.api.model.PodStatus</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.Config</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.KubernetesClient</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.FilterWatchListDeletable</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.MixedOperation</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.PodResource</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.dsl.internal.PodOperationsImpl</MissingClass>
+    <MissingClass>io.fabric8.kubernetes.client.utils.HttpClientUtils</MissingClass>
+    <MissingClass>io.syndesis.common.util.DurationConverter</MissingClass>
+    <MissingClass>io.syndesis.common.util.Json</MissingClass>
+    <MissingClass>io.syndesis.common.util.KeyGenerator</MissingClass>
+    <MissingClass>io.syndesis.server.endpoint.v1.handler.activity.Activity</MissingClass>
+    <MissingClass>io.syndesis.server.endpoint.v1.handler.activity.ActivityStep</MissingClass>
+    <MissingClass>io.syndesis.server.endpoint.v1.handler.activity.ActivityTrackingService</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.GetOptions</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.GetOptions$Order</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.JsonDB</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.JsonDBException</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.impl.JsonRecordSupport</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.impl.SqlJsonDB</MissingClass>
+    <MissingClass>io.syndesis.server.jsondb.impl.SqlJsonDB$DatabaseKind</MissingClass>
+    <MissingClass>io.syndesis.server.openshift.OpenShiftService</MissingClass>
+    <MissingClass>okhttp3.Call</MissingClass>
+    <MissingClass>okhttp3.Callback</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient$Builder</MissingClass>
+    <MissingClass>okhttp3.Request</MissingClass>
+    <MissingClass>okhttp3.Request$Builder</MissingClass>
+    <MissingClass>okhttp3.Response</MissingClass>
+    <MissingClass>okhttp3.ResponseBody</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.DBI</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.Handle</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.PreparedBatch</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.PreparedBatchPart</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.Query</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.TransactionCallback</MissingClass>
+    <MissingClass>org.skife.jdbi.v2.TransactionStatus</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:09:39 +0900" total_classes="11" referenced_classes="83" total_bugs="4" total_size="606" num_packages="3" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.31" clock_seconds="1.76" peak_mbytes="240.21" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="3" priority_2="1">
+    <FileStats path="io/syndesis/server/logging/jsondb/DBActivityTrackingConfiguration.java" bugCount="0" size="3"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/controller/ActivityTrackingController.java" bugCount="0" size="242"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/controller/BatchOperation.java" bugCount="0" size="2"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/controller/KubernetesSupport.java" bugCount="1" size="66" bugHash="de6be1cf3389889745dbd453ce0e8002"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/controller/PodLogMonitor.java" bugCount="3" size="207" bugHash="d340bc5380d8e4a5d8a1195021b6e16e"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/controller/PodLogState.java" bugCount="0" size="6"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/service/DBActivityTrackingService.java" bugCount="0" size="37"/>
+    <FileStats path="io/syndesis/server/logging/jsondb/service/JsonNodeSupport.java" bugCount="0" size="43"/>
+    <PackageStats package="io.syndesis.server.logging.jsondb" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="io.syndesis.server.logging.jsondb.DBActivityTrackingConfiguration" sourceFile="DBActivityTrackingConfiguration.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.syndesis.server.logging.jsondb.controller" total_bugs="4" total_types="8" total_size="523" priority_3="3" priority_2="1">
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.ActivityTrackingController" sourceFile="ActivityTrackingController.java" interface="false" size="242" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.BatchOperation" sourceFile="BatchOperation.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.KubernetesSupport" sourceFile="KubernetesSupport.java" interface="false" size="37" bugs="1" priority_3="1"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.KubernetesSupport$1" sourceFile="KubernetesSupport.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.PodLogMonitor" sourceFile="PodLogMonitor.java" interface="false" size="186" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.PodLogMonitor$1" sourceFile="PodLogMonitor.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.PodLogMonitor$InflightData" sourceFile="PodLogMonitor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.controller.PodLogState" sourceFile="PodLogState.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.syndesis.server.logging.jsondb.service" total_bugs="0" total_types="2" total_size="80">
+      <ClassStats class="io.syndesis.server.logging.jsondb.service.DBActivityTrackingService" sourceFile="DBActivityTrackingService.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="io.syndesis.server.logging.jsondb.service.JsonNodeSupport" sourceFile="JsonNodeSupport.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="233" invocations="846" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="8938" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="88" invocations="83" avgMicrosecondsPerInvocation="1062" maxMicrosecondsPerInvocation="10550" standardDeviationMicrosecondsPerInvocation="1866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="81" invocations="364" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8450" standardDeviationMicrosecondsPerInvocation="505"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="79" invocations="79" avgMicrosecondsPerInvocation="1001" maxMicrosecondsPerInvocation="18015" standardDeviationMicrosecondsPerInvocation="2524"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="60" invocations="73" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="7456" standardDeviationMicrosecondsPerInvocation="1587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="58" invocations="80" avgMicrosecondsPerInvocation="729" maxMicrosecondsPerInvocation="6016" standardDeviationMicrosecondsPerInvocation="1348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="83" avgMicrosecondsPerInvocation="630" maxMicrosecondsPerInvocation="3789" standardDeviationMicrosecondsPerInvocation="905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="43" invocations="73" avgMicrosecondsPerInvocation="595" maxMicrosecondsPerInvocation="6008" standardDeviationMicrosecondsPerInvocation="1181"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="43" invocations="72" avgMicrosecondsPerInvocation="599" maxMicrosecondsPerInvocation="4974" standardDeviationMicrosecondsPerInvocation="977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="32" invocations="850" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1988" standardDeviationMicrosecondsPerInvocation="93"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="32" invocations="73" avgMicrosecondsPerInvocation="447" maxMicrosecondsPerInvocation="5871" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="83" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="5224" standardDeviationMicrosecondsPerInvocation="690"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="83" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="17694" standardDeviationMicrosecondsPerInvocation="1928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="154" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="9629" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="25" invocations="67" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="3900" standardDeviationMicrosecondsPerInvocation="740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="24" invocations="74" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="15010" standardDeviationMicrosecondsPerInvocation="1734"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="24" invocations="11" avgMicrosecondsPerInvocation="2216" maxMicrosecondsPerInvocation="11378" standardDeviationMicrosecondsPerInvocation="3807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="83" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="3306" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="744" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="634" standardDeviationMicrosecondsPerInvocation="62"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="20" invocations="83" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="5432" standardDeviationMicrosecondsPerInvocation="830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="83" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="1697" standardDeviationMicrosecondsPerInvocation="359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="83" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="1643" standardDeviationMicrosecondsPerInvocation="305"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="83" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="5248" standardDeviationMicrosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="83" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="2351" standardDeviationMicrosecondsPerInvocation="340"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699429557031" analysisTimestamp="1699430362548" release="">
+  <Project projectName="">
+    <Jar>cleans\cas-server-support-x509-core-6.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="BC_UNCONFIRMED_CAST" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="669fdad2a19b2fbee941d9d6779e3d1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.time.chrono.ChronoZonedDateTime to java.time.ZonedDateTime in new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, ChronoZonedDateTime, int)</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="19" end="100" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+        <Message>At ExpiredCRLException.java:[lines 19-100]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/time/chrono/ChronoZonedDateTime;I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="61" end="68" startBytecode="0" endBytecode="19" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java"/>
+      <Message>In method new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, ChronoZonedDateTime, int)</Message>
+    </Method>
+    <Type descriptor="Ljava/time/chrono/ChronoZonedDateTime;" role="TYPE_FOUND">
+      <SourceLine classname="java.time.chrono.ChronoZonedDateTime" start="122" end="648" sourcefile="ChronoZonedDateTime.java" sourcepath="java/time/chrono/ChronoZonedDateTime.java">
+        <Message>At ChronoZonedDateTime.java:[lines 122-648]</Message>
+      </SourceLine>
+      <Message>Actual type java.time.chrono.ChronoZonedDateTime</Message>
+    </Type>
+    <Type descriptor="Ljava/time/ZonedDateTime;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.time.ZonedDateTime" start="164" end="2264" sourcefile="ZonedDateTime.java" sourcepath="java/time/ZonedDateTime.java">
+        <Message>At ZonedDateTime.java:[lines 164-2264]</Message>
+      </SourceLine>
+      <Message>Expected java.time.ZonedDateTime</Message>
+    </Type>
+    <LocalVariable name="expirationDate" register="2" pc="10" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from expirationDate</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true" start="63" end="63" startBytecode="11" endBytecode="11" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+      <Message>At ExpiredCRLException.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="7458f1b8b3d6a4e99696e57f856b58e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException at new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, Instant, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="19" end="100" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+        <Message>At ExpiredCRLException.java:[lines 19-100]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/time/Instant;I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="79" end="86" startBytecode="0" endBytecode="160" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java"/>
+      <Message>In method new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, Instant, int)</Message>
+    </Method>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true" start="83" end="83" startBytecode="33" endBytecode="33" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+      <Message>At ExpiredCRLException.java:[line 83]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="83" end="83" startBytecode="33" endBytecode="33" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+      <Message>At ExpiredCRLException.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f7cc1a8401be520702eb3174051424eb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException at new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, ChronoZonedDateTime, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="19" end="100" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+        <Message>At ExpiredCRLException.java:[lines 19-100]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/time/chrono/ChronoZonedDateTime;I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="61" end="68" startBytecode="0" endBytecode="157" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java"/>
+      <Message>In method new org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException(String, ChronoZonedDateTime, int)</Message>
+    </Method>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" primary="true" start="65" end="65" startBytecode="30" endBytecode="30" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+      <Message>At ExpiredCRLException.java:[line 65]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" start="65" end="65" startBytecode="30" endBytecode="30" sourcefile="ExpiredCRLException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java">
+      <Message>At ExpiredCRLException.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="2c3e8a418d491292d271148bce9d9c5f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential.setCertificate(X509Certificate) may expose internal representation by storing an externally mutable object into X509CertificateCredential.certificate</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" primary="true" classAnnotationNames="com.fasterxml.jackson.databind.annotation.JsonSerialize,com.fasterxml.jackson.databind.annotation.JsonDeserialize,com.fasterxml.jackson.annotation.JsonIgnoreProperties,com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" start="29" end="72" sourcefile="X509CertificateCredential.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/principal/X509CertificateCredential.java">
+        <Message>At X509CertificateCredential.java:[lines 29-72]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" name="setCertificate" signature="(Ljava/security/cert/X509Certificate;)V" isStatic="false" primary="true" classAnnotationNames="com.fasterxml.jackson.databind.annotation.JsonSerialize,com.fasterxml.jackson.databind.annotation.JsonDeserialize,com.fasterxml.jackson.annotation.JsonIgnoreProperties,com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" start="29" end="29" startBytecode="0" endBytecode="57" sourcefile="X509CertificateCredential.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/principal/X509CertificateCredential.java"/>
+      <Message>In method org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential.setCertificate(X509Certificate)</Message>
+    </Method>
+    <Field classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" name="certificate" signature="Ljava/security/cert/X509Certificate;" isStatic="false" primary="true" classAnnotationNames="com.fasterxml.jackson.databind.annotation.JsonSerialize,com.fasterxml.jackson.databind.annotation.JsonDeserialize,com.fasterxml.jackson.annotation.JsonIgnoreProperties,com.fasterxml.jackson.annotation.JsonTypeInfo">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" sourcefile="X509CertificateCredential.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/principal/X509CertificateCredential.java">
+        <Message>In X509CertificateCredential.java</Message>
+      </SourceLine>
+      <Message>Field org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential.certificate</Message>
+    </Field>
+    <LocalVariable name="certificate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named certificate</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" primary="true" start="29" end="29" startBytecode="2" endBytecode="2" sourcefile="X509CertificateCredential.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/principal/X509CertificateCredential.java">
+      <Message>At X509CertificateCredential.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="da16947d19f2a201d122176ed422b888" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException.getReasonFromX509Entry(X509CRLEntry)</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" start="21" end="120" sourcefile="RevokedCertificateException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/RevokedCertificateException.java">
+        <Message>At RevokedCertificateException.java:[lines 21-120]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" name="getReasonFromX509Entry" signature="(Ljava/security/cert/X509CRLEntry;)Lorg/apereo/cas/adaptors/x509/authentication/revocation/RevokedCertificateException$Reason;" isStatic="true" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" start="73" end="84" startBytecode="0" endBytecode="178" sourcefile="RevokedCertificateException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/RevokedCertificateException.java"/>
+      <Message>In method org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException.getReasonFromX509Entry(X509CRLEntry)</Message>
+    </Method>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" primary="true" start="80" end="80" startBytecode="42" endBytecode="42" sourcefile="RevokedCertificateException.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/RevokedCertificateException.java">
+      <Message>At RevokedCertificateException.java:[line 80]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="a85e619a7b2c4d129d91f4c63636ace4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker.addURL(List, String)</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" start="45" end="223" sourcefile="CRLDistributionPointRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/CRLDistributionPointRevocationChecker.java">
+        <Message>At CRLDistributionPointRevocationChecker.java:[lines 45-223]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" name="addURL" signature="(Ljava/util/List;Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" start="154" end="162" startBytecode="0" endBytecode="249" sourcefile="CRLDistributionPointRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/CRLDistributionPointRevocationChecker.java"/>
+      <Message>In method org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker.addURL(List, String)</Message>
+    </Method>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" primary="true" start="159" end="159" startBytecode="71" endBytecode="71" sourcefile="CRLDistributionPointRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/CRLDistributionPointRevocationChecker.java">
+      <Message>At CRLDistributionPointRevocationChecker.java:[line 159]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ae7b9e9a57fea5bcbd07a4822ed1aad7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker(boolean, RevocationPolicy, RevocationPolicy, int, CRLFetcher, Collection) may expose internal representation by storing an externally mutable object into ResourceCRLRevocationChecker.resources</LongMessage>
+    <Class classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" start="37" end="228" sourcefile="ResourceCRLRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/ResourceCRLRevocationChecker.java">
+        <Message>At ResourceCRLRevocationChecker.java:[lines 37-228]</Message>
+      </SourceLine>
+      <Message>In class org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker</Message>
+    </Class>
+    <Method classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" name="&lt;init&gt;" signature="(ZLorg/apereo/cas/adaptors/x509/authentication/revocation/policy/RevocationPolicy;Lorg/apereo/cas/adaptors/x509/authentication/revocation/policy/RevocationPolicy;ILorg/apereo/cas/adaptors/x509/authentication/CRLFetcher;Ljava/util/Collection;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" start="68" end="72" startBytecode="0" endBytecode="211" sourcefile="ResourceCRLRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/ResourceCRLRevocationChecker.java"/>
+      <Message>In method new org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker(boolean, RevocationPolicy, RevocationPolicy, int, CRLFetcher, Collection)</Message>
+    </Method>
+    <Field classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" name="resources" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" sourcefile="ResourceCRLRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/ResourceCRLRevocationChecker.java">
+        <Message>In ResourceCRLRevocationChecker.java</Message>
+      </SourceLine>
+      <Message>Field org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker.resources</Message>
+    </Field>
+    <LocalVariable name="resources" register="6" pc="44" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named resources</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" primary="true" start="71" end="71" startBytecode="44" endBytecode="44" sourcefile="ResourceCRLRevocationChecker.java" sourcepath="org/apereo/cas/adaptors/x509/authentication/revocation/checker/ResourceCRLRevocationChecker.java">
+      <Message>At ResourceCRLRevocationChecker.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_UNCONFIRMED_CAST" abbrev="BC" category="STYLE">
+    <ShortDescription>Unchecked/unconfirmed cast</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This cast is unchecked, and not all instances of the type casted from can be cast to
+the type it is being cast to. Check that your program logic ensures that this
+cast will not fail.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="83">
+    <MissingClass>com.fasterxml.jackson.annotation.JsonTypeInfo</MissingClass>
+    <MissingClass>com.fasterxml.jackson.annotation.JsonTypeInfo$Id</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonToken</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.ObjectCodec</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.type.WritableTypeId</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationContext</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonMappingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializerProvider</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.jsontype.TypeSerializer</MissingClass>
+    <MissingClass>com.google.common.base.Predicates</MissingClass>
+    <MissingClass>lombok.Lombok</MissingClass>
+    <MissingClass>net.sf.ehcache.Cache</MissingClass>
+    <MissingClass>net.sf.ehcache.Element</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.AuthenticationHandler</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.Credential</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.CredentialMetaData</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.DefaultAuthenticationHandlerExecutionResult</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.credential.AbstractCredential</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.handler.support.AbstractPreAndPostProcessingAuthenticationHandler</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.principal.DefaultPrincipalFactory</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.principal.Principal</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.principal.PrincipalFactory</MissingClass>
+    <MissingClass>org.apereo.cas.authentication.principal.resolvers.PersonDirectoryPrincipalResolver</MissingClass>
+    <MissingClass>org.apereo.cas.services.ServicesManager</MissingClass>
+    <MissingClass>org.apereo.cas.util.CollectionUtils</MissingClass>
+    <MissingClass>org.apereo.cas.util.DateTimeUtils</MissingClass>
+    <MissingClass>org.apereo.cas.util.EncodingUtils</MissingClass>
+    <MissingClass>org.apereo.cas.util.LdapUtils</MissingClass>
+    <MissingClass>org.apereo.cas.util.crypto.CertUtils</MissingClass>
+    <MissingClass>org.apereo.cas.util.function.FunctionUtils</MissingClass>
+    <MissingClass>org.apereo.services.persondir.IPersonAttributeDao</MissingClass>
+    <MissingClass>org.apereo.services.persondir.support.StubPersonAttributeDao</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1InputStream</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1ObjectIdentifier</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1OctetString</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1Primitive</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1Sequence</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1String</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.ASN1TaggedObject</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.DERIA5String</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.x509.DistributionPoint</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.x509.DistributionPointName</MissingClass>
+    <MissingClass>org.bouncycastle.asn1.x509.GeneralName</MissingClass>
+    <MissingClass>org.cryptacular.x509.ExtensionReader</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.Attribute</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.AttributeType</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.Attributes</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.NameReader</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.RDN</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.RDNSequence</MissingClass>
+    <MissingClass>org.cryptacular.x509.dn.StandardAttributeType</MissingClass>
+    <MissingClass>org.jooq.lambda.Unchecked</MissingClass>
+    <MissingClass>org.jooq.lambda.fi.util.function.CheckedConsumer</MissingClass>
+    <MissingClass>org.jooq.lambda.fi.util.function.CheckedFunction</MissingClass>
+    <MissingClass>org.ldaptive.ConnectionConfig</MissingClass>
+    <MissingClass>org.ldaptive.ConnectionFactory</MissingClass>
+    <MissingClass>org.ldaptive.DefaultConnectionFactory</MissingClass>
+    <MissingClass>org.ldaptive.LdapAttribute</MissingClass>
+    <MissingClass>org.ldaptive.LdapEntry</MissingClass>
+    <MissingClass>org.ldaptive.LdapException</MissingClass>
+    <MissingClass>org.ldaptive.Response</MissingClass>
+    <MissingClass>org.ldaptive.ResultCode</MissingClass>
+    <MissingClass>org.ldaptive.SearchExecutor</MissingClass>
+    <MissingClass>org.ldaptive.SearchResult</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.DisposableBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.core.io.ByteArrayResource</MissingClass>
+    <MissingClass>org.springframework.core.io.InputStreamResource</MissingClass>
+    <MissingClass>org.springframework.core.io.InputStreamSource</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.UrlResource</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 16:45:57 +0900" total_classes="27" referenced_classes="138" total_bugs="7" total_size="928" num_packages="8" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.56" clock_seconds="2.92" peak_mbytes="240.00" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="2" priority_2="5">
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/CRLFetcher.java" bugCount="0" size="6"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/ExpiredCRLException.java" bugCount="3" size="36" bugHash="3e933be56508e42203ba8d8576ba160a"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/ResourceCRLFetcher.java" bugCount="0" size="29"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/handler/support/X509CredentialsAuthenticationHandler.java" bugCount="0" size="106"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/ldap/LdaptiveResourceCRLFetcher.java" bugCount="0" size="59"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/AbstractX509PrincipalResolver.java" bugCount="0" size="53"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509CertificateCredential.java" bugCount="1" size="20" bugHash="8189fa25dbf04cc77802eb907d6dd1bd"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509CommonNameEDIPIPrincipalResolver.java" bugCount="0" size="53"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509SerialNumberAndIssuerDNPrincipalResolver.java" bugCount="0" size="17"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509SerialNumberPrincipalResolver.java" bugCount="0" size="24"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509SubjectAlternativeNameUPNPrincipalResolver.java" bugCount="0" size="65"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509SubjectDNPrincipalResolver.java" bugCount="0" size="10"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/principal/X509SubjectPrincipalResolver.java" bugCount="0" size="51"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/RevokedCertificateException.java" bugCount="1" size="70" bugHash="d962ae1ae2a14d34a48debf24fe85d78"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/checker/AbstractCRLRevocationChecker.java" bugCount="0" size="52"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/checker/CRLDistributionPointRevocationChecker.java" bugCount="1" size="104" bugHash="ea394bbdab30bdfa4a05aea124fbac3d"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/checker/NoOpRevocationChecker.java" bugCount="0" size="3"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/checker/ResourceCRLRevocationChecker.java" bugCount="1" size="96" bugHash="dbbec38700b6f984bbab0f64b820d4e8"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/checker/RevocationChecker.java" bugCount="0" size="3"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/policy/AllowRevocationPolicy.java" bugCount="0" size="10"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/policy/DenyRevocationPolicy.java" bugCount="0" size="6"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/policy/RevocationPolicy.java" bugCount="0" size="2"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/authentication/revocation/policy/ThresholdExpiredCRLRevocationPolicy.java" bugCount="0" size="16"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/util/X509CertificateCredentialJsonDeserializer.java" bugCount="0" size="16"/>
+    <FileStats path="org/apereo/cas/adaptors/x509/util/X509CertificateCredentialJsonSerializer.java" bugCount="0" size="21"/>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication" total_bugs="3" total_types="3" total_size="71" priority_3="1" priority_2="2">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.CRLFetcher" sourceFile="CRLFetcher.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.ExpiredCRLException" sourceFile="ExpiredCRLException.java" interface="false" size="36" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.ResourceCRLFetcher" sourceFile="ResourceCRLFetcher.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.handler.support" total_bugs="0" total_types="1" total_size="106">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.handler.support.X509CredentialsAuthenticationHandler" sourceFile="X509CredentialsAuthenticationHandler.java" interface="false" size="106" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.ldap" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.ldap.LdaptiveResourceCRLFetcher" sourceFile="LdaptiveResourceCRLFetcher.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.principal" total_bugs="1" total_types="9" total_size="293" priority_2="1">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.AbstractX509PrincipalResolver" sourceFile="AbstractX509PrincipalResolver.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509CertificateCredential" sourceFile="X509CertificateCredential.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509CommonNameEDIPIPrincipalResolver" sourceFile="X509CommonNameEDIPIPrincipalResolver.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SerialNumberAndIssuerDNPrincipalResolver" sourceFile="X509SerialNumberAndIssuerDNPrincipalResolver.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SerialNumberPrincipalResolver" sourceFile="X509SerialNumberPrincipalResolver.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SubjectAlternativeNameUPNPrincipalResolver" sourceFile="X509SubjectAlternativeNameUPNPrincipalResolver.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SubjectDNPrincipalResolver" sourceFile="X509SubjectDNPrincipalResolver.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SubjectPrincipalResolver" sourceFile="X509SubjectPrincipalResolver.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.principal.X509SubjectPrincipalResolver$AttributeContext" sourceFile="X509SubjectPrincipalResolver.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.revocation" total_bugs="1" total_types="2" total_size="70" priority_3="1">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException" sourceFile="RevokedCertificateException.java" interface="false" size="37" bugs="1" priority_3="1"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.RevokedCertificateException$Reason" sourceFile="RevokedCertificateException.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.revocation.checker" total_bugs="2" total_types="5" total_size="258" priority_2="2">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.checker.AbstractCRLRevocationChecker" sourceFile="AbstractCRLRevocationChecker.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.checker.CRLDistributionPointRevocationChecker" sourceFile="CRLDistributionPointRevocationChecker.java" interface="false" size="104" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.checker.NoOpRevocationChecker" sourceFile="NoOpRevocationChecker.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.checker.ResourceCRLRevocationChecker" sourceFile="ResourceCRLRevocationChecker.java" interface="false" size="96" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.checker.RevocationChecker" sourceFile="RevocationChecker.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.authentication.revocation.policy" total_bugs="0" total_types="4" total_size="34">
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.policy.AllowRevocationPolicy" sourceFile="AllowRevocationPolicy.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.policy.DenyRevocationPolicy" sourceFile="DenyRevocationPolicy.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.policy.RevocationPolicy" sourceFile="RevocationPolicy.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.authentication.revocation.policy.ThresholdExpiredCRLRevocationPolicy" sourceFile="ThresholdExpiredCRLRevocationPolicy.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apereo.cas.adaptors.x509.util" total_bugs="0" total_types="2" total_size="37">
+      <ClassStats class="org.apereo.cas.adaptors.x509.util.X509CertificateCredentialJsonDeserializer" sourceFile="X509CertificateCredentialJsonDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.apereo.cas.adaptors.x509.util.X509CertificateCredentialJsonSerializer" sourceFile="X509CertificateCredentialJsonSerializer.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="335" invocations="1089" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="40520" standardDeviationMicrosecondsPerInvocation="1369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="118" invocations="138" avgMicrosecondsPerInvocation="861" maxMicrosecondsPerInvocation="12322" standardDeviationMicrosecondsPerInvocation="1701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="92" invocations="237" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="51041" standardDeviationMicrosecondsPerInvocation="3346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="90" invocations="138" avgMicrosecondsPerInvocation="659" maxMicrosecondsPerInvocation="12660" standardDeviationMicrosecondsPerInvocation="1406"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="88" invocations="188" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="27929" standardDeviationMicrosecondsPerInvocation="2354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="83" invocations="602" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="3003" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="68" invocations="1095" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="10575" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="66" invocations="184" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="9577" standardDeviationMicrosecondsPerInvocation="892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="62" invocations="193" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="38057" standardDeviationMicrosecondsPerInvocation="2735"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="56" invocations="27" avgMicrosecondsPerInvocation="2097" maxMicrosecondsPerInvocation="44980" standardDeviationMicrosecondsPerInvocation="8442"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="56" invocations="188" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="24742" standardDeviationMicrosecondsPerInvocation="1807"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="47" invocations="138" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="35251" standardDeviationMicrosecondsPerInvocation="2991"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="47" invocations="184" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="16683" standardDeviationMicrosecondsPerInvocation="1231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="46" invocations="138" avgMicrosecondsPerInvocation="339" maxMicrosecondsPerInvocation="17543" standardDeviationMicrosecondsPerInvocation="1657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="41" invocations="138" avgMicrosecondsPerInvocation="303" maxMicrosecondsPerInvocation="4785" standardDeviationMicrosecondsPerInvocation="617"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="40" invocations="177" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="2050" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="184" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="5576" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="138" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="7779" standardDeviationMicrosecondsPerInvocation="761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="946" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="993" standardDeviationMicrosecondsPerInvocation="69"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="28" invocations="27" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="10279" standardDeviationMicrosecondsPerInvocation="1933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="26" invocations="167" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="1672" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="24" invocations="138" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="1933" standardDeviationMicrosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="23" invocations="27" avgMicrosecondsPerInvocation="880" maxMicrosecondsPerInvocation="11671" standardDeviationMicrosecondsPerInvocation="2253"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="138" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="3275" standardDeviationMicrosecondsPerInvocation="328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="20" invocations="138" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2267" standardDeviationMicrosecondsPerInvocation="336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="20" invocations="138" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="7996" standardDeviationMicrosecondsPerInvocation="802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="18" invocations="2566" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="1634" standardDeviationMicrosecondsPerInvocation="51"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="27" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="5439" standardDeviationMicrosecondsPerInvocation="1273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="15" invocations="14" avgMicrosecondsPerInvocation="1121" maxMicrosecondsPerInvocation="15291" standardDeviationMicrosecondsPerInvocation="3930"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

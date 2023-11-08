@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445926121" analysisTimestamp="1699447542837" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\microprofile-metrics-rest-tck-3.0.1.jar</Jar>
+  </Project>
+  <BugInstance type="JUA_DONT_ASSERT_INSTANCEOF_IN_TESTS" priority="2" rank="16" abbrev="JUA" category="BAD_PRACTICE" instanceHash="b33618b31406684b659b76de53592cee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage> Asserting value of instanceof in tests is not recommended. </ShortMessage>
+    <LongMessage> Assertion of type Number in org.eclipse.microprofile.metrics.test.MpMetricTest.testGcCountMetrics() at MpMetricTest.java:[line 1001] may hide useful information about why a cast may have failed.</LongMessage>
+    <Type descriptor="Ljava/lang/Number;">
+      <SourceLine classname="java.lang.Number" start="59" end="120" sourcefile="Number.java" sourcepath="java/lang/Number.java">
+        <Message>At Number.java:[lines 59-120]</Message>
+      </SourceLine>
+      <Message>Type Number</Message>
+    </Type>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testGcCountMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="982" end="1009" startBytecode="0" endBytecode="678" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testGcCountMetrics()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="1001" end="1001" startBytecode="257" endBytecode="257" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 1001]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JUA_DONT_ASSERT_INSTANCEOF_IN_TESTS" priority="2" rank="16" abbrev="JUA" category="BAD_PRACTICE" instanceHash="e4d69e08c61bce6570c770a57e9a28ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage> Asserting value of instanceof in tests is not recommended. </ShortMessage>
+    <LongMessage> Assertion of type Number in org.eclipse.microprofile.metrics.test.MpMetricTest.testGcTimeMetrics() at MpMetricTest.java:[line 1038] may hide useful information about why a cast may have failed.</LongMessage>
+    <Type descriptor="Ljava/lang/Number;">
+      <SourceLine classname="java.lang.Number" start="59" end="120" sourcefile="Number.java" sourcepath="java/lang/Number.java">
+        <Message>At Number.java:[lines 59-120]</Message>
+      </SourceLine>
+      <Message>Type Number</Message>
+    </Type>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testGcTimeMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="1019" end="1046" startBytecode="0" endBytecode="678" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testGcTimeMetrics()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="1038" end="1038" startBytecode="257" endBytecode="257" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 1038]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="1d1a3f21cf13ffef2f21d084113f0397" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of tags, which is known to be non-null in org.eclipse.microprofile.metrics.test.MpMetricTest.getExpectedMetadataFromXmlFile(MetricRegistry$Type)</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="getExpectedMetadataFromXmlFile" signature="(Lorg/eclipse/microprofile/metrics/MetricRegistry$Type;)Ljava/util/Map;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="1292" end="1339" startBytecode="0" endBytecode="1087" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.getExpectedMetadataFromXmlFile(MetricRegistry$Type)</Message>
+    </Method>
+    <LocalVariable name="tags" register="14" pc="352" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from tags</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getAttribute" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getAttribute(String) of type String</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="1331" end="1331" startBytecode="354" endBytecode="354" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at MpMetricTest.java:[line 1331]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="5aa8a06765506193ad33c26c4e15dc32" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.countMeB() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="countMeB" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="190" end="190" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.countMeB()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="473" end="473" startBytecode="18" endBytecode="18" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 473]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="f041488c19df787cc20479298c05951" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.gaugeMeA() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="gaugeMeA" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="212" end="212" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.gaugeMeA()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="476" end="476" startBytecode="33" endBytecode="33" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 476]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="7adc36c16756f47098a34490595c31b6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.gaugeMeB() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="gaugeMeB" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="217" end="217" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.gaugeMeB()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="477" end="477" startBytecode="41" endBytecode="41" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 477]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="f0e1b429fd4e7759ccbfbf6aebfefc1b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.gaugeMeTagged() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="gaugeMeTagged" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="133" end="133" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.gaugeMeTagged()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="478" end="478" startBytecode="49" endBytecode="49" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 478]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="136c542ab4995def77ee759dcc1ff45e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.gaugeMeTaggedOne() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="gaugeMeTaggedOne" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="139" end="139" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.gaugeMeTaggedOne()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="479" end="479" startBytecode="57" endBytecode="57" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 479]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" instanceHash="79e0193c000120b60b5f0a72e0480867" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of MetricAppBean.gaugeMeTaggedTwo() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testSetupApplicationMetrics" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="471" end="495" startBytecode="0" endBytecode="235" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testSetupApplicationMetrics()</Message>
+    </Method>
+    <Method classname="org.eclipse.microprofile.metrics.test.MetricAppBean" name="gaugeMeTaggedTwo" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="javax.enterprise.context.ApplicationScoped">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MetricAppBean" start="145" end="145" startBytecode="0" endBytecode="45" sourcefile="MetricAppBean.java" sourcepath="org/eclipse/microprofile/metrics/test/MetricAppBean.java"/>
+      <Message>Called method org.eclipse.microprofile.metrics.test.MetricAppBean.gaugeMeTaggedTwo()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="480" end="480" startBytecode="65" endBytecode="65" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 480]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="b0d5ae555630b8ebb91c2310c1f66760" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.eclipse.microprofile.metrics.test.MpMetricTest.testBaseMetadataSingluarItems() makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="90" end="1339" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 90-1339]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest</Message>
+    </Class>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest" name="testBaseMetadataSingluarItems" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" start="307" end="326" startBytecode="0" endBytecode="443" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest.testBaseMetadataSingluarItems()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest" primary="true" start="317" end="317" startBytecode="124" endBytecode="124" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 317]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="68d733656fce45a76ae4f4acdfee33ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MpMetricTest$MiniMeta.name not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.toPromString()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" start="1344" end="1404" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 1344-1404]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" name="name" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>In MpMetricTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.name</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" name="toPromString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" start="1359" end="1366" startBytecode="0" endBytecode="174" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.toPromString()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" primary="true" start="1359" end="1359" startBytecode="8" endBytecode="8" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 1359]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="3a1c51f4163cb5724e634e81a0df3cb4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MpMetricTest$MiniMeta.unit not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.toPromString()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" start="1344" end="1404" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>At MpMetricTest.java:[lines 1344-1404]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" name="unit" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+        <Message>In MpMetricTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.unit</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" name="toPromString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" start="1359" end="1366" startBytecode="0" endBytecode="174" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta.toPromString()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" primary="true" start="1360" end="1360" startBytecode="32" endBytecode="32" sourcefile="MpMetricTest.java" sourcepath="org/eclipse/microprofile/metrics/test/MpMetricTest.java">
+      <Message>At MpMetricTest.java:[line 1360]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="6d1fcab136aa514774999329eaa8a052" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance1 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testCounter()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance1" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance1</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testCounter" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="76" end="79" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testCounter()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="76" end="76" startBytecode="4" endBytecode="4" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="d26d8faec31eda3ef1265fbbe28a4dd8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance1 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testMeter()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance1" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance1</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testMeter" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="83" end="86" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testMeter()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="83" end="83" startBytecode="4" endBytecode="4" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="8d2e602fe231463bc17fff814beb387e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance1 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testTimer()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance1" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance1</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testTimer" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="90" end="93" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testTimer()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="90" end="90" startBytecode="4" endBytecode="4" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="511d461c1670e6739eb2c64844a7212a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance2 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testCounter()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance2" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance2</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testCounter" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="76" end="79" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testCounter()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="77" end="77" startBytecode="11" endBytecode="11" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="8da25c782bb995b9920d69923a73f540" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance2 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testMeter()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance2" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance2</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testMeter" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="83" end="86" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testMeter()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="84" end="84" startBytecode="11" endBytecode="11" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="602253afe57d36885b5d1a620ef37beb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MultipleBeanInstancesTest.instance2 not initialized in constructor and dereferenced in org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testTimer()</LongMessage>
+    <Class classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="47" end="93" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>At MultipleBeanInstancesTest.java:[lines 47-93]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest</Message>
+    </Class>
+    <Field classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="instance2" signature="Lorg/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean;" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+        <Message>In MultipleBeanInstancesTest.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.instance2</Message>
+    </Field>
+    <Method classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" name="testTimer" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.junit.runner.RunWith">
+      <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" start="90" end="93" startBytecode="0" endBytecode="120" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java"/>
+      <Message>In method org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest.testTimer()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" primary="true" start="91" end="91" startBytecode="11" endBytecode="11" sourcefile="MultipleBeanInstancesTest.java" sourcepath="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java">
+      <Message>At MultipleBeanInstancesTest.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" abbrev="RV" category="STYLE">
+    <ShortDescription>Return value of method without side effect is ignored</ShortDescription>
+    <Details><![CDATA[
+
+<p>This code calls a method and ignores the return value. However our analysis shows that
+the method (including its implementations in subclasses if any) does not produce any effect
+other than return value. Thus this call can be removed.
+</p>
+<p>We are trying to reduce the false positives as much as possible, but in some cases this warning might be wrong.
+Common false-positive cases include:</p>
+<p>- The method is designed to be overridden and produce a side effect in other projects which are out of the scope of the analysis.</p>
+<p>- The method is called to trigger the class loading which may have a side effect.</p>
+<p>- The method is called just to get some exception.</p>
+<p>If you feel that our assumption is incorrect, you can use a @CheckReturnValue annotation
+to instruct SpotBugs that ignoring the return value of this method is acceptable.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="JUA_DONT_ASSERT_INSTANCEOF_IN_TESTS" abbrev="JUA" category="BAD_PRACTICE">
+    <ShortDescription> Asserting value of instanceof in tests is not recommended. </ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Asserting type checks in tests is not recommended as a class cast exception message could better indicate
+            the cause of an instance of the wrong class being used than an instanceof assertion.</p>
+
+            <p>When debugging tests that fail due to bad casts, it may be more useful to observe the output of the
+            resulting ClassCastException which could provide information about the actual encountered type.
+            Asserting the type before casting would instead result in a less informative <code>"false is not true"</code>
+            message.</p>
+
+            <p>If JUnit is used with hamcrest, the <a href="https://junit.org/junit4/javadoc/latest/index.html?org/hamcrest/core/IsInstanceOf.html"><code>IsInstanceOf</code></a>
+            class from hamcrest could be used instead.</p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="JUA">
+    <Description>Problems in JUnit Assertions</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="39">
+    <MissingClass>io.restassured.RestAssured</MissingClass>
+    <MissingClass>io.restassured.authentication.AuthenticationScheme</MissingClass>
+    <MissingClass>io.restassured.builder.ResponseBuilder</MissingClass>
+    <MissingClass>io.restassured.http.Header</MissingClass>
+    <MissingClass>io.restassured.path.json.JsonPath</MissingClass>
+    <MissingClass>io.restassured.response.Response</MissingClass>
+    <MissingClass>io.restassured.response.ResponseBody</MissingClass>
+    <MissingClass>io.restassured.response.ValidatableResponse</MissingClass>
+    <MissingClass>io.restassured.response.ValidatableResponseOptions</MissingClass>
+    <MissingClass>io.restassured.specification.RequestSender</MissingClass>
+    <MissingClass>io.restassured.specification.RequestSpecification</MissingClass>
+    <MissingClass>javax.enterprise.inject.Instance</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Counter</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Gauge</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Histogram</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Metadata</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetadataBuilder</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Meter</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Metric</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricFilter</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricID</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricRegistry</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricRegistry$Type</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricType</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.MetricUnits</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.SimpleTimer</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.SimpleTimer$Context</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Timer</MissingClass>
+    <MissingClass>org.eclipse.microprofile.metrics.Timer$Context</MissingClass>
+    <MissingClass>org.hamcrest.CoreMatchers</MissingClass>
+    <MissingClass>org.hamcrest.Matcher</MissingClass>
+    <MissingClass>org.hamcrest.Matchers</MissingClass>
+    <MissingClass>org.jboss.shrinkwrap.api.Assignable</MissingClass>
+    <MissingClass>org.jboss.shrinkwrap.api.ShrinkWrap</MissingClass>
+    <MissingClass>org.jboss.shrinkwrap.api.asset.Asset</MissingClass>
+    <MissingClass>org.jboss.shrinkwrap.api.asset.EmptyAsset</MissingClass>
+    <MissingClass>org.jboss.shrinkwrap.api.spec.WebArchive</MissingClass>
+    <MissingClass>org.junit.Assert</MissingClass>
+    <MissingClass>org.junit.Assume</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:46 +0900" total_classes="8" referenced_classes="66" total_bugs="18" total_size="1126" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.84" clock_seconds="2.31" peak_mbytes="246.90" alloc_mbytes="4078.00" gc_seconds="0.06" priority_3="9" priority_2="9">
+    <FileStats path="org/eclipse/microprofile/metrics/test/MetricAppBean.java" bugCount="0" size="110"/>
+    <FileStats path="org/eclipse/microprofile/metrics/test/MetricAppBean2.java" bugCount="0" size="20"/>
+    <FileStats path="org/eclipse/microprofile/metrics/test/MpMetricTest.java" bugCount="12" size="880" bugHash="97e9d3958169e30ecec60ca02f10a3c5"/>
+    <FileStats path="org/eclipse/microprofile/metrics/test/ReusedMetricsTest.java" bugCount="0" size="72"/>
+    <FileStats path="org/eclipse/microprofile/metrics/test/multipleinstances/DependentScopedBean.java" bugCount="0" size="9"/>
+    <FileStats path="org/eclipse/microprofile/metrics/test/multipleinstances/MultipleBeanInstancesTest.java" bugCount="6" size="35" bugHash="fcb41984ae6d073b24eba6e9ede8a1e9"/>
+    <PackageStats package="org.eclipse.microprofile.metrics.test" total_bugs="12" total_types="6" total_size="1082" priority_3="3" priority_2="9">
+      <ClassStats class="org.eclipse.microprofile.metrics.test.MetricAppBean" sourceFile="MetricAppBean.java" interface="false" size="110" bugs="0"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.MetricAppBean2" sourceFile="MetricAppBean2.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.MpMetricTest" sourceFile="MpMetricTest.java" interface="false" size="816" bugs="10" priority_3="1" priority_2="9"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.MpMetricTest$1" sourceFile="MpMetricTest.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.MpMetricTest$MiniMeta" sourceFile="MpMetricTest.java" interface="false" size="60" bugs="2" priority_3="2"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.ReusedMetricsTest" sourceFile="ReusedMetricsTest.java" interface="false" size="72" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.microprofile.metrics.test.multipleinstances" total_bugs="6" total_types="2" total_size="44" priority_3="6">
+      <ClassStats class="org.eclipse.microprofile.metrics.test.multipleinstances.DependentScopedBean" sourceFile="DependentScopedBean.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.eclipse.microprofile.metrics.test.multipleinstances.MultipleBeanInstancesTest" sourceFile="MultipleBeanInstancesTest.java" interface="false" size="35" bugs="6" priority_3="6"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="217" invocations="733" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="9695" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="164" invocations="8" avgMicrosecondsPerInvocation="20526" maxMicrosecondsPerInvocation="159937" standardDeviationMicrosecondsPerInvocation="52709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="107" invocations="127" avgMicrosecondsPerInvocation="843" maxMicrosecondsPerInvocation="22991" standardDeviationMicrosecondsPerInvocation="2436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="103" invocations="127" avgMicrosecondsPerInvocation="816" maxMicrosecondsPerInvocation="13525" standardDeviationMicrosecondsPerInvocation="1918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="95" invocations="127" avgMicrosecondsPerInvocation="755" maxMicrosecondsPerInvocation="9918" standardDeviationMicrosecondsPerInvocation="1467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="91" invocations="177" avgMicrosecondsPerInvocation="518" maxMicrosecondsPerInvocation="5920" standardDeviationMicrosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="83" invocations="130" avgMicrosecondsPerInvocation="643" maxMicrosecondsPerInvocation="10521" standardDeviationMicrosecondsPerInvocation="1429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="80" invocations="66" avgMicrosecondsPerInvocation="1225" maxMicrosecondsPerInvocation="8001" standardDeviationMicrosecondsPerInvocation="1803"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="72" invocations="8" avgMicrosecondsPerInvocation="9113" maxMicrosecondsPerInvocation="68850" standardDeviationMicrosecondsPerInvocation="22604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="69" invocations="66" avgMicrosecondsPerInvocation="1047" maxMicrosecondsPerInvocation="11324" standardDeviationMicrosecondsPerInvocation="1897"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="61" invocations="382" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="2835" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="127" avgMicrosecondsPerInvocation="395" maxMicrosecondsPerInvocation="7581" standardDeviationMicrosecondsPerInvocation="833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="34" invocations="55" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="6190" standardDeviationMicrosecondsPerInvocation="990"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="89" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="2778" standardDeviationMicrosecondsPerInvocation="468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="30" invocations="127" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="18647" standardDeviationMicrosecondsPerInvocation="1647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="29" invocations="739" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="1967" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="66" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="10992" standardDeviationMicrosecondsPerInvocation="1376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="66" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="6160" standardDeviationMicrosecondsPerInvocation="893"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="28" invocations="8" avgMicrosecondsPerInvocation="3531" maxMicrosecondsPerInvocation="17280" standardDeviationMicrosecondsPerInvocation="5417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="132" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="10903" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="24" invocations="66" avgMicrosecondsPerInvocation="371" maxMicrosecondsPerInvocation="16826" standardDeviationMicrosecondsPerInvocation="2051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="21" invocations="127" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="2528" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="66" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="2007" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="636" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="747" standardDeviationMicrosecondsPerInvocation="69"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

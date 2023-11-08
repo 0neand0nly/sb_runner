@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445930687" analysisTimestamp="1699447555805" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\patterntesting-check-rt-2.1.1.jar</Jar>
+  </Project>
+  <BugInstance type="AA_ASSERTION_OF_ARGUMENTS" priority="3" rank="19" abbrev="AA" category="BAD_PRACTICE" instanceHash="b1d3dc7aeae5a043dff4972c1d976df8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Assertion is used to validate an argument of a public method</ShortMessage>
+    <LongMessage>Assertion validates method argument at patterntesting.check.runtime.AbstractNullPointerTrap.ajc$afterReturning$patterntesting_check_runtime_AbstractNullPointerTrap$2$2927bb32(Object, JoinPoint$StaticPart). If assertions are disabled, there won&apos;t be any argument validation.</LongMessage>
+    <Class classname="patterntesting.check.runtime.AbstractNullPointerTrap" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.AbstractNullPointerTrap" start="1" end="184" sourcefile="AbstractNullPointerTrap.aj" sourcepath="patterntesting/check/runtime/AbstractNullPointerTrap.aj">
+        <Message>At AbstractNullPointerTrap.aj:[lines 1-184]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.AbstractNullPointerTrap</Message>
+    </Class>
+    <Method classname="patterntesting.check.runtime.AbstractNullPointerTrap" name="ajc$afterReturning$patterntesting_check_runtime_AbstractNullPointerTrap$2$2927bb32" signature="(Ljava/lang/Object;Lorg/aspectj/lang/JoinPoint$StaticPart;)V" isStatic="false" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.AbstractNullPointerTrap" start="152" end="154" startBytecode="0" endBytecode="121" sourcefile="AbstractNullPointerTrap.aj" sourcepath="patterntesting/check/runtime/AbstractNullPointerTrap.aj"/>
+      <Message>In method patterntesting.check.runtime.AbstractNullPointerTrap.ajc$afterReturning$patterntesting_check_runtime_AbstractNullPointerTrap$2$2927bb32(Object, JoinPoint$StaticPart)</Message>
+    </Method>
+    <SourceLine classname="patterntesting.check.runtime.AbstractNullPointerTrap" primary="true" start="152" end="152" startBytecode="7" endBytecode="7" sourcefile="AbstractNullPointerTrap.aj" sourcepath="patterntesting/check/runtime/AbstractNullPointerTrap.aj">
+      <Message>At AbstractNullPointerTrap.aj:[line 152]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="53a03c644a23777ab500cf1b4ff9a325" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.DeprecatedAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.DeprecatedAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" start="1" end="157" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj">
+        <Message>At DeprecatedAspect.aj:[lines 1-157]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.DeprecatedAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.DeprecatedAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/DeprecatedAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj">
+        <Message>In DeprecatedAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.DeprecatedAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj" synthetic="true">
+      <Message>In DeprecatedAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="10f74c78b203f300d2b5052f02155a3e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.DeprecatedAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.DeprecatedAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" start="1" end="157" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj">
+        <Message>At DeprecatedAspect.aj:[lines 1-157]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.DeprecatedAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.DeprecatedAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/DeprecatedAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj">
+        <Message>In DeprecatedAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.DeprecatedAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.DeprecatedAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="DeprecatedAspect.aj" sourcepath="patterntesting/check/runtime/DeprecatedAspect.aj">
+      <Message>At DeprecatedAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="30afdb652e87a8aea7578f99eac480ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.LoggerAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.LoggerAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.LoggerAspect" start="1" end="56" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj">
+        <Message>At LoggerAspect.aj:[lines 1-56]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.LoggerAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.LoggerAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/LoggerAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.LoggerAspect" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj">
+        <Message>In LoggerAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.LoggerAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.LoggerAspect" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj" synthetic="true">
+      <Message>In LoggerAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="cdbea5b8eae3fe767ec84b8e891cd81a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.LoggerAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.LoggerAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.LoggerAspect" start="1" end="56" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj">
+        <Message>At LoggerAspect.aj:[lines 1-56]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.LoggerAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.LoggerAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/LoggerAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.LoggerAspect" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj">
+        <Message>In LoggerAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.LoggerAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.LoggerAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="LoggerAspect.aj" sourcepath="patterntesting/check/runtime/LoggerAspect.aj">
+      <Message>At LoggerAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="dab40c26c4ffc594ef448ee9f9711aa6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.NotNullAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.NotNullAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NotNullAspect" start="1" end="149" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj">
+        <Message>At NotNullAspect.aj:[lines 1-149]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.NotNullAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.NotNullAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/NotNullAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NotNullAspect" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj">
+        <Message>In NotNullAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.NotNullAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.NotNullAspect" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj" synthetic="true">
+      <Message>In NotNullAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="43aedf794042bb54db55601581c6f38a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.NotNullAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.NotNullAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NotNullAspect" start="1" end="149" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj">
+        <Message>At NotNullAspect.aj:[lines 1-149]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.NotNullAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.NotNullAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/NotNullAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NotNullAspect" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj">
+        <Message>In NotNullAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.NotNullAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.NotNullAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="NotNullAspect.aj" sourcepath="patterntesting/check/runtime/NotNullAspect.aj">
+      <Message>At NotNullAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="1e7cab010dd082fd00097a3ed50693f9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.NullPointerTrap.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.NullPointerTrap" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" start="1" end="90" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj">
+        <Message>At NullPointerTrap.aj:[lines 1-90]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.NullPointerTrap</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.NullPointerTrap" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/NullPointerTrap;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj">
+        <Message>In NullPointerTrap.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.NullPointerTrap.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj" synthetic="true">
+      <Message>In NullPointerTrap.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="ef59aa03274a7e3a7372e8bf6e2ae0ba" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.NullPointerTrap.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.NullPointerTrap" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" start="1" end="90" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj">
+        <Message>At NullPointerTrap.aj:[lines 1-90]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.NullPointerTrap</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.NullPointerTrap" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/NullPointerTrap;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj">
+        <Message>In NullPointerTrap.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.NullPointerTrap.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.NullPointerTrap" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="NullPointerTrap.aj" sourcepath="patterntesting/check/runtime/NullPointerTrap.aj">
+      <Message>At NullPointerTrap.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="248dbb2c56aa543dafc4bce6065e5a97" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$0 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$0" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$0</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="2c19723b3640e3bfd48012d1158214f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$1 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$1" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$1</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="4fb6e1185ab061dbfdbbee98752e02a7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$2 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$2" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$2</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="ccfa7f7d0f20461d2fc88a2fb8cde967" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$3 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$3" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$3</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="23a3d44f75ef39f0d85067f48a46c4d2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$4 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$4" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$4</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="27a656ca1a8fb483b4470160b12c6540" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$5 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$5" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$5</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="fd82ce691198b653b86c7296233ef0ef" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$6 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$6" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$6</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="623b9355624b9ecc04eac44fb3ebc5c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$7 isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$7" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$7</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="575ce8552d3f1a4c90907ee0eee73e8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.PublicForTestingAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/PublicForTestingAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj" synthetic="true">
+      <Message>In PublicForTestingAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="cc55f879262f02ff5bda3acf30ac7cce" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$0 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$0" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$0</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="118" endBytecode="118" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="b00b48432ba8e80e8b21494a86ac0421" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$1 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$1" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$1</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="108" endBytecode="108" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="f6486774a4582a39b0381710c8ba5645" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$2 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$2" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$2</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="98" endBytecode="98" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="c7ac9b5ac03c5b551dcb04d5166aa44f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$3 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$3" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$3</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="88" endBytecode="88" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="fb27c3203b1a0204e7c38cb3d5c1dc91" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$4 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$4" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$4</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="78" endBytecode="78" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="91f8b8b0a2adb285f126d0be98f3175b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$5 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$5" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$5</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="68" endBytecode="68" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="844ecf5268d867f4979de0deae0e7d2f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$6 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$6" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$6</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="58" endBytecode="58" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="def67be311a92cc61f13e137e14691e3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$7 is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$cflowCounter$7" signature="Lorg/aspectj/runtime/internal/CFlowCounter;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$cflowCounter$7</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="48" endBytecode="48" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="3eee257040f22df9727a1dc4ee707709" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.PublicForTestingAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" start="1" end="100" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>At PublicForTestingAspect.aj:[lines 1-100]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.PublicForTestingAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.PublicForTestingAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/PublicForTestingAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+        <Message>In PublicForTestingAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.PublicForTestingAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.PublicForTestingAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="PublicForTestingAspect.aj" sourcepath="patterntesting/check/runtime/PublicForTestingAspect.aj">
+      <Message>At PublicForTestingAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="17f8bc42b2b63d42d5d5478e3708649c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>patterntesting.check.runtime.ZombieAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="patterntesting.check.runtime.ZombieAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.ZombieAspect" start="1" end="157" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj">
+        <Message>At ZombieAspect.aj:[lines 1-157]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.ZombieAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.ZombieAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/ZombieAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.ZombieAspect" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj">
+        <Message>In ZombieAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.ZombieAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.ZombieAspect" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj" synthetic="true">
+      <Message>In ZombieAspect.aj</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="60b44d07f6e71ef91b7f5ea8bb8d4be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field patterntesting.check.runtime.ZombieAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="patterntesting.check.runtime.ZombieAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.ZombieAspect" start="1" end="157" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj">
+        <Message>At ZombieAspect.aj:[lines 1-157]</Message>
+      </SourceLine>
+      <Message>In class patterntesting.check.runtime.ZombieAspect</Message>
+    </Class>
+    <Field classname="patterntesting.check.runtime.ZombieAspect" name="ajc$perSingletonInstance" signature="Lpatterntesting/check/runtime/ZombieAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="patterntesting.check.runtime.ZombieAspect" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj">
+        <Message>In ZombieAspect.aj</Message>
+      </SourceLine>
+      <Message>Field patterntesting.check.runtime.ZombieAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="patterntesting.check.runtime.ZombieAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="ZombieAspect.aj" sourcepath="patterntesting/check/runtime/ZombieAspect.aj">
+      <Message>At ZombieAspect.aj:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="AA_ASSERTION_OF_ARGUMENTS" abbrev="AA" category="BAD_PRACTICE">
+    <ShortDescription>Assertion is used to validate an argument of a public method</ShortDescription>
+    <Details><![CDATA[
+      
+        <p>Asssertions must not be used to validate arguments of public methods because the validations are
+        not performed if assertions are disabled.</p>
+
+        <p>
+        See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET01-J.+Never+use+assertions+to+validate+method+arguments">MET01-J. Never use assertions to validate method arguments</a>
+        for more information.
+        </p>
+        
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="AA">
+    <Description>Misuse of assertions for checking arguments of public methods</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="20">
+    <MissingClass>javax.validation.constraints.NotNull</MissingClass>
+    <MissingClass>org.apache.logging.log4j.LogManager</MissingClass>
+    <MissingClass>org.apache.logging.log4j.Logger</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint$StaticPart</MissingClass>
+    <MissingClass>org.aspectj.lang.NoAspectBoundException</MissingClass>
+    <MissingClass>org.aspectj.lang.Signature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.CodeSignature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.ConstructorSignature</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.SourceLocation</MissingClass>
+    <MissingClass>org.aspectj.runtime.internal.AroundClosure</MissingClass>
+    <MissingClass>org.aspectj.runtime.internal.CFlowCounter</MissingClass>
+    <MissingClass>org.aspectj.runtime.internal.Conversions</MissingClass>
+    <MissingClass>org.aspectj.runtime.reflect.Factory</MissingClass>
+    <MissingClass>patterntesting.annotation.check.runtime.MayBeNull</MissingClass>
+    <MissingClass>patterntesting.runtime.log.AbstractSequenceDiagramAspect</MissingClass>
+    <MissingClass>patterntesting.runtime.log.SequenceDiagramAspect</MissingClass>
+    <MissingClass>patterntesting.runtime.log.SequenceGrapher</MissingClass>
+    <MissingClass>patterntesting.runtime.util.Assertions</MissingClass>
+    <MissingClass>patterntesting.runtime.util.JoinPointHelper</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:50 +0900" total_classes="11" referenced_classes="51" total_bugs="29" total_size="371" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.33" clock_seconds="1.65" peak_mbytes="239.45" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="15" priority_2="14">
+    <FileStats path="patterntesting/check/runtime/AbstractDeprecatedAspect.aj" bugCount="0" size="22"/>
+    <FileStats path="patterntesting/check/runtime/AbstractLoggerAspect.aj" bugCount="0" size="52"/>
+    <FileStats path="patterntesting/check/runtime/AbstractNullPointerTrap.aj" bugCount="1" size="58" bugHash="90b683e65992485caf06d19ec032d00f"/>
+    <FileStats path="patterntesting/check/runtime/DeprecatedAspect.aj" bugCount="2" size="35" bugHash="c971b9efe3b625f06a82754d50093674"/>
+    <FileStats path="patterntesting/check/runtime/DeprecatedCodeException.java" bugCount="0" size="12"/>
+    <FileStats path="patterntesting/check/runtime/LoggerAspect.aj" bugCount="2" size="14" bugHash="e6f37dc791c6631d8d9cccd50b710c56"/>
+    <FileStats path="patterntesting/check/runtime/NotNullAspect.aj" bugCount="2" size="65" bugHash="bf571094a8fd97ab17f3b320bc4d012e"/>
+    <FileStats path="patterntesting/check/runtime/NullPointerTrap.aj" bugCount="2" size="29" bugHash="f6e5a2271b27b8afbfbdc2670076c3f2"/>
+    <FileStats path="patterntesting/check/runtime/PublicForTestingAspect.aj" bugCount="18" size="40" bugHash="9c7cc2bdaa9116a101bae9a7e80bdb93"/>
+    <FileStats path="patterntesting/check/runtime/ZombieAspect.aj" bugCount="2" size="35" bugHash="593ad5e9d522a2464c44abbd9052c5ba"/>
+    <FileStats path="patterntesting/check/runtime/ZombieException.java" bugCount="0" size="9"/>
+    <PackageStats package="patterntesting.check.runtime" total_bugs="29" total_types="11" total_size="371" priority_3="15" priority_2="14">
+      <ClassStats class="patterntesting.check.runtime.AbstractDeprecatedAspect" sourceFile="AbstractDeprecatedAspect.aj" interface="false" size="22" bugs="0"/>
+      <ClassStats class="patterntesting.check.runtime.AbstractLoggerAspect" sourceFile="AbstractLoggerAspect.aj" interface="false" size="52" bugs="0"/>
+      <ClassStats class="patterntesting.check.runtime.AbstractNullPointerTrap" sourceFile="AbstractNullPointerTrap.aj" interface="false" size="58" bugs="1" priority_3="1"/>
+      <ClassStats class="patterntesting.check.runtime.DeprecatedAspect" sourceFile="DeprecatedAspect.aj" interface="false" size="35" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="patterntesting.check.runtime.DeprecatedCodeException" sourceFile="DeprecatedCodeException.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="patterntesting.check.runtime.LoggerAspect" sourceFile="LoggerAspect.aj" interface="false" size="14" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="patterntesting.check.runtime.NotNullAspect" sourceFile="NotNullAspect.aj" interface="false" size="65" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="patterntesting.check.runtime.NullPointerTrap" sourceFile="NullPointerTrap.aj" interface="false" size="29" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="patterntesting.check.runtime.PublicForTestingAspect" sourceFile="PublicForTestingAspect.aj" interface="false" size="40" bugs="18" priority_3="9" priority_2="9"/>
+      <ClassStats class="patterntesting.check.runtime.ZombieAspect" sourceFile="ZombieAspect.aj" interface="false" size="35" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="patterntesting.check.runtime.ZombieException" sourceFile="ZombieException.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="205" invocations="594" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="13239" standardDeviationMicrosecondsPerInvocation="861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="64" invocations="105" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="8363" standardDeviationMicrosecondsPerInvocation="1307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="59" invocations="105" avgMicrosecondsPerInvocation="563" maxMicrosecondsPerInvocation="11469" standardDeviationMicrosecondsPerInvocation="1536"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="51" avgMicrosecondsPerInvocation="1092" maxMicrosecondsPerInvocation="5512" standardDeviationMicrosecondsPerInvocation="1604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="48" invocations="105" avgMicrosecondsPerInvocation="461" maxMicrosecondsPerInvocation="7807" standardDeviationMicrosecondsPerInvocation="1150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="46" invocations="252" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="4106" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="110" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="6820" standardDeviationMicrosecondsPerInvocation="898"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="41" invocations="109" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="9873" standardDeviationMicrosecondsPerInvocation="1064"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="51" avgMicrosecondsPerInvocation="784" maxMicrosecondsPerInvocation="4958" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="105" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="5879" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="11" avgMicrosecondsPerInvocation="2496" maxMicrosecondsPerInvocation="15261" standardDeviationMicrosecondsPerInvocation="4193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="600" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="2184" standardDeviationMicrosecondsPerInvocation="112"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="25" invocations="114" avgMicrosecondsPerInvocation="227" maxMicrosecondsPerInvocation="16533" standardDeviationMicrosecondsPerInvocation="1540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="97" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="11170" standardDeviationMicrosecondsPerInvocation="1148"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="51" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="3641" standardDeviationMicrosecondsPerInvocation="710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="51" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="3144" standardDeviationMicrosecondsPerInvocation="658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="19" invocations="11" avgMicrosecondsPerInvocation="1803" maxMicrosecondsPerInvocation="4375" standardDeviationMicrosecondsPerInvocation="1385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="525" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="628" standardDeviationMicrosecondsPerInvocation="70"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="19" invocations="72" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="1925" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="11" avgMicrosecondsPerInvocation="1515" maxMicrosecondsPerInvocation="14125" standardDeviationMicrosecondsPerInvocation="3993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="51" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="5449" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="14" invocations="11" avgMicrosecondsPerInvocation="1295" maxMicrosecondsPerInvocation="10160" standardDeviationMicrosecondsPerInvocation="2827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="13" invocations="51" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="2229" standardDeviationMicrosecondsPerInvocation="491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="105" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="2893" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="11" invocations="51" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="1450" standardDeviationMicrosecondsPerInvocation="297"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

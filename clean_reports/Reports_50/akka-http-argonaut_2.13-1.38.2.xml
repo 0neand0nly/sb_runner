@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445404290" analysisTimestamp="1699447467544" release="">
+  <Project projectName="">
+    <Jar>./clean50\\akka-http-argonaut_2.13-1.38.2.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="b0398fe036042e9e8d1727216af401fd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller from instance method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller_$eq(Marshaller)</LongMessage>
+    <Class classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>At ArgonautSupport.scala:[line 38]</Message>
+      </SourceLine>
+      <Message>In class de.heikoseeberger.akkahttpargonaut.ArgonautSupport$</Message>
+    </Class>
+    <Method classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller_$eq" signature="(Lakka/http/scaladsl/marshalling/Marshaller;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" startBytecode="0" endBytecode="56" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala"/>
+      <Message>In method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller_$eq(Marshaller)</Message>
+    </Method>
+    <Field classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller" signature="Lakka/http/scaladsl/marshalling/Marshaller;" isStatic="true" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>In ArgonautSupport.scala</Message>
+      </SourceLine>
+      <Message>Field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonSourceStringMarshaller</Message>
+    </Field>
+    <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true" start="38" end="38" startBytecode="1" endBytecode="1" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+      <Message>At ArgonautSupport.scala:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="b8ba2046422fc997ca2e56f1cf2958eb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller from instance method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller_$eq(Marshaller)</LongMessage>
+    <Class classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>At ArgonautSupport.scala:[line 38]</Message>
+      </SourceLine>
+      <Message>In class de.heikoseeberger.akkahttpargonaut.ArgonautSupport$</Message>
+    </Class>
+    <Method classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller_$eq" signature="(Lakka/http/scaladsl/marshalling/Marshaller;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" startBytecode="0" endBytecode="56" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala"/>
+      <Message>In method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller_$eq(Marshaller)</Message>
+    </Method>
+    <Field classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller" signature="Lakka/http/scaladsl/marshalling/Marshaller;" isStatic="true" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>In ArgonautSupport.scala</Message>
+      </SourceLine>
+      <Message>Field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringMarshaller</Message>
+    </Field>
+    <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true" start="38" end="38" startBytecode="1" endBytecode="1" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+      <Message>At ArgonautSupport.scala:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="2d3bbf23c8d46f6c49c5ea4e27b7db8a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller from instance method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller_$eq(Unmarshaller)</LongMessage>
+    <Class classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>At ArgonautSupport.scala:[line 38]</Message>
+      </SourceLine>
+      <Message>In class de.heikoseeberger.akkahttpargonaut.ArgonautSupport$</Message>
+    </Class>
+    <Method classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller_$eq" signature="(Lakka/http/scaladsl/unmarshalling/Unmarshaller;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" start="38" end="38" startBytecode="0" endBytecode="56" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala"/>
+      <Message>In method de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$_setter_$de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller_$eq(Unmarshaller)</Message>
+    </Method>
+    <Field classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" name="de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller" signature="Lakka/http/scaladsl/unmarshalling/Unmarshaller;" isStatic="true" primary="true">
+      <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+        <Message>In ArgonautSupport.scala</Message>
+      </SourceLine>
+      <Message>Field de.heikoseeberger.akkahttpargonaut.ArgonautSupport$.de$heikoseeberger$akkahttpargonaut$ArgonautSupport$$jsonStringUnmarshaller</Message>
+    </Field>
+    <SourceLine classname="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" primary="true" start="38" end="38" startBytecode="1" endBytecode="1" sourcefile="ArgonautSupport.scala" sourcepath="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala">
+      <Message>At ArgonautSupport.scala:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="63">
+    <MissingClass>akka.http.javadsl.common.JsonEntityStreamingSupport</MissingClass>
+    <MissingClass>akka.http.scaladsl.common.EntityStreamingSupport$</MissingClass>
+    <MissingClass>akka.http.scaladsl.marshalling.Marshaller</MissingClass>
+    <MissingClass>akka.http.scaladsl.marshalling.Marshaller$</MissingClass>
+    <MissingClass>akka.http.scaladsl.marshalling.Marshalling</MissingClass>
+    <MissingClass>akka.http.scaladsl.marshalling.Marshalling$WithFixedContentType</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.ContentType</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.ContentType$</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.ContentType$WithFixedCharset</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.ContentTypeRange$</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.HttpCharset</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.HttpEntity</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.HttpEntity$</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.HttpEntity$Chunked</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.MediaType</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.MediaType$WithFixedCharset</MissingClass>
+    <MissingClass>akka.http.scaladsl.model.MediaTypes$</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshal</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshal$</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshaller</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshaller$</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshaller$EnhancedFromEntityUnmarshaller$</MissingClass>
+    <MissingClass>akka.http.scaladsl.unmarshalling.Unmarshaller$NoContentException$</MissingClass>
+    <MissingClass>akka.http.scaladsl.util.FastFuture$</MissingClass>
+    <MissingClass>akka.stream.Graph</MissingClass>
+    <MissingClass>akka.stream.Materializer</MissingClass>
+    <MissingClass>akka.stream.scaladsl.Flow</MissingClass>
+    <MissingClass>akka.stream.scaladsl.Flow$</MissingClass>
+    <MissingClass>akka.stream.scaladsl.FlowOps</MissingClass>
+    <MissingClass>akka.stream.scaladsl.Source</MissingClass>
+    <MissingClass>akka.util.ByteString</MissingClass>
+    <MissingClass>akka.util.ByteString$</MissingClass>
+    <MissingClass>argonaut.CursorHistory</MissingClass>
+    <MissingClass>argonaut.DecodeJson</MissingClass>
+    <MissingClass>argonaut.DecodeJson$</MissingClass>
+    <MissingClass>argonaut.DecodeResult</MissingClass>
+    <MissingClass>argonaut.EncodeJson</MissingClass>
+    <MissingClass>argonaut.EncodeJson$</MissingClass>
+    <MissingClass>argonaut.Json</MissingClass>
+    <MissingClass>argonaut.Parse$</MissingClass>
+    <MissingClass>argonaut.PrettyParams</MissingClass>
+    <MissingClass>argonaut.PrettyParams$</MissingClass>
+    <MissingClass>scala.Function0</MissingClass>
+    <MissingClass>scala.Function1</MissingClass>
+    <MissingClass>scala.Function2</MissingClass>
+    <MissingClass>scala.MatchError</MissingClass>
+    <MissingClass>scala.Option</MissingClass>
+    <MissingClass>scala.Tuple2</MissingClass>
+    <MissingClass>scala.collection.immutable.List$</MissingClass>
+    <MissingClass>scala.collection.immutable.Nil$</MissingClass>
+    <MissingClass>scala.collection.immutable.Seq</MissingClass>
+    <MissingClass>scala.concurrent.ExecutionContext</MissingClass>
+    <MissingClass>scala.concurrent.Future</MissingClass>
+    <MissingClass>scala.concurrent.Future$</MissingClass>
+    <MissingClass>scala.package$</MissingClass>
+    <MissingClass>scala.runtime.LambdaDeserialize</MissingClass>
+    <MissingClass>scala.runtime.Nothing$</MissingClass>
+    <MissingClass>scala.runtime.ScalaRunTime$</MissingClass>
+    <MissingClass>scala.sys.package$</MissingClass>
+    <MissingClass>scala.util.Either</MissingClass>
+    <MissingClass>scala.util.Left</MissingClass>
+    <MissingClass>scala.util.Right</MissingClass>
+    <MissingClass>scala.util.control.NonFatal$</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:10:04 +0900" total_classes="2" referenced_classes="21" total_bugs="3" total_size="135" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.72" clock_seconds="1.14" peak_mbytes="223.16" alloc_mbytes="4078.00" gc_seconds="0.02" priority_1="3">
+    <FileStats path="de/heikoseeberger/akkahttpargonaut/ArgonautSupport.scala" bugCount="3" size="135" bugHash="24448b009dd322d52ed0dc212422314f"/>
+    <PackageStats package="de.heikoseeberger.akkahttpargonaut" total_bugs="3" total_types="2" total_size="135" priority_1="3">
+      <ClassStats class="de.heikoseeberger.akkahttpargonaut.ArgonautSupport" sourceFile="ArgonautSupport.scala" interface="true" size="112" bugs="0"/>
+      <ClassStats class="de.heikoseeberger.akkahttpargonaut.ArgonautSupport$" sourceFile="ArgonautSupport.scala" interface="false" size="23" bugs="3" priority_1="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="204" invocations="515" avgMicrosecondsPerInvocation="396" maxMicrosecondsPerInvocation="15531" standardDeviationMicrosecondsPerInvocation="1069"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="51" invocations="21" avgMicrosecondsPerInvocation="2456" maxMicrosecondsPerInvocation="12947" standardDeviationMicrosecondsPerInvocation="3006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="31" invocations="66" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="11278" standardDeviationMicrosecondsPerInvocation="1569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="30" invocations="164" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="2552" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="28" invocations="21" avgMicrosecondsPerInvocation="1333" maxMicrosecondsPerInvocation="4624" standardDeviationMicrosecondsPerInvocation="1359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="517" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="2206" standardDeviationMicrosecondsPerInvocation="135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="80" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="14260" standardDeviationMicrosecondsPerInvocation="1597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="22" invocations="21" avgMicrosecondsPerInvocation="1072" maxMicrosecondsPerInvocation="18112" standardDeviationMicrosecondsPerInvocation="3819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="21" invocations="66" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="8011" standardDeviationMicrosecondsPerInvocation="987"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="21" invocations="66" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="8197" standardDeviationMicrosecondsPerInvocation="1051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="2" avgMicrosecondsPerInvocation="10788" maxMicrosecondsPerInvocation="21554" standardDeviationMicrosecondsPerInvocation="10766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="20" invocations="409" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="1145" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="20" invocations="72" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="16085" standardDeviationMicrosecondsPerInvocation="1876"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="16" invocations="66" avgMicrosecondsPerInvocation="243" maxMicrosecondsPerInvocation="3446" standardDeviationMicrosecondsPerInvocation="460"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="15" invocations="21" avgMicrosecondsPerInvocation="761" maxMicrosecondsPerInvocation="5655" standardDeviationMicrosecondsPerInvocation="1193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="15" invocations="66" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="5895" standardDeviationMicrosecondsPerInvocation="722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="15" invocations="66" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="5793" standardDeviationMicrosecondsPerInvocation="706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="21" avgMicrosecondsPerInvocation="720" maxMicrosecondsPerInvocation="2998" standardDeviationMicrosecondsPerInvocation="857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="11" invocations="2" avgMicrosecondsPerInvocation="5811" maxMicrosecondsPerInvocation="10790" standardDeviationMicrosecondsPerInvocation="4979"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

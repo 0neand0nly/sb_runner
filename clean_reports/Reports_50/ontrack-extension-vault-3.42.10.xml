@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445897321" analysisTimestamp="1699447548099" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\ontrack-extension-vault-3.42.10.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="673d9b769082aea3163d5d3bde05604f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.nemerosa.ontrack.extension.vault.Key.component1() may expose internal representation by returning Key.payload</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.Key" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" start="7" end="8" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>At Key.kt:[lines 7-8]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.Key</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.Key" name="component1" signature="()[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt"/>
+      <Message>In method net.nemerosa.ontrack.extension.vault.Key.component1()</Message>
+    </Method>
+    <Field classname="net.nemerosa.ontrack.extension.vault.Key" name="payload" signature="[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>In Key.kt</Message>
+      </SourceLine>
+      <Message>Field net.nemerosa.ontrack.extension.vault.Key.payload</Message>
+    </Field>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" startBytecode="4" endBytecode="4" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+      <Message>In Key.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="24ebd8f10dc1dc36ca039764ca1492c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.nemerosa.ontrack.extension.vault.Key.getPayload() may expose internal representation by returning Key.payload</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.Key" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" start="7" end="8" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>At Key.kt:[lines 7-8]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.Key</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.Key" name="getPayload" signature="()[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" start="8" end="8" startBytecode="0" endBytecode="46" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt"/>
+      <Message>In method net.nemerosa.ontrack.extension.vault.Key.getPayload()</Message>
+    </Method>
+    <Field classname="net.nemerosa.ontrack.extension.vault.Key" name="payload" signature="[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>In Key.kt</Message>
+      </SourceLine>
+      <Message>Field net.nemerosa.ontrack.extension.vault.Key.payload</Message>
+    </Field>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" primary="true" start="8" end="8" startBytecode="4" endBytecode="4" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+      <Message>At Key.kt:[line 8]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6d152f145742098c36b0f128410d0518" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.nemerosa.ontrack.extension.vault.Key(byte[]) may expose internal representation by storing an externally mutable object into Key.payload</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.Key" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" start="7" end="8" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>At Key.kt:[lines 7-8]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.Key</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.Key" name="&lt;init&gt;" signature="([B)V" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" start="7" end="7" startBytecode="0" endBytecode="67" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt"/>
+      <Message>In method new net.nemerosa.ontrack.extension.vault.Key(byte[])</Message>
+    </Method>
+    <Field classname="net.nemerosa.ontrack.extension.vault.Key" name="payload" signature="[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+        <Message>In Key.kt</Message>
+      </SourceLine>
+      <Message>Field net.nemerosa.ontrack.extension.vault.Key.payload</Message>
+    </Field>
+    <LocalVariable name="payload" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named payload</Message>
+    </LocalVariable>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.Key" primary="true" start="7" end="7" startBytecode="12" endBytecode="12" sourcefile="Key.kt" sourcepath="net/nemerosa/ontrack/extension/vault/Key.kt">
+      <Message>At Key.kt:[line 7]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="e89931a3853d8d2f343f5d3631c52e78" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.nemerosa.ontrack.extension.vault.VaultConfidentialStore(VaultOperations, VaultConfigProperties) may expose internal representation by storing an externally mutable object into VaultConfidentialStore.configProperties</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="17" end="49" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+        <Message>At VaultConfidentialStore.kt:[lines 17-49]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.VaultConfidentialStore</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" name="&lt;init&gt;" signature="(Lorg/springframework/vault/core/VaultOperations;Lnet/nemerosa/ontrack/extension/vault/VaultConfigProperties;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="17" end="41" startBytecode="0" endBytecode="141" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt"/>
+      <Message>In method new net.nemerosa.ontrack.extension.vault.VaultConfidentialStore(VaultOperations, VaultConfigProperties)</Message>
+    </Method>
+    <Field classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" name="configProperties" signature="Lnet/nemerosa/ontrack/extension/vault/VaultConfigProperties;" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+        <Message>In VaultConfidentialStore.kt</Message>
+      </SourceLine>
+      <Message>Field net.nemerosa.ontrack.extension.vault.VaultConfidentialStore.configProperties</Message>
+    </Field>
+    <LocalVariable name="configProperties" register="2" pc="23" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configProperties</Message>
+    </LocalVariable>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" start="20" end="20" startBytecode="23" endBytecode="23" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+      <Message>At VaultConfidentialStore.kt:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="e40d60a316a7e610cb08a5627756525f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should net.nemerosa.ontrack.extension.vault.VaultConfidentialStore.load(String) return a zero length array rather than null?</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="17" end="49" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+        <Message>At VaultConfidentialStore.kt:[lines 17-49]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.VaultConfidentialStore</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" name="load" signature="(Ljava/lang/String;)[B" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="32" end="49" startBytecode="0" endBytecode="382" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt"/>
+      <Message>In method net.nemerosa.ontrack.extension.vault.VaultConfidentialStore.load(String)</Message>
+    </Method>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" start="49" end="49" startBytecode="129" endBytecode="129" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+      <Message>At VaultConfidentialStore.kt:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="42a84b4407daa50b4a5ef90319870acc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of net.nemerosa.ontrack.extension.vault.VaultPayload.getData(), which is known to be non-null in net.nemerosa.ontrack.extension.vault.VaultConfidentialStore.load(String)</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="17" end="49" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt">
+        <Message>At VaultConfidentialStore.kt:[lines 17-49]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.VaultConfidentialStore</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" name="load" signature="(Ljava/lang/String;)[B" isStatic="false" primary="true" classAnnotationNames="org.springframework.stereotype.Component,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" start="32" end="49" startBytecode="0" endBytecode="382" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt"/>
+      <Message>In method net.nemerosa.ontrack.extension.vault.VaultConfidentialStore.load(String)</Message>
+    </Method>
+    <Method classname="net.nemerosa.ontrack.extension.vault.VaultPayload" name="getData" signature="()Lcom/fasterxml/jackson/databind/JsonNode;" isStatic="false" role="METHOD_RETURN_VALUE_OF" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultPayload" start="6" end="6" startBytecode="0" endBytecode="46" sourcefile="VaultPayload.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultPayload.kt"/>
+      <Message>Return value of net.nemerosa.ontrack.extension.vault.VaultPayload.getData() of type com.fasterxml.jackson.databind.JsonNode</Message>
+    </Method>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" primary="true" start="33" end="33" startBytecode="81" endBytecode="81" sourcefile="VaultConfidentialStore.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at VaultConfidentialStore.kt:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="56d675c3c2cfada9613436ad99b8a0d3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.nemerosa.ontrack.extension.vault.VaultConfig(VaultConfigProperties) may expose internal representation by storing an externally mutable object into VaultConfig.configProperties</LongMessage>
+    <Class classname="net.nemerosa.ontrack.extension.vault.VaultConfig" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfig" start="14" end="22" sourcefile="VaultConfig.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfig.kt">
+        <Message>At VaultConfig.kt:[lines 14-22]</Message>
+      </SourceLine>
+      <Message>In class net.nemerosa.ontrack.extension.vault.VaultConfig</Message>
+    </Class>
+    <Method classname="net.nemerosa.ontrack.extension.vault.VaultConfig" name="&lt;init&gt;" signature="(Lnet/nemerosa/ontrack/extension/vault/VaultConfigProperties;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfig" start="14" end="16" startBytecode="0" endBytecode="71" sourcefile="VaultConfig.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfig.kt"/>
+      <Message>In method new net.nemerosa.ontrack.extension.vault.VaultConfig(VaultConfigProperties)</Message>
+    </Method>
+    <Field classname="net.nemerosa.ontrack.extension.vault.VaultConfig" name="configProperties" signature="Lnet/nemerosa/ontrack/extension/vault/VaultConfigProperties;" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.autoconfigure.condition.ConditionalOnProperty,kotlin.Metadata">
+      <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfig" sourcefile="VaultConfig.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfig.kt">
+        <Message>In VaultConfig.kt</Message>
+      </SourceLine>
+      <Message>Field net.nemerosa.ontrack.extension.vault.VaultConfig.configProperties</Message>
+    </Field>
+    <LocalVariable name="configProperties" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configProperties</Message>
+    </LocalVariable>
+    <SourceLine classname="net.nemerosa.ontrack.extension.vault.VaultConfig" primary="true" start="16" end="16" startBytecode="12" endBytecode="12" sourcefile="VaultConfig.kt" sourcepath="net/nemerosa/ontrack/extension/vault/VaultConfig.kt">
+      <Message>At VaultConfig.kt:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>kotlin.jvm.internal.DefaultConstructorMarker</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Intrinsics</MissingClass>
+    <MissingClass>net.nemerosa.ontrack.extension.support.AbstractExtensionFeature</MissingClass>
+    <MissingClass>net.nemerosa.ontrack.json.JsonParseException</MissingClass>
+    <MissingClass>net.nemerosa.ontrack.json.JsonUtils</MissingClass>
+    <MissingClass>net.nemerosa.ontrack.json.KTJsonUtilsKt</MissingClass>
+    <MissingClass>net.nemerosa.ontrack.model.security.AbstractConfidentialStore</MissingClass>
+    <MissingClass>org.apache.commons.lang3.Validate</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.vault.authentication.ClientAuthentication</MissingClass>
+    <MissingClass>org.springframework.vault.authentication.TokenAuthentication</MissingClass>
+    <MissingClass>org.springframework.vault.client.VaultEndpoint</MissingClass>
+    <MissingClass>org.springframework.vault.config.AbstractVaultConfiguration</MissingClass>
+    <MissingClass>org.springframework.vault.core.VaultKeyValueOperations</MissingClass>
+    <MissingClass>org.springframework.vault.core.VaultKeyValueOperationsSupport$KeyValueBackend</MissingClass>
+    <MissingClass>org.springframework.vault.core.VaultOperations</MissingClass>
+    <MissingClass>org.springframework.vault.support.VaultResponseSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:17 +0900" total_classes="7" referenced_classes="22" total_bugs="7" total_size="91" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.55" clock_seconds="0.98" peak_mbytes="220.18" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="2" priority_2="5">
+    <FileStats path="net/nemerosa/ontrack/extension/vault/Key.kt" bugCount="3" size="12" bugHash="b37a169b80020f83c9bdf872376bf717"/>
+    <FileStats path="net/nemerosa/ontrack/extension/vault/VaultConfidentialStore.kt" bugCount="3" size="28" bugHash="762665c1eaf25cb207cfabda8d79a2c3"/>
+    <FileStats path="net/nemerosa/ontrack/extension/vault/VaultConfig.kt" bugCount="1" size="11" bugHash="de27f7683ef0219125e0a4c3c8207395"/>
+    <FileStats path="net/nemerosa/ontrack/extension/vault/VaultConfigProperties.kt" bugCount="0" size="15"/>
+    <FileStats path="net/nemerosa/ontrack/extension/vault/VaultExtensionFeature.kt" bugCount="0" size="13"/>
+    <FileStats path="net/nemerosa/ontrack/extension/vault/VaultPayload.kt" bugCount="0" size="12"/>
+    <PackageStats package="net.nemerosa.ontrack.extension.vault" total_bugs="7" total_types="7" total_size="91" priority_3="2" priority_2="5">
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.Key" sourceFile="Key.kt" interface="false" size="12" bugs="3" priority_2="3"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultConfidentialStore" sourceFile="VaultConfidentialStore.kt" interface="false" size="28" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultConfig" sourceFile="VaultConfig.kt" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultConfigProperties" sourceFile="VaultConfigProperties.kt" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultExtensionFeature" sourceFile="VaultExtensionFeature.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultExtensionFeature$Companion" sourceFile="VaultExtensionFeature.kt" interface="false" size="4" bugs="0"/>
+      <ClassStats class="net.nemerosa.ontrack.extension.vault.VaultPayload" sourceFile="VaultPayload.kt" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="176" invocations="442" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="10852" standardDeviationMicrosecondsPerInvocation="975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="41" invocations="22" avgMicrosecondsPerInvocation="1892" maxMicrosecondsPerInvocation="9113" standardDeviationMicrosecondsPerInvocation="2827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="36" invocations="53" avgMicrosecondsPerInvocation="688" maxMicrosecondsPerInvocation="25306" standardDeviationMicrosecondsPerInvocation="3448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="33" invocations="181" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="2462" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="24" invocations="22" avgMicrosecondsPerInvocation="1091" maxMicrosecondsPerInvocation="6629" standardDeviationMicrosecondsPerInvocation="1678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="22" invocations="34" avgMicrosecondsPerInvocation="651" maxMicrosecondsPerInvocation="12166" standardDeviationMicrosecondsPerInvocation="2019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="21" invocations="449" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2033" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="18" invocations="34" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="15170" standardDeviationMicrosecondsPerInvocation="2546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="18" invocations="34" avgMicrosecondsPerInvocation="533" maxMicrosecondsPerInvocation="3055" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="382" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="858" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="16" invocations="7" avgMicrosecondsPerInvocation="2378" maxMicrosecondsPerInvocation="12685" standardDeviationMicrosecondsPerInvocation="4295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="16" invocations="34" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="4852" standardDeviationMicrosecondsPerInvocation="960"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="15" invocations="22" avgMicrosecondsPerInvocation="722" maxMicrosecondsPerInvocation="4529" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="22" avgMicrosecondsPerInvocation="647" maxMicrosecondsPerInvocation="6220" standardDeviationMicrosecondsPerInvocation="1341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="6580" standardDeviationMicrosecondsPerInvocation="1086"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="12" invocations="34" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="5391" standardDeviationMicrosecondsPerInvocation="893"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="11" invocations="22" avgMicrosecondsPerInvocation="528" maxMicrosecondsPerInvocation="5466" standardDeviationMicrosecondsPerInvocation="1161"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445838515" analysisTimestamp="1699447515234" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\elasticsearch-rest-client-sniffer-7.14.1.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="60191e2609ec32c84a223cb4b79c886d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of dataAttribute in org.elasticsearch.client.sniff.ElasticsearchNodesSniffer.readNode(String, JsonParser, ElasticsearchNodesSniffer$Scheme)</LongMessage>
+    <Class classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="56" end="297" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java">
+        <Message>At ElasticsearchNodesSniffer.java:[lines 56-297]</Message>
+      </SourceLine>
+      <Message>In class org.elasticsearch.client.sniff.ElasticsearchNodesSniffer</Message>
+    </Class>
+    <Method classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" name="readNode" signature="(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;Lorg/elasticsearch/client/sniff/ElasticsearchNodesSniffer$Scheme;)Lorg/elasticsearch/client/Node;" isStatic="true" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="138" end="270" startBytecode="0" endBytecode="2144" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java"/>
+      <Message>In method org.elasticsearch.client.sniff.ElasticsearchNodesSniffer.readNode(String, JsonParser, ElasticsearchNodesSniffer$Scheme)</Message>
+    </Method>
+    <LocalVariable name="dataAttribute" register="15" pc="961" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from dataAttribute</Message>
+    </LocalVariable>
+    <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" primary="true" start="261" end="261" startBytecode="963" endBytecode="963" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at ElasticsearchNodesSniffer.java:[line 261]</Message>
+    </SourceLine>
+    <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="261" end="261" startBytecode="958" endBytecode="958" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at ElasticsearchNodesSniffer.java:[line 261]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="ed06d2a3968eceef2f24e719e0665fcb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of masterAttribute in org.elasticsearch.client.sniff.ElasticsearchNodesSniffer.readNode(String, JsonParser, ElasticsearchNodesSniffer$Scheme)</LongMessage>
+    <Class classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="56" end="297" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java">
+        <Message>At ElasticsearchNodesSniffer.java:[lines 56-297]</Message>
+      </SourceLine>
+      <Message>In class org.elasticsearch.client.sniff.ElasticsearchNodesSniffer</Message>
+    </Class>
+    <Method classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" name="readNode" signature="(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonParser;Lorg/elasticsearch/client/sniff/ElasticsearchNodesSniffer$Scheme;)Lorg/elasticsearch/client/Node;" isStatic="true" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="138" end="270" startBytecode="0" endBytecode="2144" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java"/>
+      <Message>In method org.elasticsearch.client.sniff.ElasticsearchNodesSniffer.readNode(String, JsonParser, ElasticsearchNodesSniffer$Scheme)</Message>
+    </Method>
+    <LocalVariable name="masterAttribute" register="14" pc="931" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from masterAttribute</Message>
+    </LocalVariable>
+    <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" primary="true" start="258" end="258" startBytecode="933" endBytecode="933" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at ElasticsearchNodesSniffer.java:[line 258]</Message>
+    </SourceLine>
+    <SourceLine classname="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" start="258" end="258" startBytecode="928" endBytecode="928" sourcefile="ElasticsearchNodesSniffer.java" sourcepath="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at ElasticsearchNodesSniffer.java:[line 258]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="9582215141ee204483111daa56e7b12a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$1" start="300" end="303" sourcefile="Sniffer.java" sourcepath="org/elasticsearch/client/sniff/Sniffer.java">
+        <Message>At Sniffer.java:[lines 300-303]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$1</Message>
+    </Class>
+    <Class classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" start="293" end="310" sourcefile="Sniffer.java" sourcepath="org/elasticsearch/client/sniff/Sniffer.java">
+        <Message>At Sniffer.java:[lines 293-310]</Message>
+      </SourceLine>
+      <Message>In class org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory</Message>
+    </Class>
+    <Method classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" start="298" end="306" startBytecode="0" endBytecode="107" sourcefile="Sniffer.java" sourcepath="org/elasticsearch/client/sniff/Sniffer.java"/>
+      <Message>In method new org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory(String)</Message>
+    </Method>
+    <SourceLine classname="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" primary="true" start="300" end="300" startBytecode="27" endBytecode="27" sourcefile="Sniffer.java" sourcepath="org/elasticsearch/client/sniff/Sniffer.java">
+      <Message>At Sniffer.java:[line 300]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception cannot ever be executed; deciding that is beyond the ability of SpotBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>com.fasterxml.jackson.core.JsonFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonToken</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.http.HttpEntity</MissingClass>
+    <MissingClass>org.apache.http.HttpHost</MissingClass>
+    <MissingClass>org.elasticsearch.client.Node</MissingClass>
+    <MissingClass>org.elasticsearch.client.Node$Roles</MissingClass>
+    <MissingClass>org.elasticsearch.client.Request</MissingClass>
+    <MissingClass>org.elasticsearch.client.Response</MissingClass>
+    <MissingClass>org.elasticsearch.client.RestClient</MissingClass>
+    <MissingClass>org.elasticsearch.client.RestClient$FailureListener</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:17:18 +0900" total_classes="15" referenced_classes="78" total_bugs="3" total_size="397" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.20" clock_seconds="1.47" peak_mbytes="223.87" alloc_mbytes="4078.00" gc_seconds="0.02" priority_3="1" priority_2="2">
+    <FileStats path="org/elasticsearch/client/sniff/ElasticsearchNodesSniffer.java" bugCount="2" size="164" bugHash="ddd3b8981446cae2a825797b7690bb63"/>
+    <FileStats path="org/elasticsearch/client/sniff/NodesSniffer.java" bugCount="0" size="2"/>
+    <FileStats path="org/elasticsearch/client/sniff/SniffOnFailureListener.java" bugCount="0" size="18"/>
+    <FileStats path="org/elasticsearch/client/sniff/Sniffer.java" bugCount="1" size="178" bugHash="50a94e1a35a55b16629e900c08925474"/>
+    <FileStats path="org/elasticsearch/client/sniff/SnifferBuilder.java" bugCount="0" size="35"/>
+    <PackageStats package="org.elasticsearch.client.sniff" total_bugs="3" total_types="15" total_size="397" priority_3="1" priority_2="2">
+      <ClassStats class="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer" sourceFile="ElasticsearchNodesSniffer.java" interface="false" size="147" bugs="2" priority_2="2"/>
+      <ClassStats class="org.elasticsearch.client.sniff.ElasticsearchNodesSniffer$Scheme" sourceFile="ElasticsearchNodesSniffer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.NodesSniffer" sourceFile="NodesSniffer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.SniffOnFailureListener" sourceFile="SniffOnFailureListener.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer" sourceFile="Sniffer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$1" sourceFile="Sniffer.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$DefaultScheduler" sourceFile="Sniffer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$ScheduledTask" sourceFile="Sniffer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$Scheduler" sourceFile="Sniffer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory" sourceFile="Sniffer.java" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$1" sourceFile="Sniffer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$SnifferThreadFactory$2" sourceFile="Sniffer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$Task" sourceFile="Sniffer.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.Sniffer$TaskState" sourceFile="Sniffer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.elasticsearch.client.sniff.SnifferBuilder" sourceFile="SnifferBuilder.java" interface="false" size="35" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="211" invocations="630" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="16619" standardDeviationMicrosecondsPerInvocation="883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="68" invocations="78" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="7676" standardDeviationMicrosecondsPerInvocation="1606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="53" invocations="250" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="5295" standardDeviationMicrosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="71" avgMicrosecondsPerInvocation="744" maxMicrosecondsPerInvocation="16150" standardDeviationMicrosecondsPerInvocation="2539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="45" invocations="78" avgMicrosecondsPerInvocation="587" maxMicrosecondsPerInvocation="4300" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="45" invocations="67" avgMicrosecondsPerInvocation="682" maxMicrosecondsPerInvocation="21217" standardDeviationMicrosecondsPerInvocation="2661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="71" avgMicrosecondsPerInvocation="617" maxMicrosecondsPerInvocation="12357" standardDeviationMicrosecondsPerInvocation="1827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="636" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="9616" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="31" invocations="65" avgMicrosecondsPerInvocation="480" maxMicrosecondsPerInvocation="12605" standardDeviationMicrosecondsPerInvocation="1565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="30" invocations="65" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="13616" standardDeviationMicrosecondsPerInvocation="1686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="132" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="12387" standardDeviationMicrosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="24" invocations="78" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="3866" standardDeviationMicrosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="23" invocations="67" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="6956" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="21" invocations="70" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="14459" standardDeviationMicrosecondsPerInvocation="1713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="577" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="599" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="20" invocations="55" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="11558" standardDeviationMicrosecondsPerInvocation="1541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UsagesRequiringNonNullValuesFactory" totalMilliseconds="19" invocations="1" avgMicrosecondsPerInvocation="19848" maxMicrosecondsPerInvocation="19848" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="78" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="2761" standardDeviationMicrosecondsPerInvocation="523"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="78" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="5628" standardDeviationMicrosecondsPerInvocation="684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="78" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="2591" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="15" avgMicrosecondsPerInvocation="1040" maxMicrosecondsPerInvocation="10802" standardDeviationMicrosecondsPerInvocation="2679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="14" invocations="15" avgMicrosecondsPerInvocation="950" maxMicrosecondsPerInvocation="13988" standardDeviationMicrosecondsPerInvocation="3484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="78" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1368" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="78" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="3392" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="67" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="5501" standardDeviationMicrosecondsPerInvocation="728"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

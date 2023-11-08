@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699448074439" analysisTimestamp="1699448116597" release="">
+  <Project projectName="">
+    <Jar>./clean50/temp\\micro_utils.repos.exposed-jvm-0.5.17.jar</Jar>
+  </Project>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="5dd20422ff8006b8c2ea398a98f61fd1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" start="16" end="43" sourcefile="AbstractExposedReadCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedReadCRUDRepo.kt">
+        <Message>At AbstractExposedReadCRUDRepo.kt:[lines 16-43]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ldev/inmo/micro_utils/pagination/PaginationResult;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" start="17" end="19" startBytecode="0" endBytecode="68" sourcefile="AbstractExposedReadCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedReadCRUDRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="125" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" primary="true" start="43" end="43" startBytecode="127" endBytecode="127" sourcefile="AbstractExposedReadCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedReadCRUDRepo.kt">
+      <Message>At AbstractExposedReadCRUDRepo.kt:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="7c2572ba94a7e963d633bda7a2f01b5d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" start="42" end="104" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt">
+        <Message>At AbstractExposedWriteCRUDRepo.kt:[lines 42-104]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" start="43" end="43" startBytecode="0" endBytecode="51" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="106" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" primary="true" start="104" end="104" startBytecode="108" endBytecode="108" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt">
+      <Message>At AbstractExposedWriteCRUDRepo.kt:[line 104]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="9eff2b211f756ed91f2b5d434567008d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" start="83" end="104" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt">
+        <Message>At AbstractExposedWriteCRUDRepo.kt:[lines 83-104]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" start="84" end="84" startBytecode="0" endBytecode="59" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="125" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" primary="true" start="104" end="104" startBytecode="127" endBytecode="127" sourcefile="AbstractExposedWriteCRUDRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt">
+      <Message>At AbstractExposedWriteCRUDRepo.kt:[line 104]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="c30e6c381a8242414ba527d3b6b7a894" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" start="29" end="89" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+        <Message>At ExposedKeyValueRepo.kt:[lines 29-89]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" start="30" end="30" startBytecode="0" endBytecode="132" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="277" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" primary="true" start="89" end="89" startBytecode="279" endBytecode="279" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+      <Message>At ExposedKeyValueRepo.kt:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="83d095353f55f2fd7ccdbb8c4b4ebff7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" start="51" end="89" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+        <Message>At ExposedKeyValueRepo.kt:[lines 51-89]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" start="52" end="52" startBytecode="0" endBytecode="83" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="161" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" primary="true" start="89" end="89" startBytecode="163" endBytecode="163" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+      <Message>At ExposedKeyValueRepo.kt:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="f52531ee956fbe8e886984d656d2727f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" start="65" end="96" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+        <Message>At ExposedKeyValueRepo.kt:[lines 65-96]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" start="66" end="66" startBytecode="0" endBytecode="145" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="300" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" primary="true" start="96" end="96" startBytecode="302" endBytecode="302" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt">
+      <Message>At ExposedKeyValueRepo.kt:[line 96]</Message>
+    </SourceLine>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" start="93" end="93" startBytecode="251" endBytecode="251" sourcefile="ExposedKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ExposedKeyValueRepo.kt:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="6f4716cafdcd5d1babef347a410bcffd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" start="31" end="57" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+        <Message>At ExposedReadKeyValueRepo.kt:[lines 31-57]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" start="32" end="32" startBytecode="0" endBytecode="69" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="154" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" primary="true" start="57" end="57" startBytecode="156" endBytecode="156" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+      <Message>At ExposedReadKeyValueRepo.kt:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="1d1bb72a795b300fb7bc19d52290a7be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" start="37" end="58" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+        <Message>At ExposedReadKeyValueRepo.kt:[lines 37-58]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Lkotlin/Pair;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" start="38" end="38" startBytecode="0" endBytecode="115" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="14" pc="234" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" primary="true" start="58" end="58" startBytecode="236" endBytecode="236" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+      <Message>At ExposedReadKeyValueRepo.kt:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="7a9a50fd2a35166d6cab6a3fad89e4fd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" start="47" end="57" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+        <Message>At ExposedReadKeyValueRepo.kt:[lines 47-57]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" start="48" end="48" startBytecode="0" endBytecode="69" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="154" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" primary="true" start="57" end="57" startBytecode="156" endBytecode="156" sourcefile="ExposedReadKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt">
+      <Message>At ExposedReadKeyValueRepo.kt:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="1d6fd98ff4df4aadf3712db4f9b2a2a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" start="31" end="89" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt">
+        <Message>At ExposedOneToManyKeyValueRepo.kt:[lines 31-89]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" start="32" end="32" startBytecode="0" endBytecode="196" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="7" pc="423" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" primary="true" start="89" end="89" startBytecode="425" endBytecode="425" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt">
+      <Message>At ExposedOneToManyKeyValueRepo.kt:[line 89]</Message>
+    </SourceLine>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" start="86" end="86" startBytecode="388" endBytecode="388" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ExposedOneToManyKeyValueRepo.kt:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="7b9405a3a4259047071db63550b7b198" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" start="47" end="87" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt">
+        <Message>At ExposedOneToManyKeyValueRepo.kt:[lines 47-87]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" start="48" end="48" startBytecode="0" endBytecode="143" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="7" pc="307" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" primary="true" start="87" end="87" startBytecode="309" endBytecode="309" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt">
+      <Message>At ExposedOneToManyKeyValueRepo.kt:[line 87]</Message>
+    </SourceLine>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" start="84" end="84" startBytecode="272" endBytecode="272" sourcefile="ExposedOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at ExposedOneToManyKeyValueRepo.kt:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="3f4626dd49e519c44e51601296ad75cb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" start="28" end="70" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+        <Message>At ExposedReadOneToManyKeyValueRepo.kt:[lines 28-70]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" start="29" end="29" startBytecode="0" endBytecode="89" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="188" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" primary="true" start="70" end="70" startBytecode="190" endBytecode="190" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+      <Message>At ExposedReadOneToManyKeyValueRepo.kt:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="cf1aa5fe84f1edbca90db6b63b8c3e52" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" start="35" end="69" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+        <Message>At ExposedReadOneToManyKeyValueRepo.kt:[lines 35-69]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" start="36" end="36" startBytecode="0" endBytecode="65" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="142" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" primary="true" start="69" end="69" startBytecode="144" endBytecode="144" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+      <Message>At ExposedReadOneToManyKeyValueRepo.kt:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="3459912b470344ebb4de67eafcf55bbe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4.invoke(Transaction)</LongMessage>
+    <Class classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" start="46" end="70" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+        <Message>At ExposedReadOneToManyKeyValueRepo.kt:[lines 46-70]</Message>
+      </SourceLine>
+      <Message>In class dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4</Message>
+    </Class>
+    <Method classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" name="invoke" signature="(Lorg/jetbrains/exposed/sql/Transaction;)Lkotlin/Pair;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" start="47" end="47" startBytecode="0" endBytecode="111" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt"/>
+      <Message>In method dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4.invoke(Transaction)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="14" pc="222" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" primary="true" start="70" end="70" startBytecode="224" endBytecode="224" sourcefile="ExposedReadOneToManyKeyValueRepo.kt" sourcepath="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt">
+      <Message>At ExposedReadOneToManyKeyValueRepo.kt:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" abbrev="BC" category="STYLE">
+    <ShortDescription>Questionable cast to abstract collection</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code casts a Collection to an abstract collection
+(such as <code>List</code>, <code>Set</code>, or <code>Map</code>).
+Ensure that you are guaranteed that the object is of the type
+you are casting to. If all you need is to be able
+to iterate through a collection, you don't need to cast it to a Set or List.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="56">
+    <MissingClass>dev.inmo.micro_utils.pagination.Pagination</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.pagination.PaginationResultKt</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.pagination.QueryExtensionsKt</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.OneToManyKeyValueRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.OneToManyKeyValueRepo$DefaultImpls</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.ReadOneToManyKeyValueRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.ReadOneToManyKeyValueRepo$DefaultImpls</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.ReadStandardCRUDRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.ReadStandardKeyValueRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.Repo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.StandardCRUDRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.StandardKeyValueRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.WriteStandardCRUDRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.versions.StandardVersionsRepo</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.versions.StandardVersionsRepoProxy</MissingClass>
+    <MissingClass>dev.inmo.micro_utils.repos.versions.VersionsRepo</MissingClass>
+    <MissingClass>kotlin.Pair</MissingClass>
+    <MissingClass>kotlin.ResultKt</MissingClass>
+    <MissingClass>kotlin.TuplesKt</MissingClass>
+    <MissingClass>kotlin.Unit</MissingClass>
+    <MissingClass>kotlin.collections.CollectionsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.Continuation</MissingClass>
+    <MissingClass>kotlin.coroutines.intrinsics.IntrinsicsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.jvm.internal.ContinuationImpl</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function1</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function2</MissingClass>
+    <MissingClass>kotlin.jvm.internal.DefaultConstructorMarker</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Intrinsics</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Lambda</MissingClass>
+    <MissingClass>kotlinx.coroutines.channels.BufferOverflow</MissingClass>
+    <MissingClass>kotlinx.coroutines.flow.Flow</MissingClass>
+    <MissingClass>kotlinx.coroutines.flow.FlowKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.flow.MutableSharedFlow</MissingClass>
+    <MissingClass>kotlinx.coroutines.flow.SharedFlowKt</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Column</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Database</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Expression</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.ExpressionWithColumnType</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.FieldSet</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Op</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.OpKt</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.QueriesKt</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Query</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.ResultRow</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.SchemaUtils</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.SizedIterable</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.SizedIterable$DefaultImpls</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.SortOrder</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.SqlExpressionBuilder</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Table</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Table$PrimaryKey</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.Transaction</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.statements.InsertStatement</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.statements.UpdateBuilder</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.statements.UpdateStatement</MissingClass>
+    <MissingClass>org.jetbrains.exposed.sql.transactions.ThreadLocalTransactionManagerKt</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:54:34 +0900" total_classes="74" referenced_classes="97" total_bugs="14" total_size="1049" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.20" clock_seconds="2.03" peak_mbytes="234.86" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="14">
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/AbstractExposedCRUDRepo.kt" bugCount="0" size="11"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/AbstractExposedReadCRUDRepo.kt" bugCount="1" size="59" bugHash="d92c5a50c0f26f1b82ece0129bd81ed2"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/AbstractExposedWriteCRUDRepo.kt" bugCount="2" size="230" bugHash="735c8d6eb3e8ab95f5d8bd1ad2534213"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/ColumnAllocator.kt" bugCount="0" size="1"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/ExposedCRUDRepo.kt" bugCount="0" size="3"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/ExposedRepo.kt" bugCount="0" size="2"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/ExposedTableInitialization.kt" bugCount="0" size="12"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedKeyValueRepo.kt" bugCount="3" size="185" bugHash="c29e8b9cc60985d5878a98596f7f2bc5"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/keyvalue/ExposedReadKeyValueRepo.kt" bugCount="3" size="139" bugHash="357269caa6c0b8723170c67373e82207"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedOneToManyKeyValueRepo.kt" bugCount="2" size="172" bugHash="661429b813e5ad20696bf7ac7b0001b6"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/onetomany/ExposedReadOneToManyKeyValueRepo.kt" bugCount="3" size="158" bugHash="10040c56e2eaadaabd860adf94dbfe40"/>
+    <FileStats path="dev/inmo/micro_utils/repos/exposed/versions/ExposedStandardVersionsRepoProxy.kt" bugCount="0" size="77"/>
+    <PackageStats package="dev.inmo.micro_utils.repos.exposed" total_bugs="3" total_types="26" total_size="318" priority_3="3">
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedCRUDRepo" sourceFile="AbstractExposedCRUDRepo.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo" sourceFile="AbstractExposedReadCRUDRepo.kt" interface="false" size="17" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$contains$2" sourceFile="AbstractExposedReadCRUDRepo.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$count$2" sourceFile="AbstractExposedReadCRUDRepo.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getById$2" sourceFile="AbstractExposedReadCRUDRepo.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedReadCRUDRepo$getByPagination$2" sourceFile="AbstractExposedReadCRUDRepo.kt" interface="false" size="16" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="86" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="13" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$create$2" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="12" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$createWithoutNotification$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$createWithoutNotification$1$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$deleteById$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$deleteById$2" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$deleteById$2$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="13" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$3" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="13" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$update$4" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="12" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$updateWithoutNotification$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$updateWithoutNotification$1$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$updateWithoutNotification$1$2" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.AbstractExposedWriteCRUDRepo$updateWithoutNotification$2$1" sourceFile="AbstractExposedWriteCRUDRepo.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.ColumnAllocatorKt" sourceFile="ColumnAllocator.kt" interface="false" size="1" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.ExposedCRUDRepo" sourceFile="ExposedCRUDRepo.kt" interface="true" size="3" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.ExposedRepo" sourceFile="ExposedRepo.kt" interface="true" size="2" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.ExposedTableInitializationKt" sourceFile="ExposedTableInitialization.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.ExposedTableInitializationKt$initTable$1" sourceFile="ExposedTableInitialization.kt" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="dev.inmo.micro_utils.repos.exposed.keyvalue" total_bugs="6" total_types="21" total_size="324" priority_3="6">
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="51" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="21" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2$1$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2$1$2" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$set$2$1$inserted$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unset$2$1$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="23" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedKeyValueRepo$unsetWithValues$2$1$1" sourceFile="ExposedKeyValueRepo.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="46" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$contains$2" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$count$2" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$get$2" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$1" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$2" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="14" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$keys$4" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$1" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.keyvalue.ExposedReadKeyValueRepo$values$2" sourceFile="ExposedReadKeyValueRepo.kt" interface="false" size="14" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="dev.inmo.micro_utils.repos.exposed.onetomany" total_bugs="5" total_types="20" total_size="330" priority_3="5">
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="53" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$1" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="27" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$add$2$1$1$2" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$clear$1" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$clear$2" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$clear$2$1" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$1" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="24" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedOneToManyKeyValueRepo$remove$2$1$1$1" sourceFile="ExposedOneToManyKeyValueRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="57" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$contains$2" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$contains$4" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$count$2" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$count$4" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$1" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$get$2" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="15" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$1" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$2" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="13" bugs="1" priority_3="1"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.onetomany.ExposedReadOneToManyKeyValueRepo$keys$4" sourceFile="ExposedReadOneToManyKeyValueRepo.kt" interface="false" size="16" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="dev.inmo.micro_utils.repos.exposed.versions" total_bugs="0" total_types="7" total_size="77">
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="23" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy$getTableVersion$2" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy$updateTableVersion$2" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="15" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy$updateTableVersion$2$1" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy$updateTableVersion$2$updated$1" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxy$updateTableVersion$2$updated$2" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="dev.inmo.micro_utils.repos.exposed.versions.ExposedStandardVersionsRepoProxyKt" sourceFile="ExposedStandardVersionsRepoProxy.kt" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="187" invocations="542" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="21826" standardDeviationMicrosecondsPerInvocation="1168"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="87" invocations="283" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="9531" standardDeviationMicrosecondsPerInvocation="782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="75" invocations="235" avgMicrosecondsPerInvocation="321" maxMicrosecondsPerInvocation="3865" standardDeviationMicrosecondsPerInvocation="531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="68" invocations="283" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="7219" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="68" invocations="282" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="2842" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="65" invocations="283" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="5772" standardDeviationMicrosecondsPerInvocation="521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="58" invocations="283" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="13799" standardDeviationMicrosecondsPerInvocation="822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="50" invocations="97" avgMicrosecondsPerInvocation="521" maxMicrosecondsPerInvocation="7526" standardDeviationMicrosecondsPerInvocation="1223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="49" invocations="74" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="14780" standardDeviationMicrosecondsPerInvocation="1776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="48" invocations="256" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="1729" standardDeviationMicrosecondsPerInvocation="308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="44" invocations="393" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="1484" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="290" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="17482" standardDeviationMicrosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="33" invocations="97" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="3934" standardDeviationMicrosecondsPerInvocation="575"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="159" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="16301" standardDeviationMicrosecondsPerInvocation="1297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="550" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2311" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="97" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="2683" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="21" invocations="74" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="3983" standardDeviationMicrosecondsPerInvocation="544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="283" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="1658" standardDeviationMicrosecondsPerInvocation="143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="446" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="703" standardDeviationMicrosecondsPerInvocation="82"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="19" invocations="74" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="2164" standardDeviationMicrosecondsPerInvocation="358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="97" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="1701" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="17" invocations="74" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="5210" standardDeviationMicrosecondsPerInvocation="646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="74" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="6436" standardDeviationMicrosecondsPerInvocation="730"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="97" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="3075" standardDeviationMicrosecondsPerInvocation="493"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="97" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="4868" standardDeviationMicrosecondsPerInvocation="535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="13" invocations="5716" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="260" standardDeviationMicrosecondsPerInvocation="8"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="13" invocations="74" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="2110" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="13" invocations="97" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1316" standardDeviationMicrosecondsPerInvocation="227"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="74" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="1563" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="13" invocations="74" avgMicrosecondsPerInvocation="177" maxMicrosecondsPerInvocation="1146" standardDeviationMicrosecondsPerInvocation="193"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="12" invocations="74" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="1382" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="12" invocations="235" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="822" standardDeviationMicrosecondsPerInvocation="73"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUncalledPrivateMethods" totalMilliseconds="11" invocations="74" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="6333" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="97" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="3383" standardDeviationMicrosecondsPerInvocation="409"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

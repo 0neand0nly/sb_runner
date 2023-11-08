@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445888843" analysisTimestamp="1699447692020" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\truevfs-driver-odf-0.10.7.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>net.java.truecommons.cio.DecoratingOutputSocket</MissingClass>
+    <MissingClass>net.java.truecommons.cio.Entry</MissingClass>
+    <MissingClass>net.java.truecommons.cio.InputService</MissingClass>
+    <MissingClass>net.java.truecommons.cio.InputSocket</MissingClass>
+    <MissingClass>net.java.truecommons.cio.IoBufferPool</MissingClass>
+    <MissingClass>net.java.truecommons.cio.MutableEntry</MissingClass>
+    <MissingClass>net.java.truecommons.cio.OutputService</MissingClass>
+    <MissingClass>net.java.truecommons.cio.OutputSocket</MissingClass>
+    <MissingClass>net.java.truecommons.shed.BitField</MissingClass>
+    <MissingClass>net.java.truecommons.shed.ExtensionSet</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.AbstractZipDriver</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.AbstractZipDriverEntry</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.JarDriver</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.JarDriverEntry</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.ZipInputService</MissingClass>
+    <MissingClass>net.java.truevfs.comp.zipdriver.ZipOutputService</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.FsAccessOption</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.FsDriver</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.FsModel</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.FsOutputSocketSink</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.FsScheme</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.cio.MultiplexingOutputService</MissingClass>
+    <MissingClass>net.java.truevfs.kernel.spec.spi.FsDriverMapModifier</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:08 +0900" total_classes="6" referenced_classes="31" total_bugs="0" total_size="64" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.64" clock_seconds="0.90" peak_mbytes="222.25" alloc_mbytes="4078.00" gc_seconds="0.01">
+    <FileStats path="net/java/truevfs/driver/odf/CheckedOdfDriver.java" bugCount="0" size="7"/>
+    <FileStats path="net/java/truevfs/driver/odf/OdfDriver.java" bugCount="0" size="8"/>
+    <FileStats path="net/java/truevfs/driver/odf/OdfDriverMapModifier.java" bugCount="0" size="12"/>
+    <FileStats path="net/java/truevfs/driver/odf/OdfOutputService.java" bugCount="0" size="36"/>
+    <FileStats path="net/java/truevfs/driver/odf/package-info.java" bugCount="0" size="1"/>
+    <PackageStats package="net.java.truevfs.driver.odf" total_bugs="0" total_types="6" total_size="64">
+      <ClassStats class="net.java.truevfs.driver.odf.CheckedOdfDriver" sourceFile="CheckedOdfDriver.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.java.truevfs.driver.odf.OdfDriver" sourceFile="OdfDriver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.java.truevfs.driver.odf.OdfDriverMapModifier" sourceFile="OdfDriverMapModifier.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.java.truevfs.driver.odf.OdfOutputService" sourceFile="OdfOutputService.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="net.java.truevfs.driver.odf.OdfOutputService$1Output" sourceFile="OdfOutputService.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.java.truevfs.driver.odf.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="194" invocations="417" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="19602" standardDeviationMicrosecondsPerInvocation="1348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="37" invocations="31" avgMicrosecondsPerInvocation="1199" maxMicrosecondsPerInvocation="9421" standardDeviationMicrosecondsPerInvocation="2324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="27" invocations="424" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="3398" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="61" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="17345" standardDeviationMicrosecondsPerInvocation="2222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="26" invocations="94" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="2308" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="22" invocations="31" avgMicrosecondsPerInvocation="727" maxMicrosecondsPerInvocation="5594" standardDeviationMicrosecondsPerInvocation="1332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="359" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="827" standardDeviationMicrosecondsPerInvocation="107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="18" invocations="21" avgMicrosecondsPerInvocation="891" maxMicrosecondsPerInvocation="15670" standardDeviationMicrosecondsPerInvocation="3308"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="16" invocations="31" avgMicrosecondsPerInvocation="542" maxMicrosecondsPerInvocation="7660" standardDeviationMicrosecondsPerInvocation="1404"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="31" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="3579" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="13" invocations="21" avgMicrosecondsPerInvocation="637" maxMicrosecondsPerInvocation="7662" standardDeviationMicrosecondsPerInvocation="1599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="13" invocations="21" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="5242" standardDeviationMicrosecondsPerInvocation="1144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="12" invocations="31" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="7044" standardDeviationMicrosecondsPerInvocation="1251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="11" invocations="21" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="8147" standardDeviationMicrosecondsPerInvocation="1701"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

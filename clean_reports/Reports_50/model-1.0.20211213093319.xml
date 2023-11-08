@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699448056624" analysisTimestamp="1699448119768" release="">
+  <Project projectName="">
+    <Jar>./clean50/temp\\model-1.0.20211213093319.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1ede1a593a8acda21e8bbdbd123b6112" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>uk.gov.service.payments.commons.api.exception.ValidationException.getErrors() may expose internal representation by returning ValidationException.errors</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.exception.ValidationException" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" start="9" end="14" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+        <Message>At ValidationException.java:[lines 9-14]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.exception.ValidationException</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.exception.ValidationException" name="getErrors" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" start="14" end="14" startBytecode="0" endBytecode="46" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java"/>
+      <Message>In method uk.gov.service.payments.commons.api.exception.ValidationException.getErrors()</Message>
+    </Method>
+    <Field classname="uk.gov.service.payments.commons.api.exception.ValidationException" name="errors" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+        <Message>In ValidationException.java</Message>
+      </SourceLine>
+      <Message>Field uk.gov.service.payments.commons.api.exception.ValidationException.errors</Message>
+    </Field>
+    <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" primary="true" start="14" end="14" startBytecode="4" endBytecode="4" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+      <Message>At ValidationException.java:[line 14]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="85f70b354feba60c186120aaabe47d43" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new uk.gov.service.payments.commons.api.exception.ValidationException(List) may expose internal representation by storing an externally mutable object into ValidationException.errors</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.exception.ValidationException" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" start="9" end="14" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+        <Message>At ValidationException.java:[lines 9-14]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.exception.ValidationException</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.exception.ValidationException" name="&lt;init&gt;" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" start="9" end="11" startBytecode="0" endBytecode="87" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java"/>
+      <Message>In method new uk.gov.service.payments.commons.api.exception.ValidationException(List)</Message>
+    </Method>
+    <Field classname="uk.gov.service.payments.commons.api.exception.ValidationException" name="errors" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+        <Message>In ValidationException.java</Message>
+      </SourceLine>
+      <Message>Field uk.gov.service.payments.commons.api.exception.ValidationException.errors</Message>
+    </Field>
+    <LocalVariable name="errors" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named errors</Message>
+    </LocalVariable>
+    <SourceLine classname="uk.gov.service.payments.commons.api.exception.ValidationException" primary="true" start="10" end="10" startBytecode="6" endBytecode="6" sourcefile="ValidationException.java" sourcepath="uk/gov/service/payments/commons/api/exception/ValidationException.java">
+      <Message>At ValidationException.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="73d6ed9f7b8165e47c706b59841260ec" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser$1" start="21" end="21" sourcefile="ExternalMetadataDeserialiser.java" sourcepath="uk/gov/service/payments/commons/api/json/ExternalMetadataDeserialiser.java">
+        <Message>At ExternalMetadataDeserialiser.java:[line 21]</Message>
+      </SourceLine>
+      <Message>Anonymous class uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser$1</Message>
+    </Class>
+    <Class classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" start="13" end="27" sourcefile="ExternalMetadataDeserialiser.java" sourcepath="uk/gov/service/payments/commons/api/json/ExternalMetadataDeserialiser.java">
+        <Message>At ExternalMetadataDeserialiser.java:[lines 13-27]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" name="deserialize" signature="(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Luk/gov/service/payments/commons/model/charge/ExternalMetadata;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" start="17" end="27" startBytecode="0" endBytecode="225" sourcefile="ExternalMetadataDeserialiser.java" sourcepath="uk/gov/service/payments/commons/api/json/ExternalMetadataDeserialiser.java"/>
+      <Message>In method uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser.deserialize(JsonParser, DeserializationContext)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" primary="true" start="21" end="21" startBytecode="28" endBytecode="28" sourcefile="ExternalMetadataDeserialiser.java" sourcepath="uk/gov/service/payments/commons/api/json/ExternalMetadataDeserialiser.java">
+      <Message>At ExternalMetadataDeserialiser.java:[line 21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="d26b30acb208e29792dd57b9ac117549" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class uk.gov.service.payments.commons.api.json.JsonMapper$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.json.JsonMapper$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper$1" start="24" end="24" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+        <Message>At JsonMapper.java:[line 24]</Message>
+      </SourceLine>
+      <Message>Anonymous class uk.gov.service.payments.commons.api.json.JsonMapper$1</Message>
+    </Class>
+    <Class classname="uk.gov.service.payments.commons.api.json.JsonMapper" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" start="16" end="43" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+        <Message>At JsonMapper.java:[lines 16-43]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.json.JsonMapper</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.json.JsonMapper" name="getAsMap" signature="(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" start="21" end="30" startBytecode="0" endBytecode="176" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java"/>
+      <Message>In method uk.gov.service.payments.commons.api.json.JsonMapper.getAsMap(JsonNode)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" primary="true" start="24" end="24" startBytecode="48" endBytecode="48" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+      <Message>At JsonMapper.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="f03e921ecf734c77111469a478f8bb8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class uk.gov.service.payments.commons.api.json.JsonMapper$2 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.json.JsonMapper$2" role="CLASS_ANONYMOUS">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper$2" start="37" end="37" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+        <Message>At JsonMapper.java:[line 37]</Message>
+      </SourceLine>
+      <Message>Anonymous class uk.gov.service.payments.commons.api.json.JsonMapper$2</Message>
+    </Class>
+    <Class classname="uk.gov.service.payments.commons.api.json.JsonMapper" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" start="16" end="43" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+        <Message>At JsonMapper.java:[lines 16-43]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.json.JsonMapper</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.json.JsonMapper" name="getAsListOfString" signature="(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" start="34" end="43" startBytecode="0" endBytecode="150" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java"/>
+      <Message>In method uk.gov.service.payments.commons.api.json.JsonMapper.getAsListOfString(JsonNode)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.api.json.JsonMapper" primary="true" start="37" end="37" startBytecode="24" endBytecode="24" sourcefile="JsonMapper.java" sourcepath="uk/gov/service/payments/commons/api/json/JsonMapper.java">
+      <Message>At JsonMapper.java:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="5e0f12e872d9bd436edcb2e13682ace5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator.validate(JsonNode)</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" start="25" end="95" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java">
+        <Message>At JsonPatchRequestValidator.java:[lines 25-95]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" name="validate" signature="(Lcom/fasterxml/jackson/databind/JsonNode;)V" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" start="36" end="77" startBytecode="0" endBytecode="825" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java"/>
+      <Message>In method uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator.validate(JsonNode)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" primary="true" start="59" end="59" startBytecode="212" endBytecode="212" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java">
+      <Message>At JsonPatchRequestValidator.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a25721ac828f034e429d51f02e41b4a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator(Map) may expose internal representation by storing an externally mutable object into JsonPatchRequestValidator.operationValidators</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" start="25" end="95" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java">
+        <Message>At JsonPatchRequestValidator.java:[lines 25-95]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" start="31" end="33" startBytecode="0" endBytecode="87" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java"/>
+      <Message>In method new uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator(Map)</Message>
+    </Method>
+    <Field classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" name="operationValidators" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java">
+        <Message>In JsonPatchRequestValidator.java</Message>
+      </SourceLine>
+      <Message>Field uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator.operationValidators</Message>
+    </Field>
+    <LocalVariable name="operationValidators" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named operationValidators</Message>
+    </LocalVariable>
+    <SourceLine classname="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" primary="true" start="32" end="32" startBytecode="6" endBytecode="6" sourcefile="JsonPatchRequestValidator.java" sourcepath="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java">
+      <Message>At JsonPatchRequestValidator.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ad36847e7bfbbd91522fdaa418018f9e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class uk.gov.service.payments.commons.model.CardExpiryDate at new uk.gov.service.payments.commons.model.CardExpiryDate(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.model.CardExpiryDate" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" start="9" end="84" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java">
+        <Message>At CardExpiryDate.java:[lines 9-84]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.model.CardExpiryDate</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.model.CardExpiryDate" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" start="16" end="27" startBytecode="0" endBytecode="172" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java"/>
+      <Message>In method new uk.gov.service.payments.commons.model.CardExpiryDate(String)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" primary="true" start="22" end="22" startBytecode="39" endBytecode="39" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java">
+      <Message>At CardExpiryDate.java:[line 22]</Message>
+    </SourceLine>
+    <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" start="22" end="22" startBytecode="39" endBytecode="39" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java">
+      <Message>At CardExpiryDate.java:[line 22]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_GETCLASS_AND_CLASS_CONSTANT" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" instanceHash="ed595abbbfc6f0fc9858ec7ceff4af4a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>equals method fails for subtypes</ShortMessage>
+    <LongMessage>uk.gov.service.payments.commons.model.CardExpiryDate.equals(Object) fails for subtypes</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.model.CardExpiryDate" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" start="9" end="84" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java">
+        <Message>At CardExpiryDate.java:[lines 9-84]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.model.CardExpiryDate</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.model.CardExpiryDate" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" start="70" end="79" startBytecode="0" endBytecode="161" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java"/>
+      <Message>In method uk.gov.service.payments.commons.model.CardExpiryDate.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.model.CardExpiryDate" primary="true" start="74" end="74" startBytecode="17" endBytecode="17" sourcefile="CardExpiryDate.java" sourcepath="uk/gov/service/payments/commons/model/CardExpiryDate.java">
+      <Message>At CardExpiryDate.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="8962bd0b5c95e3a09d1eb1bf3ea965b3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest.from(JsonNode)</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" start="18" end="107" sourcefile="JsonPatchRequest.java" sourcepath="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java">
+        <Message>At JsonPatchRequest.java:[lines 18-107]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest</Message>
+    </Class>
+    <Method classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" name="from" signature="(Lcom/fasterxml/jackson/databind/JsonNode;)Luk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest;" isStatic="true" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" start="90" end="90" startBytecode="0" endBytecode="95" sourcefile="JsonPatchRequest.java" sourcepath="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java"/>
+      <Message>In method uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest.from(JsonNode)</Message>
+    </Method>
+    <SourceLine classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" primary="true" start="91" end="91" startBytecode="13" endBytecode="13" sourcefile="JsonPatchRequest.java" sourcepath="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java">
+      <Message>At JsonPatchRequest.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="21235597ca8ed425327fe41754c221b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException be a _static_ inner class?</LongMessage>
+    <Class classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException" primary="true">
+      <SourceLine classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException" start="111" end="113" sourcefile="JsonPatchRequest.java" sourcepath="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java">
+        <Message>At JsonPatchRequest.java:[lines 111-113]</Message>
+      </SourceLine>
+      <Message>In class uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException</Message>
+    </Class>
+    <SourceLine classname="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException" start="111" end="113" sourcefile="JsonPatchRequest.java" sourcepath="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java" synthetic="true">
+      <Message>At JsonPatchRequest.java:[lines 111-113]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_GETCLASS_AND_CLASS_CONSTANT" abbrev="Eq" category="BAD_PRACTICE">
+    <ShortDescription>equals method fails for subtypes</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class has an equals method that will be broken if it is inherited by subclasses.
+It compares a class literal with the class of the argument (e.g., in class <code>Foo</code>
+it might check if <code>Foo.class == o.getClass()</code>).
+It is better to check if <code>this.getClass() == o.getClass()</code>.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>com.fasterxml.jackson.core.JacksonException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonParser</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.ObjectCodec</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.type.TypeReference</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.DeserializationContext</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonMappingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.PropertyNamingStrategy</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.PropertyNamingStrategy$SnakeCaseStrategy</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializerProvider</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.deser.std.StdDeserializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.ArrayNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.NullNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.ObjectNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ser.std.StdSerializer</MissingClass>
+    <MissingClass>javax.persistence.AttributeConverter</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidatorContext</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.math.NumberUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:54:16 +0900" total_classes="49" referenced_classes="132" total_bugs="11" total_size="694" num_packages="8" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.27" clock_seconds="1.75" peak_mbytes="237.95" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="5" priority_2="6">
+    <FileStats path="uk/gov/service/payments/commons/api/exception/ValidationException.java" bugCount="2" size="8" bugHash="0181775436a1109978ef7f584ae61013"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/ApiResponseDateTimeDeserializer.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/ApiResponseDateTimeSerializer.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/ApiResponseInstantSerializer.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/ExternalMetadataDeserialiser.java" bugCount="1" size="18" bugHash="c47d67ca4ec389e82fd2487ff87e4bce"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/ExternalMetadataSerialiser.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/JsonMapper.java" bugCount="2" size="28" bugHash="c5a4e79397fb151b6a0104b0d1f3fd84"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/MicrosecondPrecisionDateTimeDeserializer.java" bugCount="0" size="16"/>
+    <FileStats path="uk/gov/service/payments/commons/api/json/MicrosecondPrecisionDateTimeSerializer.java" bugCount="0" size="18"/>
+    <FileStats path="uk/gov/service/payments/commons/api/resources/ResourceStrings.java" bugCount="0" size="13"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/JsonPatchRequestValidator.java" bugCount="2" size="53" bugHash="7f3323647e39a193d961fd6a9b847354"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapKeyInsensitiveUnique.java" bugCount="0" size="6"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapKeyInsensitiveUniqueValidator.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapKeyLength.java" bugCount="0" size="8"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapKeyLengthValidator.java" bugCount="0" size="17"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueAsStringLengthValidator.java" bugCount="0" size="19"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueLength.java" bugCount="0" size="8"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueNotNull.java" bugCount="0" size="6"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueNotNullValidator.java" bugCount="0" size="9"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueTypes.java" bugCount="0" size="7"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/MapValueTypesValidator.java" bugCount="0" size="19"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/PatchPathOperation.java" bugCount="0" size="19"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/RequestValidator.java" bugCount="0" size="65"/>
+    <FileStats path="uk/gov/service/payments/commons/api/validation/ValidExternalMetadata.java" bugCount="0" size="6"/>
+    <FileStats path="uk/gov/service/payments/commons/jpa/CardExpiryDateConverter.java" bugCount="0" size="14"/>
+    <FileStats path="uk/gov/service/payments/commons/jpa/InstantToUtcTimestampWithoutTimeZoneConverter.java" bugCount="0" size="14"/>
+    <FileStats path="uk/gov/service/payments/commons/model/ApiResponseDateTimeFormatter.java" bugCount="0" size="7"/>
+    <FileStats path="uk/gov/service/payments/commons/model/CardExpiryDate.java" bugCount="2" size="39" bugHash="1c26aef7baac507f9a9dd4ea03d876e1"/>
+    <FileStats path="uk/gov/service/payments/commons/model/ErrorIdentifier.java" bugCount="0" size="29"/>
+    <FileStats path="uk/gov/service/payments/commons/model/Source.java" bugCount="0" size="20"/>
+    <FileStats path="uk/gov/service/payments/commons/model/SupportedLanguage.java" bugCount="0" size="22"/>
+    <FileStats path="uk/gov/service/payments/commons/model/SupportedLanguageJpaConverter.java" bugCount="0" size="10"/>
+    <FileStats path="uk/gov/service/payments/commons/model/SupportedLanguageJsonDeserializer.java" bugCount="0" size="7"/>
+    <FileStats path="uk/gov/service/payments/commons/model/TokenPaymentType.java" bugCount="0" size="20"/>
+    <FileStats path="uk/gov/service/payments/commons/model/WrappedStringValue.java" bugCount="0" size="17"/>
+    <FileStats path="uk/gov/service/payments/commons/model/charge/ExternalMetadata.java" bugCount="0" size="12"/>
+    <FileStats path="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchKeys.java" bugCount="0" size="4"/>
+    <FileStats path="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchOp.java" bugCount="0" size="13"/>
+    <FileStats path="uk/gov/service/payments/commons/model/jsonpatch/JsonPatchRequest.java" bugCount="2" size="63" bugHash="95e98b76ce3ff2e8a2501a4ebfbdd017"/>
+    <PackageStats package="uk.gov.service.payments.commons.api.exception" total_bugs="2" total_types="1" total_size="8" priority_2="2">
+      <ClassStats class="uk.gov.service.payments.commons.api.exception.ValidationException" sourceFile="ValidationException.java" interface="false" size="8" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.api.json" total_bugs="3" total_types="11" total_size="128" priority_3="3">
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ApiResponseDateTimeDeserializer" sourceFile="ApiResponseDateTimeDeserializer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ApiResponseDateTimeSerializer" sourceFile="ApiResponseDateTimeSerializer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ApiResponseInstantSerializer" sourceFile="ApiResponseInstantSerializer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser" sourceFile="ExternalMetadataDeserialiser.java" interface="false" size="14" bugs="1" priority_3="1"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ExternalMetadataDeserialiser$1" sourceFile="ExternalMetadataDeserialiser.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.ExternalMetadataSerialiser" sourceFile="ExternalMetadataSerialiser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.JsonMapper" sourceFile="JsonMapper.java" interface="false" size="20" bugs="2" priority_3="2"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.JsonMapper$1" sourceFile="JsonMapper.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.JsonMapper$2" sourceFile="JsonMapper.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.MicrosecondPrecisionDateTimeDeserializer" sourceFile="MicrosecondPrecisionDateTimeDeserializer.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.json.MicrosecondPrecisionDateTimeSerializer" sourceFile="MicrosecondPrecisionDateTimeSerializer.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.api.resources" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="uk.gov.service.payments.commons.api.resources.ResourceStrings" sourceFile="ResourceStrings.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.api.validation" total_bugs="2" total_types="20" total_size="254" priority_3="1" priority_2="1">
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.JsonPatchRequestValidator" sourceFile="JsonPatchRequestValidator.java" interface="false" size="53" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyInsensitiveUnique" sourceFile="MapKeyInsensitiveUnique.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyInsensitiveUnique$List" sourceFile="MapKeyInsensitiveUnique.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyInsensitiveUniqueValidator" sourceFile="MapKeyInsensitiveUniqueValidator.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyLength" sourceFile="MapKeyLength.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyLength$List" sourceFile="MapKeyLength.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapKeyLengthValidator" sourceFile="MapKeyLengthValidator.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueAsStringLengthValidator" sourceFile="MapValueAsStringLengthValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueLength" sourceFile="MapValueLength.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueLength$List" sourceFile="MapValueLength.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueNotNull" sourceFile="MapValueNotNull.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueNotNull$List" sourceFile="MapValueNotNull.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueNotNullValidator" sourceFile="MapValueNotNullValidator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueTypes" sourceFile="MapValueTypes.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueTypes$List" sourceFile="MapValueTypes.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.MapValueTypesValidator" sourceFile="MapValueTypesValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.PatchPathOperation" sourceFile="PatchPathOperation.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.RequestValidator" sourceFile="RequestValidator.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.ValidExternalMetadata" sourceFile="ValidExternalMetadata.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.api.validation.ValidExternalMetadata$List" sourceFile="ValidExternalMetadata.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.jpa" total_bugs="0" total_types="2" total_size="28">
+      <ClassStats class="uk.gov.service.payments.commons.jpa.CardExpiryDateConverter" sourceFile="CardExpiryDateConverter.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.jpa.InstantToUtcTimestampWithoutTimeZoneConverter" sourceFile="InstantToUtcTimestampWithoutTimeZoneConverter.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.model" total_bugs="2" total_types="9" total_size="171" priority_2="2">
+      <ClassStats class="uk.gov.service.payments.commons.model.ApiResponseDateTimeFormatter" sourceFile="ApiResponseDateTimeFormatter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.CardExpiryDate" sourceFile="CardExpiryDate.java" interface="false" size="39" bugs="2" priority_2="2"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.ErrorIdentifier" sourceFile="ErrorIdentifier.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.Source" sourceFile="Source.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.SupportedLanguage" sourceFile="SupportedLanguage.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.SupportedLanguageJpaConverter" sourceFile="SupportedLanguageJpaConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.SupportedLanguageJsonDeserializer" sourceFile="SupportedLanguageJsonDeserializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.TokenPaymentType" sourceFile="TokenPaymentType.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.WrappedStringValue" sourceFile="WrappedStringValue.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.model.charge" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="uk.gov.service.payments.commons.model.charge.ExternalMetadata" sourceFile="ExternalMetadata.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="uk.gov.service.payments.commons.model.jsonpatch" total_bugs="2" total_types="4" total_size="80" priority_3="1" priority_2="1">
+      <ClassStats class="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchKeys" sourceFile="JsonPatchKeys.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchOp" sourceFile="JsonPatchOp.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest" sourceFile="JsonPatchRequest.java" interface="false" size="57" bugs="1" priority_3="1"/>
+      <ClassStats class="uk.gov.service.payments.commons.model.jsonpatch.JsonPatchRequest$JsonNodeNotCorrectTypeException" sourceFile="JsonPatchRequest.java" interface="false" size="6" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="248" invocations="981" avgMicrosecondsPerInvocation="252" maxMicrosecondsPerInvocation="12885" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="105" invocations="132" avgMicrosecondsPerInvocation="796" maxMicrosecondsPerInvocation="11462" standardDeviationMicrosecondsPerInvocation="1614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="76" invocations="132" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="5791" standardDeviationMicrosecondsPerInvocation="1063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="497" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="2296" standardDeviationMicrosecondsPerInvocation="219"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="39" invocations="188" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="6643" standardDeviationMicrosecondsPerInvocation="567"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="38" invocations="185" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="3811" standardDeviationMicrosecondsPerInvocation="379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="986" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="2157" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="132" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="5818" standardDeviationMicrosecondsPerInvocation="619"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="34" invocations="197" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="13858" standardDeviationMicrosecondsPerInvocation="1001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="185" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="5145" standardDeviationMicrosecondsPerInvocation="387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="132" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="2797" standardDeviationMicrosecondsPerInvocation="497"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="30" invocations="185" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="3988" standardDeviationMicrosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="30" invocations="189" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="5234" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="163" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="2286" standardDeviationMicrosecondsPerInvocation="281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="214" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="15834" standardDeviationMicrosecondsPerInvocation="1079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="132" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="15211" standardDeviationMicrosecondsPerInvocation="1327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="901" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="797" standardDeviationMicrosecondsPerInvocation="55"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="132" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="6942" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="132" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="1822" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="20" invocations="162" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="2864" standardDeviationMicrosecondsPerInvocation="239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="132" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="1564" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="132" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="2769" standardDeviationMicrosecondsPerInvocation="307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="14" invocations="49" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="2167" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="13" invocations="132" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="1538" standardDeviationMicrosecondsPerInvocation="199"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="12" invocations="132" avgMicrosecondsPerInvocation="95" maxMicrosecondsPerInvocation="3215" standardDeviationMicrosecondsPerInvocation="459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="11" invocations="1294" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="666" standardDeviationMicrosecondsPerInvocation="27"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="11" invocations="49" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="8936" standardDeviationMicrosecondsPerInvocation="1260"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

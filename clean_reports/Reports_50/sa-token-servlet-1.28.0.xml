@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445903375" analysisTimestamp="1699447650574" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\sa-token-servlet-1.28.0.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>cn.dev33.satoken.SaManager</MissingClass>
+    <MissingClass>cn.dev33.satoken.config.SaTokenConfig</MissingClass>
+    <MissingClass>cn.dev33.satoken.context.SaTokenContext</MissingClass>
+    <MissingClass>cn.dev33.satoken.context.model.SaRequest</MissingClass>
+    <MissingClass>cn.dev33.satoken.context.model.SaResponse</MissingClass>
+    <MissingClass>cn.dev33.satoken.context.model.SaStorage</MissingClass>
+    <MissingClass>cn.dev33.satoken.exception.SaTokenException</MissingClass>
+    <MissingClass>cn.dev33.satoken.util.SaFoxUtil</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:23 +0900" total_classes="3" referenced_classes="18" total_bugs="0" total_size="73" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.44" clock_seconds="0.77" peak_mbytes="204.08" alloc_mbytes="4078.00" gc_seconds="0.01">
+    <FileStats path="cn/dev33/satoken/servlet/model/SaRequestForServlet.java" bugCount="0" size="34"/>
+    <FileStats path="cn/dev33/satoken/servlet/model/SaResponseForServlet.java" bugCount="0" size="23"/>
+    <FileStats path="cn/dev33/satoken/servlet/model/SaStorageForServlet.java" bugCount="0" size="16"/>
+    <PackageStats package="cn.dev33.satoken.servlet.model" total_bugs="0" total_types="3" total_size="73">
+      <ClassStats class="cn.dev33.satoken.servlet.model.SaRequestForServlet" sourceFile="SaRequestForServlet.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.servlet.model.SaResponseForServlet" sourceFile="SaResponseForServlet.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.servlet.model.SaStorageForServlet" sourceFile="SaStorageForServlet.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="144" invocations="383" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="9522" standardDeviationMicrosecondsPerInvocation="829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="35" invocations="18" avgMicrosecondsPerInvocation="1979" maxMicrosecondsPerInvocation="9182" standardDeviationMicrosecondsPerInvocation="2852"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="26" invocations="88" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="2542" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="19" invocations="41" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="11871" standardDeviationMicrosecondsPerInvocation="1846"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="19" invocations="385" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1795" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="17" invocations="20" avgMicrosecondsPerInvocation="859" maxMicrosecondsPerInvocation="15101" standardDeviationMicrosecondsPerInvocation="3269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="16" invocations="18" avgMicrosecondsPerInvocation="924" maxMicrosecondsPerInvocation="5958" standardDeviationMicrosecondsPerInvocation="1431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="16" invocations="335" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="654" standardDeviationMicrosecondsPerInvocation="92"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="15" invocations="20" avgMicrosecondsPerInvocation="773" maxMicrosecondsPerInvocation="10308" standardDeviationMicrosecondsPerInvocation="2211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="15" invocations="18" avgMicrosecondsPerInvocation="843" maxMicrosecondsPerInvocation="6261" standardDeviationMicrosecondsPerInvocation="1468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="14" invocations="20" avgMicrosecondsPerInvocation="708" maxMicrosecondsPerInvocation="7648" standardDeviationMicrosecondsPerInvocation="1658"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="13" invocations="20" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="6463" standardDeviationMicrosecondsPerInvocation="1433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="12" invocations="18" avgMicrosecondsPerInvocation="710" maxMicrosecondsPerInvocation="4651" standardDeviationMicrosecondsPerInvocation="1177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="12" invocations="20" avgMicrosecondsPerInvocation="624" maxMicrosecondsPerInvocation="7422" standardDeviationMicrosecondsPerInvocation="1580"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

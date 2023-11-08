@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699445891802" analysisTimestamp="1699447647253" release="">
+  <Project projectName="">
+    <Jar>./clean50\\temp\\temp\\temp\\temp\\redis-client-2.6.0.jar</Jar>
+  </Project>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="f096a2014c69a21d1ac3c414515e93be" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>cn.ipokerface.redis.JedisClientCluster.lambda$startRenewalLock$2(String, String) might ignore java.lang.Exception</LongMessage>
+    <Class classname="cn.ipokerface.redis.JedisClientCluster" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" start="24" end="1552" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java">
+        <Message>At JedisClientCluster.java:[lines 24-1552]</Message>
+      </SourceLine>
+      <Message>In class cn.ipokerface.redis.JedisClientCluster</Message>
+    </Class>
+    <Method classname="cn.ipokerface.redis.JedisClientCluster" name="lambda$startRenewalLock$2" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;" isStatic="false" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" start="1503" end="1513" startBytecode="0" endBytecode="174" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java"/>
+      <Message>In method cn.ipokerface.redis.JedisClientCluster.lambda$startRenewalLock$2(String, String)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" primary="true" start="1504" end="1504" startBytecode="9" endBytecode="9" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java">
+      <Message>At JedisClientCluster.java:[line 1504]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" primary="true" start="1504" end="1504" startBytecode="9" endBytecode="9" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java">
+      <Message>At JedisClientCluster.java:[line 1504]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="1ffd29395a2c03122a7fc9738b888b77" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in cn.ipokerface.redis.JedisClientCluster.hincrByFloat(String, String, double): String.getBytes()</LongMessage>
+    <Class classname="cn.ipokerface.redis.JedisClientCluster" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" start="24" end="1552" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java">
+        <Message>At JedisClientCluster.java:[lines 24-1552]</Message>
+      </SourceLine>
+      <Message>In class cn.ipokerface.redis.JedisClientCluster</Message>
+    </Class>
+    <Method classname="cn.ipokerface.redis.JedisClientCluster" name="hincrByFloat" signature="(Ljava/lang/String;Ljava/lang/String;D)Ljava/lang/Double;" isStatic="false" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" start="240" end="240" startBytecode="0" endBytecode="196" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java"/>
+      <Message>In method cn.ipokerface.redis.JedisClientCluster.hincrByFloat(String, String, double)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" primary="true" start="240" end="240" startBytecode="13" endBytecode="13" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java">
+      <Message>At JedisClientCluster.java:[line 240]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientCluster" start="241" end="241" startBytecode="25" endBytecode="25" sourcefile="JedisClientCluster.java" sourcepath="cn/ipokerface/redis/JedisClientCluster.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JedisClientCluster.java:[line 241]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="cfccad902619c3af0101250d46486bb3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>cn.ipokerface.redis.JedisClientStandalone.lambda$startRenewalLock$0(Jedis, String, String) might ignore java.lang.Exception</LongMessage>
+    <Class classname="cn.ipokerface.redis.JedisClientStandalone" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" start="24" end="3012" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java">
+        <Message>At JedisClientStandalone.java:[lines 24-3012]</Message>
+      </SourceLine>
+      <Message>In class cn.ipokerface.redis.JedisClientStandalone</Message>
+    </Class>
+    <Method classname="cn.ipokerface.redis.JedisClientStandalone" name="lambda$startRenewalLock$0" signature="(Lredis/clients/jedis/Jedis;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;" isStatic="true" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" start="2951" end="2961" startBytecode="0" endBytecode="168" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java"/>
+      <Message>In method cn.ipokerface.redis.JedisClientStandalone.lambda$startRenewalLock$0(Jedis, String, String)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" primary="true" start="2952" end="2952" startBytecode="9" endBytecode="9" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java">
+      <Message>At JedisClientStandalone.java:[line 2952]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" primary="true" start="2952" end="2952" startBytecode="9" endBytecode="9" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java">
+      <Message>At JedisClientStandalone.java:[line 2952]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" rank="9" abbrev="IL" category="CORRECTNESS" instanceHash="da900129159716b083e80791b69a539f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="674">
+    <ShortMessage>An apparent infinite recursive loop</ShortMessage>
+    <LongMessage>There is an apparent infinite recursive loop in cn.ipokerface.redis.JedisClientStandalone.zadd(String, Map)</LongMessage>
+    <Class classname="cn.ipokerface.redis.JedisClientStandalone" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" start="24" end="3012" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java">
+        <Message>At JedisClientStandalone.java:[lines 24-3012]</Message>
+      </SourceLine>
+      <Message>In class cn.ipokerface.redis.JedisClientStandalone</Message>
+    </Class>
+    <Method classname="cn.ipokerface.redis.JedisClientStandalone" name="zadd" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/Long;" isStatic="false" primary="true">
+      <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" start="831" end="835" startBytecode="0" endBytecode="199" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java"/>
+      <Message>In method cn.ipokerface.redis.JedisClientStandalone.zadd(String, Map)</Message>
+    </Method>
+    <SourceLine classname="cn.ipokerface.redis.JedisClientStandalone" primary="true" start="833" end="833" startBytecode="11" endBytecode="11" sourcefile="JedisClientStandalone.java" sourcepath="cn/ipokerface/redis/JedisClientStandalone.java">
+      <Message>At JedisClientStandalone.java:[line 833]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="IL_INFINITE_RECURSIVE_LOOP" abbrev="IL" category="CORRECTNESS" cweid="674">
+    <ShortDescription>An apparent infinite recursive loop</ShortDescription>
+    <Details><![CDATA[
+
+<p>This method unconditionally invokes itself. This would seem to indicate
+an infinite recursive loop that will result in a stack overflow.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="IL">
+    <Description>Infinite Loop</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="24">
+    <MissingClass>redis.clients.jedis.AccessControlUser</MissingClass>
+    <MissingClass>redis.clients.jedis.BitOP</MissingClass>
+    <MissingClass>redis.clients.jedis.BitPosParams</MissingClass>
+    <MissingClass>redis.clients.jedis.ClusterReset</MissingClass>
+    <MissingClass>redis.clients.jedis.GeoUnit</MissingClass>
+    <MissingClass>redis.clients.jedis.Jedis</MissingClass>
+    <MissingClass>redis.clients.jedis.JedisCluster</MissingClass>
+    <MissingClass>redis.clients.jedis.JedisPool</MissingClass>
+    <MissingClass>redis.clients.jedis.JedisPubSub</MissingClass>
+    <MissingClass>redis.clients.jedis.ListPosition</MissingClass>
+    <MissingClass>redis.clients.jedis.ScanParams</MissingClass>
+    <MissingClass>redis.clients.jedis.ScanResult</MissingClass>
+    <MissingClass>redis.clients.jedis.SortingParams</MissingClass>
+    <MissingClass>redis.clients.jedis.StreamEntryID</MissingClass>
+    <MissingClass>redis.clients.jedis.StreamInfo</MissingClass>
+    <MissingClass>redis.clients.jedis.Tuple</MissingClass>
+    <MissingClass>redis.clients.jedis.ZParams</MissingClass>
+    <MissingClass>redis.clients.jedis.commands.ProtocolCommand</MissingClass>
+    <MissingClass>redis.clients.jedis.exceptions.JedisException</MissingClass>
+    <MissingClass>redis.clients.jedis.params.GeoRadiusParam</MissingClass>
+    <MissingClass>redis.clients.jedis.params.MigrateParams</MissingClass>
+    <MissingClass>redis.clients.jedis.params.SetParams</MissingClass>
+    <MissingClass>redis.clients.jedis.params.ZAddParams</MissingClass>
+    <MissingClass>redis.clients.jedis.params.ZIncrByParams</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 21:18:11 +0900" total_classes="4" referenced_classes="56" total_bugs="4" total_size="2126" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.53" clock_seconds="2.20" peak_mbytes="263.83" alloc_mbytes="4078.00" gc_seconds="0.06" priority_3="2" priority_1="2">
+    <FileStats path="cn/ipokerface/redis/CommandNotSupportException.java" bugCount="0" size="3"/>
+    <FileStats path="cn/ipokerface/redis/JedisClient.java" bugCount="0" size="288"/>
+    <FileStats path="cn/ipokerface/redis/JedisClientCluster.java" bugCount="2" size="627" bugHash="40fe5b8625623580abba1096ef21864d"/>
+    <FileStats path="cn/ipokerface/redis/JedisClientStandalone.java" bugCount="2" size="1208" bugHash="1ff8b22145fb26151fadfe492e291213"/>
+    <PackageStats package="cn.ipokerface.redis" total_bugs="4" total_types="4" total_size="2126" priority_3="2" priority_1="2">
+      <ClassStats class="cn.ipokerface.redis.CommandNotSupportException" sourceFile="CommandNotSupportException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="cn.ipokerface.redis.JedisClient" sourceFile="JedisClient.java" interface="true" size="288" bugs="0"/>
+      <ClassStats class="cn.ipokerface.redis.JedisClientCluster" sourceFile="JedisClientCluster.java" interface="false" size="627" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="cn.ipokerface.redis.JedisClientStandalone" sourceFile="JedisClientStandalone.java" interface="false" size="1208" bugs="2" priority_3="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="190" invocations="689" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="9353" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="109" invocations="583" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="13590" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="95" invocations="583" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="7961" standardDeviationMicrosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="86" invocations="56" avgMicrosecondsPerInvocation="1535" maxMicrosecondsPerInvocation="10181" standardDeviationMicrosecondsPerInvocation="2453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="72" invocations="56" avgMicrosecondsPerInvocation="1301" maxMicrosecondsPerInvocation="18227" standardDeviationMicrosecondsPerInvocation="2763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="72" invocations="583" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="9929" standardDeviationMicrosecondsPerInvocation="480"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="69" invocations="583" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="7446" standardDeviationMicrosecondsPerInvocation="327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="63" invocations="583" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="2105" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="60" invocations="583" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="6487" standardDeviationMicrosecondsPerInvocation="272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="55" invocations="769" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="2176" standardDeviationMicrosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="44" invocations="870" avgMicrosecondsPerInvocation="50" maxMicrosecondsPerInvocation="20060" standardDeviationMicrosecondsPerInvocation="680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="36" invocations="56" avgMicrosecondsPerInvocation="647" maxMicrosecondsPerInvocation="19935" standardDeviationMicrosecondsPerInvocation="2652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="30" invocations="583" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="2753" standardDeviationMicrosecondsPerInvocation="120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="30" invocations="8792" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="1557" standardDeviationMicrosecondsPerInvocation="19"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="29" invocations="695" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1968" standardDeviationMicrosecondsPerInvocation="106"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="29" invocations="4" avgMicrosecondsPerInvocation="7459" maxMicrosecondsPerInvocation="16417" standardDeviationMicrosecondsPerInvocation="7387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="56" avgMicrosecondsPerInvocation="485" maxMicrosecondsPerInvocation="6068" standardDeviationMicrosecondsPerInvocation="915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="25" invocations="4" avgMicrosecondsPerInvocation="6435" maxMicrosecondsPerInvocation="16177" standardDeviationMicrosecondsPerInvocation="6648"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="56" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="7989" standardDeviationMicrosecondsPerInvocation="1127"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="24" invocations="56" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="15474" standardDeviationMicrosecondsPerInvocation="2046"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="23" invocations="4" avgMicrosecondsPerInvocation="5955" maxMicrosecondsPerInvocation="19037" standardDeviationMicrosecondsPerInvocation="7773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="94" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="8617" standardDeviationMicrosecondsPerInvocation="909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="56" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="4361" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="620" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1194" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="4" avgMicrosecondsPerInvocation="5115" maxMicrosecondsPerInvocation="15196" standardDeviationMicrosecondsPerInvocation="6190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="20" invocations="4" avgMicrosecondsPerInvocation="5093" maxMicrosecondsPerInvocation="12588" standardDeviationMicrosecondsPerInvocation="5365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="20" invocations="56" avgMicrosecondsPerInvocation="363" maxMicrosecondsPerInvocation="6286" standardDeviationMicrosecondsPerInvocation="978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="56" avgMicrosecondsPerInvocation="305" maxMicrosecondsPerInvocation="5562" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="15" invocations="581" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="1184" standardDeviationMicrosecondsPerInvocation="55"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="4" avgMicrosecondsPerInvocation="3793" maxMicrosecondsPerInvocation="9764" standardDeviationMicrosecondsPerInvocation="4057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="583" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="1505" standardDeviationMicrosecondsPerInvocation="66"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="14" invocations="56" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="9739" standardDeviationMicrosecondsPerInvocation="1339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="13" invocations="4" avgMicrosecondsPerInvocation="3478" maxMicrosecondsPerInvocation="7081" standardDeviationMicrosecondsPerInvocation="3387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="11" invocations="4" avgMicrosecondsPerInvocation="2974" maxMicrosecondsPerInvocation="8504" standardDeviationMicrosecondsPerInvocation="3384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="11" invocations="870" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="2218" standardDeviationMicrosecondsPerInvocation="88"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
