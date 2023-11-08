@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699429374167" analysisTimestamp="1699430485236" release="">
+  <Project projectName="">
+    <Jar>cleans/temp\org.wso2.carbon.ndatasource.core-4.4.27.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="bf31f8359600bd761e0ed1c048225529" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.CarbonDataSource.getDSMInfo() may expose internal representation by returning CarbonDataSource.dsmInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="31" end="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+        <Message>At CarbonDataSource.java:[lines 31-46]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.CarbonDataSource</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" name="getDSMInfo" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="38" end="38" startBytecode="0" endBytecode="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.CarbonDataSource.getDSMInfo()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" name="dsmInfo" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+        <Message>In CarbonDataSource.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.CarbonDataSource.dsmInfo</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" primary="true" start="38" end="38" startBytecode="4" endBytecode="4" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+      <Message>At CarbonDataSource.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="de77b54b252e87991a229c9028deede2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.wso2.carbon.ndatasource.core.CarbonDataSource(DataSourceMetaInfo, DataSourceStatus, Object) may expose internal representation by storing an externally mutable object into CarbonDataSource.dsmInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="31" end="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+        <Message>At CarbonDataSource.java:[lines 31-46]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.CarbonDataSource</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" name="&lt;init&gt;" signature="(Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;Lorg/wso2/carbon/ndatasource/core/DataSourceStatus;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="31" end="35" startBytecode="0" endBytecode="107" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java"/>
+      <Message>In method new org.wso2.carbon.ndatasource.core.CarbonDataSource(DataSourceMetaInfo, DataSourceStatus, Object)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" name="dsmInfo" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+        <Message>In CarbonDataSource.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.CarbonDataSource.dsmInfo</Message>
+    </Field>
+    <LocalVariable name="dsmInfo" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named dsmInfo</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" primary="true" start="32" end="32" startBytecode="6" endBytecode="6" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+      <Message>At CarbonDataSource.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CONFUSING" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="bb2acb7bd8972082075691f3b020103c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Confusing method names</ShortMessage>
+    <LongMessage>Confusing to have methods org.wso2.carbon.ndatasource.core.CarbonDataSource.getDSStatus() and org.wso2.carbon.ndatasource.core.DataSourceInfo.getDsStatus()</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="31" end="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java">
+        <Message>At CarbonDataSource.java:[lines 31-46]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.CarbonDataSource</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" name="getDSStatus" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceStatus;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="42" end="42" startBytecode="0" endBytecode="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.CarbonDataSource.getDSStatus()</Message>
+    </Method>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceInfo">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="27" end="49" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>At DataSourceInfo.java:[lines 27-49]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="getDsStatus" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceStatus;" isStatic="false">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="44" end="44" startBytecode="0" endBytecode="46" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceInfo.getDsStatus()</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.CarbonDataSource" start="42" end="42" startBytecode="0" endBytecode="46" sourcefile="CarbonDataSource.java" sourcepath="org/wso2/carbon/ndatasource/core/CarbonDataSource.java" synthetic="true">
+      <Message>At CarbonDataSource.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d7472f7fd510204922fdb1af3513ab76" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceInfo.getDsMetaInfo() may expose internal representation by returning DataSourceInfo.dsMetaInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="27" end="49" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>At DataSourceInfo.java:[lines 27-49]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="getDsMetaInfo" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceInfo.getDsMetaInfo()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="dsMetaInfo" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>In DataSourceInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceInfo.dsMetaInfo</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+      <Message>At DataSourceInfo.java:[line 36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="1e45dd4c47ebe65c0bed66aaa41e388c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.wso2.carbon.ndatasource.core.DataSourceInfo(DataSourceMetaInfo, DataSourceStatus) may expose internal representation by storing an externally mutable object into DataSourceInfo.dsMetaInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="27" end="49" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>At DataSourceInfo.java:[lines 27-49]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="&lt;init&gt;" signature="(Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;Lorg/wso2/carbon/ndatasource/core/DataSourceStatus;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="30" end="33" startBytecode="0" endBytecode="88" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java"/>
+      <Message>In method new org.wso2.carbon.ndatasource.core.DataSourceInfo(DataSourceMetaInfo, DataSourceStatus)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="dsMetaInfo" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>In DataSourceInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceInfo.dsMetaInfo</Message>
+    </Field>
+    <LocalVariable name="dsMetaInfo" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named dsMetaInfo</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true" start="31" end="31" startBytecode="6" endBytecode="6" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+      <Message>At DataSourceInfo.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ad5927e00eb685e3dc5838885de5a3f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceInfo.setDsMetaInfo(DataSourceMetaInfo) may expose internal representation by storing an externally mutable object into DataSourceInfo.dsMetaInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="27" end="49" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>At DataSourceInfo.java:[lines 27-49]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="setDsMetaInfo" signature="(Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" start="40" end="41" startBytecode="0" endBytecode="61" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceInfo.setDsMetaInfo(DataSourceMetaInfo)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" name="dsMetaInfo" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+        <Message>In DataSourceInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceInfo.dsMetaInfo</Message>
+    </Field>
+    <LocalVariable name="dsMetaInfo" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named dsMetaInfo</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceInfo" primary="true" start="40" end="40" startBytecode="2" endBytecode="2" sourcefile="DataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceInfo.java">
+      <Message>At DataSourceInfo.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="e6cdd83a5b9f9054a1d199498684624d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Public static method may expose internal representation by returning a mutable object or array</ShortMessage>
+    <LongMessage>Public static org.wso2.carbon.ndatasource.core.DataSourceManager.getInstance() may expose internal representation by returning DataSourceManager.instance</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceManager" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" start="43" end="191" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java">
+        <Message>At DataSourceManager.java:[lines 43-191]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceManager</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceManager" name="getInstance" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceManager;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" start="60" end="60" startBytecode="0" endBytecode="27" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceManager.getInstance()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceManager" name="instance" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceManager;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java">
+        <Message>In DataSourceManager.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceManager.instance</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" primary="true" start="60" end="60" startBytecode="3" endBytecode="3" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java">
+      <Message>At DataSourceManager.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="5ef2bde6165b17f3ae4719a8d9625359" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
+    <LongMessage>Possible null pointer dereference in org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources() due to return value of called method</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceManager" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" start="43" end="191" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java">
+        <Message>At DataSourceManager.java:[lines 43-191]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceManager</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceManager" name="initSystemDataSources" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" start="151" end="171" startBytecode="0" endBytecode="418" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceManager.initSystemDataSources()</Message>
+    </Method>
+    <LocalVariable name="arr$" register="4" pc="88" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from arr$</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" primary="true" start="161" end="161" startBytecode="90" endBytecode="90" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at DataSourceManager.java:[line 161]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceManager" start="161" end="161" startBytecode="83" endBytecode="83" sourcefile="DataSourceManager.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceManager.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at DataSourceManager.java:[line 161]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="aa60a0c523cb547d94aa63ea205ae8f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.getDefinition() may expose internal representation by returning DataSourceMetaInfo.definition</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="31" end="181" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>At DataSourceMetaInfo.java:[lines 31-181]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="getDefinition" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo$DataSourceDefinition;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="96" end="96" startBytecode="0" endBytecode="46" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.getDefinition()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="definition" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo$DataSourceDefinition;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>In DataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.definition</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" start="96" end="96" startBytecode="4" endBytecode="4" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+      <Message>At DataSourceMetaInfo.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="77462709b9a43f74c623837f8c9af18" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.getJndiConfig() may expose internal representation by returning DataSourceMetaInfo.jndiConfig</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="31" end="181" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>At DataSourceMetaInfo.java:[lines 31-181]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="getJndiConfig" signature="()Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="81" end="81" startBytecode="0" endBytecode="46" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.getJndiConfig()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="jndiConfig" signature="Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>In DataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.jndiConfig</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" start="81" end="81" startBytecode="4" endBytecode="4" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+      <Message>At DataSourceMetaInfo.java:[line 81]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="be73078832f0d6fab96e6c5db8881dc6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.setDefinition(DataSourceMetaInfo$DataSourceDefinition) may expose internal representation by storing an externally mutable object into DataSourceMetaInfo.definition</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="31" end="181" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>At DataSourceMetaInfo.java:[lines 31-181]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="setDefinition" signature="(Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo$DataSourceDefinition;)V" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="100" end="101" startBytecode="0" endBytecode="61" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.setDefinition(DataSourceMetaInfo$DataSourceDefinition)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="definition" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo$DataSourceDefinition;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>In DataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.definition</Message>
+    </Field>
+    <LocalVariable name="definition" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named definition</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" start="100" end="100" startBytecode="2" endBytecode="2" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+      <Message>At DataSourceMetaInfo.java:[line 100]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ed04e797c71ddeaca701361a7e475ba4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.setJndiConfig(JNDIConfig) may expose internal representation by storing an externally mutable object into DataSourceMetaInfo.jndiConfig</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="31" end="181" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>At DataSourceMetaInfo.java:[lines 31-181]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="setJndiConfig" signature="(Lorg/wso2/carbon/ndatasource/core/JNDIConfig;)V" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" start="58" end="59" startBytecode="0" endBytecode="61" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.setJndiConfig(JNDIConfig)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" name="jndiConfig" signature="Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlType">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+        <Message>In DataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.DataSourceMetaInfo.jndiConfig</Message>
+    </Field>
+    <LocalVariable name="jndiConfig" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named jndiConfig</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" primary="true" start="58" end="58" startBytecode="2" endBytecode="2" sourcefile="DataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java">
+      <Message>At DataSourceMetaInfo.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="fd3f9c17e771eb5f07234a4e6839b8ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.wso2.carbon.ndatasource.core.DataSourceRepository at new org.wso2.carbon.ndatasource.core.DataSourceRepository(int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" start="56" end="515" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java">
+        <Message>At DataSourceRepository.java:[lines 56-515]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceRepository</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" start="68" end="80" startBytecode="0" endBytecode="224" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java"/>
+      <Message>In method new org.wso2.carbon.ndatasource.core.DataSourceRepository(int)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" primary="true" start="70" end="70" startBytecode="9" endBytecode="9" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java">
+      <Message>At DataSourceRepository.java:[line 70]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" start="70" end="70" startBytecode="9" endBytecode="9" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java">
+      <Message>At DataSourceRepository.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="d27ac5c057b2be8f8e5f9018104bc98c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.wso2.carbon.ndatasource.core.DataSourceRepository.persistDataSource(DataSourceMetaInfo)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" start="56" end="515" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java">
+        <Message>At DataSourceRepository.java:[lines 56-515]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.DataSourceRepository</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" name="persistDataSource" signature="(Lorg/wso2/carbon/ndatasource/core/DataSourceMetaInfo;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" start="312" end="324" startBytecode="0" endBytecode="250" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.DataSourceRepository.persistDataSource(DataSourceMetaInfo)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.DataSourceRepository" primary="true" start="320" end="320" startBytecode="69" endBytecode="69" sourcefile="DataSourceRepository.java" sourcepath="org/wso2/carbon/ndatasource/core/DataSourceRepository.java">
+      <Message>At DataSourceRepository.java:[line 320]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d7c55882b6f75e53bf30d42dc911d4e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.JNDIConfig.getEnvironment() may expose internal representation by returning JNDIConfig.environment</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.JNDIConfig" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" start="31" end="117" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+        <Message>At JNDIConfig.java:[lines 31-117]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.JNDIConfig</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.JNDIConfig" name="getEnvironment" signature="()[Lorg/wso2/carbon/ndatasource/core/JNDIConfig$EnvEntry;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" start="56" end="56" startBytecode="0" endBytecode="46" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.JNDIConfig.getEnvironment()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.JNDIConfig" name="environment" signature="[Lorg/wso2/carbon/ndatasource/core/JNDIConfig$EnvEntry;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+        <Message>In JNDIConfig.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.JNDIConfig.environment</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" primary="true" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+      <Message>At JNDIConfig.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="fe0e878fd26d872a57dc9ebdd55e4dec" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.JNDIConfig.setEnvironment(JNDIConfig$EnvEntry[]) may expose internal representation by storing an externally mutable object into JNDIConfig.environment</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.JNDIConfig" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" start="31" end="117" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+        <Message>At JNDIConfig.java:[lines 31-117]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.JNDIConfig</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.JNDIConfig" name="setEnvironment" signature="([Lorg/wso2/carbon/ndatasource/core/JNDIConfig$EnvEntry;)V" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.JNDIConfig.setEnvironment(JNDIConfig$EnvEntry[])</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.JNDIConfig" name="environment" signature="[Lorg/wso2/carbon/ndatasource/core/JNDIConfig$EnvEntry;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+        <Message>In JNDIConfig.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.JNDIConfig.environment</Message>
+    </Field>
+    <LocalVariable name="environment" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named environment</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.JNDIConfig" primary="true" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="JNDIConfig.java" sourcepath="org/wso2/carbon/ndatasource/core/JNDIConfig.java">
+      <Message>At JNDIConfig.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="a093afef9e9c85d45c9cc2f25e7840d4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.getDataSources() may expose internal representation by returning SystemDataSourcesConfiguration.dataSources</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="28" end="52" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>At SystemDataSourcesConfiguration.java:[lines 28-52]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="getDataSources" signature="()Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="47" end="47" startBytecode="0" endBytecode="46" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.getDataSources()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="dataSources" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>In SystemDataSourcesConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.dataSources</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" start="47" end="47" startBytecode="4" endBytecode="4" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+      <Message>At SystemDataSourcesConfiguration.java:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="f9035032b0711b878586e49333d3c36" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.getProviders() may expose internal representation by returning SystemDataSourcesConfiguration.providers</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="28" end="52" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>At SystemDataSourcesConfiguration.java:[lines 28-52]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="getProviders" signature="()Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="37" end="37" startBytecode="0" endBytecode="46" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.getProviders()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="providers" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>In SystemDataSourcesConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.providers</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" start="37" end="37" startBytecode="4" endBytecode="4" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+      <Message>At SystemDataSourcesConfiguration.java:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="884024ecc84284f480b18bd00efe1357" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.setDataSources(List) may expose internal representation by storing an externally mutable object into SystemDataSourcesConfiguration.dataSources</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="28" end="52" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>At SystemDataSourcesConfiguration.java:[lines 28-52]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="setDataSources" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="51" end="52" startBytecode="0" endBytecode="79" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.setDataSources(List)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="dataSources" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>In SystemDataSourcesConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.dataSources</Message>
+    </Field>
+    <LocalVariable name="dataSources" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named dataSources</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" start="51" end="51" startBytecode="2" endBytecode="2" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+      <Message>At SystemDataSourcesConfiguration.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="31176351abab93a6c5ff87a2fc4e00d3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.setProviders(List) may expose internal representation by storing an externally mutable object into SystemDataSourcesConfiguration.providers</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="28" end="52" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>At SystemDataSourcesConfiguration.java:[lines 28-52]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="setProviders" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" start="41" end="42" startBytecode="0" endBytecode="79" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.setProviders(List)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" name="providers" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+        <Message>In SystemDataSourcesConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration.providers</Message>
+    </Field>
+    <LocalVariable name="providers" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named providers</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" primary="true" start="41" end="41" startBytecode="2" endBytecode="2" sourcefile="SystemDataSourcesConfiguration.java" sourcepath="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java">
+      <Message>At SystemDataSourcesConfiguration.java:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE_OF_NULL" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="9027c096bac23946b85c06ed3577f649" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store of null to local variable</ShortMessage>
+    <LongMessage>Dead store of null to registryService in org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="161" end="162" startBytecode="0" endBytecode="2" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService)</Message>
+    </Method>
+    <LocalVariable name="registryService" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named registryService</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="161" end="161" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 161]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEFENSIVE_CONSTANT_OPCODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="registryService"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.PARAM_DEAD_ON_ENTRY" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.STORE_OF_NULL" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="c46da843ab6416a9046294781163327f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.getDataSourceService() may expose internal representation by returning DataSourceServiceComponent.dataSourceService</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="getDataSourceService" signature="()Lorg/wso2/carbon/ndatasource/core/DataSourceService;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="133" end="133" startBytecode="0" endBytecode="46" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.getDataSourceService()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="dataSourceService" signature="Lorg/wso2/carbon/ndatasource/core/DataSourceService;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.dataSourceService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="133" end="133" startBytecode="4" endBytecode="4" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 133]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN" priority="1" rank="6" abbrev="IP" category="CORRECTNESS" instanceHash="5157c1cd404ac61a506f6af93abf5f19" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>A parameter is dead upon entry to a method but overwritten</ShortMessage>
+    <LongMessage>The parameter registryService to org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService) is dead upon entry but overwritten</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="161" end="162" startBytecode="0" endBytecode="2" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService)</Message>
+    </Method>
+    <LocalVariable name="registryService" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named registryService</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="161" end="161" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 161]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="3" rank="20" abbrev="IS" category="MT_CORRECTNESS" instanceHash="3e459d8c9c9aec33626ff6f957991ecc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="366">
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.tenantUserDataSourcesInitialized; locked 75% of time</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="tenantUserDataSourcesInitialized" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.tenantUserDataSourcesInitialized</Message>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT">
+      <Message>Synchronized 75% of the time</Message>
+    </Int>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="229" end="229" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at DataSourceServiceComponent.java:[line 229]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="219" end="219" startBytecode="53" endBytecode="53" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at DataSourceServiceComponent.java:[line 219]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="103" end="103" startBytecode="96" endBytecode="96" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at DataSourceServiceComponent.java:[line 103]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="110" end="110" startBytecode="7" endBytecode="7" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at DataSourceServiceComponent.java:[line 110]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.InconsistentSyncWarningProperty.ONLY_UNSYNC_IN_GETTERS" value="true"/>
+  </BugInstance>
+  <BugInstance type="SSD_DO_NOT_USE_INSTANCE_LOCK_ON_SHARED_STATIC_DATA" priority="2" rank="14" abbrev="SSD" category="MT_CORRECTNESS" instanceHash="3fe985659a17d4c19d5d0ea6e7490a3c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Instance level lock was used on a shared static data</ShortMessage>
+    <LongMessage>Static field &quot;carbonDataSourceRepositoryClass&quot; is modified by an instance level synchronized method.</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="activate" signature="(Lorg/osgi/service/component/ComponentContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="80" end="106" startBytecode="0" endBytecode="260" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.activate(ComponentContext)</Message>
+    </Method>
+    <String value="carbonDataSourceRepositoryClass">
+      <Message>Value carbonDataSourceRepositoryClass</Message>
+    </String>
+    <String value="synchronized method">
+      <Message>Value synchronized method</Message>
+    </String>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="92" end="92" startBytecode="50" endBytecode="50" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="4b8ece12973ce1f9720c57c9759f601a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.configContextService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setConfigurationContextService(ConfigurationContextService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="setConfigurationContextService" signature="(Lorg/wso2/carbon/utils/ConfigurationContextService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="249" end="250" startBytecode="0" endBytecode="60" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setConfigurationContextService(ConfigurationContextService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="configContextService" signature="Lorg/wso2/carbon/utils/ConfigurationContextService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.configContextService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="249" end="249" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 249]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="dd17955fc2d6e496a105aac52b5da5f9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.configContextService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetConfigurationContextService(ConfigurationContextService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetConfigurationContextService" signature="(Lorg/wso2/carbon/utils/ConfigurationContextService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="253" end="254" startBytecode="0" endBytecode="60" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetConfigurationContextService(ConfigurationContextService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="configContextService" signature="Lorg/wso2/carbon/utils/ConfigurationContextService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.configContextService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="253" end="253" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 253]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="949d1b264d52af4ab26637b0a243c987" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.realmService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRealmService(RealmService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetRealmService" signature="(Lorg/wso2/carbon/user/core/service/RealmService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="145" end="146" startBytecode="0" endBytecode="60" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRealmService(RealmService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="realmService" signature="Lorg/wso2/carbon/user/core/service/RealmService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.realmService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="145" end="145" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 145]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="fef7266480103bbd4b803dfd77484971" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.secretCallbackHandlerService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetSecretCallbackHandlerService(SecretCallbackHandlerService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetSecretCallbackHandlerService" signature="(Lorg/wso2/carbon/securevault/SecretCallbackHandlerService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="184" end="185" startBytecode="0" endBytecode="60" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetSecretCallbackHandlerService(SecretCallbackHandlerService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="secretCallbackHandlerService" signature="Lorg/wso2/carbon/securevault/SecretCallbackHandlerService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.secretCallbackHandlerService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="184" end="184" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 184]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="adaf0b340ff5ac7259927d6cec36d29b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.serverConfigurationService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetServerConfigurationService(ServerConfigurationService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetServerConfigurationService" signature="(Lorg/wso2/carbon/base/api/ServerConfigurationService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="237" end="238" startBytecode="0" endBytecode="60" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetServerConfigurationService(ServerConfigurationService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="serverConfigurationService" signature="Lorg/wso2/carbon/base/api/ServerConfigurationService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.serverConfigurationService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="237" end="237" startBytecode="1" endBytecode="1" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 237]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="fb7f0f501c20629fdd19e4b70f641878" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.realmService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setRealmService(RealmService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="setRealmService" signature="(Lorg/wso2/carbon/user/core/service/RealmService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="137" end="142" startBytecode="0" endBytecode="106" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setRealmService(RealmService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="realmService" signature="Lorg/wso2/carbon/user/core/service/RealmService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.realmService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="140" end="140" startBytecode="22" endBytecode="22" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 140]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="9e5827f58a92320652b46d41e38f748b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.registryService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setRegistryService(RegistryService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="setRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="153" end="158" startBytecode="0" endBytecode="106" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setRegistryService(RegistryService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="registryService" signature="Lorg/wso2/carbon/registry/core/service/RegistryService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.registryService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="156" end="156" startBytecode="22" endBytecode="22" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 156]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="55f61cc35d3e897117ece5aac122b242" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.secretCallbackHandlerService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setSecretCallbackHandlerService(SecretCallbackHandlerService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="setSecretCallbackHandlerService" signature="(Lorg/wso2/carbon/securevault/SecretCallbackHandlerService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="174" end="180" startBytecode="0" endBytecode="114" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setSecretCallbackHandlerService(SecretCallbackHandlerService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="secretCallbackHandlerService" signature="Lorg/wso2/carbon/securevault/SecretCallbackHandlerService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.secretCallbackHandlerService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="177" end="177" startBytecode="22" endBytecode="22" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 177]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="dab8d0d880b536b37f6997c0d91df725" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.serverConfigurationService from instance method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setServerConfigurationService(ServerConfigurationService)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="setServerConfigurationService" signature="(Lorg/wso2/carbon/base/api/ServerConfigurationService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="241" end="246" startBytecode="0" endBytecode="106" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.setServerConfigurationService(ServerConfigurationService)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="serverConfigurationService" signature="Lorg/wso2/carbon/base/api/ServerConfigurationService;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.serverConfigurationService</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="244" end="244" startBytecode="22" endBytecode="22" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 244]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_VOID_METHOD" priority="3" rank="20" abbrev="UC" category="STYLE" instanceHash="161189cafe87e14e4f868d7ea822d9fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless non-empty void method</ShortMessage>
+    <LongMessage>Method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService) seems to be useless</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="unsetRegistryService" signature="(Lorg/wso2/carbon/registry/core/service/RegistryService;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="161" end="162" startBytecode="0" endBytecode="58" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.unsetRegistryService(RegistryService)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="162" end="162" startBytecode="2" endBytecode="2" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 162]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="ab7d4e7c29ea40197f04c30927dfe515" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>DataSourceServiceComponent.ctx not initialized in constructor and dereferenced in org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.registerServices()</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="55" end="288" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>At DataSourceServiceComponent.java:[lines 55-288]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent</Message>
+    </Class>
+    <Field classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="ctx" signature="Lorg/osgi/service/component/ComponentContext;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+        <Message>In DataSourceServiceComponent.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.ctx</Message>
+    </Field>
+    <Method classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" name="registerServices" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" start="122" end="130" startBytecode="0" endBytecode="148" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent.registerServices()</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" primary="true" start="125" end="125" startBytecode="22" endBytecode="22" sourcefile="DataSourceServiceComponent.java" sourcepath="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java">
+      <Message>At DataSourceServiceComponent.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="aabc96ee8f6035ee16933a2f9efb3d8b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.getDsMetaInfo() may expose internal representation by returning WSDataSourceInfo.dsMetaInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" start="30" end="58" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+        <Message>At WSDataSourceInfo.java:[lines 30-58]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" name="getDsMetaInfo" signature="()Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" start="53" end="53" startBytecode="0" endBytecode="46" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.getDsMetaInfo()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" name="dsMetaInfo" signature="Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+        <Message>In WSDataSourceInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.dsMetaInfo</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" primary="true" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+      <Message>At WSDataSourceInfo.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="94e7129f82f2c0b2b62c452332d8e775" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.setDsMetaInfo(WSDataSourceMetaInfo) may expose internal representation by storing an externally mutable object into WSDataSourceInfo.dsMetaInfo</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" start="30" end="58" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+        <Message>At WSDataSourceInfo.java:[lines 30-58]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" name="setDsMetaInfo" signature="(Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" start="57" end="58" startBytecode="0" endBytecode="61" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.setDsMetaInfo(WSDataSourceMetaInfo)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" name="dsMetaInfo" signature="Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+        <Message>In WSDataSourceInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo.dsMetaInfo</Message>
+    </Field>
+    <LocalVariable name="dsMetaInfo" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named dsMetaInfo</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" primary="true" start="57" end="57" startBytecode="2" endBytecode="2" sourcefile="WSDataSourceInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java">
+      <Message>At WSDataSourceInfo.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8ff36604d5ba39384a0adfee80e5ce3f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.getDefinition() may expose internal representation by returning WSDataSourceMetaInfo.definition</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="39" end="98" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>At WSDataSourceMetaInfo.java:[lines 39-98]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="getDefinition" signature="()Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo$WSDataSourceDefinition;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="93" end="93" startBytecode="0" endBytecode="46" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.getDefinition()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="definition" signature="Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo$WSDataSourceDefinition;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>In WSDataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.definition</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true" start="93" end="93" startBytecode="4" endBytecode="4" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+      <Message>At WSDataSourceMetaInfo.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fe1cbc83865b1017565f23114e2e3c2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.getJndiConfig() may expose internal representation by returning WSDataSourceMetaInfo.jndiConfig</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="39" end="98" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>At WSDataSourceMetaInfo.java:[lines 39-98]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="getJndiConfig" signature="()Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="85" end="85" startBytecode="0" endBytecode="46" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.getJndiConfig()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="jndiConfig" signature="Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>In WSDataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.jndiConfig</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true" start="85" end="85" startBytecode="4" endBytecode="4" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+      <Message>At WSDataSourceMetaInfo.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ea7fa3b2e684693fcae0c5c704d7a8d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.setDefinition(WSDataSourceMetaInfo$WSDataSourceDefinition) may expose internal representation by storing an externally mutable object into WSDataSourceMetaInfo.definition</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="39" end="98" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>At WSDataSourceMetaInfo.java:[lines 39-98]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="setDefinition" signature="(Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo$WSDataSourceDefinition;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="97" end="98" startBytecode="0" endBytecode="61" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.setDefinition(WSDataSourceMetaInfo$WSDataSourceDefinition)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="definition" signature="Lorg/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo$WSDataSourceDefinition;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>In WSDataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.definition</Message>
+    </Field>
+    <LocalVariable name="definition" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named definition</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true" start="97" end="97" startBytecode="2" endBytecode="2" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+      <Message>At WSDataSourceMetaInfo.java:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5d7154791240f403895f8d269f410c57" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.setJndiConfig(JNDIConfig) may expose internal representation by storing an externally mutable object into WSDataSourceMetaInfo.jndiConfig</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="39" end="98" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>At WSDataSourceMetaInfo.java:[lines 39-98]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="setJndiConfig" signature="(Lorg/wso2/carbon/ndatasource/core/JNDIConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" start="89" end="90" startBytecode="0" endBytecode="61" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.setJndiConfig(JNDIConfig)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" name="jndiConfig" signature="Lorg/wso2/carbon/ndatasource/core/JNDIConfig;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+        <Message>In WSDataSourceMetaInfo.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo.jndiConfig</Message>
+    </Field>
+    <LocalVariable name="jndiConfig" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named jndiConfig</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" primary="true" start="89" end="89" startBytecode="2" endBytecode="2" sourcefile="WSDataSourceMetaInfo.java" sourcepath="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java">
+      <Message>At WSDataSourceMetaInfo.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="40ffabc3c81776768f5f0fe0ac2ecdfa" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.elementToInputStream(Element): String.getBytes()</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="elementToInputStream" signature="(Lorg/w3c/dom/Element;)Ljava/io/InputStream;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="272" end="280" startBytecode="0" endBytecode="187" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.elementToInputStream(Element)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="276" end="276" startBytecode="16" endBytecode="16" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+      <Message>At DataSourceUtils.java:[line 276]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="851b3b41104eef4dc44eae295159b4b7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureLoadElement(Element, boolean): new String(byte[])</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="secureLoadElement" signature="(Lorg/w3c/dom/Element;Z)V" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="185" end="213" startBytecode="0" endBytecode="398" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureLoadElement(Element, boolean)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="197" end="197" startBytecode="90" endBytecode="90" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+      <Message>At DataSourceUtils.java:[line 197]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="dffd7b01a5bb0c1d2176f90f4ca3ba75" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureSaveElement(Element): String.getBytes()</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="secureSaveElement" signature="(Lorg/w3c/dom/Element;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="216" end="235" startBytecode="0" endBytecode="311" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureSaveElement(Element)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="220" end="220" startBytecode="38" endBytecode="38" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+      <Message>At DataSourceUtils.java:[line 220]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="3b02dd7b5f25aadc1382265c7c5c6bc5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.stringToElement(String): String.getBytes()</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="stringToElement" signature="(Ljava/lang/String;)Lorg/w3c/dom/Element;" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="162" end="170" startBytecode="0" endBytecode="185" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.stringToElement(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="167" end="167" startBytecode="29" endBytecode="29" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+      <Message>At DataSourceUtils.java:[line 167]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="9eec82f692ea3db9c8f015eb7dcd43d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference on branch that might be infeasible</ShortMessage>
+    <LongMessage>Possible null pointer dereference of lhs on branch that might be infeasible in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.nullAllowEquals(Object, Object)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="nullAllowEquals" signature="(Ljava/lang/Object;Ljava/lang/Object;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="132" end="138" startBytecode="0" endBytecode="113" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.nullAllowEquals(Object, Object)</Message>
+    </Method>
+    <LocalVariable name="lhs" register="0" pc="29" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from lhs</Message>
+    </LocalVariable>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="138" end="138" startBytecode="30" endBytecode="30" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at DataSourceUtils.java:[line 138]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="135" end="135" startBytecode="15" endBytecode="15" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at DataSourceUtils.java:[line 135]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="f20c6baa9277955f37009c0da3e2012f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of encryptedStr, which is known to be non-null in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureLoadElement(Element, boolean)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="secureLoadElement" signature="(Lorg/w3c/dom/Element;Z)V" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="185" end="213" startBytecode="0" endBytecode="398" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureLoadElement(Element, boolean)</Message>
+    </Method>
+    <LocalVariable name="encryptedStr" register="2" pc="54" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from encryptedStr</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getAttribute" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getAttribute(String) of type String</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="194" end="194" startBytecode="55" endBytecode="55" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at DataSourceUtils.java:[line 194]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="5e35c36bf2dc01086ae0a3d6b45d8574" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of encryptedStr, which is known to be non-null in org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureSaveElement(Element)</LongMessage>
+    <Class classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="52" end="296" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java">
+        <Message>At DataSourceUtils.java:[lines 52-296]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.ndatasource.core.utils.DataSourceUtils</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" name="secureSaveElement" signature="(Lorg/w3c/dom/Element;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" start="216" end="235" startBytecode="0" endBytecode="311" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java"/>
+      <Message>In method org.wso2.carbon.ndatasource.core.utils.DataSourceUtils.secureSaveElement(Element)</Message>
+    </Method>
+    <LocalVariable name="encryptedStr" register="1" pc="9" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from encryptedStr</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getAttribute" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getAttribute(String) of type String</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" primary="true" start="217" end="217" startBytecode="10" endBytecode="10" sourcefile="DataSourceUtils.java" sourcepath="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at DataSourceUtils.java:[line 217]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Possible null pointer dereference due to return value of called method</ShortDescription>
+    <Details><![CDATA[
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="IP_PARAMETER_IS_DEAD_BUT_OVERWRITTEN" abbrev="IP" category="CORRECTNESS" cweid="563">
+    <ShortDescription>A parameter is dead upon entry to a method but overwritten</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+The initial value of this parameter is ignored, and the parameter
+is overwritten here. This often indicates a mistaken belief that
+the write to the parameter will be conveyed back to
+the caller.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_EXPOSE_REP" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Public static method may expose internal representation by returning a mutable object or array</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A public static method returns a reference to a mutable object or
+   an array that is part of the static state of the class.
+   Any code that calls this method can freely modify
+   the underlying array.
+   One fix is to return a copy of the array.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" abbrev="NP" category="STYLE">
+    <ShortDescription>Possible null pointer dereference on branch that might be infeasible</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception cannot ever be executed; deciding that is beyond the ability of SpotBugs.
+Due to the fact that this value had been previously tested for nullness,
+this is a definite possibility.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE_OF_NULL" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store of null to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>The code stores null into a local variable, and the stored value is not
+read. This store may have been introduced to assist the garbage collector, but
+as of Java SE 6.0, this is no longer needed or useful.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="IS2_INCONSISTENT_SYNC" abbrev="IS" category="MT_CORRECTNESS">
+    <ShortDescription>Inconsistent synchronization</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The fields of this class appear to be accessed inconsistently with respect
+  to synchronization.&nbsp; This bug report indicates that the bug pattern detector
+  judged that
+  </p>
+  <ul>
+  <li> The class contains a mix of locked and unlocked accesses,</li>
+  <li> The class is <b>not</b> annotated as javax.annotation.concurrent.NotThreadSafe,</li>
+  <li> At least one locked access was performed by one of the class's own methods, and</li>
+  <li> The number of unsynchronized field accesses (reads and writes) was no more than
+       one third of all accesses, with writes being weighed twice as high as reads</li>
+  </ul>
+
+  <p> A typical bug matching this bug pattern is forgetting to synchronize
+  one of the methods in a class that is intended to be thread-safe.</p>
+
+  <p> You can select the nodes labeled "Unsynchronized access" to show the
+  code locations where the detector believed that a field was accessed
+  without synchronization.</p>
+
+  <p> Note that there are various sources of inaccuracy in this detector;
+  for example, the detector cannot statically detect all situations in which
+  a lock is held.&nbsp; Also, even when the detector is accurate in
+  distinguishing locked vs. unlocked accesses, the code in question may still
+  be correct.</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SSD_DO_NOT_USE_INSTANCE_LOCK_ON_SHARED_STATIC_DATA" abbrev="SSD" category="MT_CORRECTNESS">
+    <ShortDescription>Instance level lock was used on a shared static data</ShortDescription>
+    <Details><![CDATA[
+      <p>
+        If the lock or the synchronized method is not static, that modifies the static field,
+        that could leave the shared static data unprotected against concurrent access.
+        This could occur in two ways, if a synchronization method uses a non-static lock object,
+        or a synchronized method is declared as non-static. Both ways are ineffective.
+        Best solution is to use a private static final lock object to secure the shared static data.</p>
+      <p>
+      See SEI CERT rule
+      <a href="https://wiki.sei.cmu.edu/confluence/display/java/LCK06-J.+Do+not+use+an+instance+lock+to+protect+shared+static+data">
+      LCK06-J. Do not use an instance lock to protect shared static data</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UC_USELESS_VOID_METHOD" abbrev="UC" category="STYLE">
+    <ShortDescription>Useless non-empty void method</ShortDescription>
+    <Details><![CDATA[
+
+<p>Our analysis shows that this non-empty void method does not actually perform any useful work.
+Please check it: probably there's a mistake in its code or its body can be fully removed.
+</p>
+<p>We are trying to reduce the false positives as much as possible, but in some cases this warning might be wrong.
+Common false-positive cases include:</p>
+<ul>
+<li>The method is intended to trigger loading of some class which may have a side effect.</li>
+<li>The method is intended to implicitly throw some obscure exception.</li>
+</ul>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CONFUSING" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Confusing method names</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The referenced methods have names that differ only by capitalization.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="SSD">
+    <Description>Do not use an instance lock to protect shared static data</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="IP">
+    <Description>Ignored parameter</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="IS" cweid="366">
+    <Description>Inconsistent synchronization</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="40">
+    <MissingClass>javax.xml.bind.JAXBContext</MissingClass>
+    <MissingClass>javax.xml.bind.JAXBException</MissingClass>
+    <MissingClass>javax.xml.bind.Marshaller</MissingClass>
+    <MissingClass>javax.xml.bind.Unmarshaller</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMElement</MissingClass>
+    <MissingClass>org.apache.axis2.clustering.ClusteringAgent</MissingClass>
+    <MissingClass>org.apache.axis2.clustering.ClusteringFault</MissingClass>
+    <MissingClass>org.apache.axis2.clustering.ClusteringMessage</MissingClass>
+    <MissingClass>org.apache.axis2.context.ConfigurationContext</MissingClass>
+    <MissingClass>org.apache.axis2.engine.AxisConfiguration</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.xerces.util.SecurityManager</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.osgi.service.component.ComponentContext</MissingClass>
+    <MissingClass>org.wso2.carbon.base.ServerConfiguration</MissingClass>
+    <MissingClass>org.wso2.carbon.base.api.ServerConfigurationService</MissingClass>
+    <MissingClass>org.wso2.carbon.context.PrivilegedCarbonContext</MissingClass>
+    <MissingClass>org.wso2.carbon.core.AbstractAdmin</MissingClass>
+    <MissingClass>org.wso2.carbon.core.util.CryptoException</MissingClass>
+    <MissingClass>org.wso2.carbon.core.util.CryptoUtil</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.common.DataSourceException</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.common.spi.DataSourceReader</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.api.Collection</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.api.Resource</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.Registry</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.exceptions.RegistryException</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.exceptions.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.service.RegistryService</MissingClass>
+    <MissingClass>org.wso2.carbon.registry.core.session.UserRegistry</MissingClass>
+    <MissingClass>org.wso2.carbon.securevault.SecretCallbackHandlerService</MissingClass>
+    <MissingClass>org.wso2.carbon.user.core.service.RealmService</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.AbstractAxis2ConfigurationContextObserver</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.Axis2ConfigurationContextObserver</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.CarbonUtils</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.ConfigurationContextService</MissingClass>
+    <MissingClass>org.wso2.securevault.SecretResolver</MissingClass>
+    <MissingClass>org.wso2.securevault.SecretResolverFactory</MissingClass>
+    <MissingClass>org.wso2.securevault.secret.SecretCallbackHandler</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Wed, 8 Nov 2023 16:42:54 +0900" total_classes="20" referenced_classes="78" total_bugs="49" total_size="1104" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.42" clock_seconds="2.80" peak_mbytes="238.95" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="11" priority_2="32" priority_1="6">
+    <FileStats path="org/wso2/carbon/ndatasource/core/CarbonDataSource.java" bugCount="3" size="16" bugHash="bc282406f0fc4cbb4375d622a139441c"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceAxis2ConfigurationContextObserver.java" bugCount="0" size="20"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceInfo.java" bugCount="3" size="21" bugHash="620eaef0dd8ea6742921ad012d13a08e"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceManager.java" bugCount="2" size="91" bugHash="79b13c83973afe7e1a637022b498b86b"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceMetaInfo.java" bugCount="4" size="91" bugHash="21ae2a9ef54d84a04927c672aa3a3cbe"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceRepository.java" bugCount="2" size="267" bugHash="3d6da054a1b8d99e10fd25a8caaa23bb"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceService.java" bugCount="0" size="28"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceStatMessage.java" bugCount="0" size="36"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/DataSourceStatus.java" bugCount="0" size="12"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/JNDIConfig.java" bugCount="2" size="79" bugHash="622651b91224342b91e48eb3bc30af9f"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/SystemDataSourcesConfiguration.java" bugCount="4" size="15" bugHash="71a02ff45cba21214eea8a79a378f3d9"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/internal/DataSourceServiceComponent.java" bugCount="16" size="142" bugHash="beb016b1a82edfd4348da2cdd329dbc3"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/services/NDataSourceAdminService.java" bugCount="0" size="37"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/services/WSDataSourceInfo.java" bugCount="2" size="24" bugHash="6ffc16d0e54825b7b411d89386bdbddf"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/services/WSDataSourceMetaInfo.java" bugCount="4" size="76" bugHash="0529f07a90c50837b29acfc692a06a98"/>
+    <FileStats path="org/wso2/carbon/ndatasource/core/utils/DataSourceUtils.java" bugCount="7" size="149" bugHash="39d9c519d9c2839537211dfa04395d7e"/>
+    <PackageStats package="org.wso2.carbon.ndatasource.core" total_bugs="20" total_types="13" total_size="676" priority_3="2" priority_2="18">
+      <ClassStats class="org.wso2.carbon.ndatasource.core.CarbonDataSource" sourceFile="CarbonDataSource.java" interface="false" size="16" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceAxis2ConfigurationContextObserver" sourceFile="DataSourceAxis2ConfigurationContextObserver.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceInfo" sourceFile="DataSourceInfo.java" interface="false" size="21" bugs="3" priority_2="3"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceManager" sourceFile="DataSourceManager.java" interface="false" size="91" bugs="2" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo" sourceFile="DataSourceMetaInfo.java" interface="false" size="61" bugs="4" priority_2="4"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceMetaInfo$DataSourceDefinition" sourceFile="DataSourceMetaInfo.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceRepository" sourceFile="DataSourceRepository.java" interface="false" size="267" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceService" sourceFile="DataSourceService.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceStatMessage" sourceFile="DataSourceStatMessage.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.DataSourceStatus" sourceFile="DataSourceStatus.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.JNDIConfig" sourceFile="JNDIConfig.java" interface="false" size="57" bugs="2" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.JNDIConfig$EnvEntry" sourceFile="JNDIConfig.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.SystemDataSourcesConfiguration" sourceFile="SystemDataSourcesConfiguration.java" interface="false" size="15" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.ndatasource.core.internal" total_bugs="16" total_types="1" total_size="142" priority_3="7" priority_2="7" priority_1="2">
+      <ClassStats class="org.wso2.carbon.ndatasource.core.internal.DataSourceServiceComponent" sourceFile="DataSourceServiceComponent.java" interface="false" size="142" bugs="16" priority_3="7" priority_2="7" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.ndatasource.core.services" total_bugs="6" total_types="4" total_size="137" priority_2="6">
+      <ClassStats class="org.wso2.carbon.ndatasource.core.services.NDataSourceAdminService" sourceFile="NDataSourceAdminService.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.services.WSDataSourceInfo" sourceFile="WSDataSourceInfo.java" interface="false" size="24" bugs="2" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo" sourceFile="WSDataSourceMetaInfo.java" interface="false" size="50" bugs="4" priority_2="4"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.services.WSDataSourceMetaInfo$WSDataSourceDefinition" sourceFile="WSDataSourceMetaInfo.java" interface="false" size="26" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.ndatasource.core.utils" total_bugs="7" total_types="2" total_size="149" priority_3="2" priority_2="1" priority_1="4">
+      <ClassStats class="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils" sourceFile="DataSourceUtils.java" interface="false" size="143" bugs="7" priority_3="2" priority_2="1" priority_1="4"/>
+      <ClassStats class="org.wso2.carbon.ndatasource.core.utils.DataSourceUtils$1" sourceFile="DataSourceUtils.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="252" invocations="658" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="43410" standardDeviationMicrosecondsPerInvocation="1839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="92" invocations="209" avgMicrosecondsPerInvocation="440" maxMicrosecondsPerInvocation="21859" standardDeviationMicrosecondsPerInvocation="1872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="85" invocations="214" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="19441" standardDeviationMicrosecondsPerInvocation="1552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="76" invocations="417" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="11694" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="72" invocations="216" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="28527" standardDeviationMicrosecondsPerInvocation="1972"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="66" invocations="209" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="27942" standardDeviationMicrosecondsPerInvocation="1940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="64" invocations="20" avgMicrosecondsPerInvocation="3202" maxMicrosecondsPerInvocation="56684" standardDeviationMicrosecondsPerInvocation="12274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="63" invocations="78" avgMicrosecondsPerInvocation="812" maxMicrosecondsPerInvocation="12619" standardDeviationMicrosecondsPerInvocation="1907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="62" invocations="152" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="43250" standardDeviationMicrosecondsPerInvocation="3500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="57" invocations="208" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="9619" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="56" invocations="209" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="31086" standardDeviationMicrosecondsPerInvocation="2165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="52" invocations="208" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="8596" standardDeviationMicrosecondsPerInvocation="697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="45" invocations="78" avgMicrosecondsPerInvocation="585" maxMicrosecondsPerInvocation="7362" standardDeviationMicrosecondsPerInvocation="1076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="43" invocations="126" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="12197" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="42" invocations="666" avgMicrosecondsPerInvocation="64" maxMicrosecondsPerInvocation="2668" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="42" invocations="20" avgMicrosecondsPerInvocation="2118" maxMicrosecondsPerInvocation="29410" standardDeviationMicrosecondsPerInvocation="6309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="78" avgMicrosecondsPerInvocation="471" maxMicrosecondsPerInvocation="26661" standardDeviationMicrosecondsPerInvocation="2993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="36" invocations="20" avgMicrosecondsPerInvocation="1828" maxMicrosecondsPerInvocation="28210" standardDeviationMicrosecondsPerInvocation="6076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="32" invocations="20" avgMicrosecondsPerInvocation="1625" maxMicrosecondsPerInvocation="11438" standardDeviationMicrosecondsPerInvocation="2802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="31" invocations="78" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="16830" standardDeviationMicrosecondsPerInvocation="1896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="20" avgMicrosecondsPerInvocation="1543" maxMicrosecondsPerInvocation="20977" standardDeviationMicrosecondsPerInvocation="4774"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="20" avgMicrosecondsPerInvocation="1201" maxMicrosecondsPerInvocation="17533" standardDeviationMicrosecondsPerInvocation="3761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="575" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1458" standardDeviationMicrosecondsPerInvocation="102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="21" invocations="20" avgMicrosecondsPerInvocation="1052" maxMicrosecondsPerInvocation="16239" standardDeviationMicrosecondsPerInvocation="3506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="78" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="6952" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="18" invocations="2792" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="3711" standardDeviationMicrosecondsPerInvocation="89"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="17" invocations="20" avgMicrosecondsPerInvocation="883" maxMicrosecondsPerInvocation="12079" standardDeviationMicrosecondsPerInvocation="2610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="16" invocations="20" avgMicrosecondsPerInvocation="808" maxMicrosecondsPerInvocation="11857" standardDeviationMicrosecondsPerInvocation="2560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="78" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="2411" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="15" invocations="20" avgMicrosecondsPerInvocation="778" maxMicrosecondsPerInvocation="15237" standardDeviationMicrosecondsPerInvocation="3317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="78" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="3245" standardDeviationMicrosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="209" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="2093" standardDeviationMicrosecondsPerInvocation="164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="13" invocations="27" avgMicrosecondsPerInvocation="501" maxMicrosecondsPerInvocation="12908" standardDeviationMicrosecondsPerInvocation="2433"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="13" invocations="78" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="5292" standardDeviationMicrosecondsPerInvocation="713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="78" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="5912" standardDeviationMicrosecondsPerInvocation="679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="13" invocations="20" avgMicrosecondsPerInvocation="653" maxMicrosecondsPerInvocation="6299" standardDeviationMicrosecondsPerInvocation="1726"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
