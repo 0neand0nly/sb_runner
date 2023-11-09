@@ -3,7 +3,8 @@
 너가 해야 할일을 알려주기위해 친히 readme를 작성해봤어
 
 *** 준비물: *** 
-1. Spotbug GUI: sb_runner\sb_runner\spotbugs-4.8.0\lib\spotbugs.jar" <br>
+1. Spotbug GUI: sb_runner\spotbugs-4.8.0\lib\spotbugs.jar" <br>
+java -jar ./spotbugs-4.8.0/lib/spotbugs.jar
 2. cleans안에 있는 jar file들
 3. clean_reports 안에 있는 spotbug reports : sb_runner\clean_reports\Testset_Reports_25
 4. Java Decompiler : https://java-decompiler.github.io/
