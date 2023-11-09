@@ -2,7 +2,7 @@
 
 너가 해야 할일을 알려주기위해 친히 readme를 작성해봤어
 
-*** 준비물: *** 
+**준비물:** 
 1. Spotbug GUI: sb_runner\spotbugs-4.8.0\lib\spotbugs.jar" <br>
 java -jar ./spotbugs-4.8.0/lib/spotbugs.jar
 2. cleans안에 있는 jar file들
@@ -10,7 +10,7 @@ java -jar ./spotbugs-4.8.0/lib/spotbugs.jar
 4. Java Decompiler : https://java-decompiler.github.io/
 
 
-*** 해야할 일 ***
+**해야할 일**
 
 1. 아래 리스트에 있는 리포트를(준비물 3번) 준비물 1번의 GUI Tool을 이용해서 연다.
 
@@ -22,7 +22,7 @@ java -jar ./spotbugs-4.8.0/lib/spotbugs.jar
 
 5. Validity를 JarList에 기록한다.
 
-*** 너가 봐야할 리포트 목록: ***
+**너가 봐야할 리포트 목록:**
 
 
 1. cas-server-support-x509-core-6.0.1.xml <br>
@@ -45,7 +45,7 @@ java -jar ./spotbugs-4.8.0/lib/spotbugs.jar
 
 
 
-*** 총 리스트 ***
+**총 리스트**
 
 
 1. cas-server-support-x509-core-6.0.1.xml <br>
