@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # 폴더 경로 설정
-folder_path = './cleans'
+folder_path = './vuls/TestSet'
 
 # JAR 파일 경로를 저장할 빈 리스트 생성
 jar_file_paths = []
