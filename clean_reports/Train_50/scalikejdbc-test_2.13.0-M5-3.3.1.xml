@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685224522" analysisTimestamp="1699688835911" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\scalikejdbc-test_2.13.0-M5-3.3.1.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="29">
+    <MissingClass>org.scalactic.Or</MissingClass>
+    <MissingClass>org.scalatest.AsyncTestSuite</MissingClass>
+    <MissingClass>org.scalatest.AsyncTestSuite$NoArgAsyncTest</MissingClass>
+    <MissingClass>org.scalatest.FutureOutcome</MissingClass>
+    <MissingClass>org.scalatest.Outcome</MissingClass>
+    <MissingClass>org.scalatest.TestSuite</MissingClass>
+    <MissingClass>org.scalatest.TestSuite$NoArgTest</MissingClass>
+    <MissingClass>org.scalatest.fixture.AsyncTestSuite</MissingClass>
+    <MissingClass>org.scalatest.fixture.AsyncTestSuite$OneArgAsyncTest</MissingClass>
+    <MissingClass>org.scalatest.fixture.TestSuite</MissingClass>
+    <MissingClass>org.scalatest.fixture.TestSuite$OneArgTest</MissingClass>
+    <MissingClass>org.specs2.mutable.After</MissingClass>
+    <MissingClass>org.specs2.specification.After</MissingClass>
+    <MissingClass>scala.Function1</MissingClass>
+    <MissingClass>scala.Option</MissingClass>
+    <MissingClass>scala.Serializable</MissingClass>
+    <MissingClass>scala.concurrent.ExecutionContext</MissingClass>
+    <MissingClass>scala.runtime.BoxedUnit</MissingClass>
+    <MissingClass>scala.runtime.LambdaDeserialize</MissingClass>
+    <MissingClass>scala.util.control.NonFatal$</MissingClass>
+    <MissingClass>scalikejdbc.ConnectionPool$</MissingClass>
+    <MissingClass>scalikejdbc.DB</MissingClass>
+    <MissingClass>scalikejdbc.DB$</MissingClass>
+    <MissingClass>scalikejdbc.DBConnectionAttributes</MissingClass>
+    <MissingClass>scalikejdbc.DBSession</MissingClass>
+    <MissingClass>scalikejdbc.LoanPattern</MissingClass>
+    <MissingClass>scalikejdbc.SettingsProvider</MissingClass>
+    <MissingClass>scalikejdbc.SettingsProvider$</MissingClass>
+    <MissingClass>scalikejdbc.Tx</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:04 +0900" total_classes="5" referenced_classes="24" total_bugs="0" total_size="98" num_packages="3" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.81" clock_seconds="1.96" peak_mbytes="221.98" alloc_mbytes="3984.00" gc_seconds="0.01">
+    <FileStats path="scalikejdbc/scalatest/AsyncAutoRollback.scala" bugCount="0" size="31"/>
+    <FileStats path="scalikejdbc/scalatest/AutoRollback.scala" bugCount="0" size="27"/>
+    <FileStats path="scalikejdbc/specs2/AutoRollback.scala" bugCount="0" size="1"/>
+    <FileStats path="scalikejdbc/specs2/AutoRollbackLike.scala" bugCount="0" size="38"/>
+    <FileStats path="scalikejdbc/specs2/mutable/AutoRollback.scala" bugCount="0" size="1"/>
+    <PackageStats package="scalikejdbc.scalatest" total_bugs="0" total_types="2" total_size="58">
+      <ClassStats class="scalikejdbc.scalatest.AsyncAutoRollback" sourceFile="AsyncAutoRollback.scala" interface="true" size="31" bugs="0"/>
+      <ClassStats class="scalikejdbc.scalatest.AutoRollback" sourceFile="AutoRollback.scala" interface="true" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="scalikejdbc.specs2" total_bugs="0" total_types="2" total_size="39">
+      <ClassStats class="scalikejdbc.specs2.AutoRollback" sourceFile="AutoRollback.scala" interface="true" size="1" bugs="0"/>
+      <ClassStats class="scalikejdbc.specs2.AutoRollbackLike" sourceFile="AutoRollbackLike.scala" interface="true" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="scalikejdbc.specs2.mutable" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="scalikejdbc.specs2.mutable.AutoRollback" sourceFile="AutoRollback.scala" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="290" invocations="476" avgMicrosecondsPerInvocation="610" maxMicrosecondsPerInvocation="68531" standardDeviationMicrosecondsPerInvocation="3402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="72" invocations="49" avgMicrosecondsPerInvocation="1487" maxMicrosecondsPerInvocation="65154" standardDeviationMicrosecondsPerInvocation="9196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="65" invocations="24" avgMicrosecondsPerInvocation="2738" maxMicrosecondsPerInvocation="61750" standardDeviationMicrosecondsPerInvocation="12306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="65" invocations="480" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="17019" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="60" invocations="57" avgMicrosecondsPerInvocation="1069" maxMicrosecondsPerInvocation="39245" standardDeviationMicrosecondsPerInvocation="5211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="24" avgMicrosecondsPerInvocation="2335" maxMicrosecondsPerInvocation="12551" standardDeviationMicrosecondsPerInvocation="3190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="45" invocations="138" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="11525" standardDeviationMicrosecondsPerInvocation="1036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="37" invocations="45" avgMicrosecondsPerInvocation="841" maxMicrosecondsPerInvocation="13650" standardDeviationMicrosecondsPerInvocation="2785"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="34" invocations="24" avgMicrosecondsPerInvocation="1452" maxMicrosecondsPerInvocation="7094" standardDeviationMicrosecondsPerInvocation="2056"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="24" avgMicrosecondsPerInvocation="1375" maxMicrosecondsPerInvocation="26688" standardDeviationMicrosecondsPerInvocation="5290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="45" avgMicrosecondsPerInvocation="708" maxMicrosecondsPerInvocation="13309" standardDeviationMicrosecondsPerInvocation="2501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="31" invocations="45" avgMicrosecondsPerInvocation="694" maxMicrosecondsPerInvocation="11508" standardDeviationMicrosecondsPerInvocation="1817"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="24" avgMicrosecondsPerInvocation="1125" maxMicrosecondsPerInvocation="14600" standardDeviationMicrosecondsPerInvocation="2895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="24" avgMicrosecondsPerInvocation="941" maxMicrosecondsPerInvocation="7444" standardDeviationMicrosecondsPerInvocation="1653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="408" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="1917" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="21" invocations="45" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="9526" standardDeviationMicrosecondsPerInvocation="1398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="19" invocations="1" avgMicrosecondsPerInvocation="19144" maxMicrosecondsPerInvocation="19144" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="17" invocations="45" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="7953" standardDeviationMicrosecondsPerInvocation="1169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="16" invocations="5" avgMicrosecondsPerInvocation="3383" maxMicrosecondsPerInvocation="11410" standardDeviationMicrosecondsPerInvocation="4230"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

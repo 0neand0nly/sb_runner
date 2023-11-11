@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685173102" analysisTimestamp="1699688816072" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\org.wso2.carbon.mediator.dbreport.ui-4.7.96.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ae16c0ee5449d99f164eb17b0678ea1c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediator.dbreport.DBReportMediator.getDataSourceProps() may expose internal representation by returning DBReportMediator.dataSourceProps</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="35" end="431" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>At DBReportMediator.java:[lines 35-431]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.DBReportMediator</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="getDataSourceProps" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="74" end="74" startBytecode="0" endBytecode="46" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java"/>
+      <Message>In method org.wso2.carbon.mediator.dbreport.DBReportMediator.getDataSourceProps()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="dataSourceProps" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>In DBReportMediator.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediator.dbreport.DBReportMediator.dataSourceProps</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true" start="74" end="74" startBytecode="4" endBytecode="4" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+      <Message>At DBReportMediator.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="59a638492e13af9378c9ed48a3088e8b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediator.dbreport.DBReportMediator.getStatementList() may expose internal representation by returning DBReportMediator.statementList</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="35" end="431" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>At DBReportMediator.java:[lines 35-431]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.DBReportMediator</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="getStatementList" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="82" end="82" startBytecode="0" endBytecode="46" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java"/>
+      <Message>In method org.wso2.carbon.mediator.dbreport.DBReportMediator.getStatementList()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="statementList" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>In DBReportMediator.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediator.dbreport.DBReportMediator.statementList</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true" start="82" end="82" startBytecode="4" endBytecode="4" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+      <Message>At DBReportMediator.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="616c0cb3bed62e76fa47ec63428a40b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediator.dbreport.DBReportMediator.serializeDBInformation(OMElement) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="35" end="431" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>At DBReportMediator.java:[lines 35-431]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.DBReportMediator</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="serializeDBInformation" signature="(Lorg/apache/axiom/om/OMElement;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" start="108" end="262" startBytecode="0" endBytecode="2074" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java"/>
+      <Message>In method org.wso2.carbon.mediator.dbreport.DBReportMediator.serializeDBInformation(OMElement)</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" name="dataSourceProps" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+        <Message>In DBReportMediator.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediator.dbreport.DBReportMediator.dataSourceProps</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediator" primary="true" start="115" end="115" startBytecode="69" endBytecode="69" sourcefile="DBReportMediator.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediator.java">
+      <Message>At DBReportMediator.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="2ae6e3652735b885cc31317dd337ed9b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.wso2.carbon.mediator.dbreport.DBReportMediatorClient at new org.wso2.carbon.mediator.dbreport.DBReportMediatorClient(String, String, ConfigurationContext) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" start="47" end="84" sourcefile="DBReportMediatorClient.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediatorClient.java">
+        <Message>At DBReportMediatorClient.java:[lines 47-84]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.DBReportMediatorClient</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Lorg/apache/axis2/context/ConfigurationContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" start="47" end="54" startBytecode="0" endBytecode="199" sourcefile="DBReportMediatorClient.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediatorClient.java"/>
+      <Message>In method new org.wso2.carbon.mediator.dbreport.DBReportMediatorClient(String, String, ConfigurationContext)</Message>
+    </Method>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" primary="true" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="DBReportMediatorClient.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediatorClient.java">
+      <Message>At DBReportMediatorClient.java:[line 48]</Message>
+    </SourceLine>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="DBReportMediatorClient.java" sourcepath="org/wso2/carbon/mediator/dbreport/DBReportMediatorClient.java">
+      <Message>At DBReportMediatorClient.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d9823619a87a040f942ce9ed62ba4145" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediator.dbreport.Statement.getParameters() may expose internal representation by returning Statement.parameters</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.Statement" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" start="28" end="53" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+        <Message>At Statement.java:[lines 28-53]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.Statement</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.Statement" name="getParameters" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" start="49" end="49" startBytecode="0" endBytecode="46" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java"/>
+      <Message>In method org.wso2.carbon.mediator.dbreport.Statement.getParameters()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediator.dbreport.Statement" name="parameters" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+        <Message>In Statement.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediator.dbreport.Statement.parameters</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" primary="true" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+      <Message>At Statement.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="eb7896e4ab942d3d36ee4376e02602e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.wso2.carbon.mediator.dbreport.Statement.getResultsMap() may expose internal representation by returning Statement.resultsMap</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.Statement" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" start="28" end="53" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+        <Message>At Statement.java:[lines 28-53]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.Statement</Message>
+    </Class>
+    <Method classname="org.wso2.carbon.mediator.dbreport.Statement" name="getResultsMap" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" start="53" end="53" startBytecode="0" endBytecode="46" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java"/>
+      <Message>In method org.wso2.carbon.mediator.dbreport.Statement.getResultsMap()</Message>
+    </Method>
+    <Field classname="org.wso2.carbon.mediator.dbreport.Statement" name="resultsMap" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+        <Message>In Statement.java</Message>
+      </SourceLine>
+      <Message>Field org.wso2.carbon.mediator.dbreport.Statement.resultsMap</Message>
+    </Field>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement" primary="true" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+      <Message>At Statement.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="c0df4b30419dc3aa9b5c5ce8212a108c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.wso2.carbon.mediator.dbreport.Statement$Parameter be a _static_ inner class?</LongMessage>
+    <Class classname="org.wso2.carbon.mediator.dbreport.Statement$Parameter" primary="true">
+      <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement$Parameter" start="57" end="111" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java">
+        <Message>At Statement.java:[lines 57-111]</Message>
+      </SourceLine>
+      <Message>In class org.wso2.carbon.mediator.dbreport.Statement$Parameter</Message>
+    </Class>
+    <SourceLine classname="org.wso2.carbon.mediator.dbreport.Statement$Parameter" start="57" end="111" sourcefile="Statement.java" sourcepath="org/wso2/carbon/mediator/dbreport/Statement.java" synthetic="true">
+      <Message>At Statement.java:[lines 57-111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="37">
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMAttribute</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMElement</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMFactory</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNamespace</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNode</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMText</MissingClass>
+    <MissingClass>org.apache.axis2.AxisFault</MissingClass>
+    <MissingClass>org.apache.axis2.client.Options</MissingClass>
+    <MissingClass>org.apache.axis2.client.ServiceClient</MissingClass>
+    <MissingClass>org.apache.axis2.context.ConfigurationContext</MissingClass>
+    <MissingClass>org.apache.axis2.transport.http.HTTPConstants</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.SynapseXPathFactory</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.SynapseXPathSerializer</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.XMLConfigConstants</MissingClass>
+    <MissingClass>org.apache.synapse.util.xpath.SynapseXPath</MissingClass>
+    <MissingClass>org.jaxen.JaxenException</MissingClass>
+    <MissingClass>org.osgi.framework.BundleActivator</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.wso2.carbon.CarbonConstants</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.AbstractMediatorService</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.MediatorException</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.MediatorService</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.ui.AbstractMediator</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.ui.Mediator</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.ui.stub.NDataSourceAdminDataSourceException</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.ui.stub.NDataSourceAdminStub</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.ui.stub.core.services.xsd.WSDataSourceInfo</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.ui.stub.core.services.xsd.WSDataSourceMetaInfo</MissingClass>
+    <MissingClass>org.wso2.carbon.ndatasource.ui.stub.core.xsd.JNDIConfig</MissingClass>
+    <MissingClass>org.wso2.carbon.ui.CarbonUIUtil</MissingClass>
+    <MissingClass>org.wso2.carbon.utils.ServerConstants</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:13 +0900" total_classes="6" referenced_classes="31" total_bugs="7" total_size="396" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.92" clock_seconds="2.15" peak_mbytes="229.80" alloc_mbytes="3984.00" gc_seconds="0.03" priority_2="7">
+    <FileStats path="org/wso2/carbon/mediator/dbreport/DBReportMediator.java" bugCount="3" size="263" bugHash="fc757c237ca90885c438be9c9c6d29be"/>
+    <FileStats path="org/wso2/carbon/mediator/dbreport/DBReportMediatorActivator.java" bugCount="0" size="18"/>
+    <FileStats path="org/wso2/carbon/mediator/dbreport/DBReportMediatorClient.java" bugCount="1" size="27" bugHash="89fdd201877cffc3caa7a1fbcece4c8a"/>
+    <FileStats path="org/wso2/carbon/mediator/dbreport/DBReportMediatorService.java" bugCount="0" size="13"/>
+    <FileStats path="org/wso2/carbon/mediator/dbreport/Statement.java" bugCount="3" size="75" bugHash="fc713aad3453e9df83d3a78f0ab6a426"/>
+    <PackageStats package="org.wso2.carbon.mediator.dbreport" total_bugs="7" total_types="6" total_size="396" priority_2="7">
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.DBReportMediator" sourceFile="DBReportMediator.java" interface="false" size="263" bugs="3" priority_2="3"/>
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.DBReportMediatorActivator" sourceFile="DBReportMediatorActivator.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.DBReportMediatorClient" sourceFile="DBReportMediatorClient.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.DBReportMediatorService" sourceFile="DBReportMediatorService.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.Statement" sourceFile="Statement.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="org.wso2.carbon.mediator.dbreport.Statement$Parameter" sourceFile="Statement.java" interface="false" size="52" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="241" invocations="517" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="46640" standardDeviationMicrosecondsPerInvocation="2203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="70" invocations="43" avgMicrosecondsPerInvocation="1645" maxMicrosecondsPerInvocation="27352" standardDeviationMicrosecondsPerInvocation="4498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="43" avgMicrosecondsPerInvocation="1622" maxMicrosecondsPerInvocation="55947" standardDeviationMicrosecondsPerInvocation="8405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="62" invocations="43" avgMicrosecondsPerInvocation="1450" maxMicrosecondsPerInvocation="31138" standardDeviationMicrosecondsPerInvocation="5054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="62" invocations="182" avgMicrosecondsPerInvocation="342" maxMicrosecondsPerInvocation="10571" standardDeviationMicrosecondsPerInvocation="858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="59" invocations="43" avgMicrosecondsPerInvocation="1383" maxMicrosecondsPerInvocation="20829" standardDeviationMicrosecondsPerInvocation="4134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="31" avgMicrosecondsPerInvocation="1814" maxMicrosecondsPerInvocation="12004" standardDeviationMicrosecondsPerInvocation="3075"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="526" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="9493" standardDeviationMicrosecondsPerInvocation="467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="46" invocations="6" avgMicrosecondsPerInvocation="7803" maxMicrosecondsPerInvocation="43580" standardDeviationMicrosecondsPerInvocation="16011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="42" invocations="43" avgMicrosecondsPerInvocation="999" maxMicrosecondsPerInvocation="13336" standardDeviationMicrosecondsPerInvocation="2611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="43" avgMicrosecondsPerInvocation="915" maxMicrosecondsPerInvocation="26098" standardDeviationMicrosecondsPerInvocation="3914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="31" avgMicrosecondsPerInvocation="1103" maxMicrosecondsPerInvocation="27156" standardDeviationMicrosecondsPerInvocation="4768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="28" avgMicrosecondsPerInvocation="1167" maxMicrosecondsPerInvocation="14047" standardDeviationMicrosecondsPerInvocation="2740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="32" invocations="6" avgMicrosecondsPerInvocation="5445" maxMicrosecondsPerInvocation="23317" standardDeviationMicrosecondsPerInvocation="8673"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="43" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="6943" standardDeviationMicrosecondsPerInvocation="1325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="31" avgMicrosecondsPerInvocation="939" maxMicrosecondsPerInvocation="13366" standardDeviationMicrosecondsPerInvocation="2604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="28" invocations="31" avgMicrosecondsPerInvocation="909" maxMicrosecondsPerInvocation="9171" standardDeviationMicrosecondsPerInvocation="1684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="31" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="14171" standardDeviationMicrosecondsPerInvocation="2545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="78" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="8178" standardDeviationMicrosecondsPerInvocation="1173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="22" invocations="6" avgMicrosecondsPerInvocation="3691" maxMicrosecondsPerInvocation="10334" standardDeviationMicrosecondsPerInvocation="3511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="446" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1478" standardDeviationMicrosecondsPerInvocation="121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="6" avgMicrosecondsPerInvocation="2584" maxMicrosecondsPerInvocation="8259" standardDeviationMicrosecondsPerInvocation="2756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="15" invocations="43" avgMicrosecondsPerInvocation="350" maxMicrosecondsPerInvocation="11552" standardDeviationMicrosecondsPerInvocation="1752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="6" avgMicrosecondsPerInvocation="2486" maxMicrosecondsPerInvocation="6437" standardDeviationMicrosecondsPerInvocation="2458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="14" invocations="6" avgMicrosecondsPerInvocation="2416" maxMicrosecondsPerInvocation="8506" standardDeviationMicrosecondsPerInvocation="3070"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

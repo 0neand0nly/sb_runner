@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685185425" analysisTimestamp="1699687574658" release="">
+  <Project projectName="">
+    <Jar>clean_train50\client-ktor-2.3.0-ALPHA.1.jar</Jar>
+  </Project>
+  <BugInstance type="DC_DOUBLECHECK" priority="2" rank="14" abbrev="DC" category="MT_CORRECTNESS" instanceHash="6533df77f688452be856ec8234bf2713" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="609">
+    <ShortMessage>Possible double-check of field</ShortMessage>
+    <LongMessage>Possible double-check on love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._contentAsync in love.forte.simbot.http.template.ktor.KtorHttpResponseImpl.get_content()</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="431" end="498" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 431-498]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" name="get_content" signature="()Ljava/lang/String;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="456" end="456" startBytecode="0" endBytecode="267" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpResponseImpl.get_content()</Message>
+    </Method>
+    <Field classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" name="_contentAsync" signature="Lkotlinx/coroutines/Deferred;" isStatic="false" primary="true" role="FIELD_ON" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>In KtorHttpTemplate.kt</Message>
+      </SourceLine>
+      <Message>On field love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._contentAsync</Message>
+    </Field>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" start="456" end="461" startBytecode="4" endBytecode="31" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[lines 456-461]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS" instanceHash="41137246c7d2bfc16f56188fb8e15cd4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="366">
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._content; locked 75% of time</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="431" end="498" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 431-498]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl</Message>
+    </Class>
+    <Field classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" name="_content" signature="Ljava/lang/String;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>In KtorHttpTemplate.kt</Message>
+      </SourceLine>
+      <Message>Field love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._content</Message>
+    </Field>
+    <Int value="75" role="INT_SYNC_PERCENT">
+      <Message>Synchronized 75% of the time</Message>
+    </Int>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" start="457" end="457" startBytecode="8" endBytecode="8" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at KtorHttpTemplate.kt:[line 457]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="462" end="462" startBytecode="35" endBytecode="35" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at KtorHttpTemplate.kt:[line 462]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="464" end="464" startBytecode="64" endBytecode="64" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at KtorHttpTemplate.kt:[line 464]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="466" end="466" startBytecode="73" endBytecode="73" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at KtorHttpTemplate.kt:[line 466]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS" instanceHash="c5e4f4ecd6e8ae610c47a3a404e43ccd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="366">
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._contentAsync; locked 50% of time</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="431" end="498" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 431-498]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl</Message>
+    </Class>
+    <Field classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" name="_contentAsync" signature="Lkotlinx/coroutines/Deferred;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>In KtorHttpTemplate.kt</Message>
+      </SourceLine>
+      <Message>Field love.forte.simbot.http.template.ktor.KtorHttpResponseImpl._contentAsync</Message>
+    </Field>
+    <Int value="50" role="INT_SYNC_PERCENT">
+      <Message>Synchronized 50% of the time</Message>
+    </Int>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" start="456" end="456" startBytecode="1" endBytecode="1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at KtorHttpTemplate.kt:[line 456]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="460" end="460" startBytecode="24" endBytecode="24" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at KtorHttpTemplate.kt:[line 460]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="465" end="465" startBytecode="69" endBytecode="69" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at KtorHttpTemplate.kt:[line 465]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="b791e27c8f111b0697f3437d88cef0fe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L2 in love.forte.simbot.http.template.ktor.KtorHttpResponseImpl.get_content()</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="431" end="498" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 431-498]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" name="get_content" signature="()Ljava/lang/String;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" start="456" end="456" startBytecode="0" endBytecode="267" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpResponseImpl.get_content()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="84" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" primary="true" start="459" end="459" startBytecode="84" endBytecode="84" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 459]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="877e125324b6eb1ae2f56b62db999079" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" start="464" end="464" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[line 464]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="3844d54de6039472821044a57056ae2f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" start="442" end="450" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 442-450]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="48b78b84a17b7d43c44ce33b6b6a3ce5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Questionable cast to abstract collection</ShortMessage>
+    <LongMessage>Questionable cast from Collection to abstract class java.util.List in love.forte.simbot.http.template.ktor.KtorHttpTemplate.requestAll(boolean, HttpRequest[])</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" start="81" end="528" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 81-528]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" name="requestAll" signature="(Z[Llove/forte/simbot/http/template/HttpRequest;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" start="254" end="267" startBytecode="0" endBytecode="401" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate.requestAll(boolean, HttpRequest[])</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 413-764]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Collection</Message>
+    </Type>
+    <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Expected java.util.List</Message>
+    </Type>
+    <LocalVariable name="destination$iv$iv" register="6" pc="917" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from destination$iv$iv</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" primary="true" start="528" end="528" startBytecode="919" endBytecode="919" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 528]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" start="520" end="520" startBytecode="428" endBytecode="428" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at KtorHttpTemplate.kt:[line 520]</Message>
+    </SourceLine>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate" start="524" end="524" startBytecode="546" endBytecode="546" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at KtorHttpTemplate.kt:[line 524]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="eb0c5d661119cd0b3dcf6f4ee00dc493" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" start="198" end="557" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 198-557]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="96f42ab74bfe9350bae02c2413c011cd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L16 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" start="198" end="557" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 198-557]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" start="198" end="218" startBytecode="0" endBytecode="3325" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="16" pc="495" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 16</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" primary="true" start="541" end="541" startBytecode="495" endBytecode="495" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 541]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="54ab50476228bce1ed409afb1873c570" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" start="125" end="554" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 125-554]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="a0743ddfbf0e997a655c7754b9053451" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L19 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" start="125" end="554" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 125-554]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" start="125" end="148" startBytecode="0" endBytecode="3431" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="19" pc="505" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 19</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" primary="true" start="538" end="538" startBytecode="505" endBytecode="505" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 538]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="d779fadc951ff8c1d775f5dd1421bf07" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" start="159" end="552" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 159-552]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="e5d52032497828722c79901871b56669" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L20 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" start="159" end="552" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 159-552]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" start="159" end="188" startBytecode="0" endBytecode="2949" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="20" pc="409" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 20</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" primary="true" start="536" end="536" startBytecode="409" endBytecode="409" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 536]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="7ac6a5ccfed87c57afed2ca86d005d12" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" start="294" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 294-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="a774ed0c181f084c114d2ad88cd81639" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L16 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" start="294" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 294-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" start="294" end="294" startBytecode="0" endBytecode="1981" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="16" pc="201" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 16</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" primary="true" start="534" end="534" startBytecode="201" endBytecode="201" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 534]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="fc1823228f98cbceaa6a6f1bfc11ddfb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" start="318" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 318-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="37f3b4f9babaa1ed60e53309e244866a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L16 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" start="318" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 318-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" start="318" end="318" startBytecode="0" endBytecode="1981" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="16" pc="201" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 16</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" primary="true" start="534" end="534" startBytecode="201" endBytecode="201" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 534]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="efa41f95ed0910999b6f93942f7279aa" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" start="335" end="553" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 335-553]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="bc55a8651e9abb4cc06dd720ac1bf8a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L13 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" start="335" end="553" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 335-553]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" start="335" end="335" startBytecode="0" endBytecode="1791" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="13" pc="169" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 13</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" primary="true" start="537" end="537" startBytecode="169" endBytecode="169" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 537]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="3f6d19f0dc0a9dbfe598f5a61c3ab0b1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" start="338" end="338" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[line 338]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="c44f081d7d0ee5e73530beb38e41e7ed" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" start="364" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 364-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="d61376f629e4fce8ec39a7031b7b55a2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L16 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" start="364" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 364-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" start="364" end="364" startBytecode="0" endBytecode="1981" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="16" pc="201" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 16</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" primary="true" start="534" end="534" startBytecode="201" endBytecode="201" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 534]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="cec0b4f77b3f71875e1d146c63967007" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" start="386" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 386-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="bcf8bf92fca0e23c2efe86848e25179e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L16 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" start="386" end="550" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 386-550]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" start="386" end="386" startBytecode="0" endBytecode="1981" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="16" pc="201" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 16</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" primary="true" start="534" end="534" startBytecode="201" endBytecode="201" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 534]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" priority="1" rank="14" abbrev="NP" category="STYLE" instanceHash="5685a321e8493af15ba743c14119b2fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Parameter must be non-null but is marked as nullable</ShortMessage>
+    <LongMessage>p2 must be non-null but is marked as nullable</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" start="403" end="553" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 403-553]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" name="invoke" signature="(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3.invoke(CoroutineScope, Continuation)</Message>
+    </Method>
+    <LocalVariable name="p2" register="2" pc="0" role="LOCAL_VARIABLE_PARAMETER_NAMED">
+      <Message>Parameter p2</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>In KtorHttpTemplate.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="d17cef90dfcae1f79e4d82c10abf05b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L13 in love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3.invokeSuspend(Object)</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" start="403" end="553" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 403-553]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" start="403" end="403" startBytecode="0" endBytecode="1791" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="13" pc="169" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 13</Message>
+    </LocalVariable>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" primary="true" start="537" end="537" startBytecode="169" endBytecode="169" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+      <Message>At KtorHttpTemplate.kt:[line 537]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" rank="20" abbrev="UPM" category="PERFORMANCE" instanceHash="26d1887e301d1f9bc14875f04a658457" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method love.forte.simbot.http.template.ktor.KtorHttpTemplates.toKtorCookie(HttpCookie, String, String) is never called</LongMessage>
+    <Class classname="love.forte.simbot.http.template.ktor.KtorHttpTemplates" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.jvm.JvmName">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplates" start="1" end="517" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt">
+        <Message>At KtorHttpTemplate.kt:[lines 1-517]</Message>
+      </SourceLine>
+      <Message>In class love.forte.simbot.http.template.ktor.KtorHttpTemplates</Message>
+    </Class>
+    <Method classname="love.forte.simbot.http.template.ktor.KtorHttpTemplates" name="toKtorCookie" signature="(Llove/forte/simbot/http/template/HttpCookie;Ljava/lang/String;Ljava/lang/String;)Lio/ktor/http/Cookie;" isStatic="true" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.jvm.JvmName">
+      <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplates" start="417" end="417" startBytecode="0" endBytecode="310" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt"/>
+      <Message>In method love.forte.simbot.http.template.ktor.KtorHttpTemplates.toKtorCookie(HttpCookie, String, String)</Message>
+    </Method>
+    <SourceLine classname="love.forte.simbot.http.template.ktor.KtorHttpTemplates" start="417" end="417" startBytecode="0" endBytecode="310" sourcefile="KtorHttpTemplate.kt" sourcepath="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" synthetic="true">
+      <Message>At KtorHttpTemplate.kt:[line 417]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="NP_PARAMETER_MUST_BE_NONNULL_BUT_MARKED_AS_NULLABLE" abbrev="NP" category="STYLE">
+    <ShortDescription>Parameter must be non-null but is marked as nullable</ShortDescription>
+    <Details><![CDATA[
+
+<p> This parameter is always used in a way that requires it to be non-null,
+but the parameter is explicitly annotated as being Nullable. Either the use
+of the parameter or the annotation is wrong.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_BAD_CAST_TO_ABSTRACT_COLLECTION" abbrev="BC" category="STYLE">
+    <ShortDescription>Questionable cast to abstract collection</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code casts a Collection to an abstract collection
+(such as <code>List</code>, <code>Set</code>, or <code>Map</code>).
+Ensure that you are guaranteed that the object is of the type
+you are casting to. If all you need is to be able
+to iterate through a collection, you don't need to cast it to a Set or List.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SA_LOCAL_SELF_ASSIGNMENT" abbrev="SA" category="STYLE">
+    <ShortDescription>Self assignment of local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a self assignment of a local variable; e.g.</p>
+<pre><code>public void foo() {
+    int x = 3;
+    x = x;
+}
+</code></pre>
+<p>
+Such assignments are useless, and may indicate a logic error or typo.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IS2_INCONSISTENT_SYNC" abbrev="IS" category="MT_CORRECTNESS">
+    <ShortDescription>Inconsistent synchronization</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The fields of this class appear to be accessed inconsistently with respect
+  to synchronization.&nbsp; This bug report indicates that the bug pattern detector
+  judged that
+  </p>
+  <ul>
+  <li> The class contains a mix of locked and unlocked accesses,</li>
+  <li> The class is <b>not</b> annotated as javax.annotation.concurrent.NotThreadSafe,</li>
+  <li> At least one locked access was performed by one of the class's own methods, and</li>
+  <li> The number of unsynchronized field accesses (reads and writes) was no more than
+       one third of all accesses, with writes being weighed twice as high as reads</li>
+  </ul>
+
+  <p> A typical bug matching this bug pattern is forgetting to synchronize
+  one of the methods in a class that is intended to be thread-safe.</p>
+
+  <p> You can select the nodes labeled "Unsynchronized access" to show the
+  code locations where the detector believed that a field was accessed
+  without synchronization.</p>
+
+  <p> Note that there are various sources of inaccuracy in this detector;
+  for example, the detector cannot statically detect all situations in which
+  a lock is held.&nbsp; Also, even when the detector is accurate in
+  distinguishing locked vs. unlocked accesses, the code in question may still
+  be correct.</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UPM_UNCALLED_PRIVATE_METHOD" abbrev="UPM" category="PERFORMANCE">
+    <ShortDescription>Private method is never called</ShortDescription>
+    <Details><![CDATA[
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="DC_DOUBLECHECK" abbrev="DC" category="MT_CORRECTNESS" cweid="609">
+    <ShortDescription>Possible double-check of field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method may contain an instance of double-checked locking.&nbsp;
+  This idiom is not correct according to the semantics of the Java memory
+  model.&nbsp; For more information, see the web page
+  <a href="http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html"
+  >http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html</a>.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="UPM">
+    <Description>Private method is never called</Description>
+  </BugCode>
+  <BugCode abbrev="IS" cweid="366">
+    <Description>Inconsistent synchronization</Description>
+  </BugCode>
+  <BugCode abbrev="SA">
+    <Description>Useless self-operation</Description>
+  </BugCode>
+  <BugCode abbrev="DC">
+    <Description>Double-check pattern</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="83">
+    <MissingClass>io.ktor.client.HttpClient</MissingClass>
+    <MissingClass>io.ktor.client.HttpClientConfig</MissingClass>
+    <MissingClass>io.ktor.client.HttpClientKt</MissingClass>
+    <MissingClass>io.ktor.client.call.HttpClientCall</MissingClass>
+    <MissingClass>io.ktor.client.engine.HttpClientEngineFactory</MissingClass>
+    <MissingClass>io.ktor.client.engine.cio.CIO</MissingClass>
+    <MissingClass>io.ktor.client.features.HttpClientFeature</MissingClass>
+    <MissingClass>io.ktor.client.features.HttpTimeout</MissingClass>
+    <MissingClass>io.ktor.client.features.HttpTimeout$Feature</MissingClass>
+    <MissingClass>io.ktor.client.features.HttpTimeout$HttpTimeoutCapabilityConfiguration</MissingClass>
+    <MissingClass>io.ktor.client.request.HttpRequestBuilder</MissingClass>
+    <MissingClass>io.ktor.client.request.HttpRequestKt</MissingClass>
+    <MissingClass>io.ktor.client.request.UtilsKt</MissingClass>
+    <MissingClass>io.ktor.client.request.forms.FormDataContent</MissingClass>
+    <MissingClass>io.ktor.client.statement.HttpResponse</MissingClass>
+    <MissingClass>io.ktor.client.statement.HttpResponseKt</MissingClass>
+    <MissingClass>io.ktor.client.statement.HttpStatement</MissingClass>
+    <MissingClass>io.ktor.client.utils.EmptyContent</MissingClass>
+    <MissingClass>io.ktor.http.ContentType</MissingClass>
+    <MissingClass>io.ktor.http.Cookie</MissingClass>
+    <MissingClass>io.ktor.http.CookieEncoding</MissingClass>
+    <MissingClass>io.ktor.http.HeadersBuilder</MissingClass>
+    <MissingClass>io.ktor.http.HttpHeaders</MissingClass>
+    <MissingClass>io.ktor.http.HttpMessageBuilder</MissingClass>
+    <MissingClass>io.ktor.http.HttpMessagePropertiesKt</MissingClass>
+    <MissingClass>io.ktor.http.HttpMethod</MissingClass>
+    <MissingClass>io.ktor.http.HttpMethod$Companion</MissingClass>
+    <MissingClass>io.ktor.http.HttpStatusCode</MissingClass>
+    <MissingClass>io.ktor.http.Parameters</MissingClass>
+    <MissingClass>io.ktor.http.Parameters$Companion</MissingClass>
+    <MissingClass>io.ktor.http.URLBuilder</MissingClass>
+    <MissingClass>io.ktor.http.URLParserKt</MissingClass>
+    <MissingClass>io.ktor.util.StringValues</MissingClass>
+    <MissingClass>io.ktor.util.StringValuesKt</MissingClass>
+    <MissingClass>io.ktor.util.date.GMTDate</MissingClass>
+    <MissingClass>io.ktor.util.reflect.TypeInfo</MissingClass>
+    <MissingClass>io.ktor.util.reflect.TypeInfoJvmKt</MissingClass>
+    <MissingClass>io.ktor.utils.io.ByteReadChannel</MissingClass>
+    <MissingClass>io.ktor.utils.io.ByteReadChannelKt</MissingClass>
+    <MissingClass>kotlin.Lazy</MissingClass>
+    <MissingClass>kotlin.LazyKt</MissingClass>
+    <MissingClass>kotlin.LazyThreadSafetyMode</MissingClass>
+    <MissingClass>kotlin.NoWhenBranchMatchedException</MissingClass>
+    <MissingClass>kotlin.Pair</MissingClass>
+    <MissingClass>kotlin.ResultKt</MissingClass>
+    <MissingClass>kotlin.TuplesKt</MissingClass>
+    <MissingClass>kotlin.Unit</MissingClass>
+    <MissingClass>kotlin.collections.ArraysKt</MissingClass>
+    <MissingClass>kotlin.collections.CollectionsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.Continuation</MissingClass>
+    <MissingClass>kotlin.coroutines.CoroutineContext</MissingClass>
+    <MissingClass>kotlin.coroutines.intrinsics.IntrinsicsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.jvm.internal.SuspendLambda</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function0</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function1</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function2</MissingClass>
+    <MissingClass>kotlin.jvm.internal.DefaultConstructorMarker</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Intrinsics</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Lambda</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Reflection</MissingClass>
+    <MissingClass>kotlin.reflect.KClass</MissingClass>
+    <MissingClass>kotlin.reflect.KType</MissingClass>
+    <MissingClass>kotlin.reflect.TypesJVMKt</MissingClass>
+    <MissingClass>kotlin.sequences.Sequence</MissingClass>
+    <MissingClass>kotlin.sequences.SequencesKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.BuildersKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineScope</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineStart</MissingClass>
+    <MissingClass>kotlinx.coroutines.Deferred</MissingClass>
+    <MissingClass>kotlinx.coroutines.GlobalScope</MissingClass>
+    <MissingClass>love.forte.simbot.http.configuration.HttpProperties</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.BaseHttpTemplate</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpCookie</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpCookies</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpHeaders</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpHeaders$Companion</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpRequest</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpRequestType</MissingClass>
+    <MissingClass>love.forte.simbot.http.template.HttpResponse</MissingClass>
+    <MissingClass>love.forte.simbot.serialization.json.JsonSerializer</MissingClass>
+    <MissingClass>love.forte.simbot.serialization.json.JsonSerializerFactory</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:25 +0900" total_classes="39" referenced_classes="65" total_bugs="27" total_size="902" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.20" clock_seconds="2.91" peak_mbytes="242.85" alloc_mbytes="3984.00" gc_seconds="0.04" priority_3="12" priority_2="3" priority_1="12">
+    <FileStats path="love/forte/simbot/http/template/ktor/KtorHttpTemplate.kt" bugCount="27" size="894" bugHash="aaeb490602a664ee9d90ae43d3302937"/>
+    <FileStats path="love/forte/simbot/http/template/ktor/KtorHttpTemplateConfiguration.kt" bugCount="0" size="8"/>
+    <PackageStats package="love.forte.simbot.http.template.ktor" total_bugs="27" total_types="39" total_size="902" priority_3="12" priority_2="3" priority_1="12">
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl" sourceFile="KtorHttpTemplate.kt" interface="false" size="40" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_content$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="9" bugs="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$_contentAsync$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="18" bugs="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$body$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpResponseImpl$headers$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate" sourceFile="KtorHttpTemplate.kt" interface="false" size="99" bugs="1" priority_3="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$Logger" sourceFile="KtorHttpTemplate.kt" interface="false" size="4" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$WhenMappings" sourceFile="KtorHttpTemplate.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$client$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$client$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="60" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$form$1$response$1$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="62" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1$response$1$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$get$1$response$1$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="59" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$post$1$response$1$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="43" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="43" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$3" sourceFile="KtorHttpTemplate.kt" interface="false" size="40" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$getBlock$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="15" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$postBlock$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="23" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$1$postBlock$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="19" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$2$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="11" bugs="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="43" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="43" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$3" sourceFile="KtorHttpTemplate.kt" interface="false" size="40" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$getBlock$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="15" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$postBlock$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="23" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$3$response$postBlock$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="19" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$getBlock$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$requestAll$getBlock$1$1$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$toResponse$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplate$toResponse$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="6" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplateConfiguration" sourceFile="KtorHttpTemplateConfiguration.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplates" sourceFile="KtorHttpTemplate.kt" interface="false" size="40" bugs="1" priority_3="1"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplates$appendCookies$1" sourceFile="KtorHttpTemplate.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplates$appendCookies$appendCookies$2" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="love.forte.simbot.http.template.ktor.KtorHttpTemplates$appendCookies$appendCookies$3" sourceFile="KtorHttpTemplate.kt" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="249" invocations="536" avgMicrosecondsPerInvocation="464" maxMicrosecondsPerInvocation="43701" standardDeviationMicrosecondsPerInvocation="2092"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="105" invocations="165" avgMicrosecondsPerInvocation="638" maxMicrosecondsPerInvocation="35933" standardDeviationMicrosecondsPerInvocation="3068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="99" invocations="165" avgMicrosecondsPerInvocation="604" maxMicrosecondsPerInvocation="29575" standardDeviationMicrosecondsPerInvocation="2629"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="82" invocations="133" avgMicrosecondsPerInvocation="622" maxMicrosecondsPerInvocation="7593" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="80" invocations="165" avgMicrosecondsPerInvocation="485" maxMicrosecondsPerInvocation="9845" standardDeviationMicrosecondsPerInvocation="1176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="78" invocations="139" avgMicrosecondsPerInvocation="564" maxMicrosecondsPerInvocation="50034" standardDeviationMicrosecondsPerInvocation="4285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="78" invocations="165" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="55782" standardDeviationMicrosecondsPerInvocation="4329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="75" invocations="39" avgMicrosecondsPerInvocation="1925" maxMicrosecondsPerInvocation="42426" standardDeviationMicrosecondsPerInvocation="6736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="66" invocations="164" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="6671" standardDeviationMicrosecondsPerInvocation="974"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="265" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="11219" standardDeviationMicrosecondsPerInvocation="776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="165" avgMicrosecondsPerInvocation="332" maxMicrosecondsPerInvocation="17661" standardDeviationMicrosecondsPerInvocation="1384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="52" invocations="65" avgMicrosecondsPerInvocation="815" maxMicrosecondsPerInvocation="11227" standardDeviationMicrosecondsPerInvocation="1824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="45" invocations="39" avgMicrosecondsPerInvocation="1154" maxMicrosecondsPerInvocation="15356" standardDeviationMicrosecondsPerInvocation="2920"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="41" invocations="154" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="3428" standardDeviationMicrosecondsPerInvocation="541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="41" invocations="39" avgMicrosecondsPerInvocation="1052" maxMicrosecondsPerInvocation="26535" standardDeviationMicrosecondsPerInvocation="4157"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="39" invocations="545" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="2944" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="65" avgMicrosecondsPerInvocation="559" maxMicrosecondsPerInvocation="7985" standardDeviationMicrosecondsPerInvocation="1085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="35" invocations="65" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="27712" standardDeviationMicrosecondsPerInvocation="3403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="65" avgMicrosecondsPerInvocation="459" maxMicrosecondsPerInvocation="13807" standardDeviationMicrosecondsPerInvocation="1718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="26" invocations="39" avgMicrosecondsPerInvocation="688" maxMicrosecondsPerInvocation="7396" standardDeviationMicrosecondsPerInvocation="1244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="165" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="7890" standardDeviationMicrosecondsPerInvocation="662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="23" invocations="39" avgMicrosecondsPerInvocation="590" maxMicrosecondsPerInvocation="2264" standardDeviationMicrosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="21" invocations="39" avgMicrosecondsPerInvocation="561" maxMicrosecondsPerInvocation="10346" standardDeviationMicrosecondsPerInvocation="1671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="65" avgMicrosecondsPerInvocation="331" maxMicrosecondsPerInvocation="10015" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="21" invocations="39" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="6597" standardDeviationMicrosecondsPerInvocation="1353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="21" invocations="1" avgMicrosecondsPerInvocation="21472" maxMicrosecondsPerInvocation="21472" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="412" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1065" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="21" invocations="39" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="9394" standardDeviationMicrosecondsPerInvocation="1475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="19" invocations="39" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="6167" standardDeviationMicrosecondsPerInvocation="1243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="18" invocations="5390" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="2092" standardDeviationMicrosecondsPerInvocation="41"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="18" invocations="165" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="7958" standardDeviationMicrosecondsPerInvocation="700"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="65" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="1912" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="14" invocations="39" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="9763" standardDeviationMicrosecondsPerInvocation="1549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="14" invocations="39" avgMicrosecondsPerInvocation="365" maxMicrosecondsPerInvocation="2909" standardDeviationMicrosecondsPerInvocation="557"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

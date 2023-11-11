@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685230340" analysisTimestamp="1699687653313" release="">
+  <Project projectName="">
+    <Jar>clean_train50\jodamoblog-1.2.5.jar</Jar>
+  </Project>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="d65606fad8bf16de8d45cd9b183dc2bf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
+    <LongMessage>Possible null pointer dereference in de.jodamob.android.logging.FileLoggerCollector.getFiles(File) due to return value of called method</LongMessage>
+    <Class classname="de.jodamob.android.logging.FileLoggerCollector" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector" start="21" end="79" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java">
+        <Message>At FileLoggerCollector.java:[lines 21-79]</Message>
+      </SourceLine>
+      <Message>In class de.jodamob.android.logging.FileLoggerCollector</Message>
+    </Class>
+    <Method classname="de.jodamob.android.logging.FileLoggerCollector" name="getFiles" signature="(Ljava/io/File;)[Ljava/io/File;" isStatic="false" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector" start="30" end="32" startBytecode="0" endBytecode="96" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java"/>
+      <Message>In method de.jodamob.android.logging.FileLoggerCollector.getFiles(File)</Message>
+    </Method>
+    <LocalVariable name="files" register="2" pc="19" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from files</Message>
+    </LocalVariable>
+    <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector" primary="true" start="31" end="31" startBytecode="22" endBytecode="22" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java" role="SOURCE_LINE_INVOKED">
+      <Message>Method invoked at FileLoggerCollector.java:[line 31]</Message>
+    </SourceLine>
+    <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector" start="30" end="30" startBytecode="9" endBytecode="9" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at FileLoggerCollector.java:[line 30]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE" instanceHash="39cc4cfaa6ccc32e1f2396c12eb6b629" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>de.jodamob.android.logging.FileLoggerCollector$FileComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="de.jodamob.android.logging.FileLoggerCollector$FileComparator" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector$FileComparator" start="92" end="96" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java">
+        <Message>At FileLoggerCollector.java:[lines 92-96]</Message>
+      </SourceLine>
+      <Message>In class de.jodamob.android.logging.FileLoggerCollector$FileComparator</Message>
+    </Class>
+    <SourceLine classname="de.jodamob.android.logging.FileLoggerCollector$FileComparator" start="92" end="96" sourcefile="FileLoggerCollector.java" sourcepath="de/jodamob/android/logging/FileLoggerCollector.java" synthetic="true">
+      <Message>At FileLoggerCollector.java:[lines 92-96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="51d9ad9a0299063449139aff87a23e9a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in de.jodamob.android.logging.FileLoggerPreparation.createLogFolder(File)</LongMessage>
+    <Class classname="de.jodamob.android.logging.FileLoggerPreparation" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.FileLoggerPreparation" start="15" end="58" sourcefile="FileLoggerPreparation.java" sourcepath="de/jodamob/android/logging/FileLoggerPreparation.java">
+        <Message>At FileLoggerPreparation.java:[lines 15-58]</Message>
+      </SourceLine>
+      <Message>In class de.jodamob.android.logging.FileLoggerPreparation</Message>
+    </Class>
+    <Method classname="de.jodamob.android.logging.FileLoggerPreparation" name="createLogFolder" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.FileLoggerPreparation" start="57" end="58" startBytecode="0" endBytecode="61" sourcefile="FileLoggerPreparation.java" sourcepath="de/jodamob/android/logging/FileLoggerPreparation.java"/>
+      <Message>In method de.jodamob.android.logging.FileLoggerPreparation.createLogFolder(File)</Message>
+    </Method>
+    <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File" start="1403" end="1417" startBytecode="0" endBytecode="230" sourcefile="File.java" sourcepath="java/io/File.java"/>
+      <Message>Called method java.io.File.mkdirs()</Message>
+    </Method>
+    <SourceLine classname="de.jodamob.android.logging.FileLoggerPreparation" primary="true" start="57" end="57" startBytecode="1" endBytecode="1" sourcefile="FileLoggerPreparation.java" sourcepath="de/jodamob/android/logging/FileLoggerPreparation.java">
+      <Message>At FileLoggerPreparation.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="49ffa41ac710802d3caf846a297bba16" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class de.jodamob.android.logging.SimpleFileHandler at new de.jodamob.android.logging.SimpleFileHandler(File, String, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="de.jodamob.android.logging.SimpleFileHandler" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.SimpleFileHandler" start="13" end="15" sourcefile="SimpleFileHandler.java" sourcepath="de/jodamob/android/logging/SimpleFileHandler.java">
+        <Message>At SimpleFileHandler.java:[lines 13-15]</Message>
+      </SourceLine>
+      <Message>In class de.jodamob.android.logging.SimpleFileHandler</Message>
+    </Class>
+    <Method classname="de.jodamob.android.logging.SimpleFileHandler" name="&lt;init&gt;" signature="(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.SimpleFileHandler" start="13" end="15" startBytecode="0" endBytecode="133" sourcefile="SimpleFileHandler.java" sourcepath="de/jodamob/android/logging/SimpleFileHandler.java"/>
+      <Message>In method new de.jodamob.android.logging.SimpleFileHandler(File, String, String)</Message>
+    </Method>
+    <SourceLine classname="de.jodamob.android.logging.SimpleFileHandler" primary="true" start="13" end="13" startBytecode="15" endBytecode="15" sourcefile="SimpleFileHandler.java" sourcepath="de/jodamob/android/logging/SimpleFileHandler.java">
+      <Message>At SimpleFileHandler.java:[line 13]</Message>
+    </SourceLine>
+    <SourceLine classname="de.jodamob.android.logging.SimpleFileHandler" start="13" end="13" startBytecode="15" endBytecode="15" sourcefile="SimpleFileHandler.java" sourcepath="de/jodamob/android/logging/SimpleFileHandler.java">
+      <Message>At SimpleFileHandler.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE" priority="2" rank="8" abbrev="STCAL" category="MT_CORRECTNESS" instanceHash="43fe4543b29d6cae5967e3ca1ce9234f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="366">
+    <ShortMessage>Call to static DateFormat</ShortMessage>
+    <LongMessage>Call to method of static java.text.DateFormat in de.jodamob.android.logging.SimpleLogFormatter.format(LogRecord)</LongMessage>
+    <Class classname="de.jodamob.android.logging.SimpleLogFormatter" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.SimpleLogFormatter" start="10" end="24" sourcefile="SimpleLogFormatter.java" sourcepath="de/jodamob/android/logging/SimpleLogFormatter.java">
+        <Message>At SimpleLogFormatter.java:[lines 10-24]</Message>
+      </SourceLine>
+      <Message>In class de.jodamob.android.logging.SimpleLogFormatter</Message>
+    </Class>
+    <Method classname="de.jodamob.android.logging.SimpleLogFormatter" name="format" signature="(Ljava/util/logging/LogRecord;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.SimpleLogFormatter" start="17" end="24" startBytecode="0" endBytecode="167" sourcefile="SimpleLogFormatter.java" sourcepath="de/jodamob/android/logging/SimpleLogFormatter.java"/>
+      <Message>In method de.jodamob.android.logging.SimpleLogFormatter.format(LogRecord)</Message>
+    </Method>
+    <Method classname="java.text.SimpleDateFormat" name="format" signature="(Ljava/util/Date;)Ljava/lang/String;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.text.SimpleDateFormat" sourcefile="SimpleDateFormat.java" sourcepath="java/text/SimpleDateFormat.java"/>
+      <Message>Called method java.text.SimpleDateFormat.format(Date)</Message>
+    </Method>
+    <Field classname="de.jodamob.android.logging.SimpleLogFormatter" name="formatter" signature="Ljava/text/SimpleDateFormat;" isStatic="true" primary="true">
+      <SourceLine classname="de.jodamob.android.logging.SimpleLogFormatter" sourcefile="SimpleLogFormatter.java" sourcepath="de/jodamob/android/logging/SimpleLogFormatter.java">
+        <Message>In SimpleLogFormatter.java</Message>
+      </SourceLine>
+      <Message>Field de.jodamob.android.logging.SimpleLogFormatter.formatter</Message>
+    </Field>
+    <SourceLine classname="de.jodamob.android.logging.SimpleLogFormatter" primary="true" start="20" end="20" startBytecode="42" endBytecode="42" sourcefile="SimpleLogFormatter.java" sourcepath="de/jodamob/android/logging/SimpleLogFormatter.java">
+      <Message>At SimpleLogFormatter.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Possible null pointer dereference due to return value of called method</ShortDescription>
+    <Details><![CDATA[
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="STCAL_INVOKE_ON_STATIC_DATE_FORMAT_INSTANCE" abbrev="STCAL" category="MT_CORRECTNESS">
+    <ShortDescription>Call to static DateFormat</ShortDescription>
+    <Details><![CDATA[
+
+<p>As the JavaDoc states, DateFormats are inherently unsafe for multithreaded use.
+The detector has found a call to an instance of DateFormat that has been obtained via a static
+field. This looks suspicious.</p>
+<p>For more information on this see <a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6231579">JDK Bug #6231579</a>
+and <a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=6178997">JDK Bug #6178997</a>.</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Comparator doesn&apos;t implement Serializable</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Comparator</code> interface. You
+should consider whether or not it should also implement the <code>Serializable</code>
+interface. If a comparator is used to construct an ordered collection
+such as a <code>TreeMap</code>, then the <code>TreeMap</code>
+will be serializable only if the comparator is also serializable.
+As most comparators have little or no state, making them serializable
+is generally easy and good defensive programming.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" abbrev="RV" category="BAD_PRACTICE" cweid="253">
+    <ShortDescription>Method ignores exceptional return value</ShortDescription>
+    <Details><![CDATA[
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="STCAL" cweid="366">
+    <Description>Static use of type Calendar or DateFormat</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="2">
+    <MissingClass>android.content.Context</MissingClass>
+    <MissingClass>android.util.Log</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:10 +0900" total_classes="39" referenced_classes="166" total_bugs="5" total_size="855" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="4.05" clock_seconds="3.46" peak_mbytes="249.88" alloc_mbytes="3984.00" gc_seconds="0.05" priority_2="5">
+    <FileStats path="de/jodamob/android/logging/AsyncLogger.java" bugCount="0" size="237"/>
+    <FileStats path="de/jodamob/android/logging/CommandLinelogger.java" bugCount="0" size="54"/>
+    <FileStats path="de/jodamob/android/logging/FileLogger.java" bugCount="0" size="77"/>
+    <FileStats path="de/jodamob/android/logging/FileLoggerCollector.java" bugCount="2" size="62" bugHash="6275c33c847e95d2cab4dbfce196666c"/>
+    <FileStats path="de/jodamob/android/logging/FileLoggerPreparation.java" bugCount="1" size="36" bugHash="2d809105d99840f78ebdc6562cd8dfe6"/>
+    <FileStats path="de/jodamob/android/logging/Log.java" bugCount="0" size="49"/>
+    <FileStats path="de/jodamob/android/logging/LogCatLogger.java" bugCount="0" size="67"/>
+    <FileStats path="de/jodamob/android/logging/Logging.java" bugCount="0" size="21"/>
+    <FileStats path="de/jodamob/android/logging/RedirectedLogging.java" bugCount="0" size="48"/>
+    <FileStats path="de/jodamob/android/logging/RemoteReporter.java" bugCount="0" size="4"/>
+    <FileStats path="de/jodamob/android/logging/RemoteToolLogger.java" bugCount="0" size="59"/>
+    <FileStats path="de/jodamob/android/logging/SilentLogger.java" bugCount="0" size="44"/>
+    <FileStats path="de/jodamob/android/logging/SimpleFileHandler.java" bugCount="1" size="7" bugHash="81332b4447b8859e2e157f812b0e07bf"/>
+    <FileStats path="de/jodamob/android/logging/SimpleLogFormatter.java" bugCount="1" size="16" bugHash="561f77fd72fb34d317944fbf937f3b10"/>
+    <FileStats path="de/jodamob/android/logging/UncaughtExceptionLogger.java" bugCount="0" size="45"/>
+    <FileStats path="de/jodamob/android/utils/Closeables.java" bugCount="0" size="16"/>
+    <FileStats path="de/jodamob/android/utils/StreamUtils.java" bugCount="0" size="13"/>
+    <PackageStats package="de.jodamob.android.logging" total_bugs="5" total_types="37" total_size="826" priority_2="5">
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger" sourceFile="AsyncLogger.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$1" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$10" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$11" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$12" sourceFile="AsyncLogger.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$13" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$14" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$15" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$16" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$17" sourceFile="AsyncLogger.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$2" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$3" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$4" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$5" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$6" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$7" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$8" sourceFile="AsyncLogger.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.AsyncLogger$9" sourceFile="AsyncLogger.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.CommandLinelogger" sourceFile="CommandLinelogger.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.FileLogger" sourceFile="FileLogger.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.FileLogger$1" sourceFile="FileLogger.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.FileLoggerCollector" sourceFile="FileLoggerCollector.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="de.jodamob.android.logging.FileLoggerCollector$1" sourceFile="FileLoggerCollector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.FileLoggerCollector$FileComparator" sourceFile="FileLoggerCollector.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="de.jodamob.android.logging.FileLoggerCollector$LogFileFilter" sourceFile="FileLoggerCollector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.FileLoggerPreparation" sourceFile="FileLoggerPreparation.java" interface="false" size="36" bugs="1" priority_2="1"/>
+      <ClassStats class="de.jodamob.android.logging.Log" sourceFile="Log.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.LogCatLogger" sourceFile="LogCatLogger.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.Logging" sourceFile="Logging.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.RedirectedLogging" sourceFile="RedirectedLogging.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.RemoteReporter" sourceFile="RemoteReporter.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.RemoteToolLogger" sourceFile="RemoteToolLogger.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.SilentLogger" sourceFile="SilentLogger.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.SimpleFileHandler" sourceFile="SimpleFileHandler.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="de.jodamob.android.logging.SimpleLogFormatter" sourceFile="SimpleLogFormatter.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="de.jodamob.android.logging.UncaughtExceptionLogger" sourceFile="UncaughtExceptionLogger.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="de.jodamob.android.logging.UncaughtExceptionLogger$HandlerImplementation" sourceFile="UncaughtExceptionLogger.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.jodamob.android.utils" total_bugs="0" total_types="2" total_size="29">
+      <ClassStats class="de.jodamob.android.utils.Closeables" sourceFile="Closeables.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.jodamob.android.utils.StreamUtils" sourceFile="StreamUtils.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="363" invocations="952" avgMicrosecondsPerInvocation="381" maxMicrosecondsPerInvocation="54119" standardDeviationMicrosecondsPerInvocation="1899"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="128" invocations="166" avgMicrosecondsPerInvocation="772" maxMicrosecondsPerInvocation="13704" standardDeviationMicrosecondsPerInvocation="1741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="113" invocations="215" avgMicrosecondsPerInvocation="526" maxMicrosecondsPerInvocation="69001" standardDeviationMicrosecondsPerInvocation="4738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="109" invocations="166" avgMicrosecondsPerInvocation="657" maxMicrosecondsPerInvocation="8544" standardDeviationMicrosecondsPerInvocation="1307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="104" invocations="655" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="12991" standardDeviationMicrosecondsPerInvocation="570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="94" invocations="290" avgMicrosecondsPerInvocation="327" maxMicrosecondsPerInvocation="44843" standardDeviationMicrosecondsPerInvocation="2649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="89" invocations="313" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="54671" standardDeviationMicrosecondsPerInvocation="3097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="87" invocations="958" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="11250" standardDeviationMicrosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="79" invocations="290" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="38535" standardDeviationMicrosecondsPerInvocation="2271"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="70" invocations="291" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="34947" standardDeviationMicrosecondsPerInvocation="2045"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="67" invocations="290" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="17538" standardDeviationMicrosecondsPerInvocation="1058"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="64" invocations="261" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="9808" standardDeviationMicrosecondsPerInvocation="786"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="55" invocations="166" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="15061" standardDeviationMicrosecondsPerInvocation="1239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="47" invocations="166" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="29272" standardDeviationMicrosecondsPerInvocation="2270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="44" invocations="290" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="8360" standardDeviationMicrosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StaticCalendarDetector" totalMilliseconds="40" invocations="39" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="37424" standardDeviationMicrosecondsPerInvocation="5903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="36" invocations="11" avgMicrosecondsPerInvocation="3302" maxMicrosecondsPerInvocation="35921" standardDeviationMicrosecondsPerInvocation="10315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="32" invocations="905" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="1629" standardDeviationMicrosecondsPerInvocation="85"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="32" invocations="39" avgMicrosecondsPerInvocation="839" maxMicrosecondsPerInvocation="6462" standardDeviationMicrosecondsPerInvocation="1383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="166" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="7609" standardDeviationMicrosecondsPerInvocation="646"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="39" avgMicrosecondsPerInvocation="753" maxMicrosecondsPerInvocation="14814" standardDeviationMicrosecondsPerInvocation="2928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="28" invocations="166" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="5514" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="28" invocations="166" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="1908" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="166" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="2035" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="2115" avgMicrosecondsPerInvocation="11" maxMicrosecondsPerInvocation="6958" standardDeviationMicrosecondsPerInvocation="169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="261" avgMicrosecondsPerInvocation="93" maxMicrosecondsPerInvocation="841" standardDeviationMicrosecondsPerInvocation="131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="39" avgMicrosecondsPerInvocation="615" maxMicrosecondsPerInvocation="10675" standardDeviationMicrosecondsPerInvocation="1829"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="39" avgMicrosecondsPerInvocation="574" maxMicrosecondsPerInvocation="6153" standardDeviationMicrosecondsPerInvocation="1393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="21" invocations="39" avgMicrosecondsPerInvocation="550" maxMicrosecondsPerInvocation="15972" standardDeviationMicrosecondsPerInvocation="2508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="17" invocations="39" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="6444" standardDeviationMicrosecondsPerInvocation="1118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="16" invocations="166" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="1266" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="16" invocations="313" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="12010" standardDeviationMicrosecondsPerInvocation="681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="290" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="3773" standardDeviationMicrosecondsPerInvocation="229"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

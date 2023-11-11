@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685036576" analysisTimestamp="1699685361248" release="">
+  <Project projectName="">
+    <Jar>vul_train50\cybrid-api-organization-kotlin-0.68.53.jar</Jar>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="4c9c2e064814735629dceef5a811faab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in app.cybrid.cybrid_api_organization.client.auth.OAuth.setFlow(OAuthFlow) where default case is missing</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.auth.OAuth" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.auth.OAuth" start="22" end="154" sourcefile="OAuth.kt" sourcepath="app/cybrid/cybrid_api_organization/client/auth/OAuth.kt">
+        <Message>At OAuth.kt:[lines 22-154]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.auth.OAuth</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.auth.OAuth" name="setFlow" signature="(Lapp/cybrid/cybrid_api_organization/client/auth/OAuthFlow;)V" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.auth.OAuth" start="58" end="66" startBytecode="0" endBytecode="173" sourcefile="OAuth.kt" sourcepath="app/cybrid/cybrid_api_organization/client/auth/OAuth.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.auth.OAuth.setFlow(OAuthFlow)</Message>
+    </Method>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.auth.OAuth" primary="true" start="58" end="64" startBytecode="18" endBytecode="86" sourcefile="OAuth.kt" sourcepath="app/cybrid/cybrid_api_organization/client/auth/OAuth.kt">
+      <Message>At OAuth.kt:[lines 58-64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="8fdc44ac60ab9e8c48dd81626556f633" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L4 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.configureAuthorizationFlow(String, String, String)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="configureAuthorizationFlow" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lapp/cybrid/cybrid_api_organization/client/infrastructure/ApiClient;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="159" end="168" startBytecode="0" endBytecode="65" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.configureAuthorizationFlow(String, String, String)</Message>
+    </Method>
+    <LocalVariable name="?" register="4" pc="21" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 4</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="159" end="159" startBytecode="21" endBytecode="21" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 159]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="94b67fa6e7a9d7f8e6f31feec2f2a03d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.getAuthorizationEndPoint()</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="getAuthorizationEndPoint" signature="()Lorg/apache/oltu/oauth2/client/request/OAuthClientRequest$AuthenticationRequestBuilder;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="132" end="136" startBytecode="0" endBytecode="35" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.getAuthorizationEndPoint()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="3" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="133" end="133" startBytecode="3" endBytecode="3" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 133]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="5f6cc7627b830b4a2e882570c86e3590" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.getTokenEndPoint()</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="getTokenEndPoint" signature="()Lorg/apache/oltu/oauth2/client/request/OAuthClientRequest$TokenRequestBuilder;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="120" end="124" startBytecode="0" endBytecode="35" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.getTokenEndPoint()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="3" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="121" end="121" startBytecode="3" endBytecode="3" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 121]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="3b6b0751cb3626a2fc730d8129495c6b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.registerAccessTokenListener(OAuth$AccessTokenListener)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="registerAccessTokenListener" signature="(Lapp/cybrid/cybrid_api_organization/client/auth/OAuth$AccessTokenListener;)Lapp/cybrid/cybrid_api_organization/client/infrastructure/ApiClient;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="177" end="180" startBytecode="0" endBytecode="37" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.registerAccessTokenListener(OAuth$AccessTokenListener)</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="8" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="177" end="177" startBytecode="8" endBytecode="8" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 177]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="c98b3cd89eca231cf86b2bd9fc562c9e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setAccessToken(String)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="setAccessToken" signature="(Ljava/lang/String;)Lapp/cybrid/cybrid_api_organization/client/infrastructure/ApiClient;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="145" end="148" startBytecode="0" endBytecode="37" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setAccessToken(String)</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="8" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="145" end="145" startBytecode="8" endBytecode="8" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 145]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="4e8243190937bb429089483866a283c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setBearerToken(String)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="setBearerToken" signature="(Ljava/lang/String;)Lapp/cybrid/cybrid_api_organization/client/infrastructure/ApiClient;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="109" end="112" startBytecode="0" endBytecode="36" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setBearerToken(String)</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="7" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="109" end="109" startBytecode="7" endBytecode="7" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 109]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="cdc02834a4f9d822ed0d573c9f3b4996" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L3 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setCredentials(String, String)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="22" end="284" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 22-284]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" name="setCredentials" signature="(Ljava/lang/String;Ljava/lang/String;)Lapp/cybrid/cybrid_api_organization/client/infrastructure/ApiClient;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" start="103" end="106" startBytecode="0" endBytecode="43" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient.setCredentials(String, String)</Message>
+    </Method>
+    <LocalVariable name="?" register="3" pc="13" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 3</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" primary="true" start="103" end="103" startBytecode="13" endBytecode="13" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 103]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="3b9a03d104695b42dbdaa7f4cd3e1e9a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L7 in app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2.invoke()</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" start="48" end="234" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+        <Message>At ApiClient.kt:[lines 48-234]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" name="invoke" signature="()Lokhttp3/OkHttpClient$Builder;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" start="49" end="51" startBytecode="0" endBytecode="29" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2.invoke()</Message>
+    </Method>
+    <LocalVariable name="?" register="7" pc="50" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 7</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" primary="true" start="52" end="52" startBytecode="50" endBytecode="50" sourcefile="ApiClient.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt">
+      <Message>At ApiClient.kt:[line 52]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="53c1a41e522881e932a671dfbb8f6403" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter.read(JsonReader) return a zero length array rather than null?</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" start="9" end="29" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt">
+        <Message>At ByteArrayAdapter.kt:[lines 9-29]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" name="read" signature="(Lcom/google/gson/stream/JsonReader;)[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" start="21" end="29" startBytecode="0" endBytecode="191" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter.read(JsonReader)</Message>
+    </Method>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" primary="true" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt">
+      <Message>At ByteArrayAdapter.kt:[line 21]</Message>
+    </SourceLine>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" start="26" end="26" startBytecode="40" endBytecode="40" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt">
+      <Message>At ByteArrayAdapter.kt:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SA_LOCAL_SELF_ASSIGNMENT" priority="3" rank="20" abbrev="SA" category="STYLE" instanceHash="555ec601f164496262395aafbec50751" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of local variable</ShortMessage>
+    <LongMessage>Self assignment of $L4 in app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter.read(JsonReader)</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" start="9" end="29" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt">
+        <Message>At ByteArrayAdapter.kt:[lines 9-29]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" name="read" signature="(Lcom/google/gson/stream/JsonReader;)[B" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" start="21" end="29" startBytecode="0" endBytecode="191" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter.read(JsonReader)</Message>
+    </Method>
+    <LocalVariable name="?" register="4" pc="56" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 4</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" primary="true" start="29" end="29" startBytecode="56" endBytecode="56" sourcefile="ByteArrayAdapter.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt">
+      <Message>At ByteArrayAdapter.kt:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7e9c9f9d62ebf215e88020948064d7ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.getParams() may expose internal representation by returning CollectionFormats$CSVParams.params</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="7" end="18" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>At CollectionFormats.kt:[lines 7-18]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="getParams" signature="()Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="7" end="7" startBytecode="0" endBytecode="46" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.getParams()</Message>
+    </Method>
+    <Field classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="params" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>In CollectionFormats.kt</Message>
+      </SourceLine>
+      <Message>Field app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.params</Message>
+    </Field>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" start="7" end="7" startBytecode="4" endBytecode="4" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+      <Message>At CollectionFormats.kt:[line 7]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="811469114937bca2b7ee2d94624ed394" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams(List) may expose internal representation by storing an externally mutable object into CollectionFormats$CSVParams.params</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="7" end="18" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>At CollectionFormats.kt:[lines 7-18]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="&lt;init&gt;" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="9" end="11" startBytecode="0" endBytecode="75" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt"/>
+      <Message>In method new app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams(List)</Message>
+    </Method>
+    <Field classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="params" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>In CollectionFormats.kt</Message>
+      </SourceLine>
+      <Message>Field app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.params</Message>
+    </Field>
+    <LocalVariable name="params" register="1" pc="12" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named params</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" start="10" end="10" startBytecode="12" endBytecode="12" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+      <Message>At CollectionFormats.kt:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="41a11dbba37d547da7b525d0efda5b2e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.setParams(List) may expose internal representation by storing an externally mutable object into CollectionFormats$CSVParams.params</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="7" end="18" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>At CollectionFormats.kt:[lines 7-18]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="setParams" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" start="7" end="7" startBytecode="0" endBytecode="63" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.setParams(List)</Message>
+    </Method>
+    <Field classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" name="params" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+        <Message>In CollectionFormats.kt</Message>
+      </SourceLine>
+      <Message>Field app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams.params</Message>
+    </Field>
+    <LocalVariable name="&lt;set-?&gt;" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named &lt;set-?&gt;</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" primary="true" start="7" end="7" startBytecode="8" endBytecode="8" sourcefile="CollectionFormats.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt">
+      <Message>At CollectionFormats.kt:[line 7]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="6a055f3080f0bd47083cdf13441166a7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in app.cybrid.cybrid_api_organization.client.infrastructure.Serializer.getGson()</LongMessage>
+    <Class classname="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" start="1" end="19" sourcefile="Serializer.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/Serializer.kt">
+        <Message>At Serializer.kt:[lines 1-19]</Message>
+      </SourceLine>
+      <Message>In class app.cybrid.cybrid_api_organization.client.infrastructure.Serializer</Message>
+    </Class>
+    <Method classname="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" name="getGson" signature="()Lcom/google/gson/Gson;" isStatic="true" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" start="19" end="19" startBytecode="0" endBytecode="14" sourcefile="Serializer.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/Serializer.kt"/>
+      <Message>In method app.cybrid.cybrid_api_organization.client.infrastructure.Serializer.getGson()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="8" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" primary="true" start="1" end="1" startBytecode="7" endBytecode="7" sourcefile="Serializer.kt" sourcepath="app/cybrid/cybrid_api_organization/client/infrastructure/Serializer.kt">
+      <Message>At Serializer.kt:[line 1]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SA_LOCAL_SELF_ASSIGNMENT" abbrev="SA" category="STYLE">
+    <ShortDescription>Self assignment of local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a self assignment of a local variable; e.g.</p>
+<pre><code>public void foo() {
+    int x = 3;
+    x = x;
+}
+</code></pre>
+<p>
+Such assignments are useless, and may indicate a logic error or typo.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="SA">
+    <Description>Useless self-operation</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="62">
+    <MissingClass>com.google.gson.Gson</MissingClass>
+    <MissingClass>com.google.gson.GsonBuilder</MissingClass>
+    <MissingClass>com.google.gson.JsonParseException</MissingClass>
+    <MissingClass>com.google.gson.TypeAdapter</MissingClass>
+    <MissingClass>com.google.gson.stream.JsonReader</MissingClass>
+    <MissingClass>com.google.gson.stream.JsonToken</MissingClass>
+    <MissingClass>com.google.gson.stream.JsonWriter</MissingClass>
+    <MissingClass>kotlin.Lazy</MissingClass>
+    <MissingClass>kotlin.LazyKt</MissingClass>
+    <MissingClass>kotlin.Unit</MissingClass>
+    <MissingClass>kotlin.collections.CollectionsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.Continuation</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function0</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function1</MissingClass>
+    <MissingClass>kotlin.jvm.internal.DefaultConstructorMarker</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Intrinsics</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Lambda</MissingClass>
+    <MissingClass>kotlin.jvm.internal.PropertyReference1</MissingClass>
+    <MissingClass>kotlin.jvm.internal.PropertyReference1Impl</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Reflection</MissingClass>
+    <MissingClass>kotlin.reflect.KDeclarationContainer</MissingClass>
+    <MissingClass>kotlin.reflect.KProperty</MissingClass>
+    <MissingClass>kotlin.text.Charsets</MissingClass>
+    <MissingClass>kotlin.text.StringsKt</MissingClass>
+    <MissingClass>okhttp3.Call</MissingClass>
+    <MissingClass>okhttp3.Call$Factory</MissingClass>
+    <MissingClass>okhttp3.Headers</MissingClass>
+    <MissingClass>okhttp3.HttpUrl</MissingClass>
+    <MissingClass>okhttp3.Interceptor</MissingClass>
+    <MissingClass>okhttp3.Interceptor$Chain</MissingClass>
+    <MissingClass>okhttp3.MediaType</MissingClass>
+    <MissingClass>okhttp3.MediaType$Companion</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient</MissingClass>
+    <MissingClass>okhttp3.OkHttpClient$Builder</MissingClass>
+    <MissingClass>okhttp3.Request</MissingClass>
+    <MissingClass>okhttp3.Request$Builder</MissingClass>
+    <MissingClass>okhttp3.RequestBody</MissingClass>
+    <MissingClass>okhttp3.RequestBody$Companion</MissingClass>
+    <MissingClass>okhttp3.Response</MissingClass>
+    <MissingClass>okhttp3.ResponseBody</MissingClass>
+    <MissingClass>okhttp3.logging.HttpLoggingInterceptor</MissingClass>
+    <MissingClass>okhttp3.logging.HttpLoggingInterceptor$Level</MissingClass>
+    <MissingClass>okhttp3.logging.HttpLoggingInterceptor$Logger</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.HttpClient</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.OAuthClient</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.request.OAuthBearerClientRequest</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.request.OAuthClientRequest</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.request.OAuthClientRequest$AuthenticationRequestBuilder</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.request.OAuthClientRequest$TokenRequestBuilder</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.response.OAuthClientResponseFactory</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.client.response.OAuthJSONAccessTokenResponse</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.exception.OAuthProblemException</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.exception.OAuthSystemException</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.message.types.GrantType</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.token.BasicOAuthToken</MissingClass>
+    <MissingClass>org.apache.oltu.oauth2.common.token.OAuthToken</MissingClass>
+    <MissingClass>retrofit2.Converter$Factory</MissingClass>
+    <MissingClass>retrofit2.Response</MissingClass>
+    <MissingClass>retrofit2.Retrofit</MissingClass>
+    <MissingClass>retrofit2.Retrofit$Builder</MissingClass>
+    <MissingClass>retrofit2.converter.gson.GsonConverterFactory</MissingClass>
+    <MissingClass>retrofit2.converter.scalars.ScalarsConverterFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:43:56 +0900" total_classes="34" referenced_classes="91" total_bugs="15" total_size="675" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.39" clock_seconds="3.02" peak_mbytes="238.16" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="11" priority_2="4">
+    <FileStats path="app/cybrid/cybrid_api_organization/client/apis/OrganizationsApi.kt" bugCount="0" size="3"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/auth/ApiKeyAuth.kt" bugCount="0" size="36"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/auth/HttpBearerAuth.kt" bugCount="0" size="25"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/auth/OAuth.kt" bugCount="1" size="89" bugHash="6daad4e9714fe7e2cd34b835fba69a8f"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/auth/OAuthFlow.kt" bugCount="0" size="14"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/auth/OAuthOkHttpClient.kt" bugCount="0" size="32"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/ApiClient.kt" bugCount="8" size="240" bugHash="3ede70ca15b4f7e5564ad8cabeaaf2b8"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/ByteArrayAdapter.kt" bugCount="2" size="22" bugHash="5bdf64fe786d78b836c295777bb9b394"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/CollectionFormats.kt" bugCount="3" size="42" bugHash="1addd9646c76592ee6d1672452281aed"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/LocalDateAdapter.kt" bugCount="0" size="26"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/LocalDateTimeAdapter.kt" bugCount="0" size="26"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/OffsetDateTimeAdapter.kt" bugCount="0" size="26"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/ResponseExt.kt" bugCount="0" size="9"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/infrastructure/Serializer.kt" bugCount="1" size="26" bugHash="6ca0e20904ea8b610c92420e27649ec9"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/models/ErrorResponseOrganizationModel.kt" bugCount="0" size="23"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/models/OrganizationOrganizationModel.kt" bugCount="0" size="23"/>
+    <FileStats path="app/cybrid/cybrid_api_organization/client/models/PatchOrganizationOrganizationModel.kt" bugCount="0" size="13"/>
+    <PackageStats package="app.cybrid.cybrid_api_organization.client.apis" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.apis.OrganizationsApi" sourceFile="OrganizationsApi.kt" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.cybrid.cybrid_api_organization.client.auth" total_bugs="1" total_types="7" total_size="196" priority_2="1">
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.ApiKeyAuth" sourceFile="ApiKeyAuth.kt" interface="false" size="36" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.HttpBearerAuth" sourceFile="HttpBearerAuth.kt" interface="false" size="25" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.OAuth" sourceFile="OAuth.kt" interface="false" size="80" bugs="1" priority_2="1"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.OAuth$AccessTokenListener" sourceFile="OAuth.kt" interface="true" size="2" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.OAuth$WhenMappings" sourceFile="OAuth.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.OAuthFlow" sourceFile="OAuthFlow.kt" interface="false" size="14" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.auth.OAuthOkHttpClient" sourceFile="OAuthOkHttpClient.kt" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.cybrid.cybrid_api_organization.client.infrastructure" total_bugs="14" total_types="23" total_size="417" priority_3="11" priority_2="3">
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient" sourceFile="ApiClient.kt" interface="false" size="187" bugs="7" priority_3="7"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$Companion" sourceFile="ApiClient.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$Companion$defaultBasePath$2" sourceFile="ApiClient.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$clientBuilder$2" sourceFile="ApiClient.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$defaultClientBuilder$2" sourceFile="ApiClient.kt" interface="false" size="12" bugs="1" priority_3="1"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ApiClient$retrofitBuilder$2" sourceFile="ApiClient.kt" interface="false" size="14" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter" sourceFile="ByteArrayAdapter.kt" interface="false" size="17" bugs="2" priority_3="2"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ByteArrayAdapter$WhenMappings" sourceFile="ByteArrayAdapter.kt" interface="false" size="5" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats" sourceFile="CollectionFormats.kt" interface="false" size="3" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$CSVParams" sourceFile="CollectionFormats.kt" interface="false" size="15" bugs="3" priority_2="3"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$PIPESParams" sourceFile="CollectionFormats.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$SPACEParams" sourceFile="CollectionFormats.kt" interface="false" size="3" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$SSVParams" sourceFile="CollectionFormats.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.CollectionFormats$TSVParams" sourceFile="CollectionFormats.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.LocalDateAdapter" sourceFile="LocalDateAdapter.kt" interface="false" size="21" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.LocalDateAdapter$WhenMappings" sourceFile="LocalDateAdapter.kt" interface="false" size="5" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.LocalDateTimeAdapter" sourceFile="LocalDateTimeAdapter.kt" interface="false" size="21" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.LocalDateTimeAdapter$WhenMappings" sourceFile="LocalDateTimeAdapter.kt" interface="false" size="5" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.OffsetDateTimeAdapter" sourceFile="OffsetDateTimeAdapter.kt" interface="false" size="21" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.OffsetDateTimeAdapter$WhenMappings" sourceFile="OffsetDateTimeAdapter.kt" interface="false" size="5" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.ResponseExtKt" sourceFile="ResponseExt.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer" sourceFile="Serializer.kt" interface="false" size="18" bugs="1" priority_3="1"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.infrastructure.Serializer$gson$2" sourceFile="Serializer.kt" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.cybrid.cybrid_api_organization.client.models" total_bugs="0" total_types="3" total_size="59">
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.models.ErrorResponseOrganizationModel" sourceFile="ErrorResponseOrganizationModel.kt" interface="false" size="23" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.models.OrganizationOrganizationModel" sourceFile="OrganizationOrganizationModel.kt" interface="false" size="23" bugs="0"/>
+      <ClassStats class="app.cybrid.cybrid_api_organization.client.models.PatchOrganizationOrganizationModel" sourceFile="PatchOrganizationOrganizationModel.kt" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="378" invocations="792" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="45686" standardDeviationMicrosecondsPerInvocation="1822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="130" invocations="91" avgMicrosecondsPerInvocation="1429" maxMicrosecondsPerInvocation="27669" standardDeviationMicrosecondsPerInvocation="3489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="86" invocations="803" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="10182" standardDeviationMicrosecondsPerInvocation="448"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="85" invocations="205" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="47172" standardDeviationMicrosecondsPerInvocation="3329"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="85" invocations="181" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="37007" standardDeviationMicrosecondsPerInvocation="2764"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="82" invocations="182" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="23658" standardDeviationMicrosecondsPerInvocation="2384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="75" invocations="91" avgMicrosecondsPerInvocation="828" maxMicrosecondsPerInvocation="6385" standardDeviationMicrosecondsPerInvocation="1374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="70" invocations="91" avgMicrosecondsPerInvocation="779" maxMicrosecondsPerInvocation="60887" standardDeviationMicrosecondsPerInvocation="6339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="70" invocations="185" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="20253" standardDeviationMicrosecondsPerInvocation="1811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="427" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="5825" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="57" invocations="184" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="31524" standardDeviationMicrosecondsPerInvocation="2344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="56" invocations="181" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="21599" standardDeviationMicrosecondsPerInvocation="1625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="53" invocations="176" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="17776" standardDeviationMicrosecondsPerInvocation="1457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="47" invocations="168" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="6400" standardDeviationMicrosecondsPerInvocation="704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="44" invocations="680" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="8860" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="43" invocations="91" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="23826" standardDeviationMicrosecondsPerInvocation="2481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="38" invocations="91" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="6933" standardDeviationMicrosecondsPerInvocation="969"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="38" invocations="91" avgMicrosecondsPerInvocation="424" maxMicrosecondsPerInvocation="12653" standardDeviationMicrosecondsPerInvocation="1355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="91" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="23381" standardDeviationMicrosecondsPerInvocation="2440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="31" invocations="34" avgMicrosecondsPerInvocation="938" maxMicrosecondsPerInvocation="25009" standardDeviationMicrosecondsPerInvocation="4217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="31" invocations="147" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="7231" standardDeviationMicrosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="29" invocations="34" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="19880" standardDeviationMicrosecondsPerInvocation="3332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="24" invocations="1" avgMicrosecondsPerInvocation="24964" maxMicrosecondsPerInvocation="24964" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="23" invocations="34" avgMicrosecondsPerInvocation="702" maxMicrosecondsPerInvocation="10501" standardDeviationMicrosecondsPerInvocation="2054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="91" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="2133" standardDeviationMicrosecondsPerInvocation="381"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

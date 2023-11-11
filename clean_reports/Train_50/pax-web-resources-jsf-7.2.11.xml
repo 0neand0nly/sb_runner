@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685193350" analysisTimestamp="1699688828138" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\pax-web-resources-jsf-7.2.11.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ea334d5c88bf5b05a5bde1f58df473c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.ops4j.pax.web.resources.jsf.JsfResourceQuery at new org.ops4j.pax.web.resources.jsf.JsfResourceQuery(String, String, String, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" start="44" end="187" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+        <Message>At JsfResourceQuery.java:[lines 44-187]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.JsfResourceQuery</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" start="61" end="69" startBytecode="0" endBytecode="179" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java"/>
+      <Message>In method new org.ops4j.pax.web.resources.jsf.JsfResourceQuery(String, String, String, String)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" primary="true" start="63" end="63" startBytecode="17" endBytecode="17" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+      <Message>At JsfResourceQuery.java:[line 63]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" start="63" end="63" startBytecode="17" endBytecode="17" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+      <Message>At JsfResourceQuery.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE" instanceHash="32692a56d4a6b498a016505737498764" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: org.ops4j.pax.web.resources.jsf.JsfResourceQuery.contentType</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" start="44" end="187" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+        <Message>At JsfResourceQuery.java:[lines 44-187]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.JsfResourceQuery</Message>
+    </Class>
+    <Field classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" name="contentType" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+        <Message>In JsfResourceQuery.java</Message>
+      </SourceLine>
+      <Message>Field org.ops4j.pax.web.resources.jsf.JsfResourceQuery.contentType</Message>
+    </Field>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" primary="true" start="68" end="68" startBytecode="36" endBytecode="36" sourcefile="JsfResourceQuery.java" sourcepath="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java">
+      <Message>At JsfResourceQuery.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="154ee74491b58a46879565393a5734c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.ops4j.pax.web.resources.jsf.OsgiResource at new org.ops4j.pax.web.resources.jsf.OsgiResource(URL, String, String, String, String, String, LocalDateTime) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.OsgiResource" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.OsgiResource" start="64" end="228" sourcefile="OsgiResource.java" sourcepath="org/ops4j/pax/web/resources/jsf/OsgiResource.java">
+        <Message>At OsgiResource.java:[lines 64-228]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.OsgiResource</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.OsgiResource" name="&lt;init&gt;" signature="(Ljava/net/URL;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/time/LocalDateTime;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.OsgiResource" start="64" end="76" startBytecode="0" endBytecode="263" sourcefile="OsgiResource.java" sourcepath="org/ops4j/pax/web/resources/jsf/OsgiResource.java"/>
+      <Message>In method new org.ops4j.pax.web.resources.jsf.OsgiResource(URL, String, String, String, String, String, LocalDateTime)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.OsgiResource" primary="true" start="66" end="66" startBytecode="17" endBytecode="17" sourcefile="OsgiResource.java" sourcepath="org/ops4j/pax/web/resources/jsf/OsgiResource.java">
+      <Message>At OsgiResource.java:[line 66]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.OsgiResource" start="66" end="66" startBytecode="17" endBytecode="17" sourcefile="OsgiResource.java" sourcepath="org/ops4j/pax/web/resources/jsf/OsgiResource.java">
+      <Message>At OsgiResource.java:[line 66]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DCN_NULLPOINTER_EXCEPTION" priority="2" rank="17" abbrev="DCN" category="STYLE" instanceHash="2108c95b89aa839d3582b349e0405394" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>NullPointerException caught</ShortMessage>
+    <LongMessage>Do not catch NullPointerException like in org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils.getLocalePrefixForLocateResource(FacesContext)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" start="52" end="248" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java">
+        <Message>At ResourceHandlerUtils.java:[lines 52-248]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" name="getLocalePrefixForLocateResource" signature="(Ljavax/faces/context/FacesContext;)Ljava/util/Optional;" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" start="58" end="105" startBytecode="0" endBytecode="562" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils.getLocalePrefixForLocateResource(FacesContext)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" primary="true" start="94" end="94" startBytecode="192" endBytecode="192" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java">
+      <Message>At ResourceHandlerUtils.java:[line 94]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" instanceHash="73f3b6b2906fb2c513ca8c5537224bcd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of mapping, which is known to be non-null in org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils.calculateResourceBasePath(FacesContext)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" start="52" end="248" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java">
+        <Message>At ResourceHandlerUtils.java:[lines 52-248]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" name="calculateResourceBasePath" signature="(Ljavax/faces/context/FacesContext;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" start="147" end="185" startBytecode="0" endBytecode="229" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils.calculateResourceBasePath(FacesContext)</Message>
+    </Method>
+    <LocalVariable name="mapping" register="1" pc="10" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from mapping</Message>
+    </LocalVariable>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" name="getFacesServletMapping" signature="(Ljavax/faces/context/FacesContext;)Lorg/ops4j/pax/web/resources/jsf/internal/FacesServletMapping;" isStatic="true" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" start="109" end="120" startBytecode="0" endBytecode="190" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java"/>
+      <Message>Return value of org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils.getFacesServletMapping(FacesContext) of type org.ops4j.pax.web.resources.jsf.internal.FacesServletMapping</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" primary="true" start="150" end="150" startBytecode="11" endBytecode="11" sourcefile="ResourceHandlerUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at ResourceHandlerUtils.java:[line 150]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_CONDITION_TYPE" priority="1" rank="14" abbrev="UC" category="STYLE" instanceHash="5517f7f5d09cf2be095ac90f21dc0470" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Condition has no effect due to the variable type</ShortMessage>
+    <LongMessage>Useless condition: it&apos;s always c &lt; 65536 (0x10000) because variable type is char</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="25" end="187" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java">
+        <Message>At ResourceValidationUtils.java:[lines 25-187]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" name="validate" signature="(Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="70" end="119" startBytecode="0" endBytecode="684" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils.validate(String, boolean)</Message>
+    </Method>
+    <String value="c &lt; 65536 (0x10000)">
+      <Message>Value c &lt; 65536 (0x10000)</Message>
+    </String>
+    <Type descriptor="C">
+      <Message>Type char</Message>
+    </Type>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="87" end="87" startBytecode="231" endBytecode="231" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java" role="SOURCE_UNREACHABLE_CODE">
+      <Message>Unreachable code at ResourceValidationUtils.java:[line 87]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" primary="true" start="87" end="87" startBytecode="228" endBytecode="228" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java">
+      <Message>At ResourceValidationUtils.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_CONDITION_TYPE" priority="1" rank="14" abbrev="UC" category="STYLE" instanceHash="957adad8324dcb4917acb4b9bf4bcaa0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Condition has no effect due to the variable type</ShortMessage>
+    <LongMessage>Useless condition: it&apos;s always c &lt; 65536 (0x10000) because variable type is char</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="25" end="187" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java">
+        <Message>At ResourceValidationUtils.java:[lines 25-187]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" name="validateResourceName" signature="(Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="123" end="187" startBytecode="0" endBytecode="771" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils.validateResourceName(String, boolean)</Message>
+    </Method>
+    <String value="c &lt; 65536 (0x10000)">
+      <Message>Value c &lt; 65536 (0x10000)</Message>
+    </String>
+    <Type descriptor="C">
+      <Message>Type char</Message>
+    </Type>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" start="153" end="153" startBytecode="231" endBytecode="231" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java" role="SOURCE_UNREACHABLE_CODE">
+      <Message>Unreachable code at ResourceValidationUtils.java:[line 153]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" primary="true" start="153" end="153" startBytecode="228" endBytecode="228" sourcefile="ResourceValidationUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java">
+      <Message>At ResourceValidationUtils.java:[line 153]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="35d9524cd70ba094c582f9f9061ccfb9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive org.ops4j.pax.web.resources.jsf.internal.VersionComparator.compare(String, String)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="26" end="79" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java">
+        <Message>At VersionComparator.java:[lines 26-79]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.VersionComparator</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" name="compare" signature="(Ljava/lang/String;Ljava/lang/String;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="29" end="79" startBytecode="0" endBytecode="569" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.VersionComparator.compare(String, String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" primary="true" start="51" end="51" startBytecode="94" endBytecode="94" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java">
+      <Message>At VersionComparator.java:[line 51]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="58" end="58" startBytecode="124" endBytecode="124" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at VersionComparator.java:[line 58]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="64" end="64" startBytecode="160" endBytecode="160" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at VersionComparator.java:[line 64]</Message>
+    </SourceLine>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="71" end="71" startBytecode="192" endBytecode="192" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at VersionComparator.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" rank="19" abbrev="Se" category="BAD_PRACTICE" instanceHash="232e886321335e1a56bb344bb079402e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>org.ops4j.pax.web.resources.jsf.internal.VersionComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="26" end="79" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java">
+        <Message>At VersionComparator.java:[lines 26-79]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.VersionComparator</Message>
+    </Class>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" start="26" end="79" sourcefile="VersionComparator.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java" synthetic="true">
+      <Message>At VersionComparator.java:[lines 26-79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="51cd0b97d987e8af3625870e4d03ebeb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String, boolean)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getBooleanInitParameter" signature="(Ljavax/faces/context/ExternalContext;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="155" end="163" startBytecode="0" endBytecode="138" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String, boolean)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="163" end="163" startBytecode="25" endBytecode="25" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 163]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="60766cc2e1f9fdcfe3a5930c6788feb8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String, boolean, String[], boolean)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getBooleanInitParameter" signature="(Ljavax/faces/context/ExternalContext;Ljava/lang/String;Z[Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="182" end="198" startBytecode="0" endBytecode="258" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String, boolean, String[], boolean)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="198" end="198" startBytecode="78" endBytecode="78" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 198]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="4b3bd331bb5eb2768484415698520ceb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String[], boolean)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getBooleanInitParameter" signature="(Ljavax/faces/context/ExternalContext;[Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="228" end="246" startBytecode="0" endBytecode="259" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String[], boolean)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="246" end="246" startBytecode="79" endBytecode="79" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 246]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="9d74deb3f6fcd3feb1170052d09140d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String[], boolean, String[], boolean)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getBooleanInitParameter" signature="(Ljavax/faces/context/ExternalContext;[Ljava/lang/String;Z[Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="265" end="291" startBytecode="0" endBytecode="385" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getBooleanInitParameter(ExternalContext, String[], boolean, String[], boolean)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="291" end="291" startBytecode="134" endBytecode="134" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 291]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="79e40bf6a042ef3b850b72e03249baa6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getIntegerInitParameter(ExternalContext, String, int)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getIntegerInitParameter" signature="(Ljavax/faces/context/ExternalContext;Ljava/lang/String;I)I" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="320" end="328" startBytecode="0" endBytecode="138" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getIntegerInitParameter(ExternalContext, String, int)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="328" end="328" startBytecode="25" endBytecode="25" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 328]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="13fe2abf87e7342c24aa7cec91c16952" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getIntegerInitParameter(ExternalContext, String[], int)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getIntegerInitParameter" signature="(Ljavax/faces/context/ExternalContext;[Ljava/lang/String;I)I" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="357" end="375" startBytecode="0" endBytecode="259" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getIntegerInitParameter(ExternalContext, String[], int)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="375" end="375" startBytecode="79" endBytecode="79" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 375]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="131bf91a61e46618f6e03b078554a6fe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getLongInitParameter(ExternalContext, String, long)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getLongInitParameter" signature="(Ljavax/faces/context/ExternalContext;Ljava/lang/String;J)J" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="403" end="411" startBytecode="0" endBytecode="141" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getLongInitParameter(ExternalContext, String, long)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="411" end="411" startBytecode="28" endBytecode="28" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 411]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="cfd03e5f28aff83ce95d4b42f4609bb4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getLongInitParameter(ExternalContext, String[], long)</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Method classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="getLongInitParameter" signature="(Ljavax/faces/context/ExternalContext;[Ljava/lang/String;J)J" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="441" end="459" startBytecode="0" endBytecode="264" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java"/>
+      <Message>In method org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.getLongInitParameter(ExternalContext, String[], long)</Message>
+    </Method>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="459" end="459" startBytecode="84" endBytecode="84" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 459]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="93e4bfe5e4b44d90dd397d6dee28923e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.COMMON_FALSE_VALUES should be package protected</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Field classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="COMMON_FALSE_VALUES" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>In WebConfigParamUtils.java</Message>
+      </SourceLine>
+      <Message>Field org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.COMMON_FALSE_VALUES</Message>
+    </Field>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="28" end="28" startBytecode="41" endBytecode="41" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="23c22f9bf710583b8735396dbad58961" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.COMMON_TRUE_VALUES should be package protected</LongMessage>
+    <Class classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" start="27" end="459" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>At WebConfigParamUtils.java:[lines 27-459]</Message>
+      </SourceLine>
+      <Message>In class org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils</Message>
+    </Class>
+    <Field classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" name="COMMON_TRUE_VALUES" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+        <Message>In WebConfigParamUtils.java</Message>
+      </SourceLine>
+      <Message>Field org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils.COMMON_TRUE_VALUES</Message>
+    </Field>
+    <SourceLine classname="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" primary="true" start="27" end="27" startBytecode="19" endBytecode="19" sourcefile="WebConfigParamUtils.java" sourcepath="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java">
+      <Message>At WebConfigParamUtils.java:[line 27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UC_USELESS_CONDITION_TYPE" abbrev="UC" category="STYLE">
+    <ShortDescription>Condition has no effect due to the variable type</ShortDescription>
+    <Details><![CDATA[
+
+<p>This condition always produces the same result due to the type range of the involved variable.
+Probably something else was meant or the condition can be removed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_BOXED_PRIMITIVE_FOR_PARSING" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxing/unboxing to parse a primitive</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DCN_NULLPOINTER_EXCEPTION" abbrev="DCN" category="STYLE">
+    <ShortDescription>NullPointerException caught</ShortDescription>
+    <Details><![CDATA[
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Comparator doesn&apos;t implement Serializable</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Comparator</code> interface. You
+should consider whether or not it should also implement the <code>Serializable</code>
+interface. If a comparator is used to construct an ordered collection
+such as a <code>TreeMap</code>, then the <code>TreeMap</code>
+will be serializable only if the comparator is also serializable.
+As most comparators have little or no state, making them serializable
+is generally easy and good defensive programming.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="DCN">
+    <Description>Don&apos;t Catch NullPointer Exception</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>javax.faces.application.Application</MissingClass>
+    <MissingClass>javax.faces.application.ProjectStage</MissingClass>
+    <MissingClass>javax.faces.application.Resource</MissingClass>
+    <MissingClass>javax.faces.application.ResourceHandler</MissingClass>
+    <MissingClass>javax.faces.application.ResourceHandlerWrapper</MissingClass>
+    <MissingClass>javax.faces.application.ResourceWrapper</MissingClass>
+    <MissingClass>javax.faces.application.ViewHandler</MissingClass>
+    <MissingClass>javax.faces.application.ViewResource</MissingClass>
+    <MissingClass>javax.faces.component.UIViewRoot</MissingClass>
+    <MissingClass>javax.faces.context.ExternalContext</MissingClass>
+    <MissingClass>javax.faces.context.FacesContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletOutputStream</MissingClass>
+    <MissingClass>javax.servlet.ServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.ops4j.pax.web.resources.api.OsgiResourceLocator</MissingClass>
+    <MissingClass>org.ops4j.pax.web.resources.api.ResourceInfo</MissingClass>
+    <MissingClass>org.ops4j.pax.web.resources.api.query.ResourceQueryMatcher</MissingClass>
+    <MissingClass>org.ops4j.pax.web.resources.api.query.ResourceQueryResult</MissingClass>
+    <MissingClass>org.osgi.framework.Bundle</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.FrameworkUtil</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceReference</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:33 +0900" total_classes="11" referenced_classes="76" total_bugs="19" total_size="764" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.67" clock_seconds="2.75" peak_mbytes="241.90" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="11" priority_2="5" priority_1="3">
+    <FileStats path="org/ops4j/pax/web/resources/jsf/JsfResourceQuery.java" bugCount="2" size="102" bugHash="84b9daa9c040743388944aa44541414f"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/JsfResourceQueryResult.java" bugCount="0" size="26"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/OsgiResource.java" bugCount="1" size="96" bugHash="33efd723041238d8d89c364218e9dc30"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/OsgiResourceHandler.java" bugCount="0" size="153"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/internal/FacesServletMapping.java" bugCount="0" size="41"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/internal/ResourceHandlerUtils.java" bugCount="2" size="91" bugHash="1fde787826a6f3373f2f7a1f81ee7d53"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/internal/ResourceValidationUtils.java" bugCount="2" size="72" bugHash="694cb48c4b730b126769f23c0595905d"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/internal/VersionComparator.java" bugCount="2" size="42" bugHash="ab3b86f5b8a901f6196b89f012804337"/>
+    <FileStats path="org/ops4j/pax/web/resources/jsf/internal/WebConfigParamUtils.java" bugCount="10" size="141" bugHash="5c41769197578b259cc165684f9ac330"/>
+    <PackageStats package="org.ops4j.pax.web.resources.jsf" total_bugs="3" total_types="6" total_size="377" priority_3="1" priority_2="2">
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.JsfResourceQuery" sourceFile="JsfResourceQuery.java" interface="false" size="82" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.JsfResourceQuery$1" sourceFile="JsfResourceQuery.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.JsfResourceQuery$MatchingResult" sourceFile="JsfResourceQuery.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.JsfResourceQueryResult" sourceFile="JsfResourceQueryResult.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.OsgiResource" sourceFile="OsgiResource.java" interface="false" size="96" bugs="1" priority_2="1"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.OsgiResourceHandler" sourceFile="OsgiResourceHandler.java" interface="false" size="153" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.ops4j.pax.web.resources.jsf.internal" total_bugs="16" total_types="5" total_size="387" priority_3="10" priority_2="3" priority_1="3">
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.internal.FacesServletMapping" sourceFile="FacesServletMapping.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.internal.ResourceHandlerUtils" sourceFile="ResourceHandlerUtils.java" interface="false" size="91" bugs="2" priority_2="2"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.internal.ResourceValidationUtils" sourceFile="ResourceValidationUtils.java" interface="false" size="72" bugs="2" priority_1="2"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.internal.VersionComparator" sourceFile="VersionComparator.java" interface="false" size="42" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.ops4j.pax.web.resources.jsf.internal.WebConfigParamUtils" sourceFile="WebConfigParamUtils.java" interface="false" size="141" bugs="10" priority_3="10"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="304" invocations="809" avgMicrosecondsPerInvocation="376" maxMicrosecondsPerInvocation="36412" standardDeviationMicrosecondsPerInvocation="1416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="105" invocations="110" avgMicrosecondsPerInvocation="962" maxMicrosecondsPerInvocation="33761" standardDeviationMicrosecondsPerInvocation="3737"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="101" invocations="76" avgMicrosecondsPerInvocation="1329" maxMicrosecondsPerInvocation="92337" standardDeviationMicrosecondsPerInvocation="10510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="97" invocations="76" avgMicrosecondsPerInvocation="1279" maxMicrosecondsPerInvocation="9308" standardDeviationMicrosecondsPerInvocation="2055"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="85" invocations="110" avgMicrosecondsPerInvocation="781" maxMicrosecondsPerInvocation="31078" standardDeviationMicrosecondsPerInvocation="3307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="78" invocations="137" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="52172" standardDeviationMicrosecondsPerInvocation="4451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="77" invocations="108" avgMicrosecondsPerInvocation="718" maxMicrosecondsPerInvocation="50488" standardDeviationMicrosecondsPerInvocation="4827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="74" invocations="108" avgMicrosecondsPerInvocation="691" maxMicrosecondsPerInvocation="40527" standardDeviationMicrosecondsPerInvocation="3895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="72" invocations="108" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="8754" standardDeviationMicrosecondsPerInvocation="1275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="70" invocations="335" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="17952" standardDeviationMicrosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="64" invocations="76" avgMicrosecondsPerInvocation="848" maxMicrosecondsPerInvocation="8799" standardDeviationMicrosecondsPerInvocation="1440"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="62" invocations="815" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="3341" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="107" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="3599" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="45" invocations="106" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="10820" standardDeviationMicrosecondsPerInvocation="1101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="41" invocations="108" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="15946" standardDeviationMicrosecondsPerInvocation="2039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="76" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="23097" standardDeviationMicrosecondsPerInvocation="2659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="76" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="9020" standardDeviationMicrosecondsPerInvocation="1258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="33" invocations="11" avgMicrosecondsPerInvocation="3013" maxMicrosecondsPerInvocation="20566" standardDeviationMicrosecondsPerInvocation="6090"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="31" invocations="76" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="6954" standardDeviationMicrosecondsPerInvocation="1010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="743" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="1121" standardDeviationMicrosecondsPerInvocation="82"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="24" invocations="1" avgMicrosecondsPerInvocation="24878" maxMicrosecondsPerInvocation="24878" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="11" avgMicrosecondsPerInvocation="2251" maxMicrosecondsPerInvocation="17474" standardDeviationMicrosecondsPerInvocation="4891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="23" invocations="86" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="3087" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="23" invocations="19" avgMicrosecondsPerInvocation="1257" maxMicrosecondsPerInvocation="23090" standardDeviationMicrosecondsPerInvocation="5146"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

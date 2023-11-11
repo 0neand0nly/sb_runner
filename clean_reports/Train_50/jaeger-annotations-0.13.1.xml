@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685207163" analysisTimestamp="1699687645252" release="">
+  <Project projectName="">
+    <Jar>clean_train50\jaeger-annotations-0.13.1.jar</Jar>
+  </Project>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" rank="17" abbrev="BC" category="STYLE" instanceHash="c93643b3a37e59a6ab1066f1df694961" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="571">
+    <ShortMessage>instanceof will always return true</ShortMessage>
+    <LongMessage>instanceof will always return true for all non-null values in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map), since all java.util.Map are instances of java.util.Map</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="165" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Map;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Map" start="671" end="1734" sourcefile="Map.java" sourcepath="java/util/Map.java">
+        <Message>At Map.java:[lines 671-1734]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Map</Message>
+    </Type>
+    <Type descriptor="Ljava/util/Map;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.Map" start="671" end="1734" sourcefile="Map.java" sourcepath="java/util/Map.java">
+        <Message>At Map.java:[lines 671-1734]</Message>
+      </SourceLine>
+      <Message>Expected java.util.Map</Message>
+    </Type>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="45" end="45" startBytecode="7" endBytecode="7" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 45]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="48" end="48" startBytecode="35" endBytecode="35" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 48]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="49" end="49" startBytecode="67" endBytecode="67" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 49]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="51" end="51" startBytecode="91" endBytecode="91" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 51]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="52" end="52" startBytecode="167" endBytecode="167" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 52]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="53" end="53" startBytecode="243" endBytecode="243" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 53]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="54" end="54" startBytecode="319" endBytecode="319" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" rank="17" abbrev="BC" category="STYLE" instanceHash="b0e7668e44e77740e6dedc12a1f04ec2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="571">
+    <ShortMessage>instanceof will always return true</ShortMessage>
+    <LongMessage>instanceof will always return true for all non-null values in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map), since all java.util.Map are instances of java.util.Map</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="168" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/Map;" role="TYPE_FOUND">
+      <SourceLine classname="java.util.Map" start="671" end="1734" sourcefile="Map.java" sourcepath="java/util/Map.java">
+        <Message>At Map.java:[lines 671-1734]</Message>
+      </SourceLine>
+      <Message>Actual type java.util.Map</Message>
+    </Type>
+    <Type descriptor="Ljava/util/Map;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.util.Map" start="671" end="1734" sourcefile="Map.java" sourcepath="java/util/Map.java">
+        <Message>At Map.java:[lines 671-1734]</Message>
+      </SourceLine>
+      <Message>Expected java.util.Map</Message>
+    </Type>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="64" end="64" startBytecode="11" endBytecode="11" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 64]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="67" end="67" startBytecode="39" endBytecode="39" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 67]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="68" end="68" startBytecode="71" endBytecode="71" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 68]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="70" end="70" startBytecode="95" endBytecode="95" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 70]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="71" end="71" startBytecode="171" endBytecode="171" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 71]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="72" end="72" startBytecode="247" endBytecode="247" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 72]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="73" end="73" startBytecode="323" endBytecode="323" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JaegerAgentConfigAdapter.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="bc3da8e2dbd30464414e3009aed8159a" instanceOccurrenceNum="0" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="51" end="51" startBytecode="126" endBytecode="126" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 51]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="51" end="51" startBytecode="115" endBytecode="115" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="bc3da8e2dbd30464414e3009aed8159a" instanceOccurrenceNum="1" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="52" end="52" startBytecode="202" endBytecode="202" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 52]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="52" end="52" startBytecode="191" endBytecode="191" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="bc3da8e2dbd30464414e3009aed8159a" instanceOccurrenceNum="2" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="53" end="53" startBytecode="278" endBytecode="278" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 53]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="53" end="53" startBytecode="267" endBytecode="267" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="bc3da8e2dbd30464414e3009aed8159a" instanceOccurrenceNum="3" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="54" end="54" startBytecode="354" endBytecode="354" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 54]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="54" end="54" startBytecode="343" endBytecode="343" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="b29e590b34166fa46aca2819e555f491" instanceOccurrenceNum="0" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="70" end="70" startBytecode="130" endBytecode="130" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 70]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="70" end="70" startBytecode="119" endBytecode="119" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="b29e590b34166fa46aca2819e555f491" instanceOccurrenceNum="1" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="71" end="71" startBytecode="206" endBytecode="206" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 71]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="71" end="71" startBytecode="195" endBytecode="195" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="b29e590b34166fa46aca2819e555f491" instanceOccurrenceNum="2" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="72" end="72" startBytecode="282" endBytecode="282" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 72]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="72" end="72" startBytecode="271" endBytecode="271" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" instanceHash="b29e590b34166fa46aca2819e555f491" instanceOccurrenceNum="3" instanceOccurrenceMax="3" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of null in io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="73" end="73" startBytecode="358" endBytecode="358" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at JaegerAgentConfigAdapter.java:[line 73]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="73" end="73" startBytecode="347" endBytecode="347" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JaegerAgentConfigAdapter.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="0" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="45" end="45" startBytecode="7" endBytecode="7" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="1" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="48" end="48" startBytecode="35" endBytecode="35" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="2" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="49" end="49" startBytecode="67" endBytecode="67" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="3" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="51" end="51" startBytecode="98" endBytecode="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="4" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="52" end="52" startBytecode="174" endBytecode="174" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="5" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="53" end="53" startBytecode="250" endBytecode="250" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="a1ddb16ff4f827c1139e5c395478faba" instanceOccurrenceNum="6" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="adapt" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="45" end="45" startBytecode="0" endBytecode="1469" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.adapt(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="54" end="54" startBytecode="326" endBytecode="326" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="3513381cdcb9badf64adb8ed7fe0f83c" instanceOccurrenceNum="0" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$adapt$1" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="55" end="55" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="55" end="55" startBytecode="5" endBytecode="5" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="3513381cdcb9badf64adb8ed7fe0f83c" instanceOccurrenceNum="1" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$adapt$1" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="55" end="55" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="56" end="56" startBytecode="31" endBytecode="31" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="3513381cdcb9badf64adb8ed7fe0f83c" instanceOccurrenceNum="2" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$adapt$1" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="55" end="55" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="57" end="57" startBytecode="59" endBytecode="59" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="3513381cdcb9badf64adb8ed7fe0f83c" instanceOccurrenceNum="3" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$adapt$1" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="55" end="55" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="58" end="58" startBytecode="87" endBytecode="87" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="3513381cdcb9badf64adb8ed7fe0f83c" instanceOccurrenceNum="4" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$adapt$1" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="55" end="55" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$adapt$1(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="59" end="59" startBytecode="115" endBytecode="115" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="b92cd27953dc324060d244ceed5f4de4" instanceOccurrenceNum="0" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$newBuilder$3" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="74" end="74" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="74" end="74" startBytecode="5" endBytecode="5" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="b92cd27953dc324060d244ceed5f4de4" instanceOccurrenceNum="1" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$newBuilder$3" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="74" end="74" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="75" end="75" startBytecode="31" endBytecode="31" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="b92cd27953dc324060d244ceed5f4de4" instanceOccurrenceNum="2" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$newBuilder$3" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="74" end="74" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="76" end="76" startBytecode="59" endBytecode="59" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="b92cd27953dc324060d244ceed5f4de4" instanceOccurrenceNum="3" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$newBuilder$3" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="74" end="74" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="77" end="77" startBytecode="87" endBytecode="87" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="b92cd27953dc324060d244ceed5f4de4" instanceOccurrenceNum="4" instanceOccurrenceMax="4">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="lambda$newBuilder$3" signature="(Ljava/util/Map;)Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="74" end="74" startBytecode="0" endBytecode="434" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.lambda$newBuilder$3(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="78" end="78" startBytecode="115" endBytecode="115" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="0" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="64" end="64" startBytecode="11" endBytecode="11" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="1" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="67" end="67" startBytecode="39" endBytecode="39" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="2" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="68" end="68" startBytecode="71" endBytecode="71" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="3" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="70" end="70" startBytecode="102" endBytecode="102" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="4" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="71" end="71" startBytecode="178" endBytecode="178" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="5" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="72" end="72" startBytecode="254" endBytecode="254" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="e9dee82415b83d79af727d00f299201d" instanceOccurrenceNum="6" instanceOccurrenceMax="6">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="21" end="98" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+        <Message>At JaegerAgentConfigAdapter.java:[lines 21-98]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" name="newBuilder" signature="(Ljava/util/Map;)Lio/dekorate/jaeger/config/JaegerAgentConfigBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" start="64" end="64" startBytecode="0" endBytecode="1656" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java"/>
+      <Message>In method io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter.newBuilder(Map)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" primary="true" start="73" end="73" startBytecode="330" endBytecode="330" sourcefile="JaegerAgentConfigAdapter.java" sourcepath="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java">
+      <Message>At JaegerAgentConfigAdapter.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" instanceHash="4646a84ba4a59fae3324c4fff38d84b9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.CollectorFluentImpl.withNewHost(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="12" end="125" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+        <Message>At CollectorFluentImpl.java:[lines 12-125]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.CollectorFluentImpl</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.CollectorFluentImpl" name="withNewHost" signature="(Ljava/lang/String;)Lio/dekorate/jaeger/config/CollectorFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="42" end="42" startBytecode="0" endBytecode="82" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java"/>
+      <Message>In method io.dekorate.jaeger.config.CollectorFluentImpl.withNewHost(String)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true" start="42" end="42" startBytecode="6" endBytecode="6" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+      <Message>At CollectorFluentImpl.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" instanceHash="94e8962fb100f328128820c92787726e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.CollectorFluentImpl.withNewName(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="12" end="125" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+        <Message>At CollectorFluentImpl.java:[lines 12-125]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.CollectorFluentImpl</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.CollectorFluentImpl" name="withNewName" signature="(Ljava/lang/String;)Lio/dekorate/jaeger/config/CollectorFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="66" end="66" startBytecode="0" endBytecode="82" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java"/>
+      <Message>In method io.dekorate.jaeger.config.CollectorFluentImpl.withNewName(String)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true" start="66" end="66" startBytecode="6" endBytecode="6" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+      <Message>At CollectorFluentImpl.java:[line 66]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" instanceHash="6089639bac253f7f5de3083f01b3a9a4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.CollectorFluentImpl.withNewNamespace(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="12" end="125" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+        <Message>At CollectorFluentImpl.java:[lines 12-125]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.CollectorFluentImpl</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.CollectorFluentImpl" name="withNewNamespace" signature="(Ljava/lang/String;)Lio/dekorate/jaeger/config/CollectorFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="90" end="90" startBytecode="0" endBytecode="82" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java"/>
+      <Message>In method io.dekorate.jaeger.config.CollectorFluentImpl.withNewNamespace(String)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" primary="true" start="90" end="90" startBytecode="6" endBytecode="6" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java">
+      <Message>At CollectorFluentImpl.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="f533f0967f0d2f785ec7a7256a7fa603" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.Defaults.AGENT_PORTS should be package protected</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.Defaults" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.Defaults" start="22" end="31" sourcefile="Defaults.java" sourcepath="io/dekorate/jaeger/config/Defaults.java">
+        <Message>At Defaults.java:[lines 22-31]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.Defaults</Message>
+    </Class>
+    <Field classname="io.dekorate.jaeger.config.Defaults" name="AGENT_PORTS" signature="[Lio/dekorate/kubernetes/config/Port;" isStatic="true" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.Defaults" sourcefile="Defaults.java" sourcepath="io/dekorate/jaeger/config/Defaults.java">
+        <Message>In Defaults.java</Message>
+      </SourceLine>
+      <Message>Field io.dekorate.jaeger.config.Defaults.AGENT_PORTS</Message>
+    </Field>
+    <SourceLine classname="io.dekorate.jaeger.config.Defaults" primary="true" start="31" end="31" startBytecode="160" endBytecode="160" sourcefile="Defaults.java" sourcepath="io/dekorate/jaeger/config/Defaults.java">
+      <Message>At Defaults.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EC_BAD_ARRAY_COMPARE" priority="2" rank="3" abbrev="EC" category="CORRECTNESS" instanceHash="cfe9c4d39fef1724de4c70b9ffe61118" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Invocation of equals() on an array, which is equivalent to ==</ShortMessage>
+    <LongMessage>Using .equals to compare two io.dekorate.kubernetes.config.Port[]&apos;s, (equivalent to ==) in io.dekorate.jaeger.config.JaegerAgentConfig.equals(Object)</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.JaegerAgentConfig" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfig" start="14" end="65" sourcefile="JaegerAgentConfig.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfig.java">
+        <Message>At JaegerAgentConfig.java:[lines 14-65]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.JaegerAgentConfig</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.JaegerAgentConfig" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfig" start="53" end="61" startBytecode="0" endBytecode="76" sourcefile="JaegerAgentConfig.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfig.java"/>
+      <Message>In method io.dekorate.jaeger.config.JaegerAgentConfig.equals(Object)</Message>
+    </Method>
+    <Type descriptor="[Lio/dekorate/kubernetes/config/Port;" role="TYPE_FOUND">
+      <Message>Actual type io.dekorate.kubernetes.config.Port[]</Message>
+    </Type>
+    <Type descriptor="[Lio/dekorate/kubernetes/config/Port;" role="TYPE_EXPECTED">
+      <Message>Expected io.dekorate.kubernetes.config.Port[]</Message>
+    </Type>
+    <Field classname="io.dekorate.jaeger.config.JaegerAgentConfig" name="ports" signature="[Lio/dekorate/kubernetes/config/Port;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfig" sourcefile="JaegerAgentConfig.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfig.java">
+        <Message>In JaegerAgentConfig.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field io.dekorate.jaeger.config.JaegerAgentConfig.ports</Message>
+    </Field>
+    <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfig" primary="true" start="60" end="60" startBytecode="133" endBytecode="133" sourcefile="JaegerAgentConfig.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfig.java">
+      <Message>At JaegerAgentConfig.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="cac0f222943067b0935003fc306e6052" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.dekorate.jaeger.config.JaegerAgentConfigBuilder(JaegerAgentConfig, Boolean) may expose internal representation by storing an externally mutable object into JaegerAgentConfigBuilder.fluent</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" start="7" end="83" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+        <Message>At JaegerAgentConfigBuilder.java:[lines 7-83]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.JaegerAgentConfigBuilder</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" name="&lt;init&gt;" signature="(Lio/dekorate/jaeger/config/JaegerAgentConfig;Ljava/lang/Boolean;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" start="54" end="63" startBytecode="0" endBytecode="166" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java"/>
+      <Message>In method new io.dekorate.jaeger.config.JaegerAgentConfigBuilder(JaegerAgentConfig, Boolean)</Message>
+    </Method>
+    <Field classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" name="fluent" signature="Lio/dekorate/jaeger/config/JaegerAgentConfigFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+        <Message>In JaegerAgentConfigBuilder.java</Message>
+      </SourceLine>
+      <Message>Field io.dekorate.jaeger.config.JaegerAgentConfigBuilder.fluent</Message>
+    </Field>
+    <LocalVariable name="this" register="0" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named this</Message>
+    </LocalVariable>
+    <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" primary="true" start="55" end="55" startBytecode="6" endBytecode="6" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+      <Message>At JaegerAgentConfigBuilder.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a30f58195b7ec191b92067ae47a1756b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.dekorate.jaeger.config.JaegerAgentConfigBuilder(JaegerAgentConfigFluent, JaegerAgentConfig, Boolean) may expose internal representation by storing an externally mutable object into JaegerAgentConfigBuilder.fluent</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" start="7" end="83" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+        <Message>At JaegerAgentConfigBuilder.java:[lines 7-83]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.JaegerAgentConfigBuilder</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" name="&lt;init&gt;" signature="(Lio/dekorate/jaeger/config/JaegerAgentConfigFluent;Lio/dekorate/jaeger/config/JaegerAgentConfig;Ljava/lang/Boolean;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" start="37" end="46" startBytecode="0" endBytecode="206" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java"/>
+      <Message>In method new io.dekorate.jaeger.config.JaegerAgentConfigBuilder(JaegerAgentConfigFluent, JaegerAgentConfig, Boolean)</Message>
+    </Method>
+    <Field classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" name="fluent" signature="Lio/dekorate/jaeger/config/JaegerAgentConfigFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+        <Message>In JaegerAgentConfigBuilder.java</Message>
+      </SourceLine>
+      <Message>Field io.dekorate.jaeger.config.JaegerAgentConfigBuilder.fluent</Message>
+    </Field>
+    <LocalVariable name="fluent" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named fluent</Message>
+    </LocalVariable>
+    <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" primary="true" start="38" end="38" startBytecode="6" endBytecode="6" sourcefile="JaegerAgentConfigBuilder.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java">
+      <Message>At JaegerAgentConfigBuilder.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" instanceHash="737c998f930383a17552f0d411142f5c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient new String(String) constructor</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl.withNewVersion(String) invokes inefficient new String(String) constructor</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" start="23" end="280" sourcefile="JaegerAgentConfigFluentImpl.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java">
+        <Message>At JaegerAgentConfigFluentImpl.java:[lines 23-280]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl</Message>
+    </Class>
+    <Method classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" name="withNewVersion" signature="(Ljava/lang/String;)Lio/dekorate/jaeger/config/JaegerAgentConfigFluent;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" start="67" end="67" startBytecode="0" endBytecode="82" sourcefile="JaegerAgentConfigFluentImpl.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java"/>
+      <Message>In method io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl.withNewVersion(String)</Message>
+    </Method>
+    <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" primary="true" start="67" end="67" startBytecode="6" endBytecode="6" sourcefile="JaegerAgentConfigFluentImpl.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java">
+      <Message>At JaegerAgentConfigFluentImpl.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_DOESNT_OVERRIDE_EQUALS" priority="2" rank="17" abbrev="Eq" category="STYLE" instanceHash="870abecac37edd97a2dbefd127d94752" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class doesn&apos;t override equals in superclass</ShortMessage>
+    <LongMessage>io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl doesn&apos;t override CollectorFluentImpl.equals(Object)</LongMessage>
+    <Class classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl" start="286" end="299" sourcefile="JaegerAgentConfigFluentImpl.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java">
+        <Message>At JaegerAgentConfigFluentImpl.java:[lines 286-299]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl</Message>
+    </Class>
+    <SourceLine classname="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="JaegerAgentConfigFluentImpl.java" sourcepath="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java">
+      <Message>At JaegerAgentConfigFluentImpl.java:[line 1]</Message>
+    </SourceLine>
+    <Method classname="io.dekorate.jaeger.config.CollectorFluentImpl" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true" role="METHOD_DID_YOU_MEAN_TO_OVERRIDE">
+      <SourceLine classname="io.dekorate.jaeger.config.CollectorFluentImpl" start="114" end="121" startBytecode="0" endBytecode="276" sourcefile="CollectorFluentImpl.java" sourcepath="io/dekorate/jaeger/config/CollectorFluentImpl.java"/>
+      <Message>Did you intend to override io.dekorate.jaeger.config.CollectorFluentImpl.equals(Object)</Message>
+    </Method>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="227f5fd4c27e9ce95b4a9f86e4aa9cb0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator.DEFAULT_VALUE</LongMessage>
+    <Class classname="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" start="31" end="33" sourcefile="JaegerAnnotationsTableGenerator.java" sourcepath="io/dekorate/jaeger/doc/JaegerAnnotationsTableGenerator.java">
+        <Message>At JaegerAnnotationsTableGenerator.java:[lines 31-33]</Message>
+      </SourceLine>
+      <Message>In class io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator</Message>
+    </Class>
+    <Field classname="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" name="DEFAULT_VALUE" signature="Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" sourcefile="JaegerAnnotationsTableGenerator.java" sourcepath="io/dekorate/jaeger/doc/JaegerAnnotationsTableGenerator.java">
+        <Message>In JaegerAnnotationsTableGenerator.java</Message>
+      </SourceLine>
+      <Message>Field io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator.DEFAULT_VALUE</Message>
+    </Field>
+    <SourceLine classname="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" primary="true" start="33" end="33" startBytecode="8" endBytecode="8" sourcefile="JaegerAnnotationsTableGenerator.java" sourcepath="io/dekorate/jaeger/doc/JaegerAnnotationsTableGenerator.java">
+      <Message>At JaegerAnnotationsTableGenerator.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception cannot ever be executed; deciding that is beyond the ability of SpotBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIO_SUPERFLUOUS_INSTANCEOF" abbrev="SIO" category="CORRECTNESS">
+    <ShortDescription>Unnecessary type check done using instanceof operator</ShortDescription>
+    <Details><![CDATA[
+
+<p> Type check performed using the instanceof operator where it can be statically determined whether the object
+is of the type requested. </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EC_BAD_ARRAY_COMPARE" abbrev="EC" category="CORRECTNESS">
+    <ShortDescription>Invocation of equals() on an array, which is equivalent to ==</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This method invokes the .equals(Object o) method on an array. Since arrays do not override the equals
+method of Object, calling equals on an array is the same as comparing their addresses. To compare the
+contents of the arrays, use <code>java.util.Arrays.equals(Object[], Object[])</code>.
+To compare the addresses of the arrays, it would be
+less confusing to explicitly check pointer equality using <code>==</code>.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_DOESNT_OVERRIDE_EQUALS" abbrev="Eq" category="STYLE">
+    <ShortDescription>Class doesn&apos;t override equals in superclass</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class extends a class that defines an equals method and adds fields, but doesn't
+define an equals method itself. Thus, equality on instances of this class will
+ignore the identity of the subclass and the added fields. Be sure this is what is intended,
+and that you don't need to override the equals method. Even if you don't need to override
+the equals method, consider overriding it anyway to document the fact
+that the equals method for the subclass just return the result of
+invoking super.equals(o).
+  </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_STRING_CTOR" abbrev="Dm" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient new String(String) constructor</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Using the <code>java.lang.String(String)</code> constructor wastes memory
+  because the object so constructed will be functionally indistinguishable
+  from the <code>String</code> passed as a parameter.&nbsp; Just use the
+  argument <code>String</code> directly.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_VACUOUS_INSTANCEOF" abbrev="BC" category="STYLE" cweid="571">
+    <ShortDescription>instanceof will always return true</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instanceof test will always return true (unless the value being tested is null).
+Although this is safe, make sure it isn't
+an indication of some misunderstanding or some other logic error.
+If you really want to test the value for being null, perhaps it would be clearer to do
+better to do a null test rather than an instanceof test.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="SIO">
+    <Description>Superfluous instanceof</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="EC">
+    <Description>Comparing incompatible types for equality</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="39">
+    <MissingClass>io.dekorate.Configurators</MissingClass>
+    <MissingClass>io.dekorate.Generator</MissingClass>
+    <MissingClass>io.dekorate.Handler</MissingClass>
+    <MissingClass>io.dekorate.Resources</MissingClass>
+    <MissingClass>io.dekorate.Session</MissingClass>
+    <MissingClass>io.dekorate.WithSession</MissingClass>
+    <MissingClass>io.dekorate.config.AnnotationConfiguration</MissingClass>
+    <MissingClass>io.dekorate.config.ConfigurationSupplier</MissingClass>
+    <MissingClass>io.dekorate.config.PropertyConfiguration</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.BaseFluent</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.Editable</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.Fluent</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.Nested</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.Predicate</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.VisitableBuilder</MissingClass>
+    <MissingClass>io.dekorate.deps.kubernetes.api.builder.VisitableMap</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.annotation.Port</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.annotation.Protocol</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.Annotation</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.AnnotationBuilder</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.Configuration</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.ConfigurationFluent</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.ConfigurationFluentImpl</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.Configurator</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.Container</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.ContainerBuilder</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.ContainerFluent</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.ContainerFluent$PortsNested</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.Port</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.PortBuilder</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.PortFluent</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.config.PortFluentImpl</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.decorator.AddAnnotationDecorator</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.decorator.AddSidecarDecorator</MissingClass>
+    <MissingClass>io.dekorate.kubernetes.decorator.Decorator</MissingClass>
+    <MissingClass>io.dekorate.processor.AbstractAnnotationProcessor</MissingClass>
+    <MissingClass>io.dekorate.project.Project</MissingClass>
+    <MissingClass>io.dekorate.utils.Strings</MissingClass>
+    <MissingClass>io.sundr.codegen.model.Attributeable</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:47 +0900" total_classes="25" referenced_classes="70" total_bugs="52" total_size="733" num_packages="7" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.70" clock_seconds="3.00" peak_mbytes="239.16" alloc_mbytes="3984.00" gc_seconds="0.04" priority_3="33" priority_2="19">
+    <FileStats path="io/dekorate/jaeger/adapter/JaegerAgentConfigAdapter.java" bugCount="34" size="64" bugHash="1e2c86ce85acc12e1acab2573823ab78"/>
+    <FileStats path="io/dekorate/jaeger/annotation/Collector.java" bugCount="0" size="5"/>
+    <FileStats path="io/dekorate/jaeger/annotation/EnableJaegerAgent.java" bugCount="0" size="5"/>
+    <FileStats path="io/dekorate/jaeger/annotation/EnableJaegerAgentFluent.java" bugCount="0" size="1"/>
+    <FileStats path="io/dekorate/jaeger/apt/JaegerAgentAnnotationProcessor.java" bugCount="0" size="13"/>
+    <FileStats path="io/dekorate/jaeger/config/AddDefaultPortsToAgentConfigurator.java" bugCount="0" size="13"/>
+    <FileStats path="io/dekorate/jaeger/config/Collector.java" bugCount="0" size="40"/>
+    <FileStats path="io/dekorate/jaeger/config/CollectorBuilder.java" bugCount="0" size="54"/>
+    <FileStats path="io/dekorate/jaeger/config/CollectorFluent.java" bugCount="0" size="22"/>
+    <FileStats path="io/dekorate/jaeger/config/CollectorFluentImpl.java" bugCount="3" size="72" bugHash="d5f70fdf10bce273667dca61973191d1"/>
+    <FileStats path="io/dekorate/jaeger/config/Defaults.java" bugCount="1" size="12" bugHash="29ea977e771e2700dbb5f182c8b2c142"/>
+    <FileStats path="io/dekorate/jaeger/config/EditableCollector.java" bugCount="0" size="11"/>
+    <FileStats path="io/dekorate/jaeger/config/EditableJaegerAgentConfig.java" bugCount="0" size="11"/>
+    <FileStats path="io/dekorate/jaeger/config/JaegerAgentConfig.java" bugCount="1" size="41" bugHash="d4fd54f9d5982aa8819055eb6de4a529"/>
+    <FileStats path="io/dekorate/jaeger/config/JaegerAgentConfigBuilder.java" bugCount="2" size="58" bugHash="09a2b1445c61d608bfbe8d5511a4c00e"/>
+    <FileStats path="io/dekorate/jaeger/config/JaegerAgentConfigFluent.java" bugCount="0" size="49"/>
+    <FileStats path="io/dekorate/jaeger/config/JaegerAgentConfigFluentImpl.java" bugCount="2" size="192" bugHash="625aa5be9a5e22966e5e1fe3b54ea3ab"/>
+    <FileStats path="io/dekorate/jaeger/doc/JaegerAnnotationsTableGenerator.java" bugCount="1" size="5" bugHash="d5f3529cb6a20f532fa15299201b5e90"/>
+    <FileStats path="io/dekorate/jaeger/generator/DefaultJaegerGenerator.java" bugCount="0" size="3"/>
+    <FileStats path="io/dekorate/jaeger/generator/JaegerAgentGenerator.java" bugCount="0" size="19"/>
+    <FileStats path="io/dekorate/jaeger/handler/JaegerAgentHandler.java" bugCount="0" size="43"/>
+    <PackageStats package="io.dekorate.jaeger.adapter" total_bugs="42" total_types="1" total_size="64" priority_3="32" priority_2="10">
+      <ClassStats class="io.dekorate.jaeger.adapter.JaegerAgentConfigAdapter" sourceFile="JaegerAgentConfigAdapter.java" interface="false" size="64" bugs="42" priority_3="32" priority_2="10"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.annotation" total_bugs="0" total_types="3" total_size="11">
+      <ClassStats class="io.dekorate.jaeger.annotation.Collector" sourceFile="Collector.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.annotation.EnableJaegerAgent" sourceFile="EnableJaegerAgent.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.annotation.EnableJaegerAgentFluent" sourceFile="EnableJaegerAgentFluent.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.apt" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="io.dekorate.jaeger.apt.JaegerAgentAnnotationProcessor" sourceFile="JaegerAgentAnnotationProcessor.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.config" total_bugs="9" total_types="16" total_size="575" priority_3="1" priority_2="8">
+      <ClassStats class="io.dekorate.jaeger.config.AddDefaultPortsToAgentConfigurator" sourceFile="AddDefaultPortsToAgentConfigurator.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.Collector" sourceFile="Collector.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.CollectorBuilder" sourceFile="CollectorBuilder.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.CollectorFluent" sourceFile="CollectorFluent.java" interface="true" size="22" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.CollectorFluentImpl" sourceFile="CollectorFluentImpl.java" interface="false" size="72" bugs="3" priority_2="3"/>
+      <ClassStats class="io.dekorate.jaeger.config.Defaults" sourceFile="Defaults.java" interface="false" size="12" bugs="1" priority_3="1"/>
+      <ClassStats class="io.dekorate.jaeger.config.EditableCollector" sourceFile="EditableCollector.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.EditableJaegerAgentConfig" sourceFile="EditableJaegerAgentConfig.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfig" sourceFile="JaegerAgentConfig.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigBuilder" sourceFile="JaegerAgentConfigBuilder.java" interface="false" size="58" bugs="2" priority_2="2"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluent" sourceFile="JaegerAgentConfigFluent.java" interface="true" size="43" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluent$CollectorNested" sourceFile="JaegerAgentConfigFluent.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluent$ConfigPortsNested" sourceFile="JaegerAgentConfigFluent.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl" sourceFile="JaegerAgentConfigFluentImpl.java" interface="false" size="159" bugs="1" priority_2="1"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$CollectorNestedImpl" sourceFile="JaegerAgentConfigFluentImpl.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="io.dekorate.jaeger.config.JaegerAgentConfigFluentImpl$ConfigPortsNestedImpl" sourceFile="JaegerAgentConfigFluentImpl.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.doc" total_bugs="1" total_types="1" total_size="5" priority_2="1">
+      <ClassStats class="io.dekorate.jaeger.doc.JaegerAnnotationsTableGenerator" sourceFile="JaegerAnnotationsTableGenerator.java" interface="false" size="5" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.generator" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="io.dekorate.jaeger.generator.DefaultJaegerGenerator" sourceFile="DefaultJaegerGenerator.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="io.dekorate.jaeger.generator.JaegerAgentGenerator" sourceFile="JaegerAgentGenerator.java" interface="true" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dekorate.jaeger.handler" total_bugs="0" total_types="1" total_size="43">
+      <ClassStats class="io.dekorate.jaeger.handler.JaegerAgentHandler" sourceFile="JaegerAgentHandler.java" interface="false" size="43" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="292" invocations="633" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="52895" standardDeviationMicrosecondsPerInvocation="2249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="105" invocations="160" avgMicrosecondsPerInvocation="656" maxMicrosecondsPerInvocation="37030" standardDeviationMicrosecondsPerInvocation="3139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="87" invocations="130" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="57533" standardDeviationMicrosecondsPerInvocation="5067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="82" invocations="70" avgMicrosecondsPerInvocation="1181" maxMicrosecondsPerInvocation="24976" standardDeviationMicrosecondsPerInvocation="3161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="70" avgMicrosecondsPerInvocation="1163" maxMicrosecondsPerInvocation="11816" standardDeviationMicrosecondsPerInvocation="2120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="79" invocations="235" avgMicrosecondsPerInvocation="336" maxMicrosecondsPerInvocation="52503" standardDeviationMicrosecondsPerInvocation="3423"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="68" invocations="161" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="32071" standardDeviationMicrosecondsPerInvocation="2519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="68" invocations="70" avgMicrosecondsPerInvocation="973" maxMicrosecondsPerInvocation="59171" standardDeviationMicrosecondsPerInvocation="7009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="63" invocations="160" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="28905" standardDeviationMicrosecondsPerInvocation="2269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="62" invocations="160" avgMicrosecondsPerInvocation="388" maxMicrosecondsPerInvocation="11514" standardDeviationMicrosecondsPerInvocation="1009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="53" invocations="154" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="8991" standardDeviationMicrosecondsPerInvocation="956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="52" invocations="639" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="2576" standardDeviationMicrosecondsPerInvocation="213"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="50" invocations="360" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="3266" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="39" invocations="156" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="5195" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="70" avgMicrosecondsPerInvocation="477" maxMicrosecondsPerInvocation="6425" standardDeviationMicrosecondsPerInvocation="1113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="33" invocations="25" avgMicrosecondsPerInvocation="1333" maxMicrosecondsPerInvocation="15905" standardDeviationMicrosecondsPerInvocation="3363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="70" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="16715" standardDeviationMicrosecondsPerInvocation="2042"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="70" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="10245" standardDeviationMicrosecondsPerInvocation="1293"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="28" invocations="25" avgMicrosecondsPerInvocation="1130" maxMicrosecondsPerInvocation="7820" standardDeviationMicrosecondsPerInvocation="1800"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="26" invocations="547" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="2171" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="25" invocations="25" avgMicrosecondsPerInvocation="1017" maxMicrosecondsPerInvocation="11327" standardDeviationMicrosecondsPerInvocation="2428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="135" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="1458" standardDeviationMicrosecondsPerInvocation="241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ReturnPathTypeDataflowFactory" totalMilliseconds="23" invocations="2" avgMicrosecondsPerInvocation="11920" maxMicrosecondsPerInvocation="23050" standardDeviationMicrosecondsPerInvocation="11129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="23" invocations="25" avgMicrosecondsPerInvocation="933" maxMicrosecondsPerInvocation="8384" standardDeviationMicrosecondsPerInvocation="2071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="23" invocations="25" avgMicrosecondsPerInvocation="922" maxMicrosecondsPerInvocation="10430" standardDeviationMicrosecondsPerInvocation="2120"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="22" invocations="2119" avgMicrosecondsPerInvocation="10" maxMicrosecondsPerInvocation="5834" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="21" invocations="160" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="7589" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="18" invocations="235" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="6373" standardDeviationMicrosecondsPerInvocation="586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="18" invocations="25" avgMicrosecondsPerInvocation="739" maxMicrosecondsPerInvocation="7595" standardDeviationMicrosecondsPerInvocation="1684"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="18" invocations="25" avgMicrosecondsPerInvocation="730" maxMicrosecondsPerInvocation="9782" standardDeviationMicrosecondsPerInvocation="2294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="18" invocations="25" avgMicrosecondsPerInvocation="722" maxMicrosecondsPerInvocation="17432" standardDeviationMicrosecondsPerInvocation="3411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="16" invocations="25" avgMicrosecondsPerInvocation="655" maxMicrosecondsPerInvocation="10066" standardDeviationMicrosecondsPerInvocation="1987"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="70" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="1884" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="70" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="2060" standardDeviationMicrosecondsPerInvocation="378"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

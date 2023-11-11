@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685179619" analysisTimestamp="1699688832065" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\pulsar-client-admin-shade-test-2.9.0-rc-202109242205-tests.jar</Jar>
+  </Project>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE" instanceHash="e6bd6de382ca2ed9188f6be28aa6b545" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure() might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testEncryptionFailure" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="395" end="481" startBytecode="0" endBytecode="1248" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure()</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="408" end="408" startBytecode="109" endBytecode="109" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 408]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="408" end="408" startBytecode="109" endBytecode="109" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 408]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="1c23d90132d96d51749d13ecb213ee9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.decryptMessage(TopicMessageImpl, String, CryptoKeyReader): new String(byte[])</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="decryptMessage" signature="(Lorg/apache/pulsar/client/impl/TopicMessageImpl;Ljava/lang/String;Lorg/apache/pulsar/client/api/CryptoKeyReader;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="549" end="603" startBytecode="0" endBytecode="914" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.decryptMessage(TopicMessageImpl, String, CryptoKeyReader)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="603" end="603" startBytecode="351" endBytecode="351" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 603]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="59df292baa497723ff7d7b8ab7cad078" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionConsumerWithoutCryptoReader(): String.getBytes()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testEncryptionConsumerWithoutCryptoReader" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="486" end="545" startBytecode="0" endBytecode="415" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionConsumerWithoutCryptoReader()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="537" end="537" startBytecode="123" endBytecode="123" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 537]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="6dc7ad5a96ff7986486e88e410209abe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure(): new String(byte[])</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testEncryptionFailure" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="395" end="481" startBytecode="0" endBytecode="1248" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="441" end="441" startBytecode="327" endBytecode="327" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 441]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="463" end="463" startBytecode="538" endBytecode="538" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at SimpleProducerConsumerTest.java:[line 463]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="4c171a2c19fe401809a346088e608f00" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure(): String.getBytes()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testEncryptionFailure" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="395" end="481" startBytecode="0" endBytecode="1248" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="423" end="423" startBytecode="204" endBytecode="204" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 423]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="b8196d0c6e20376b145ae3a4a5fbb11a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRSAEncryption(): new String(byte[])</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testRSAEncryption" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="123" end="204" startBytecode="0" endBytecode="907" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRSAEncryption()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="196" end="196" startBytecode="383" endBytecode="383" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 196]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="5431adbbe8dd72d3e8d19e535ef5adfc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRSAEncryption(): String.getBytes()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testRSAEncryption" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="123" end="204" startBytecode="0" endBytecode="907" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRSAEncryption()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="178" end="178" startBytecode="241" endBytecode="241" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 178]</Message>
+    </SourceLine>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="182" end="182" startBytecode="293" endBytecode="293" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at SimpleProducerConsumerTest.java:[line 182]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="63ca5d6c1760e9fadcd0febfe060d5c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRedeliveryOfFailedMessages(): new String(byte[])</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testRedeliveryOfFailedMessages" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="220" end="357" startBytecode="0" endBytecode="1779" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRedeliveryOfFailedMessages()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="335" end="335" startBytecode="439" endBytecode="439" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 335]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="53cfb9e886f6d8a06679035bf16d5007" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRedeliveryOfFailedMessages(): String.getBytes()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testRedeliveryOfFailedMessages" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="220" end="357" startBytecode="0" endBytecode="1779" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testRedeliveryOfFailedMessages()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="322" end="322" startBytecode="356" endBytecode="356" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 322]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="eb3446d9c24a1ab7737feeee0e395072" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="73" end="603" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 73-603]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest</Message>
+    </Class>
+    <Method classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" name="testEncryptionFailure" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" start="395" end="481" startBytecode="0" endBytecode="1248" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SimpleProducerConsumerTest.testEncryptionFailure()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" primary="true" start="408" end="408" startBytecode="109" endBytecode="109" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 408]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="e4a8a8a539b32b81025d777e733fabd3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader" start="125" end="158" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 125-158]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader" start="125" end="158" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" synthetic="true">
+      <Message>At SimpleProducerConsumerTest.java:[lines 125-158]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="f886b902f024c4ef9255440e51b6eafc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" start="266" end="276" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 266-276]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" start="266" end="276" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" synthetic="true">
+      <Message>At SimpleProducerConsumerTest.java:[lines 266-276]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="cc1db0a94ba3061f2d1ec9f8a9142fd2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader.keyInfo</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" start="266" end="276" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 266-276]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader</Message>
+    </Class>
+    <Field classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" name="keyInfo" signature="Lorg/apache/pulsar/client/api/EncryptionKeyInfo;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>In SimpleProducerConsumerTest.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader.keyInfo</Message>
+    </Field>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" primary="true" start="267" end="267" startBytecode="17" endBytecode="17" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+      <Message>At SimpleProducerConsumerTest.java:[line 267]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="232321eaafff3b6d118c6e55d275615" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader" start="228" end="262" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 228-262]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader" start="228" end="262" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" synthetic="true">
+      <Message>At SimpleProducerConsumerTest.java:[lines 228-262]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="bfd4749462722f04aa05a2ff177f2701" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader" start="362" end="391" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 362-391]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader" start="362" end="391" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" synthetic="true">
+      <Message>At SimpleProducerConsumerTest.java:[lines 362-391]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="79ff609201ebce85c1f02945fcc41a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader" start="490" end="524" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java">
+        <Message>At SimpleProducerConsumerTest.java:[lines 490-524]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader</Message>
+    </Class>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader" start="490" end="524" sourcefile="SimpleProducerConsumerTest.java" sourcepath="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" synthetic="true">
+      <Message>At SimpleProducerConsumerTest.java:[lines 490-524]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="c1f47aa70bbc79f504837822073d2337" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>SmokeTest.pulsarContainer not initialized in constructor and dereferenced in org.apache.pulsar.tests.integration.SmokeTest.checkAdmin()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="41" end="96" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>At SmokeTest.java:[lines 41-96]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SmokeTest</Message>
+    </Class>
+    <Field classname="org.apache.pulsar.tests.integration.SmokeTest" name="pulsarContainer" signature="Lorg/apache/pulsar/tests/integration/PulsarContainer;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>In SmokeTest.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.pulsar.tests.integration.SmokeTest.pulsarContainer</Message>
+    </Field>
+    <Method classname="org.apache.pulsar.tests.integration.SmokeTest" name="checkAdmin" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="84" end="89" startBytecode="0" endBytecode="164" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SmokeTest.checkAdmin()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true" start="84" end="84" startBytecode="7" endBytecode="7" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+      <Message>At SmokeTest.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="6c9c2c0edc01f8c882d82448d580106f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>SmokeTest.pulsarContainer not initialized in constructor and dereferenced in org.apache.pulsar.tests.integration.SmokeTest.checkClient()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="41" end="96" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>At SmokeTest.java:[lines 41-96]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SmokeTest</Message>
+    </Class>
+    <Field classname="org.apache.pulsar.tests.integration.SmokeTest" name="pulsarContainer" signature="Lorg/apache/pulsar/tests/integration/PulsarContainer;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>In SmokeTest.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.pulsar.tests.integration.SmokeTest.pulsarContainer</Message>
+    </Field>
+    <Method classname="org.apache.pulsar.tests.integration.SmokeTest" name="checkClient" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="57" end="80" startBytecode="0" endBytecode="467" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SmokeTest.checkClient()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true" start="58" end="58" startBytecode="7" endBytecode="7" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+      <Message>At SmokeTest.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="c96e3a27febcf74a1b91e8d9017322a4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>SmokeTest.pulsarContainer not initialized in constructor and dereferenced in org.apache.pulsar.tests.integration.SmokeTest.cleanup()</LongMessage>
+    <Class classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="41" end="96" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>At SmokeTest.java:[lines 41-96]</Message>
+      </SourceLine>
+      <Message>In class org.apache.pulsar.tests.integration.SmokeTest</Message>
+    </Class>
+    <Field classname="org.apache.pulsar.tests.integration.SmokeTest" name="pulsarContainer" signature="Lorg/apache/pulsar/tests/integration/PulsarContainer;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+        <Message>In SmokeTest.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.pulsar.tests.integration.SmokeTest.pulsarContainer</Message>
+    </Field>
+    <Method classname="org.apache.pulsar.tests.integration.SmokeTest" name="cleanup" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" start="94" end="96" startBytecode="0" endBytecode="61" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java"/>
+      <Message>In method org.apache.pulsar.tests.integration.SmokeTest.cleanup()</Message>
+    </Method>
+    <SourceLine classname="org.apache.pulsar.tests.integration.SmokeTest" primary="true" start="95" end="95" startBytecode="8" endBytecode="8" sourcefile="SmokeTest.java" sourcepath="org/apache/pulsar/tests/integration/SmokeTest.java">
+      <Message>At SmokeTest.java:[line 95]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="46">
+    <MissingClass>org.apache.pulsar.client.admin.Namespaces</MissingClass>
+    <MissingClass>org.apache.pulsar.client.admin.PulsarAdmin</MissingClass>
+    <MissingClass>org.apache.pulsar.client.admin.PulsarAdminBuilder</MissingClass>
+    <MissingClass>org.apache.pulsar.client.admin.PulsarAdminException</MissingClass>
+    <MissingClass>org.apache.pulsar.client.admin.Tenants</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.ClientBuilder</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.CompressionType</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.Consumer</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.ConsumerBuilder</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.ConsumerCryptoFailureAction</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.CryptoKeyReader</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.EncryptionKeyInfo</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.Message</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.MessageCrypto</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.MessageId</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.MessageRoutingMode</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.Producer</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.ProducerBuilder</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.PulsarClient</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.PulsarClientException</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.Schema</MissingClass>
+    <MissingClass>org.apache.pulsar.client.api.SubscriptionType</MissingClass>
+    <MissingClass>org.apache.pulsar.client.impl.MessageImpl</MissingClass>
+    <MissingClass>org.apache.pulsar.client.impl.TopicMessageImpl</MissingClass>
+    <MissingClass>org.apache.pulsar.client.impl.crypto.MessageCryptoBc</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.EncryptionContext</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.EncryptionContext$EncryptionKey</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.proto.CompressionType</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.proto.EncryptionKeys</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.proto.MessageMetadata</MissingClass>
+    <MissingClass>org.apache.pulsar.common.api.proto.SingleMessageMetadata</MissingClass>
+    <MissingClass>org.apache.pulsar.common.compression.CompressionCodec</MissingClass>
+    <MissingClass>org.apache.pulsar.common.compression.CompressionCodecProvider</MissingClass>
+    <MissingClass>org.apache.pulsar.common.policies.data.TenantInfo</MissingClass>
+    <MissingClass>org.apache.pulsar.common.policies.data.TenantInfoImpl</MissingClass>
+    <MissingClass>org.apache.pulsar.common.protocol.Commands</MissingClass>
+    <MissingClass>org.apache.pulsar.shade.io.netty.buffer.ByteBuf</MissingClass>
+    <MissingClass>org.apache.pulsar.shade.io.netty.buffer.Unpooled</MissingClass>
+    <MissingClass>org.apache.pulsar.tests.TestRetrySupport</MissingClass>
+    <MissingClass>org.bouncycastle.jce.provider.BouncyCastleProvider</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.testcontainers.containers.GenericContainer</MissingClass>
+    <MissingClass>org.testcontainers.containers.wait.strategy.HttpWaitStrategy</MissingClass>
+    <MissingClass>org.testcontainers.containers.wait.strategy.WaitStrategy</MissingClass>
+    <MissingClass>org.testng.Assert</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:19 +0900" total_classes="8" referenced_classes="52" total_bugs="19" total_size="430" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.36" clock_seconds="2.63" peak_mbytes="226.85" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="9" priority_2="2" priority_1="8">
+    <FileStats path="org/apache/pulsar/tests/integration/PulsarContainer.java" bugCount="0" size="23"/>
+    <FileStats path="org/apache/pulsar/tests/integration/SimpleProducerConsumerTest.java" bugCount="16" size="367" bugHash="2c355c3246baf1ce71601ca3edad59d5"/>
+    <FileStats path="org/apache/pulsar/tests/integration/SmokeTest.java" bugCount="3" size="40" bugHash="946ba624b57eb2821dbc6310d8763e4d"/>
+    <PackageStats package="org.apache.pulsar.tests.integration" total_bugs="19" total_types="8" total_size="430" priority_3="9" priority_2="2" priority_1="8">
+      <ClassStats class="org.apache.pulsar.tests.integration.PulsarContainer" sourceFile="PulsarContainer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="251" bugs="10" priority_3="1" priority_2="1" priority_1="8"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1EncKeyReader" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="26" bugs="1" priority_3="1"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$1InvalidKeyReader" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="10" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$2EncKeyReader" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="29" bugs="1" priority_3="1"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$3EncKeyReader" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="22" bugs="1" priority_3="1"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SimpleProducerConsumerTest$4EncKeyReader" sourceFile="SimpleProducerConsumerTest.java" interface="false" size="29" bugs="1" priority_3="1"/>
+      <ClassStats class="org.apache.pulsar.tests.integration.SmokeTest" sourceFile="SmokeTest.java" interface="false" size="40" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="323" invocations="769" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="39957" standardDeviationMicrosecondsPerInvocation="1716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="99" invocations="41" avgMicrosecondsPerInvocation="2430" maxMicrosecondsPerInvocation="66649" standardDeviationMicrosecondsPerInvocation="10419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="95" invocations="52" avgMicrosecondsPerInvocation="1839" maxMicrosecondsPerInvocation="14762" standardDeviationMicrosecondsPerInvocation="2662"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="80" invocations="312" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="14112" standardDeviationMicrosecondsPerInvocation="834"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="78" invocations="49" avgMicrosecondsPerInvocation="1608" maxMicrosecondsPerInvocation="24575" standardDeviationMicrosecondsPerInvocation="3722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="73" invocations="779" avgMicrosecondsPerInvocation="94" maxMicrosecondsPerInvocation="9843" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="68" invocations="127" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="40640" standardDeviationMicrosecondsPerInvocation="3640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="67" invocations="52" avgMicrosecondsPerInvocation="1305" maxMicrosecondsPerInvocation="59436" standardDeviationMicrosecondsPerInvocation="8143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="65" invocations="50" avgMicrosecondsPerInvocation="1305" maxMicrosecondsPerInvocation="19651" standardDeviationMicrosecondsPerInvocation="3184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="64" invocations="52" avgMicrosecondsPerInvocation="1244" maxMicrosecondsPerInvocation="9974" standardDeviationMicrosecondsPerInvocation="1959"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="58" invocations="41" avgMicrosecondsPerInvocation="1427" maxMicrosecondsPerInvocation="9785" standardDeviationMicrosecondsPerInvocation="2192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="52" invocations="52" avgMicrosecondsPerInvocation="1012" maxMicrosecondsPerInvocation="22769" standardDeviationMicrosecondsPerInvocation="3458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="50" invocations="41" avgMicrosecondsPerInvocation="1242" maxMicrosecondsPerInvocation="8931" standardDeviationMicrosecondsPerInvocation="2076"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="49" invocations="8" avgMicrosecondsPerInvocation="6201" maxMicrosecondsPerInvocation="36762" standardDeviationMicrosecondsPerInvocation="11910"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="42" invocations="52" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="31098" standardDeviationMicrosecondsPerInvocation="4256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="41" invocations="41" avgMicrosecondsPerInvocation="1021" maxMicrosecondsPerInvocation="16955" standardDeviationMicrosecondsPerInvocation="2620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="52" avgMicrosecondsPerInvocation="693" maxMicrosecondsPerInvocation="14259" standardDeviationMicrosecondsPerInvocation="1971"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="32" invocations="41" avgMicrosecondsPerInvocation="795" maxMicrosecondsPerInvocation="4998" standardDeviationMicrosecondsPerInvocation="1107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="678" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="2012" standardDeviationMicrosecondsPerInvocation="122"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="37" avgMicrosecondsPerInvocation="755" maxMicrosecondsPerInvocation="7132" standardDeviationMicrosecondsPerInvocation="1337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="2059" avgMicrosecondsPerInvocation="11" maxMicrosecondsPerInvocation="9734" standardDeviationMicrosecondsPerInvocation="226"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="23" invocations="8" avgMicrosecondsPerInvocation="2880" maxMicrosecondsPerInvocation="14302" standardDeviationMicrosecondsPerInvocation="4574"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

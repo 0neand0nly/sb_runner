@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685211850" analysisTimestamp="1699687581340" release="">
+  <Project projectName="">
+    <Jar>clean_train50\condor_2.12-2.25.jar</Jar>
+  </Project>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="127ebf98c89a06872286a97a90b8ddb1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>gridscale.condor.CondorRequirement$.MODULE$ should be package protected</LongMessage>
+    <Class classname="gridscale.condor.CondorRequirement$" primary="true">
+      <SourceLine classname="gridscale.condor.CondorRequirement$" start="27" end="29" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala">
+        <Message>At CondorRequirement.scala:[lines 27-29]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.CondorRequirement$</Message>
+    </Class>
+    <Field classname="gridscale.condor.CondorRequirement$" name="MODULE$" signature="Lgridscale/condor/CondorRequirement$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.CondorRequirement$" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala">
+        <Message>In CondorRequirement.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.CondorRequirement$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.CondorRequirement$" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala" synthetic="true">
+      <Message>In CondorRequirement.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="519c89ccda183250dec9c0c690de2b24" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field gridscale.condor.CondorRequirement$.MODULE$ from instance method new gridscale.condor.CondorRequirement$()</LongMessage>
+    <Class classname="gridscale.condor.CondorRequirement$" primary="true">
+      <SourceLine classname="gridscale.condor.CondorRequirement$" start="27" end="29" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala">
+        <Message>At CondorRequirement.scala:[lines 27-29]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.CondorRequirement$</Message>
+    </Class>
+    <Method classname="gridscale.condor.CondorRequirement$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.CondorRequirement$" start="29" end="27" startBytecode="0" endBytecode="54" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala"/>
+      <Message>In method new gridscale.condor.CondorRequirement$()</Message>
+    </Method>
+    <Field classname="gridscale.condor.CondorRequirement$" name="MODULE$" signature="Lgridscale/condor/CondorRequirement$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.CondorRequirement$" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala">
+        <Message>In CondorRequirement.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.CondorRequirement$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.CondorRequirement$" primary="true" start="29" end="29" startBytecode="5" endBytecode="5" sourcefile="CondorRequirement.scala" sourcepath="gridscale/condor/CondorRequirement.scala">
+      <Message>At CondorRequirement.scala:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="6545f0444861ffdb4517bfb4f929cc89" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name gridscale.condor.package doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="gridscale.condor.package" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="gridscale.condor.package" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package</Message>
+    </Class>
+    <SourceLine classname="gridscale.condor.package" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>In package.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="531f1d63b14677fd8ff6580994dbc19b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>gridscale.condor.package$.MODULE$ should be package protected</LongMessage>
+    <Class classname="gridscale.condor.package$" primary="true">
+      <SourceLine classname="gridscale.condor.package$" start="13" end="167" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 13-167]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$</Message>
+    </Class>
+    <Field classname="gridscale.condor.package$" name="MODULE$" signature="Lgridscale/condor/package$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>In package.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="7513269d990031b0c8e42151b144a2be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name gridscale.condor.package$ doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="gridscale.condor.package$" primary="true">
+      <SourceLine classname="gridscale.condor.package$" start="13" end="167" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 13-167]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$</Message>
+    </Class>
+    <SourceLine classname="gridscale.condor.package$" start="13" end="167" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>At package.scala:[lines 13-167]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="b0fca090e459a53b7f817937f8ebfed2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field gridscale.condor.package$.MODULE$ from instance method new gridscale.condor.package$()</LongMessage>
+    <Class classname="gridscale.condor.package$" primary="true">
+      <SourceLine classname="gridscale.condor.package$" start="13" end="167" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 13-167]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$" start="167" end="13" startBytecode="0" endBytecode="64" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method new gridscale.condor.package$()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$" name="MODULE$" signature="Lgridscale/condor/package$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$" primary="true" start="167" end="167" startBytecode="5" endBytecode="5" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 167]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="cac708c7e3fd8df61189cadc040b6a3b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.arguments() may expose internal representation by returning package$CondorJobDescription$.arguments</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="arguments" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.arguments()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="arguments" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.arguments</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4270b7ef0a773c624f94efd4a1e627b3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.coreByNode() may expose internal representation by returning package$CondorJobDescription$.coreByNode</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="coreByNode" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.coreByNode()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="coreByNode" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.coreByNode</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3afaa058fd4700c4a5d4601c68d6a20e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.executable() may expose internal representation by returning package$CondorJobDescription$.executable</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="executable" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.executable()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="executable" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.executable</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="486622b38e1f2170604611951f2fff59" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.memory() may expose internal representation by returning package$CondorJobDescription$.memory</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="memory" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.memory()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="memory" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.memory</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="40eb67c596912cd90f79f6e7c099b9be" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.nodes() may expose internal representation by returning package$CondorJobDescription$.nodes</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="nodes" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.nodes()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="nodes" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.nodes</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="a3ae8ab50abd6cb71b6174f586c57ddc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.requirements() may expose internal representation by returning package$CondorJobDescription$.requirements</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="requirements" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.requirements()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="requirements" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.requirements</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="f56be9ff1eb1668025015855ce742e96" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.workDirectory() may expose internal representation by returning package$CondorJobDescription$.workDirectory</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="workDirectory" signature="()Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="46" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$CondorJobDescription$.workDirectory()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="workDirectory" signature="Lmonocle/PLens;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.workDirectory</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="4" endBytecode="4" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="13e28d46ae926ee9fd7f098b152019d4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>gridscale.condor.package$CondorJobDescription$.MODULE$ should be package protected</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="MODULE$" signature="Lgridscale/condor/package$CondorJobDescription$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>In package.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="2bfc8150ced8317e0980a875ccd86651" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field gridscale.condor.package$CondorJobDescription$.MODULE$ from instance method new gridscale.condor.package$CondorJobDescription$()</LongMessage>
+    <Class classname="gridscale.condor.package$CondorJobDescription$" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="22" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 15-22]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$CondorJobDescription$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$CondorJobDescription$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" start="15" end="15" startBytecode="0" endBytecode="127" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method new gridscale.condor.package$CondorJobDescription$()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$CondorJobDescription$" name="MODULE$" signature="Lgridscale/condor/package$CondorJobDescription$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$CondorJobDescription$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$CondorJobDescription$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$CondorJobDescription$" primary="true" start="15" end="15" startBytecode="5" endBytecode="5" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 15]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="31de75db90128cb0ac47aa0b27551800" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>gridscale.condor.package$impl$.MODULE$ should be package protected</LongMessage>
+    <Class classname="gridscale.condor.package$impl$" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="24" end="143" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 24-143]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$impl$</Message>
+    </Class>
+    <Field classname="gridscale.condor.package$impl$" name="MODULE$" signature="Lgridscale/condor/package$impl$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$impl$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$impl$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>In package.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="d1083ee62915db20c738e5842ad12782" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name gridscale.condor.package$impl$ doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="gridscale.condor.package$impl$" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="24" end="143" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 24-143]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$impl$</Message>
+    </Class>
+    <SourceLine classname="gridscale.condor.package$impl$" start="24" end="143" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala" synthetic="true">
+      <Message>At package.scala:[lines 24-143]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" instanceHash="f579c8396b8bc1882bbaf1d44d565e08" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in gridscale.condor.package$impl$.queryState(Object, BatchScheduler$BatchJob, HeadNode)</LongMessage>
+    <Class classname="gridscale.condor.package$impl$" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="24" end="143" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 24-143]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$impl$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$impl$" name="queryState" signature="(Ljava/lang/Object;Lgridscale/cluster/BatchScheduler$BatchJob;Lgridscale/cluster/HeadNode;)Lgridscale/package$JobState;" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="122" end="138" startBytecode="0" endBytecode="105" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method gridscale.condor.package$impl$.queryState(Object, BatchScheduler$BatchJob, HeadNode)</Message>
+    </Method>
+    <LocalVariable name="cmdRet" register="7" pc="127" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from cmdRet</Message>
+    </LocalVariable>
+    <SourceLine classname="gridscale.condor.package$impl$" primary="true" start="127" end="127" startBytecode="128" endBytecode="128" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 127]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="6559dc62653259bdb1f3b5373e4f12b5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field gridscale.condor.package$impl$.MODULE$ from instance method new gridscale.condor.package$impl$()</LongMessage>
+    <Class classname="gridscale.condor.package$impl$" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="24" end="143" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>At package.scala:[lines 24-143]</Message>
+      </SourceLine>
+      <Message>In class gridscale.condor.package$impl$</Message>
+    </Class>
+    <Method classname="gridscale.condor.package$impl$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" start="143" end="24" startBytecode="0" endBytecode="54" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala"/>
+      <Message>In method new gridscale.condor.package$impl$()</Message>
+    </Method>
+    <Field classname="gridscale.condor.package$impl$" name="MODULE$" signature="Lgridscale/condor/package$impl$;" isStatic="true" primary="true">
+      <SourceLine classname="gridscale.condor.package$impl$" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+        <Message>In package.scala</Message>
+      </SourceLine>
+      <Message>Field gridscale.condor.package$impl$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="gridscale.condor.package$impl$" primary="true" start="143" end="143" startBytecode="5" endBytecode="5" sourcefile="package.scala" sourcepath="gridscale/condor/package.scala">
+      <Message>At package.scala:[line 143]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="52">
+    <MissingClass>effectaside.package</MissingClass>
+    <MissingClass>effectaside.package$Effect</MissingClass>
+    <MissingClass>effectaside.package$System</MissingClass>
+    <MissingClass>gridscale.cluster.BatchScheduler</MissingClass>
+    <MissingClass>gridscale.cluster.BatchScheduler$</MissingClass>
+    <MissingClass>gridscale.cluster.BatchScheduler$BatchJob</MissingClass>
+    <MissingClass>gridscale.cluster.HeadNode</MissingClass>
+    <MissingClass>gridscale.cluster.Requirement$</MissingClass>
+    <MissingClass>gridscale.package</MissingClass>
+    <MissingClass>gridscale.package$ExecutionResult</MissingClass>
+    <MissingClass>gridscale.package$JobState</MissingClass>
+    <MissingClass>gridscale.package$JobState$</MissingClass>
+    <MissingClass>gridscale.package$JobState$Done$</MissingClass>
+    <MissingClass>gridscale.package$JobState$Failed$</MissingClass>
+    <MissingClass>gridscale.package$JobState$Running$</MissingClass>
+    <MissingClass>gridscale.package$JobState$Submitted$</MissingClass>
+    <MissingClass>gridscale.tools.package</MissingClass>
+    <MissingClass>gridscale.tools.package$</MissingClass>
+    <MissingClass>gridscale.tools.package$InformationDecorator</MissingClass>
+    <MissingClass>monocle.PLens</MissingClass>
+    <MissingClass>scala.Array$</MissingClass>
+    <MissingClass>scala.Function0</MissingClass>
+    <MissingClass>scala.Function1</MissingClass>
+    <MissingClass>scala.Function2</MissingClass>
+    <MissingClass>scala.MatchError</MissingClass>
+    <MissingClass>scala.None$</MissingClass>
+    <MissingClass>scala.Option</MissingClass>
+    <MissingClass>scala.Option$</MissingClass>
+    <MissingClass>scala.Predef</MissingClass>
+    <MissingClass>scala.Predef$</MissingClass>
+    <MissingClass>scala.Predef$ArrowAssoc$</MissingClass>
+    <MissingClass>scala.Product</MissingClass>
+    <MissingClass>scala.Serializable</MissingClass>
+    <MissingClass>scala.Some</MissingClass>
+    <MissingClass>scala.Tuple2</MissingClass>
+    <MissingClass>scala.Tuple7</MissingClass>
+    <MissingClass>scala.collection.GenTraversableOnce</MissingClass>
+    <MissingClass>scala.collection.Iterable</MissingClass>
+    <MissingClass>scala.collection.Seq</MissingClass>
+    <MissingClass>scala.collection.Seq$</MissingClass>
+    <MissingClass>scala.collection.generic.CanBuildFrom</MissingClass>
+    <MissingClass>scala.collection.immutable.StringOps</MissingClass>
+    <MissingClass>scala.collection.mutable.ArrayOps</MissingClass>
+    <MissingClass>scala.collection.mutable.ArrayOps$ofRef</MissingClass>
+    <MissingClass>scala.reflect.ClassTag</MissingClass>
+    <MissingClass>scala.reflect.ClassTag$</MissingClass>
+    <MissingClass>scala.runtime.BoxesRunTime</MissingClass>
+    <MissingClass>scala.runtime.LambdaDeserialize</MissingClass>
+    <MissingClass>scala.runtime.ScalaRunTime$</MissingClass>
+    <MissingClass>scalaz.Functor</MissingClass>
+    <MissingClass>scalaz.Functor$</MissingClass>
+    <MissingClass>squants.information.Information</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:51 +0900" total_classes="14" referenced_classes="35" total_bugs="19" total_size="305" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.84" clock_seconds="2.30" peak_mbytes="238.25" alloc_mbytes="3984.00" gc_seconds="0.03" priority_3="2" priority_2="17">
+    <FileStats path="gridscale/condor/CondorRequirement.scala" bugCount="2" size="23" bugHash="b6ad805a2972dc00a7ef8165991c5d17"/>
+    <FileStats path="gridscale/condor/package.scala" bugCount="17" size="282" bugHash="b7c44258c6dd41946e22a68a52659fdc"/>
+    <PackageStats package="gridscale.condor" total_bugs="19" total_types="14" total_size="305" priority_3="2" priority_2="17">
+      <ClassStats class="gridscale.condor.CondorRequirement" sourceFile="CondorRequirement.scala" interface="false" size="15" bugs="0"/>
+      <ClassStats class="gridscale.condor.CondorRequirement$" sourceFile="CondorRequirement.scala" interface="false" size="8" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="gridscale.condor.package" sourceFile="package.scala" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="gridscale.condor.package$" sourceFile="package.scala" interface="false" size="31" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription" sourceFile="package.scala" interface="false" size="40" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$" sourceFile="package.scala" interface="false" size="34" bugs="9" priority_2="9"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$1" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$2" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$3" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$4" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$5" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$6" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$CondorJobDescription$$anon$7" sourceFile="package.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gridscale.condor.package$impl$" sourceFile="package.scala" interface="false" size="67" bugs="4" priority_2="4"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="231" invocations="507" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="33782" standardDeviationMicrosecondsPerInvocation="1699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="75" invocations="177" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="52000" standardDeviationMicrosecondsPerInvocation="3902"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="69" invocations="177" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="19079" standardDeviationMicrosecondsPerInvocation="1580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="66" invocations="177" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="21314" standardDeviationMicrosecondsPerInvocation="1712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="59" invocations="177" avgMicrosecondsPerInvocation="333" maxMicrosecondsPerInvocation="12748" standardDeviationMicrosecondsPerInvocation="1348"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="35" avgMicrosecondsPerInvocation="1683" maxMicrosecondsPerInvocation="13195" standardDeviationMicrosecondsPerInvocation="2749"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="56" invocations="35" avgMicrosecondsPerInvocation="1601" maxMicrosecondsPerInvocation="51334" standardDeviationMicrosecondsPerInvocation="8531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="55" invocations="177" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="23905" standardDeviationMicrosecondsPerInvocation="1809"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="53" invocations="177" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="16959" standardDeviationMicrosecondsPerInvocation="1301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="48" invocations="14" avgMicrosecondsPerInvocation="3458" maxMicrosecondsPerInvocation="27458" standardDeviationMicrosecondsPerInvocation="8083"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="43" invocations="35" avgMicrosecondsPerInvocation="1240" maxMicrosecondsPerInvocation="8728" standardDeviationMicrosecondsPerInvocation="2039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="270" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="11757" standardDeviationMicrosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="512" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="3702" standardDeviationMicrosecondsPerInvocation="220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="38" invocations="81" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="17024" standardDeviationMicrosecondsPerInvocation="2067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="38" invocations="35" avgMicrosecondsPerInvocation="1086" maxMicrosecondsPerInvocation="26907" standardDeviationMicrosecondsPerInvocation="4450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="36" invocations="156" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="4741" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="35" avgMicrosecondsPerInvocation="997" maxMicrosecondsPerInvocation="27686" standardDeviationMicrosecondsPerInvocation="4587"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="26" invocations="14" avgMicrosecondsPerInvocation="1914" maxMicrosecondsPerInvocation="24979" standardDeviationMicrosecondsPerInvocation="6398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="411" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="1223" standardDeviationMicrosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="21" invocations="2638" avgMicrosecondsPerInvocation="7" maxMicrosecondsPerInvocation="1765" standardDeviationMicrosecondsPerInvocation="61"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="20" invocations="177" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="16110" standardDeviationMicrosecondsPerInvocation="1224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="35" avgMicrosecondsPerInvocation="579" maxMicrosecondsPerInvocation="8147" standardDeviationMicrosecondsPerInvocation="1419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="18" invocations="14" avgMicrosecondsPerInvocation="1347" maxMicrosecondsPerInvocation="12986" standardDeviationMicrosecondsPerInvocation="3294"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="18" invocations="124" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="3151" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="14" avgMicrosecondsPerInvocation="1258" maxMicrosecondsPerInvocation="8736" standardDeviationMicrosecondsPerInvocation="2570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="15" invocations="1" avgMicrosecondsPerInvocation="15841" maxMicrosecondsPerInvocation="15841" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="177" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="8156" standardDeviationMicrosecondsPerInvocation="613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="15" invocations="14" avgMicrosecondsPerInvocation="1118" maxMicrosecondsPerInvocation="9119" standardDeviationMicrosecondsPerInvocation="2563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="15" invocations="14" avgMicrosecondsPerInvocation="1098" maxMicrosecondsPerInvocation="12166" standardDeviationMicrosecondsPerInvocation="3088"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

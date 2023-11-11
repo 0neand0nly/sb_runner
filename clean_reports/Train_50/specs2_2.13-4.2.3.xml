@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685225615" analysisTimestamp="1699688909096" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\specs2_2.13-4.2.3.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="35fe99cec71eef905c495ab0f3afdd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.matching(String, String, String, Map, String, MatchingRules): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" name="matching" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lscala/collection/immutable/Map;Ljava/lang/String;Lau/com/dius/pact/core/model/matchingrules/MatchingRules;)Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest$DescribingResponse;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="58" end="59" startBytecode="0" endBytecode="174" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.matching(String, String, String, Map, String, MatchingRules)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true" start="59" end="59" startBytecode="54" endBytecode="54" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_FIELD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="2c6a50b3a0385d03d330df6c18700193" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-final field names should start with a lower case letter, final fields should be uppercase with words separated by underscores</ShortMessage>
+    <LongMessage>The field name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse$module is not conform to the naming convention. If final, it should be ALL_CAPS, otherwise lowerCamelCase.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest</Message>
+    </Class>
+    <Field classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" name="DescribingResponse$module" signature="Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest$DescribingResponse$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>In PactFragmentBuilder.scala</Message>
+      </SourceLine>
+      <Message>Field au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse$module</Message>
+    </Field>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>In PactFragmentBuilder.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="694f2804381707d67e617993cf4c9e4d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" name="DescribingResponse" signature="()Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest$DescribingResponse$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="62" end="62" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="62" end="62" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="d01eb3ca4b75cbc3aad5a26a8eb919fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse$lzycompute$1() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" name="DescribingResponse$lzycompute$1" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="62" end="62" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest.DescribingResponse$lzycompute$1()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="62" end="62" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="c775cab249fda04095c51f3ab0f8ab7f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" start="50" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 50-62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="9203dfa92bda6d2619ddadaa3b4a0cf5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$" start="50" end="51" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 50-51]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$" start="50" end="51" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 50-51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="23f0ea3eea5780db5041cca6841931e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse(PactFragmentBuilder$DescribingRequest, Request) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest;Lau/com/dius/pact/core/model/Request;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="62" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse(PactFragmentBuilder$DescribingRequest, Request)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true" start="62" end="62" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="62" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="78d88982b400eede992cef245bd4ac05" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse.willRespondWith(int, Map, DslPart): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" name="willRespondWith" signature="(ILscala/collection/immutable/Map;Lau/com/dius/pact/consumer/dsl/DslPart;)Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="86" end="97" startBytecode="0" endBytecode="294" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse.willRespondWith(int, Map, DslPart)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true" start="97" end="97" startBytecode="135" endBytecode="135" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="bd26c74e9e5dd37f1da17cb03cfce4ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse.willRespondWith(int, Map, Option, MatchingRules): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" name="willRespondWith" signature="(ILscala/collection/immutable/Map;Lscala/Option;Lau/com/dius/pact/core/model/matchingrules/MatchingRules;)Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="67" end="80" startBytecode="0" endBytecode="417" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse.willRespondWith(int, Map, Option, MatchingRules)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true" start="68" end="68" startBytecode="30" endBytecode="30" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="94051eeb6cfe118b57cab93ca61799c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse(PactFragmentBuilder$DescribingRequest, Request)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest;Lau/com/dius/pact/core/model/Request;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="62" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse(PactFragmentBuilder$DescribingRequest, Request)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true" start="62" end="62" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="d4590971b0c36a184b460fef71ec4734" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" start="62" end="97" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 62-97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ed6ed92f04144b0fd1d267d34c0f2904" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$ at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$(PactFragmentBuilder$DescribingRequest) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$(PactFragmentBuilder$DescribingRequest)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" primary="true" start="62" end="62" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="3c16a24b6b35b2ca981797bebd45a645" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$(PactFragmentBuilder$DescribingRequest)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$DescribingRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$(PactFragmentBuilder$DescribingRequest)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" primary="true" start="62" end="62" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="e0c1e5be248857b4422b6fa276847006" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" start="62" end="62" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_FIELD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="cea994f78f9c4d764fd27fd902af3189" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-final field names should start with a lower case letter, final fields should be uppercase with words separated by underscores</ShortMessage>
+    <LongMessage>The field name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState$module is not conform to the naming convention. If final, it should be ALL_CAPS, otherwise lowerCamelCase.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="102" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 102-128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest</Message>
+    </Class>
+    <Field classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" name="InState$module" signature="Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest$InState$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>In PactFragmentBuilder.scala</Message>
+      </SourceLine>
+      <Message>Field au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState$module</Message>
+    </Field>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>In PactFragmentBuilder.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="ac949d9a669e5cf48b9112aa22778f27" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="102" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 102-128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" name="InState" signature="()Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest$InState$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="128" end="128" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="128" end="128" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="939450e1fdc595664de5b58088867625" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState$lzycompute$2() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="102" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 102-128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" name="InState$lzycompute$2" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="128" end="128" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest.InState$lzycompute$2()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="128" end="128" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="2e4b54a88370e1c761f1b440273ce408" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="102" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 102-128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" start="102" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 102-128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="8d41d5d30729b5b0d0e6f749d83c2dd3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$" start="102" end="102" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 102]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$" start="102" end="102" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="24340767ddd0de8eee4142b74139e15d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState(PactFragmentBuilder$PactWithAtLeastOneRequest, List, PactFragmentBuilder$PactWithAtLeastOneRequest) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="130" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 128-130]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;Lscala/collection/immutable/List;Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="128" startBytecode="0" endBytecode="110" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState(PactFragmentBuilder$PactWithAtLeastOneRequest, List, PactFragmentBuilder$PactWithAtLeastOneRequest)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" primary="true" start="128" end="128" startBytecode="15" endBytecode="15" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="128" startBytecode="15" endBytecode="15" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="8e635517d27ed92d94790dddf17b61f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState(PactFragmentBuilder$PactWithAtLeastOneRequest, List, PactFragmentBuilder$PactWithAtLeastOneRequest)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="130" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 128-130]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;Lscala/collection/immutable/List;Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="128" startBytecode="0" endBytecode="110" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState(PactFragmentBuilder$PactWithAtLeastOneRequest, List, PactFragmentBuilder$PactWithAtLeastOneRequest)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" primary="true" start="128" end="128" startBytecode="15" endBytecode="15" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="980f8966b22e043441015d36d7605c27" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="130" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 128-130]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" start="128" end="130" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 128-130]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="99a4e04cfc0ea9c905604e3a5435bcc6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$ at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$(PactFragmentBuilder$PactWithAtLeastOneRequest) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$(PactFragmentBuilder$PactWithAtLeastOneRequest)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" primary="true" start="128" end="128" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="4d9a6f1f7f36a563b76eb249711ed1e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$(PactFragmentBuilder$PactWithAtLeastOneRequest)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$PactWithAtLeastOneRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$(PactFragmentBuilder$PactWithAtLeastOneRequest)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" primary="true" start="128" end="128" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="89f746dcf6bef3c6cffb5a68d409b299" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" start="128" end="128" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_FIELD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="b7fb88503e0a2aa750afbcf7f72400f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-final field names should start with a lower case letter, final fields should be uppercase with words separated by underscores</ShortMessage>
+    <LongMessage>The field name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider$module is not conform to the naming convention. If final, it should be ALL_CAPS, otherwise lowerCamelCase.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="18" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 18-24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer</Message>
+    </Class>
+    <Field classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" name="WithProvider$module" signature="Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>In PactFragmentBuilder.scala</Message>
+      </SourceLine>
+      <Message>Field au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider$module</Message>
+    </Field>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>In PactFragmentBuilder.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="8fbc772dbeb65a419af915ff549e2ba4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="18" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 18-24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" name="WithProvider" signature="()Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="24" end="24" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="24" end="24" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="928027f84c647d3522fa2cde6f6e1759" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider$lzycompute$1() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="18" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 18-24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" name="WithProvider$lzycompute$1" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="24" end="24" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer.WithProvider$lzycompute$1()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="24" end="24" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="ab888eacfa55a9a25073ddb348db8233" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="18" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 18-24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" start="18" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 18-24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="b3e39ef5e96844e620b8ba844af0806c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$" start="18" end="18" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 18]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$" start="18" end="18" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="2edc347e642040c0a01cbf2dfa9e26ae" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider(PactFragmentBuilder$WithConsumer, Provider) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer;Lau/com/dius/pact/core/model/Provider;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="24" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider(PactFragmentBuilder$WithConsumer, Provider)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true" start="24" end="24" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="24" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_FIELD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="2376b2030a2625d0f3322550a00812f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-final field names should start with a lower case letter, final fields should be uppercase with words separated by underscores</ShortMessage>
+    <LongMessage>The field name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState$module is not conform to the naming convention. If final, it should be ALL_CAPS, otherwise lowerCamelCase.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <Field classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" name="InState$module" signature="Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider$InState$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>In PactFragmentBuilder.scala</Message>
+      </SourceLine>
+      <Message>Field au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState$module</Message>
+    </Field>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>In PactFragmentBuilder.scala</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="ffd82c6b8c206620fa000cba679b3624" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" name="InState" signature="()Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider$InState$;" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="37" end="37" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="37" end="37" startBytecode="0" endBytecode="66" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" instanceHash="9dc355170eee528fb37cbd8631246fbc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState$lzycompute$1() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" name="InState$lzycompute$1" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="37" end="37" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider.InState$lzycompute$1()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="37" end="37" startBytecode="0" endBytecode="100" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="c709fc7c32f1fb3b7f156ec5ba7d46d5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider(PactFragmentBuilder$WithConsumer, Provider)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer;Lau/com/dius/pact/core/model/Provider;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="24" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider(PactFragmentBuilder$WithConsumer, Provider)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true" start="24" end="24" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="28f3083ccbc0f2b355dd2ac2db2b34e8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" start="24" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 24-37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c73cc2256c21185f4e1a360f6ed3556" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$ at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$(PactFragmentBuilder$WithConsumer) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$(PactFragmentBuilder$WithConsumer)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" primary="true" start="24" end="24" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="996d44652c11b789c1e37b7ef944fe27" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$(PactFragmentBuilder$WithConsumer)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$(PactFragmentBuilder$WithConsumer)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" primary="true" start="24" end="24" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="dd5e65c39801ed44a199e31df1d4cca8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" start="24" end="24" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="480a3b27dcbc886f30a2ae8de051adf3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState(PactFragmentBuilder$WithConsumer$WithProvider, List) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="44" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 37-44]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider;Lscala/collection/immutable/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="37" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState(PactFragmentBuilder$WithConsumer$WithProvider, List)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" primary="true" start="37" end="37" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="37" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="73552c09a736784fbb07df3378b211a9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState(PactFragmentBuilder$WithConsumer$WithProvider, List)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="44" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 37-44]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider;Lscala/collection/immutable/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="37" startBytecode="0" endBytecode="95" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState(PactFragmentBuilder$WithConsumer$WithProvider, List)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" primary="true" start="37" end="37" startBytecode="10" endBytecode="10" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="25f70d7c37657ac463daa67ac3f7ce0a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="44" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[lines 37-44]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" start="37" end="44" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[lines 37-44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="91ba4989dae19ab78b1c851d439ebc3f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$ at new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$(PactFragmentBuilder$WithConsumer$WithProvider) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$(PactFragmentBuilder$WithConsumer$WithProvider)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" primary="true" start="37" end="37" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="f8c7806341048754e5e6ebf100b2488e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$(PactFragmentBuilder$WithConsumer$WithProvider)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactFragmentBuilder$WithConsumer$WithProvider;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" startBytecode="0" endBytecode="76" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$(PactFragmentBuilder$WithConsumer$WithProvider)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" primary="true" start="37" end="37" startBytecode="5" endBytecode="5" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="be988fbf2a3d6d799d615fc884b93092" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala">
+        <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" start="37" end="37" sourcefile="PactFragmentBuilder.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" synthetic="true">
+      <Message>At PactFragmentBuilder.scala:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="fcb5715579a94642444a5d0ee58b046e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed at new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed(PactSpec, Result) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[line 59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;Lorg/specs2/execute/Result;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" start="59" end="59" startBytecode="0" endBytecode="95" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed(PactSpec, Result)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" primary="true" start="59" end="59" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" start="59" end="59" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="61def3d2876d21f41101f6fcf373330a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed(PactSpec, Result)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[line 59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;Lorg/specs2/execute/Result;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" start="59" end="59" startBytecode="0" endBytecode="95" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed(PactSpec, Result)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" primary="true" start="59" end="59" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ac0c160afe65de84080beb7ccc0ac0a2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$ at new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$(PactSpec) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[line 59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" startBytecode="0" endBytecode="76" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$(PactSpec)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" primary="true" start="59" end="59" startBytecode="5" endBytecode="5" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" startBytecode="5" endBytecode="5" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="2f52b127279ef679d06b60f47597176c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$(PactSpec)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[line 59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" startBytecode="0" endBytecode="76" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$(PactSpec)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" primary="true" start="59" end="59" startBytecode="5" endBytecode="5" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="a0b6e6794bfe7dd565aeb2ef5c1ab157" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$ is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[line 59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$</Message>
+    </Class>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" start="59" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala" synthetic="true">
+      <Message>At PactSpec.scala:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f7ed55f37a37776011239d72f5fead4c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest at new au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest(PactSpec, RequestResponsePact) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" start="46" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[lines 46-59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;Lau/com/dius/pact/core/model/RequestResponsePact;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" start="46" end="46" startBytecode="0" endBytecode="99" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest(PactSpec, RequestResponsePact)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" primary="true" start="46" end="46" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 46]</Message>
+    </SourceLine>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" start="46" end="46" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+      <Message>At PactSpec.scala:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="6ff612a3288ea7bbef261e339a856dcd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest(PactSpec, RequestResponsePact)</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" start="46" end="59" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala">
+        <Message>At PactSpec.scala:[lines 46-59]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" name="&lt;init&gt;" signature="(Lau/com/dius/pact/consumer/specs2/PactSpec;Lau/com/dius/pact/core/model/RequestResponsePact;)V" isStatic="false" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" start="46" end="46" startBytecode="0" endBytecode="99" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala"/>
+      <Message>In method new au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest(PactSpec, RequestResponsePact)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" primary="true" start="46" end="46" startBytecode="10" endBytecode="10" sourcefile="PactSpec.scala" sourcepath="au/com/dius/pact/consumer/specs2/PactSpec.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at PactSpec.scala:[line 46]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_TOSTRING" priority="3" rank="20" abbrev="Dm" category="PERFORMANCE" instanceHash="7f78bdbdb028bd3e4bc16028e3ceaa74" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes toString() method on a String</ShortMessage>
+    <LongMessage>au.com.dius.pact.consumer.specs2.PrettyPrinter$.stringify$2(String) invokes toString() method on a String</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.PrettyPrinter$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PrettyPrinter$" start="12" end="82" sourcefile="PrettyPrinter.scala" sourcepath="au/com/dius/pact/consumer/specs2/PrettyPrinter.scala">
+        <Message>At PrettyPrinter.scala:[lines 12-82]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.PrettyPrinter$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.PrettyPrinter$" name="stringify$2" signature="(Ljava/lang/String;)Lscala/collection/immutable/List;" isStatic="true" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.PrettyPrinter$" start="42" end="42" startBytecode="0" endBytecode="63" sourcefile="PrettyPrinter.scala" sourcepath="au/com/dius/pact/consumer/specs2/PrettyPrinter.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.PrettyPrinter$.stringify$2(String)</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.PrettyPrinter$" primary="true" start="42" end="42" startBytecode="4" endBytecode="4" sourcefile="PrettyPrinter.scala" sourcepath="au/com/dius/pact/consumer/specs2/PrettyPrinter.scala">
+      <Message>At PrettyPrinter.scala:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="71f791dfd2fd4ae45cff2e2d6b1889f4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildRequest(String, String, String, Map, String, MatchingRules): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="14" end="69" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+        <Message>At UnitSpecsSupport.scala:[lines 14-69]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.UnitSpecsSupport</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" name="buildRequest" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lscala/collection/immutable/Map;Ljava/lang/String;Lau/com/dius/pact/core/model/matchingrules/MatchingRules;)Lau/com/dius/pact/core/model/Request;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="39" end="40" startBytecode="0" endBytecode="166" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildRequest(String, String, String, Map, String, MatchingRules)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" start="40" end="40" startBytecode="49" endBytecode="49" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+      <Message>At UnitSpecsSupport.scala:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e6c5746c8a98a289df5d16b4a994a83b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildResponse(int, Map, DslPart): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="14" end="69" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+        <Message>At UnitSpecsSupport.scala:[lines 14-69]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.UnitSpecsSupport</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" name="buildResponse" signature="(ILscala/collection/immutable/Map;Lau/com/dius/pact/consumer/dsl/DslPart;)Lau/com/dius/pact/core/model/Response;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="57" end="59" startBytecode="0" endBytecode="165" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildResponse(int, Map, DslPart)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" start="59" end="59" startBytecode="64" endBytecode="64" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+      <Message>At UnitSpecsSupport.scala:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="b53440f0819290ad4ea8a774e350c0c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildResponse(int, Map, Option, MatchingRules): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="14" end="69" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+        <Message>At UnitSpecsSupport.scala:[lines 14-69]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.UnitSpecsSupport</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" name="buildResponse" signature="(ILscala/collection/immutable/Map;Lscala/Option;Lau/com/dius/pact/core/model/matchingrules/MatchingRules;)Lau/com/dius/pact/core/model/Response;" isStatic="false" primary="true" classAnnotationNames="scala.reflect.ScalaSignature">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" start="46" end="51" startBytecode="0" endBytecode="292" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.UnitSpecsSupport.buildResponse(int, Map, Option, MatchingRules)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" primary="true" start="47" end="47" startBytecode="30" endBytecode="30" sourcefile="UnitSpecsSupport.scala" sourcepath="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala">
+      <Message>At UnitSpecsSupport.scala:[line 47]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="44597e5d75f317f16e2e084326ff8400" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in au.com.dius.pact.consumer.specs2.dispatch.HttpClient$.$anonfun$run$2(Response): String.getBytes()</LongMessage>
+    <Class classname="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" start="13" end="41" sourcefile="HttpClient.scala" sourcepath="au/com/dius/pact/consumer/specs2/dispatch/HttpClient.scala">
+        <Message>At HttpClient.scala:[lines 13-41]</Message>
+      </SourceLine>
+      <Message>In class au.com.dius.pact.consumer.specs2.dispatch.HttpClient$</Message>
+    </Class>
+    <Method classname="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" name="$anonfun$run$2" signature="(Lorg/asynchttpclient/Response;)Lau/com/dius/pact/core/model/Response;" isStatic="true" primary="true">
+      <SourceLine classname="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" start="26" end="38" startBytecode="0" endBytecode="280" sourcefile="HttpClient.scala" sourcepath="au/com/dius/pact/consumer/specs2/dispatch/HttpClient.scala"/>
+      <Message>In method au.com.dius.pact.consumer.specs2.dispatch.HttpClient$.$anonfun$run$2(Response)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1803" end="1803" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" primary="true" start="34" end="34" startBytecode="94" endBytecode="94" sourcefile="HttpClient.scala" sourcepath="au/com/dius/pact/consumer/specs2/dispatch/HttpClient.scala">
+      <Message>At HttpClient.scala:[line 34]</Message>
+    </SourceLine>
+    <Property name="FOUND_IN_SYNTHETIC_METHOD" value="true"/>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="NM_FIELD_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Non-final field names should start with a lower case letter, final fields should be uppercase with words separated by underscores</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+Names of fields that are not final should be in mixed case with a lowercase first letter and the first letters of subsequent words capitalized.
+Names of final fields should be all uppercase with words separated by underscores ('_').
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_ALWAYS_NULL" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> A null pointer is dereferenced here.&nbsp; This will lead to a
+<code>NullPointerException</code> when the code is executed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_STRING_TOSTRING" abbrev="Dm" category="PERFORMANCE">
+    <ShortDescription>Method invokes toString() method on a String</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Calling <code>String.toString()</code> is a redundant operation.
+  Just use the String.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_METHOD_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Method names should start with a lower case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="118">
+    <MissingClass>au.com.dius.pact.consumer.ConsumerPactRunnerKt</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.MockHttpServer</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.MockServer</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactTestExecutionContext</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactTestRun</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$Error</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$ExpectedButNotReceived</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$Mismatches</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$Ok</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$PartialMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.PactVerificationResult$UnexpectedRequest</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.dsl.DslPart</MissingClass>
+    <MissingClass>au.com.dius.pact.consumer.model.MockProviderConfig</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.BodyMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.CookieMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.HeaderMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.MethodMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.Mismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.matchers.PathMismatch</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.BasePact</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.Consumer</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.OptionalBody</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.PactReaderKt</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.PactSpecVersion</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.Provider</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.ProviderState</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.Request</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.RequestResponseInteraction</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.RequestResponsePact</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.Response</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.matchingrules.MatchingRuleCategory</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.matchingrules.MatchingRules</MissingClass>
+    <MissingClass>au.com.dius.pact.core.model.matchingrules.MatchingRulesImpl</MissingClass>
+    <MissingClass>au.com.dius.pact.core.support.Json</MissingClass>
+    <MissingClass>difflib.DiffUtils</MissingClass>
+    <MissingClass>difflib.Patch</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpHeaders</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.http.entity.ContentType</MissingClass>
+    <MissingClass>org.asynchttpclient.DefaultAsyncHttpClient</MissingClass>
+    <MissingClass>org.asynchttpclient.ListenableFuture</MissingClass>
+    <MissingClass>org.asynchttpclient.RequestBuilder</MissingClass>
+    <MissingClass>org.asynchttpclient.RequestBuilderBase</MissingClass>
+    <MissingClass>org.asynchttpclient.Response</MissingClass>
+    <MissingClass>org.specs2.execute.AsResult</MissingClass>
+    <MissingClass>org.specs2.execute.Details</MissingClass>
+    <MissingClass>org.specs2.execute.Failure</MissingClass>
+    <MissingClass>org.specs2.execute.Failure$</MissingClass>
+    <MissingClass>org.specs2.execute.Result</MissingClass>
+    <MissingClass>org.specs2.execute.Result$</MissingClass>
+    <MissingClass>org.specs2.execute.Success</MissingClass>
+    <MissingClass>org.specs2.execute.Success$</MissingClass>
+    <MissingClass>org.specs2.specification.core.Fragment</MissingClass>
+    <MissingClass>org.specs2.specification.core.Fragments</MissingClass>
+    <MissingClass>org.specs2.specification.create.FragmentFactory</MissingClass>
+    <MissingClass>org.specs2.specification.create.FragmentsFactory</MissingClass>
+    <MissingClass>org.specs2.specification.dsl.FragmentsDsl</MissingClass>
+    <MissingClass>org.specs2.specification.dsl.FragmentsDsl$appendToFragment</MissingClass>
+    <MissingClass>org.specs2.specification.dsl.FragmentsDsl$appendToFragments</MissingClass>
+    <MissingClass>org.specs2.specification.dsl.mutable.ActionDsl</MissingClass>
+    <MissingClass>scala.$less$colon$less</MissingClass>
+    <MissingClass>scala.$less$colon$less$</MissingClass>
+    <MissingClass>scala.Function0</MissingClass>
+    <MissingClass>scala.Function1</MissingClass>
+    <MissingClass>scala.Function2</MissingClass>
+    <MissingClass>scala.Function4</MissingClass>
+    <MissingClass>scala.MatchError</MissingClass>
+    <MissingClass>scala.None$</MissingClass>
+    <MissingClass>scala.Option</MissingClass>
+    <MissingClass>scala.Predef</MissingClass>
+    <MissingClass>scala.Predef$</MissingClass>
+    <MissingClass>scala.Predef$any2stringadd$</MissingClass>
+    <MissingClass>scala.Product</MissingClass>
+    <MissingClass>scala.Some</MissingClass>
+    <MissingClass>scala.Tuple2</MissingClass>
+    <MissingClass>scala.Tuple4</MissingClass>
+    <MissingClass>scala.Tuple5</MissingClass>
+    <MissingClass>scala.collection.IterableOnce</MissingClass>
+    <MissingClass>scala.collection.IterableOnceOps</MissingClass>
+    <MissingClass>scala.collection.JavaConverters</MissingClass>
+    <MissingClass>scala.collection.JavaConverters$</MissingClass>
+    <MissingClass>scala.collection.JavaConverters$AsJava</MissingClass>
+    <MissingClass>scala.collection.JavaConverters$AsScala</MissingClass>
+    <MissingClass>scala.collection.Map</MissingClass>
+    <MissingClass>scala.collection.MapView</MissingClass>
+    <MissingClass>scala.collection.Seq</MissingClass>
+    <MissingClass>scala.collection.convert.AsJavaExtensions</MissingClass>
+    <MissingClass>scala.collection.convert.AsJavaExtensions$MapHasAsJava</MissingClass>
+    <MissingClass>scala.collection.convert.AsJavaExtensions$SeqHasAsJava</MissingClass>
+    <MissingClass>scala.collection.convert.AsScalaExtensions</MissingClass>
+    <MissingClass>scala.collection.convert.AsScalaExtensions$ListHasAsScala</MissingClass>
+    <MissingClass>scala.collection.immutable.$colon$colon</MissingClass>
+    <MissingClass>scala.collection.immutable.AbstractSeq</MissingClass>
+    <MissingClass>scala.collection.immutable.List</MissingClass>
+    <MissingClass>scala.collection.immutable.Map</MissingClass>
+    <MissingClass>scala.collection.immutable.Map$</MissingClass>
+    <MissingClass>scala.collection.immutable.Nil$</MissingClass>
+    <MissingClass>scala.collection.immutable.Seq</MissingClass>
+    <MissingClass>scala.collection.immutable.Seq$</MissingClass>
+    <MissingClass>scala.collection.immutable.WrappedString</MissingClass>
+    <MissingClass>scala.collection.mutable.ArraySeq</MissingClass>
+    <MissingClass>scala.collection.mutable.ArraySeq$ofRef</MissingClass>
+    <MissingClass>scala.collection.mutable.Buffer</MissingClass>
+    <MissingClass>scala.jdk.CollectionConverters$</MissingClass>
+    <MissingClass>scala.math.Ordering</MissingClass>
+    <MissingClass>scala.math.Ordering$String$</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction1</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction2</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction4</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction5</MissingClass>
+    <MissingClass>scala.runtime.BoxedUnit</MissingClass>
+    <MissingClass>scala.runtime.LambdaDeserialize</MissingClass>
+    <MissingClass>scala.runtime.ModuleSerializationProxy</MissingClass>
+    <MissingClass>scala.runtime.ScalaRunTime$</MissingClass>
+    <MissingClass>scala.runtime.Statics</MissingClass>
+    <MissingClass>scala.sys.SystemProperties</MissingClass>
+    <MissingClass>scala.sys.package$</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:05 +0900" total_classes="29" referenced_classes="81" total_bugs="57" total_size="627" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.78" clock_seconds="2.90" peak_mbytes="248.39" alloc_mbytes="3984.00" gc_seconds="0.04" priority_3="25" priority_2="26" priority_1="6">
+    <FileStats path="au/com/dius/pact/consumer/specs2/PactFragmentBuilder.scala" bugCount="45" size="335" bugHash="48ca48de6c4815cf63d51c67e0229c8a"/>
+    <FileStats path="au/com/dius/pact/consumer/specs2/PactSpec.scala" bugCount="7" size="79" bugHash="7e3a73af73db8448b6c902a828e4630d"/>
+    <FileStats path="au/com/dius/pact/consumer/specs2/PrettyPrinter.scala" bugCount="1" size="77" bugHash="f9dee24fe8f44604aebed4d066fd1d88"/>
+    <FileStats path="au/com/dius/pact/consumer/specs2/UnitSpecsSupport.scala" bugCount="3" size="89" bugHash="fb8345a437186d5b0561a27c2825d31d"/>
+    <FileStats path="au/com/dius/pact/consumer/specs2/VerificationResultAsResult.scala" bugCount="0" size="17"/>
+    <FileStats path="au/com/dius/pact/consumer/specs2/dispatch/HttpClient.scala" bugCount="1" size="30" bugHash="d57b731433acfabb53a78c69cfe6a488"/>
+    <PackageStats package="au.com.dius.pact.consumer.specs2" total_bugs="56" total_types="27" total_size="597" priority_3="24" priority_2="26" priority_1="6">
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder" sourceFile="PactFragmentBuilder.scala" interface="false" size="2" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$" sourceFile="PactFragmentBuilder.scala" interface="false" size="8" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$CanBuildPactFragment$" sourceFile="PactFragmentBuilder.scala" interface="false" size="14" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest" sourceFile="PactFragmentBuilder.scala" interface="false" size="49" bugs="5" priority_3="3" priority_2="1" priority_1="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$" sourceFile="PactFragmentBuilder.scala" interface="false" size="13" bugs="1" priority_3="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse" sourceFile="PactFragmentBuilder.scala" interface="false" size="56" bugs="5" priority_3="1" priority_2="2" priority_1="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$DescribingRequest$DescribingResponse$" sourceFile="PactFragmentBuilder.scala" interface="false" size="8" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest" sourceFile="PactFragmentBuilder.scala" interface="false" size="42" bugs="4" priority_3="3" priority_2="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$" sourceFile="PactFragmentBuilder.scala" interface="false" size="10" bugs="1" priority_3="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState" sourceFile="PactFragmentBuilder.scala" interface="false" size="24" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$PactWithAtLeastOneRequest$InState$" sourceFile="PactFragmentBuilder.scala" interface="false" size="8" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer" sourceFile="PactFragmentBuilder.scala" interface="false" size="23" bugs="4" priority_3="3" priority_2="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$" sourceFile="PactFragmentBuilder.scala" interface="false" size="10" bugs="1" priority_3="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider" sourceFile="PactFragmentBuilder.scala" interface="false" size="29" bugs="6" priority_3="3" priority_2="3"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$" sourceFile="PactFragmentBuilder.scala" interface="false" size="8" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState" sourceFile="PactFragmentBuilder.scala" interface="false" size="23" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactFragmentBuilder$WithConsumer$WithProvider$InState$" sourceFile="PactFragmentBuilder.scala" interface="false" size="8" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactSpec" sourceFile="PactSpec.scala" interface="true" size="23" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactSpec$$anon$1" sourceFile="PactSpec.scala" interface="false" size="12" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed" sourceFile="PactSpec.scala" interface="false" size="18" bugs="2" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactSpec$ConsumerTestFailed$" sourceFile="PactSpec.scala" interface="false" size="8" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PactSpec$ReadyForTest" sourceFile="PactSpec.scala" interface="false" size="18" bugs="2" priority_2="2"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PrettyPrinter" sourceFile="PrettyPrinter.scala" interface="false" size="17" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.PrettyPrinter$" sourceFile="PrettyPrinter.scala" interface="false" size="60" bugs="1" priority_3="1"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.UnitSpecsSupport" sourceFile="UnitSpecsSupport.scala" interface="true" size="89" bugs="3" priority_1="3"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.VerificationResultAsResult" sourceFile="VerificationResultAsResult.scala" interface="false" size="2" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.VerificationResultAsResult$" sourceFile="VerificationResultAsResult.scala" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="au.com.dius.pact.consumer.specs2.dispatch" total_bugs="1" total_types="2" total_size="30" priority_3="1">
+      <ClassStats class="au.com.dius.pact.consumer.specs2.dispatch.HttpClient" sourceFile="HttpClient.scala" interface="false" size="2" bugs="0"/>
+      <ClassStats class="au.com.dius.pact.consumer.specs2.dispatch.HttpClient$" sourceFile="HttpClient.scala" interface="false" size="28" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="276" invocations="838" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="47877" standardDeviationMicrosecondsPerInvocation="1759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="115" invocations="200" avgMicrosecondsPerInvocation="578" maxMicrosecondsPerInvocation="63375" standardDeviationMicrosecondsPerInvocation="4714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="81" avgMicrosecondsPerInvocation="1160" maxMicrosecondsPerInvocation="18806" standardDeviationMicrosecondsPerInvocation="2444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="80" invocations="321" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="32388" standardDeviationMicrosecondsPerInvocation="1845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="71" invocations="329" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="31968" standardDeviationMicrosecondsPerInvocation="1761"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="70" invocations="329" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="10491" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="67" invocations="339" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="44119" standardDeviationMicrosecondsPerInvocation="2399"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="67" invocations="845" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="10202" standardDeviationMicrosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="67" invocations="329" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="21376" standardDeviationMicrosecondsPerInvocation="1220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="62" invocations="81" avgMicrosecondsPerInvocation="765" maxMicrosecondsPerInvocation="53546" standardDeviationMicrosecondsPerInvocation="5903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="57" invocations="81" avgMicrosecondsPerInvocation="707" maxMicrosecondsPerInvocation="4979" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="57" invocations="537" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="3156" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="56" invocations="329" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="25120" standardDeviationMicrosecondsPerInvocation="1387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="44" invocations="329" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="7887" standardDeviationMicrosecondsPerInvocation="489"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="81" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="22633" standardDeviationMicrosecondsPerInvocation="2509"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="34" invocations="29" avgMicrosecondsPerInvocation="1175" maxMicrosecondsPerInvocation="19560" standardDeviationMicrosecondsPerInvocation="4323"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="33" invocations="29" avgMicrosecondsPerInvocation="1165" maxMicrosecondsPerInvocation="23214" standardDeviationMicrosecondsPerInvocation="4272"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="81" avgMicrosecondsPerInvocation="403" maxMicrosecondsPerInvocation="9724" standardDeviationMicrosecondsPerInvocation="1158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="31" invocations="256" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="2018" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="3252" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="3012" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="27" invocations="29" avgMicrosecondsPerInvocation="961" maxMicrosecondsPerInvocation="7028" standardDeviationMicrosecondsPerInvocation="1472"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="27" invocations="81" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="7374" standardDeviationMicrosecondsPerInvocation="917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="25" invocations="666" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1746" standardDeviationMicrosecondsPerInvocation="102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="81" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="1907" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="20" invocations="29" avgMicrosecondsPerInvocation="694" maxMicrosecondsPerInvocation="11015" standardDeviationMicrosecondsPerInvocation="2059"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="29" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="7015" standardDeviationMicrosecondsPerInvocation="1664"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="17" invocations="29" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="9487" standardDeviationMicrosecondsPerInvocation="2014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="17" invocations="329" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="6954" standardDeviationMicrosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="29" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="4981" standardDeviationMicrosecondsPerInvocation="905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="17" invocations="339" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="9169" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="16" invocations="29" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="3266" standardDeviationMicrosecondsPerInvocation="773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="81" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="1483" standardDeviationMicrosecondsPerInvocation="262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="15" invocations="29" avgMicrosecondsPerInvocation="537" maxMicrosecondsPerInvocation="5361" standardDeviationMicrosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="15" invocations="29" avgMicrosecondsPerInvocation="519" maxMicrosecondsPerInvocation="6674" standardDeviationMicrosecondsPerInvocation="1201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="14" invocations="29" avgMicrosecondsPerInvocation="511" maxMicrosecondsPerInvocation="5741" standardDeviationMicrosecondsPerInvocation="1075"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

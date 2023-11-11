@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685234491" analysisTimestamp="1699688905655" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\spals-appbuilder-filestore-s3-0.6.3.jar</Jar>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="5ab60631de14d1a94d2939e50d1d8c34" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field net.spals.appbuilder.filestore.s3.S3EncryptionHolder$.MODULE$ from instance method new net.spals.appbuilder.filestore.s3.S3EncryptionHolder$()</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" start="32" end="32" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>At S3EncryptionProviders.scala:[line 32]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3EncryptionHolder$</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" start="32" end="32" startBytecode="0" endBytecode="50" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3EncryptionHolder$()</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" name="MODULE$" signature="Lnet/spals/appbuilder/filestore/s3/S3EncryptionHolder$;" isStatic="true" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>In S3EncryptionProviders.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3EncryptionHolder$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" primary="true" start="32" end="32" startBytecode="5" endBytecode="5" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+      <Message>At S3EncryptionProviders.scala:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="d4f2fc7d63957bd850f64fd2a9e227a0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1(S3EncryptionHolderProvider)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" start="54" end="70" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>At S3EncryptionProviders.scala:[lines 54-70]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3EncryptionHolderProvider;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1(S3EncryptionHolderProvider)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" primary="true" start="54" end="54" startBytecode="5" endBytecode="5" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3EncryptionProviders.scala:[line 54]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="b835365b1036230d0f5f13a5218d5aa1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin(String, AmazonS3, S3EncryptionHolder, TransferManager, S3TransferEncryptionHolder)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" primary="true" classAnnotationNames="net.spals.appbuilder.annotations.service.AutoBindInMap,scala.reflect.ScalaSignature">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" start="32" end="174" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[lines 32-174]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" name="&lt;init&gt;" signature="(Ljava/lang/String;Lcom/amazonaws/services/s3/AmazonS3;Lnet/spals/appbuilder/filestore/s3/S3EncryptionHolder;Lcom/amazonaws/services/s3/transfer/TransferManager;Lnet/spals/appbuilder/filestore/s3/S3TransferEncryptionHolder;)V" isStatic="false" primary="true" classAnnotationNames="net.spals.appbuilder.annotations.service.AutoBindInMap,scala.reflect.ScalaSignature">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" start="32" end="44" startBytecode="0" endBytecode="203" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin(String, AmazonS3, S3EncryptionHolder, TransferManager, S3TransferEncryptionHolder)</Message>
+    </Method>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" primary="true" start="44" end="44" startBytecode="74" endBytecode="74" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7c9c38519ae008f019ddc26ec2182ae7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3(S3FileStorePlugin, GetObjectMetadataRequest) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$3.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" start="86" end="86" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 86]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" start="86" end="86" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3(S3FileStorePlugin, GetObjectMetadataRequest)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" primary="true" start="86" end="86" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="caec4215169f4a1c70a980d3157f280f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3(S3FileStorePlugin, GetObjectMetadataRequest)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" start="86" end="86" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 86]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/GetObjectMetadataRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" start="86" end="86" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3(S3FileStorePlugin, GetObjectMetadataRequest)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" primary="true" start="86" end="86" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 86]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d04eb5b970832bd1eb9735dc44f19fdc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9(S3FileStorePlugin) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$9.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" start="162" end="162" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 162]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" start="162" end="162" startBytecode="0" endBytecode="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9(S3FileStorePlugin)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" primary="true" start="162" end="162" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 162]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="fbf72d80727d0e8acc0b797f4121a018" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9(S3FileStorePlugin)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" start="162" end="162" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 162]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" start="162" end="162" startBytecode="0" endBytecode="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9(S3FileStorePlugin)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" primary="true" start="162" end="162" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 162]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ccfecb52d315bc1a9c07068768db0615" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1(S3FileStorePlugin, DeleteObjectRequest) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$deleteFile$1.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" start="58" end="58" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 58]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/DeleteObjectRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" start="58" end="58" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1(S3FileStorePlugin, DeleteObjectRequest)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" primary="true" start="58" end="58" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="1e77028fdd0dd8c2d7e42fa2fd718273" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1(S3FileStorePlugin, DeleteObjectRequest)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" start="58" end="58" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 58]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/DeleteObjectRequest;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" start="58" end="58" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1(S3FileStorePlugin, DeleteObjectRequest)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" primary="true" start="58" end="58" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 58]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="532ae51c635fdc0146352b59e7a5e237" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1(S3FileStorePlugin, FileStoreKey) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$getFileContent$1.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" start="63" end="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[lines 63-76]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lnet/spals/appbuilder/filestore/core/model/FileStoreKey;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" start="63" end="63" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1(S3FileStorePlugin, FileStoreKey)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" primary="true" start="63" end="63" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="c13b74a5a86bfc21eaefef3443b7bc1d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1(S3FileStorePlugin, FileStoreKey)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" start="63" end="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[lines 63-76]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lnet/spals/appbuilder/filestore/core/model/FileStoreKey;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" start="63" end="63" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1(S3FileStorePlugin, FileStoreKey)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" primary="true" start="63" end="63" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 63]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="29313fff6ee1feb9ebe6d58cf140eb26" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1(S3FileStorePlugin, S3ObjectId) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$getFileMetadata$1.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" start="87" end="95" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[lines 87-95]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/S3ObjectId;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" start="87" end="87" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1(S3FileStorePlugin, S3ObjectId)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" primary="true" start="87" end="87" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="61220a241c31bca7d4dab0917474e6ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1(S3FileStorePlugin, S3ObjectId)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" start="87" end="95" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[lines 87-95]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;Lcom/amazonaws/services/s3/model/S3ObjectId;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" start="87" end="87" startBytecode="0" endBytecode="91" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1(S3FileStorePlugin, S3ObjectId)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" primary="true" start="87" end="87" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 87]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d507e7adec2af3d0dbdca8cc63eab785" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1(S3FileStorePlugin) may expose internal representation by storing an externally mutable object into S3FileStorePlugin$$anonfun$s3Region$1.$outer</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" start="46" end="46" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 46]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" start="46" end="46" startBytecode="0" endBytecode="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1(S3FileStorePlugin)</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" name="$outer" signature="Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>In S3FileStorePlugin.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1.$outer</Message>
+    </Field>
+    <LocalVariable name="$outer" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named $outer</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" primary="true" start="46" end="46" startBytecode="8" endBytecode="8" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+      <Message>At S3FileStorePlugin.scala:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="20b103ad566272ff825e29ceb12d03d4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1(S3FileStorePlugin)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" start="46" end="46" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala">
+        <Message>At S3FileStorePlugin.scala:[line 46]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3FileStorePlugin;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" start="46" end="46" startBytecode="0" endBytecode="76" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1(S3FileStorePlugin)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" primary="true" start="46" end="46" startBytecode="5" endBytecode="5" sourcefile="S3FileStorePlugin.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3FileStorePlugin.scala:[line 46]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="6b32ec2e47bea9e78e9311efb61cae66" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$.MODULE$ from instance method new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$()</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" start="87" end="87" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>At S3EncryptionProviders.scala:[line 87]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" start="87" end="87" startBytecode="0" endBytecode="50" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$()</Message>
+    </Method>
+    <Field classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" name="MODULE$" signature="Lnet/spals/appbuilder/filestore/s3/S3TransferEncryptionHolder$;" isStatic="true" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>In S3EncryptionProviders.scala</Message>
+      </SourceLine>
+      <Message>Field net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$.MODULE$</Message>
+    </Field>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" primary="true" start="87" end="87" startBytecode="5" endBytecode="5" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+      <Message>At S3EncryptionProviders.scala:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="c5f79ad19ca954ad5050f5f959d268bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2(S3TransferEncryptionHolderProvider)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" start="105" end="113" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>At S3EncryptionProviders.scala:[lines 105-113]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3TransferEncryptionHolderProvider;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" start="105" end="105" startBytecode="0" endBytecode="76" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2(S3TransferEncryptionHolderProvider)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" primary="true" start="105" end="105" startBytecode="5" endBytecode="5" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3EncryptionProviders.scala:[line 105]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="1d0fc308f2ce8c7753cfa0b036d1d315" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1(S3TransferEncryptionHolderProvider$$anonfun$2)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" start="108" end="110" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala">
+        <Message>At S3EncryptionProviders.scala:[lines 108-110]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3TransferEncryptionHolderProvider$$anonfun$2;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" start="108" end="108" startBytecode="0" endBytecode="76" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1(S3TransferEncryptionHolderProvider$$anonfun$2)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" primary="true" start="108" end="108" startBytecode="5" endBytecode="5" sourcefile="S3EncryptionProviders.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3EncryptionProviders.scala:[line 108]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_ALWAYS_NULL" priority="2" rank="7" abbrev="NP" category="CORRECTNESS" instanceHash="b0e56161b80751057e64534e67746d12" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Null pointer dereference</ShortMessage>
+    <LongMessage>Null pointer dereference of ? in new net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1(S3TransferManagerProvider)</LongMessage>
+    <Class classname="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" start="31" end="33" sourcefile="S3TransferManagerProvider.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3TransferManagerProvider.scala">
+        <Message>At S3TransferManagerProvider.scala:[lines 31-33]</Message>
+      </SourceLine>
+      <Message>In class net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1</Message>
+    </Class>
+    <Method classname="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" name="&lt;init&gt;" signature="(Lnet/spals/appbuilder/filestore/s3/S3TransferManagerProvider;)V" isStatic="false" primary="true">
+      <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" start="31" end="31" startBytecode="0" endBytecode="76" sourcefile="S3TransferManagerProvider.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3TransferManagerProvider.scala"/>
+      <Message>In method new net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1(S3TransferManagerProvider)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="-1" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" primary="true" start="31" end="31" startBytecode="5" endBytecode="5" sourcefile="S3TransferManagerProvider.scala" sourcepath="net/spals/appbuilder/filestore/s3/S3TransferManagerProvider.scala" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at S3TransferManagerProvider.scala:[line 31]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_ALWAYS_NULL" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> A null pointer is dereferenced here.&nbsp; This will lead to a
+<code>NullPointerException</code> when the code is executed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="77">
+    <MissingClass>com.amazonaws.DefaultRequest</MissingClass>
+    <MissingClass>com.amazonaws.Request</MissingClass>
+    <MissingClass>com.amazonaws.auth.AWSCredentialsProvider</MissingClass>
+    <MissingClass>com.amazonaws.client.builder.AwsClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.client.builder.AwsClientBuilder$EndpointConfiguration</MissingClass>
+    <MissingClass>com.amazonaws.client.builder.ExecutorFactory</MissingClass>
+    <MissingClass>com.amazonaws.handlers.RequestHandler2</MissingClass>
+    <MissingClass>com.amazonaws.internal.IdentityEndpointBuilder</MissingClass>
+    <MissingClass>com.amazonaws.internal.ServiceEndpointBuilder</MissingClass>
+    <MissingClass>com.amazonaws.regions.Region</MissingClass>
+    <MissingClass>com.amazonaws.regions.Regions</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3ClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3Encryption</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.AmazonS3EncryptionClientBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.internal.S3RequestEndpointResolver</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.internal.ServiceUtils</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.AmazonS3Exception</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.Bucket</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.CannedAccessControlList</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.DeleteObjectRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.EncryptionMaterialsProvider</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.GetObjectMetadataRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.GetObjectRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.KMSEncryptionMaterialsProvider</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.ObjectMetadata</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.PutObjectRequest</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.Region</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.S3Object</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.S3ObjectId</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.model.S3ObjectInputStream</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.transfer.TransferManager</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.transfer.TransferManagerBuilder</MissingClass>
+    <MissingClass>com.amazonaws.services.s3.transfer.Upload</MissingClass>
+    <MissingClass>com.google.inject.Provider</MissingClass>
+    <MissingClass>com.typesafe.config.ConfigException</MissingClass>
+    <MissingClass>com.typesafe.config.ConfigException$BadValue</MissingClass>
+    <MissingClass>io.opentracing.Tracer</MissingClass>
+    <MissingClass>io.opentracing.contrib.aws.TracingRequestHandler</MissingClass>
+    <MissingClass>net.spals.appbuilder.executor.core.ExecutorServiceFactory</MissingClass>
+    <MissingClass>net.spals.appbuilder.executor.core.ExecutorServiceFactory$Key</MissingClass>
+    <MissingClass>net.spals.appbuilder.executor.core.ExecutorServiceFactory$Key$Builder</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.FileStorePlugin</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.FileMetadata</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.FileMetadata$Builder</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.FileSecurityLevel</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.FileStoreKey</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.FileStoreLocation</MissingClass>
+    <MissingClass>net.spals.appbuilder.filestore.core.model.PutFileRequest</MissingClass>
+    <MissingClass>scala.Function0</MissingClass>
+    <MissingClass>scala.Function1</MissingClass>
+    <MissingClass>scala.MatchError</MissingClass>
+    <MissingClass>scala.None$</MissingClass>
+    <MissingClass>scala.Option</MissingClass>
+    <MissingClass>scala.Option$</MissingClass>
+    <MissingClass>scala.Predef$</MissingClass>
+    <MissingClass>scala.Product</MissingClass>
+    <MissingClass>scala.Product$class</MissingClass>
+    <MissingClass>scala.Serializable</MissingClass>
+    <MissingClass>scala.Some</MissingClass>
+    <MissingClass>scala.StringContext</MissingClass>
+    <MissingClass>scala.collection.Seq</MissingClass>
+    <MissingClass>scala.compat.java8.OptionConverters</MissingClass>
+    <MissingClass>scala.compat.java8.OptionConverters$</MissingClass>
+    <MissingClass>scala.compat.java8.OptionConverters$RichOptionForJava8$</MissingClass>
+    <MissingClass>scala.compat.java8.OptionConverters$RichOptionalGeneric$</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction0</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction0$mcV$sp</MissingClass>
+    <MissingClass>scala.runtime.AbstractFunction1</MissingClass>
+    <MissingClass>scala.runtime.BoxedUnit</MissingClass>
+    <MissingClass>scala.runtime.BoxesRunTime</MissingClass>
+    <MissingClass>scala.runtime.Nothing$</MissingClass>
+    <MissingClass>scala.runtime.ScalaRunTime$</MissingClass>
+    <MissingClass>scala.util.Failure</MissingClass>
+    <MissingClass>scala.util.Success</MissingClass>
+    <MissingClass>scala.util.Try</MissingClass>
+    <MissingClass>scala.util.Try$</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:14 +0900" total_classes="30" referenced_classes="52" total_bugs="19" total_size="398" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.86" clock_seconds="2.31" peak_mbytes="231.76" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="3" priority_2="16">
+    <FileStats path="net/spals/appbuilder/filestore/s3/S3ClientProvider.scala" bugCount="0" size="34"/>
+    <FileStats path="net/spals/appbuilder/filestore/s3/S3EncryptionProviders.scala" bugCount="5" size="137" bugHash="3a9bccdec8765ed3659a18c28467fe46"/>
+    <FileStats path="net/spals/appbuilder/filestore/s3/S3FileStorePlugin.scala" bugCount="13" size="202" bugHash="6afbb0498e72bbb4c81e3a2efc089c35"/>
+    <FileStats path="net/spals/appbuilder/filestore/s3/S3TransferManagerProvider.scala" bugCount="1" size="25" bugHash="f6f704aec0dc65d2c49ee96d96610bc9"/>
+    <PackageStats package="net.spals.appbuilder.filestore.s3" total_bugs="19" total_types="30" total_size="398" priority_3="3" priority_2="16">
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3ClientProvider" sourceFile="S3ClientProvider.scala" interface="false" size="27" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3ClientProvider$$anonfun$get$1" sourceFile="S3ClientProvider.scala" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3EncryptionHolder" sourceFile="S3EncryptionProviders.scala" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3EncryptionHolder$" sourceFile="S3EncryptionProviders.scala" interface="false" size="10" bugs="1" priority_3="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider" sourceFile="S3EncryptionProviders.scala" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1" sourceFile="S3EncryptionProviders.scala" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3EncryptionHolderProvider$$anonfun$1$$anonfun$apply$1" sourceFile="S3EncryptionProviders.scala" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin" sourceFile="S3FileStorePlugin.scala" interface="false" size="79" bugs="1" priority_3="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$3" sourceFile="S3FileStorePlugin.scala" interface="false" size="8" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$6" sourceFile="S3FileStorePlugin.scala" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$7" sourceFile="S3FileStorePlugin.scala" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$8" sourceFile="S3FileStorePlugin.scala" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$9" sourceFile="S3FileStorePlugin.scala" interface="false" size="7" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$deleteFile$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="9" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="17" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1$$anonfun$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileContent$1$$anonfun$2" sourceFile="S3FileStorePlugin.scala" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="15" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1$$anonfun$4" sourceFile="S3FileStorePlugin.scala" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$getFileMetadata$1$$anonfun$5" sourceFile="S3FileStorePlugin.scala" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$putFile$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$putFile$2" sourceFile="S3FileStorePlugin.scala" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3FileStorePlugin$$anonfun$s3Region$1" sourceFile="S3FileStorePlugin.scala" interface="false" size="7" bugs="2" priority_2="2"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder" sourceFile="S3EncryptionProviders.scala" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolder$" sourceFile="S3EncryptionProviders.scala" interface="false" size="10" bugs="1" priority_3="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider" sourceFile="S3EncryptionProviders.scala" interface="false" size="16" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2" sourceFile="S3EncryptionProviders.scala" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferEncryptionHolderProvider$$anonfun$2$$anon$1" sourceFile="S3EncryptionProviders.scala" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider" sourceFile="S3TransferManagerProvider.scala" interface="false" size="19" bugs="0"/>
+      <ClassStats class="net.spals.appbuilder.filestore.s3.S3TransferManagerProvider$$anon$1" sourceFile="S3TransferManagerProvider.scala" interface="false" size="6" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="239" invocations="539" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="44396" standardDeviationMicrosecondsPerInvocation="2147"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="71" invocations="149" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="49558" standardDeviationMicrosecondsPerInvocation="4044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="68" invocations="149" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="31806" standardDeviationMicrosecondsPerInvocation="2614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="66" invocations="149" avgMicrosecondsPerInvocation="445" maxMicrosecondsPerInvocation="39795" standardDeviationMicrosecondsPerInvocation="3241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="59" invocations="149" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="21009" standardDeviationMicrosecondsPerInvocation="1747"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="52" avgMicrosecondsPerInvocation="1069" maxMicrosecondsPerInvocation="17205" standardDeviationMicrosecondsPerInvocation="2748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="51" invocations="30" avgMicrosecondsPerInvocation="1713" maxMicrosecondsPerInvocation="33893" standardDeviationMicrosecondsPerInvocation="6097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="128" avgMicrosecondsPerInvocation="370" maxMicrosecondsPerInvocation="30489" standardDeviationMicrosecondsPerInvocation="2706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="149" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="20913" standardDeviationMicrosecondsPerInvocation="1707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="41" invocations="241" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="10193" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="546" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="2485" standardDeviationMicrosecondsPerInvocation="201"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="36" invocations="124" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="3315" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="32" invocations="134" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="5741" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="31" invocations="52" avgMicrosecondsPerInvocation="613" maxMicrosecondsPerInvocation="9224" standardDeviationMicrosecondsPerInvocation="1366"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="31" invocations="52" avgMicrosecondsPerInvocation="601" maxMicrosecondsPerInvocation="24692" standardDeviationMicrosecondsPerInvocation="3381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="27" invocations="30" avgMicrosecondsPerInvocation="928" maxMicrosecondsPerInvocation="27520" standardDeviationMicrosecondsPerInvocation="4938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="26" invocations="30" avgMicrosecondsPerInvocation="874" maxMicrosecondsPerInvocation="22131" standardDeviationMicrosecondsPerInvocation="3963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="22" invocations="116" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="6630" standardDeviationMicrosecondsPerInvocation="626"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="52" avgMicrosecondsPerInvocation="416" maxMicrosecondsPerInvocation="11707" standardDeviationMicrosecondsPerInvocation="1631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="20" invocations="1" avgMicrosecondsPerInvocation="20292" maxMicrosecondsPerInvocation="20292" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="30" avgMicrosecondsPerInvocation="658" maxMicrosecondsPerInvocation="8450" standardDeviationMicrosecondsPerInvocation="1586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="1528" avgMicrosecondsPerInvocation="12" maxMicrosecondsPerInvocation="6506" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="415" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1136" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="18" invocations="30" avgMicrosecondsPerInvocation="620" maxMicrosecondsPerInvocation="5416" standardDeviationMicrosecondsPerInvocation="1462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="18" invocations="52" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="6950" standardDeviationMicrosecondsPerInvocation="1043"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="16" invocations="30" avgMicrosecondsPerInvocation="544" maxMicrosecondsPerInvocation="5358" standardDeviationMicrosecondsPerInvocation="1054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="15" invocations="30" avgMicrosecondsPerInvocation="504" maxMicrosecondsPerInvocation="8425" standardDeviationMicrosecondsPerInvocation="1719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="15" invocations="149" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="6663" standardDeviationMicrosecondsPerInvocation="674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="14" invocations="17" avgMicrosecondsPerInvocation="861" maxMicrosecondsPerInvocation="13813" standardDeviationMicrosecondsPerInvocation="3238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="13" invocations="30" avgMicrosecondsPerInvocation="465" maxMicrosecondsPerInvocation="6708" standardDeviationMicrosecondsPerInvocation="1295"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="149" avgMicrosecondsPerInvocation="85" maxMicrosecondsPerInvocation="5427" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="12" invocations="52" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="2035" standardDeviationMicrosecondsPerInvocation="382"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="52" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="5907" standardDeviationMicrosecondsPerInvocation="840"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

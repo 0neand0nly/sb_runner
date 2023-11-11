@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685209915" analysisTimestamp="1699688736276" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\org.eclipse.scada.ca.console-0.3.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="535647e82e2282f3b939a8ac8b2d3000" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.scada.ca.console.Console.diffFile(File): new java.io.FileReader(File)</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.Console" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="44" end="392" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+        <Message>At Console.java:[lines 44-392]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.Console</Message>
+    </Class>
+    <Method classname="org.eclipse.scada.ca.console.Console" name="diffFile" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="318" end="362" startBytecode="0" endBytecode="766" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java"/>
+      <Message>In method org.eclipse.scada.ca.console.Console.diffFile(File)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" primary="true" start="319" end="319" startBytecode="26" endBytecode="26" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+      <Message>At Console.java:[line 319]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="3404678ab134517118dcbc90f997f029" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.scada.ca.console.Console.mergeFile(String): new java.io.FileReader(String)</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.Console" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="44" end="392" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+        <Message>At Console.java:[lines 44-392]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.Console</Message>
+    </Class>
+    <Method classname="org.eclipse.scada.ca.console.Console" name="mergeFile" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="277" end="312" startBytecode="0" endBytecode="433" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java"/>
+      <Message>In method org.eclipse.scada.ca.console.Console.mergeFile(String)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="60" end="61" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" primary="true" start="278" end="278" startBytecode="26" endBytecode="26" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+      <Message>At Console.java:[line 278]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="ce0ff1b5d0c6952c9bcaca3876426d9a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference</ShortMessage>
+    <LongMessage>Possible null pointer dereference of changes in org.eclipse.scada.ca.console.Console.diffFile(File)</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.Console" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="44" end="392" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+        <Message>At Console.java:[lines 44-392]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.Console</Message>
+    </Class>
+    <Method classname="org.eclipse.scada.ca.console.Console" name="diffFile" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="318" end="362" startBytecode="0" endBytecode="766" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java"/>
+      <Message>In method org.eclipse.scada.ca.console.Console.diffFile(File)</Message>
+    </Method>
+    <LocalVariable name="changes" register="3" pc="114" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from changes</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" primary="true" start="330" end="330" startBytecode="115" endBytecode="115" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at Console.java:[line 330]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" start="325" end="325" startBytecode="98" endBytecode="98" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java" role="SOURCE_LINE_NULL_VALUE">
+      <Message>Null value at Console.java:[line 325]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" start="327" end="327" startBytecode="101" endBytecode="101" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Console.java:[line 327]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="57a301f8c65ccaa7429217c466e5c199" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.eclipse.scada.ca.console.Console$3 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.Console$3" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console$3" start="1" end="144" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+        <Message>At Console.java:[lines 1-144]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.eclipse.scada.ca.console.Console$3</Message>
+    </Class>
+    <Class classname="org.eclipse.scada.ca.console.Console" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="44" end="392" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+        <Message>At Console.java:[lines 44-392]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.Console</Message>
+    </Class>
+    <Method classname="org.eclipse.scada.ca.console.Console" name="purge" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.Console" start="128" end="146" startBytecode="0" endBytecode="114" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java"/>
+      <Message>In method org.eclipse.scada.ca.console.Console.purge(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.scada.ca.console.Console" primary="true" start="129" end="129" startBytecode="18" endBytecode="18" sourcefile="Console.java" sourcepath="org/eclipse/scada/ca/console/Console.java">
+      <Message>At Console.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="76a9d92a0477cf19435e659ffc23bb1a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>FreezableConsole.admin not initialized in constructor and dereferenced in org.eclipse.scada.ca.console.FreezableConsole.freeze()</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.FreezableConsole" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" start="15" end="42" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+        <Message>At FreezableConsole.java:[lines 15-42]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.FreezableConsole</Message>
+    </Class>
+    <Field classname="org.eclipse.scada.ca.console.FreezableConsole" name="admin" signature="Lorg/eclipse/scada/ca/FreezableConfigurationAdministrator;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+        <Message>In FreezableConsole.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.scada.ca.console.FreezableConsole.admin</Message>
+    </Field>
+    <Method classname="org.eclipse.scada.ca.console.FreezableConsole" name="freeze" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" start="26" end="32" startBytecode="0" endBytecode="89" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java"/>
+      <Message>In method org.eclipse.scada.ca.console.FreezableConsole.freeze()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" primary="true" start="29" end="29" startBytecode="18" endBytecode="18" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+      <Message>At FreezableConsole.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="62a58e80bd424e32e8ea3f3cabbfdbff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>FreezableConsole.admin not initialized in constructor and dereferenced in org.eclipse.scada.ca.console.FreezableConsole.thaw()</LongMessage>
+    <Class classname="org.eclipse.scada.ca.console.FreezableConsole" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" start="15" end="42" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+        <Message>At FreezableConsole.java:[lines 15-42]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.scada.ca.console.FreezableConsole</Message>
+    </Class>
+    <Field classname="org.eclipse.scada.ca.console.FreezableConsole" name="admin" signature="Lorg/eclipse/scada/ca/FreezableConfigurationAdministrator;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+        <Message>In FreezableConsole.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.scada.ca.console.FreezableConsole.admin</Message>
+    </Field>
+    <Method classname="org.eclipse.scada.ca.console.FreezableConsole" name="thaw" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" start="36" end="42" startBytecode="0" endBytecode="89" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java"/>
+      <Message>In method org.eclipse.scada.ca.console.FreezableConsole.thaw()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.scada.ca.console.FreezableConsole" primary="true" start="39" end="39" startBytecode="18" endBytecode="18" sourcefile="FreezableConsole.java" sourcepath="org/eclipse/scada/ca/console/FreezableConsole.java">
+      <Message>At FreezableConsole.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Possible null pointer dereference</ShortDescription>
+    <Details><![CDATA[
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception cannot ever be executed; deciding that is beyond the ability of SpotBugs.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="13">
+    <MissingClass>org.eclipse.scada.ca.Configuration</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.ConfigurationAdministrator</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.Factory</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.FreezableConfigurationAdministrator</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.data.DiffEntry</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.data.FactoryState</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.data.Operation</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.oscar.OscarWriter</MissingClass>
+    <MissingClass>org.eclipse.scada.ca.updater.Updater</MissingClass>
+    <MissingClass>org.eclipse.scada.sec.UserInformation</MissingClass>
+    <MissingClass>org.eclipse.scada.utils.concurrent.FutureListener</MissingClass>
+    <MissingClass>org.eclipse.scada.utils.concurrent.NotifyFuture</MissingClass>
+    <MissingClass>org.eclipse.scada.utils.str.Tables</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:49 +0900" total_classes="8" referenced_classes="58" total_bugs="6" total_size="219" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.02" clock_seconds="2.37" peak_mbytes="222.97" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="3" priority_1="3">
+    <FileStats path="org/eclipse/scada/ca/console/Console.java" bugCount="4" size="200" bugHash="48ce82972e6084722c491c3e53b7cd1d"/>
+    <FileStats path="org/eclipse/scada/ca/console/FreezableConsole.java" bugCount="2" size="19" bugHash="a3da5f901c632fc4a1d0f2241a7b7723"/>
+    <PackageStats package="org.eclipse.scada.ca.console" total_bugs="6" total_types="8" total_size="219" priority_3="3" priority_1="3">
+      <ClassStats class="org.eclipse.scada.ca.console.Console" sourceFile="Console.java" interface="false" size="132" bugs="4" priority_3="1" priority_1="3"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$1" sourceFile="Console.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$2" sourceFile="Console.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$3" sourceFile="Console.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$4" sourceFile="Console.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$CommonResultPrinter" sourceFile="Console.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.Console$ResultPrinter" sourceFile="Console.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.eclipse.scada.ca.console.FreezableConsole" sourceFile="FreezableConsole.java" interface="false" size="19" bugs="2" priority_3="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="297" invocations="641" avgMicrosecondsPerInvocation="464" maxMicrosecondsPerInvocation="43436" standardDeviationMicrosecondsPerInvocation="1927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="83" invocations="58" avgMicrosecondsPerInvocation="1448" maxMicrosecondsPerInvocation="15136" standardDeviationMicrosecondsPerInvocation="2722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="80" invocations="109" avgMicrosecondsPerInvocation="740" maxMicrosecondsPerInvocation="50095" standardDeviationMicrosecondsPerInvocation="4819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="75" invocations="37" avgMicrosecondsPerInvocation="2031" maxMicrosecondsPerInvocation="53898" standardDeviationMicrosecondsPerInvocation="8722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="65" invocations="280" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="9342" standardDeviationMicrosecondsPerInvocation="595"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="60" invocations="58" avgMicrosecondsPerInvocation="1048" maxMicrosecondsPerInvocation="9907" standardDeviationMicrosecondsPerInvocation="1792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="60" invocations="35" avgMicrosecondsPerInvocation="1721" maxMicrosecondsPerInvocation="30598" standardDeviationMicrosecondsPerInvocation="5188"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="35" avgMicrosecondsPerInvocation="1561" maxMicrosecondsPerInvocation="41886" standardDeviationMicrosecondsPerInvocation="6928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="48" invocations="35" avgMicrosecondsPerInvocation="1375" maxMicrosecondsPerInvocation="28742" standardDeviationMicrosecondsPerInvocation="4752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="44" invocations="646" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="2738" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="40" invocations="35" avgMicrosecondsPerInvocation="1158" maxMicrosecondsPerInvocation="14725" standardDeviationMicrosecondsPerInvocation="2586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="40" invocations="58" avgMicrosecondsPerInvocation="698" maxMicrosecondsPerInvocation="17987" standardDeviationMicrosecondsPerInvocation="2358"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="38" invocations="58" avgMicrosecondsPerInvocation="666" maxMicrosecondsPerInvocation="28594" standardDeviationMicrosecondsPerInvocation="3711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="34" invocations="8" avgMicrosecondsPerInvocation="4332" maxMicrosecondsPerInvocation="31350" standardDeviationMicrosecondsPerInvocation="10238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="30" invocations="33" avgMicrosecondsPerInvocation="929" maxMicrosecondsPerInvocation="10837" standardDeviationMicrosecondsPerInvocation="1888"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="26" invocations="35" avgMicrosecondsPerInvocation="743" maxMicrosecondsPerInvocation="7936" standardDeviationMicrosecondsPerInvocation="1372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="24" invocations="33" avgMicrosecondsPerInvocation="748" maxMicrosecondsPerInvocation="9931" standardDeviationMicrosecondsPerInvocation="1826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="58" avgMicrosecondsPerInvocation="418" maxMicrosecondsPerInvocation="7393" standardDeviationMicrosecondsPerInvocation="1072"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="23" invocations="2" avgMicrosecondsPerInvocation="11694" maxMicrosecondsPerInvocation="23225" standardDeviationMicrosecondsPerInvocation="11531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="22" invocations="8" avgMicrosecondsPerInvocation="2844" maxMicrosecondsPerInvocation="16215" standardDeviationMicrosecondsPerInvocation="5245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="587" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1215" standardDeviationMicrosecondsPerInvocation="78"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="21" invocations="8" avgMicrosecondsPerInvocation="2721" maxMicrosecondsPerInvocation="11273" standardDeviationMicrosecondsPerInvocation="4397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="58" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="2833" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="17" invocations="37" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="6445" standardDeviationMicrosecondsPerInvocation="1318"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685204116" analysisTimestamp="1699689036089" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\wildfly-bootable-jar-maven-plugin-1.0.0.Alpha2.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="64c3e13381cd4b597ded9d71ca84e6e5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo.userScripts(List): new java.io.FileReader(File)</LongMessage>
+    <Class classname="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" primary="true" classAnnotationNames="org.apache.maven.plugins.annotations.Mojo">
+      <SourceLine classname="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" start="87" end="565" sourcefile="BuildBootableJarMojo.java" sourcepath="org/wildfly/plugins/bootablejar/maven/goals/BuildBootableJarMojo.java">
+        <Message>At BuildBootableJarMojo.java:[lines 87-565]</Message>
+      </SourceLine>
+      <Message>In class org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo</Message>
+    </Class>
+    <Method classname="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" name="userScripts" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="org.apache.maven.plugins.annotations.Mojo">
+      <SourceLine classname="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" start="289" end="307" startBytecode="0" endBytecode="596" sourcefile="BuildBootableJarMojo.java" sourcepath="org/wildfly/plugins/bootablejar/maven/goals/BuildBootableJarMojo.java"/>
+      <Message>In method org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo.userScripts(List)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" primary="true" start="299" end="299" startBytecode="139" endBytecode="139" sourcefile="BuildBootableJarMojo.java" sourcepath="org/wildfly/plugins/bootablejar/maven/goals/BuildBootableJarMojo.java">
+      <Message>At BuildBootableJarMojo.java:[line 299]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="49">
+    <MissingClass>org.apache.maven.artifact.Artifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.DefaultArtifact</MissingClass>
+    <MissingClass>org.apache.maven.artifact.handler.ArtifactHandler</MissingClass>
+    <MissingClass>org.apache.maven.artifact.handler.DefaultArtifactHandler</MissingClass>
+    <MissingClass>org.apache.maven.artifact.repository.ArtifactRepository</MissingClass>
+    <MissingClass>org.apache.maven.execution.MavenSession</MissingClass>
+    <MissingClass>org.apache.maven.model.Build</MissingClass>
+    <MissingClass>org.apache.maven.plugin.AbstractMojo</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoExecutionException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.MojoFailureException</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.PluginDescriptor</MissingClass>
+    <MissingClass>org.apache.maven.plugin.descriptor.PluginDescriptorBuilder</MissingClass>
+    <MissingClass>org.apache.maven.plugin.logging.Log</MissingClass>
+    <MissingClass>org.apache.maven.project.DefaultProjectBuildingRequest</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProjectHelper</MissingClass>
+    <MissingClass>org.apache.maven.project.ProjectBuildingRequest</MissingClass>
+    <MissingClass>org.apache.maven.shared.artifact.resolve.ArtifactResolver</MissingClass>
+    <MissingClass>org.apache.maven.shared.artifact.resolve.ArtifactResolverException</MissingClass>
+    <MissingClass>org.apache.maven.shared.artifact.resolve.ArtifactResult</MissingClass>
+    <MissingClass>org.codehaus.plexus.configuration.PlexusConfigurationException</MissingClass>
+    <MissingClass>org.eclipse.aether.RepositorySystem</MissingClass>
+    <MissingClass>org.eclipse.aether.RepositorySystemSession</MissingClass>
+    <MissingClass>org.jboss.as.cli.CommandContext</MissingClass>
+    <MissingClass>org.jboss.as.cli.CommandContextFactory</MissingClass>
+    <MissingClass>org.jboss.as.cli.impl.CommandContextConfiguration</MissingClass>
+    <MissingClass>org.jboss.as.cli.impl.CommandContextConfiguration$Builder</MissingClass>
+    <MissingClass>org.jboss.as.controller.client.ModelControllerClient</MissingClass>
+    <MissingClass>org.jboss.galleon.Constants</MissingClass>
+    <MissingClass>org.jboss.galleon.MessageWriter</MissingClass>
+    <MissingClass>org.jboss.galleon.ProvisioningException</MissingClass>
+    <MissingClass>org.jboss.galleon.ProvisioningManager</MissingClass>
+    <MissingClass>org.jboss.galleon.ProvisioningManager$Builder</MissingClass>
+    <MissingClass>org.jboss.galleon.config.ConfigModel</MissingClass>
+    <MissingClass>org.jboss.galleon.config.ConfigModel$Builder</MissingClass>
+    <MissingClass>org.jboss.galleon.config.FeaturePackConfig</MissingClass>
+    <MissingClass>org.jboss.galleon.config.FeaturePackConfig$Builder</MissingClass>
+    <MissingClass>org.jboss.galleon.config.ProvisioningConfig</MissingClass>
+    <MissingClass>org.jboss.galleon.config.ProvisioningConfig$Builder</MissingClass>
+    <MissingClass>org.jboss.galleon.maven.plugin.util.MavenArtifactRepositoryManager</MissingClass>
+    <MissingClass>org.jboss.galleon.maven.plugin.util.MvnMessageWriter</MissingClass>
+    <MissingClass>org.jboss.galleon.repo.RepositoryArtifactResolver</MissingClass>
+    <MissingClass>org.jboss.galleon.universe.FeaturePackLocation</MissingClass>
+    <MissingClass>org.jboss.galleon.util.IoUtils</MissingClass>
+    <MissingClass>org.jboss.galleon.util.ZipUtils</MissingClass>
+    <MissingClass>org.jboss.galleon.xml.ProvisioningXmlParser</MissingClass>
+    <MissingClass>org.wildfly.plugin.common.AbstractServerConnection</MissingClass>
+    <MissingClass>org.wildfly.plugin.core.ServerHelper</MissingClass>
+    <MissingClass>org.wildfly.security.manager.WildFlySecurityManager</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:44 +0900" total_classes="6" referenced_classes="55" total_bugs="1" total_size="394" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.41" clock_seconds="2.48" peak_mbytes="236.40" alloc_mbytes="3984.00" gc_seconds="0.03" priority_1="1">
+    <FileStats path="org/wildfly/plugins/bootablejar/maven/common/Utils.java" bugCount="0" size="40"/>
+    <FileStats path="org/wildfly/plugins/bootablejar/maven/goals/BuildBootableJarMojo.java" bugCount="1" size="293" bugHash="3e56bb054795ad7398f14c04a1f6003a"/>
+    <FileStats path="org/wildfly/plugins/bootablejar/maven/goals/RunBootableJarMojo.java" bugCount="0" size="15"/>
+    <FileStats path="org/wildfly/plugins/bootablejar/maven/goals/ShutdownBootableJarMojo.java" bugCount="0" size="17"/>
+    <FileStats path="org/wildfly/plugins/bootablejar/maven/goals/StartBootableJarMojo.java" bugCount="0" size="29"/>
+    <PackageStats package="org.wildfly.plugins.bootablejar.maven.common" total_bugs="0" total_types="1" total_size="40">
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.common.Utils" sourceFile="Utils.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.wildfly.plugins.bootablejar.maven.goals" total_bugs="1" total_types="5" total_size="354" priority_1="1">
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo" sourceFile="BuildBootableJarMojo.java" interface="false" size="276" bugs="1" priority_1="1"/>
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.goals.BuildBootableJarMojo$1" sourceFile="BuildBootableJarMojo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.goals.RunBootableJarMojo" sourceFile="RunBootableJarMojo.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.goals.ShutdownBootableJarMojo" sourceFile="ShutdownBootableJarMojo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.wildfly.plugins.bootablejar.maven.goals.StartBootableJarMojo" sourceFile="StartBootableJarMojo.java" interface="false" size="29" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="310" invocations="715" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="51084" standardDeviationMicrosecondsPerInvocation="2195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="70" invocations="55" avgMicrosecondsPerInvocation="1278" maxMicrosecondsPerInvocation="15466" standardDeviationMicrosecondsPerInvocation="2385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="68" invocations="38" avgMicrosecondsPerInvocation="1813" maxMicrosecondsPerInvocation="56036" standardDeviationMicrosecondsPerInvocation="8934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="64" invocations="726" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="8936" standardDeviationMicrosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="63" invocations="127" avgMicrosecondsPerInvocation="501" maxMicrosecondsPerInvocation="39310" standardDeviationMicrosecondsPerInvocation="3496"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="57" invocations="40" avgMicrosecondsPerInvocation="1443" maxMicrosecondsPerInvocation="19032" standardDeviationMicrosecondsPerInvocation="3066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="57" invocations="40" avgMicrosecondsPerInvocation="1428" maxMicrosecondsPerInvocation="24190" standardDeviationMicrosecondsPerInvocation="3847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="54" invocations="55" avgMicrosecondsPerInvocation="997" maxMicrosecondsPerInvocation="48865" standardDeviationMicrosecondsPerInvocation="6517"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="51" invocations="6" avgMicrosecondsPerInvocation="8610" maxMicrosecondsPerInvocation="40133" standardDeviationMicrosecondsPerInvocation="14262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="38" avgMicrosecondsPerInvocation="1316" maxMicrosecondsPerInvocation="31822" standardDeviationMicrosecondsPerInvocation="5035"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="49" invocations="38" avgMicrosecondsPerInvocation="1304" maxMicrosecondsPerInvocation="14423" standardDeviationMicrosecondsPerInvocation="2533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="48" invocations="55" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="8498" standardDeviationMicrosecondsPerInvocation="1424"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="46" invocations="214" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="8864" standardDeviationMicrosecondsPerInvocation="621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="44" invocations="6" avgMicrosecondsPerInvocation="7350" maxMicrosecondsPerInvocation="35362" standardDeviationMicrosecondsPerInvocation="12623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="35" invocations="38" avgMicrosecondsPerInvocation="933" maxMicrosecondsPerInvocation="12580" standardDeviationMicrosecondsPerInvocation="2066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="55" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="15366" standardDeviationMicrosecondsPerInvocation="2044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="55" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="21926" standardDeviationMicrosecondsPerInvocation="2915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="29" invocations="620" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1714" standardDeviationMicrosecondsPerInvocation="123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="36" avgMicrosecondsPerInvocation="752" maxMicrosecondsPerInvocation="8984" standardDeviationMicrosecondsPerInvocation="1518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="26" invocations="36" avgMicrosecondsPerInvocation="746" maxMicrosecondsPerInvocation="4044" standardDeviationMicrosecondsPerInvocation="984"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="24" invocations="6" avgMicrosecondsPerInvocation="4158" maxMicrosecondsPerInvocation="18308" standardDeviationMicrosecondsPerInvocation="6602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="55" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="7599" standardDeviationMicrosecondsPerInvocation="1067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindMaskedFields" totalMilliseconds="18" invocations="6" avgMicrosecondsPerInvocation="3102" maxMicrosecondsPerInvocation="18255" standardDeviationMicrosecondsPerInvocation="6776"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="17" invocations="3" avgMicrosecondsPerInvocation="5940" maxMicrosecondsPerInvocation="17572" standardDeviationMicrosecondsPerInvocation="8225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="55" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="5831" standardDeviationMicrosecondsPerInvocation="829"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

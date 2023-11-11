@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685220552" analysisTimestamp="1699688944996" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\web-jersey-3.3.3.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="6b3cc707cc00d569bdf92c2fde2cbb7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.getArguments() may expose internal representation by returning AbstractIndexedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="43" end="104" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>At AbstractIndexedJsonEntity.java:[lines 43-104]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="getArguments" signature="()[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="58" end="58" startBytecode="0" endBytecode="46" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.getArguments()</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="arguments" signature="[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>In AbstractIndexedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.arguments</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true" start="58" end="58" startBytecode="4" endBytecode="4" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+      <Message>At AbstractIndexedJsonEntity.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8c282736aab4a1b8968035ea96be364" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity(Object[]) may expose internal representation by storing an externally mutable object into AbstractIndexedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="43" end="104" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>At AbstractIndexedJsonEntity.java:[lines 43-104]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="&lt;init&gt;" signature="([Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="51" end="54" startBytecode="0" endBytecode="69" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java"/>
+      <Message>In method new org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity(Object[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="arguments" signature="[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>In AbstractIndexedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.arguments</Message>
+    </Field>
+    <LocalVariable name="arguments" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named arguments</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true" start="53" end="53" startBytecode="6" endBytecode="6" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+      <Message>At AbstractIndexedJsonEntity.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ea9cb3ea7f365a307c9a5b16f2ccb2af" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.setArguments(Object[]) may expose internal representation by storing an externally mutable object into AbstractIndexedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="43" end="104" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>At AbstractIndexedJsonEntity.java:[lines 43-104]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="setArguments" signature="([Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="63" end="64" startBytecode="0" endBytecode="61" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.setArguments(Object[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="arguments" signature="[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>In AbstractIndexedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.arguments</Message>
+    </Field>
+    <LocalVariable name="arguments" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named arguments</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+      <Message>At AbstractIndexedJsonEntity.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="3841343428d6bc2e8250d0c73214a8ce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.getParameter(String, Class, ParameterAnnotations)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="43" end="104" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+        <Message>At AbstractIndexedJsonEntity.java:[lines 43-104]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" name="getParameter" signature="(Ljava/lang/String;Ljava/lang/Class;Lorg/smallmind/web/jersey/aop/ParameterAnnotations;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" start="72" end="104" startBytecode="0" endBytecode="503" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity.getParameter(String, Class, ParameterAnnotations)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" primary="true" start="99" end="99" startBytecode="166" endBytecode="166" sourcefile="AbstractIndexedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java">
+      <Message>At AbstractIndexedJsonEntity.java:[line 99]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="c0b5ebd115c18a73ea8dadfd6382d809" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.getArguments() may expose internal representation by returning AbstractMappedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="44" end="98" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>At AbstractMappedJsonEntity.java:[lines 44-98]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractMappedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="getArguments" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="59" end="59" startBytecode="0" endBytecode="46" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.getArguments()</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="arguments" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>In AbstractMappedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.arguments</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true" start="59" end="59" startBytecode="4" endBytecode="4" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+      <Message>At AbstractMappedJsonEntity.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8c876d18bfb7d42d636032b3a525f9d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.smallmind.web.jersey.aop.AbstractMappedJsonEntity(Map) may expose internal representation by storing an externally mutable object into AbstractMappedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="44" end="98" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>At AbstractMappedJsonEntity.java:[lines 44-98]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractMappedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="52" end="55" startBytecode="0" endBytecode="87" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java"/>
+      <Message>In method new org.smallmind.web.jersey.aop.AbstractMappedJsonEntity(Map)</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="arguments" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>In AbstractMappedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.arguments</Message>
+    </Field>
+    <LocalVariable name="arguments" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named arguments</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true" start="54" end="54" startBytecode="6" endBytecode="6" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+      <Message>At AbstractMappedJsonEntity.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="4d0aef25438833ac4ee7f877a0b6920c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.setArguments(Map) may expose internal representation by storing an externally mutable object into AbstractMappedJsonEntity.arguments</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="44" end="98" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>At AbstractMappedJsonEntity.java:[lines 44-98]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractMappedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="setArguments" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="64" end="65" startBytecode="0" endBytecode="79" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.setArguments(Map)</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="arguments" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>In AbstractMappedJsonEntity.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.arguments</Message>
+    </Field>
+    <LocalVariable name="arguments" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named arguments</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true" start="64" end="64" startBytecode="2" endBytecode="2" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+      <Message>At AbstractMappedJsonEntity.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="9bc3f8b79dc7caa4577e516ef28b6f9d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.getParameter(String, Class, ParameterAnnotations)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="44" end="98" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+        <Message>At AbstractMappedJsonEntity.java:[lines 44-98]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractMappedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" name="getParameter" signature="(Ljava/lang/String;Ljava/lang/Class;Lorg/smallmind/web/jersey/aop/ParameterAnnotations;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" start="72" end="98" startBytecode="0" endBytecode="408" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractMappedJsonEntity.getParameter(String, Class, ParameterAnnotations)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" primary="true" start="89" end="89" startBytecode="125" endBytecode="125" sourcefile="AbstractMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java">
+      <Message>At AbstractMappedJsonEntity.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="b88f51bb17deedc13ebce63165158670" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity.getParameter(String, Class, ParameterAnnotations)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" start="42" end="77" sourcefile="AbstractNakedMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractNakedMappedJsonEntity.java">
+        <Message>At AbstractNakedMappedJsonEntity.java:[lines 42-77]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" name="getParameter" signature="(Ljava/lang/String;Ljava/lang/Class;Lorg/smallmind/web/jersey/aop/ParameterAnnotations;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" start="51" end="77" startBytecode="0" endBytecode="403" sourcefile="AbstractNakedMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractNakedMappedJsonEntity.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity.getParameter(String, Class, ParameterAnnotations)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" primary="true" start="68" end="68" startBytecode="120" endBytecode="120" sourcefile="AbstractNakedMappedJsonEntity.java" sourcepath="org/smallmind/web/jersey/aop/AbstractNakedMappedJsonEntity.java">
+      <Message>At AbstractNakedMappedJsonEntity.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="9eff10cec05ac0eafe1ef479811cde3c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.smallmind.web.jersey.aop.EntityParamResolver$Binder$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder$1" start="117" end="117" sourcefile="EntityParamResolver.java" sourcepath="org/smallmind/web/jersey/aop/EntityParamResolver.java">
+        <Message>At EntityParamResolver.java:[line 117]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.smallmind.web.jersey.aop.EntityParamResolver$Binder$1</Message>
+    </Class>
+    <Class classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" start="111" end="120" sourcefile="EntityParamResolver.java" sourcepath="org/smallmind/web/jersey/aop/EntityParamResolver.java">
+        <Message>At EntityParamResolver.java:[lines 111-120]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.EntityParamResolver$Binder</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" name="configure" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" start="116" end="120" startBytecode="0" endBytecode="102" sourcefile="EntityParamResolver.java" sourcepath="org/smallmind/web/jersey/aop/EntityParamResolver.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.EntityParamResolver$Binder.configure()</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" primary="true" start="117" end="117" startBytecode="32" endBytecode="32" sourcefile="EntityParamResolver.java" sourcepath="org/smallmind/web/jersey/aop/EntityParamResolver.java">
+      <Message>At EntityParamResolver.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="afa5b812c47bf9c777ba26c757fabc2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.Envelope is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.Envelope" primary="true" classAnnotationNames="javax.xml.bind.annotation.XmlRootElement,javax.xml.bind.annotation.XmlAccessorType">
+      <SourceLine classname="org.smallmind.web.jersey.aop.Envelope" start="43" end="52" sourcefile="Envelope.java" sourcepath="org/smallmind/web/jersey/aop/Envelope.java">
+        <Message>At Envelope.java:[lines 43-52]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.Envelope</Message>
+    </Class>
+    <SourceLine classname="org.smallmind.web.jersey.aop.Envelope" start="43" end="52" sourcefile="Envelope.java" sourcepath="org/smallmind/web/jersey/aop/Envelope.java" synthetic="true">
+      <Message>At Envelope.java:[lines 43-52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9addd8d3c4a16bc8a93f2fcad030e8dd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.smallmind.web.jersey.aop.ParameterAnnotations(Annotation[]) may expose internal representation by storing an externally mutable object into ParameterAnnotations.annotations</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.ParameterAnnotations" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ParameterAnnotations" start="41" end="55" sourcefile="ParameterAnnotations.java" sourcepath="org/smallmind/web/jersey/aop/ParameterAnnotations.java">
+        <Message>At ParameterAnnotations.java:[lines 41-55]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.ParameterAnnotations</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.ParameterAnnotations" name="&lt;init&gt;" signature="([Ljava/lang/annotation/Annotation;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ParameterAnnotations" start="41" end="44" startBytecode="0" endBytecode="69" sourcefile="ParameterAnnotations.java" sourcepath="org/smallmind/web/jersey/aop/ParameterAnnotations.java"/>
+      <Message>In method new org.smallmind.web.jersey.aop.ParameterAnnotations(Annotation[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.aop.ParameterAnnotations" name="annotations" signature="[Ljava/lang/annotation/Annotation;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ParameterAnnotations" sourcefile="ParameterAnnotations.java" sourcepath="org/smallmind/web/jersey/aop/ParameterAnnotations.java">
+        <Message>In ParameterAnnotations.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.ParameterAnnotations.annotations</Message>
+    </Field>
+    <LocalVariable name="annotations" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named annotations</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.aop.ParameterAnnotations" primary="true" start="43" end="43" startBytecode="6" endBytecode="6" sourcefile="ParameterAnnotations.java" sourcepath="org/smallmind/web/jersey/aop/ParameterAnnotations.java">
+      <Message>At ParameterAnnotations.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="78aa2c015999ac94a6d02d7f3ce8b7a9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.aop.ResourceMethodAspect.ajc$perSingletonInstance isn&apos;t final but should be</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" start="1" end="59" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java">
+        <Message>At ResourceMethodAspect.java:[lines 1-59]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.ResourceMethodAspect</Message>
+    </Class>
+    <Field classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" name="ajc$perSingletonInstance" signature="Lorg/smallmind/web/jersey/aop/ResourceMethodAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java">
+        <Message>In ResourceMethodAspect.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.ResourceMethodAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java" synthetic="true">
+      <Message>In ResourceMethodAspect.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="316fc7af4f39711e4b8bb2d51b18ad7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field org.smallmind.web.jersey.aop.ResourceMethodAspect.ajc$perSingletonInstance is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" start="1" end="59" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java">
+        <Message>At ResourceMethodAspect.java:[lines 1-59]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.ResourceMethodAspect</Message>
+    </Class>
+    <Field classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" name="ajc$perSingletonInstance" signature="Lorg/smallmind/web/jersey/aop/ResourceMethodAspect;" isStatic="true" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java">
+        <Message>In ResourceMethodAspect.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.aop.ResourceMethodAspect.ajc$perSingletonInstance</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodAspect" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="ResourceMethodAspect.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodAspect.java">
+      <Message>At ResourceMethodAspect.java:[line 1]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" rank="14" abbrev="AT" category="MT_CORRECTNESS" instanceHash="e385c18fc6d58b1acac90d1d1cf2fbf7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Sequence of calls to concurrent abstraction may not be atomic</ShortMessage>
+    <LongMessage>Sequence of calls to java.util.concurrent.ConcurrentHashMap may not be atomic in org.smallmind.web.jersey.aop.ResourceMethodContainerFilter.filter(ContainerRequestContext, ContainerResponseContext)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" start="49" end="105" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java">
+        <Message>At ResourceMethodContainerFilter.java:[lines 49-105]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.ResourceMethodContainerFilter</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" name="filter" signature="(Ljavax/ws/rs/container/ContainerRequestContext;Ljavax/ws/rs/container/ContainerResponseContext;)V" isStatic="false" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" start="74" end="105" startBytecode="0" endBytecode="497" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.ResourceMethodContainerFilter.filter(ContainerRequestContext, ContainerResponseContext)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="1006" end="1006" startBytecode="0" endBytecode="107" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+      <Message>Called method java.util.concurrent.ConcurrentHashMap.put(Object, Object)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" primary="true" start="87" end="87" startBytecode="95" endBytecode="95" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java">
+      <Message>At ResourceMethodContainerFilter.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" rank="8" abbrev="JLM" category="MT_CORRECTNESS" instanceHash="8cec1419020da1edb4c2bfc0d01414fa" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Synchronization performed on util.concurrent instance</ShortMessage>
+    <LongMessage>Synchronization performed on java.util.concurrent.ConcurrentHashMap in org.smallmind.web.jersey.aop.ResourceMethodContainerFilter.filter(ContainerRequestContext, ContainerResponseContext)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" start="49" end="105" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java">
+        <Message>At ResourceMethodContainerFilter.java:[lines 49-105]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.aop.ResourceMethodContainerFilter</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" name="filter" signature="(Ljavax/ws/rs/container/ContainerRequestContext;Ljavax/ws/rs/container/ContainerResponseContext;)V" isStatic="false" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" start="74" end="105" startBytecode="0" endBytecode="497" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java"/>
+      <Message>In method org.smallmind.web.jersey.aop.ResourceMethodContainerFilter.filter(ContainerRequestContext, ContainerResponseContext)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Field classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" name="ADAPTER_MAP" signature="Ljava/util/concurrent/ConcurrentHashMap;" sourceSignature="Ljava/util/concurrent/ConcurrentHashMap&lt;Ljava/lang/Class&lt;+Ljavax/xml/bind/annotation/adapters/XmlAdapter;&gt;;Ljavax/xml/bind/annotation/adapters/XmlAdapter;&gt;;" isStatic="true" primary="true" role="FIELD_VALUE_OF" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java">
+        <Message>In ResourceMethodContainerFilter.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.smallmind.web.jersey.aop.ResourceMethodContainerFilter.ADAPTER_MAP</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" primary="true" start="84" end="84" startBytecode="61" endBytecode="61" sourcefile="ResourceMethodContainerFilter.java" sourcepath="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java">
+      <Message>At ResourceMethodContainerFilter.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="6f59fb107eab4594d7e744739b51e1dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method apply is called from constructor new org.smallmind.web.jersey.json.JsonResourceConfig(ApplicationContext, ResourceConfigExtension[]).</LongMessage>
+    <Class classname="org.smallmind.web.jersey.json.JsonResourceConfig" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.JsonResourceConfig" start="43" end="52" sourcefile="JsonResourceConfig.java" sourcepath="org/smallmind/web/jersey/json/JsonResourceConfig.java">
+        <Message>At JsonResourceConfig.java:[lines 43-52]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.json.JsonResourceConfig</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.json.JsonResourceConfig" name="&lt;init&gt;" signature="(Lorg/springframework/context/ApplicationContext;[Lorg/smallmind/web/jersey/spring/ResourceConfigExtension;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.JsonResourceConfig" start="43" end="52" startBytecode="0" endBytecode="193" sourcefile="JsonResourceConfig.java" sourcepath="org/smallmind/web/jersey/json/JsonResourceConfig.java"/>
+      <Message>In method new org.smallmind.web.jersey.json.JsonResourceConfig(ApplicationContext, ResourceConfigExtension[])</Message>
+    </Method>
+    <String value="apply">
+      <Message>Value apply</Message>
+    </String>
+    <SourceLine classname="org.smallmind.web.jersey.json.JsonResourceConfig" primary="true" start="49" end="49" startBytecode="37" endBytecode="37" sourcefile="JsonResourceConfig.java" sourcepath="org/smallmind/web/jersey/json/JsonResourceConfig.java">
+      <Message>At JsonResourceConfig.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="176ca2a78f876d203d41d442c29d0a96" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension.setMappers(ExceptionMapper[]) may expose internal representation by storing an externally mutable object into ThrowableTranslationResourceConfigExtension.mappers</LongMessage>
+    <Class classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" start="39" end="59" sourcefile="ThrowableTranslationResourceConfigExtension.java" sourcepath="org/smallmind/web/jersey/json/ThrowableTranslationResourceConfigExtension.java">
+        <Message>At ThrowableTranslationResourceConfigExtension.java:[lines 39-59]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" name="setMappers" signature="([Ljavax/ws/rs/ext/ExceptionMapper;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" start="46" end="47" startBytecode="0" endBytecode="61" sourcefile="ThrowableTranslationResourceConfigExtension.java" sourcepath="org/smallmind/web/jersey/json/ThrowableTranslationResourceConfigExtension.java"/>
+      <Message>In method org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension.setMappers(ExceptionMapper[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" name="mappers" signature="[Ljavax/ws/rs/ext/ExceptionMapper;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" sourcefile="ThrowableTranslationResourceConfigExtension.java" sourcepath="org/smallmind/web/jersey/json/ThrowableTranslationResourceConfigExtension.java">
+        <Message>In ThrowableTranslationResourceConfigExtension.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension.mappers</Message>
+    </Field>
+    <LocalVariable name="mappers" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named mappers</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" primary="true" start="46" end="46" startBytecode="2" endBytecode="2" sourcefile="ThrowableTranslationResourceConfigExtension.java" sourcepath="org/smallmind/web/jersey/json/ThrowableTranslationResourceConfigExtension.java">
+      <Message>At ThrowableTranslationResourceConfigExtension.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" rank="14" abbrev="AT" category="MT_CORRECTNESS" instanceHash="9f324c043af7c5075700dadd81637d80" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Sequence of calls to concurrent abstraction may not be atomic</ShortMessage>
+    <LongMessage>Sequence of calls to java.util.concurrent.ConcurrentHashMap may not be atomic in org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider.getConverter(Class, Type, Annotation[])</LongMessage>
+    <Class classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" start="45" end="78" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+        <Message>At XmlAdapterParamConverterProvider.java:[lines 45-78]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" name="getConverter" signature="(Ljava/lang/Class;Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Ljavax/ws/rs/ext/ParamConverter;" isStatic="false" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" start="52" end="78" startBytecode="0" endBytecode="496" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java"/>
+      <Message>In method org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider.getConverter(Class, Type, Annotation[])</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="1006" end="1006" startBytecode="0" endBytecode="107" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+      <Message>Called method java.util.concurrent.ConcurrentHashMap.put(Object, Object)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" primary="true" start="65" end="65" startBytecode="117" endBytecode="117" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+      <Message>At XmlAdapterParamConverterProvider.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" rank="8" abbrev="JLM" category="MT_CORRECTNESS" instanceHash="ba2bd9a1747ace7114e8491adf9e31d1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Synchronization performed on util.concurrent instance</ShortMessage>
+    <LongMessage>Synchronization performed on java.util.concurrent.ConcurrentHashMap in org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider.getConverter(Class, Type, Annotation[])</LongMessage>
+    <Class classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" start="45" end="78" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+        <Message>At XmlAdapterParamConverterProvider.java:[lines 45-78]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" name="getConverter" signature="(Ljava/lang/Class;Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Ljavax/ws/rs/ext/ParamConverter;" isStatic="false" primary="true" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" start="52" end="78" startBytecode="0" endBytecode="496" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java"/>
+      <Message>In method org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider.getConverter(Class, Type, Annotation[])</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Field classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" name="CONVERTER_MAP" signature="Ljava/util/concurrent/ConcurrentHashMap;" sourceSignature="Ljava/util/concurrent/ConcurrentHashMap&lt;Ljava/lang/Class&lt;+Ljavax/xml/bind/annotation/adapters/XmlAdapter;&gt;;Ljavax/ws/rs/ext/ParamConverter&lt;*&gt;;&gt;;" isStatic="false" primary="true" role="FIELD_VALUE_OF" classAnnotationNames="javax.ws.rs.ext.Provider">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+        <Message>In XmlAdapterParamConverterProvider.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider.CONVERTER_MAP</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" primary="true" start="62" end="62" startBytecode="76" endBytecode="76" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+      <Message>At XmlAdapterParamConverterProvider.java:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="3aa5ecc7bb58bc00b6cbc1c46c43f8dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter be a _static_ inner class?</LongMessage>
+    <Class classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter" start="85" end="106" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java">
+        <Message>At XmlAdapterParamConverterProvider.java:[lines 85-106]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter</Message>
+    </Class>
+    <SourceLine classname="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter" start="85" end="106" sourcefile="XmlAdapterParamConverterProvider.java" sourcepath="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java" synthetic="true">
+      <Message>At XmlAdapterParamConverterProvider.java:[lines 85-106]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="519600577068642af53feac94ad1ab88" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.smallmind.web.jersey.multipart.MultiPartFileIterator at new org.smallmind.web.jersey.multipart.MultiPartFileIterator(FormDataMultiPart) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" start="1" end="91" sourcefile="MultiPartFileIterator.java" sourcepath="org/smallmind/web/jersey/multipart/MultiPartFileIterator.java">
+        <Message>At MultiPartFileIterator.java:[lines 1-91]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.multipart.MultiPartFileIterator</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" name="&lt;init&gt;" signature="(Lorg/glassfish/jersey/media/multipart/FormDataMultiPart;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" start="46" end="55" startBytecode="0" endBytecode="155" sourcefile="MultiPartFileIterator.java" sourcepath="org/smallmind/web/jersey/multipart/MultiPartFileIterator.java"/>
+      <Message>In method new org.smallmind.web.jersey.multipart.MultiPartFileIterator(FormDataMultiPart)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" primary="true" start="51" end="51" startBytecode="24" endBytecode="24" sourcefile="MultiPartFileIterator.java" sourcepath="org/smallmind/web/jersey/multipart/MultiPartFileIterator.java">
+      <Message>At MultiPartFileIterator.java:[line 51]</Message>
+    </SourceLine>
+    <SourceLine classname="org.smallmind.web.jersey.multipart.MultiPartFileIterator" start="51" end="51" startBytecode="24" endBytecode="24" sourcefile="MultiPartFileIterator.java" sourcepath="org/smallmind/web/jersey/multipart/MultiPartFileIterator.java">
+      <Message>At MultiPartFileIterator.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" rank="14" abbrev="AT" category="MT_CORRECTNESS" instanceHash="32f9ecea11f654ad5c9c49a806e60d9d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Sequence of calls to concurrent abstraction may not be atomic</ShortMessage>
+    <LongMessage>Sequence of calls to java.util.concurrent.ConcurrentHashMap may not be atomic in org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.constructJsonArguments(Method)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="49" end="138" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>At JsonEntityInvocationHandler.java:[lines 49-138]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="constructJsonArguments" signature="(Ljava/lang/reflect/Method;)[Lorg/smallmind/web/jersey/proxy/JsonArgument;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="108" end="138" startBytecode="0" endBytecode="704" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.constructJsonArguments(Method)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="1006" end="1006" startBytecode="0" endBytecode="107" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+      <Message>Called method java.util.concurrent.ConcurrentHashMap.put(Object, Object)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true" start="124" end="124" startBytecode="196" endBytecode="196" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+      <Message>At JsonEntityInvocationHandler.java:[line 124]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" priority="2" rank="14" abbrev="AT" category="MT_CORRECTNESS" instanceHash="122ad21054e8f6148e512809803aad13" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Sequence of calls to concurrent abstraction may not be atomic</ShortMessage>
+    <LongMessage>Sequence of calls to java.util.concurrent.ConcurrentHashMap may not be atomic in org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.invoke(Object, Method, Object[])</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="49" end="138" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>At JsonEntityInvocationHandler.java:[lines 49-138]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="invoke" signature="(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="73" end="102" startBytecode="0" endBytecode="856" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.invoke(Object, Method, Object[])</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Method classname="java.util.concurrent.ConcurrentHashMap" name="put" signature="(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="1006" end="1006" startBytecode="0" endBytecode="107" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java"/>
+      <Message>Called method java.util.concurrent.ConcurrentHashMap.put(Object, Object)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true" start="80" end="80" startBytecode="66" endBytecode="66" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+      <Message>At JsonEntityInvocationHandler.java:[line 80]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d12e43ef7b1cd45445cfe9c518367641" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler(JsonTarget, String, int, String, Level, JsonHeaderInjector[]) may expose internal representation by storing an externally mutable object into JsonEntityInvocationHandler.target</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="49" end="138" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>At JsonEntityInvocationHandler.java:[lines 49-138]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="&lt;init&gt;" signature="(Lorg/smallmind/web/jersey/proxy/JsonTarget;Ljava/lang/String;ILjava/lang/String;Lorg/smallmind/scribe/pen/Level;[Lorg/smallmind/web/jersey/proxy/JsonHeaderInjector;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="58" end="67" startBytecode="0" endBytecode="226" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java"/>
+      <Message>In method new org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler(JsonTarget, String, int, String, Level, JsonHeaderInjector[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="target" signature="Lorg/smallmind/web/jersey/proxy/JsonTarget;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>In JsonEntityInvocationHandler.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.target</Message>
+    </Field>
+    <LocalVariable name="target" register="1" pc="28" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named target</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true" start="60" end="60" startBytecode="28" endBytecode="28" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+      <Message>At JsonEntityInvocationHandler.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" rank="8" abbrev="JLM" category="MT_CORRECTNESS" instanceHash="5c695fbf1b1af6af23a9388e4c957dab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Synchronization performed on util.concurrent instance</ShortMessage>
+    <LongMessage>Synchronization performed on java.util.concurrent.ConcurrentHashMap in org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.constructJsonArguments(Method)</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="49" end="138" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>At JsonEntityInvocationHandler.java:[lines 49-138]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="constructJsonArguments" signature="(Ljava/lang/reflect/Method;)[Lorg/smallmind/web/jersey/proxy/JsonArgument;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="108" end="138" startBytecode="0" endBytecode="704" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.constructJsonArguments(Method)</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Field classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="xmlAdapterMap" signature="Ljava/util/concurrent/ConcurrentHashMap;" sourceSignature="Ljava/util/concurrent/ConcurrentHashMap&lt;Ljava/lang/Class&lt;*&gt;;Ljavax/xml/bind/annotation/adapters/XmlAdapter;&gt;;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>In JsonEntityInvocationHandler.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.xmlAdapterMap</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true" start="122" end="122" startBytecode="136" endBytecode="136" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+      <Message>At JsonEntityInvocationHandler.java:[line 122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" rank="8" abbrev="JLM" category="MT_CORRECTNESS" instanceHash="7f777e97b2fe8e16ddf73ce734f2f86d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Synchronization performed on util.concurrent instance</ShortMessage>
+    <LongMessage>Synchronization performed on java.util.concurrent.ConcurrentHashMap in org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.invoke(Object, Method, Object[])</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="49" end="138" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>At JsonEntityInvocationHandler.java:[lines 49-138]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="invoke" signature="(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" start="73" end="102" startBytecode="0" endBytecode="856" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.invoke(Object, Method, Object[])</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentHashMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentHashMap" start="264" end="6381" sourcefile="ConcurrentHashMap.java" sourcepath="java/util/concurrent/ConcurrentHashMap.java">
+        <Message>At ConcurrentHashMap.java:[lines 264-6381]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentHashMap</Message>
+    </Type>
+    <Field classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" name="jsonArgumentMap" signature="Ljava/util/concurrent/ConcurrentHashMap;" sourceSignature="Ljava/util/concurrent/ConcurrentHashMap&lt;Ljava/lang/reflect/Method;[Lorg/smallmind/web/jersey/proxy/JsonArgument;&gt;;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+        <Message>In JsonEntityInvocationHandler.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler.jsonArgumentMap</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" primary="true" start="78" end="78" startBytecode="35" endBytecode="35" sourcefile="JsonEntityInvocationHandler.java" sourcepath="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java">
+      <Message>At JsonEntityInvocationHandler.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="64f255074a4869255a14f13912a551d7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.smallmind.web.jersey.proxy.JsonHttpEntity at new org.smallmind.web.jersey.proxy.JsonHttpEntity(Object) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" start="47" end="102" sourcefile="JsonHttpEntity.java" sourcepath="org/smallmind/web/jersey/proxy/JsonHttpEntity.java">
+        <Message>At JsonHttpEntity.java:[lines 47-102]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonHttpEntity</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" name="&lt;init&gt;" signature="(Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" start="50" end="54" startBytecode="0" endBytecode="72" sourcefile="JsonHttpEntity.java" sourcepath="org/smallmind/web/jersey/proxy/JsonHttpEntity.java"/>
+      <Message>In method new org.smallmind.web.jersey.proxy.JsonHttpEntity(Object)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" primary="true" start="54" end="54" startBytecode="14" endBytecode="14" sourcefile="JsonHttpEntity.java" sourcepath="org/smallmind/web/jersey/proxy/JsonHttpEntity.java">
+      <Message>At JsonHttpEntity.java:[line 54]</Message>
+    </SourceLine>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonHttpEntity" start="54" end="54" startBytecode="14" endBytecode="14" sourcefile="JsonHttpEntity.java" sourcepath="org/smallmind/web/jersey/proxy/JsonHttpEntity.java">
+      <Message>At JsonHttpEntity.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="e439f5d78019347745139a4ea2f7c663" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder be a _static_ inner class?</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder" start="298" end="315" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java">
+        <Message>At JsonTarget.java:[lines 298-315]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder</Message>
+    </Class>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder" start="298" end="315" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java" synthetic="true">
+      <Message>At JsonTarget.java:[lines 298-315]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="28f75604f0063864f02662b86071c5a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector be a _static_ inner class?</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector" start="324" end="349" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java">
+        <Message>At JsonTarget.java:[lines 324-349]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector</Message>
+    </Class>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector" start="324" end="349" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java" synthetic="true">
+      <Message>At JsonTarget.java:[lines 324-349]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="40e97f52a17efc0bf80094592df99fd5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector.toString(): new String(byte[])</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" start="358" end="391" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java">
+        <Message>At JsonTarget.java:[lines 358-391]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" start="367" end="391" startBytecode="0" endBytecode="476" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1435" end="1436" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" primary="true" start="389" end="389" startBytecode="200" endBytecode="200" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java">
+      <Message>At JsonTarget.java:[line 389]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="a4b6ffa6bfb6c00010daaa88b270440d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector be a _static_ inner class?</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" start="358" end="391" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java">
+        <Message>At JsonTarget.java:[lines 358-391]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector</Message>
+    </Class>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" start="358" end="391" sourcefile="JsonTarget.java" sourcepath="org/smallmind/web/jersey/proxy/JsonTarget.java" synthetic="true">
+      <Message>At JsonTarget.java:[lines 358-391]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="bf57dda4946066907ea972c28859060b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.setHeaderInjectors(JsonHeaderInjector[]) may expose internal representation by storing an externally mutable object into JsonEntityResourceProxyFactoryBean.headerInjectors</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" start="1" end="110" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+        <Message>At JsonEntityResourceProxyFactoryBean.java:[lines 1-110]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" name="setHeaderInjectors" signature="([Lorg/smallmind/web/jersey/proxy/JsonHeaderInjector;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" start="61" end="62" startBytecode="0" endBytecode="61" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.setHeaderInjectors(JsonHeaderInjector[])</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" name="headerInjectors" signature="[Lorg/smallmind/web/jersey/proxy/JsonHeaderInjector;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+        <Message>In JsonEntityResourceProxyFactoryBean.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.headerInjectors</Message>
+    </Field>
+    <LocalVariable name="headerInjectors" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named headerInjectors</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" primary="true" start="61" end="61" startBytecode="2" endBytecode="2" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+      <Message>At JsonEntityResourceProxyFactoryBean.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ae70cf46bcf94d22a9f6918af4c103f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.setTarget(JsonTarget) may expose internal representation by storing an externally mutable object into JsonEntityResourceProxyFactoryBean.target</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" start="1" end="110" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+        <Message>At JsonEntityResourceProxyFactoryBean.java:[lines 1-110]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" name="setTarget" signature="(Lorg/smallmind/web/jersey/proxy/JsonTarget;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" start="56" end="57" startBytecode="0" endBytecode="61" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.setTarget(JsonTarget)</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" name="target" signature="Lorg/smallmind/web/jersey/proxy/JsonTarget;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+        <Message>In JsonEntityResourceProxyFactoryBean.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean.target</Message>
+    </Field>
+    <LocalVariable name="target" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named target</Message>
+    </LocalVariable>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" primary="true" start="56" end="56" startBytecode="2" endBytecode="2" sourcefile="JsonEntityResourceProxyFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java">
+      <Message>At JsonEntityResourceProxyFactoryBean.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="57594f077940bfc99c07e8c8aa359f4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean.getObject() may expose internal representation by returning JsonTargetFactoryBean.target</LongMessage>
+    <Class classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" start="1" end="108" sourcefile="JsonTargetFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonTargetFactoryBean.java">
+        <Message>At JsonTargetFactoryBean.java:[lines 1-108]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" name="getObject" signature="()Lorg/smallmind/web/jersey/proxy/JsonTarget;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" start="108" end="108" startBytecode="0" endBytecode="46" sourcefile="JsonTargetFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonTargetFactoryBean.java"/>
+      <Message>In method org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean.getObject()</Message>
+    </Method>
+    <Field classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" name="target" signature="Lorg/smallmind/web/jersey/proxy/JsonTarget;" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" sourcefile="JsonTargetFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonTargetFactoryBean.java">
+        <Message>In JsonTargetFactoryBean.java</Message>
+      </SourceLine>
+      <Message>Field org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean.target</Message>
+    </Field>
+    <SourceLine classname="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" primary="true" start="108" end="108" startBytecode="4" endBytecode="4" sourcefile="JsonTargetFactoryBean.java" sourcepath="org/smallmind/web/jersey/proxy/spring/JsonTargetFactoryBean.java">
+      <Message>At JsonTargetFactoryBean.java:[line 108]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a13751f45782b4b4154543cec08b394a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.smallmind.web.jersey.spring.SpringBasedResourceConfig at new org.smallmind.web.jersey.spring.SpringBasedResourceConfig(ApplicationContext) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" start="40" end="53" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java">
+        <Message>At SpringBasedResourceConfig.java:[lines 40-53]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.spring.SpringBasedResourceConfig</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" name="&lt;init&gt;" signature="(Lorg/springframework/context/ApplicationContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" start="40" end="53" startBytecode="0" endBytecode="178" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java"/>
+      <Message>In method new org.smallmind.web.jersey.spring.SpringBasedResourceConfig(ApplicationContext)</Message>
+    </Method>
+    <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" primary="true" start="43" end="43" startBytecode="21" endBytecode="21" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java">
+      <Message>At SpringBasedResourceConfig.java:[line 43]</Message>
+    </SourceLine>
+    <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" start="43" end="43" startBytecode="21" endBytecode="21" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java">
+      <Message>At SpringBasedResourceConfig.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="ffaa5f0dedadc0d5b362e595483a5380" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method registerResourceConfig is called from constructor new org.smallmind.web.jersey.spring.SpringBasedResourceConfig(ApplicationContext).</LongMessage>
+    <Class classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" start="40" end="53" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java">
+        <Message>At SpringBasedResourceConfig.java:[lines 40-53]</Message>
+      </SourceLine>
+      <Message>In class org.smallmind.web.jersey.spring.SpringBasedResourceConfig</Message>
+    </Class>
+    <Method classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" name="&lt;init&gt;" signature="(Lorg/springframework/context/ApplicationContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" start="40" end="53" startBytecode="0" endBytecode="178" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java"/>
+      <Message>In method new org.smallmind.web.jersey.spring.SpringBasedResourceConfig(ApplicationContext)</Message>
+    </Method>
+    <String value="registerResourceConfig">
+      <Message>Value registerResourceConfig</Message>
+    </String>
+    <SourceLine classname="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" primary="true" start="52" end="52" startBytecode="62" endBytecode="62" sourcefile="SpringBasedResourceConfig.java" sourcepath="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java">
+      <Message>At SpringBasedResourceConfig.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" abbrev="JLM" category="MT_CORRECTNESS">
+    <ShortDescription>Synchronization performed on util.concurrent instance</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method performs synchronization on an object that is an instance of
+a class from the java.util.concurrent package (or its subclasses). Instances
+of these classes have their own concurrency control mechanisms that are orthogonal to
+the synchronization provided by the Java keyword <code>synchronized</code>. For example,
+synchronizing on an <code>AtomicBoolean</code> will not prevent other threads
+from modifying the  <code>AtomicBoolean</code>.</p>
+<p>Such code may be correct, but should be carefully reviewed and documented,
+and may confuse people who have to maintain the code at a later date.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="AT_OPERATION_SEQUENCE_ON_CONCURRENT_ABSTRACTION" abbrev="AT" category="MT_CORRECTNESS">
+    <ShortDescription>Sequence of calls to concurrent abstraction may not be atomic</ShortDescription>
+    <Details><![CDATA[
+          
+        <p>This code contains a sequence of calls to a concurrent  abstraction
+            (such as a concurrent hash map).
+            These calls will not be executed atomically.
+          
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="AT">
+    <Description>Possible atomicity violation</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="JLM">
+    <Description>Synchronization on java.util.concurrent objects</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="140">
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>javax.inject.Singleton</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.validation.Configuration</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidatorFactory</MissingClass>
+    <MissingClass>javax.validation.ConstraintViolation</MissingClass>
+    <MissingClass>javax.validation.ParameterNameProvider</MissingClass>
+    <MissingClass>javax.validation.Validation</MissingClass>
+    <MissingClass>javax.validation.ValidationException</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.ValidatorFactory</MissingClass>
+    <MissingClass>javax.validation.bootstrap.ProviderSpecificBootstrap</MissingClass>
+    <MissingClass>javax.validation.executable.ExecutableValidator</MissingClass>
+    <MissingClass>javax.ws.rs.Path</MissingClass>
+    <MissingClass>javax.ws.rs.WebApplicationException</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientRequestContext</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.client.ClientResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerRequestFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ContainerResponseFilter</MissingClass>
+    <MissingClass>javax.ws.rs.container.ResourceContext</MissingClass>
+    <MissingClass>javax.ws.rs.container.ResourceInfo</MissingClass>
+    <MissingClass>javax.ws.rs.core.MediaType</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$ResponseBuilder</MissingClass>
+    <MissingClass>javax.ws.rs.core.Response$Status</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ContextResolver</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ExceptionMapper</MissingClass>
+    <MissingClass>javax.ws.rs.ext.MessageBodyReader</MissingClass>
+    <MissingClass>javax.ws.rs.ext.MessageBodyWriter</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ParamConverter</MissingClass>
+    <MissingClass>javax.ws.rs.ext.ParamConverterProvider</MissingClass>
+    <MissingClass>javax.xml.bind.annotation.adapters.XmlAdapter</MissingClass>
+    <MissingClass>javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter</MissingClass>
+    <MissingClass>org.apache.http.Header</MissingClass>
+    <MissingClass>org.apache.http.HttpEntity</MissingClass>
+    <MissingClass>org.apache.http.HttpRequest</MissingClass>
+    <MissingClass>org.apache.http.HttpResponse</MissingClass>
+    <MissingClass>org.apache.http.RequestLine</MissingClass>
+    <MissingClass>org.apache.http.StatusLine</MissingClass>
+    <MissingClass>org.apache.http.client.RedirectStrategy</MissingClass>
+    <MissingClass>org.apache.http.client.methods.CloseableHttpResponse</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpDelete</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpGet</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPatch</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPost</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpPut</MissingClass>
+    <MissingClass>org.apache.http.client.methods.HttpUriRequest</MissingClass>
+    <MissingClass>org.apache.http.client.utils.URIBuilder</MissingClass>
+    <MissingClass>org.apache.http.config.ConnectionConfig</MissingClass>
+    <MissingClass>org.apache.http.config.ConnectionConfig$Builder</MissingClass>
+    <MissingClass>org.apache.http.config.Registry</MissingClass>
+    <MissingClass>org.apache.http.config.RegistryBuilder</MissingClass>
+    <MissingClass>org.apache.http.config.SocketConfig</MissingClass>
+    <MissingClass>org.apache.http.config.SocketConfig$Builder</MissingClass>
+    <MissingClass>org.apache.http.conn.HttpClientConnectionManager</MissingClass>
+    <MissingClass>org.apache.http.conn.socket.PlainConnectionSocketFactory</MissingClass>
+    <MissingClass>org.apache.http.conn.ssl.SSLConnectionSocketFactory</MissingClass>
+    <MissingClass>org.apache.http.entity.AbstractHttpEntity</MissingClass>
+    <MissingClass>org.apache.http.impl.client.CloseableHttpClient</MissingClass>
+    <MissingClass>org.apache.http.impl.client.DefaultRedirectStrategy</MissingClass>
+    <MissingClass>org.apache.http.impl.client.HttpClientBuilder</MissingClass>
+    <MissingClass>org.apache.http.impl.conn.PoolingHttpClientConnectionManager</MissingClass>
+    <MissingClass>org.apache.http.message.BasicHeader</MissingClass>
+    <MissingClass>org.apache.http.ssl.SSLContextBuilder</MissingClass>
+    <MissingClass>org.apache.http.ssl.TrustStrategy</MissingClass>
+    <MissingClass>org.apache.http.util.EntityUtils</MissingClass>
+    <MissingClass>org.aspectj.lang.NoAspectBoundException</MissingClass>
+    <MissingClass>org.aspectj.lang.ProceedingJoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.ActiveDescriptor</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.DynamicConfiguration</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.Factory</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.Injectee</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.InjectionResolver</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.ServiceHandle</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.ServiceLocator</MissingClass>
+    <MissingClass>org.glassfish.hk2.api.TypeLiteral</MissingClass>
+    <MissingClass>org.glassfish.hk2.utilities.ServiceLocatorUtilities</MissingClass>
+    <MissingClass>org.glassfish.hk2.utilities.binding.AbstractBinder</MissingClass>
+    <MissingClass>org.glassfish.hk2.utilities.binding.BindingBuilder</MissingClass>
+    <MissingClass>org.glassfish.hk2.utilities.binding.ScopedBindingBuilder</MissingClass>
+    <MissingClass>org.glassfish.hk2.utilities.binding.ServiceBindingBuilder</MissingClass>
+    <MissingClass>org.glassfish.jersey.internal.inject.Injections</MissingClass>
+    <MissingClass>org.glassfish.jersey.media.multipart.BodyPart</MissingClass>
+    <MissingClass>org.glassfish.jersey.media.multipart.ContentDisposition</MissingClass>
+    <MissingClass>org.glassfish.jersey.media.multipart.FormDataBodyPart</MissingClass>
+    <MissingClass>org.glassfish.jersey.media.multipart.FormDataMultiPart</MissingClass>
+    <MissingClass>org.glassfish.jersey.media.multipart.MultiPartFeature</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ContainerRequest</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.ResourceConfig</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.internal.inject.AbstractContainerRequestValueFactory</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.internal.inject.AbstractValueFactoryProvider</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.internal.inject.MultivaluedParameterExtractorProvider</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.internal.inject.ParamInjectionResolver</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.model.Parameter</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.model.Parameter$Source</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.spi.ComponentProvider</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.spi.internal.ValueFactoryProvider</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.validation.ValidationConfig</MissingClass>
+    <MissingClass>org.glassfish.jersey.server.validation.internal.InjectingConstraintValidatorFactory</MissingClass>
+    <MissingClass>org.hibernate.validator.HibernateValidator</MissingClass>
+    <MissingClass>org.hibernate.validator.HibernateValidatorConfiguration</MissingClass>
+    <MissingClass>org.jvnet.hk2.spring.bridge.api.SpringBridge</MissingClass>
+    <MissingClass>org.jvnet.hk2.spring.bridge.api.SpringIntoHK2Bridge</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.http.HttpMethod</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.lang.FormattedException</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.lang.FormattedRuntimeException</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.lang.PerApplicationContext</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.lang.PerApplicationDataManager</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.lang.UnknownSwitchCaseException</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.reflection.MissingAnnotationException</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.reflection.type.GenericUtility</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.spring.web.WebContextLoaderListener</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.ssl.NaiveHostNameVerifier</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.ssl.NaiveTrustManager</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.util.Pair</MissingClass>
+    <MissingClass>org.smallmind.nutsnbolts.util.Tuple</MissingClass>
+    <MissingClass>org.smallmind.scribe.pen.Level</MissingClass>
+    <MissingClass>org.smallmind.scribe.pen.Logger</MissingClass>
+    <MissingClass>org.smallmind.scribe.pen.LoggerManager</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.Fault</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.FaultWrappingException</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.NativeLanguage</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.NativeObject</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.ObjectInstantiationException</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.fault.ResourceInvocationException</MissingClass>
+    <MissingClass>org.smallmind.web.json.scaffold.util.JsonCodec</MissingClass>
+    <MissingClass>org.springframework.beans.BeansException</MissingClass>
+    <MissingClass>org.springframework.beans.factory.BeanFactory</MissingClass>
+    <MissingClass>org.springframework.beans.factory.FactoryBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.InitializingBean</MissingClass>
+    <MissingClass>org.springframework.beans.factory.config.BeanPostProcessor</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.web.context.support.WebApplicationContextUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:00 +0900" total_classes="75" referenced_classes="216" total_bugs="37" total_size="1219" num_packages="9" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="3.25" clock_seconds="3.56" peak_mbytes="245.27" alloc_mbytes="3984.00" gc_seconds="0.04" priority_3="8" priority_2="28" priority_1="1">
+    <FileStats path="org/smallmind/web/jersey/aop/AbstractIndexedJsonEntity.java" bugCount="4" size="33" bugHash="7a5de0ae7a4383b2bc69f82b0ff745e8"/>
+    <FileStats path="org/smallmind/web/jersey/aop/AbstractMappedJsonEntity.java" bugCount="4" size="28" bugHash="4af4b6f73ccaafd62b56ee7dee918bcd"/>
+    <FileStats path="org/smallmind/web/jersey/aop/AbstractNakedMappedJsonEntity.java" bugCount="1" size="17" bugHash="5ab67e97a36ddfe50b4287775106e206"/>
+    <FileStats path="org/smallmind/web/jersey/aop/Argument.java" bugCount="0" size="12"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityAwareValidationConfigurationContextResolver.java" bugCount="0" size="8"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityParam.java" bugCount="0" size="2"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityParamResolver.java" bugCount="1" size="42" bugHash="22de121e03bdb70a25e56a5ba25228ee"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityParamResourceConfigExtension.java" bugCount="0" size="8"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityParameterNameProvider.java" bugCount="0" size="17"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityTranslator.java" bugCount="0" size="23"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityValidationException.java" bugCount="0" size="20"/>
+    <FileStats path="org/smallmind/web/jersey/aop/EntityValidator.java" bugCount="0" size="15"/>
+    <FileStats path="org/smallmind/web/jersey/aop/Envelope.java" bugCount="1" size="9" bugHash="0fbee10e874935f2404433f45b159d4e"/>
+    <FileStats path="org/smallmind/web/jersey/aop/JsonEntity.java" bugCount="0" size="2"/>
+    <FileStats path="org/smallmind/web/jersey/aop/ParameterAnnotations.java" bugCount="1" size="11" bugHash="a2cf4dfe452e47b86cb8853ab8f7f91e"/>
+    <FileStats path="org/smallmind/web/jersey/aop/ParameterProcessingException.java" bugCount="0" size="10"/>
+    <FileStats path="org/smallmind/web/jersey/aop/ResourceMethod.java" bugCount="0" size="3"/>
+    <FileStats path="org/smallmind/web/jersey/aop/ResourceMethodAspect.java" bugCount="2" size="17" bugHash="db2e7c643137abf81a94e72c2e651533"/>
+    <FileStats path="org/smallmind/web/jersey/aop/ResourceMethodContainerFilter.java" bugCount="2" size="28" bugHash="a7e5be0c8c14ca09b3a3e894bee0a4cf"/>
+    <FileStats path="org/smallmind/web/jersey/cors/CorsResponseFilter.java" bugCount="0" size="10"/>
+    <FileStats path="org/smallmind/web/jersey/cors/spring/CorsResourceConfigExtension.java" bugCount="0" size="6"/>
+    <FileStats path="org/smallmind/web/jersey/json/ConcreteExceptionMapper.java" bugCount="0" size="3"/>
+    <FileStats path="org/smallmind/web/jersey/json/FaultTranslatingClientResponseFilter.java" bugCount="0" size="21"/>
+    <FileStats path="org/smallmind/web/jersey/json/FormattedWebApplicationException.java" bugCount="0" size="10"/>
+    <FileStats path="org/smallmind/web/jersey/json/JsonProvider.java" bugCount="0" size="27"/>
+    <FileStats path="org/smallmind/web/jersey/json/JsonResourceConfig.java" bugCount="1" size="8" bugHash="ee9844cf0c6d3e86b0e46991e29797ef"/>
+    <FileStats path="org/smallmind/web/jersey/json/ThrowableExceptionMapper.java" bugCount="0" size="26"/>
+    <FileStats path="org/smallmind/web/jersey/json/ThrowableTranslationResourceConfigExtension.java" bugCount="1" size="16" bugHash="ebdb17d40be7f273305cb77f6e5b7523"/>
+    <FileStats path="org/smallmind/web/jersey/json/XmlAdapterParamConversionException.java" bugCount="0" size="4"/>
+    <FileStats path="org/smallmind/web/jersey/json/XmlAdapterParamConverterProvider.java" bugCount="3" size="32" bugHash="db45cfa96a7d917d893ff7e4db98b078"/>
+    <FileStats path="org/smallmind/web/jersey/json/XmlAdapterParamResourceConfigurationExtension.java" bugCount="0" size="6"/>
+    <FileStats path="org/smallmind/web/jersey/multipart/MultiPartContentType.java" bugCount="0" size="25"/>
+    <FileStats path="org/smallmind/web/jersey/multipart/MultiPartFeatureResourceConfigExtension.java" bugCount="0" size="6"/>
+    <FileStats path="org/smallmind/web/jersey/multipart/MultiPartFile.java" bugCount="0" size="25"/>
+    <FileStats path="org/smallmind/web/jersey/multipart/MultiPartFileException.java" bugCount="0" size="4"/>
+    <FileStats path="org/smallmind/web/jersey/multipart/MultiPartFileIterator.java" bugCount="1" size="22" bugHash="93bc595fe69f3e44478da4a211a04342"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/ExtraLaxRedirectStrategy.java" bugCount="0" size="18"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/HttpProtocol.java" bugCount="0" size="21"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonArgument.java" bugCount="0" size="12"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonEntityInvocationHandler.java" bugCount="5" size="53" bugHash="599f28c12edc5d44622004827bae79dd"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonEntityResourceProxyFactory.java" bugCount="0" size="9"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonEntityResourceProxyManager.java" bugCount="0" size="10"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonHeader.java" bugCount="0" size="21"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonHeaderInjector.java" bugCount="0" size="2"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonHttpEntity.java" bugCount="1" size="26" bugHash="d4ce42452f002d20a50d5bbf293ff76e"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonTarget.java" bugCount="4" size="193" bugHash="0a6543b9366fe842d2c89d8cb00d8eb8"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/JsonTargetFactory.java" bugCount="0" size="28"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/ResourceDefinitionException.java" bugCount="0" size="4"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/spring/JsonEntityResourceProxyFactoryBean.java" bugCount="2" size="45" bugHash="89e5130dba2ddea27c2f9a2b16e3c767"/>
+    <FileStats path="org/smallmind/web/jersey/proxy/spring/JsonTargetFactoryBean.java" bugCount="1" size="41" bugHash="796c104df0c3775df8cbbfa8cc045ca9"/>
+    <FileStats path="org/smallmind/web/jersey/spring/AutowiredInjectionResolver.java" bugCount="0" size="23"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ExposedApplicationContext.java" bugCount="0" size="9"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ExposedWebContextLoaderListener.java" bugCount="0" size="7"/>
+    <FileStats path="org/smallmind/web/jersey/spring/HK2ResourceBeanPostProcessor.java" bugCount="0" size="15"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ResourceConfigClass.java" bugCount="0" size="12"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ResourceConfigExtension.java" bugCount="0" size="4"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ResourceConfigObject.java" bugCount="0" size="12"/>
+    <FileStats path="org/smallmind/web/jersey/spring/ResourceConfigProperty.java" bugCount="0" size="18"/>
+    <FileStats path="org/smallmind/web/jersey/spring/SpringBasedResourceConfig.java" bugCount="2" size="9" bugHash="bc392e769f67e8effdc27238a41f9339"/>
+    <FileStats path="org/smallmind/web/jersey/spring/SpringComponentProvider.java" bugCount="0" size="56"/>
+    <FileStats path="org/smallmind/web/jersey/spring/SpringHK2IntegrationException.java" bugCount="0" size="4"/>
+    <FileStats path="org/smallmind/web/jersey/ssl/ClientUtility.java" bugCount="0" size="11"/>
+    <PackageStats package="org.smallmind.web.jersey.aop" total_bugs="16" total_types="25" total_size="305" priority_3="6" priority_2="10">
+      <ClassStats class="org.smallmind.web.jersey.aop.AbstractIndexedJsonEntity" sourceFile="AbstractIndexedJsonEntity.java" interface="false" size="33" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.AbstractMappedJsonEntity" sourceFile="AbstractMappedJsonEntity.java" interface="false" size="28" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.AbstractNakedMappedJsonEntity" sourceFile="AbstractNakedMappedJsonEntity.java" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.Argument" sourceFile="Argument.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityAwareValidationConfigurationContextResolver" sourceFile="EntityAwareValidationConfigurationContextResolver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParam" sourceFile="EntityParam.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver" sourceFile="EntityParamResolver.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver$Binder" sourceFile="EntityParamResolver.java" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver$Binder$1" sourceFile="EntityParamResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver$EntityParamInjectionResolver" sourceFile="EntityParamResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver$EntityParamRequestValueFactory" sourceFile="EntityParamResolver.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResolver$EntityParamValueFactoryProvider" sourceFile="EntityParamResolver.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParamResourceConfigExtension" sourceFile="EntityParamResourceConfigExtension.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityParameterNameProvider" sourceFile="EntityParameterNameProvider.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityTranslator" sourceFile="EntityTranslator.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityValidationException" sourceFile="EntityValidationException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityValidationException$Violation" sourceFile="EntityValidationException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.EntityValidator" sourceFile="EntityValidator.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.Envelope" sourceFile="Envelope.java" interface="false" size="9" bugs="1" priority_3="1"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.JsonEntity" sourceFile="JsonEntity.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.ParameterAnnotations" sourceFile="ParameterAnnotations.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.ParameterProcessingException" sourceFile="ParameterProcessingException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.ResourceMethod" sourceFile="ResourceMethod.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.ResourceMethodAspect" sourceFile="ResourceMethodAspect.java" interface="false" size="17" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.aop.ResourceMethodContainerFilter" sourceFile="ResourceMethodContainerFilter.java" interface="false" size="28" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.cors" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="org.smallmind.web.jersey.cors.CorsResponseFilter" sourceFile="CorsResponseFilter.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.cors.spring" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="org.smallmind.web.jersey.cors.spring.CorsResourceConfigExtension" sourceFile="CorsResourceConfigExtension.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.json" total_bugs="5" total_types="11" total_size="153" priority_3="1" priority_2="4">
+      <ClassStats class="org.smallmind.web.jersey.json.ConcreteExceptionMapper" sourceFile="ConcreteExceptionMapper.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.FaultTranslatingClientResponseFilter" sourceFile="FaultTranslatingClientResponseFilter.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.FormattedWebApplicationException" sourceFile="FormattedWebApplicationException.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.JsonProvider" sourceFile="JsonProvider.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.JsonResourceConfig" sourceFile="JsonResourceConfig.java" interface="false" size="8" bugs="1" priority_3="1"/>
+      <ClassStats class="org.smallmind.web.jersey.json.ThrowableExceptionMapper" sourceFile="ThrowableExceptionMapper.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.ThrowableTranslationResourceConfigExtension" sourceFile="ThrowableTranslationResourceConfigExtension.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.json.XmlAdapterParamConversionException" sourceFile="XmlAdapterParamConversionException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider" sourceFile="XmlAdapterParamConverterProvider.java" interface="false" size="17" bugs="2" priority_2="2"/>
+      <ClassStats class="org.smallmind.web.jersey.json.XmlAdapterParamConverterProvider$XmlAdapterParamConverter" sourceFile="XmlAdapterParamConverterProvider.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.json.XmlAdapterParamResourceConfigurationExtension" sourceFile="XmlAdapterParamResourceConfigurationExtension.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.multipart" total_bugs="1" total_types="5" total_size="82" priority_2="1">
+      <ClassStats class="org.smallmind.web.jersey.multipart.MultiPartContentType" sourceFile="MultiPartContentType.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.multipart.MultiPartFeatureResourceConfigExtension" sourceFile="MultiPartFeatureResourceConfigExtension.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.multipart.MultiPartFile" sourceFile="MultiPartFile.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.multipart.MultiPartFileException" sourceFile="MultiPartFileException.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.multipart.MultiPartFileIterator" sourceFile="MultiPartFileIterator.java" interface="false" size="22" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.proxy" total_bugs="10" total_types="16" total_size="397" priority_2="9" priority_1="1">
+      <ClassStats class="org.smallmind.web.jersey.proxy.ExtraLaxRedirectStrategy" sourceFile="ExtraLaxRedirectStrategy.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.HttpProtocol" sourceFile="HttpProtocol.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonArgument" sourceFile="JsonArgument.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonEntityInvocationHandler" sourceFile="JsonEntityInvocationHandler.java" interface="false" size="53" bugs="5" priority_2="5"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonEntityResourceProxyFactory" sourceFile="JsonEntityResourceProxyFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonEntityResourceProxyManager" sourceFile="JsonEntityResourceProxyManager.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonHeader" sourceFile="JsonHeader.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonHeaderInjector" sourceFile="JsonHeaderInjector.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonHttpEntity" sourceFile="JsonHttpEntity.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTarget" sourceFile="JsonTarget.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTarget$1" sourceFile="JsonTarget.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTarget$InputStreamHolder" sourceFile="JsonTarget.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTarget$RequestDebugCollector" sourceFile="JsonTarget.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTarget$ResponseDebugCollector" sourceFile="JsonTarget.java" interface="false" size="26" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.JsonTargetFactory" sourceFile="JsonTargetFactory.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.ResourceDefinitionException" sourceFile="ResourceDefinitionException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.proxy.spring" total_bugs="3" total_types="2" total_size="86" priority_2="3">
+      <ClassStats class="org.smallmind.web.jersey.proxy.spring.JsonEntityResourceProxyFactoryBean" sourceFile="JsonEntityResourceProxyFactoryBean.java" interface="false" size="45" bugs="2" priority_2="2"/>
+      <ClassStats class="org.smallmind.web.jersey.proxy.spring.JsonTargetFactoryBean" sourceFile="JsonTargetFactoryBean.java" interface="false" size="41" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.spring" total_bugs="2" total_types="13" total_size="169" priority_3="1" priority_2="1">
+      <ClassStats class="org.smallmind.web.jersey.spring.AutowiredInjectionResolver" sourceFile="AutowiredInjectionResolver.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ExposedApplicationContext" sourceFile="ExposedApplicationContext.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ExposedWebContextLoaderListener" sourceFile="ExposedWebContextLoaderListener.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.HK2ResourceBeanPostProcessor" sourceFile="HK2ResourceBeanPostProcessor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ResourceConfigClass" sourceFile="ResourceConfigClass.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ResourceConfigExtension" sourceFile="ResourceConfigExtension.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ResourceConfigObject" sourceFile="ResourceConfigObject.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.ResourceConfigProperty" sourceFile="ResourceConfigProperty.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.SpringBasedResourceConfig" sourceFile="SpringBasedResourceConfig.java" interface="false" size="9" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.SpringComponentProvider" sourceFile="SpringComponentProvider.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.SpringComponentProvider$1" sourceFile="SpringComponentProvider.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.SpringComponentProvider$SpringManagedBeanFactory" sourceFile="SpringComponentProvider.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.smallmind.web.jersey.spring.SpringHK2IntegrationException" sourceFile="SpringHK2IntegrationException.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.smallmind.web.jersey.ssl" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="org.smallmind.web.jersey.ssl.ClientUtility" sourceFile="ClientUtility.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="333" invocations="1079" avgMicrosecondsPerInvocation="308" maxMicrosecondsPerInvocation="50304" standardDeviationMicrosecondsPerInvocation="1666"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="119" invocations="262" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="27233" standardDeviationMicrosecondsPerInvocation="2066"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="119" invocations="216" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="21211" standardDeviationMicrosecondsPerInvocation="1772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="103" invocations="259" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="15440" standardDeviationMicrosecondsPerInvocation="1158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="94" invocations="1090" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="9830" standardDeviationMicrosecondsPerInvocation="545"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="85" invocations="605" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="4326" standardDeviationMicrosecondsPerInvocation="310"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="83" invocations="265" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="47472" standardDeviationMicrosecondsPerInvocation="2918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="80" invocations="216" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="4952" standardDeviationMicrosecondsPerInvocation="773"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="80" invocations="355" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="42250" standardDeviationMicrosecondsPerInvocation="2262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="77" invocations="263" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="24424" standardDeviationMicrosecondsPerInvocation="1535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="76" invocations="255" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="10521" standardDeviationMicrosecondsPerInvocation="954"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="70" invocations="216" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="60043" standardDeviationMicrosecondsPerInvocation="4074"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="68" invocations="259" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="19085" standardDeviationMicrosecondsPerInvocation="1198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="66" invocations="256" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="8159" standardDeviationMicrosecondsPerInvocation="769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="58" invocations="216" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="22061" standardDeviationMicrosecondsPerInvocation="1762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="46" invocations="216" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="10697" standardDeviationMicrosecondsPerInvocation="844"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="43" invocations="187" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="2370" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="42" invocations="216" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="23929" standardDeviationMicrosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="35" invocations="75" avgMicrosecondsPerInvocation="469" maxMicrosecondsPerInvocation="3344" standardDeviationMicrosecondsPerInvocation="696"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="34" invocations="3493" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="3398" standardDeviationMicrosecondsPerInvocation="96"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="29" invocations="75" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="12243" standardDeviationMicrosecondsPerInvocation="1444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="29" invocations="877" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="1070" standardDeviationMicrosecondsPerInvocation="79"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="27" invocations="216" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="2267" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="259" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="6946" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="26" invocations="75" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="8119" standardDeviationMicrosecondsPerInvocation="1130"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="25" invocations="75" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="12928" standardDeviationMicrosecondsPerInvocation="1492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="24" invocations="75" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="8773" standardDeviationMicrosecondsPerInvocation="1346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="24" invocations="75" avgMicrosecondsPerInvocation="324" maxMicrosecondsPerInvocation="5068" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LazyInit" totalMilliseconds="22" invocations="75" avgMicrosecondsPerInvocation="295" maxMicrosecondsPerInvocation="21466" standardDeviationMicrosecondsPerInvocation="2461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="216" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1439" standardDeviationMicrosecondsPerInvocation="165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="20" invocations="75" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="6633" standardDeviationMicrosecondsPerInvocation="827"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="20" invocations="75" avgMicrosecondsPerInvocation="269" maxMicrosecondsPerInvocation="3995" standardDeviationMicrosecondsPerInvocation="640"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="20" invocations="75" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="10220" standardDeviationMicrosecondsPerInvocation="1375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="19" invocations="75" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="7654" standardDeviationMicrosecondsPerInvocation="970"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="19" invocations="216" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="4408" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOverridableMethodCall" totalMilliseconds="15" invocations="75" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="6617" standardDeviationMicrosecondsPerInvocation="847"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

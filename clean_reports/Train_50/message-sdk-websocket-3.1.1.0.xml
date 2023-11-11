@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685196670" analysisTimestamp="1699688724487" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\message-sdk-websocket-3.1.1.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="b4200f2e5ba39a953cb4f7232d4f81d7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration(WebSocketProperties, WebSocketChannelInterceptor, WebSocketSessionHandshakeInterceptor) may expose internal representation by storing an externally mutable object into WebSocketMessageBrokerConfiguration.webSocketProperties</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" primary="true" classAnnotationNames="org.springframework.boot.autoconfigure.AutoConfiguration,org.springframework.scheduling.annotation.EnableScheduling,org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" start="60" end="233" sourcefile="WebSocketMessageBrokerConfiguration.java" sourcepath="cn/herodotus/engine/message/websocket/configuration/WebSocketMessageBrokerConfiguration.java">
+        <Message>At WebSocketMessageBrokerConfiguration.java:[lines 60-233]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" name="&lt;init&gt;" signature="(Lcn/herodotus/engine/message/websocket/properties/WebSocketProperties;Lcn/herodotus/engine/message/websocket/interceptor/WebSocketChannelInterceptor;Lcn/herodotus/engine/message/websocket/interceptor/WebSocketSessionHandshakeInterceptor;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.autoconfigure.AutoConfiguration,org.springframework.scheduling.annotation.EnableScheduling,org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" start="66" end="70" startBytecode="0" endBytecode="107" sourcefile="WebSocketMessageBrokerConfiguration.java" sourcepath="cn/herodotus/engine/message/websocket/configuration/WebSocketMessageBrokerConfiguration.java"/>
+      <Message>In method new cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration(WebSocketProperties, WebSocketChannelInterceptor, WebSocketSessionHandshakeInterceptor)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" name="webSocketProperties" signature="Lcn/herodotus/engine/message/websocket/properties/WebSocketProperties;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.autoconfigure.AutoConfiguration,org.springframework.scheduling.annotation.EnableScheduling,org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" sourcefile="WebSocketMessageBrokerConfiguration.java" sourcepath="cn/herodotus/engine/message/websocket/configuration/WebSocketMessageBrokerConfiguration.java">
+        <Message>In WebSocketMessageBrokerConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration.webSocketProperties</Message>
+    </Field>
+    <LocalVariable name="webSocketProperties" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named webSocketProperties</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" primary="true" start="67" end="67" startBytecode="6" endBytecode="6" sourcefile="WebSocketMessageBrokerConfiguration.java" sourcepath="cn/herodotus/engine/message/websocket/configuration/WebSocketMessageBrokerConfiguration.java">
+      <Message>At WebSocketMessageBrokerConfiguration.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="202d4bbbe915b7adf0adf0acd15f5bcf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to result in cn.herodotus.engine.message.websocket.controller.WebSocketMessageController.findAllStat()</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController,org.springframework.web.bind.annotation.RequestMapping,io.swagger.v3.oas.annotations.tags.Tags">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" start="60" end="94" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java">
+        <Message>At WebSocketMessageController.java:[lines 60-94]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.controller.WebSocketMessageController</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" name="findAllStat" signature="()Lcn/herodotus/engine/assistant/core/domain/Result;" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController,org.springframework.web.bind.annotation.RequestMapping,io.swagger.v3.oas.annotations.tags.Tags">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" start="89" end="94" startBytecode="0" endBytecode="17" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.controller.WebSocketMessageController.findAllStat()</Message>
+    </Method>
+    <LocalVariable name="result" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named result</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" primary="true" start="89" end="89" startBytecode="7" endBytecode="7" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java">
+      <Message>At WebSocketMessageController.java:[line 89]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="result"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="788d6d8b9930caa2091b48876e0ffb0a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.herodotus.engine.message.websocket.controller.WebSocketMessageController(WebSocketMessageSender, WebSocketDisplayService) may expose internal representation by storing an externally mutable object into WebSocketMessageController.webSocketMessageSender</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController,org.springframework.web.bind.annotation.RequestMapping,io.swagger.v3.oas.annotations.tags.Tags">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" start="60" end="94" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java">
+        <Message>At WebSocketMessageController.java:[lines 60-94]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.controller.WebSocketMessageController</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" name="&lt;init&gt;" signature="(Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;Lcn/herodotus/engine/message/websocket/service/WebSocketDisplayService;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController,org.springframework.web.bind.annotation.RequestMapping,io.swagger.v3.oas.annotations.tags.Tags">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" start="65" end="68" startBytecode="0" endBytecode="88" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java"/>
+      <Message>In method new cn.herodotus.engine.message.websocket.controller.WebSocketMessageController(WebSocketMessageSender, WebSocketDisplayService)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" name="webSocketMessageSender" signature="Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController,org.springframework.web.bind.annotation.RequestMapping,io.swagger.v3.oas.annotations.tags.Tags">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java">
+        <Message>In WebSocketMessageController.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.controller.WebSocketMessageController.webSocketMessageSender</Message>
+    </Field>
+    <LocalVariable name="webSocketMessageSender" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named webSocketMessageSender</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" primary="true" start="66" end="66" startBytecode="6" endBytecode="6" sourcefile="WebSocketMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java">
+      <Message>At WebSocketMessageController.java:[line 66]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f3225e8a39f3505edaf6236400356761" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController(WebSocketMessageSender) may expose internal representation by storing an externally mutable object into WebSocketPublishMessageController.webSocketMessageSender</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" start="54" end="102" sourcefile="WebSocketPublishMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketPublishMessageController.java">
+        <Message>At WebSocketPublishMessageController.java:[lines 54-102]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" name="&lt;init&gt;" signature="(Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" start="58" end="60" startBytecode="0" endBytecode="69" sourcefile="WebSocketPublishMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketPublishMessageController.java"/>
+      <Message>In method new cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController(WebSocketMessageSender)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" name="webSocketMessageSender" signature="Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.RestController">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" sourcefile="WebSocketPublishMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketPublishMessageController.java">
+        <Message>In WebSocketPublishMessageController.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController.webSocketMessageSender</Message>
+    </Field>
+    <LocalVariable name="webSocketMessageSender" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named webSocketMessageSender</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" primary="true" start="59" end="59" startBytecode="6" endBytecode="6" sourcefile="WebSocketPublishMessageController.java" sourcepath="cn/herodotus/engine/message/websocket/controller/WebSocketPublishMessageController.java">
+      <Message>At WebSocketPublishMessageController.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7c36e61a5b9bd374e2345026086239a1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener(WebSocketMessageSender) may expose internal representation by storing an externally mutable object into AbstractWebSocketListener.webSocketMessageSender</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" start="45" end="57" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java">
+        <Message>At AbstractWebSocketListener.java:[lines 45-57]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" name="&lt;init&gt;" signature="(Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" start="45" end="47" startBytecode="0" endBytecode="87" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java"/>
+      <Message>In method new cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener(WebSocketMessageSender)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" name="webSocketMessageSender" signature="Lcn/herodotus/engine/message/websocket/processor/WebSocketMessageSender;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java">
+        <Message>In AbstractWebSocketListener.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener.webSocketMessageSender</Message>
+    </Field>
+    <LocalVariable name="webSocketMessageSender" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named webSocketMessageSender</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" primary="true" start="46" end="46" startBytecode="6" endBytecode="6" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java">
+      <Message>At AbstractWebSocketListener.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" rank="20" abbrev="UPM" category="PERFORMANCE" instanceHash="96cb29cb689256e0d99d6353faef28fe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener.getOnlineCount() is never called</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" start="45" end="57" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java">
+        <Message>At AbstractWebSocketListener.java:[lines 45-57]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" name="getOnlineCount" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" start="50" end="51" startBytecode="0" endBytecode="84" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener.getOnlineCount()</Message>
+    </Method>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" start="50" end="51" startBytecode="0" endBytecode="84" sourcefile="AbstractWebSocketListener.java" sourcepath="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java" synthetic="true">
+      <Message>At AbstractWebSocketListener.java:[lines 50-51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="d412b18359e13510485d0ebddd535246" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Public static method may expose internal representation by returning a mutable object or array</ShortMessage>
+    <LongMessage>Public static cn.herodotus.engine.message.websocket.domain.WebSocketChannel.getToJsonStruct() may expose internal representation by returning WebSocketChannel.JSON_STRUCT</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" start="42" end="86" sourcefile="WebSocketChannel.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketChannel.java">
+        <Message>At WebSocketChannel.java:[lines 42-86]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.domain.WebSocketChannel</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" name="getToJsonStruct" signature="()Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" start="86" end="86" startBytecode="0" endBytecode="27" sourcefile="WebSocketChannel.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketChannel.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.domain.WebSocketChannel.getToJsonStruct()</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" name="JSON_STRUCT" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" sourcefile="WebSocketChannel.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketChannel.java">
+        <Message>In WebSocketChannel.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.domain.WebSocketChannel.JSON_STRUCT</Message>
+    </Field>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" primary="true" start="86" end="86" startBytecode="3" endBytecode="3" sourcefile="WebSocketChannel.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketChannel.java">
+      <Message>At WebSocketChannel.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="b00ff31f0267c791e84e9c9cbd652de5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>cn.herodotus.engine.message.websocket.domain.WebSocketMessage is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.domain.WebSocketMessage" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketMessage" start="36" end="66" sourcefile="WebSocketMessage.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketMessage.java">
+        <Message>At WebSocketMessage.java:[lines 36-66]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.domain.WebSocketMessage</Message>
+    </Class>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketMessage" start="36" end="66" sourcefile="WebSocketMessage.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketMessage.java" synthetic="true">
+      <Message>At WebSocketMessage.java:[lines 36-66]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="e8346fe7a103f74c7948149ef4bbecda" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.getRoles() may expose internal representation by returning WebSocketPrincipal.roles</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" start="54" end="142" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+        <Message>At WebSocketPrincipal.java:[lines 54-142]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" name="getRoles" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" start="111" end="111" startBytecode="0" endBytecode="46" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.getRoles()</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" name="roles" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+        <Message>In WebSocketPrincipal.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.roles</Message>
+    </Field>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" primary="true" start="111" end="111" startBytecode="4" endBytecode="4" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+      <Message>At WebSocketPrincipal.java:[line 111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ca954828d81e3e57c077346be2a4b5bd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.setRoles(Set) may expose internal representation by storing an externally mutable object into WebSocketPrincipal.roles</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" start="54" end="142" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+        <Message>At WebSocketPrincipal.java:[lines 54-142]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" name="setRoles" signature="(Ljava/util/Set;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" start="115" end="116" startBytecode="0" endBytecode="79" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.setRoles(Set)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" name="roles" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+        <Message>In WebSocketPrincipal.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal.roles</Message>
+    </Field>
+    <LocalVariable name="roles" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named roles</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" primary="true" start="115" end="115" startBytecode="2" endBytecode="2" sourcefile="WebSocketPrincipal.java" sourcepath="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java">
+      <Message>At WebSocketPrincipal.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="bf924dd5f607ae968c91d5012c4abd61" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>WebSocketMessageSender.simpMessagingTemplate not initialized in constructor and dereferenced in cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toAll(String, Object)</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="45" end="100" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>At WebSocketMessageSender.java:[lines 45-100]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender</Message>
+    </Class>
+    <Field classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="simpMessagingTemplate" signature="Lorg/springframework/messaging/simp/SimpMessagingTemplate;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>In WebSocketMessageSender.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.simpMessagingTemplate</Message>
+    </Field>
+    <Method classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="toAll" signature="(Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="79" end="80" startBytecode="0" endBytecode="93" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toAll(String, Object)</Message>
+    </Method>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true" start="79" end="79" startBytecode="6" endBytecode="6" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+      <Message>At WebSocketMessageSender.java:[line 79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="7aa11893a17761128596cbf781626c1c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>WebSocketMessageSender.simpMessagingTemplate not initialized in constructor and dereferenced in cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toUser(WebSocketMessage)</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="45" end="100" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>At WebSocketMessageSender.java:[lines 45-100]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender</Message>
+    </Class>
+    <Field classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="simpMessagingTemplate" signature="Lorg/springframework/messaging/simp/SimpMessagingTemplate;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>In WebSocketMessageSender.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.simpMessagingTemplate</Message>
+    </Field>
+    <Method classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="toUser" signature="(Lcn/herodotus/engine/message/websocket/domain/WebSocketMessage;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="69" end="76" startBytecode="0" endBytecode="178" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toUser(WebSocketMessage)</Message>
+    </Method>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true" start="75" end="75" startBytecode="61" endBytecode="61" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+      <Message>At WebSocketMessageSender.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="eca6a075adb94a800def77309390490f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>WebSocketMessageSender.simpUserRegistry not initialized in constructor and dereferenced in cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toUser(WebSocketMessage)</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="45" end="100" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>At WebSocketMessageSender.java:[lines 45-100]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender</Message>
+    </Class>
+    <Field classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="simpUserRegistry" signature="Lorg/springframework/messaging/simp/user/SimpUserRegistry;" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+        <Message>In WebSocketMessageSender.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.simpUserRegistry</Message>
+    </Field>
+    <Method classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" name="toUser" signature="(Lcn/herodotus/engine/message/websocket/domain/WebSocketMessage;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" start="69" end="76" startBytecode="0" endBytecode="178" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender.toUser(WebSocketMessage)</Message>
+    </Method>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" primary="true" start="69" end="69" startBytecode="8" endBytecode="8" sourcefile="WebSocketMessageSender.java" sourcepath="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java">
+      <Message>At WebSocketMessageSender.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="bc4cfd8d3866aa945ebec1fe9713d42a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.herodotus.engine.message.websocket.properties.WebSocketProperties.getApplicationDestinationPrefixes() may expose internal representation by returning WebSocketProperties.applicationDestinationPrefixes</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" start="45" end="129" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+        <Message>At WebSocketProperties.java:[lines 45-129]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.properties.WebSocketProperties</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" name="getApplicationDestinationPrefixes" signature="()Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" start="89" end="89" startBytecode="0" endBytecode="46" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.properties.WebSocketProperties.getApplicationDestinationPrefixes()</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" name="applicationDestinationPrefixes" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+        <Message>In WebSocketProperties.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.properties.WebSocketProperties.applicationDestinationPrefixes</Message>
+    </Field>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" primary="true" start="89" end="89" startBytecode="4" endBytecode="4" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+      <Message>At WebSocketProperties.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6e066c9998264b446d9694e0d01bee37" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.herodotus.engine.message.websocket.properties.WebSocketProperties.setApplicationDestinationPrefixes(List) may expose internal representation by storing an externally mutable object into WebSocketProperties.applicationDestinationPrefixes</LongMessage>
+    <Class classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" start="45" end="129" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+        <Message>At WebSocketProperties.java:[lines 45-129]</Message>
+      </SourceLine>
+      <Message>In class cn.herodotus.engine.message.websocket.properties.WebSocketProperties</Message>
+    </Class>
+    <Method classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" name="setApplicationDestinationPrefixes" signature="(Ljava/util/List;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" start="93" end="94" startBytecode="0" endBytecode="79" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java"/>
+      <Message>In method cn.herodotus.engine.message.websocket.properties.WebSocketProperties.setApplicationDestinationPrefixes(List)</Message>
+    </Method>
+    <Field classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" name="applicationDestinationPrefixes" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+        <Message>In WebSocketProperties.java</Message>
+      </SourceLine>
+      <Message>Field cn.herodotus.engine.message.websocket.properties.WebSocketProperties.applicationDestinationPrefixes</Message>
+    </Field>
+    <LocalVariable name="applicationDestinationPrefixes" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named applicationDestinationPrefixes</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" primary="true" start="93" end="93" startBytecode="2" endBytecode="2" sourcefile="WebSocketProperties.java" sourcepath="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java">
+      <Message>At WebSocketProperties.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UPM_UNCALLED_PRIVATE_METHOD" abbrev="UPM" category="PERFORMANCE">
+    <ShortDescription>Private method is never called</ShortDescription>
+    <Details><![CDATA[
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_EXPOSE_REP" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Public static method may expose internal representation by returning a mutable object or array</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A public static method returns a reference to a mutable object or
+   an array that is part of the static state of the class.
+   Any code that calls this method can freely modify
+   the underlying array.
+   One fix is to return a copy of the array.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="UPM">
+    <Description>Private method is never called</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="65">
+    <MissingClass>cn.herodotus.engine.assistant.core.definition.BearerTokenResolver</MissingClass>
+    <MissingClass>cn.herodotus.engine.assistant.core.definition.constants.BaseConstants</MissingClass>
+    <MissingClass>cn.herodotus.engine.assistant.core.definition.constants.HttpHeaders</MissingClass>
+    <MissingClass>cn.herodotus.engine.assistant.core.definition.constants.SymbolConstants</MissingClass>
+    <MissingClass>cn.herodotus.engine.assistant.core.domain.PrincipalDetails</MissingClass>
+    <MissingClass>cn.herodotus.engine.assistant.core.domain.Result</MissingClass>
+    <MissingClass>cn.herodotus.engine.cache.redis.utils.RedisBitMapUtils</MissingClass>
+    <MissingClass>cn.herodotus.engine.message.core.constants.MessageConstants</MissingClass>
+    <MissingClass>cn.herodotus.engine.message.core.domain.DialogueMessage</MissingClass>
+    <MissingClass>cn.herodotus.engine.message.core.event.LocalSendDialogueMessageEvent</MissingClass>
+    <MissingClass>cn.herodotus.engine.message.core.exception.IllegalChannelException</MissingClass>
+    <MissingClass>cn.herodotus.engine.message.core.exception.PrincipalNotFoundException</MissingClass>
+    <MissingClass>cn.herodotus.engine.rest.core.definition.context.AbstractApplicationContextAware</MissingClass>
+    <MissingClass>cn.herodotus.engine.rest.core.utils.WebUtils</MissingClass>
+    <MissingClass>com.google.common.base.MoreObjects</MissingClass>
+    <MissingClass>com.google.common.base.MoreObjects$ToStringHelper</MissingClass>
+    <MissingClass>com.google.common.base.Objects</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableMap$Builder</MissingClass>
+    <MissingClass>com.google.common.net.HttpHeaders</MissingClass>
+    <MissingClass>jakarta.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>jakarta.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>org.apache.commons.collections4.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.collections4.MapUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ArrayUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.http.HttpHeaders</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatusCode</MissingClass>
+    <MissingClass>org.springframework.http.server.ServerHttpRequest</MissingClass>
+    <MissingClass>org.springframework.http.server.ServerHttpResponse</MissingClass>
+    <MissingClass>org.springframework.http.server.ServletServerHttpRequest</MissingClass>
+    <MissingClass>org.springframework.http.server.ServletServerHttpResponse</MissingClass>
+    <MissingClass>org.springframework.messaging.Message</MissingClass>
+    <MissingClass>org.springframework.messaging.MessageChannel</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.SimpMessagingTemplate</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.ChannelRegistration</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.MessageBrokerRegistry</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.SimpleBrokerRegistration</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.config.TaskExecutorRegistration</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompCommand</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.stomp.StompHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.user.SimpUser</MissingClass>
+    <MissingClass>org.springframework.messaging.simp.user.SimpUserRegistry</MissingClass>
+    <MissingClass>org.springframework.messaging.support.ChannelInterceptor</MissingClass>
+    <MissingClass>org.springframework.messaging.support.MessageHeaderAccessor</MissingClass>
+    <MissingClass>org.springframework.scheduling.TaskScheduler</MissingClass>
+    <MissingClass>org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler</MissingClass>
+    <MissingClass>org.springframework.session.web.socket.config.annotation.AbstractSessionWebSocketMessageBrokerConfigurer</MissingClass>
+    <MissingClass>org.springframework.web.socket.WebSocketHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.SockJsServiceRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompEndpointRegistry</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.StompWebSocketEndpointRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.config.annotation.WebSocketTransportRegistration</MissingClass>
+    <MissingClass>org.springframework.web.socket.messaging.SessionConnectedEvent</MissingClass>
+    <MissingClass>org.springframework.web.socket.messaging.SessionDisconnectEvent</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.HandshakeHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.HandshakeInterceptor</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.support.DefaultHandshakeHandler</MissingClass>
+    <MissingClass>org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:36 +0900" total_classes="22" referenced_classes="76" total_bugs="15" total_size="532" num_packages="11" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.66" clock_seconds="2.40" peak_mbytes="224.33" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="5" priority_2="9" priority_1="1">
+    <FileStats path="cn/herodotus/engine/message/websocket/annotation/EnableHerodotusWebSocket.java" bugCount="0" size="1"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/configuration/MessageWebSocketConfiguration.java" bugCount="0" size="9"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/configuration/WebSocketLogicConfiguration.java" bugCount="0" size="9"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/configuration/WebSocketMessageBrokerConfiguration.java" bugCount="1" size="61" bugHash="b82a2219c36fb4bb869c2b100748e7a9"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/configuration/WebSocketProcessorConfiguration.java" bugCount="0" size="27"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/controller/WebSocketMessageController.java" bugCount="2" size="21" bugHash="ec24419ebd00f80b0c3b60c649130625"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/controller/WebSocketPublishMessageController.java" bugCount="1" size="29" bugHash="68540435c8d35d24e50932d73fa8cfd9"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/definition/AbstractWebSocketListener.java" bugCount="2" size="13" bugHash="ebf7aff420a3661664b433890e67f5e4"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/domain/WebSocketChannel.java" bugCount="1" size="37" bugHash="ffa3e9cf724775c67e9167d2f7d12271"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/domain/WebSocketMessage.java" bugCount="1" size="21" bugHash="2725626779d3e163af431e57a2be613e"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/domain/WebSocketPrincipal.java" bugCount="2" size="61" bugHash="d24de088a382aecdf55475ad8c0727c3"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/interceptor/WebSocketChannelInterceptor.java" bugCount="0" size="40"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/interceptor/WebSocketPrincipalHandshakeHandler.java" bugCount="0" size="25"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/interceptor/WebSocketSessionHandshakeInterceptor.java" bugCount="0" size="39"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/listener/WebSocketConnectedListener.java" bugCount="0" size="16"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/listener/WebSocketDisconnectListener.java" bugCount="0" size="16"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/processor/WebSocketBearerTokenResolver.java" bugCount="0" size="7"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/processor/WebSocketMessageSender.java" bugCount="3" size="30" bugHash="9d7d40b80a14697c2888d4e991b97472"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/properties/WebSocketProperties.java" bugCount="2" size="49" bugHash="70b3061ee955d2439743acafd22cf2fa"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/service/WebSocketDisplayService.java" bugCount="0" size="7"/>
+    <FileStats path="cn/herodotus/engine/message/websocket/utils/WebSocketUtils.java" bugCount="0" size="14"/>
+    <PackageStats package="cn.herodotus.engine.message.websocket.annotation" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="cn.herodotus.engine.message.websocket.annotation.EnableHerodotusWebSocket" sourceFile="EnableHerodotusWebSocket.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.configuration" total_bugs="1" total_types="4" total_size="106" priority_2="1">
+      <ClassStats class="cn.herodotus.engine.message.websocket.configuration.MessageWebSocketConfiguration" sourceFile="MessageWebSocketConfiguration.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.configuration.WebSocketLogicConfiguration" sourceFile="WebSocketLogicConfiguration.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.configuration.WebSocketMessageBrokerConfiguration" sourceFile="WebSocketMessageBrokerConfiguration.java" interface="false" size="61" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.configuration.WebSocketProcessorConfiguration" sourceFile="WebSocketProcessorConfiguration.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.controller" total_bugs="3" total_types="2" total_size="50" priority_2="2" priority_1="1">
+      <ClassStats class="cn.herodotus.engine.message.websocket.controller.WebSocketMessageController" sourceFile="WebSocketMessageController.java" interface="false" size="21" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.controller.WebSocketPublishMessageController" sourceFile="WebSocketPublishMessageController.java" interface="false" size="29" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.definition" total_bugs="2" total_types="1" total_size="13" priority_3="1" priority_2="1">
+      <ClassStats class="cn.herodotus.engine.message.websocket.definition.AbstractWebSocketListener" sourceFile="AbstractWebSocketListener.java" interface="false" size="13" bugs="2" priority_3="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.domain" total_bugs="4" total_types="3" total_size="119" priority_3="1" priority_2="3">
+      <ClassStats class="cn.herodotus.engine.message.websocket.domain.WebSocketChannel" sourceFile="WebSocketChannel.java" interface="false" size="37" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.domain.WebSocketMessage" sourceFile="WebSocketMessage.java" interface="false" size="21" bugs="1" priority_3="1"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.domain.WebSocketPrincipal" sourceFile="WebSocketPrincipal.java" interface="false" size="61" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.interceptor" total_bugs="0" total_types="4" total_size="104">
+      <ClassStats class="cn.herodotus.engine.message.websocket.interceptor.WebSocketChannelInterceptor" sourceFile="WebSocketChannelInterceptor.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.interceptor.WebSocketChannelInterceptor$1" sourceFile="WebSocketChannelInterceptor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.interceptor.WebSocketPrincipalHandshakeHandler" sourceFile="WebSocketPrincipalHandshakeHandler.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.interceptor.WebSocketSessionHandshakeInterceptor" sourceFile="WebSocketSessionHandshakeInterceptor.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.listener" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="cn.herodotus.engine.message.websocket.listener.WebSocketConnectedListener" sourceFile="WebSocketConnectedListener.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.listener.WebSocketDisconnectListener" sourceFile="WebSocketDisconnectListener.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.processor" total_bugs="3" total_types="2" total_size="37" priority_3="3">
+      <ClassStats class="cn.herodotus.engine.message.websocket.processor.WebSocketBearerTokenResolver" sourceFile="WebSocketBearerTokenResolver.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="cn.herodotus.engine.message.websocket.processor.WebSocketMessageSender" sourceFile="WebSocketMessageSender.java" interface="false" size="30" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.properties" total_bugs="2" total_types="1" total_size="49" priority_2="2">
+      <ClassStats class="cn.herodotus.engine.message.websocket.properties.WebSocketProperties" sourceFile="WebSocketProperties.java" interface="false" size="49" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.service" total_bugs="0" total_types="1" total_size="7">
+      <ClassStats class="cn.herodotus.engine.message.websocket.service.WebSocketDisplayService" sourceFile="WebSocketDisplayService.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.herodotus.engine.message.websocket.utils" total_bugs="0" total_types="1" total_size="14">
+      <ClassStats class="cn.herodotus.engine.message.websocket.utils.WebSocketUtils" sourceFile="WebSocketUtils.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="281" invocations="755" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="44127" standardDeviationMicrosecondsPerInvocation="1818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="90" invocations="159" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="58373" standardDeviationMicrosecondsPerInvocation="4642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="76" invocations="76" avgMicrosecondsPerInvocation="1009" maxMicrosecondsPerInvocation="11619" standardDeviationMicrosecondsPerInvocation="2182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="71" invocations="118" avgMicrosecondsPerInvocation="610" maxMicrosecondsPerInvocation="48080" standardDeviationMicrosecondsPerInvocation="4398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="71" invocations="118" avgMicrosecondsPerInvocation="603" maxMicrosecondsPerInvocation="50085" standardDeviationMicrosecondsPerInvocation="4588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="63" invocations="76" avgMicrosecondsPerInvocation="829" maxMicrosecondsPerInvocation="57267" standardDeviationMicrosecondsPerInvocation="6518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="62" invocations="764" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="11974" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="58" invocations="118" avgMicrosecondsPerInvocation="497" maxMicrosecondsPerInvocation="39196" standardDeviationMicrosecondsPerInvocation="3580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="51" invocations="118" avgMicrosecondsPerInvocation="437" maxMicrosecondsPerInvocation="16432" standardDeviationMicrosecondsPerInvocation="1601"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="49" invocations="282" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="10215" standardDeviationMicrosecondsPerInvocation="631"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="47" invocations="76" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="7849" standardDeviationMicrosecondsPerInvocation="1279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="41" invocations="118" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="22952" standardDeviationMicrosecondsPerInvocation="2109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="38" invocations="22" avgMicrosecondsPerInvocation="1751" maxMicrosecondsPerInvocation="26370" standardDeviationMicrosecondsPerInvocation="5477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="35" invocations="76" avgMicrosecondsPerInvocation="460" maxMicrosecondsPerInvocation="27042" standardDeviationMicrosecondsPerInvocation="3073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="28" invocations="76" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="13342" standardDeviationMicrosecondsPerInvocation="1527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="26" invocations="616" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1216" standardDeviationMicrosecondsPerInvocation="102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="25" invocations="76" avgMicrosecondsPerInvocation="340" maxMicrosecondsPerInvocation="8717" standardDeviationMicrosecondsPerInvocation="1060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="25" invocations="22" avgMicrosecondsPerInvocation="1139" maxMicrosecondsPerInvocation="13284" standardDeviationMicrosecondsPerInvocation="2746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="23" invocations="118" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="5312" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="23" invocations="116" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="1322" standardDeviationMicrosecondsPerInvocation="289"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="22" invocations="22" avgMicrosecondsPerInvocation="1012" maxMicrosecondsPerInvocation="11455" standardDeviationMicrosecondsPerInvocation="3156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="1121" avgMicrosecondsPerInvocation="15" maxMicrosecondsPerInvocation="3572" standardDeviationMicrosecondsPerInvocation="137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="15" invocations="22" avgMicrosecondsPerInvocation="724" maxMicrosecondsPerInvocation="6468" standardDeviationMicrosecondsPerInvocation="1686"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="15" invocations="22" avgMicrosecondsPerInvocation="716" maxMicrosecondsPerInvocation="5538" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="15" invocations="82" avgMicrosecondsPerInvocation="190" maxMicrosecondsPerInvocation="1070" standardDeviationMicrosecondsPerInvocation="215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="15" invocations="22" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="11771" standardDeviationMicrosecondsPerInvocation="2419"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="76" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="2057" standardDeviationMicrosecondsPerInvocation="322"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

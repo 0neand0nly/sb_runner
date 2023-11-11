@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685235241" analysisTimestamp="1699688825341" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\ow2-util-i18n-1.0.14.jar</Jar>
+  </Project>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" instanceHash="8209a5fa56c4f8b7a8437491c98c9b56" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization of static field org.ow2.util.i18n.I18n.bundles in org.ow2.util.i18n.I18n.getInstance(String, ClassLoader)</LongMessage>
+    <Class classname="org.ow2.util.i18n.I18n" primary="true">
+      <SourceLine classname="org.ow2.util.i18n.I18n" start="57" end="155" sourcefile="I18n.java" sourcepath="org/ow2/util/i18n/I18n.java">
+        <Message>At I18n.java:[lines 57-155]</Message>
+      </SourceLine>
+      <Message>In class org.ow2.util.i18n.I18n</Message>
+    </Class>
+    <Method classname="org.ow2.util.i18n.I18n" name="getInstance" signature="(Ljava/lang/String;Ljava/lang/ClassLoader;)Lorg/ow2/util/i18n/I18n;" isStatic="true" primary="true">
+      <SourceLine classname="org.ow2.util.i18n.I18n" start="121" end="132" startBytecode="0" endBytecode="27" sourcefile="I18n.java" sourcepath="org/ow2/util/i18n/I18n.java"/>
+      <Message>In method org.ow2.util.i18n.I18n.getInstance(String, ClassLoader)</Message>
+    </Method>
+    <Field classname="org.ow2.util.i18n.I18n" name="bundles" signature="Ljava/util/Map;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="org.ow2.util.i18n.I18n" sourcefile="I18n.java" sourcepath="org/ow2/util/i18n/I18n.java">
+        <Message>In I18n.java</Message>
+      </SourceLine>
+      <Message>On field org.ow2.util.i18n.I18n.bundles</Message>
+    </Field>
+    <SourceLine classname="org.ow2.util.i18n.I18n" primary="true" start="121" end="122" startBytecode="0" endBytecode="13" sourcefile="I18n.java" sourcepath="org/ow2/util/i18n/I18n.java">
+      <Message>At I18n.java:[lines 121-122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugPattern type="LI_LAZY_INIT_STATIC" abbrev="LI" category="MT_CORRECTNESS" cweid="543">
+    <ShortDescription>Incorrect lazy initialization of static field</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains an unsynchronized lazy initialization of a non-volatile static field.
+Because the compiler or processor may reorder instructions,
+threads are not guaranteed to see a completely initialized object,
+<em>if the method can be called by multiple threads</em>.
+You can make the field volatile to correct the problem.
+For more information, see the
+<a href="http://www.cs.umd.edu/~pugh/java/memoryModel/">Java Memory Model web site</a>.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="LI">
+    <Description>Unsynchronized Lazy Initialization</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:15 +0900" total_classes="1" referenced_classes="22" total_bugs="1" total_size="45" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.02" clock_seconds="1.68" peak_mbytes="221.10" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="1">
+    <FileStats path="org/ow2/util/i18n/I18n.java" bugCount="1" size="45" bugHash="703d87f2a3708d637d1232bb70d73f0c"/>
+    <PackageStats package="org.ow2.util.i18n" total_bugs="1" total_types="1" total_size="45" priority_3="1">
+      <ClassStats class="org.ow2.util.i18n.I18n" sourceFile="I18n.java" interface="false" size="45" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="252" invocations="483" avgMicrosecondsPerInvocation="522" maxMicrosecondsPerInvocation="27779" standardDeviationMicrosecondsPerInvocation="1858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="77" invocations="7" avgMicrosecondsPerInvocation="11003" maxMicrosecondsPerInvocation="72670" standardDeviationMicrosecondsPerInvocation="25186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="73" invocations="48" avgMicrosecondsPerInvocation="1531" maxMicrosecondsPerInvocation="52662" standardDeviationMicrosecondsPerInvocation="7529"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="56" invocations="22" avgMicrosecondsPerInvocation="2553" maxMicrosecondsPerInvocation="11194" standardDeviationMicrosecondsPerInvocation="2963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="54" invocations="485" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="9723" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="49" invocations="132" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="10742" standardDeviationMicrosecondsPerInvocation="959"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="36" invocations="22" avgMicrosecondsPerInvocation="1643" maxMicrosecondsPerInvocation="7679" standardDeviationMicrosecondsPerInvocation="1925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="33" invocations="1" avgMicrosecondsPerInvocation="33980" maxMicrosecondsPerInvocation="33980" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="32" invocations="22" avgMicrosecondsPerInvocation="1464" maxMicrosecondsPerInvocation="25715" standardDeviationMicrosecondsPerInvocation="5299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="448" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="8951" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="25" invocations="22" avgMicrosecondsPerInvocation="1159" maxMicrosecondsPerInvocation="13587" standardDeviationMicrosecondsPerInvocation="2759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="22" avgMicrosecondsPerInvocation="1101" maxMicrosecondsPerInvocation="8525" standardDeviationMicrosecondsPerInvocation="2078"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="22" invocations="7" avgMicrosecondsPerInvocation="3264" maxMicrosecondsPerInvocation="17710" standardDeviationMicrosecondsPerInvocation="5927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="19" invocations="7" avgMicrosecondsPerInvocation="2827" maxMicrosecondsPerInvocation="16113" standardDeviationMicrosecondsPerInvocation="5443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="1" avgMicrosecondsPerInvocation="16383" maxMicrosecondsPerInvocation="16383" standardDeviationMicrosecondsPerInvocation="0"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="15" invocations="7" avgMicrosecondsPerInvocation="2268" maxMicrosecondsPerInvocation="13886" standardDeviationMicrosecondsPerInvocation="4745"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685206256" analysisTimestamp="1699687563746" release="">
+  <Project projectName="">
+    <Jar>clean_train50\cdk8s-jenkins-0.0.25.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ea6e643fd7d254597eb6df3ca87cdf48" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Builder.basePlugins(List) may expose internal representation by storing an externally mutable object into JenkinsProps$Builder.basePlugins</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="89" end="164" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 89-164]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Builder</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="basePlugins" signature="(Ljava/util/List;)Lorg/cdk8s/jenkins/JenkinsProps$Builder;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="105" end="106" startBytecode="0" endBytecode="80" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Builder.basePlugins(List)</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="basePlugins" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Builder.basePlugins</Message>
+    </Field>
+    <LocalVariable name="basePlugins" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named basePlugins</Message>
+    </LocalVariable>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true" start="105" end="105" startBytecode="2" endBytecode="2" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 105]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="901769eb51236e23faeb89ac30e412d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Builder.plugins(List) may expose internal representation by storing an externally mutable object into JenkinsProps$Builder.plugins</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="89" end="164" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 89-164]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Builder</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="plugins" signature="(Ljava/util/List;)Lorg/cdk8s/jenkins/JenkinsProps$Builder;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="139" end="140" startBytecode="0" endBytecode="80" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Builder.plugins(List)</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="plugins" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Builder.plugins</Message>
+    </Field>
+    <LocalVariable name="plugins" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named plugins</Message>
+    </LocalVariable>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true" start="139" end="139" startBytecode="2" endBytecode="2" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 139]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6bd2fe5973ce5be61cf124bd94552cf6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Builder.seedJobs(List) may expose internal representation by storing an externally mutable object into JenkinsProps$Builder.seedJobs</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="89" end="164" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 89-164]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Builder</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="seedJobs" signature="(Ljava/util/List;)Lorg/cdk8s/jenkins/JenkinsProps$Builder;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" start="152" end="153" startBytecode="0" endBytecode="80" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Builder.seedJobs(List)</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Builder" name="seedJobs" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Builder.seedJobs</Message>
+    </Field>
+    <LocalVariable name="seedJobs" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named seedJobs</Message>
+    </LocalVariable>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Builder" primary="true" start="152" end="152" startBytecode="2" endBytecode="2" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 152]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3206705095368fe966ec7d99d8399e9e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getBasePlugins() may expose internal representation by returning JenkinsProps$Jsii$Proxy.basePlugins</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="171" end="284" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 171-284]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="getBasePlugins" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="208" end="208" startBytecode="0" endBytecode="46" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getBasePlugins()</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="basePlugins" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.basePlugins</Message>
+    </Field>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true" start="208" end="208" startBytecode="4" endBytecode="4" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 208]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4edf53d4b5721ddc470f0208b38f80f1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getPlugins() may expose internal representation by returning JenkinsProps$Jsii$Proxy.plugins</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="171" end="284" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 171-284]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="getPlugins" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="223" end="223" startBytecode="0" endBytecode="46" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getPlugins()</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="plugins" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.plugins</Message>
+    </Field>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true" start="223" end="223" startBytecode="4" endBytecode="4" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 223]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="670be2ba224b3db486f07887932e34a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getSeedJobs() may expose internal representation by returning JenkinsProps$Jsii$Proxy.seedJobs</LongMessage>
+    <Class classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="171" end="284" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>At JenkinsProps.java:[lines 171-284]</Message>
+      </SourceLine>
+      <Message>In class org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy</Message>
+    </Class>
+    <Method classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="getSeedJobs" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" start="228" end="228" startBytecode="0" endBytecode="46" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java"/>
+      <Message>In method org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.getSeedJobs()</Message>
+    </Method>
+    <Field classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" name="seedJobs" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+        <Message>In JenkinsProps.java</Message>
+      </SourceLine>
+      <Message>Field org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy.seedJobs</Message>
+    </Field>
+    <SourceLine classname="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" primary="true" start="228" end="228" startBytecode="4" endBytecode="4" sourcefile="JenkinsProps.java" sourcepath="org/cdk8s/jenkins/JenkinsProps.java">
+      <Message>At JenkinsProps.java:[line 228]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="20">
+    <MissingClass>com.fasterxml.jackson.databind.JsonNode</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.JsonNodeFactory</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.node.ObjectNode</MissingClass>
+    <MissingClass>org.cdk8s.$Module</MissingClass>
+    <MissingClass>org.cdk8s.ApiObjectMetadata</MissingClass>
+    <MissingClass>software.amazon.jsii.Builder</MissingClass>
+    <MissingClass>software.amazon.jsii.Jsii</MissingClass>
+    <MissingClass>software.amazon.jsii.Jsii$Proxy</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiEngine</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiModule</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiObject</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiObject$InitializationMode</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiObjectMapper</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiObjectRef</MissingClass>
+    <MissingClass>software.amazon.jsii.JsiiSerializable</MissingClass>
+    <MissingClass>software.amazon.jsii.Kernel</MissingClass>
+    <MissingClass>software.amazon.jsii.NativeType</MissingClass>
+    <MissingClass>software.constructs.$Module</MissingClass>
+    <MissingClass>software.constructs.Construct</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:46 +0900" total_classes="13" referenced_classes="52" total_bugs="6" total_size="389" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.03" clock_seconds="2.27" peak_mbytes="224.97" alloc_mbytes="3984.00" gc_seconds="0.02" priority_2="6">
+    <FileStats path="org/cdk8s/jenkins/$Module.java" bugCount="0" size="43"/>
+    <FileStats path="org/cdk8s/jenkins/Jenkins.java" bugCount="0" size="62"/>
+    <FileStats path="org/cdk8s/jenkins/JenkinsProps.java" bugCount="6" size="109" bugHash="71c4f2963809464363f4978c13c967d9"/>
+    <FileStats path="org/cdk8s/jenkins/Plugin.java" bugCount="0" size="75"/>
+    <FileStats path="org/cdk8s/jenkins/SeedJob.java" bugCount="0" size="99"/>
+    <FileStats path="org/cdk8s/jenkins/package-info.java" bugCount="0" size="1"/>
+    <PackageStats package="org.cdk8s.jenkins" total_bugs="6" total_types="13" total_size="389" priority_2="6">
+      <ClassStats class="org.cdk8s.jenkins.$Module" sourceFile="$Module.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.Jenkins" sourceFile="Jenkins.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.Jenkins$Builder" sourceFile="Jenkins.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.JenkinsProps" sourceFile="JenkinsProps.java" interface="true" size="13" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.JenkinsProps$Builder" sourceFile="JenkinsProps.java" interface="false" size="27" bugs="3" priority_2="3"/>
+      <ClassStats class="org.cdk8s.jenkins.JenkinsProps$Jsii$Proxy" sourceFile="JenkinsProps.java" interface="false" size="69" bugs="3" priority_2="3"/>
+      <ClassStats class="org.cdk8s.jenkins.Plugin" sourceFile="Plugin.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.Plugin$Builder" sourceFile="Plugin.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.Plugin$Jsii$Proxy" sourceFile="Plugin.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.SeedJob" sourceFile="SeedJob.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.SeedJob$Builder" sourceFile="SeedJob.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.SeedJob$Jsii$Proxy" sourceFile="SeedJob.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.cdk8s.jenkins.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="260" invocations="599" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="38539" standardDeviationMicrosecondsPerInvocation="1784"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="76" invocations="52" avgMicrosecondsPerInvocation="1474" maxMicrosecondsPerInvocation="14108" standardDeviationMicrosecondsPerInvocation="2596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="71" invocations="91" avgMicrosecondsPerInvocation="785" maxMicrosecondsPerInvocation="49584" standardDeviationMicrosecondsPerInvocation="5179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="70" invocations="97" avgMicrosecondsPerInvocation="724" maxMicrosecondsPerInvocation="59825" standardDeviationMicrosecondsPerInvocation="6036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="66" invocations="52" avgMicrosecondsPerInvocation="1282" maxMicrosecondsPerInvocation="60952" standardDeviationMicrosecondsPerInvocation="8357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="55" invocations="296" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="10615" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="52" invocations="90" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="39561" standardDeviationMicrosecondsPerInvocation="4134"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="52" invocations="91" avgMicrosecondsPerInvocation="573" maxMicrosecondsPerInvocation="36746" standardDeviationMicrosecondsPerInvocation="3823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="47" invocations="52" avgMicrosecondsPerInvocation="906" maxMicrosecondsPerInvocation="7187" standardDeviationMicrosecondsPerInvocation="1473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="46" invocations="90" avgMicrosecondsPerInvocation="514" maxMicrosecondsPerInvocation="21524" standardDeviationMicrosecondsPerInvocation="2269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="45" invocations="52" avgMicrosecondsPerInvocation="865" maxMicrosecondsPerInvocation="27403" standardDeviationMicrosecondsPerInvocation="3922"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="43" invocations="606" avgMicrosecondsPerInvocation="71" maxMicrosecondsPerInvocation="2712" standardDeviationMicrosecondsPerInvocation="186"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="41" invocations="83" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="17372" standardDeviationMicrosecondsPerInvocation="1931"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="39" invocations="98" avgMicrosecondsPerInvocation="398" maxMicrosecondsPerInvocation="15100" standardDeviationMicrosecondsPerInvocation="1620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="52" avgMicrosecondsPerInvocation="661" maxMicrosecondsPerInvocation="17291" standardDeviationMicrosecondsPerInvocation="2383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="27" invocations="83" avgMicrosecondsPerInvocation="326" maxMicrosecondsPerInvocation="7065" standardDeviationMicrosecondsPerInvocation="891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="26" invocations="52" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="6614" standardDeviationMicrosecondsPerInvocation="1087"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="537" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1319" standardDeviationMicrosecondsPerInvocation="92"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="19" invocations="13" avgMicrosecondsPerInvocation="1501" maxMicrosecondsPerInvocation="11703" standardDeviationMicrosecondsPerInvocation="3206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="13" avgMicrosecondsPerInvocation="1375" maxMicrosecondsPerInvocation="10935" standardDeviationMicrosecondsPerInvocation="2872"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="16" invocations="13" avgMicrosecondsPerInvocation="1285" maxMicrosecondsPerInvocation="15418" standardDeviationMicrosecondsPerInvocation="4091"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="15" invocations="13" avgMicrosecondsPerInvocation="1208" maxMicrosecondsPerInvocation="11480" standardDeviationMicrosecondsPerInvocation="3109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="15" invocations="78" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="12368" standardDeviationMicrosecondsPerInvocation="1387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="52" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="2471" standardDeviationMicrosecondsPerInvocation="445"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

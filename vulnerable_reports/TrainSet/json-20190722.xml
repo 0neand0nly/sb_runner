@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685044224" analysisTimestamp="1699685683284" release="">
+  <Project projectName="">
+    <Jar>vul_train50\json-20190722.jar</Jar>
+  </Project>
+  <BugInstance type="EC_UNRELATED_TYPES" priority="1" rank="1" abbrev="EC" category="CORRECTNESS" instanceHash="71b79e9439cbeaddd9b3d9ea284781ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Call to equals() comparing different types</ShortMessage>
+    <LongMessage>Call to org.json.JSONObject$Null.equals(String) in org.json.HTTP.toString(JSONObject)</LongMessage>
+    <Class classname="org.json.HTTP" primary="true">
+      <SourceLine classname="org.json.HTTP" start="34" end="160" sourcefile="HTTP.java" sourcepath="org/json/HTTP.java">
+        <Message>At HTTP.java:[lines 34-160]</Message>
+      </SourceLine>
+      <Message>In class org.json.HTTP</Message>
+    </Class>
+    <Method classname="org.json.HTTP" name="toString" signature="(Lorg/json/JSONObject;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.HTTP" start="128" end="160" startBytecode="0" endBytecode="155" sourcefile="HTTP.java" sourcepath="org/json/HTTP.java"/>
+      <Message>In method org.json.HTTP.toString(JSONObject)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="140" end="4655" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 140-4655]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <Type descriptor="Lorg/json/JSONObject$Null;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.json.JSONObject$Null" start="109" end="151" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 109-151]</Message>
+      </SourceLine>
+      <Message>Expected org.json.JSONObject$Null</Message>
+    </Type>
+    <LocalVariable name="value" register="4" pc="259" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from value</Message>
+    </LocalVariable>
+    <Field classname="org.json.JSONObject" name="NULL" signature="Ljava/lang/Object;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.JSONObject" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>In JSONObject.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.JSONObject.NULL</Message>
+    </Field>
+    <Method classname="org.json.JSONObject$Null" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="org.json.JSONObject$Null" start="132" end="132" startBytecode="0" endBytecode="78" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>org.json.JSONObject$Null.equals(Object) used to determine equality</Message>
+    </Method>
+    <SourceLine classname="org.json.HTTP" primary="true" start="152" end="152" startBytecode="261" endBytecode="261" sourcefile="HTTP.java" sourcepath="org/json/HTTP.java">
+      <Message>At HTTP.java:[line 152]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="4375aa5ba6f6c02deca04ef92036936a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONArray at new org.json.JSONArray(Object) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONArray" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="94" end="1455" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 94-1455]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONArray</Message>
+    </Class>
+    <Method classname="org.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="195" end="206" startBytecode="0" endBytecode="202" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>In method new org.json.JSONArray(Object)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONArray" primary="true" start="206" end="206" startBytecode="77" endBytecode="77" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 206]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONArray" start="206" end="206" startBytecode="77" endBytecode="77" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 206]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c434711ae9424d992d8f1470e1cdc378" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONArray at new org.json.JSONArray(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONArray" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="94" end="1455" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 94-1455]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONArray</Message>
+    </Class>
+    <Method classname="org.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="162" end="163" startBytecode="0" endBytecode="68" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>In method new org.json.JSONArray(String)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONArray" primary="true" start="163" end="163" startBytecode="173" endBytecode="173" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 163]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONArray" start="163" end="163" startBytecode="173" endBytecode="173" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 163]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="8fe1543747b2dd9d7fdda7d07dbc4e0f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONArray at new org.json.JSONArray(JSONTokener) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONArray" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="94" end="1455" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 94-1455]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONArray</Message>
+    </Class>
+    <Method classname="org.json.JSONArray" name="&lt;init&gt;" signature="(Lorg/json/JSONTokener;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="107" end="149" startBytecode="0" endBytecode="366" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>In method new org.json.JSONArray(JSONTokener)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONArray" primary="true" start="109" end="109" startBytecode="15" endBytecode="15" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 109]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONArray" start="109" end="109" startBytecode="15" endBytecode="15" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 109]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DCN_NULLPOINTER_EXCEPTION" priority="2" rank="17" abbrev="DCN" category="STYLE" instanceHash="8418c741fc51c87cdabc89d088770b7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>NullPointerException caught</ShortMessage>
+    <LongMessage>Do not catch NullPointerException like in org.json.JSONArray.optEnum(Class, int, Enum)</LongMessage>
+    <Class classname="org.json.JSONArray" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="94" end="1455" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 94-1455]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONArray</Message>
+    </Class>
+    <Method classname="org.json.JSONArray" name="optEnum" signature="(Ljava/lang/Class;ILjava/lang/Enum;)Ljava/lang/Enum;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="680" end="694" startBytecode="0" endBytecode="336" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>In method org.json.JSONArray.optEnum(Class, int, Enum)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONArray" primary="true" start="693" end="693" startBytecode="56" endBytecode="56" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 693]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_TOSTRING_COULD_RETURN_NULL" priority="2" rank="14" abbrev="NP" category="BAD_PRACTICE" instanceHash="864bb43dd789ee01bec5bb38aefa872d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>toString method may return null</ShortMessage>
+    <LongMessage>org.json.JSONArray.toString() may return null</LongMessage>
+    <Class classname="org.json.JSONArray" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="94" end="1455" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 94-1455]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONArray</Message>
+    </Class>
+    <Method classname="org.json.JSONArray" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONArray" start="1297" end="1299" startBytecode="0" endBytecode="88" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>In method org.json.JSONArray.toString()</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONArray" primary="true" start="1299" end="1299" startBytecode="8" endBytecode="8" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 1299]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="918b51cd7eaf8294c167791f490a0656" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of object, which is known to be non-null in org.json.JSONML.toString(JSONArray)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="toString" signature="(Lorg/json/JSONArray;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="399" end="462" startBytecode="0" endBytecode="776" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.toString(JSONArray)</Message>
+    </Method>
+    <LocalVariable name="object" register="4" pc="230" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from object</Message>
+    </LocalVariable>
+    <Method classname="org.json.JSONArray" name="get" signature="(I)Ljava/lang/Object;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.json.JSONArray" start="223" end="227" startBytecode="0" endBytecode="131" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>Return value of org.json.JSONArray.get(int) of type Object</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONML" primary="true" start="445" end="445" startBytecode="232" endBytecode="232" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at JSONML.java:[line 445]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="6ca12bfde00c4f5675245724ed687d76" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of object, which is known to be non-null in org.json.JSONML.toString(JSONObject)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="toString" signature="(Lorg/json/JSONObject;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="475" end="540" startBytecode="0" endBytecode="803" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.toString(JSONObject)</Message>
+    </Method>
+    <LocalVariable name="object" register="5" pc="236" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from object</Message>
+    </LocalVariable>
+    <Method classname="org.json.JSONArray" name="get" signature="(I)Ljava/lang/Object;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.json.JSONArray" start="223" end="227" startBytecode="0" endBytecode="131" sourcefile="JSONArray.java" sourcepath="org/json/JSONArray.java"/>
+      <Message>Return value of org.json.JSONArray.get(int) of type Object</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONML" primary="true" start="523" end="523" startBytecode="238" endBytecode="238" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at JSONML.java:[line 523]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="a57c1dab678194cc2a58f58a64df301c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="BANG" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.BANG</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="89" end="89" startBytecode="134" endBytecode="134" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="f347520a2fb51b34cd5a017cbec30aad" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="EQ" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.EQ</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="170" end="170" startBytecode="504" endBytecode="504" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 170]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="7faeefaa93e55fef9c1fa13973b417d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="GT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.GT</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="85" end="85" startBytecode="116" endBytecode="116" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 85]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONML" start="117" end="117" startBytecode="270" endBytecode="270" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONML.java:[line 117]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONML" start="201" end="201" startBytecode="639" endBytecode="639" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONML.java:[line 201]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONML" start="188" end="188" startBytecode="610" endBytecode="610" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONML.java:[line 188]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="4c36c806ad8901b60039fb66f142d182" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="LT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.LT</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="72" end="72" startBytecode="37" endBytecode="37" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 72]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONML" start="115" end="115" startBytecode="256" endBytecode="256" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONML.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="7a7f9059496cdb1bab24be91d27479a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="QUEST" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.QUEST</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="122" end="122" startBytecode="289" endBytecode="289" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="fd11f0bb6b6e246b1ea8658550003c60" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</LongMessage>
+    <Class classname="org.json.JSONML" primary="true">
+      <SourceLine classname="org.json.JSONML" start="35" end="540" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+        <Message>At JSONML.java:[lines 35-540]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONML</Message>
+    </Class>
+    <Method classname="org.json.JSONML" name="parse" signature="(Lorg/json/XMLTokener;ZLorg/json/JSONArray;Z)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONML" start="54" end="225" startBytecode="0" endBytecode="366" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java"/>
+      <Message>In method org.json.JSONML.parse(XMLTokener, boolean, JSONArray, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="SLASH" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.SLASH</Message>
+    </Field>
+    <SourceLine classname="org.json.JSONML" primary="true" start="75" end="75" startBytecode="59" endBytecode="59" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java">
+      <Message>At JSONML.java:[line 75]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONML" start="187" end="187" startBytecode="600" endBytecode="600" sourcefile="JSONML.java" sourcepath="org/json/JSONML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONML.java:[line 187]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c6f7fb0f16e06053b7438be4c8c7fb7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONObject at new org.json.JSONObject(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="406" end="407" startBytecode="0" endBytecode="68" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(String)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="407" end="407" startBytecode="55" endBytecode="55" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 407]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" start="407" end="407" startBytecode="55" endBytecode="55" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 407]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="2848c283df02836b869eec50fdf2f2e1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONObject at new org.json.JSONObject(String, Locale) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/Locale;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="420" end="450" startBytecode="0" endBytecode="503" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(String, Locale)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="421" end="421" startBytecode="12" endBytecode="12" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 421]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" start="421" end="421" startBytecode="12" endBytecode="12" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 421]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="92329db7a99d865f08cbcc66a8e8ac4a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONObject at new org.json.JSONObject(Map) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="287" end="302" startBytecode="0" endBytecode="312" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(Map)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="294" end="294" startBytecode="88" endBytecode="88" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 294]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" start="294" end="294" startBytecode="88" endBytecode="88" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 294]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f7fc6d182952b2f6a1d168679dbe6191" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONObject at new org.json.JSONObject(JSONTokener) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Lorg/json/JSONTokener;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="217" end="271" startBytecode="0" endBytecode="429" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(JSONTokener)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="226" end="226" startBytecode="40" endBytecode="40" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 226]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" start="226" end="226" startBytecode="40" endBytecode="40" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 226]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DCN_NULLPOINTER_EXCEPTION" priority="2" rank="17" abbrev="DCN" category="STYLE" instanceHash="be937280d1500d68a3821b5fae450e82" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>NullPointerException caught</ShortMessage>
+    <LongMessage>Do not catch NullPointerException like in org.json.JSONObject.optEnum(Class, String, Enum)</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="optEnum" signature="(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="1045" end="1059" startBytecode="0" endBytecode="338" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.optEnum(Class, String, Enum)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="1058" end="1058" startBytecode="56" endBytecode="56" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 1058]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="1af0038cee5a4deb2df8a14d13228bce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>new org.json.JSONObject(Object, String[]) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/Object;[Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="382" end="391" startBytecode="0" endBytecode="265" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(Object, String[])</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="388" end="388" startBytecode="47" endBytecode="47" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 388]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="388" end="388" startBytecode="47" endBytecode="47" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 388]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="d56cad9d8ba3ef4dec0d984fb297fcf8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>new org.json.JSONObject(JSONObject, String[]) might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Lorg/json/JSONObject;[Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="198" end="205" startBytecode="0" endBytecode="177" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(JSONObject, String[])</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="202" end="202" startBytecode="32" endBytecode="32" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 202]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="202" end="202" startBytecode="32" endBytecode="32" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 202]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EC_NULL_ARG" priority="2" rank="9" abbrev="EC" category="CORRECTNESS" instanceHash="899ee4588bdd60f543629dbad05574e6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Call to equals(null)</ShortMessage>
+    <LongMessage>Call to equals(null) in org.json.JSONObject.writeValue(Writer, Object, int, int)</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="writeValue" signature="(Ljava/io/Writer;Ljava/lang/Object;II)Ljava/io/Writer;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="2396" end="2435" startBytecode="0" endBytecode="148" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.writeValue(Writer, Object, int, int)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="2396" end="2396" startBytecode="6" endBytecode="6" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 2396]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_TOSTRING_COULD_RETURN_NULL" priority="2" rank="14" abbrev="NP" category="BAD_PRACTICE" instanceHash="254aeb38d665f87ac31a18916af68fca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>toString method may return null</ShortMessage>
+    <LongMessage>org.json.JSONObject.toString() may return null</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="2256" end="2258" startBytecode="0" endBytecode="88" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.toString()</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="2258" end="2258" startBytecode="8" endBytecode="8" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 2258]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="27c36ce1688e7386e77b839685f7c4e7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.json.JSONObject.getNames(Object) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="getNames" signature="(Ljava/lang/Object;)[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="810" end="823" startBytecode="0" endBytecode="243" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.getNames(Object)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="811" end="811" startBytecode="5" endBytecode="5" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 811]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONObject" start="817" end="817" startBytecode="24" endBytecode="24" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 817]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="5274e0a23a8e74adb654d1768f5c4428" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.json.JSONObject.getNames(JSONObject) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="getNames" signature="(Lorg/json/JSONObject;)[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="796" end="799" startBytecode="0" endBytecode="87" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.getNames(JSONObject)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="797" end="797" startBytecode="8" endBytecode="8" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 797]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="cde2411f7fb0a294b7e040f16d0d1e6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of key, which is known to be non-null in new org.json.JSONObject(JSONTokener)</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Lorg/json/JSONTokener;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="217" end="271" startBytecode="0" endBytecode="429" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(JSONTokener)</Message>
+    </Method>
+    <LocalVariable name="key" register="3" pc="90" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from key</Message>
+    </LocalVariable>
+    <Method classname="java.lang.Object" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.Object" start="256" end="256" startBytecode="0" endBytecode="77" sourcefile="Object.java" sourcepath="java/lang/Object.java"/>
+      <Message>Return value of Object.toString() of type String</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="245" end="245" startBytecode="91" endBytecode="91" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at JSONObject.java:[line 245]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="d17b18d0bb1eb7940e41d8624bd15ecd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in new org.json.JSONObject(Object, String[])</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/Object;[Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="382" end="391" startBytecode="0" endBytecode="265" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method new org.json.JSONObject(Object, String[])</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="388" end="388" startBytecode="47" endBytecode="47" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 388]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="416b81e5b16b7047dd6522c1ae69411" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.json.JSONObject.stringToValue(String)</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="stringToValue" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="2148" end="2191" startBytecode="0" endBytecode="366" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.stringToValue(String)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="2188" end="2188" startBytecode="147" endBytecode="147" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 2188]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="32f3bfa80354c9c749737bb32475b48d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.json.JSONObject.wrap(Object)</LongMessage>
+    <Class classname="org.json.JSONObject" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="159" end="2549" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 159-2549]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject</Message>
+    </Class>
+    <Method classname="org.json.JSONObject" name="wrap" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONObject" start="2341" end="2376" startBytecode="0" endBytecode="564" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject.wrap(Object)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject" primary="true" start="2375" end="2375" startBytecode="252" endBytecode="252" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 2375]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_UNUSUAL" priority="2" rank="17" abbrev="Eq" category="STYLE" instanceHash="c75a68ae61bf3fa2e23dbc25430c55a9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unusual equals method</ShortMessage>
+    <LongMessage>org.json.JSONObject$Null.equals(Object) is unusual</LongMessage>
+    <Class classname="org.json.JSONObject$Null" primary="true">
+      <SourceLine classname="org.json.JSONObject$Null" start="109" end="151" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 109-151]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONObject$Null</Message>
+    </Class>
+    <Method classname="org.json.JSONObject$Null" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONObject$Null" start="132" end="132" startBytecode="0" endBytecode="78" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java"/>
+      <Message>In method org.json.JSONObject$Null.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONObject$Null" start="132" end="132" startBytecode="0" endBytecode="78" sourcefile="JSONObject.java" sourcepath="org/json/JSONObject.java" synthetic="true">
+      <Message>At JSONObject.java:[line 132]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="715204094f2a6ec579aa38e7f4914c1d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.json.JSONPointer at new org.json.JSONPointer(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.json.JSONPointer" primary="true">
+      <SourceLine classname="org.json.JSONPointer" start="125" end="289" sourcefile="JSONPointer.java" sourcepath="org/json/JSONPointer.java">
+        <Message>At JSONPointer.java:[lines 125-289]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONPointer</Message>
+    </Class>
+    <Method classname="org.json.JSONPointer" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONPointer" start="139" end="183" startBytecode="0" endBytecode="542" sourcefile="JSONPointer.java" sourcepath="org/json/JSONPointer.java"/>
+      <Message>In method new org.json.JSONPointer(String)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONPointer" primary="true" start="141" end="141" startBytecode="17" endBytecode="17" sourcefile="JSONPointer.java" sourcepath="org/json/JSONPointer.java">
+      <Message>At JSONPointer.java:[line 141]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONPointer" start="141" end="141" startBytecode="17" endBytecode="17" sourcefile="JSONPointer.java" sourcepath="org/json/JSONPointer.java">
+      <Message>At JSONPointer.java:[line 141]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_TOSTRING_COULD_RETURN_NULL" priority="2" rank="14" abbrev="NP" category="BAD_PRACTICE" instanceHash="cf1d0397aa1497390ced9f723a7b1241" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>toString method may return null</ShortMessage>
+    <LongMessage>org.json.JSONStringer.toString() may return null</LongMessage>
+    <Class classname="org.json.JSONStringer" primary="true">
+      <SourceLine classname="org.json.JSONStringer" start="64" end="77" sourcefile="JSONStringer.java" sourcepath="org/json/JSONStringer.java">
+        <Message>At JSONStringer.java:[lines 64-77]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONStringer</Message>
+    </Class>
+    <Method classname="org.json.JSONStringer" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONStringer" start="77" end="77" startBytecode="0" endBytecode="75" sourcefile="JSONStringer.java" sourcepath="org/json/JSONStringer.java"/>
+      <Message>In method org.json.JSONStringer.toString()</Message>
+    </Method>
+    <String value="null" role="STRING_NONSTRING_CONSTANT">
+      <Message>Constant value null</Message>
+    </String>
+    <SourceLine classname="org.json.JSONStringer" primary="true" start="77" end="77" startBytecode="20" endBytecode="20" sourcefile="JSONStringer.java" sourcepath="org/json/JSONStringer.java" role="SOURCE_LINE_RETURNED">
+      <Message>Returned at JSONStringer.java:[line 77]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.JSONStringer" start="77" end="77" startBytecode="19" endBytecode="19" sourcefile="JSONStringer.java" sourcepath="org/json/JSONStringer.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at JSONStringer.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="29143c3de73a1e7be828f27d2e736584" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in new org.json.JSONTokener(InputStream): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="org.json.JSONTokener" primary="true">
+      <SourceLine classname="org.json.JSONTokener" start="65" end="528" sourcefile="JSONTokener.java" sourcepath="org/json/JSONTokener.java">
+        <Message>At JSONTokener.java:[lines 65-528]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONTokener</Message>
+    </Class>
+    <Method classname="org.json.JSONTokener" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.json.JSONTokener" start="84" end="85" startBytecode="0" endBytecode="68" sourcefile="JSONTokener.java" sourcepath="org/json/JSONTokener.java"/>
+      <Message>In method new org.json.JSONTokener(InputStream)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONTokener" primary="true" start="84" end="84" startBytecode="6" endBytecode="6" sourcefile="JSONTokener.java" sourcepath="org/json/JSONTokener.java">
+      <Message>At JSONTokener.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EC_NULL_ARG" priority="2" rank="9" abbrev="EC" category="CORRECTNESS" instanceHash="7cd6c91b494e110399b3c12e9bb59701" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Call to equals(null)</ShortMessage>
+    <LongMessage>Call to equals(null) in org.json.JSONWriter.valueToString(Object)</LongMessage>
+    <Class classname="org.json.JSONWriter" primary="true">
+      <SourceLine classname="org.json.JSONWriter" start="97" end="411" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java">
+        <Message>At JSONWriter.java:[lines 97-411]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONWriter</Message>
+    </Class>
+    <Method classname="org.json.JSONWriter" name="valueToString" signature="(Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONWriter" start="324" end="368" startBytecode="0" endBytecode="112" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java"/>
+      <Message>In method org.json.JSONWriter.valueToString(Object)</Message>
+    </Method>
+    <SourceLine classname="org.json.JSONWriter" primary="true" start="324" end="324" startBytecode="6" endBytecode="6" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java">
+      <Message>At JSONWriter.java:[line 324]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" instanceHash="ecd00816f65fd2361d2469bab5b0c414" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.json.JSONWriter.valueToString(Object)</LongMessage>
+    <Class classname="org.json.JSONWriter" primary="true">
+      <SourceLine classname="org.json.JSONWriter" start="97" end="411" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java">
+        <Message>At JSONWriter.java:[lines 97-411]</Message>
+      </SourceLine>
+      <Message>In class org.json.JSONWriter</Message>
+    </Class>
+    <Method classname="org.json.JSONWriter" name="valueToString" signature="(Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.JSONWriter" start="324" end="368" startBytecode="0" endBytecode="112" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java"/>
+      <Message>In method org.json.JSONWriter.valueToString(Object)</Message>
+    </Method>
+    <LocalVariable name="object" register="1" pc="64" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from object</Message>
+    </LocalVariable>
+    <SourceLine classname="org.json.JSONWriter" primary="true" start="337" end="337" startBytecode="67" endBytecode="67" sourcefile="JSONWriter.java" sourcepath="org/json/JSONWriter.java">
+      <Message>At JSONWriter.java:[line 337]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="fec504f52e6ae7151c7a575a37662bb6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="BANG" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.BANG</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="273" end="273" startBytecode="14" endBytecode="14" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 273]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="e422d7cea9d5971ddd463f3432ca7ad6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="EQ" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.EQ</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="345" end="345" startBytecode="368" endBytecode="368" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 345]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="8c857c1e01d2b29febb0ac5e7022fd4c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="GT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.GT</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="301" end="301" startBytecode="160" endBytecode="160" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 301]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.XML" start="322" end="322" startBytecode="282" endBytecode="282" sourcefile="XML.java" sourcepath="org/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 322]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.XML" start="381" end="381" startBytecode="560" endBytecode="560" sourcefile="XML.java" sourcepath="org/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 381]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.XML" start="369" end="369" startBytecode="496" endBytecode="496" sourcefile="XML.java" sourcepath="org/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 369]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="e2c786ffce7bf1cbaa43d0c91111be40" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="LT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.LT</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="299" end="299" startBytecode="146" endBytecode="146" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 299]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.XML" start="397" end="397" startBytecode="664" endBytecode="664" sourcefile="XML.java" sourcepath="org/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 397]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="f9f87575e17ffcdc15e631bd626405b4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="QUEST" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.QUEST</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="306" end="306" startBytecode="178" endBytecode="178" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 306]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="1449d06a262f2505dd102256d3e9d5de" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="parse" signature="(Lorg/json/XMLTokener;Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/XMLParserConfiguration;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="254" end="414" startBytecode="0" endBytecode="347" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.parse(XMLTokener, JSONObject, String, XMLParserConfiguration)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="org.json.XML" name="SLASH" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.json.XML" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.json.XML.SLASH</Message>
+    </Field>
+    <SourceLine classname="org.json.XML" primary="true" start="311" end="311" startBytecode="194" endBytecode="194" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 311]</Message>
+    </SourceLine>
+    <SourceLine classname="org.json.XML" start="367" end="367" startBytecode="486" endBytecode="486" sourcefile="XML.java" sourcepath="org/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 367]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="96d7e5c931378efb75a39c73d8dba52a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.json.XML.stringToValue(String)</LongMessage>
+    <Class classname="org.json.XML" primary="true">
+      <SourceLine classname="org.json.XML" start="39" end="764" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 39-764]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML</Message>
+    </Class>
+    <Method classname="org.json.XML" name="stringToValue" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XML" start="429" end="470" startBytecode="0" endBytecode="403" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML.stringToValue(String)</Message>
+    </Method>
+    <SourceLine classname="org.json.XML" primary="true" start="467" end="467" startBytecode="179" endBytecode="179" sourcefile="XML.java" sourcepath="org/json/XML.java">
+      <Message>At XML.java:[line 467]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IT_NO_SUCH_ELEMENT" priority="3" rank="19" abbrev="It" category="BAD_PRACTICE" instanceHash="c3da507562fd95a1f09cbd70ffe225c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Iterator next() method cannot throw NoSuchElementException</ShortMessage>
+    <LongMessage>org.json.XML$1$1.next() cannot throw NoSuchElementException</LongMessage>
+    <Class classname="org.json.XML$1$1" primary="true">
+      <SourceLine classname="org.json.XML$1$1" start="88" end="106" sourcefile="XML.java" sourcepath="org/json/XML.java">
+        <Message>At XML.java:[lines 88-106]</Message>
+      </SourceLine>
+      <Message>In class org.json.XML$1$1</Message>
+    </Class>
+    <Method classname="org.json.XML$1$1" name="next" signature="()Ljava/lang/Integer;" isStatic="false" primary="true">
+      <SourceLine classname="org.json.XML$1$1" start="99" end="101" startBytecode="0" endBytecode="92" sourcefile="XML.java" sourcepath="org/json/XML.java"/>
+      <Message>In method org.json.XML$1$1.next()</Message>
+    </Method>
+    <SourceLine classname="org.json.XML$1$1" start="99" end="101" startBytecode="0" endBytecode="92" sourcefile="XML.java" sourcepath="org/json/XML.java" synthetic="true">
+      <Message>At XML.java:[lines 99-101]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="192de5c84040ea54df8e809f4ed42e59" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.json.XMLTokener.entity is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.json.XMLTokener" primary="true">
+      <SourceLine classname="org.json.XMLTokener" start="44" end="403" sourcefile="XMLTokener.java" sourcepath="org/json/XMLTokener.java">
+        <Message>At XMLTokener.java:[lines 44-403]</Message>
+      </SourceLine>
+      <Message>In class org.json.XMLTokener</Message>
+    </Class>
+    <Field classname="org.json.XMLTokener" name="entity" signature="Ljava/util/HashMap;" isStatic="true" primary="true">
+      <SourceLine classname="org.json.XMLTokener" sourcefile="XMLTokener.java" sourcepath="org/json/XMLTokener.java">
+        <Message>In XMLTokener.java</Message>
+      </SourceLine>
+      <Message>Field org.json.XMLTokener.entity</Message>
+    </Field>
+    <SourceLine classname="org.json.XMLTokener" primary="true" start="44" end="44" startBytecode="9" endBytecode="9" sourcefile="XMLTokener.java" sourcepath="org/json/XMLTokener.java">
+      <Message>At XMLTokener.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="NP_TOSTRING_COULD_RETURN_NULL" abbrev="NP" category="BAD_PRACTICE">
+    <ShortDescription>toString method may return null</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+    This toString method seems to return null in some circumstances. A liberal reading of the
+    spec could be interpreted as allowing this, but it is probably a bad idea and could cause
+    other code to break. Return the empty string or some other appropriate string rather than null.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="EC_NULL_ARG" abbrev="EC" category="CORRECTNESS">
+    <ShortDescription>Call to equals(null)</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method calls equals(Object), passing a null value as
+the argument. According to the contract of the equals() method,
+this call should always return <code>false</code>.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EC_UNRELATED_TYPES" abbrev="EC" category="CORRECTNESS">
+    <ShortDescription>Call to equals() comparing different types</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method calls equals(Object) on two references of different
+class types and analysis suggests they will be to objects of different classes
+at runtime. Further, examination of the equals methods that would be invoked suggest that either
+this call will always return false, or else the equals method is not be symmetric (which is
+a property required by the contract
+for equals in class Object).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RC_REF_COMPARISON_BAD_PRACTICE" abbrev="RC" category="BAD_PRACTICE">
+    <ShortDescription>Suspicious reference comparison to constant</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method compares a reference value to a constant using the == or != operator,
+where the correct way to compare instances of this type is generally
+with the equals() method.
+It is possible to create distinct instances that are equal but do not compare as == since
+they are different objects.
+Examples of classes which should generally
+not be compared by reference are java.lang.Integer, java.lang.Float, etc.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DCN_NULLPOINTER_EXCEPTION" abbrev="DCN" category="STYLE">
+    <ShortDescription>NullPointerException caught</ShortDescription>
+    <Details><![CDATA[
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IT_NO_SUCH_ELEMENT" abbrev="It" category="BAD_PRACTICE">
+    <ShortDescription>Iterator next() method cannot throw NoSuchElementException</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>java.util.Iterator</code> interface.&nbsp;
+  However, its <code>next()</code> method is not capable of throwing
+  <code>java.util.NoSuchElementException</code>.&nbsp; The <code>next()</code>
+  method should be changed so it throws <code>NoSuchElementException</code>
+  if is called when there are no more elements to return.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_UNUSUAL" abbrev="Eq" category="STYLE">
+    <ShortDescription>Unusual equals method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class doesn't do any of the patterns we recognize for checking that the type of the argument
+is compatible with the type of the <code>this</code> object. There might not be anything wrong with
+this code, but it is worth reviewing.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="It">
+    <Description>Incorrect definition of Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="DCN">
+    <Description>Don&apos;t Catch NullPointer Exception</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="RC">
+    <Description>Questionable use of reference equality rather than calling equals</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <BugCode abbrev="EC">
+    <Description>Comparing incompatible types for equality</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:44:04 +0900" total_classes="26" referenced_classes="120" total_bugs="48" total_size="2591" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="4.00" clock_seconds="4.51" peak_mbytes="262.30" alloc_mbytes="3984.00" gc_seconds="0.08" priority_3="12" priority_2="34" priority_1="2">
+    <FileStats path="org/json/CDL.java" bugCount="0" size="99"/>
+    <FileStats path="org/json/Cookie.java" bugCount="0" size="64"/>
+    <FileStats path="org/json/CookieList.java" bugCount="0" size="27"/>
+    <FileStats path="org/json/HTTP.java" bugCount="1" size="53" bugHash="78e52b391abefa6e7deee954c8ee388b"/>
+    <FileStats path="org/json/HTTPTokener.java" bugCount="0" size="20"/>
+    <FileStats path="org/json/JSONArray.java" bugCount="5" size="359" bugHash="c97573a96c8878d35e1778bbf1e317d1"/>
+    <FileStats path="org/json/JSONException.java" bugCount="0" size="11"/>
+    <FileStats path="org/json/JSONML.java" bugCount="8" size="203" bugHash="6a15a8a76c99bf87b9df1258fddf3e7a"/>
+    <FileStats path="org/json/JSONObject.java" bugCount="16" size="789" bugHash="3b288f9383c131e728d25c912cd97918"/>
+    <FileStats path="org/json/JSONPointer.java" bugCount="1" size="101" bugHash="29b01d3652ae31760623634c5b8f4352"/>
+    <FileStats path="org/json/JSONPointerException.java" bugCount="0" size="8"/>
+    <FileStats path="org/json/JSONPropertyIgnore.java" bugCount="0" size="1"/>
+    <FileStats path="org/json/JSONPropertyName.java" bugCount="0" size="2"/>
+    <FileStats path="org/json/JSONString.java" bugCount="0" size="2"/>
+    <FileStats path="org/json/JSONStringer.java" bugCount="1" size="6" bugHash="b581a7466b28ea1233830ebde1b0bf3d"/>
+    <FileStats path="org/json/JSONTokener.java" bugCount="1" size="206" bugHash="1fc73e8f6933db8b193cace3de5d4d3e"/>
+    <FileStats path="org/json/JSONWriter.java" bugCount="2" size="137" bugHash="41d4e53877acbb5aebfbfb7c22bd0bc5"/>
+    <FileStats path="org/json/Property.java" bugCount="0" size="21"/>
+    <FileStats path="org/json/XML.java" bugCount="8" size="304" bugHash="261301e264bf1419f5c2547620534242"/>
+    <FileStats path="org/json/XMLParserConfiguration.java" bugCount="0" size="30"/>
+    <FileStats path="org/json/XMLTokener.java" bugCount="1" size="148" bugHash="7c29c188dd1b427f8ba7b816cc1d90e4"/>
+    <PackageStats package="org.json" total_bugs="48" total_types="26" total_size="2591" priority_3="12" priority_2="34" priority_1="2">
+      <ClassStats class="org.json.CDL" sourceFile="CDL.java" interface="false" size="99" bugs="0"/>
+      <ClassStats class="org.json.Cookie" sourceFile="Cookie.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="org.json.CookieList" sourceFile="CookieList.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="org.json.HTTP" sourceFile="HTTP.java" interface="false" size="53" bugs="1" priority_1="1"/>
+      <ClassStats class="org.json.HTTPTokener" sourceFile="HTTPTokener.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.json.JSONArray" sourceFile="JSONArray.java" interface="false" size="359" bugs="7" priority_2="7"/>
+      <ClassStats class="org.json.JSONException" sourceFile="JSONException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.json.JSONML" sourceFile="JSONML.java" interface="false" size="203" bugs="8" priority_3="2" priority_2="6"/>
+      <ClassStats class="org.json.JSONObject" sourceFile="JSONObject.java" interface="false" size="776" bugs="17" priority_3="8" priority_2="9"/>
+      <ClassStats class="org.json.JSONObject$1" sourceFile="JSONObject.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.json.JSONObject$Null" sourceFile="JSONObject.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="org.json.JSONPointer" sourceFile="JSONPointer.java" interface="false" size="86" bugs="1" priority_2="1"/>
+      <ClassStats class="org.json.JSONPointer$Builder" sourceFile="JSONPointer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.json.JSONPointerException" sourceFile="JSONPointerException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.json.JSONPropertyIgnore" sourceFile="JSONPropertyIgnore.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="org.json.JSONPropertyName" sourceFile="JSONPropertyName.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.json.JSONString" sourceFile="JSONString.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.json.JSONStringer" sourceFile="JSONStringer.java" interface="false" size="6" bugs="1" priority_2="1"/>
+      <ClassStats class="org.json.JSONTokener" sourceFile="JSONTokener.java" interface="false" size="206" bugs="1" priority_1="1"/>
+      <ClassStats class="org.json.JSONWriter" sourceFile="JSONWriter.java" interface="false" size="137" bugs="2" priority_2="2"/>
+      <ClassStats class="org.json.Property" sourceFile="Property.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.json.XML" sourceFile="XML.java" interface="false" size="281" bugs="7" priority_3="1" priority_2="6"/>
+      <ClassStats class="org.json.XML$1" sourceFile="XML.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.json.XML$1$1" sourceFile="XML.java" interface="false" size="17" bugs="1" priority_3="1"/>
+      <ClassStats class="org.json.XMLParserConfiguration" sourceFile="XMLParserConfiguration.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.json.XMLTokener" sourceFile="XMLTokener.java" interface="false" size="148" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="371" invocations="813" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="82340" standardDeviationMicrosecondsPerInvocation="3011"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="175" invocations="324" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="20684" standardDeviationMicrosecondsPerInvocation="1868"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="165" invocations="312" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="11177" standardDeviationMicrosecondsPerInvocation="1187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="153" invocations="325" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="28816" standardDeviationMicrosecondsPerInvocation="1980"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="143" invocations="311" avgMicrosecondsPerInvocation="462" maxMicrosecondsPerInvocation="8334" standardDeviationMicrosecondsPerInvocation="1073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="116" invocations="120" avgMicrosecondsPerInvocation="974" maxMicrosecondsPerInvocation="20063" standardDeviationMicrosecondsPerInvocation="2246"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="116" invocations="311" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="16388" standardDeviationMicrosecondsPerInvocation="1084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="113" invocations="715" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="12333" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="112" invocations="312" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="18383" standardDeviationMicrosecondsPerInvocation="1248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="104" invocations="164" avgMicrosecondsPerInvocation="635" maxMicrosecondsPerInvocation="61851" standardDeviationMicrosecondsPerInvocation="4837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="100" invocations="314" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="56091" standardDeviationMicrosecondsPerInvocation="3174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="85" invocations="120" avgMicrosecondsPerInvocation="709" maxMicrosecondsPerInvocation="12223" standardDeviationMicrosecondsPerInvocation="1487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="67" invocations="26" avgMicrosecondsPerInvocation="2579" maxMicrosecondsPerInvocation="41893" standardDeviationMicrosecondsPerInvocation="7973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="66" invocations="120" avgMicrosecondsPerInvocation="552" maxMicrosecondsPerInvocation="30959" standardDeviationMicrosecondsPerInvocation="3187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="57" invocations="818" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="3364" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="54" invocations="26" avgMicrosecondsPerInvocation="2083" maxMicrosecondsPerInvocation="32241" standardDeviationMicrosecondsPerInvocation="6720"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="52" invocations="304" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="2673" standardDeviationMicrosecondsPerInvocation="280"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="52" invocations="120" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="14903" standardDeviationMicrosecondsPerInvocation="1434"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="45" invocations="120" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="32950" standardDeviationMicrosecondsPerInvocation="2992"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="43" invocations="219" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="12326" standardDeviationMicrosecondsPerInvocation="908"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="42" invocations="314" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="15642" standardDeviationMicrosecondsPerInvocation="995"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="35" invocations="120" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="7258" standardDeviationMicrosecondsPerInvocation="810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInstanceLockOnSharedStaticData" totalMilliseconds="34" invocations="26" avgMicrosecondsPerInvocation="1345" maxMicrosecondsPerInvocation="21532" standardDeviationMicrosecondsPerInvocation="4230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="34" invocations="26" avgMicrosecondsPerInvocation="1313" maxMicrosecondsPerInvocation="15180" standardDeviationMicrosecondsPerInvocation="3394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="33" invocations="312" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="4953" standardDeviationMicrosecondsPerInvocation="320"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="31" invocations="26" avgMicrosecondsPerInvocation="1215" maxMicrosecondsPerInvocation="17781" standardDeviationMicrosecondsPerInvocation="3383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="29" invocations="769" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1428" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="28" invocations="7292" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="3418" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="28" invocations="26" avgMicrosecondsPerInvocation="1105" maxMicrosecondsPerInvocation="10287" standardDeviationMicrosecondsPerInvocation="2598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="28" invocations="219" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="23262" standardDeviationMicrosecondsPerInvocation="1568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="28" invocations="26" avgMicrosecondsPerInvocation="1078" maxMicrosecondsPerInvocation="13800" standardDeviationMicrosecondsPerInvocation="2879"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="26" invocations="120" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="7774" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="26" invocations="311" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="11098" standardDeviationMicrosecondsPerInvocation="639"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="25" invocations="26" avgMicrosecondsPerInvocation="992" maxMicrosecondsPerInvocation="14108" standardDeviationMicrosecondsPerInvocation="2861"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="25" invocations="26" avgMicrosecondsPerInvocation="991" maxMicrosecondsPerInvocation="7366" standardDeviationMicrosecondsPerInvocation="1923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="24" invocations="120" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="1906" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="26" avgMicrosecondsPerInvocation="937" maxMicrosecondsPerInvocation="6861" standardDeviationMicrosecondsPerInvocation="1895"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="22" invocations="310" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="3108" standardDeviationMicrosecondsPerInvocation="220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="22" invocations="26" avgMicrosecondsPerInvocation="861" maxMicrosecondsPerInvocation="6600" standardDeviationMicrosecondsPerInvocation="1667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="22" invocations="120" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="4468" standardDeviationMicrosecondsPerInvocation="470"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

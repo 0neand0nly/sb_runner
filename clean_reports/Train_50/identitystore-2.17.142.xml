@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685191397" analysisTimestamp="1699687639979" release="">
+  <Project projectName="">
+    <Jar>clean_train50\identitystore-2.17.142.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fb9f4c7e9a8bcf59271b673c28650e57" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.AccessDeniedException.sdkFields() may expose internal representation by returning AccessDeniedException.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" start="37" end="92" sourcefile="AccessDeniedException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/AccessDeniedException.java">
+        <Message>At AccessDeniedException.java:[lines 37-92]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.AccessDeniedException</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" start="84" end="84" startBytecode="0" endBytecode="45" sourcefile="AccessDeniedException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/AccessDeniedException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.AccessDeniedException.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" sourcefile="AccessDeniedException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/AccessDeniedException.java">
+        <Message>In AccessDeniedException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.AccessDeniedException.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" primary="true" start="84" end="84" startBytecode="3" endBytecode="3" sourcefile="AccessDeniedException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/AccessDeniedException.java">
+      <Message>At AccessDeniedException.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="5dbfd1c479d5b33fe8b89b01775357e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest.sdkFields() may expose internal representation by returning DescribeGroupRequest.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" start="38" end="163" sourcefile="DescribeGroupRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupRequest.java">
+        <Message>At DescribeGroupRequest.java:[lines 38-163]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" start="155" end="155" startBytecode="0" endBytecode="45" sourcefile="DescribeGroupRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" sourcefile="DescribeGroupRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupRequest.java">
+        <Message>In DescribeGroupRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" primary="true" start="155" end="155" startBytecode="3" endBytecode="3" sourcefile="DescribeGroupRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupRequest.java">
+      <Message>At DescribeGroupRequest.java:[line 155]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="965a61db5d029c29989fd323552fb25e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse.sdkFields() may expose internal representation by returning DescribeGroupResponse.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" start="36" end="161" sourcefile="DescribeGroupResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupResponse.java">
+        <Message>At DescribeGroupResponse.java:[lines 36-161]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" start="153" end="153" startBytecode="0" endBytecode="45" sourcefile="DescribeGroupResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" sourcefile="DescribeGroupResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupResponse.java">
+        <Message>In DescribeGroupResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" primary="true" start="153" end="153" startBytecode="3" endBytecode="3" sourcefile="DescribeGroupResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeGroupResponse.java">
+      <Message>At DescribeGroupResponse.java:[line 153]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="94f668598c3e61012b9d8172ff560ecd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.DescribeUserRequest.sdkFields() may expose internal representation by returning DescribeUserRequest.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" start="38" end="162" sourcefile="DescribeUserRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserRequest.java">
+        <Message>At DescribeUserRequest.java:[lines 38-162]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.DescribeUserRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" start="154" end="154" startBytecode="0" endBytecode="45" sourcefile="DescribeUserRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.DescribeUserRequest.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" sourcefile="DescribeUserRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserRequest.java">
+        <Message>In DescribeUserRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.DescribeUserRequest.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" primary="true" start="154" end="154" startBytecode="3" endBytecode="3" sourcefile="DescribeUserRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserRequest.java">
+      <Message>At DescribeUserRequest.java:[line 154]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="db974c1ad5d72aaf3d643e2c01986b55" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.DescribeUserResponse.sdkFields() may expose internal representation by returning DescribeUserResponse.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" start="36" end="161" sourcefile="DescribeUserResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserResponse.java">
+        <Message>At DescribeUserResponse.java:[lines 36-161]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.DescribeUserResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" start="153" end="153" startBytecode="0" endBytecode="45" sourcefile="DescribeUserResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.DescribeUserResponse.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" sourcefile="DescribeUserResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserResponse.java">
+        <Message>In DescribeUserResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.DescribeUserResponse.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" primary="true" start="153" end="153" startBytecode="3" endBytecode="3" sourcefile="DescribeUserResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/DescribeUserResponse.java">
+      <Message>At DescribeUserResponse.java:[line 153]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="34ce91d5dbfa1382bd7a26652684cca4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.Filter.sdkFields() may expose internal representation by returning Filter.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.Filter" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Filter" start="41" end="163" sourcefile="Filter.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Filter.java">
+        <Message>At Filter.java:[lines 41-163]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.Filter</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.Filter" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Filter" start="155" end="155" startBytecode="0" endBytecode="45" sourcefile="Filter.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Filter.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.Filter.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.Filter" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Filter" sourcefile="Filter.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Filter.java">
+        <Message>In Filter.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.Filter.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Filter" primary="true" start="155" end="155" startBytecode="3" endBytecode="3" sourcefile="Filter.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Filter.java">
+      <Message>At Filter.java:[line 155]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="205c20d843bc4decde93aa20cdbf0667" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.Group.sdkFields() may expose internal representation by returning Group.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.Group" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Group" start="40" end="164" sourcefile="Group.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Group.java">
+        <Message>At Group.java:[lines 40-164]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.Group</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.Group" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Group" start="156" end="156" startBytecode="0" endBytecode="45" sourcefile="Group.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Group.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.Group.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.Group" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Group" sourcefile="Group.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Group.java">
+        <Message>In Group.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.Group.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.Group" primary="true" start="156" end="156" startBytecode="3" endBytecode="3" sourcefile="Group.java" sourcepath="software/amazon/awssdk/services/identitystore/model/Group.java">
+      <Message>At Group.java:[line 156]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="255b2cb1b0ca98d085e40a184144fb37" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl.cause(Throwable) may expose internal representation by storing an externally mutable object into IdentitystoreException$BuilderImpl.cause</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" start="55" end="95" sourcefile="IdentitystoreException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/IdentitystoreException.java">
+        <Message>At IdentitystoreException.java:[lines 55-95]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" name="cause" signature="(Ljava/lang/Throwable;)Lsoftware/amazon/awssdk/services/identitystore/model/IdentitystoreException$BuilderImpl;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" start="89" end="90" startBytecode="0" endBytecode="62" sourcefile="IdentitystoreException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/IdentitystoreException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl.cause(Throwable)</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" name="cause" signature="Ljava/lang/Throwable;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" sourcefile="IdentitystoreException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/IdentitystoreException.java">
+        <Message>In IdentitystoreException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl.cause</Message>
+    </Field>
+    <LocalVariable name="cause" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named cause</Message>
+    </LocalVariable>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" primary="true" start="89" end="89" startBytecode="2" endBytecode="2" sourcefile="IdentitystoreException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/IdentitystoreException.java">
+      <Message>At IdentitystoreException.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="6ccaab6c2fd06ed9e25208fb83ad26f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.InternalServerException.sdkFields() may expose internal representation by returning InternalServerException.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" start="37" end="92" sourcefile="InternalServerException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/InternalServerException.java">
+        <Message>At InternalServerException.java:[lines 37-92]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.InternalServerException</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" start="84" end="84" startBytecode="0" endBytecode="45" sourcefile="InternalServerException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/InternalServerException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.InternalServerException.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" sourcefile="InternalServerException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/InternalServerException.java">
+        <Message>In InternalServerException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.InternalServerException.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.InternalServerException" primary="true" start="84" end="84" startBytecode="3" endBytecode="3" sourcefile="InternalServerException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/InternalServerException.java">
+      <Message>At InternalServerException.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b73d4e719900268e7a3d2573e22d4314" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.filters() may expose internal representation by returning ListGroupsRequest.filters</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" start="44" end="254" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+        <Message>At ListGroupsRequest.java:[lines 44-254]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListGroupsRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" name="filters" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" start="170" end="170" startBytecode="0" endBytecode="46" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.filters()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" name="filters" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+        <Message>In ListGroupsRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.filters</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" primary="true" start="170" end="170" startBytecode="4" endBytecode="4" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+      <Message>At ListGroupsRequest.java:[line 170]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="dd0db0bd9a569ad4531dafa5f809106f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.sdkFields() may expose internal representation by returning ListGroupsRequest.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" start="44" end="254" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+        <Message>At ListGroupsRequest.java:[lines 44-254]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListGroupsRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" start="246" end="246" startBytecode="0" endBytecode="45" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+        <Message>In ListGroupsRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListGroupsRequest.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" primary="true" start="246" end="246" startBytecode="3" endBytecode="3" sourcefile="ListGroupsRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java">
+      <Message>At ListGroupsRequest.java:[line 246]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="cf89e3c95fab8510ca9e423e98ec4cb7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.groups() may expose internal representation by returning ListGroupsResponse.groups</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" start="43" end="199" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+        <Message>At ListGroupsResponse.java:[lines 43-199]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListGroupsResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" name="groups" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" start="105" end="105" startBytecode="0" endBytecode="46" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.groups()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" name="groups" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+        <Message>In ListGroupsResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.groups</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" primary="true" start="105" end="105" startBytecode="4" endBytecode="4" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+      <Message>At ListGroupsResponse.java:[line 105]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4042ac427bcc3119059d4b771ca12d8a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.sdkFields() may expose internal representation by returning ListGroupsResponse.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" start="43" end="199" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+        <Message>At ListGroupsResponse.java:[lines 43-199]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListGroupsResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" start="191" end="191" startBytecode="0" endBytecode="45" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+        <Message>In ListGroupsResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListGroupsResponse.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" primary="true" start="191" end="191" startBytecode="3" endBytecode="3" sourcefile="ListGroupsResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java">
+      <Message>At ListGroupsResponse.java:[line 191]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="787a6249bacab1a53a9505247d8070d8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListUsersRequest.filters() may expose internal representation by returning ListUsersRequest.filters</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" start="44" end="254" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+        <Message>At ListUsersRequest.java:[lines 44-254]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListUsersRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" name="filters" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" start="170" end="170" startBytecode="0" endBytecode="46" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListUsersRequest.filters()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" name="filters" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+        <Message>In ListUsersRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListUsersRequest.filters</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" primary="true" start="170" end="170" startBytecode="4" endBytecode="4" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+      <Message>At ListUsersRequest.java:[line 170]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8d7c6f39a92ded9fc80f8cab08172f0b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListUsersRequest.sdkFields() may expose internal representation by returning ListUsersRequest.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" start="44" end="254" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+        <Message>At ListUsersRequest.java:[lines 44-254]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListUsersRequest</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" start="246" end="246" startBytecode="0" endBytecode="45" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListUsersRequest.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+        <Message>In ListUsersRequest.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListUsersRequest.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" primary="true" start="246" end="246" startBytecode="3" endBytecode="3" sourcefile="ListUsersRequest.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java">
+      <Message>At ListUsersRequest.java:[line 246]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="f2dbfdf668f69574cb651d3fa90c6efd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListUsersResponse.sdkFields() may expose internal representation by returning ListUsersResponse.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" start="43" end="197" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+        <Message>At ListUsersResponse.java:[lines 43-197]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListUsersResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" start="189" end="189" startBytecode="0" endBytecode="45" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListUsersResponse.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+        <Message>In ListUsersResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListUsersResponse.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" primary="true" start="189" end="189" startBytecode="3" endBytecode="3" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+      <Message>At ListUsersResponse.java:[line 189]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="827404bd7b3209b2ee354667ac6ce922" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ListUsersResponse.users() may expose internal representation by returning ListUsersResponse.users</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" start="43" end="197" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+        <Message>At ListUsersResponse.java:[lines 43-197]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ListUsersResponse</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" name="users" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" start="104" end="104" startBytecode="0" endBytecode="46" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ListUsersResponse.users()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" name="users" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+        <Message>In ListUsersResponse.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ListUsersResponse.users</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" primary="true" start="104" end="104" startBytecode="4" endBytecode="4" sourcefile="ListUsersResponse.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java">
+      <Message>At ListUsersResponse.java:[line 104]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b9ac7f2f88850d3e946a0872f3dddf8b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException.sdkFields() may expose internal representation by returning ResourceNotFoundException.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" start="37" end="169" sourcefile="ResourceNotFoundException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ResourceNotFoundException.java">
+        <Message>At ResourceNotFoundException.java:[lines 37-169]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" start="161" end="161" startBytecode="0" endBytecode="45" sourcefile="ResourceNotFoundException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ResourceNotFoundException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" sourcefile="ResourceNotFoundException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ResourceNotFoundException.java">
+        <Message>In ResourceNotFoundException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" primary="true" start="161" end="161" startBytecode="3" endBytecode="3" sourcefile="ResourceNotFoundException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ResourceNotFoundException.java">
+      <Message>At ResourceNotFoundException.java:[line 161]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="eddc86204dfc303c74f6e51450dd5958" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ThrottlingException.sdkFields() may expose internal representation by returning ThrottlingException.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" start="37" end="91" sourcefile="ThrottlingException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ThrottlingException.java">
+        <Message>At ThrottlingException.java:[lines 37-91]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ThrottlingException</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" start="83" end="83" startBytecode="0" endBytecode="45" sourcefile="ThrottlingException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ThrottlingException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ThrottlingException.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" sourcefile="ThrottlingException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ThrottlingException.java">
+        <Message>In ThrottlingException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ThrottlingException.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ThrottlingException" primary="true" start="83" end="83" startBytecode="3" endBytecode="3" sourcefile="ThrottlingException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ThrottlingException.java">
+      <Message>At ThrottlingException.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3d5e1c34ec8e548082b0c7a1dc42b242" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.User.sdkFields() may expose internal representation by returning User.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.User" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.User" start="40" end="164" sourcefile="User.java" sourcepath="software/amazon/awssdk/services/identitystore/model/User.java">
+        <Message>At User.java:[lines 40-164]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.User</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.User" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.User" start="156" end="156" startBytecode="0" endBytecode="45" sourcefile="User.java" sourcepath="software/amazon/awssdk/services/identitystore/model/User.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.User.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.User" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.User" sourcefile="User.java" sourcepath="software/amazon/awssdk/services/identitystore/model/User.java">
+        <Message>In User.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.User.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.User" primary="true" start="156" end="156" startBytecode="3" endBytecode="3" sourcefile="User.java" sourcepath="software/amazon/awssdk/services/identitystore/model/User.java">
+      <Message>At User.java:[line 156]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="513fd3892d55f955b7299bbeddfbab2b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>software.amazon.awssdk.services.identitystore.model.ValidationException.sdkFields() may expose internal representation by returning ValidationException.SDK_FIELDS</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.model.ValidationException" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ValidationException" start="37" end="91" sourcefile="ValidationException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ValidationException.java">
+        <Message>At ValidationException.java:[lines 37-91]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.model.ValidationException</Message>
+    </Class>
+    <Method classname="software.amazon.awssdk.services.identitystore.model.ValidationException" name="sdkFields" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ValidationException" start="83" end="83" startBytecode="0" endBytecode="45" sourcefile="ValidationException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ValidationException.java"/>
+      <Message>In method software.amazon.awssdk.services.identitystore.model.ValidationException.sdkFields()</Message>
+    </Method>
+    <Field classname="software.amazon.awssdk.services.identitystore.model.ValidationException" name="SDK_FIELDS" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ValidationException" sourcefile="ValidationException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ValidationException.java">
+        <Message>In ValidationException.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.model.ValidationException.SDK_FIELDS</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.model.ValidationException" primary="true" start="83" end="83" startBytecode="3" endBytecode="3" sourcefile="ValidationException.java" sourcepath="software/amazon/awssdk/services/identitystore/model/ValidationException.java">
+      <Message>At ValidationException.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="f312bda419e8555d4606a975f71c8b01" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher.isLastPage</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" start="82" end="105" sourcefile="ListGroupsPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListGroupsPublisher.java">
+        <Message>At ListGroupsPublisher.java:[lines 82-105]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher</Message>
+    </Class>
+    <Field classname="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" name="isLastPage" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" sourcefile="ListGroupsPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListGroupsPublisher.java">
+        <Message>In ListGroupsPublisher.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher.isLastPage</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" primary="true" start="98" end="98" startBytecode="16" endBytecode="16" sourcefile="ListGroupsPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListGroupsPublisher.java">
+      <Message>At ListGroupsPublisher.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="c94655cb3b5bff0da9c4d8a2baeeb5c7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher.isLastPage</LongMessage>
+    <Class classname="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" start="82" end="105" sourcefile="ListUsersPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListUsersPublisher.java">
+        <Message>At ListUsersPublisher.java:[lines 82-105]</Message>
+      </SourceLine>
+      <Message>In class software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher</Message>
+    </Class>
+    <Field classname="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" name="isLastPage" signature="Z" isStatic="false" primary="true">
+      <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" sourcefile="ListUsersPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListUsersPublisher.java">
+        <Message>In ListUsersPublisher.java</Message>
+      </SourceLine>
+      <Message>Field software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher.isLastPage</Message>
+    </Field>
+    <SourceLine classname="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" primary="true" start="98" end="98" startBytecode="16" endBytecode="16" sourcefile="ListUsersPublisher.java" sourcepath="software/amazon/awssdk/services/identitystore/paginators/ListUsersPublisher.java">
+      <Message>At ListUsersPublisher.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="110">
+    <MissingClass>org.reactivestreams.Subscriber</MissingClass>
+    <MissingClass>org.reactivestreams.Subscription</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>software.amazon.awssdk.auth.signer.Aws4Signer</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsRequest</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsRequest$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsRequest$BuilderImpl</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsRequestOverrideConfiguration</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsRequestOverrideConfiguration$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsResponse</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsResponse$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsResponse$BuilderImpl</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.AwsResponseMetadata</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.builder.AwsAsyncClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.builder.AwsClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.builder.AwsDefaultClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.builder.AwsSyncClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.handler.AwsAsyncClientHandler</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.client.handler.AwsSyncClientHandler</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.exception.AwsErrorDetails</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.exception.AwsServiceException</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.exception.AwsServiceException$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.awscore.exception.AwsServiceException$BuilderImpl</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.ApiName</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.ApiName$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.RequestOverrideConfiguration</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.RequestOverrideConfiguration$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkClient</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkField</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkField$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkPojo</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkRequest</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkRequest$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkResponse</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.SdkResponse$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.async.SdkPublisher</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.builder.SdkAsyncClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.builder.SdkSyncClientBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.ClientAsyncConfiguration</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.ClientOption</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.SdkAdvancedClientOption</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.SdkClientConfiguration</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.SdkClientConfiguration$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.config.SdkClientOption</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.handler.AsyncClientHandler</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.handler.ClientExecutionParams</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.client.handler.SyncClientHandler</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkClientException</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkClientException$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkException</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkException$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkServiceException</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.exception.SdkServiceException$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.http.HttpResponseHandler</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.interceptor.ClasspathInterceptorChainFactory</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.metrics.CoreMetric</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.async.AsyncPageFetcher</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.async.PaginationSubscription</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.async.PaginationSubscription$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.async.ResponsesSubscription</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.async.ResponsesSubscription$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.sync.PaginatedResponsesIterator</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.sync.PaginatedResponsesIterator$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.sync.SdkIterable</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.pagination.sync.SyncPageFetcher</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.protocol.MarshallLocation</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.protocol.MarshallingType</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.runtime.transform.Marshaller</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.signer.Signer</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.traits.ListTrait</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.traits.ListTrait$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.traits.LocationTrait</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.traits.LocationTrait$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.traits.Trait</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.util.DefaultSdkAutoConstructList</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.util.PaginatorUtils</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.util.SdkAutoConstructList</MissingClass>
+    <MissingClass>software.amazon.awssdk.core.util.VersionInfo</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.SdkHttpClient</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.SdkHttpClient$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.SdkHttpFullRequest</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.SdkHttpMethod</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.async.SdkAsyncHttpClient</MissingClass>
+    <MissingClass>software.amazon.awssdk.http.async.SdkAsyncHttpClient$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.metrics.MetricCollection</MissingClass>
+    <MissingClass>software.amazon.awssdk.metrics.MetricCollector</MissingClass>
+    <MissingClass>software.amazon.awssdk.metrics.MetricPublisher</MissingClass>
+    <MissingClass>software.amazon.awssdk.metrics.NoOpMetricCollector</MissingClass>
+    <MissingClass>software.amazon.awssdk.metrics.SdkMetric</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.core.ExceptionMetadata</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.core.ExceptionMetadata$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.core.OperationInfo</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.core.OperationInfo$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.core.ProtocolMarshaller</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.AwsJsonProtocol</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.AwsJsonProtocolFactory</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.AwsJsonProtocolFactory$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.BaseAwsJsonProtocolFactory</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.BaseAwsJsonProtocolFactory$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.JsonOperationMetadata</MissingClass>
+    <MissingClass>software.amazon.awssdk.protocols.json.JsonOperationMetadata$Builder</MissingClass>
+    <MissingClass>software.amazon.awssdk.regions.ServiceMetadata</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.CollectionUtils</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.CompletableFutureUtils</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.Logger</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.ToString</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.Validate</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.builder.CopyableBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.builder.ToCopyableBuilder</MissingClass>
+    <MissingClass>software.amazon.awssdk.utils.internal.EnumUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:31 +0900" total_classes="104" referenced_classes="156" total_bugs="23" total_size="3141" num_packages="4" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.31" clock_seconds="4.04" peak_mbytes="246.37" alloc_mbytes="3984.00" gc_seconds="0.06" priority_2="23">
+    <FileStats path="software/amazon/awssdk/services/identitystore/DefaultIdentitystoreAsyncClient.java" bugCount="0" size="172"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/DefaultIdentitystoreAsyncClientBuilder.java" bugCount="0" size="10"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/DefaultIdentitystoreBaseClientBuilder.java" bugCount="0" size="21"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/DefaultIdentitystoreClient.java" bugCount="0" size="138"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/DefaultIdentitystoreClientBuilder.java" bugCount="0" size="9"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/IdentitystoreAsyncClient.java" bugCount="0" size="31"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/IdentitystoreAsyncClientBuilder.java" bugCount="0" size="1"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/IdentitystoreBaseClientBuilder.java" bugCount="0" size="1"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/IdentitystoreClient.java" bugCount="0" size="33"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/IdentitystoreClientBuilder.java" bugCount="0" size="1"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/AccessDeniedException.java" bugCount="1" size="137" bugHash="04ba9d6b61b2eb9a9a017d4f8ddaf5cb"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/DescribeGroupRequest.java" bugCount="1" size="130" bugHash="0c874b3d2a5ffbdee029d7c9c66c1ab7"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/DescribeGroupResponse.java" bugCount="1" size="114" bugHash="6dde921f68604ecf06ceb76b5894b0f2"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/DescribeUserRequest.java" bugCount="1" size="129" bugHash="f8658719c99e9f9ea442799618c23b9d"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/DescribeUserResponse.java" bugCount="1" size="116" bugHash="958e477c88ddd9d817c569d839d18165"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/Filter.java" bugCount="1" size="110" bugHash="70d445f0495920f785a64129c4f611e6"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/FiltersCopier.java" bugCount="0" size="35"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/Group.java" bugCount="1" size="109" bugHash="545855c803c72decc19e7bcbb7c9437e"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/GroupsCopier.java" bugCount="0" size="35"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/IdentitystoreException.java" bugCount="1" size="77" bugHash="54a5bdc7e9e4edaa7b728afbef0a1abc"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/IdentitystoreRequest.java" bugCount="0" size="20"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/IdentitystoreResponse.java" bugCount="0" size="36"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/IdentitystoreResponseMetadata.java" bugCount="0" size="6"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/InternalServerException.java" bugCount="1" size="137" bugHash="7b8c7e1409bab9816f209cffcc6d7b05"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ListGroupsRequest.java" bugCount="2" size="203" bugHash="6d755c8d3e1a88e36b436879625ac23b"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ListGroupsResponse.java" bugCount="2" size="142" bugHash="2c856d9216b53e54044f667986cadfd7"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ListUsersRequest.java" bugCount="2" size="203" bugHash="8213d94f4015498118df77e192df655f"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ListUsersResponse.java" bugCount="2" size="142" bugHash="c9268166deb9a429d6d8fc834eb36f44"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ResourceNotFoundException.java" bugCount="1" size="186" bugHash="d322e96438bc9d9c62e47ebb9bbc1f47"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ResourceType.java" bugCount="0" size="31"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ThrottlingException.java" bugCount="1" size="136" bugHash="aa703d338232ec2f4a7857c67dcb1d62"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/User.java" bugCount="1" size="111" bugHash="c1830c9f544c761720a78a17d90134ad"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/UsersCopier.java" bugCount="0" size="35"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/model/ValidationException.java" bugCount="1" size="136" bugHash="761f43d7ac20d9f47745fc3cdb298a20"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/paginators/ListGroupsIterable.java" bugCount="0" size="29"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/paginators/ListGroupsPublisher.java" bugCount="1" size="35" bugHash="def9f295e8821cdcae1389afa43ea09c"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/paginators/ListUsersIterable.java" bugCount="0" size="29"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/paginators/ListUsersPublisher.java" bugCount="1" size="35" bugHash="f6696cd3a440da1598685be00c05f2c3"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/transform/DescribeGroupRequestMarshaller.java" bugCount="0" size="20"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/transform/DescribeUserRequestMarshaller.java" bugCount="0" size="20"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/transform/ListGroupsRequestMarshaller.java" bugCount="0" size="20"/>
+    <FileStats path="software/amazon/awssdk/services/identitystore/transform/ListUsersRequestMarshaller.java" bugCount="0" size="20"/>
+    <PackageStats package="software.amazon.awssdk.services.identitystore" total_bugs="0" total_types="10" total_size="417">
+      <ClassStats class="software.amazon.awssdk.services.identitystore.DefaultIdentitystoreAsyncClient" sourceFile="DefaultIdentitystoreAsyncClient.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.DefaultIdentitystoreAsyncClientBuilder" sourceFile="DefaultIdentitystoreAsyncClientBuilder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.DefaultIdentitystoreBaseClientBuilder" sourceFile="DefaultIdentitystoreBaseClientBuilder.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.DefaultIdentitystoreClient" sourceFile="DefaultIdentitystoreClient.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.DefaultIdentitystoreClientBuilder" sourceFile="DefaultIdentitystoreClientBuilder.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.IdentitystoreAsyncClient" sourceFile="IdentitystoreAsyncClient.java" interface="true" size="31" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.IdentitystoreAsyncClientBuilder" sourceFile="IdentitystoreAsyncClientBuilder.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.IdentitystoreBaseClientBuilder" sourceFile="IdentitystoreBaseClientBuilder.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.IdentitystoreClient" sourceFile="IdentitystoreClient.java" interface="true" size="33" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.IdentitystoreClientBuilder" sourceFile="IdentitystoreClientBuilder.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="software.amazon.awssdk.services.identitystore.model" total_bugs="21" total_types="78" total_size="2516" priority_2="21">
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.AccessDeniedException" sourceFile="AccessDeniedException.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.AccessDeniedException$1" sourceFile="AccessDeniedException.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.AccessDeniedException$Builder" sourceFile="AccessDeniedException.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.AccessDeniedException$BuilderImpl" sourceFile="AccessDeniedException.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest" sourceFile="DescribeGroupRequest.java" interface="false" size="73" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest$1" sourceFile="DescribeGroupRequest.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest$Builder" sourceFile="DescribeGroupRequest.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupRequest$BuilderImpl" sourceFile="DescribeGroupRequest.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse" sourceFile="DescribeGroupResponse.java" interface="false" size="70" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse$1" sourceFile="DescribeGroupResponse.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse$Builder" sourceFile="DescribeGroupResponse.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeGroupResponse$BuilderImpl" sourceFile="DescribeGroupResponse.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest" sourceFile="DescribeUserRequest.java" interface="false" size="72" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest$1" sourceFile="DescribeUserRequest.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest$Builder" sourceFile="DescribeUserRequest.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserRequest$BuilderImpl" sourceFile="DescribeUserRequest.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse" sourceFile="DescribeUserResponse.java" interface="false" size="72" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse$1" sourceFile="DescribeUserResponse.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse$Builder" sourceFile="DescribeUserResponse.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.DescribeUserResponse$BuilderImpl" sourceFile="DescribeUserResponse.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Filter" sourceFile="Filter.java" interface="false" size="69" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Filter$1" sourceFile="Filter.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Filter$Builder" sourceFile="Filter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Filter$BuilderImpl" sourceFile="Filter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.FiltersCopier" sourceFile="FiltersCopier.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Group" sourceFile="Group.java" interface="false" size="68" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Group$1" sourceFile="Group.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Group$Builder" sourceFile="Group.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.Group$BuilderImpl" sourceFile="Group.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.GroupsCopier" sourceFile="GroupsCopier.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreException" sourceFile="IdentitystoreException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$Builder" sourceFile="IdentitystoreException.java" interface="true" size="18" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreException$BuilderImpl" sourceFile="IdentitystoreException.java" interface="false" size="45" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreRequest" sourceFile="IdentitystoreRequest.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreRequest$Builder" sourceFile="IdentitystoreRequest.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreRequest$BuilderImpl" sourceFile="IdentitystoreRequest.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreResponse" sourceFile="IdentitystoreResponse.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreResponse$Builder" sourceFile="IdentitystoreResponse.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreResponse$BuilderImpl" sourceFile="IdentitystoreResponse.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.IdentitystoreResponseMetadata" sourceFile="IdentitystoreResponseMetadata.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.InternalServerException" sourceFile="InternalServerException.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.InternalServerException$1" sourceFile="InternalServerException.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.InternalServerException$Builder" sourceFile="InternalServerException.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.InternalServerException$BuilderImpl" sourceFile="InternalServerException.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest" sourceFile="ListGroupsRequest.java" interface="false" size="109" bugs="2" priority_2="2"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest$1" sourceFile="ListGroupsRequest.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest$Builder" sourceFile="ListGroupsRequest.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsRequest$BuilderImpl" sourceFile="ListGroupsRequest.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse" sourceFile="ListGroupsResponse.java" interface="false" size="85" bugs="2" priority_2="2"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse$1" sourceFile="ListGroupsResponse.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse$Builder" sourceFile="ListGroupsResponse.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListGroupsResponse$BuilderImpl" sourceFile="ListGroupsResponse.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersRequest" sourceFile="ListUsersRequest.java" interface="false" size="109" bugs="2" priority_2="2"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersRequest$1" sourceFile="ListUsersRequest.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersRequest$Builder" sourceFile="ListUsersRequest.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersRequest$BuilderImpl" sourceFile="ListUsersRequest.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersResponse" sourceFile="ListUsersResponse.java" interface="false" size="85" bugs="2" priority_2="2"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersResponse$1" sourceFile="ListUsersResponse.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersResponse$Builder" sourceFile="ListUsersResponse.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ListUsersResponse$BuilderImpl" sourceFile="ListUsersResponse.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException" sourceFile="ResourceNotFoundException.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException$1" sourceFile="ResourceNotFoundException.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException$Builder" sourceFile="ResourceNotFoundException.java" interface="true" size="27" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ResourceNotFoundException$BuilderImpl" sourceFile="ResourceNotFoundException.java" interface="false" size="96" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ResourceType" sourceFile="ResourceType.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ThrottlingException" sourceFile="ThrottlingException.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ThrottlingException$1" sourceFile="ThrottlingException.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ThrottlingException$Builder" sourceFile="ThrottlingException.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ThrottlingException$BuilderImpl" sourceFile="ThrottlingException.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.User" sourceFile="User.java" interface="false" size="70" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.User$1" sourceFile="User.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.User$Builder" sourceFile="User.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.User$BuilderImpl" sourceFile="User.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.UsersCopier" sourceFile="UsersCopier.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ValidationException" sourceFile="ValidationException.java" interface="false" size="40" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ValidationException$1" sourceFile="ValidationException.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ValidationException$Builder" sourceFile="ValidationException.java" interface="true" size="24" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.model.ValidationException$BuilderImpl" sourceFile="ValidationException.java" interface="false" size="71" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="software.amazon.awssdk.services.identitystore.paginators" total_bugs="2" total_types="12" total_size="128" priority_2="2">
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsIterable" sourceFile="ListGroupsIterable.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsIterable$1" sourceFile="ListGroupsIterable.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsIterable$ListGroupsResponseFetcher" sourceFile="ListGroupsIterable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher" sourceFile="ListGroupsPublisher.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher$1" sourceFile="ListGroupsPublisher.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListGroupsPublisher$ListGroupsResponseFetcher" sourceFile="ListGroupsPublisher.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersIterable" sourceFile="ListUsersIterable.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersIterable$1" sourceFile="ListUsersIterable.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersIterable$ListUsersResponseFetcher" sourceFile="ListUsersIterable.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher" sourceFile="ListUsersPublisher.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher$1" sourceFile="ListUsersPublisher.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.paginators.ListUsersPublisher$ListUsersResponseFetcher" sourceFile="ListUsersPublisher.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="software.amazon.awssdk.services.identitystore.transform" total_bugs="0" total_types="4" total_size="80">
+      <ClassStats class="software.amazon.awssdk.services.identitystore.transform.DescribeGroupRequestMarshaller" sourceFile="DescribeGroupRequestMarshaller.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.transform.DescribeUserRequestMarshaller" sourceFile="DescribeUserRequestMarshaller.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.transform.ListGroupsRequestMarshaller" sourceFile="ListGroupsRequestMarshaller.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="software.amazon.awssdk.services.identitystore.transform.ListUsersRequestMarshaller" sourceFile="ListUsersRequestMarshaller.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="343" invocations="865" avgMicrosecondsPerInvocation="397" maxMicrosecondsPerInvocation="50358" standardDeviationMicrosecondsPerInvocation="1947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="140" invocations="1184" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="18748" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="137" invocations="1184" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="39249" standardDeviationMicrosecondsPerInvocation="1155"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="133" invocations="1184" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="33805" standardDeviationMicrosecondsPerInvocation="1013"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="115" invocations="156" avgMicrosecondsPerInvocation="738" maxMicrosecondsPerInvocation="20566" standardDeviationMicrosecondsPerInvocation="2224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="107" invocations="778" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="15857" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="105" invocations="1005" avgMicrosecondsPerInvocation="105" maxMicrosecondsPerInvocation="9781" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="96" invocations="1188" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="22937" standardDeviationMicrosecondsPerInvocation="680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="89" invocations="1269" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="44378" standardDeviationMicrosecondsPerInvocation="1251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="87" invocations="233" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="50653" standardDeviationMicrosecondsPerInvocation="3333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="77" invocations="156" avgMicrosecondsPerInvocation="494" maxMicrosecondsPerInvocation="6024" standardDeviationMicrosecondsPerInvocation="1012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="71" invocations="156" avgMicrosecondsPerInvocation="459" maxMicrosecondsPerInvocation="61057" standardDeviationMicrosecondsPerInvocation="4869"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="66" invocations="873" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="11290" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="66" invocations="868" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="2256" standardDeviationMicrosecondsPerInvocation="175"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="59" invocations="1399" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="2630" standardDeviationMicrosecondsPerInvocation="140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="57" invocations="9251" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="3429" standardDeviationMicrosecondsPerInvocation="52"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="49" invocations="156" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="12304" standardDeviationMicrosecondsPerInvocation="1332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="44" invocations="156" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="25598" standardDeviationMicrosecondsPerInvocation="2068"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="41" invocations="156" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="10700" standardDeviationMicrosecondsPerInvocation="963"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="38" invocations="104" avgMicrosecondsPerInvocation="373" maxMicrosecondsPerInvocation="7199" standardDeviationMicrosecondsPerInvocation="988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="33" invocations="104" avgMicrosecondsPerInvocation="325" maxMicrosecondsPerInvocation="10602" standardDeviationMicrosecondsPerInvocation="1209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="31" invocations="1184" avgMicrosecondsPerInvocation="26" maxMicrosecondsPerInvocation="6545" standardDeviationMicrosecondsPerInvocation="194"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="30" invocations="104" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="9427" standardDeviationMicrosecondsPerInvocation="1053"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="104" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="19238" standardDeviationMicrosecondsPerInvocation="1941"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="30" invocations="156" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="2523" standardDeviationMicrosecondsPerInvocation="377"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="27" invocations="104" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="13202" standardDeviationMicrosecondsPerInvocation="1291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="706" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1282" standardDeviationMicrosecondsPerInvocation="79"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="25" invocations="104" avgMicrosecondsPerInvocation="244" maxMicrosecondsPerInvocation="3502" standardDeviationMicrosecondsPerInvocation="511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="24" invocations="156" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="2479" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="23" invocations="104" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="2995" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="23" invocations="104" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="1550" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteNonnullReturnValues" totalMilliseconds="23" invocations="104" avgMicrosecondsPerInvocation="223" maxMicrosecondsPerInvocation="8435" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="23" invocations="104" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="8952" standardDeviationMicrosecondsPerInvocation="925"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="104" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="2180" standardDeviationMicrosecondsPerInvocation="344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="5905" standardDeviationMicrosecondsPerInvocation="586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="6198" standardDeviationMicrosecondsPerInvocation="603"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="19" invocations="104" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="2258" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="18" invocations="104" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="3007" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="18" invocations="104" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="1913" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="156" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="4145" standardDeviationMicrosecondsPerInvocation="429"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

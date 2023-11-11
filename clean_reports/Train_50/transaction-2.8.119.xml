@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685203151" analysisTimestamp="1699688924687" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\transaction-2.8.119.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="348b11117bc4ff2d748ad3d07bfb5a1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.mobicents.slee.runtime.transaction.SleeTransactionImpl(TransactionImple, TransactionContext, SleeTransactionManagerImpl) may expose internal representation by storing an externally mutable object into SleeTransactionImpl.transactionManager</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="72" end="263" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+        <Message>At SleeTransactionImpl.java:[lines 72-263]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.SleeTransactionImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" name="&lt;init&gt;" signature="(Lcom/arjuna/ats/internal/jta/transaction/arjunacore/TransactionImple;Lorg/mobicents/slee/container/transaction/TransactionContext;Lorg/mobicents/slee/runtime/transaction/SleeTransactionManagerImpl;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="81" end="86" startBytecode="0" endBytecode="138" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java"/>
+      <Message>In method new org.mobicents.slee.runtime.transaction.SleeTransactionImpl(TransactionImple, TransactionContext, SleeTransactionManagerImpl)</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" name="transactionManager" signature="Lorg/mobicents/slee/runtime/transaction/SleeTransactionManagerImpl;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+        <Message>In SleeTransactionImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.SleeTransactionImpl.transactionManager</Message>
+    </Field>
+    <LocalVariable name="transactionManager" register="3" pc="39" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named transactionManager</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true" start="85" end="85" startBytecode="39" endBytecode="39" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+      <Message>At SleeTransactionImpl.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="3" rank="19" abbrev="RV" category="BAD_PRACTICE" instanceHash="becb60e4a2e93042f82f526d923ee6b7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.util.concurrent.ExecutorService.submit(Runnable) ignored in org.mobicents.slee.runtime.transaction.SleeTransactionImpl.asyncCommit(CommitListener)</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="72" end="263" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+        <Message>At SleeTransactionImpl.java:[lines 72-263]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.SleeTransactionImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" name="asyncCommit" signature="(Ljavax/slee/transaction/CommitListener;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="148" end="151" startBytecode="0" endBytecode="89" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.SleeTransactionImpl.asyncCommit(CommitListener)</Message>
+    </Method>
+    <Method classname="java.util.concurrent.ExecutorService" name="submit" signature="(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ExecutorService" sourcefile="ExecutorService.java" sourcepath="java/util/concurrent/ExecutorService.java"/>
+      <Message>Called method java.util.concurrent.ExecutorService.submit(Runnable)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true" start="149" end="149" startBytecode="23" endBytecode="23" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+      <Message>At SleeTransactionImpl.java:[line 149]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="3" rank="19" abbrev="RV" category="BAD_PRACTICE" instanceHash="9d61c6eb42bc34ad560d643ed2fbd918" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
+    <ShortMessage>Method ignores exceptional return value</ShortMessage>
+    <LongMessage>Exceptional return value of java.util.concurrent.ExecutorService.submit(Runnable) ignored in org.mobicents.slee.runtime.transaction.SleeTransactionImpl.asyncRollback(RollbackListener)</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="72" end="263" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+        <Message>At SleeTransactionImpl.java:[lines 72-263]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.SleeTransactionImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" name="asyncRollback" signature="(Ljavax/slee/transaction/RollbackListener;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" start="159" end="162" startBytecode="0" endBytecode="89" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.SleeTransactionImpl.asyncRollback(RollbackListener)</Message>
+    </Method>
+    <Method classname="java.util.concurrent.ExecutorService" name="submit" signature="(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.concurrent.ExecutorService" sourcefile="ExecutorService.java" sourcepath="java/util/concurrent/ExecutorService.java"/>
+      <Message>Called method java.util.concurrent.ExecutorService.submit(Runnable)</Message>
+    </Method>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" primary="true" start="160" end="160" startBytecode="23" endBytecode="23" sourcefile="SleeTransactionImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java">
+      <Message>At SleeTransactionImpl.java:[line 160]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f45dd3e13f931de629c08bd3f2ff8c6d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization(Transaction, TransactionContextImpl) may expose internal representation by storing an externally mutable object into SleeTransactionSynchronization.txContext</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" start="38" end="97" sourcefile="SleeTransactionSynchronization.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionSynchronization.java">
+        <Message>At SleeTransactionSynchronization.java:[lines 38-97]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" name="&lt;init&gt;" signature="(Ljavax/transaction/Transaction;Lorg/mobicents/slee/runtime/transaction/TransactionContextImpl;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" start="55" end="58" startBytecode="0" endBytecode="88" sourcefile="SleeTransactionSynchronization.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionSynchronization.java"/>
+      <Message>In method new org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization(Transaction, TransactionContextImpl)</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" name="txContext" signature="Lorg/mobicents/slee/runtime/transaction/TransactionContextImpl;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" sourcefile="SleeTransactionSynchronization.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionSynchronization.java">
+        <Message>In SleeTransactionSynchronization.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization.txContext</Message>
+    </Field>
+    <LocalVariable name="txContext" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named txContext</Message>
+    </LocalVariable>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" primary="true" start="57" end="57" startBytecode="11" endBytecode="11" sourcefile="SleeTransactionSynchronization.java" sourcepath="org/mobicents/slee/runtime/transaction/SleeTransactionSynchronization.java">
+      <Message>At SleeTransactionSynchronization.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="14c8786409f4b6c38de857841351afc4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterCommitActions() may expose internal representation by returning TransactionContextImpl.afterCommitActions</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getAfterCommitActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="108" end="111" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterCommitActions()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="afterCommitActions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.afterCommitActions</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="111" end="111" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="9b361559083378e578a57e35ba696ce7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterCommitPriorityActions() may expose internal representation by returning TransactionContextImpl.afterCommitPriorityActions</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getAfterCommitPriorityActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="119" end="122" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterCommitPriorityActions()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="afterCommitPriorityActions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.afterCommitPriorityActions</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="122" end="122" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d021d9a7afe326b45f73c4e03887d129" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterRollbackActions() may expose internal representation by returning TransactionContextImpl.afterRollbackActions</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getAfterRollbackActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="130" end="133" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getAfterRollbackActions()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="afterRollbackActions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.afterRollbackActions</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="133" end="133" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 133]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="a40f5edc051bd22ca070a5ceb504a618" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getBeforeCommitActions() may expose internal representation by returning TransactionContextImpl.beforeCommitActions</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getBeforeCommitActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="141" end="144" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getBeforeCommitActions()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="beforeCommitActions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.beforeCommitActions</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="144" end="144" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 144]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8d81ce012fd9f75088b747ae8899e934" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getBeforeCommitPriorityActions() may expose internal representation by returning TransactionContextImpl.beforeCommitPriorityActions</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getBeforeCommitPriorityActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="152" end="155" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getBeforeCommitPriorityActions()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="beforeCommitPriorityActions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.beforeCommitPriorityActions</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="155" end="155" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 155]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1bf804b17eab91bea86e252478040327" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getData() may expose internal representation by returning TransactionContextImpl.data</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getData" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="162" end="165" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getData()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="data" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.data</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="165" end="165" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 165]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="a2abd8300a6c2f5e3e063642989a0a7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.mobicents.slee.runtime.transaction.TransactionContextImpl.getInvokedNonReentrantSbbEntities() may expose internal representation by returning TransactionContextImpl.invokedSbbEntities</LongMessage>
+    <Class classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="58" end="276" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>At TransactionContextImpl.java:[lines 58-276]</Message>
+      </SourceLine>
+      <Message>In class org.mobicents.slee.runtime.transaction.TransactionContextImpl</Message>
+    </Class>
+    <Method classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="getInvokedNonReentrantSbbEntities" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" start="273" end="276" startBytecode="0" endBytecode="72" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java"/>
+      <Message>In method org.mobicents.slee.runtime.transaction.TransactionContextImpl.getInvokedNonReentrantSbbEntities()</Message>
+    </Method>
+    <Field classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" name="invokedSbbEntities" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+        <Message>In TransactionContextImpl.java</Message>
+      </SourceLine>
+      <Message>Field org.mobicents.slee.runtime.transaction.TransactionContextImpl.invokedSbbEntities</Message>
+    </Field>
+    <SourceLine classname="org.mobicents.slee.runtime.transaction.TransactionContextImpl" primary="true" start="276" end="276" startBytecode="22" endBytecode="22" sourcefile="TransactionContextImpl.java" sourcepath="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java">
+      <Message>At TransactionContextImpl.java:[line 276]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" abbrev="RV" category="BAD_PRACTICE" cweid="253">
+    <ShortDescription>Method ignores exceptional return value</ShortDescription>
+    <Details><![CDATA[
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>com.arjuna.ats.arjuna.common.Uid</MissingClass>
+    <MissingClass>com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple</MissingClass>
+    <MissingClass>javax.slee.SLEEException</MissingClass>
+    <MissingClass>javax.slee.TransactionRequiredLocalException</MissingClass>
+    <MissingClass>javax.slee.transaction.CommitListener</MissingClass>
+    <MissingClass>javax.slee.transaction.RollbackListener</MissingClass>
+    <MissingClass>javax.transaction.HeuristicMixedException</MissingClass>
+    <MissingClass>javax.transaction.HeuristicRollbackException</MissingClass>
+    <MissingClass>javax.transaction.InvalidTransactionException</MissingClass>
+    <MissingClass>javax.transaction.NotSupportedException</MissingClass>
+    <MissingClass>javax.transaction.RollbackException</MissingClass>
+    <MissingClass>javax.transaction.Synchronization</MissingClass>
+    <MissingClass>javax.transaction.SystemException</MissingClass>
+    <MissingClass>javax.transaction.Transaction</MissingClass>
+    <MissingClass>javax.transaction.TransactionManager</MissingClass>
+    <MissingClass>org.apache.log4j.Logger</MissingClass>
+    <MissingClass>org.mobicents.slee.container.AbstractSleeContainerModule</MissingClass>
+    <MissingClass>org.mobicents.slee.container.eventrouter.EventRoutingTransactionData</MissingClass>
+    <MissingClass>org.mobicents.slee.container.transaction.SleeTransaction</MissingClass>
+    <MissingClass>org.mobicents.slee.container.transaction.SleeTransactionManager</MissingClass>
+    <MissingClass>org.mobicents.slee.container.transaction.TransactionContext</MissingClass>
+    <MissingClass>org.mobicents.slee.container.transaction.TransactionalAction</MissingClass>
+    <MissingClass>org.mobicents.slee.util.concurrent.SleeThreadFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:43 +0900" total_classes="7" referenced_classes="40" total_bugs="11" total_size="435" num_packages="1" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.92" clock_seconds="2.13" peak_mbytes="224.41" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="2" priority_2="9">
+    <FileStats path="org/mobicents/slee/runtime/transaction/AsyncTransactionCommitRunnable.java" bugCount="0" size="29"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/AsyncTransactionRollbackRunnable.java" bugCount="0" size="20"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/SleeTransactionImpl.java" bugCount="3" size="76" bugHash="ca6d0955686623d839ee252fae66d12b"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/SleeTransactionManagerImpl.java" bugCount="0" size="172"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/SleeTransactionSynchronization.java" bugCount="1" size="30" bugHash="bf9044f5aa91ab53202f4e7b6b0323ad"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/TransactionContextImpl.java" bugCount="7" size="97" bugHash="c359344900169693f97f38aa1d2bdd70"/>
+    <FileStats path="org/mobicents/slee/runtime/transaction/TransactionContextThreadLocal.java" bugCount="0" size="11"/>
+    <PackageStats package="org.mobicents.slee.runtime.transaction" total_bugs="11" total_types="7" total_size="435" priority_3="2" priority_2="9">
+      <ClassStats class="org.mobicents.slee.runtime.transaction.AsyncTransactionCommitRunnable" sourceFile="AsyncTransactionCommitRunnable.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.AsyncTransactionRollbackRunnable" sourceFile="AsyncTransactionRollbackRunnable.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.SleeTransactionImpl" sourceFile="SleeTransactionImpl.java" interface="false" size="76" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.SleeTransactionManagerImpl" sourceFile="SleeTransactionManagerImpl.java" interface="false" size="172" bugs="0"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.SleeTransactionSynchronization" sourceFile="SleeTransactionSynchronization.java" interface="false" size="30" bugs="1" priority_2="1"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.TransactionContextImpl" sourceFile="TransactionContextImpl.java" interface="false" size="97" bugs="7" priority_2="7"/>
+      <ClassStats class="org.mobicents.slee.runtime.transaction.TransactionContextThreadLocal" sourceFile="TransactionContextThreadLocal.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="253" invocations="470" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="46029" standardDeviationMicrosecondsPerInvocation="2336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="69" invocations="76" avgMicrosecondsPerInvocation="908" maxMicrosecondsPerInvocation="51151" standardDeviationMicrosecondsPerInvocation="5813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="61" invocations="477" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="9618" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="76" avgMicrosecondsPerInvocation="695" maxMicrosecondsPerInvocation="16856" standardDeviationMicrosecondsPerInvocation="2057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="184" avgMicrosecondsPerInvocation="281" maxMicrosecondsPerInvocation="10991" standardDeviationMicrosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="51" invocations="76" avgMicrosecondsPerInvocation="678" maxMicrosecondsPerInvocation="26531" standardDeviationMicrosecondsPerInvocation="3030"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="47" invocations="76" avgMicrosecondsPerInvocation="619" maxMicrosecondsPerInvocation="23002" standardDeviationMicrosecondsPerInvocation="2604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="46" invocations="40" avgMicrosecondsPerInvocation="1171" maxMicrosecondsPerInvocation="13395" standardDeviationMicrosecondsPerInvocation="2459"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="40" invocations="7" avgMicrosecondsPerInvocation="5825" maxMicrosecondsPerInvocation="37266" standardDeviationMicrosecondsPerInvocation="12841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="37" invocations="79" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="22297" standardDeviationMicrosecondsPerInvocation="2536"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="34" invocations="40" avgMicrosecondsPerInvocation="864" maxMicrosecondsPerInvocation="26953" standardDeviationMicrosecondsPerInvocation="4198"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="33" invocations="76" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="6034" standardDeviationMicrosecondsPerInvocation="841"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="28" invocations="7" avgMicrosecondsPerInvocation="4123" maxMicrosecondsPerInvocation="24199" standardDeviationMicrosecondsPerInvocation="8215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="27" invocations="40" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="8436" standardDeviationMicrosecondsPerInvocation="1453"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="40" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="13975" standardDeviationMicrosecondsPerInvocation="2179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="73" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="3095" standardDeviationMicrosecondsPerInvocation="487"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="7" avgMicrosecondsPerInvocation="3221" maxMicrosecondsPerInvocation="12856" standardDeviationMicrosecondsPerInvocation="4772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="414" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="2718" standardDeviationMicrosecondsPerInvocation="158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="21" invocations="72" avgMicrosecondsPerInvocation="291" maxMicrosecondsPerInvocation="1923" standardDeviationMicrosecondsPerInvocation="309"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="20" invocations="7" avgMicrosecondsPerInvocation="2882" maxMicrosecondsPerInvocation="15398" standardDeviationMicrosecondsPerInvocation="5154"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="19" invocations="76" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="8614" standardDeviationMicrosecondsPerInvocation="1215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="40" avgMicrosecondsPerInvocation="481" maxMicrosecondsPerInvocation="8276" standardDeviationMicrosecondsPerInvocation="1405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="16" invocations="7" avgMicrosecondsPerInvocation="2295" maxMicrosecondsPerInvocation="5142" standardDeviationMicrosecondsPerInvocation="1494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="14" invocations="76" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="5896" standardDeviationMicrosecondsPerInvocation="892"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

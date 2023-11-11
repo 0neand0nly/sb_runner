@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685226390" analysisTimestamp="1699687589040" release="">
+  <Project projectName="">
+    <Jar>clean_train50\derquinsej-hib3-0.1.11.jar</Jar>
+  </Project>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="80336d034d975533423a5fdf71141887" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.sf.derquinsej.hib3.UUIDUserType.nullSafeSet(PreparedStatement, Object, int)</LongMessage>
+    <Class classname="net.sf.derquinsej.hib3.UUIDUserType" primary="true">
+      <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" start="36" end="88" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java">
+        <Message>At UUIDUserType.java:[lines 36-88]</Message>
+      </SourceLine>
+      <Message>In class net.sf.derquinsej.hib3.UUIDUserType</Message>
+    </Class>
+    <Method classname="net.sf.derquinsej.hib3.UUIDUserType" name="nullSafeSet" signature="(Ljava/sql/PreparedStatement;Ljava/lang/Object;I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" start="75" end="77" startBytecode="0" endBytecode="116" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java"/>
+      <Message>In method net.sf.derquinsej.hib3.UUIDUserType.nullSafeSet(PreparedStatement, Object, int)</Message>
+    </Method>
+    <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" primary="true" start="75" end="75" startBytecode="12" endBytecode="12" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java">
+      <Message>At UUIDUserType.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d2cafa64a6eeded8a1c6c50a4c2fab24" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>net.sf.derquinsej.hib3.UUIDUserType.sqlTypes() may expose internal representation by returning UUIDUserType.TYPES</LongMessage>
+    <Class classname="net.sf.derquinsej.hib3.UUIDUserType" primary="true">
+      <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" start="36" end="88" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java">
+        <Message>At UUIDUserType.java:[lines 36-88]</Message>
+      </SourceLine>
+      <Message>In class net.sf.derquinsej.hib3.UUIDUserType</Message>
+    </Class>
+    <Method classname="net.sf.derquinsej.hib3.UUIDUserType" name="sqlTypes" signature="()[I" isStatic="false" primary="true">
+      <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" start="88" end="88" startBytecode="0" endBytecode="45" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java"/>
+      <Message>In method net.sf.derquinsej.hib3.UUIDUserType.sqlTypes()</Message>
+    </Method>
+    <Field classname="net.sf.derquinsej.hib3.UUIDUserType" name="TYPES" signature="[I" isStatic="true" primary="true">
+      <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java">
+        <Message>In UUIDUserType.java</Message>
+      </SourceLine>
+      <Message>Field net.sf.derquinsej.hib3.UUIDUserType.TYPES</Message>
+    </Field>
+    <SourceLine classname="net.sf.derquinsej.hib3.UUIDUserType" primary="true" start="88" end="88" startBytecode="3" endBytecode="3" sourcefile="UUIDUserType.java" sourcepath="net/sf/derquinsej/hib3/UUIDUserType.java">
+      <Message>At UUIDUserType.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a3af162280ca30371e017ed623b175f3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class net.sf.derquinsej.hib3.seq.Sequence at new net.sf.derquinsej.hib3.seq.Sequence(String, long, long) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="net.sf.derquinsej.hib3.seq.Sequence" primary="true" classAnnotationNames="javax.persistence.Entity,javax.persistence.Table">
+      <SourceLine classname="net.sf.derquinsej.hib3.seq.Sequence" start="42" end="114" sourcefile="Sequence.java" sourcepath="net/sf/derquinsej/hib3/seq/Sequence.java">
+        <Message>At Sequence.java:[lines 42-114]</Message>
+      </SourceLine>
+      <Message>In class net.sf.derquinsej.hib3.seq.Sequence</Message>
+    </Class>
+    <Method classname="net.sf.derquinsej.hib3.seq.Sequence" name="&lt;init&gt;" signature="(Ljava/lang/String;JJ)V" isStatic="false" primary="true" classAnnotationNames="javax.persistence.Entity,javax.persistence.Table">
+      <SourceLine classname="net.sf.derquinsej.hib3.seq.Sequence" start="55" end="62" startBytecode="0" endBytecode="150" sourcefile="Sequence.java" sourcepath="net/sf/derquinsej/hib3/seq/Sequence.java"/>
+      <Message>In method new net.sf.derquinsej.hib3.seq.Sequence(String, long, long)</Message>
+    </Method>
+    <SourceLine classname="net.sf.derquinsej.hib3.seq.Sequence" primary="true" start="57" end="57" startBytecode="25" endBytecode="25" sourcefile="Sequence.java" sourcepath="net/sf/derquinsej/hib3/seq/Sequence.java">
+      <Message>At Sequence.java:[line 57]</Message>
+    </SourceLine>
+    <SourceLine classname="net.sf.derquinsej.hib3.seq.Sequence" start="57" end="57" startBytecode="25" endBytecode="25" sourcefile="Sequence.java" sourcepath="net/sf/derquinsej/hib3/seq/Sequence.java">
+      <Message>At Sequence.java:[line 57]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="10">
+    <MissingClass>com.google.common.base.Objects</MissingClass>
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>org.hibernate.Criteria</MissingClass>
+    <MissingClass>org.hibernate.HibernateException</MissingClass>
+    <MissingClass>org.hibernate.LockMode</MissingClass>
+    <MissingClass>org.hibernate.Query</MissingClass>
+    <MissingClass>org.hibernate.Session</MissingClass>
+    <MissingClass>org.hibernate.SessionFactory</MissingClass>
+    <MissingClass>org.hibernate.criterion.Criterion</MissingClass>
+    <MissingClass>org.hibernate.usertype.UserType</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:06 +0900" total_classes="12" referenced_classes="56" total_bugs="3" total_size="324" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.33" clock_seconds="2.20" peak_mbytes="222.88" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="1" priority_2="2">
+    <FileStats path="net/sf/derquinsej/hib3/AbstractDAOImpl.java" bugCount="0" size="55"/>
+    <FileStats path="net/sf/derquinsej/hib3/DAO.java" bugCount="0" size="4"/>
+    <FileStats path="net/sf/derquinsej/hib3/GeneralDAO.java" bugCount="0" size="8"/>
+    <FileStats path="net/sf/derquinsej/hib3/GeneralDAOImpl.java" bugCount="0" size="38"/>
+    <FileStats path="net/sf/derquinsej/hib3/GenericDAO.java" bugCount="0" size="8"/>
+    <FileStats path="net/sf/derquinsej/hib3/GenericDAOImpl.java" bugCount="0" size="64"/>
+    <FileStats path="net/sf/derquinsej/hib3/Repository.java" bugCount="0" size="15"/>
+    <FileStats path="net/sf/derquinsej/hib3/RepositoryImpl.java" bugCount="0" size="22"/>
+    <FileStats path="net/sf/derquinsej/hib3/UUIDUserType.java" bugCount="2" size="32" bugHash="7179445abf41d67b67a59da61f97d67b"/>
+    <FileStats path="net/sf/derquinsej/hib3/seq/Sequence.java" bugCount="1" size="34" bugHash="ae4d061c11051ad43c1115dab96b13df"/>
+    <FileStats path="net/sf/derquinsej/hib3/seq/SequenceDAO.java" bugCount="0" size="33"/>
+    <FileStats path="net/sf/derquinsej/hib3/seq/SequenceNotFoundException.java" bugCount="0" size="11"/>
+    <PackageStats package="net.sf.derquinsej.hib3" total_bugs="2" total_types="9" total_size="246" priority_3="1" priority_2="1">
+      <ClassStats class="net.sf.derquinsej.hib3.AbstractDAOImpl" sourceFile="AbstractDAOImpl.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.DAO" sourceFile="DAO.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.GeneralDAO" sourceFile="GeneralDAO.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.GeneralDAOImpl" sourceFile="GeneralDAOImpl.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.GenericDAO" sourceFile="GenericDAO.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.GenericDAOImpl" sourceFile="GenericDAOImpl.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.Repository" sourceFile="Repository.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.RepositoryImpl" sourceFile="RepositoryImpl.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.UUIDUserType" sourceFile="UUIDUserType.java" interface="false" size="32" bugs="2" priority_3="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="net.sf.derquinsej.hib3.seq" total_bugs="1" total_types="3" total_size="78" priority_2="1">
+      <ClassStats class="net.sf.derquinsej.hib3.seq.Sequence" sourceFile="Sequence.java" interface="false" size="34" bugs="1" priority_2="1"/>
+      <ClassStats class="net.sf.derquinsej.hib3.seq.SequenceDAO" sourceFile="SequenceDAO.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="net.sf.derquinsej.hib3.seq.SequenceNotFoundException" sourceFile="SequenceNotFoundException.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="296" invocations="609" avgMicrosecondsPerInvocation="487" maxMicrosecondsPerInvocation="48163" standardDeviationMicrosecondsPerInvocation="2150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="79" invocations="102" avgMicrosecondsPerInvocation="777" maxMicrosecondsPerInvocation="54433" standardDeviationMicrosecondsPerInvocation="5390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="74" invocations="111" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="56978" standardDeviationMicrosecondsPerInvocation="5379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="71" invocations="56" avgMicrosecondsPerInvocation="1269" maxMicrosecondsPerInvocation="14732" standardDeviationMicrosecondsPerInvocation="2627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="63" invocations="12" avgMicrosecondsPerInvocation="5292" maxMicrosecondsPerInvocation="52744" standardDeviationMicrosecondsPerInvocation="14345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="56" invocations="227" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="9382" standardDeviationMicrosecondsPerInvocation="724"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="80" avgMicrosecondsPerInvocation="679" maxMicrosecondsPerInvocation="39321" standardDeviationMicrosecondsPerInvocation="4352"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="615" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="3067" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="44" invocations="81" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="31586" standardDeviationMicrosecondsPerInvocation="3476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="56" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="7488" standardDeviationMicrosecondsPerInvocation="1511"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="42" invocations="80" avgMicrosecondsPerInvocation="530" maxMicrosecondsPerInvocation="19025" standardDeviationMicrosecondsPerInvocation="2138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="56" avgMicrosecondsPerInvocation="665" maxMicrosecondsPerInvocation="27486" standardDeviationMicrosecondsPerInvocation="3630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="35" invocations="80" avgMicrosecondsPerInvocation="439" maxMicrosecondsPerInvocation="8624" standardDeviationMicrosecondsPerInvocation="1093"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="30" invocations="56" avgMicrosecondsPerInvocation="547" maxMicrosecondsPerInvocation="13552" standardDeviationMicrosecondsPerInvocation="1835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="24" invocations="554" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1372" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ObligationDataflowFactory" totalMilliseconds="24" invocations="13" avgMicrosecondsPerInvocation="1877" maxMicrosecondsPerInvocation="24015" standardDeviationMicrosecondsPerInvocation="6390"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="56" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="5326" standardDeviationMicrosecondsPerInvocation="956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="19" invocations="12" avgMicrosecondsPerInvocation="1596" maxMicrosecondsPerInvocation="9818" standardDeviationMicrosecondsPerInvocation="2825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DontUseFloatsAsLoopCounters" totalMilliseconds="19" invocations="12" avgMicrosecondsPerInvocation="1592" maxMicrosecondsPerInvocation="18031" standardDeviationMicrosecondsPerInvocation="4957"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="19" invocations="80" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="2298" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="18" invocations="80" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="1901" standardDeviationMicrosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="12" avgMicrosecondsPerInvocation="1364" maxMicrosecondsPerInvocation="9714" standardDeviationMicrosecondsPerInvocation="2647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="15" invocations="12" avgMicrosecondsPerInvocation="1309" maxMicrosecondsPerInvocation="9874" standardDeviationMicrosecondsPerInvocation="2947"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

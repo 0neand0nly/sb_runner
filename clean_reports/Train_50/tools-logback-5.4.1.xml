@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685222347" analysisTimestamp="1699688921219" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp/tmp\tools-logback-5.4.1.jar</Jar>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="980170a12a4953373c894cd0a4dd9a1f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to names in cn.gmlee.tools.logback.aop.ApiPrintAspect.afterReturning(JoinPoint, Object)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect,org.springframework.stereotype.Component">
+      <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" start="30" end="159" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java">
+        <Message>At ApiPrintAspect.java:[lines 30-159]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.aop.ApiPrintAspect</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" name="afterReturning" signature="(Lorg/aspectj/lang/JoinPoint;Ljava/lang/Object;)V" isStatic="false" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect,org.springframework.stereotype.Component">
+      <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" start="84" end="107" startBytecode="0" endBytecode="81" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java"/>
+      <Message>In method cn.gmlee.tools.logback.aop.ApiPrintAspect.afterReturning(JoinPoint, Object)</Message>
+    </Method>
+    <LocalVariable name="names" register="4" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named names</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" primary="true" start="85" end="85" startBytecode="16" endBytecode="16" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java">
+      <Message>At ApiPrintAspect.java:[line 85]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="names"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="36df85721bde301d4da0fb1181e74667" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to names in cn.gmlee.tools.logback.aop.ApiPrintAspect.afterThrowing(JoinPoint, Exception)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect,org.springframework.stereotype.Component">
+      <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" start="30" end="159" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java">
+        <Message>At ApiPrintAspect.java:[lines 30-159]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.aop.ApiPrintAspect</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" name="afterThrowing" signature="(Lorg/aspectj/lang/JoinPoint;Ljava/lang/Exception;)V" isStatic="false" primary="true" classAnnotationNames="org.aspectj.lang.annotation.Aspect,org.springframework.stereotype.Component">
+      <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" start="123" end="146" startBytecode="0" endBytecode="80" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java"/>
+      <Message>In method cn.gmlee.tools.logback.aop.ApiPrintAspect.afterThrowing(JoinPoint, Exception)</Message>
+    </Method>
+    <LocalVariable name="names" register="4" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named names</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.gmlee.tools.logback.aop.ApiPrintAspect" primary="true" start="124" end="124" startBytecode="16" endBytecode="16" sourcefile="ApiPrintAspect.java" sourcepath="cn/gmlee/tools/logback/aop/ApiPrintAspect.java">
+      <Message>At ApiPrintAspect.java:[line 124]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="names"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="3bad561dbcf97c3c6e5e5bd628607fda" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>RedisAppender.pool not initialized in constructor and dereferenced in cn.gmlee.tools.logback.appender.RedisAppender.append(ILoggingEvent)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.appender.RedisAppender" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" start="18" end="223" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+        <Message>At RedisAppender.java:[lines 18-223]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.appender.RedisAppender</Message>
+    </Class>
+    <Field classname="cn.gmlee.tools.logback.appender.RedisAppender" name="pool" signature="Lredis/clients/jedis/JedisPool;" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+        <Message>In RedisAppender.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.appender.RedisAppender.pool</Message>
+    </Field>
+    <Method classname="cn.gmlee.tools.logback.appender.RedisAppender" name="append" signature="(Lch/qos/logback/classic/spi/ILoggingEvent;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" start="39" end="54" startBytecode="0" endBytecode="339" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java"/>
+      <Message>In method cn.gmlee.tools.logback.appender.RedisAppender.append(ILoggingEvent)</Message>
+    </Method>
+    <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" primary="true" start="39" end="39" startBytecode="4" endBytecode="4" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+      <Message>At RedisAppender.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="8509cac749e89a152c42abe6ce896538" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>RedisAppender.pool not initialized in constructor and dereferenced in cn.gmlee.tools.logback.appender.RedisAppender.stop()</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.appender.RedisAppender" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" start="18" end="223" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+        <Message>At RedisAppender.java:[lines 18-223]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.appender.RedisAppender</Message>
+    </Class>
+    <Field classname="cn.gmlee.tools.logback.appender.RedisAppender" name="pool" signature="Lredis/clients/jedis/JedisPool;" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+        <Message>In RedisAppender.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.appender.RedisAppender.pool</Message>
+    </Field>
+    <Method classname="cn.gmlee.tools.logback.appender.RedisAppender" name="stop" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" start="221" end="223" startBytecode="0" endBytecode="61" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java"/>
+      <Message>In method cn.gmlee.tools.logback.appender.RedisAppender.stop()</Message>
+    </Method>
+    <SourceLine classname="cn.gmlee.tools.logback.appender.RedisAppender" primary="true" start="222" end="222" startBytecode="8" endBytecode="8" sourcefile="RedisAppender.java" sourcepath="cn/gmlee/tools/logback/appender/RedisAppender.java">
+      <Message>At RedisAppender.java:[line 222]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="f74ae315a869e16a60b3a53497da6a7f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field cn.gmlee.tools.logback.db.mysql.MysqlLogger.enable from instance method new cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog()</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" start="21" end="23" sourcefile="DisabledInsertLogger.java" sourcepath="cn/gmlee/tools/logback/config/DisabledInsertLogger.java">
+        <Message>At DisabledInsertLogger.java:[lines 21-23]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" start="21" end="23" startBytecode="0" endBytecode="58" sourcefile="DisabledInsertLogger.java" sourcepath="cn/gmlee/tools/logback/config/DisabledInsertLogger.java"/>
+      <Message>In method new cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog()</Message>
+    </Method>
+    <Field classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="enable" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>In MysqlLogger.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.db.mysql.MysqlLogger.enable</Message>
+    </Field>
+    <SourceLine classname="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" primary="true" start="22" end="22" startBytecode="5" endBytecode="5" sourcefile="DisabledInsertLogger.java" sourcepath="cn/gmlee/tools/logback/config/DisabledInsertLogger.java">
+      <Message>At DisabledInsertLogger.java:[line 22]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="10724166cadb2f836667b2c5cfac0248" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field cn.gmlee.tools.logback.db.mysql.MysqlLogger.I_BATIS_DAO from instance method new cn.gmlee.tools.logback.config.LoggerConfiguration(SqlSessionFactory)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.config.LoggerConfiguration" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.autoconfigure.condition.ConditionalOnClass">
+      <SourceLine classname="cn.gmlee.tools.logback.config.LoggerConfiguration" start="18" end="21" sourcefile="LoggerConfiguration.java" sourcepath="cn/gmlee/tools/logback/config/LoggerConfiguration.java">
+        <Message>At LoggerConfiguration.java:[lines 18-21]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.config.LoggerConfiguration</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.config.LoggerConfiguration" name="&lt;init&gt;" signature="(Lorg/apache/ibatis/session/SqlSessionFactory;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.autoconfigure.condition.ConditionalOnClass">
+      <SourceLine classname="cn.gmlee.tools.logback.config.LoggerConfiguration" start="18" end="21" startBytecode="0" endBytecode="91" sourcefile="LoggerConfiguration.java" sourcepath="cn/gmlee/tools/logback/config/LoggerConfiguration.java"/>
+      <Message>In method new cn.gmlee.tools.logback.config.LoggerConfiguration(SqlSessionFactory)</Message>
+    </Method>
+    <Field classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="I_BATIS_DAO" signature="Lcn/gmlee/tools/mybatis/dao/IBatisDao;" isStatic="true" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>In MysqlLogger.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.db.mysql.MysqlLogger.I_BATIS_DAO</Message>
+    </Field>
+    <SourceLine classname="cn.gmlee.tools.logback.config.LoggerConfiguration" primary="true" start="20" end="20" startBytecode="14" endBytecode="14" sourcefile="LoggerConfiguration.java" sourcepath="cn/gmlee/tools/logback/config/LoggerConfiguration.java">
+      <Message>At LoggerConfiguration.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="1b91de8367112d633df36f70f56dd19a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>cn.gmlee.tools.logback.db.Log is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.db.Log" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.Log" start="14" end="17" sourcefile="Log.java" sourcepath="cn/gmlee/tools/logback/db/Log.java">
+        <Message>At Log.java:[lines 14-17]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.db.Log</Message>
+    </Class>
+    <SourceLine classname="cn.gmlee.tools.logback.db.Log" start="14" end="17" sourcefile="Log.java" sourcepath="cn/gmlee/tools/logback/db/Log.java" synthetic="true">
+      <Message>At Log.java:[lines 14-17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="53d3c8d16b7cac80c5333d24b26e6035" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final and cannot be protected from malicious code</ShortMessage>
+    <LongMessage>cn.gmlee.tools.logback.db.mysql.MysqlLogger.I_BATIS_DAO isn&apos;t final and cannot be protected from malicious code</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="20" end="133" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>At MysqlLogger.java:[lines 20-133]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.db.mysql.MysqlLogger</Message>
+    </Class>
+    <Field classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="I_BATIS_DAO" signature="Lcn/gmlee/tools/mybatis/dao/IBatisDao;" isStatic="true" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>In MysqlLogger.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.db.mysql.MysqlLogger.I_BATIS_DAO</Message>
+    </Field>
+    <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java" synthetic="true">
+      <Message>In MysqlLogger.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_CANNOT_BE_FINAL" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="86ec51f04c7421f9143066393abbc858" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final and cannot be protected from malicious code</ShortMessage>
+    <LongMessage>cn.gmlee.tools.logback.db.mysql.MysqlLogger.enable isn&apos;t final and cannot be protected from malicious code</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="20" end="133" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>At MysqlLogger.java:[lines 20-133]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.db.mysql.MysqlLogger</Message>
+    </Class>
+    <Field classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="enable" signature="Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>In MysqlLogger.java</Message>
+      </SourceLine>
+      <Message>Field cn.gmlee.tools.logback.db.mysql.MysqlLogger.enable</Message>
+    </Field>
+    <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true" start="20" end="20" startBytecode="1" endBytecode="1" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+      <Message>At MysqlLogger.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="3c11fb267d005bff2d3ef263bd59d3ae" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in cn.gmlee.tools.logback.db.mysql.MysqlLogger.insert(String)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="20" end="133" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>At MysqlLogger.java:[lines 20-133]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.db.mysql.MysqlLogger</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="insert" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="124" end="133" startBytecode="0" endBytecode="226" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java"/>
+      <Message>In method cn.gmlee.tools.logback.db.mysql.MysqlLogger.insert(String)</Message>
+    </Method>
+    <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true" start="129" end="129" startBytecode="80" endBytecode="80" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+      <Message>At MysqlLogger.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="822ae9005b93a001a61174abf38ae5c8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in cn.gmlee.tools.logback.db.mysql.MysqlLogger.insert(String, Throwable)</LongMessage>
+    <Class classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="20" end="133" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+        <Message>At MysqlLogger.java:[lines 20-133]</Message>
+      </SourceLine>
+      <Message>In class cn.gmlee.tools.logback.db.mysql.MysqlLogger</Message>
+    </Class>
+    <Method classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" name="insert" signature="(Ljava/lang/String;Ljava/lang/Throwable;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" start="111" end="121" startBytecode="0" endBytecode="248" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java"/>
+      <Message>In method cn.gmlee.tools.logback.db.mysql.MysqlLogger.insert(String, Throwable)</Message>
+    </Method>
+    <SourceLine classname="cn.gmlee.tools.logback.db.mysql.MysqlLogger" primary="true" start="117" end="117" startBytecode="88" endBytecode="88" sourcefile="MysqlLogger.java" sourcepath="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java">
+      <Message>At MysqlLogger.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_CANNOT_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final and cannot be protected from malicious code</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+ A mutable static field could be changed by malicious code or
+        by accident from another package.
+   Unfortunately, the way the field is used doesn't allow
+   any easy fix to this problem.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="26">
+    <MissingClass>ch.qos.logback.classic.spi.ILoggingEvent</MissingClass>
+    <MissingClass>ch.qos.logback.core.Layout</MissingClass>
+    <MissingClass>ch.qos.logback.core.UnsynchronizedAppenderBase</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.anno.ApiPrint</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.assist.ApiAssist</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.entity.Id</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.enums.Function</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.enums.Function$Zero</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.enums.XTime</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.mod.JsonLog</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.util.ExceptionUtil</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.util.TimeUtil</MissingClass>
+    <MissingClass>cn.gmlee.tools.base.util.WebUtil</MissingClass>
+    <MissingClass>cn.gmlee.tools.mybatis.dao.IBatisDao</MissingClass>
+    <MissingClass>com.cwbase.logback.AdditionalField</MissingClass>
+    <MissingClass>com.cwbase.logback.JSONEventLayout</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>org.apache.commons.pool2.impl.GenericObjectPoolConfig</MissingClass>
+    <MissingClass>org.apache.ibatis.session.SqlSessionFactory</MissingClass>
+    <MissingClass>org.aspectj.lang.JoinPoint</MissingClass>
+    <MissingClass>org.aspectj.lang.reflect.MethodSignature</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>redis.clients.jedis.Jedis</MissingClass>
+    <MissingClass>redis.clients.jedis.JedisPool</MissingClass>
+    <MissingClass>redis.clients.jedis.Protocol</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:02 +0900" total_classes="11" referenced_classes="48" total_bugs="11" total_size="361" num_packages="6" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="2.19" clock_seconds="2.25" peak_mbytes="226.46" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="5" priority_2="5" priority_1="1">
+    <FileStats path="cn/gmlee/tools/logback/anno/SendMail.java" bugCount="0" size="4"/>
+    <FileStats path="cn/gmlee/tools/logback/aop/ApiPrintAspect.java" bugCount="2" size="74" bugHash="537b1b905ff0b1ab96eedeaf37ee47f8"/>
+    <FileStats path="cn/gmlee/tools/logback/appender/RedisAppender.java" bugCount="2" size="133" bugHash="cf552136813b5842a86a884272176ca9"/>
+    <FileStats path="cn/gmlee/tools/logback/config/ApiPrintAutoConfiguration.java" bugCount="0" size="8"/>
+    <FileStats path="cn/gmlee/tools/logback/config/ApiPrintTrigger.java" bugCount="0" size="2"/>
+    <FileStats path="cn/gmlee/tools/logback/config/DisabledInsertLogger.java" bugCount="1" size="6" bugHash="758baf0c1e2e4e7949728b291c8b74fa"/>
+    <FileStats path="cn/gmlee/tools/logback/config/LoggerConfiguration.java" bugCount="1" size="6" bugHash="b5672cca24b88b8b044bfe70fb2d52cb"/>
+    <FileStats path="cn/gmlee/tools/logback/db/Log.java" bugCount="1" size="15" bugHash="3d83953a7cd993a9c4aa50fef834eac4"/>
+    <FileStats path="cn/gmlee/tools/logback/db/LoggerFactory.java" bugCount="0" size="9"/>
+    <FileStats path="cn/gmlee/tools/logback/db/mysql/MysqlLogger.java" bugCount="4" size="104" bugHash="1fa065ab9e21cd6621e314ce73312437"/>
+    <PackageStats package="cn.gmlee.tools.logback.anno" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="cn.gmlee.tools.logback.anno.SendMail" sourceFile="SendMail.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.gmlee.tools.logback.aop" total_bugs="2" total_types="1" total_size="74" priority_2="2">
+      <ClassStats class="cn.gmlee.tools.logback.aop.ApiPrintAspect" sourceFile="ApiPrintAspect.java" interface="false" size="74" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="cn.gmlee.tools.logback.appender" total_bugs="2" total_types="1" total_size="133" priority_3="2">
+      <ClassStats class="cn.gmlee.tools.logback.appender.RedisAppender" sourceFile="RedisAppender.java" interface="false" size="133" bugs="2" priority_3="2"/>
+    </PackageStats>
+    <PackageStats package="cn.gmlee.tools.logback.config" total_bugs="2" total_types="5" total_size="22" priority_2="1" priority_1="1">
+      <ClassStats class="cn.gmlee.tools.logback.config.ApiPrintAutoConfiguration" sourceFile="ApiPrintAutoConfiguration.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="cn.gmlee.tools.logback.config.ApiPrintTrigger" sourceFile="ApiPrintTrigger.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.gmlee.tools.logback.config.DisabledInsertLogger" sourceFile="DisabledInsertLogger.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="cn.gmlee.tools.logback.config.DisabledInsertLogger$DisabledInsertLog" sourceFile="DisabledInsertLogger.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.gmlee.tools.logback.config.LoggerConfiguration" sourceFile="LoggerConfiguration.java" interface="false" size="6" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="cn.gmlee.tools.logback.db" total_bugs="1" total_types="2" total_size="24" priority_3="1">
+      <ClassStats class="cn.gmlee.tools.logback.db.Log" sourceFile="Log.java" interface="false" size="15" bugs="1" priority_3="1"/>
+      <ClassStats class="cn.gmlee.tools.logback.db.LoggerFactory" sourceFile="LoggerFactory.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.gmlee.tools.logback.db.mysql" total_bugs="4" total_types="1" total_size="104" priority_3="2" priority_2="2">
+      <ClassStats class="cn.gmlee.tools.logback.db.mysql.MysqlLogger" sourceFile="MysqlLogger.java" interface="false" size="104" bugs="4" priority_3="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="261" invocations="655" avgMicrosecondsPerInvocation="399" maxMicrosecondsPerInvocation="31561" standardDeviationMicrosecondsPerInvocation="1464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="88" invocations="76" avgMicrosecondsPerInvocation="1159" maxMicrosecondsPerInvocation="66107" standardDeviationMicrosecondsPerInvocation="7544"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="48" avgMicrosecondsPerInvocation="1692" maxMicrosecondsPerInvocation="12459" standardDeviationMicrosecondsPerInvocation="2996"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="72" invocations="72" avgMicrosecondsPerInvocation="1011" maxMicrosecondsPerInvocation="42418" standardDeviationMicrosecondsPerInvocation="5126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="58" invocations="272" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="9999" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="58" invocations="72" avgMicrosecondsPerInvocation="808" maxMicrosecondsPerInvocation="43243" standardDeviationMicrosecondsPerInvocation="5049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="57" invocations="48" avgMicrosecondsPerInvocation="1193" maxMicrosecondsPerInvocation="50856" standardDeviationMicrosecondsPerInvocation="7247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="57" invocations="114" avgMicrosecondsPerInvocation="500" maxMicrosecondsPerInvocation="32074" standardDeviationMicrosecondsPerInvocation="3026"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="55" invocations="663" avgMicrosecondsPerInvocation="84" maxMicrosecondsPerInvocation="9876" standardDeviationMicrosecondsPerInvocation="422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="50" invocations="72" avgMicrosecondsPerInvocation="697" maxMicrosecondsPerInvocation="16117" standardDeviationMicrosecondsPerInvocation="2169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="46" invocations="48" avgMicrosecondsPerInvocation="979" maxMicrosecondsPerInvocation="6798" standardDeviationMicrosecondsPerInvocation="1526"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="46" invocations="72" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="28247" standardDeviationMicrosecondsPerInvocation="3325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="48" avgMicrosecondsPerInvocation="752" maxMicrosecondsPerInvocation="27103" standardDeviationMicrosecondsPerInvocation="3858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="35" invocations="11" avgMicrosecondsPerInvocation="3195" maxMicrosecondsPerInvocation="31186" standardDeviationMicrosecondsPerInvocation="8867"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="31" invocations="48" avgMicrosecondsPerInvocation="646" maxMicrosecondsPerInvocation="13974" standardDeviationMicrosecondsPerInvocation="2017"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="28" invocations="11" avgMicrosecondsPerInvocation="2616" maxMicrosecondsPerInvocation="26537" standardDeviationMicrosecondsPerInvocation="7572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="27" invocations="72" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="9032" standardDeviationMicrosecondsPerInvocation="1135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="25" invocations="71" avgMicrosecondsPerInvocation="364" maxMicrosecondsPerInvocation="5710" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="573" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="1214" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="23" invocations="11" avgMicrosecondsPerInvocation="2124" maxMicrosecondsPerInvocation="9340" standardDeviationMicrosecondsPerInvocation="3161"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="48" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="7232" standardDeviationMicrosecondsPerInvocation="1150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="48" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="1694" standardDeviationMicrosecondsPerInvocation="471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="16" invocations="76" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="8559" standardDeviationMicrosecondsPerInvocation="1101"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

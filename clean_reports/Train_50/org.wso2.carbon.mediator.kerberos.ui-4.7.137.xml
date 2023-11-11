@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685194411" analysisTimestamp="1699688819314" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\org.wso2.carbon.mediator.kerberos.ui-4.7.137.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="21">
+    <MissingClass>org.apache.axiom.om.OMAttribute</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMElement</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMFactory</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNamespace</MissingClass>
+    <MissingClass>org.apache.axiom.om.OMNode</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.apache.commons.logging.LogFactory</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.ValueFactory</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.ValueSerializer</MissingClass>
+    <MissingClass>org.apache.synapse.config.xml.XMLConfigConstants</MissingClass>
+    <MissingClass>org.apache.synapse.mediators.Value</MissingClass>
+    <MissingClass>org.osgi.framework.BundleActivator</MissingClass>
+    <MissingClass>org.osgi.framework.BundleContext</MissingClass>
+    <MissingClass>org.osgi.framework.ServiceRegistration</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.kerberos.KerberosConstants</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.AbstractMediatorService</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.MediatorException</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.MediatorService</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.ui.AbstractMediator</MissingClass>
+    <MissingClass>org.wso2.carbon.mediator.service.ui.Mediator</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:46:34 +0900" total_classes="3" referenced_classes="19" total_bugs="0" total_size="168" num_packages="2" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="1.05" clock_seconds="1.69" peak_mbytes="223.72" alloc_mbytes="3984.00" gc_seconds="0.01">
+    <FileStats path="org/wso2/carbon/mediator/kerberos/ui/KerberosMediator.java" bugCount="0" size="135"/>
+    <FileStats path="org/wso2/carbon/mediator/kerberos/ui/KerberosMediatorService.java" bugCount="0" size="15"/>
+    <FileStats path="org/wso2/carbon/mediator/kerberos/ui/internal/KerberosMediatorActivator.java" bugCount="0" size="18"/>
+    <PackageStats package="org.wso2.carbon.mediator.kerberos.ui" total_bugs="0" total_types="2" total_size="150">
+      <ClassStats class="org.wso2.carbon.mediator.kerberos.ui.KerberosMediator" sourceFile="KerberosMediator.java" interface="false" size="135" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.mediator.kerberos.ui.KerberosMediatorService" sourceFile="KerberosMediatorService.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.wso2.carbon.mediator.kerberos.ui.internal" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="org.wso2.carbon.mediator.kerberos.ui.internal.KerberosMediatorActivator" sourceFile="KerberosMediatorActivator.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="222" invocations="393" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="33576" standardDeviationMicrosecondsPerInvocation="1909"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="60" invocations="32" avgMicrosecondsPerInvocation="1893" maxMicrosecondsPerInvocation="51636" standardDeviationMicrosecondsPerInvocation="8956"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="52" invocations="3" avgMicrosecondsPerInvocation="17398" maxMicrosecondsPerInvocation="51908" standardDeviationMicrosecondsPerInvocation="24402"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="47" invocations="32" avgMicrosecondsPerInvocation="1472" maxMicrosecondsPerInvocation="37697" standardDeviationMicrosecondsPerInvocation="6547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="43" invocations="19" avgMicrosecondsPerInvocation="2267" maxMicrosecondsPerInvocation="11899" standardDeviationMicrosecondsPerInvocation="3592"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="42" invocations="32" avgMicrosecondsPerInvocation="1314" maxMicrosecondsPerInvocation="29293" standardDeviationMicrosecondsPerInvocation="5131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="401" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="4490" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="38" invocations="32" avgMicrosecondsPerInvocation="1205" maxMicrosecondsPerInvocation="16312" standardDeviationMicrosecondsPerInvocation="3119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="37" invocations="100" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="9251" standardDeviationMicrosecondsPerInvocation="986"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="37" invocations="32" avgMicrosecondsPerInvocation="1165" maxMicrosecondsPerInvocation="26921" standardDeviationMicrosecondsPerInvocation="4679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="35" invocations="54" avgMicrosecondsPerInvocation="661" maxMicrosecondsPerInvocation="18874" standardDeviationMicrosecondsPerInvocation="2704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="33" invocations="19" avgMicrosecondsPerInvocation="1780" maxMicrosecondsPerInvocation="22089" standardDeviationMicrosecondsPerInvocation="4929"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="24" invocations="19" avgMicrosecondsPerInvocation="1290" maxMicrosecondsPerInvocation="8399" standardDeviationMicrosecondsPerInvocation="2196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="19" avgMicrosecondsPerInvocation="1203" maxMicrosecondsPerInvocation="10842" standardDeviationMicrosecondsPerInvocation="2481"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="32" avgMicrosecondsPerInvocation="700" maxMicrosecondsPerInvocation="7047" standardDeviationMicrosecondsPerInvocation="1594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="339" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1060" standardDeviationMicrosecondsPerInvocation="137"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="17" invocations="3" avgMicrosecondsPerInvocation="5764" maxMicrosecondsPerInvocation="12579" standardDeviationMicrosecondsPerInvocation="4820"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="16" invocations="3" avgMicrosecondsPerInvocation="5545" maxMicrosecondsPerInvocation="10190" standardDeviationMicrosecondsPerInvocation="4150"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="19" avgMicrosecondsPerInvocation="843" maxMicrosecondsPerInvocation="9256" standardDeviationMicrosecondsPerInvocation="2088"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1699685236848" analysisTimestamp="1699688732620" release="">
+  <Project projectName="">
+    <Jar>./clean_train50/temp\optionfactory-keycloak-validation-2.13.jar</Jar>
+  </Project>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="d0a665a79cc3cf5da75f51ab483aace8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator.isValid(InputPart, ConstraintValidatorContext)</LongMessage>
+    <Class classname="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" primary="true">
+      <SourceLine classname="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" start="36" end="70" sourcefile="FileExtensionsInputPart.java" sourcepath="net/optionfactory/keycloak/validation/validators/FileExtensionsInputPart.java">
+        <Message>At FileExtensionsInputPart.java:[lines 36-70]</Message>
+      </SourceLine>
+      <Message>In class net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator</Message>
+    </Class>
+    <Method classname="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" name="isValid" signature="(Lorg/jboss/resteasy/plugins/providers/multipart/InputPart;Ljavax/validation/ConstraintValidatorContext;)Z" isStatic="false" primary="true">
+      <SourceLine classname="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" start="47" end="70" startBytecode="0" endBytecode="382" sourcefile="FileExtensionsInputPart.java" sourcepath="net/optionfactory/keycloak/validation/validators/FileExtensionsInputPart.java"/>
+      <Message>In method net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator.isValid(InputPart, ConstraintValidatorContext)</Message>
+    </Method>
+    <SourceLine classname="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" primary="true" start="68" end="68" startBytecode="98" endBytecode="98" sourcefile="FileExtensionsInputPart.java" sourcepath="net/optionfactory/keycloak/validation/validators/FileExtensionsInputPart.java">
+      <Message>At FileExtensionsInputPart.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="8c0b30e77a812dc897a6997c1993f2a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in net.optionfactory.keycloak.validation.validators.TaxCode$Validator.sanitize(String)</LongMessage>
+    <Class classname="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" primary="true">
+      <SourceLine classname="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" start="39" end="212" sourcefile="TaxCode.java" sourcepath="net/optionfactory/keycloak/validation/validators/TaxCode.java">
+        <Message>At TaxCode.java:[lines 39-212]</Message>
+      </SourceLine>
+      <Message>In class net.optionfactory.keycloak.validation.validators.TaxCode$Validator</Message>
+    </Class>
+    <Method classname="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" name="sanitize" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" start="51" end="54" startBytecode="0" endBytecode="79" sourcefile="TaxCode.java" sourcepath="net/optionfactory/keycloak/validation/validators/TaxCode.java"/>
+      <Message>In method net.optionfactory.keycloak.validation.validators.TaxCode$Validator.sanitize(String)</Message>
+    </Method>
+    <SourceLine classname="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" primary="true" start="54" end="54" startBytecode="10" endBytecode="10" sourcefile="TaxCode.java" sourcepath="net/optionfactory/keycloak/validation/validators/TaxCode.java">
+      <Message>At TaxCode.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="37">
+    <MissingClass>com.google.i18n.phonenumbers.NumberParseException</MissingClass>
+    <MissingClass>com.google.i18n.phonenumbers.PhoneNumberUtil</MissingClass>
+    <MissingClass>com.google.i18n.phonenumbers.PhoneNumberUtil$PhoneNumberFormat</MissingClass>
+    <MissingClass>com.google.i18n.phonenumbers.PhoneNumberUtil$PhoneNumberType</MissingClass>
+    <MissingClass>com.google.i18n.phonenumbers.Phonenumber</MissingClass>
+    <MissingClass>com.google.i18n.phonenumbers.Phonenumber$PhoneNumber</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidator</MissingClass>
+    <MissingClass>javax.validation.ConstraintValidatorContext</MissingClass>
+    <MissingClass>javax.validation.MessageInterpolator</MissingClass>
+    <MissingClass>javax.validation.Validation</MissingClass>
+    <MissingClass>javax.validation.Validator</MissingClass>
+    <MissingClass>javax.validation.ValidatorFactory</MissingClass>
+    <MissingClass>javax.validation.bootstrap.ProviderSpecificBootstrap</MissingClass>
+    <MissingClass>javax.validation.executable.ExecutableValidator</MissingClass>
+    <MissingClass>javax.ws.rs.BadRequestException</MissingClass>
+    <MissingClass>javax.ws.rs.core.HttpHeaders</MissingClass>
+    <MissingClass>javax.ws.rs.core.MultivaluedMap</MissingClass>
+    <MissingClass>org.apache.http.HeaderElement</MissingClass>
+    <MissingClass>org.apache.http.NameValuePair</MissingClass>
+    <MissingClass>org.apache.http.message.BasicHeader</MissingClass>
+    <MissingClass>org.hibernate.validator.HibernateValidator</MissingClass>
+    <MissingClass>org.hibernate.validator.HibernateValidatorConfiguration</MissingClass>
+    <MissingClass>org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator</MissingClass>
+    <MissingClass>org.hibernate.validator.spi.messageinterpolation.LocaleResolver</MissingClass>
+    <MissingClass>org.hibernate.validator.spi.messageinterpolation.LocaleResolverContext</MissingClass>
+    <MissingClass>org.jboss.resteasy.core.ResteasyContext</MissingClass>
+    <MissingClass>org.jboss.resteasy.plugins.providers.multipart.InputPart</MissingClass>
+    <MissingClass>org.keycloak.Config</MissingClass>
+    <MissingClass>org.keycloak.Config$Scope</MissingClass>
+    <MissingClass>org.keycloak.models.KeycloakSession</MissingClass>
+    <MissingClass>org.keycloak.models.KeycloakSessionFactory</MissingClass>
+    <MissingClass>org.keycloak.models.utils.FormMessage</MissingClass>
+    <MissingClass>org.keycloak.provider.Provider</MissingClass>
+    <MissingClass>org.keycloak.provider.ProviderFactory</MissingClass>
+    <MissingClass>org.keycloak.provider.Spi</MissingClass>
+    <MissingClass>org.keycloak.validate.ValidationContext</MissingClass>
+    <MissingClass>org.keycloak.validate.validators.EmailValidator</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sat, 11 Nov 2023 15:47:16 +0900" total_classes="17" referenced_classes="77" total_bugs="2" total_size="373" num_packages="3" java_version="17.0.8" vm_version="17.0.8+9-LTS-211" cpu_seconds="0.72" clock_seconds="2.51" peak_mbytes="225.56" alloc_mbytes="3984.00" gc_seconds="0.02" priority_3="2">
+    <FileStats path="net/optionfactory/keycloak/validation/RequestValidator.java" bugCount="0" size="8"/>
+    <FileStats path="net/optionfactory/keycloak/validation/RequestValidatorFactory.java" bugCount="0" size="1"/>
+    <FileStats path="net/optionfactory/keycloak/validation/RequestValidatorSpi.java" bugCount="0" size="11"/>
+    <FileStats path="net/optionfactory/keycloak/validation/hibernate/HibernateRequestValidator.java" bugCount="0" size="67"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/Email.java" bugCount="0" size="13"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/FileExtensionsInputPart.java" bugCount="1" size="34" bugHash="73f0e438f2c69d2fb11271d1fb380e71"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/NonEmptyInputPart.java" bugCount="0" size="27"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/PhoneNumber.java" bugCount="0" size="21"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/PhoneNumbers.java" bugCount="0" size="25"/>
+    <FileStats path="net/optionfactory/keycloak/validation/validators/TaxCode.java" bugCount="1" size="166" bugHash="0c11a5e2e09b84e631dc1b2c9acccf03"/>
+    <PackageStats package="net.optionfactory.keycloak.validation" total_bugs="0" total_types="3" total_size="20">
+      <ClassStats class="net.optionfactory.keycloak.validation.RequestValidator" sourceFile="RequestValidator.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.RequestValidatorFactory" sourceFile="RequestValidatorFactory.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.RequestValidatorSpi" sourceFile="RequestValidatorSpi.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.optionfactory.keycloak.validation.hibernate" total_bugs="0" total_types="2" total_size="67">
+      <ClassStats class="net.optionfactory.keycloak.validation.hibernate.HibernateRequestValidator" sourceFile="HibernateRequestValidator.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.hibernate.HibernateRequestValidator$Factory" sourceFile="HibernateRequestValidator.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.optionfactory.keycloak.validation.validators" total_bugs="2" total_types="12" total_size="286" priority_3="2">
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.Email" sourceFile="Email.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.Email$Validator" sourceFile="Email.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart" sourceFile="FileExtensionsInputPart.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.FileExtensionsInputPart$Validator" sourceFile="FileExtensionsInputPart.java" interface="false" size="29" bugs="1" priority_3="1"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.NonEmptyInputPart" sourceFile="NonEmptyInputPart.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.NonEmptyInputPart$Validator" sourceFile="NonEmptyInputPart.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.PhoneNumber" sourceFile="PhoneNumber.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.PhoneNumber$Validator" sourceFile="PhoneNumber.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.PhoneNumbers" sourceFile="PhoneNumbers.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.TaxCode" sourceFile="TaxCode.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.TaxCode$Mode" sourceFile="TaxCode.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="net.optionfactory.keycloak.validation.validators.TaxCode$Validator" sourceFile="TaxCode.java" interface="false" size="149" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="256" invocations="712" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="56665" standardDeviationMicrosecondsPerInvocation="2211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="80" invocations="128" avgMicrosecondsPerInvocation="631" maxMicrosecondsPerInvocation="51562" standardDeviationMicrosecondsPerInvocation="4554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="79" invocations="88" avgMicrosecondsPerInvocation="898" maxMicrosecondsPerInvocation="57215" standardDeviationMicrosecondsPerInvocation="6079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="78" invocations="77" avgMicrosecondsPerInvocation="1015" maxMicrosecondsPerInvocation="12624" standardDeviationMicrosecondsPerInvocation="2133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="68" invocations="77" avgMicrosecondsPerInvocation="884" maxMicrosecondsPerInvocation="59839" standardDeviationMicrosecondsPerInvocation="6766"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="62" invocations="64" avgMicrosecondsPerInvocation="980" maxMicrosecondsPerInvocation="28246" standardDeviationMicrosecondsPerInvocation="3716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="59" invocations="208" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="12143" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="58" invocations="64" avgMicrosecondsPerInvocation="908" maxMicrosecondsPerInvocation="13589" standardDeviationMicrosecondsPerInvocation="2214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="57" invocations="64" avgMicrosecondsPerInvocation="903" maxMicrosecondsPerInvocation="30579" standardDeviationMicrosecondsPerInvocation="4023"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="52" invocations="64" avgMicrosecondsPerInvocation="817" maxMicrosecondsPerInvocation="34434" standardDeviationMicrosecondsPerInvocation="4259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="49" invocations="77" avgMicrosecondsPerInvocation="642" maxMicrosecondsPerInvocation="6075" standardDeviationMicrosecondsPerInvocation="1139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="717" avgMicrosecondsPerInvocation="66" maxMicrosecondsPerInvocation="3803" standardDeviationMicrosecondsPerInvocation="210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="43" invocations="64" avgMicrosecondsPerInvocation="685" maxMicrosecondsPerInvocation="12089" standardDeviationMicrosecondsPerInvocation="1864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="43" invocations="77" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="18543" standardDeviationMicrosecondsPerInvocation="2279"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="37" invocations="77" avgMicrosecondsPerInvocation="487" maxMicrosecondsPerInvocation="27636" standardDeviationMicrosecondsPerInvocation="3124"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="35" invocations="53" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="12386" standardDeviationMicrosecondsPerInvocation="1851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="77" avgMicrosecondsPerInvocation="420" maxMicrosecondsPerInvocation="13247" standardDeviationMicrosecondsPerInvocation="1552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="23" invocations="17" avgMicrosecondsPerInvocation="1411" maxMicrosecondsPerInvocation="21500" standardDeviationMicrosecondsPerInvocation="5038"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="628" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="1413" standardDeviationMicrosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="19" invocations="17" avgMicrosecondsPerInvocation="1145" maxMicrosecondsPerInvocation="10111" standardDeviationMicrosecondsPerInvocation="2395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantPoolGenFactory" totalMilliseconds="18" invocations="17" avgMicrosecondsPerInvocation="1091" maxMicrosecondsPerInvocation="9963" standardDeviationMicrosecondsPerInvocation="2820"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="18" invocations="17" avgMicrosecondsPerInvocation="1063" maxMicrosecondsPerInvocation="8946" standardDeviationMicrosecondsPerInvocation="2149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="17" avgMicrosecondsPerInvocation="1052" maxMicrosecondsPerInvocation="10322" standardDeviationMicrosecondsPerInvocation="2585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="17" invocations="88" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="7711" standardDeviationMicrosecondsPerInvocation="1081"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.asm.ClassReaderAnalysisEngine" totalMilliseconds="16" invocations="644" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="8549" standardDeviationMicrosecondsPerInvocation="373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="77" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="1912" standardDeviationMicrosecondsPerInvocation="346"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
