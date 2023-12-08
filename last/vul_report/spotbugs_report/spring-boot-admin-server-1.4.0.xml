@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013343897" analysisTimestamp="1702018926615" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\spring-boot-admin-server-1.4.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ed51f8fd16c8eadd055835a001f602e3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>de.codecentric.boot.admin.config.AdminServerProperties.getMonitor() may expose internal representation by returning AdminServerProperties.monitor</LongMessage>
+    <Class classname="de.codecentric.boot.admin.config.AdminServerProperties" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerProperties" start="6" end="32" sourcefile="AdminServerProperties.java" sourcepath="de/codecentric/boot/admin/config/AdminServerProperties.java">
+        <Message>At AdminServerProperties.java:[lines 6-32]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.config.AdminServerProperties</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.config.AdminServerProperties" name="getMonitor" signature="()Lde/codecentric/boot/admin/config/AdminServerProperties$MonitorProperties;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerProperties" start="29" end="29" startBytecode="0" endBytecode="46" sourcefile="AdminServerProperties.java" sourcepath="de/codecentric/boot/admin/config/AdminServerProperties.java"/>
+      <Message>In method de.codecentric.boot.admin.config.AdminServerProperties.getMonitor()</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.config.AdminServerProperties" name="monitor" signature="Lde/codecentric/boot/admin/config/AdminServerProperties$MonitorProperties;" isStatic="false" primary="true" classAnnotationNames="org.springframework.boot.context.properties.ConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerProperties" sourcefile="AdminServerProperties.java" sourcepath="de/codecentric/boot/admin/config/AdminServerProperties.java">
+        <Message>In AdminServerProperties.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.config.AdminServerProperties.monitor</Message>
+    </Field>
+    <SourceLine classname="de.codecentric.boot.admin.config.AdminServerProperties" primary="true" start="29" end="29" startBytecode="4" endBytecode="4" sourcefile="AdminServerProperties.java" sourcepath="de/codecentric/boot/admin/config/AdminServerProperties.java">
+      <Message>At AdminServerProperties.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="4015f089f453fe9f8a41711b545651e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in de.codecentric.boot.admin.config.AdminServerWebConfiguration.addResourceHandlers(ResourceHandlerRegistry): String.getBytes()</LongMessage>
+    <Class classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.context.properties.EnableConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" start="67" end="245" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java">
+        <Message>At AdminServerWebConfiguration.java:[lines 67-245]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.config.AdminServerWebConfiguration</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" name="addResourceHandlers" signature="(Lorg/springframework/web/servlet/config/annotation/ResourceHandlerRegistry;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.context.properties.EnableConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" start="119" end="136" startBytecode="0" endBytecode="285" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java"/>
+      <Message>In method de.codecentric.boot.admin.config.AdminServerWebConfiguration.addResourceHandlers(ResourceHandlerRegistry)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" primary="true" start="124" end="124" startBytecode="127" endBytecode="127" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java">
+      <Message>At AdminServerWebConfiguration.java:[line 124]</Message>
+    </SourceLine>
+    <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" start="130" end="130" startBytecode="211" endBytecode="211" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at AdminServerWebConfiguration.java:[line 130]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="4418f28a8147a0dc95179c3c325cfb95" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class de.codecentric.boot.admin.config.AdminServerWebConfiguration$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration$1" start="185" end="188" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java">
+        <Message>At AdminServerWebConfiguration.java:[lines 185-188]</Message>
+      </SourceLine>
+      <Message>Anonymous class de.codecentric.boot.admin.config.AdminServerWebConfiguration$1</Message>
+    </Class>
+    <Class classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.context.properties.EnableConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" start="67" end="245" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java">
+        <Message>At AdminServerWebConfiguration.java:[lines 67-245]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.config.AdminServerWebConfiguration</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" name="statusUpdater" signature="()Lde/codecentric/boot/admin/registry/StatusUpdater;" isStatic="false" primary="true" classAnnotationNames="org.springframework.context.annotation.Configuration,org.springframework.boot.context.properties.EnableConfigurationProperties">
+      <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" start="184" end="194" startBytecode="0" endBytecode="131" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java"/>
+      <Message>In method de.codecentric.boot.admin.config.AdminServerWebConfiguration.statusUpdater()</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.config.AdminServerWebConfiguration" primary="true" start="184" end="184" startBytecode="26" endBytecode="26" sourcefile="AdminServerWebConfiguration.java" sourcepath="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java">
+      <Message>At AdminServerWebConfiguration.java:[line 184]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="48454beee438f9f9447e88c8b9d8651b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener(DiscoveryClient, ApplicationRegistry) may expose internal representation by storing an externally mutable object into ApplicationDiscoveryListener.registry</LongMessage>
+    <Class classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" start="40" end="126" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+        <Message>At ApplicationDiscoveryListener.java:[lines 40-126]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" name="&lt;init&gt;" signature="(Lorg/springframework/cloud/client/discovery/DiscoveryClient;Lde/codecentric/boot/admin/registry/ApplicationRegistry;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" start="53" end="56" startBytecode="0" endBytecode="133" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java"/>
+      <Message>In method new de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener(DiscoveryClient, ApplicationRegistry)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" name="registry" signature="Lde/codecentric/boot/admin/registry/ApplicationRegistry;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+        <Message>In ApplicationDiscoveryListener.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener.registry</Message>
+    </Field>
+    <LocalVariable name="registry" register="2" pc="44" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named registry</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" primary="true" start="55" end="55" startBytecode="44" endBytecode="44" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+      <Message>At ApplicationDiscoveryListener.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="68b6c76844856c62a535ece14b4584ed" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener.setIgnoredServices(Set) may expose internal representation by storing an externally mutable object into ApplicationDiscoveryListener.ignoredServices</LongMessage>
+    <Class classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" start="40" end="126" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+        <Message>At ApplicationDiscoveryListener.java:[lines 40-126]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" name="setIgnoredServices" signature="(Ljava/util/Set;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" start="125" end="126" startBytecode="0" endBytecode="79" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java"/>
+      <Message>In method de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener.setIgnoredServices(Set)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" name="ignoredServices" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+        <Message>In ApplicationDiscoveryListener.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener.ignoredServices</Message>
+    </Field>
+    <LocalVariable name="ignoredServices" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named ignoredServices</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" primary="true" start="125" end="125" startBytecode="2" endBytecode="2" sourcefile="ApplicationDiscoveryListener.java" sourcepath="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java">
+      <Message>At ApplicationDiscoveryListener.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="d314a6778b593bafeecdf4e2649fd8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>HipchatNotifier.url not initialized in constructor and dereferenced in de.codecentric.boot.admin.notify.HipchatNotifier.buildUrl()</LongMessage>
+    <Class classname="de.codecentric.boot.admin.notify.HipchatNotifier" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.notify.HipchatNotifier" start="37" end="114" sourcefile="HipchatNotifier.java" sourcepath="de/codecentric/boot/admin/notify/HipchatNotifier.java">
+        <Message>At HipchatNotifier.java:[lines 37-114]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.notify.HipchatNotifier</Message>
+    </Class>
+    <Field classname="de.codecentric.boot.admin.notify.HipchatNotifier" name="url" signature="Ljava/net/URI;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.notify.HipchatNotifier" sourcefile="HipchatNotifier.java" sourcepath="de/codecentric/boot/admin/notify/HipchatNotifier.java">
+        <Message>In HipchatNotifier.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.notify.HipchatNotifier.url</Message>
+    </Field>
+    <Method classname="de.codecentric.boot.admin.notify.HipchatNotifier" name="buildUrl" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.notify.HipchatNotifier" start="76" end="76" startBytecode="0" endBytecode="75" sourcefile="HipchatNotifier.java" sourcepath="de/codecentric/boot/admin/notify/HipchatNotifier.java"/>
+      <Message>In method de.codecentric.boot.admin.notify.HipchatNotifier.buildUrl()</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.notify.HipchatNotifier" primary="true" start="76" end="76" startBytecode="12" endBytecode="12" sourcefile="HipchatNotifier.java" sourcepath="de/codecentric/boot/admin/notify/HipchatNotifier.java">
+      <Message>At HipchatNotifier.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" priority="2" rank="8" abbrev="JLM" category="MT_CORRECTNESS" instanceHash="53b82879daa4ccc4f0e110dee53f9af6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Synchronization performed on util.concurrent instance</ShortMessage>
+    <LongMessage>Synchronization performed on java.util.concurrent.ConcurrentMap in de.codecentric.boot.admin.notify.filter.FilteringNotifier.getNotificationFilters()</LongMessage>
+    <Class classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" start="38" end="102" sourcefile="FilteringNotifier.java" sourcepath="de/codecentric/boot/admin/notify/filter/FilteringNotifier.java">
+        <Message>At FilteringNotifier.java:[lines 38-102]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.notify.filter.FilteringNotifier</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" name="getNotificationFilters" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" start="95" end="97" startBytecode="0" endBytecode="118" sourcefile="FilteringNotifier.java" sourcepath="de/codecentric/boot/admin/notify/filter/FilteringNotifier.java"/>
+      <Message>In method de.codecentric.boot.admin.notify.filter.FilteringNotifier.getNotificationFilters()</Message>
+    </Method>
+    <Type descriptor="Ljava/util/concurrent/ConcurrentMap;">
+      <SourceLine classname="java.util.concurrent.ConcurrentMap" start="88" end="494" sourcefile="ConcurrentMap.java" sourcepath="java/util/concurrent/ConcurrentMap.java">
+        <Message>At ConcurrentMap.java:[lines 88-494]</Message>
+      </SourceLine>
+      <Message>Type java.util.concurrent.ConcurrentMap</Message>
+    </Type>
+    <Field classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" name="filters" signature="Ljava/util/concurrent/ConcurrentMap;" sourceSignature="Ljava/util/concurrent/ConcurrentMap&lt;Ljava/lang/String;Lde/codecentric/boot/admin/notify/filter/NotificationFilter;&gt;;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" sourcefile="FilteringNotifier.java" sourcepath="de/codecentric/boot/admin/notify/filter/FilteringNotifier.java">
+        <Message>In FilteringNotifier.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field de.codecentric.boot.admin.notify.filter.FilteringNotifier.filters</Message>
+    </Field>
+    <SourceLine classname="de.codecentric.boot.admin.notify.filter.FilteringNotifier" primary="true" start="95" end="95" startBytecode="6" endBytecode="6" sourcefile="FilteringNotifier.java" sourcepath="de/codecentric/boot/admin/notify/filter/FilteringNotifier.java">
+      <Message>At FilteringNotifier.java:[line 95]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f2ea80de6bc236bc264031ea72440367" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.notify.filter.web.NotificationFilterController(FilteringNotifier) may expose internal representation by storing an externally mutable object into NotificationFilterController.filteringNotifier</LongMessage>
+    <Class classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" start="45" end="85" sourcefile="NotificationFilterController.java" sourcepath="de/codecentric/boot/admin/notify/filter/web/NotificationFilterController.java">
+        <Message>At NotificationFilterController.java:[lines 45-85]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.notify.filter.web.NotificationFilterController</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" name="&lt;init&gt;" signature="(Lde/codecentric/boot/admin/notify/filter/FilteringNotifier;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" start="45" end="47" startBytecode="0" endBytecode="69" sourcefile="NotificationFilterController.java" sourcepath="de/codecentric/boot/admin/notify/filter/web/NotificationFilterController.java"/>
+      <Message>In method new de.codecentric.boot.admin.notify.filter.web.NotificationFilterController(FilteringNotifier)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" name="filteringNotifier" signature="Lde/codecentric/boot/admin/notify/filter/FilteringNotifier;" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" sourcefile="NotificationFilterController.java" sourcepath="de/codecentric/boot/admin/notify/filter/web/NotificationFilterController.java">
+        <Message>In NotificationFilterController.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.notify.filter.web.NotificationFilterController.filteringNotifier</Message>
+    </Field>
+    <LocalVariable name="filteringNotifier" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named filteringNotifier</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" primary="true" start="46" end="46" startBytecode="6" endBytecode="6" sourcefile="NotificationFilterController.java" sourcepath="de/codecentric/boot/admin/notify/filter/web/NotificationFilterController.java">
+      <Message>At NotificationFilterController.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="913884ec2ddb68d3366f488d1797c762" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.registry.ApplicationRegistry(ApplicationStore, ApplicationIdGenerator) may expose internal representation by storing an externally mutable object into ApplicationRegistry.store</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="41" end="163" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>At ApplicationRegistry.java:[lines 41-163]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.ApplicationRegistry</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="&lt;init&gt;" signature="(Lde/codecentric/boot/admin/registry/store/ApplicationStore;Lde/codecentric/boot/admin/registry/ApplicationIdGenerator;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="47" end="50" startBytecode="0" endBytecode="88" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java"/>
+      <Message>In method new de.codecentric.boot.admin.registry.ApplicationRegistry(ApplicationStore, ApplicationIdGenerator)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="store" signature="Lde/codecentric/boot/admin/registry/store/ApplicationStore;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>In ApplicationRegistry.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.ApplicationRegistry.store</Message>
+    </Field>
+    <LocalVariable name="store" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named store</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true" start="48" end="48" startBytecode="6" endBytecode="6" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+      <Message>At ApplicationRegistry.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="8013038e9b84f43b9bd0f309b03ed816" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ApplicationRegistry.publisher not initialized in constructor and dereferenced in de.codecentric.boot.admin.registry.ApplicationRegistry.deregister(String)</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="41" end="163" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>At ApplicationRegistry.java:[lines 41-163]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.ApplicationRegistry</Message>
+    </Class>
+    <Field classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="publisher" signature="Lorg/springframework/context/ApplicationEventPublisher;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>In ApplicationRegistry.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.ApplicationRegistry.publisher</Message>
+    </Field>
+    <Method classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="deregister" signature="(Ljava/lang/String;)Lde/codecentric/boot/admin/model/Application;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="152" end="157" startBytecode="0" endBytecode="136" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java"/>
+      <Message>In method de.codecentric.boot.admin.registry.ApplicationRegistry.deregister(String)</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true" start="155" end="155" startBytecode="38" endBytecode="38" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+      <Message>At ApplicationRegistry.java:[line 155]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="a7286576e4dca61d7b0b51622f1e3297" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ApplicationRegistry.publisher not initialized in constructor and dereferenced in de.codecentric.boot.admin.registry.ApplicationRegistry.register(Application)</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="41" end="163" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>At ApplicationRegistry.java:[lines 41-163]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.ApplicationRegistry</Message>
+    </Class>
+    <Field classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="publisher" signature="Lorg/springframework/context/ApplicationEventPublisher;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+        <Message>In ApplicationRegistry.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.ApplicationRegistry.publisher</Message>
+    </Field>
+    <Method classname="de.codecentric.boot.admin.registry.ApplicationRegistry" name="register" signature="(Lde/codecentric/boot/admin/model/Application;)Lde/codecentric/boot/admin/model/Application;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" start="59" end="90" startBytecode="0" endBytecode="440" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java"/>
+      <Message>In method de.codecentric.boot.admin.registry.ApplicationRegistry.register(Application)</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.registry.ApplicationRegistry" primary="true" start="82" end="82" startBytecode="182" endBytecode="182" sourcefile="ApplicationRegistry.java" sourcepath="de/codecentric/boot/admin/registry/ApplicationRegistry.java">
+      <Message>At ApplicationRegistry.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ca92d723459ffa2ce498ee26b064ce8c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.registry.StatusUpdater(RestTemplate, ApplicationStore) may expose internal representation by storing an externally mutable object into StatusUpdater.store</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.StatusUpdater" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" start="39" end="107" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+        <Message>At StatusUpdater.java:[lines 39-107]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.StatusUpdater</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.registry.StatusUpdater" name="&lt;init&gt;" signature="(Lorg/springframework/web/client/RestTemplate;Lde/codecentric/boot/admin/registry/store/ApplicationStore;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" start="46" end="49" startBytecode="0" endBytecode="99" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java"/>
+      <Message>In method new de.codecentric.boot.admin.registry.StatusUpdater(RestTemplate, ApplicationStore)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.registry.StatusUpdater" name="store" signature="Lde/codecentric/boot/admin/registry/store/ApplicationStore;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+        <Message>In StatusUpdater.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.StatusUpdater.store</Message>
+    </Field>
+    <LocalVariable name="store" register="2" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named store</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" primary="true" start="48" end="48" startBytecode="18" endBytecode="18" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+      <Message>At StatusUpdater.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="cb493d6b3bea602e42cdc7465d3401db" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>StatusUpdater.publisher not initialized in constructor and dereferenced in de.codecentric.boot.admin.registry.StatusUpdater.updateStatus(Application)</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.StatusUpdater" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" start="39" end="107" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+        <Message>At StatusUpdater.java:[lines 39-107]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.StatusUpdater</Message>
+    </Class>
+    <Field classname="de.codecentric.boot.admin.registry.StatusUpdater" name="publisher" signature="Lorg/springframework/context/ApplicationEventPublisher;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+        <Message>In StatusUpdater.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.StatusUpdater.publisher</Message>
+    </Field>
+    <Method classname="de.codecentric.boot.admin.registry.StatusUpdater" name="updateStatus" signature="(Lde/codecentric/boot/admin/model/Application;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" start="61" end="71" startBytecode="0" endBytecode="190" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java"/>
+      <Message>In method de.codecentric.boot.admin.registry.StatusUpdater.updateStatus(Application)</Message>
+    </Method>
+    <SourceLine classname="de.codecentric.boot.admin.registry.StatusUpdater" primary="true" start="68" end="68" startBytecode="59" endBytecode="59" sourcefile="StatusUpdater.java" sourcepath="de/codecentric/boot/admin/registry/StatusUpdater.java">
+      <Message>At StatusUpdater.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="41fdbac4c13fd161e373cfc9a626988f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.registry.web.RegistryController(ApplicationRegistry) may expose internal representation by storing an externally mutable object into RegistryController.registry</LongMessage>
+    <Class classname="de.codecentric.boot.admin.registry.web.RegistryController" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.registry.web.RegistryController" start="40" end="108" sourcefile="RegistryController.java" sourcepath="de/codecentric/boot/admin/registry/web/RegistryController.java">
+        <Message>At RegistryController.java:[lines 40-108]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.registry.web.RegistryController</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.registry.web.RegistryController" name="&lt;init&gt;" signature="(Lde/codecentric/boot/admin/registry/ApplicationRegistry;)V" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.registry.web.RegistryController" start="44" end="46" startBytecode="0" endBytecode="69" sourcefile="RegistryController.java" sourcepath="de/codecentric/boot/admin/registry/web/RegistryController.java"/>
+      <Message>In method new de.codecentric.boot.admin.registry.web.RegistryController(ApplicationRegistry)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.registry.web.RegistryController" name="registry" signature="Lde/codecentric/boot/admin/registry/ApplicationRegistry;" isStatic="false" primary="true" classAnnotationNames="org.springframework.web.bind.annotation.ResponseBody">
+      <SourceLine classname="de.codecentric.boot.admin.registry.web.RegistryController" sourcefile="RegistryController.java" sourcepath="de/codecentric/boot/admin/registry/web/RegistryController.java">
+        <Message>In RegistryController.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.registry.web.RegistryController.registry</Message>
+    </Field>
+    <LocalVariable name="registry" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named registry</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.registry.web.RegistryController" primary="true" start="45" end="45" startBytecode="6" endBytecode="6" sourcefile="RegistryController.java" sourcepath="de/codecentric/boot/admin/registry/web/RegistryController.java">
+      <Message>At RegistryController.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="636fc8b88eff7cbae353a1b854487965" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new de.codecentric.boot.admin.zuul.ApplicationRouteLocator(String, ApplicationRegistry, String) may expose internal representation by storing an externally mutable object into ApplicationRouteLocator.registry</LongMessage>
+    <Class classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" start="42" end="162" sourcefile="ApplicationRouteLocator.java" sourcepath="de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java">
+        <Message>At ApplicationRouteLocator.java:[lines 42-162]</Message>
+      </SourceLine>
+      <Message>In class de.codecentric.boot.admin.zuul.ApplicationRouteLocator</Message>
+    </Class>
+    <Method classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" name="&lt;init&gt;" signature="(Ljava/lang/String;Lde/codecentric/boot/admin/registry/ApplicationRegistry;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" start="59" end="63" startBytecode="0" endBytecode="222" sourcefile="ApplicationRouteLocator.java" sourcepath="de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java"/>
+      <Message>In method new de.codecentric.boot.admin.zuul.ApplicationRouteLocator(String, ApplicationRegistry, String)</Message>
+    </Method>
+    <Field classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" name="registry" signature="Lde/codecentric/boot/admin/registry/ApplicationRegistry;" isStatic="false" primary="true">
+      <SourceLine classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" sourcefile="ApplicationRouteLocator.java" sourcepath="de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java">
+        <Message>In ApplicationRouteLocator.java</Message>
+      </SourceLine>
+      <Message>Field de.codecentric.boot.admin.zuul.ApplicationRouteLocator.registry</Message>
+    </Field>
+    <LocalVariable name="registry" register="2" pc="114" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named registry</Message>
+    </LocalVariable>
+    <SourceLine classname="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" primary="true" start="61" end="61" startBytecode="114" endBytecode="114" sourcefile="ApplicationRouteLocator.java" sourcepath="de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java">
+      <Message>At ApplicationRouteLocator.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="JLM_JSR166_UTILCONCURRENT_MONITORENTER" abbrev="JLM" category="MT_CORRECTNESS">
+    <ShortDescription>Synchronization performed on util.concurrent instance</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method performs synchronization on an object that is an instance of
+a class from the java.util.concurrent package (or its subclasses). Instances
+of these classes have their own concurrency control mechanisms that are orthogonal to
+the synchronization provided by the Java keyword <code>synchronized</code>. For example,
+synchronizing on an <code>AtomicBoolean</code> will not prevent other threads
+from modifying the  <code>AtomicBoolean</code>.</p>
+<p>Such code may be correct, but should be carefully reviewed and documented,
+and may confuse people who have to maintain the code at a later date.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="JLM">
+    <Description>Synchronization on java.util.concurrent objects</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="108">
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.hazelcast.core.EntryAdapter</MissingClass>
+    <MissingClass>com.hazelcast.core.EntryEvent</MissingClass>
+    <MissingClass>com.hazelcast.core.HazelcastInstance</MissingClass>
+    <MissingClass>com.hazelcast.core.IList</MissingClass>
+    <MissingClass>com.hazelcast.core.IMap</MissingClass>
+    <MissingClass>com.hazelcast.core.MapEvent</MissingClass>
+    <MissingClass>com.hazelcast.map.listener.MapListener</MissingClass>
+    <MissingClass>com.hazelcast.query.Predicate</MissingClass>
+    <MissingClass>com.hazelcast.query.Predicates</MissingClass>
+    <MissingClass>com.netflix.appinfo.InstanceInfo</MissingClass>
+    <MissingClass>de.codecentric.boot.admin.model.Application</MissingClass>
+    <MissingClass>de.codecentric.boot.admin.model.Application$Builder</MissingClass>
+    <MissingClass>de.codecentric.boot.admin.model.StatusInfo</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.logging.Log</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.springframework.boot.actuate.trace.TraceRepository</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.condition.NoneNestedConditions</MissingClass>
+    <MissingClass>org.springframework.boot.autoconfigure.web.ServerProperties</MissingClass>
+    <MissingClass>org.springframework.boot.context.event.ApplicationReadyEvent</MissingClass>
+    <MissingClass>org.springframework.boot.web.client.RestTemplateBuilder</MissingClass>
+    <MissingClass>org.springframework.cloud.client.ServiceInstance</MissingClass>
+    <MissingClass>org.springframework.cloud.client.discovery.DiscoveryClient</MissingClass>
+    <MissingClass>org.springframework.cloud.client.discovery.event.HeartbeatEvent</MissingClass>
+    <MissingClass>org.springframework.cloud.client.discovery.event.HeartbeatMonitor</MissingClass>
+    <MissingClass>org.springframework.cloud.client.discovery.event.InstanceRegisteredEvent</MissingClass>
+    <MissingClass>org.springframework.cloud.client.discovery.event.ParentHeartbeatEvent</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient$EurekaServiceInstance</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.RoutesEndpoint</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.ZuulConfiguration</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.ProxyRequestHelper</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.RefreshableRouteLocator</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.Route</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.RouteLocator</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.TraceProxyRequestHelper</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.ZuulProperties</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.pre.PreDecorationFilter</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.web.ZuulController</MissingClass>
+    <MissingClass>org.springframework.cloud.netflix.zuul.web.ZuulHandlerMapping</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContext</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationContextAware</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisher</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationEventPublisherAware</MissingClass>
+    <MissingClass>org.springframework.context.ApplicationListener</MissingClass>
+    <MissingClass>org.springframework.context.PayloadApplicationEvent</MissingClass>
+    <MissingClass>org.springframework.context.annotation.ConfigurationCondition</MissingClass>
+    <MissingClass>org.springframework.context.annotation.ConfigurationCondition$ConfigurationPhase</MissingClass>
+    <MissingClass>org.springframework.context.annotation.DeferredImportSelector</MissingClass>
+    <MissingClass>org.springframework.core.io.ByteArrayResource</MissingClass>
+    <MissingClass>org.springframework.core.io.Resource</MissingClass>
+    <MissingClass>org.springframework.core.io.support.ResourcePatternResolver</MissingClass>
+    <MissingClass>org.springframework.core.type.AnnotationMetadata</MissingClass>
+    <MissingClass>org.springframework.expression.EvaluationContext</MissingClass>
+    <MissingClass>org.springframework.expression.Expression</MissingClass>
+    <MissingClass>org.springframework.expression.ParserContext</MissingClass>
+    <MissingClass>org.springframework.expression.spel.standard.SpelExpressionParser</MissingClass>
+    <MissingClass>org.springframework.expression.spel.support.StandardEvaluationContext</MissingClass>
+    <MissingClass>org.springframework.http.HttpStatus</MissingClass>
+    <MissingClass>org.springframework.http.MediaType</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$BodyBuilder</MissingClass>
+    <MissingClass>org.springframework.http.ResponseEntity$HeadersBuilder</MissingClass>
+    <MissingClass>org.springframework.http.converter.HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.Jackson2ObjectMapperBuilder</MissingClass>
+    <MissingClass>org.springframework.http.converter.json.MappingJackson2HttpMessageConverter</MissingClass>
+    <MissingClass>org.springframework.mail.MailSender</MissingClass>
+    <MissingClass>org.springframework.mail.SimpleMailMessage</MissingClass>
+    <MissingClass>org.springframework.scheduling.config.ScheduledTaskRegistrar</MissingClass>
+    <MissingClass>org.springframework.util.AntPathMatcher</MissingClass>
+    <MissingClass>org.springframework.util.Assert</MissingClass>
+    <MissingClass>org.springframework.util.PathMatcher</MissingClass>
+    <MissingClass>org.springframework.util.StreamUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+    <MissingClass>org.springframework.web.client.DefaultResponseErrorHandler</MissingClass>
+    <MissingClass>org.springframework.web.client.ResourceAccessException</MissingClass>
+    <MissingClass>org.springframework.web.client.ResponseErrorHandler</MissingClass>
+    <MissingClass>org.springframework.web.client.RestTemplate</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.RedirectViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceChainRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistration</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.ViewControllerRegistry</MissingClass>
+    <MissingClass>org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.ConsumesRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.HeadersRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.ParamsRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.PatternsRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.ProducesRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.RequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.RequestMappingInfo</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</MissingClass>
+    <MissingClass>org.springframework.web.servlet.mvc.method.annotation.SseEmitter</MissingClass>
+    <MissingClass>org.springframework.web.servlet.resource.AbstractResourceResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.resource.ResourceResolver</MissingClass>
+    <MissingClass>org.springframework.web.servlet.resource.ResourceResolverChain</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponents</MissingClass>
+    <MissingClass>org.springframework.web.util.UriComponentsBuilder</MissingClass>
+    <MissingClass>org.springframework.web.util.WebUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:03 +0900" total_classes="73" referenced_classes="131" total_bugs="15" total_size="1400" num_packages="16" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.09" clock_seconds="2.24" peak_mbytes="235.72" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="5" priority_2="9" priority_1="1">
+    <FileStats path="de/codecentric/boot/admin/config/AdminServerImportSelector.java" bugCount="0" size="5"/>
+    <FileStats path="de/codecentric/boot/admin/config/AdminServerProperties.java" bugCount="1" size="34" bugHash="c0d1b4ae28ca0e5952209a6e14f21c75"/>
+    <FileStats path="de/codecentric/boot/admin/config/AdminServerWebConfiguration.java" bugCount="2" size="84" bugHash="09ea3e286a76cb4916b558832ab3a236"/>
+    <FileStats path="de/codecentric/boot/admin/config/DiscoveryClientConfiguration.java" bugCount="0" size="17"/>
+    <FileStats path="de/codecentric/boot/admin/config/EnableAdminServer.java" bugCount="0" size="1"/>
+    <FileStats path="de/codecentric/boot/admin/config/HazelcastStoreConfiguration.java" bugCount="0" size="28"/>
+    <FileStats path="de/codecentric/boot/admin/config/NotifierConfiguration.java" bugCount="0" size="55"/>
+    <FileStats path="de/codecentric/boot/admin/config/RevereseZuulProxyConfiguration.java" bugCount="0" size="45"/>
+    <FileStats path="de/codecentric/boot/admin/discovery/ApplicationDiscoveryListener.java" bugCount="2" size="66" bugHash="f2a2183ba88b45fa41c7366dfa94e255"/>
+    <FileStats path="de/codecentric/boot/admin/discovery/DefaultServiceInstanceConverter.java" bugCount="0" size="40"/>
+    <FileStats path="de/codecentric/boot/admin/discovery/EurekaServiceInstanceConverter.java" bugCount="0" size="10"/>
+    <FileStats path="de/codecentric/boot/admin/discovery/ServiceInstanceConverter.java" bugCount="0" size="2"/>
+    <FileStats path="de/codecentric/boot/admin/event/ClientApplicationDeregisteredEvent.java" bugCount="0" size="5"/>
+    <FileStats path="de/codecentric/boot/admin/event/ClientApplicationEvent.java" bugCount="0" size="45"/>
+    <FileStats path="de/codecentric/boot/admin/event/ClientApplicationRegisteredEvent.java" bugCount="0" size="5"/>
+    <FileStats path="de/codecentric/boot/admin/event/ClientApplicationStatusChangedEvent.java" bugCount="0" size="13"/>
+    <FileStats path="de/codecentric/boot/admin/event/RoutesOutdatedEvent.java" bugCount="0" size="4"/>
+    <FileStats path="de/codecentric/boot/admin/io/resource/InMemoryFileResource.java" bugCount="0" size="12"/>
+    <FileStats path="de/codecentric/boot/admin/journal/ApplicationEventJournal.java" bugCount="0" size="11"/>
+    <FileStats path="de/codecentric/boot/admin/journal/store/HazelcastJournaledEventStore.java" bugCount="0" size="13"/>
+    <FileStats path="de/codecentric/boot/admin/journal/store/JournaledEventStore.java" bugCount="0" size="3"/>
+    <FileStats path="de/codecentric/boot/admin/journal/store/SimpleJournaledEventStore.java" bugCount="0" size="21"/>
+    <FileStats path="de/codecentric/boot/admin/journal/web/JournalController.java" bugCount="0" size="36"/>
+    <FileStats path="de/codecentric/boot/admin/notify/AbstractStatusChangeNotifier.java" bugCount="0" size="29"/>
+    <FileStats path="de/codecentric/boot/admin/notify/CompositeNotifier.java" bugCount="0" size="11"/>
+    <FileStats path="de/codecentric/boot/admin/notify/HipchatNotifier.java" bugCount="1" size="47" bugHash="12211fc4acc0f5337c2225384667ee5f"/>
+    <FileStats path="de/codecentric/boot/admin/notify/LoggingNotifier.java" bugCount="0" size="9"/>
+    <FileStats path="de/codecentric/boot/admin/notify/MailNotifier.java" bugCount="0" size="44"/>
+    <FileStats path="de/codecentric/boot/admin/notify/Notifier.java" bugCount="0" size="2"/>
+    <FileStats path="de/codecentric/boot/admin/notify/NotifierListener.java" bugCount="0" size="9"/>
+    <FileStats path="de/codecentric/boot/admin/notify/PagerdutyNotifier.java" bugCount="0" size="62"/>
+    <FileStats path="de/codecentric/boot/admin/notify/RemindingNotifier.java" bugCount="0" size="63"/>
+    <FileStats path="de/codecentric/boot/admin/notify/SlackNotifier.java" bugCount="0" size="54"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/ApplicationIdNotificationFilter.java" bugCount="0" size="12"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/ApplicationNameNotificationFilter.java" bugCount="0" size="12"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/ExpiringNotificationFilter.java" bugCount="0" size="13"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/FilteringNotifier.java" bugCount="1" size="54" bugHash="f9193548f52ca0778115738e22ea4636"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/NotificationFilter.java" bugCount="0" size="2"/>
+    <FileStats path="de/codecentric/boot/admin/notify/filter/web/NotificationFilterController.java" bugCount="1" size="23" bugHash="55b933528820da1012b1deb1442d9a1c"/>
+    <FileStats path="de/codecentric/boot/admin/registry/ApplicationIdGenerator.java" bugCount="0" size="2"/>
+    <FileStats path="de/codecentric/boot/admin/registry/ApplicationRegistry.java" bugCount="3" size="57" bugHash="8ebc09407f972d0a50390af135dd390d"/>
+    <FileStats path="de/codecentric/boot/admin/registry/HashingApplicationUrlIdGenerator.java" bugCount="0" size="19"/>
+    <FileStats path="de/codecentric/boot/admin/registry/StatusUpdater.java" bugCount="2" size="49" bugHash="01553b2432ac3c8b4bfe11a0ffaae6d0"/>
+    <FileStats path="de/codecentric/boot/admin/registry/store/ApplicationStore.java" bugCount="0" size="6"/>
+    <FileStats path="de/codecentric/boot/admin/registry/store/HazelcastApplicationStore.java" bugCount="0" size="16"/>
+    <FileStats path="de/codecentric/boot/admin/registry/store/SimpleApplicationStore.java" bugCount="0" size="20"/>
+    <FileStats path="de/codecentric/boot/admin/registry/web/RegistryController.java" bugCount="1" size="30" bugHash="81b9ba4c22454a45da0b0327e097416c"/>
+    <FileStats path="de/codecentric/boot/admin/web/PrefixHandlerMapping.java" bugCount="0" size="38"/>
+    <FileStats path="de/codecentric/boot/admin/web/servlet/resource/ConcatenatingResourceResolver.java" bugCount="0" size="34"/>
+    <FileStats path="de/codecentric/boot/admin/web/servlet/resource/PreferMinifiedFilteringResourceResolver.java" bugCount="0" size="25"/>
+    <FileStats path="de/codecentric/boot/admin/web/servlet/resource/ResourcePatternResolvingResourceResolver.java" bugCount="0" size="15"/>
+    <FileStats path="de/codecentric/boot/admin/zuul/ApplicationRouteLocator.java" bugCount="1" size="74" bugHash="10a02a04f64af4a36373f73443e971f7"/>
+    <FileStats path="de/codecentric/boot/admin/zuul/OptionsDispatchingZuulController.java" bugCount="0" size="14"/>
+    <PackageStats package="de.codecentric.boot.admin.config" total_bugs="3" total_types="25" total_size="269" priority_3="1" priority_2="1" priority_1="1">
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerImportSelector" sourceFile="AdminServerImportSelector.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerProperties" sourceFile="AdminServerProperties.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties" sourceFile="AdminServerProperties.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerWebConfiguration" sourceFile="AdminServerWebConfiguration.java" interface="false" size="71" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerWebConfiguration$1" sourceFile="AdminServerWebConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.AdminServerWebConfiguration$2" sourceFile="AdminServerWebConfiguration.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.DiscoveryClientConfiguration" sourceFile="DiscoveryClientConfiguration.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.DiscoveryClientConfiguration$EurekaConverterConfiguration" sourceFile="DiscoveryClientConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.EnableAdminServer" sourceFile="EnableAdminServer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.HazelcastStoreConfiguration" sourceFile="HazelcastStoreConfiguration.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.HazelcastStoreConfiguration$1" sourceFile="HazelcastStoreConfiguration.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$CompositeNotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$CompositeNotifierConfiguration$NoSingleNotifierCandidateCondition" sourceFile="NotifierConfiguration.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$CompositeNotifierConfiguration$NoSingleNotifierCandidateCondition$HasSingleNotifierInstance" sourceFile="NotifierConfiguration.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$FilteringNotifierWebConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$HipchatNotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$MailNotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$NotifierListenerConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$PagerdutyNotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.NotifierConfiguration$SlackNotifierConfiguration" sourceFile="NotifierConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration" sourceFile="RevereseZuulProxyConfiguration.java" interface="false" size="27" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration$1" sourceFile="RevereseZuulProxyConfiguration.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration$RoutesEndpointConfiguration" sourceFile="RevereseZuulProxyConfiguration.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.config.RevereseZuulProxyConfiguration$ZuulRefreshListener" sourceFile="RevereseZuulProxyConfiguration.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.discovery" total_bugs="2" total_types="4" total_size="118" priority_2="2">
+      <ClassStats class="de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener" sourceFile="ApplicationDiscoveryListener.java" interface="false" size="66" bugs="2" priority_2="2"/>
+      <ClassStats class="de.codecentric.boot.admin.discovery.DefaultServiceInstanceConverter" sourceFile="DefaultServiceInstanceConverter.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.discovery.EurekaServiceInstanceConverter" sourceFile="EurekaServiceInstanceConverter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.discovery.ServiceInstanceConverter" sourceFile="ServiceInstanceConverter.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.event" total_bugs="0" total_types="5" total_size="72">
+      <ClassStats class="de.codecentric.boot.admin.event.ClientApplicationDeregisteredEvent" sourceFile="ClientApplicationDeregisteredEvent.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.event.ClientApplicationEvent" sourceFile="ClientApplicationEvent.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.event.ClientApplicationRegisteredEvent" sourceFile="ClientApplicationRegisteredEvent.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent" sourceFile="ClientApplicationStatusChangedEvent.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.event.RoutesOutdatedEvent" sourceFile="RoutesOutdatedEvent.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.io.resource" total_bugs="0" total_types="1" total_size="12">
+      <ClassStats class="de.codecentric.boot.admin.io.resource.InMemoryFileResource" sourceFile="InMemoryFileResource.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.journal" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="de.codecentric.boot.admin.journal.ApplicationEventJournal" sourceFile="ApplicationEventJournal.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.journal.store" total_bugs="0" total_types="3" total_size="37">
+      <ClassStats class="de.codecentric.boot.admin.journal.store.HazelcastJournaledEventStore" sourceFile="HazelcastJournaledEventStore.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.journal.store.JournaledEventStore" sourceFile="JournaledEventStore.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.journal.store.SimpleJournaledEventStore" sourceFile="SimpleJournaledEventStore.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.journal.web" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="de.codecentric.boot.admin.journal.web.JournalController" sourceFile="JournalController.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.journal.web.JournalController$1" sourceFile="JournalController.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.notify" total_bugs="1" total_types="12" total_size="330" priority_3="1">
+      <ClassStats class="de.codecentric.boot.admin.notify.AbstractStatusChangeNotifier" sourceFile="AbstractStatusChangeNotifier.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.CompositeNotifier" sourceFile="CompositeNotifier.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.HipchatNotifier" sourceFile="HipchatNotifier.java" interface="false" size="47" bugs="1" priority_3="1"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.LoggingNotifier" sourceFile="LoggingNotifier.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.MailNotifier" sourceFile="MailNotifier.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.Notifier" sourceFile="Notifier.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.NotifierListener" sourceFile="NotifierListener.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.PagerdutyNotifier" sourceFile="PagerdutyNotifier.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.RemindingNotifier" sourceFile="RemindingNotifier.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.RemindingNotifier$1" sourceFile="RemindingNotifier.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.RemindingNotifier$Reminder" sourceFile="RemindingNotifier.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.SlackNotifier" sourceFile="SlackNotifier.java" interface="false" size="54" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.notify.filter" total_bugs="1" total_types="5" total_size="93" priority_2="1">
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.ApplicationIdNotificationFilter" sourceFile="ApplicationIdNotificationFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.ApplicationNameNotificationFilter" sourceFile="ApplicationNameNotificationFilter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.ExpiringNotificationFilter" sourceFile="ExpiringNotificationFilter.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.FilteringNotifier" sourceFile="FilteringNotifier.java" interface="false" size="54" bugs="1" priority_2="1"/>
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.NotificationFilter" sourceFile="NotificationFilter.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.notify.filter.web" total_bugs="1" total_types="1" total_size="23" priority_2="1">
+      <ClassStats class="de.codecentric.boot.admin.notify.filter.web.NotificationFilterController" sourceFile="NotificationFilterController.java" interface="false" size="23" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.registry" total_bugs="5" total_types="4" total_size="127" priority_3="3" priority_2="2">
+      <ClassStats class="de.codecentric.boot.admin.registry.ApplicationIdGenerator" sourceFile="ApplicationIdGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.registry.ApplicationRegistry" sourceFile="ApplicationRegistry.java" interface="false" size="57" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="de.codecentric.boot.admin.registry.HashingApplicationUrlIdGenerator" sourceFile="HashingApplicationUrlIdGenerator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.registry.StatusUpdater" sourceFile="StatusUpdater.java" interface="false" size="49" bugs="2" priority_3="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.registry.store" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="de.codecentric.boot.admin.registry.store.ApplicationStore" sourceFile="ApplicationStore.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.registry.store.HazelcastApplicationStore" sourceFile="HazelcastApplicationStore.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.registry.store.SimpleApplicationStore" sourceFile="SimpleApplicationStore.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.registry.web" total_bugs="1" total_types="1" total_size="30" priority_2="1">
+      <ClassStats class="de.codecentric.boot.admin.registry.web.RegistryController" sourceFile="RegistryController.java" interface="false" size="30" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.web" total_bugs="0" total_types="1" total_size="38">
+      <ClassStats class="de.codecentric.boot.admin.web.PrefixHandlerMapping" sourceFile="PrefixHandlerMapping.java" interface="false" size="38" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.web.servlet.resource" total_bugs="0" total_types="3" total_size="74">
+      <ClassStats class="de.codecentric.boot.admin.web.servlet.resource.ConcatenatingResourceResolver" sourceFile="ConcatenatingResourceResolver.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.web.servlet.resource.PreferMinifiedFilteringResourceResolver" sourceFile="PreferMinifiedFilteringResourceResolver.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="de.codecentric.boot.admin.web.servlet.resource.ResourcePatternResolvingResourceResolver" sourceFile="ResourcePatternResolvingResourceResolver.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="de.codecentric.boot.admin.zuul" total_bugs="1" total_types="2" total_size="88" priority_2="1">
+      <ClassStats class="de.codecentric.boot.admin.zuul.ApplicationRouteLocator" sourceFile="ApplicationRouteLocator.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="de.codecentric.boot.admin.zuul.OptionsDispatchingZuulController" sourceFile="OptionsDispatchingZuulController.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="260" invocations="897" avgMicrosecondsPerInvocation="290" maxMicrosecondsPerInvocation="11678" standardDeviationMicrosecondsPerInvocation="701"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="600" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="11170" standardDeviationMicrosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="91" invocations="131" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="11735" standardDeviationMicrosecondsPerInvocation="1831"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="77" invocations="295" avgMicrosecondsPerInvocation="261" maxMicrosecondsPerInvocation="4556" standardDeviationMicrosecondsPerInvocation="450"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="71" invocations="297" avgMicrosecondsPerInvocation="242" maxMicrosecondsPerInvocation="8775" standardDeviationMicrosecondsPerInvocation="642"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="65" invocations="300" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="8949" standardDeviationMicrosecondsPerInvocation="661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="61" invocations="294" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="7466" standardDeviationMicrosecondsPerInvocation="510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="61" invocations="131" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="5129" standardDeviationMicrosecondsPerInvocation="874"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="61" invocations="293" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="1697" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="54" invocations="295" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="7346" standardDeviationMicrosecondsPerInvocation="446"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="43" invocations="240" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1376" standardDeviationMicrosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="908" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="3567" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="308" avgMicrosecondsPerInvocation="130" maxMicrosecondsPerInvocation="18559" standardDeviationMicrosecondsPerInvocation="1057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="258" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="11945" standardDeviationMicrosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="30" invocations="131" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="3988" standardDeviationMicrosecondsPerInvocation="540"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="28" invocations="73" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="1721" standardDeviationMicrosecondsPerInvocation="409"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="25" invocations="724" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="790" standardDeviationMicrosecondsPerInvocation="73"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="131" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="2663" standardDeviationMicrosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="131" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="9073" standardDeviationMicrosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="21" invocations="131" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="9713" standardDeviationMicrosecondsPerInvocation="973"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="21" invocations="73" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="12973" standardDeviationMicrosecondsPerInvocation="1508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="131" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="3129" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="18" invocations="4093" avgMicrosecondsPerInvocation="4" maxMicrosecondsPerInvocation="828" standardDeviationMicrosecondsPerInvocation="21"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="131" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="1998" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="16" invocations="73" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="1550" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="131" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="2268" standardDeviationMicrosecondsPerInvocation="340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="16" invocations="295" avgMicrosecondsPerInvocation="55" maxMicrosecondsPerInvocation="1070" standardDeviationMicrosecondsPerInvocation="83"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="16" invocations="73" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="5742" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="14" invocations="73" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="1990" standardDeviationMicrosecondsPerInvocation="274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StaticCalendarDetector" totalMilliseconds="14" invocations="73" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="10394" standardDeviationMicrosecondsPerInvocation="1203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="13" invocations="73" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="5688" standardDeviationMicrosecondsPerInvocation="711"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="12" invocations="73" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="1515" standardDeviationMicrosecondsPerInvocation="244"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="11" invocations="73" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="2222" standardDeviationMicrosecondsPerInvocation="328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="73" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="687" standardDeviationMicrosecondsPerInvocation="174"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

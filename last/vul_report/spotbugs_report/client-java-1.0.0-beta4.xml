@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013398705" analysisTimestamp="1702014760910" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\client-java-1.0.0-beta4.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="ecb32d3b793165d2e9c0efa50d278262" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.kubernetes.client.Attach$AttachResult at new io.kubernetes.client.Attach$AttachResult(WebSocketStreamHandler) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.kubernetes.client.Attach$AttachResult" primary="true">
+      <SourceLine classname="io.kubernetes.client.Attach$AttachResult" start="152" end="170" sourcefile="Attach.java" sourcepath="io/kubernetes/client/Attach.java">
+        <Message>At Attach.java:[lines 152-170]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Attach$AttachResult</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Attach$AttachResult" name="&lt;init&gt;" signature="(Lio/kubernetes/client/util/WebSocketStreamHandler;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Attach$AttachResult" start="152" end="154" startBytecode="0" endBytecode="69" sourcefile="Attach.java" sourcepath="io/kubernetes/client/Attach.java"/>
+      <Message>In method new io.kubernetes.client.Attach$AttachResult(WebSocketStreamHandler)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Attach$AttachResult" primary="true" start="153" end="153" startBytecode="8" endBytecode="8" sourcefile="Attach.java" sourcepath="io/kubernetes/client/Attach.java">
+      <Message>At Attach.java:[line 153]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.Attach$AttachResult" start="153" end="153" startBytecode="8" endBytecode="8" sourcefile="Attach.java" sourcepath="io/kubernetes/client/Attach.java">
+      <Message>At Attach.java:[line 153]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="9d99506da708d4ab4418d8a13477586" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.Exec.parseExitCode(ApiClient, InputStream): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="io.kubernetes.client.Exec" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec" start="39" end="236" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 39-236]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec" name="parseExitCode" signature="(Lio/kubernetes/client/ApiClient;Ljava/io/InputStream;)I" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec" start="202" end="236" startBytecode="0" endBytecode="817" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method io.kubernetes.client.Exec.parseExitCode(ApiClient, InputStream)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec" primary="true" start="204" end="204" startBytecode="16" endBytecode="16" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 204]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="4281c451fe8ac9fdb2c1e14b414c4bc2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.kubernetes.client.Exec$ExecProcess at new io.kubernetes.client.Exec$ExecProcess(Exec) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.kubernetes.client.Exec$ExecProcess" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="239" end="341" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 239-341]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec$ExecProcess</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec$ExecProcess" name="&lt;init&gt;" signature="(Lio/kubernetes/client/Exec;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="245" end="276" startBytecode="0" endBytecode="105" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method new io.kubernetes.client.Exec$ExecProcess(Exec)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" primary="true" start="245" end="245" startBytecode="4" endBytecode="4" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 245]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="245" end="245" startBytecode="4" endBytecode="4" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 245]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="2" rank="14" abbrev="UW" category="MT_CORRECTNESS" instanceHash="4a7d05dfce88027c86727dae23787a2e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unconditional wait</ShortMessage>
+    <LongMessage>Unconditional wait in io.kubernetes.client.Exec$ExecProcess.waitFor()</LongMessage>
+    <Class classname="io.kubernetes.client.Exec$ExecProcess" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="239" end="341" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 239-341]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec$ExecProcess</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec$ExecProcess" name="waitFor" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="306" end="309" startBytecode="0" endBytecode="113" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method io.kubernetes.client.Exec$ExecProcess.waitFor()</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" primary="true" start="307" end="307" startBytecode="5" endBytecode="5" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 307]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UW_UNCOND_WAIT" priority="3" rank="17" abbrev="UW" category="MT_CORRECTNESS" instanceHash="1a1484e1139351b1efb2cdeb394400ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unconditional wait</ShortMessage>
+    <LongMessage>Unconditional wait in io.kubernetes.client.Exec$ExecProcess.waitFor(long, TimeUnit)</LongMessage>
+    <Class classname="io.kubernetes.client.Exec$ExecProcess" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="239" end="341" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 239-341]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec$ExecProcess</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec$ExecProcess" name="waitFor" signature="(JLjava/util/concurrent/TimeUnit;)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="314" end="317" startBytecode="0" endBytecode="150" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method io.kubernetes.client.Exec$ExecProcess.waitFor(long, TimeUnit)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" primary="true" start="315" end="315" startBytecode="14" endBytecode="14" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 315]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="2" rank="14" abbrev="Wa" category="MT_CORRECTNESS" instanceHash="280447a0450d4b25dadd89a67aba6a5b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Wait not in loop</ShortMessage>
+    <LongMessage>Wait not in loop in io.kubernetes.client.Exec$ExecProcess.waitFor()</LongMessage>
+    <Class classname="io.kubernetes.client.Exec$ExecProcess" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="239" end="341" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 239-341]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec$ExecProcess</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec$ExecProcess" name="waitFor" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="306" end="309" startBytecode="0" endBytecode="113" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method io.kubernetes.client.Exec$ExecProcess.waitFor()</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" primary="true" start="307" end="307" startBytecode="5" endBytecode="5" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 307]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="3" rank="17" abbrev="Wa" category="MT_CORRECTNESS" instanceHash="5fa7cffb0e00d6c86ed98ac7a1de61bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Wait not in loop</ShortMessage>
+    <LongMessage>Wait not in loop in io.kubernetes.client.Exec$ExecProcess.waitFor(long, TimeUnit)</LongMessage>
+    <Class classname="io.kubernetes.client.Exec$ExecProcess" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="239" end="341" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+        <Message>At Exec.java:[lines 239-341]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.Exec$ExecProcess</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.Exec$ExecProcess" name="waitFor" signature="(JLjava/util/concurrent/TimeUnit;)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" start="314" end="317" startBytecode="0" endBytecode="150" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java"/>
+      <Message>In method io.kubernetes.client.Exec$ExecProcess.waitFor(long, TimeUnit)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.Exec$ExecProcess" primary="true" start="315" end="315" startBytecode="14" endBytecode="14" sourcefile="Exec.java" sourcepath="io/kubernetes/client/Exec.java">
+      <Message>At Exec.java:[line 315]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="846f3c8e0a2a9f3cfcf698522856a113" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.kubernetes.client.PortForward$PortForwardResult at new io.kubernetes.client.PortForward$PortForwardResult(WebSocketStreamHandler, List) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="123" end="187" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+        <Message>At PortForward.java:[lines 123-187]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.PortForward$PortForwardResult</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.PortForward$PortForwardResult" name="&lt;init&gt;" signature="(Lio/kubernetes/client/util/WebSocketStreamHandler;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="123" end="127" startBytecode="0" endBytecode="121" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java"/>
+      <Message>In method new io.kubernetes.client.PortForward$PortForwardResult(WebSocketStreamHandler, List)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true" start="125" end="125" startBytecode="14" endBytecode="14" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+      <Message>At PortForward.java:[line 125]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="125" end="125" startBytecode="14" endBytecode="14" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+      <Message>At PortForward.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5b5f89110d3fb61b9465578b7f81655b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.PortForward$PortForwardResult(WebSocketStreamHandler, List) may expose internal representation by storing an externally mutable object into PortForward$PortForwardResult.ports</LongMessage>
+    <Class classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="123" end="187" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+        <Message>At PortForward.java:[lines 123-187]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.PortForward$PortForwardResult</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.PortForward$PortForwardResult" name="&lt;init&gt;" signature="(Lio/kubernetes/client/util/WebSocketStreamHandler;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="123" end="127" startBytecode="0" endBytecode="121" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java"/>
+      <Message>In method new io.kubernetes.client.PortForward$PortForwardResult(WebSocketStreamHandler, List)</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.PortForward$PortForwardResult" name="ports" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+        <Message>In PortForward.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.PortForward$PortForwardResult.ports</Message>
+    </Field>
+    <LocalVariable name="ports" register="2" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named ports</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true" start="126" end="126" startBytecode="22" endBytecode="22" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+      <Message>At PortForward.java:[line 126]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RR_NOT_CHECKED" priority="2" rank="16" abbrev="RR" category="BAD_PRACTICE" instanceHash="80fb7a40eba0c9e9a6075745685b283d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method ignores results of InputStream.read()</ShortMessage>
+    <LongMessage>io.kubernetes.client.PortForward$PortForwardResult.init() ignores result of java.io.InputStream.read(byte[])</LongMessage>
+    <Class classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="123" end="187" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+        <Message>At PortForward.java:[lines 123-187]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.PortForward$PortForwardResult</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.PortForward$PortForwardResult" name="init" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" start="131" end="138" startBytecode="0" endBytecode="205" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java"/>
+      <Message>In method io.kubernetes.client.PortForward$PortForwardResult.init()</Message>
+    </Method>
+    <Method classname="java.io.InputStream" name="read" signature="([B)I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStream" start="218" end="218" startBytecode="0" endBytecode="60" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+      <Message>Called method java.io.InputStream.read(byte[])</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.PortForward$PortForwardResult" primary="true" start="134" end="134" startBytecode="32" endBytecode="32" sourcefile="PortForward.java" sourcepath="io/kubernetes/client/PortForward.java">
+      <Message>At PortForward.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="2" rank="10" abbrev="USELESS_STRING" category="CORRECTNESS" instanceHash="af8d768832a7130eeca5e458df5d34f7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Invocation of toString on an array</ShortMessage>
+    <LongMessage>Invocation of toString on magic in io.kubernetes.client.ProtoClient.parse(InputStream)</LongMessage>
+    <Class classname="io.kubernetes.client.ProtoClient" primary="true">
+      <SourceLine classname="io.kubernetes.client.ProtoClient" start="47" end="292" sourcefile="ProtoClient.java" sourcepath="io/kubernetes/client/ProtoClient.java">
+        <Message>At ProtoClient.java:[lines 47-292]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.ProtoClient</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.ProtoClient" name="parse" signature="(Ljava/io/InputStream;)Lio/kubernetes/client/proto/Runtime$Unknown;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.ProtoClient" start="287" end="292" startBytecode="0" endBytecode="142" sourcefile="ProtoClient.java" sourcepath="io/kubernetes/client/ProtoClient.java"/>
+      <Message>In method io.kubernetes.client.ProtoClient.parse(InputStream)</Message>
+    </Method>
+    <LocalVariable name="magic" register="2" pc="36" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named magic</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.ProtoClient" primary="true" start="290" end="290" startBytecode="36" endBytecode="36" sourcefile="ProtoClient.java" sourcepath="io/kubernetes/client/ProtoClient.java">
+      <Message>At ProtoClient.java:[line 290]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="317659b49da31745df6d7cd581ddaec1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in io.kubernetes.client.util.ClientBuilder.cluster()</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="cluster" signature="()Lio/kubernetes/client/util/ClientBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="120" end="132" startBytecode="0" endBytecode="51" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.cluster()</Message>
+    </Method>
+    <String value="/var/run/secrets/kubernetes.io/serviceaccount/ca.crt" role="FILE_NAME">
+      <Message>File name /var/run/secrets/kubernetes.io/serviceaccount/ca.crt</Message>
+    </String>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="129" end="129" startBytecode="83" endBytecode="83" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="3d24646edca37d8ca183bcd8b9f43e7e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in io.kubernetes.client.util.ClientBuilder.cluster()</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="cluster" signature="()Lio/kubernetes/client/util/ClientBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="120" end="132" startBytecode="0" endBytecode="51" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.cluster()</Message>
+    </Method>
+    <String value="/var/run/secrets/kubernetes.io/serviceaccount/token" role="FILE_NAME">
+      <Message>File name /var/run/secrets/kubernetes.io/serviceaccount/token</Message>
+    </String>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="128" end="128" startBytecode="63" endBytecode="63" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 128]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_HARDCODED_ABSOLUTE_FILENAME" priority="2" rank="17" abbrev="DMI" category="STYLE" instanceHash="4651f7d94fdaba5d0b42735fd6773a6e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Code contains a hard coded reference to an absolute pathname</ShortMessage>
+    <LongMessage>Hard coded reference to an absolute pathname in io.kubernetes.client.util.ClientBuilder.standard()</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="standard" signature="()Lio/kubernetes/client/util/ClientBuilder;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="74" end="86" startBytecode="0" endBytecode="29" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.standard()</Message>
+    </Method>
+    <String value="/var/run/secrets/kubernetes.io/serviceaccount/ca.crt" role="FILE_NAME">
+      <Message>File name /var/run/secrets/kubernetes.io/serviceaccount/ca.crt</Message>
+    </String>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="82" end="82" startBytecode="38" endBytecode="38" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="8440d049aa011e4621f45d58d1c698a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.ClientBuilder.findConfigFromEnv(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="findConfigFromEnv" signature="()Ljava/io/FileReader;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="90" end="99" startBytecode="0" endBytecode="148" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.findConfigFromEnv()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="96" end="96" startBytecode="33" endBytecode="33" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="de308efa2ad47d74378869afd66a01f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.ClientBuilder.findConfigInHomeDir(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="findConfigInHomeDir" signature="()Ljava/io/FileReader;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="104" end="109" startBytecode="0" endBytecode="123" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.findConfigInHomeDir()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="106" end="106" startBytecode="36" endBytecode="36" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 106]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="531907e1e96520abf316a4c10482485d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.ClientBuilder.setCertificateAuthority(byte[]) may expose internal representation by storing an externally mutable object into ClientBuilder.caCertBytes</LongMessage>
+    <Class classname="io.kubernetes.client.util.ClientBuilder" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="39" end="230" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>At ClientBuilder.java:[lines 39-230]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.ClientBuilder</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.ClientBuilder" name="setCertificateAuthority" signature="([B)Lio/kubernetes/client/util/ClientBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" start="188" end="189" startBytecode="0" endBytecode="62" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java"/>
+      <Message>In method io.kubernetes.client.util.ClientBuilder.setCertificateAuthority(byte[])</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.ClientBuilder" name="caCertBytes" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.ClientBuilder" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+        <Message>In ClientBuilder.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.ClientBuilder.caCertBytes</Message>
+    </Field>
+    <LocalVariable name="caCertBytes" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named caCertBytes</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.ClientBuilder" primary="true" start="188" end="188" startBytecode="2" endBytecode="2" sourcefile="ClientBuilder.java" sourcepath="io/kubernetes/client/util/ClientBuilder.java">
+      <Message>At ClientBuilder.java:[line 188]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e5c3e8052ca31b6a3558bc2072b75d5c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.Config.fromConfig(InputStream): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="io.kubernetes.client.util.Config" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Config" start="26" end="104" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java">
+        <Message>At Config.java:[lines 26-104]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Config</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Config" name="fromConfig" signature="(Ljava/io/InputStream;)Lio/kubernetes/client/ApiClient;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Config" start="80" end="80" startBytecode="0" endBytecode="53" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java"/>
+      <Message>In method io.kubernetes.client.util.Config.fromConfig(InputStream)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.Config" primary="true" start="80" end="80" startBytecode="5" endBytecode="5" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java">
+      <Message>At Config.java:[line 80]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="cfefec4bec23850119b9e39242689ff6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.Config.fromConfig(String): new java.io.FileReader(String)</LongMessage>
+    <Class classname="io.kubernetes.client.util.Config" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Config" start="26" end="104" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java">
+        <Message>At Config.java:[lines 26-104]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Config</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Config" name="fromConfig" signature="(Ljava/lang/String;)Lio/kubernetes/client/ApiClient;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Config" start="76" end="76" startBytecode="0" endBytecode="53" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java"/>
+      <Message>In method io.kubernetes.client.util.Config.fromConfig(String)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="60" end="61" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(String)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.Config" primary="true" start="76" end="76" startBytecode="5" endBytecode="5" sourcefile="Config.java" sourcepath="io/kubernetes/client/util/Config.java">
+      <Message>At Config.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="13ae29fa17132115f3f693055ed2a2d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.KubeConfig.loadDefaultKubeConfig(): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.kubernetes.client.util.KubeConfig" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="37" end="249" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>At KubeConfig.java:[lines 37-249]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.KubeConfig</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.KubeConfig" name="loadDefaultKubeConfig" signature="()Lio/kubernetes/client/util/KubeConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="70" end="74" startBytecode="0" endBytecode="112" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java"/>
+      <Message>In method io.kubernetes.client.util.KubeConfig.loadDefaultKubeConfig()</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.KubeConfig" primary="true" start="74" end="74" startBytecode="38" endBytecode="38" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+      <Message>At KubeConfig.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="81f7e9cbb1f6b9289ba6bb5ab28b58ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList) may expose internal representation by storing an externally mutable object into KubeConfig.clusters</LongMessage>
+    <Class classname="io.kubernetes.client.util.KubeConfig" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="37" end="249" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>At KubeConfig.java:[lines 37-249]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.KubeConfig</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.KubeConfig" name="&lt;init&gt;" signature="(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="95" end="99" startBytecode="0" endBytecode="145" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java"/>
+      <Message>In method new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList)</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.KubeConfig" name="clusters" signature="Ljava/util/ArrayList;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>In KubeConfig.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.KubeConfig.clusters</Message>
+    </Field>
+    <LocalVariable name="clusters" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named clusters</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.KubeConfig" primary="true" start="97" end="97" startBytecode="11" endBytecode="11" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+      <Message>At KubeConfig.java:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="e54a877541e5aa4e3dc16f9720e8ed3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList) may expose internal representation by storing an externally mutable object into KubeConfig.contexts</LongMessage>
+    <Class classname="io.kubernetes.client.util.KubeConfig" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="37" end="249" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>At KubeConfig.java:[lines 37-249]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.KubeConfig</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.KubeConfig" name="&lt;init&gt;" signature="(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="95" end="99" startBytecode="0" endBytecode="145" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java"/>
+      <Message>In method new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList)</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.KubeConfig" name="contexts" signature="Ljava/util/ArrayList;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>In KubeConfig.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.KubeConfig.contexts</Message>
+    </Field>
+    <LocalVariable name="contexts" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named contexts</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.KubeConfig" primary="true" start="96" end="96" startBytecode="6" endBytecode="6" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+      <Message>At KubeConfig.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ca045f13eb7fa10f92ed2df859c49068" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList) may expose internal representation by storing an externally mutable object into KubeConfig.users</LongMessage>
+    <Class classname="io.kubernetes.client.util.KubeConfig" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="37" end="249" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>At KubeConfig.java:[lines 37-249]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.KubeConfig</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.KubeConfig" name="&lt;init&gt;" signature="(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="95" end="99" startBytecode="0" endBytecode="145" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java"/>
+      <Message>In method new io.kubernetes.client.util.KubeConfig(ArrayList, ArrayList, ArrayList)</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.KubeConfig" name="users" signature="Ljava/util/ArrayList;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>In KubeConfig.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.KubeConfig.users</Message>
+    </Field>
+    <LocalVariable name="users" register="3" pc="16" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named users</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.KubeConfig" primary="true" start="98" end="98" startBytecode="16" endBytecode="16" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+      <Message>At KubeConfig.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="d008bed531e152c08c498fecfb0707af" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should io.kubernetes.client.util.KubeConfig.getDataOrFile(String, String) return a zero length array rather than null?</LongMessage>
+    <Class classname="io.kubernetes.client.util.KubeConfig" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="37" end="249" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+        <Message>At KubeConfig.java:[lines 37-249]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.KubeConfig</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.KubeConfig" name="getDataOrFile" signature="(Ljava/lang/String;Ljava/lang/String;)[B" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.KubeConfig" start="243" end="249" startBytecode="0" endBytecode="104" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java"/>
+      <Message>In method io.kubernetes.client.util.KubeConfig.getDataOrFile(String, String)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.KubeConfig" primary="true" start="249" end="249" startBytecode="26" endBytecode="26" sourcefile="KubeConfig.java" sourcepath="io/kubernetes/client/util/KubeConfig.java">
+      <Message>At KubeConfig.java:[line 249]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="9ebc068836065b966d065b8c8eb9d40" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.SSLUtils.decodePem(InputStream): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="decodePem" signature="(Ljava/io/InputStream;)[B" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="169" end="180" startBytecode="0" endBytecode="220" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.decodePem(InputStream)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="169" end="169" startBytecode="9" endBytecode="9" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="47ab15b47fc7880efdd15f2d96b746da" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.SSLUtils.loadKey(InputStream, String): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="loadKey" signature="(Ljava/io/InputStream;Ljava/lang/String;)Ljava/security/PrivateKey;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="106" end="135" startBytecode="0" endBytecode="333" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.loadKey(InputStream, String)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="108" end="108" startBytecode="29" endBytecode="29" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 108]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="1a3136b58ed3f3d6d9cef2f3f2ed2a4e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.SSLUtils.createKeyStore(InputStream, InputStream, String, char[], String, char[]) may fail to clean up java.io.InputStream</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="createKeyStore" signature="(Ljava/io/InputStream;Ljava/io/InputStream;Ljava/lang/String;[CLjava/lang/String;[C)Ljava/security/KeyStore;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="147" end="162" startBytecode="0" endBytecode="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.createKeyStore(InputStream, InputStream, String, char[], String, char[])</Message>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Reference type java.io.InputStream</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="154" end="154" startBytecode="53" endBytecode="53" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at SSLUtils.java:[line 154] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="159" end="159" startBytecode="71" endBytecode="71" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at SSLUtils.java:[line 159]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="160" end="160" startBytecode="81" endBytecode="81" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at SSLUtils.java:[line 160]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="162" end="162" startBytecode="100" endBytecode="100" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at SSLUtils.java:[line 162]</Message>
+    </SourceLine>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {InputStream x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="55245acf5745855aa7ac304f56c5a0ef" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.SSLUtils.loadDefaultStoreFile(KeyStore, File, char[]) may fail to clean up java.io.InputStream</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="loadDefaultStoreFile" signature="(Ljava/security/KeyStore;Ljava/io/File;[C)Z" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="315" end="319" startBytecode="0" endBytecode="122" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.loadDefaultStoreFile(KeyStore, File, char[])</Message>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Reference type java.io.InputStream</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="316" end="316" startBytecode="29" endBytecode="29" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at SSLUtils.java:[line 316] is not discharged</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="317" end="317" startBytecode="36" endBytecode="36" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java" role="SOURCE_LINE_PATH_CONTINUES">
+      <Message>Path continues at SSLUtils.java:[line 317]</Message>
+    </SourceLine>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {InputStream x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE" instanceHash="963a6ccff15755385e3bbdd925274493" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close stream</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.SSLUtils.createKeyStore(InputStream, InputStream, String, char[], String, char[]) may fail to close stream</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="createKeyStore" signature="(Ljava/io/InputStream;Ljava/io/InputStream;Ljava/lang/String;[CLjava/lang/String;[C)Ljava/security/KeyStore;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="147" end="162" startBytecode="0" endBytecode="47" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.createKeyStore(InputStream, InputStream, String, char[], String, char[])</Message>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Need to close java.io.InputStream </Message>
+    </Type>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="154" end="154" startBytecode="47" endBytecode="47" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 154]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE" instanceHash="301b3ec262a537ca8b7e022a9973ddb8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close stream</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.SSLUtils.loadDefaultStoreFile(KeyStore, File, char[]) may fail to close stream</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="51" end="326" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 51-326]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils" name="loadDefaultStoreFile" signature="(Ljava/security/KeyStore;Ljava/io/File;[C)Z" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils" start="315" end="319" startBytecode="0" endBytecode="21" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method io.kubernetes.client.util.SSLUtils.loadDefaultStoreFile(KeyStore, File, char[])</Message>
+    </Method>
+    <Type descriptor="Ljava/io/InputStream;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Need to close java.io.InputStream </Message>
+    </Type>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils" primary="true" start="316" end="316" startBytecode="24" endBytecode="24" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 316]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="6e647734410b771133d5bcddbb4addbd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.kubernetes.client.util.SSLUtils$DerParser at new io.kubernetes.client.util.SSLUtils$DerParser(byte[]) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.kubernetes.client.util.SSLUtils$DerParser" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils$DerParser" start="222" end="262" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+        <Message>At SSLUtils.java:[lines 222-262]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.SSLUtils$DerParser</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.SSLUtils$DerParser" name="&lt;init&gt;" signature="([B)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.SSLUtils$DerParser" start="222" end="224" startBytecode="0" endBytecode="76" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java"/>
+      <Message>In method new io.kubernetes.client.util.SSLUtils$DerParser(byte[])</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils$DerParser" primary="true" start="224" end="224" startBytecode="41" endBytecode="41" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 224]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.SSLUtils$DerParser" start="224" end="224" startBytecode="41" endBytecode="41" sourcefile="SSLUtils.java" sourcepath="io/kubernetes/client/util/SSLUtils.java">
+      <Message>At SSLUtils.java:[line 224]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IT_NO_SUCH_ELEMENT" priority="3" rank="19" abbrev="It" category="BAD_PRACTICE" instanceHash="44ad527e78b628bbb66a5e8b8b89fcec" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Iterator next() method cannot throw NoSuchElementException</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.Watch.next() cannot throw NoSuchElementException</LongMessage>
+    <Class classname="io.kubernetes.client.util.Watch" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Watch" start="34" end="144" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java">
+        <Message>At Watch.java:[lines 34-144]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Watch</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Watch" name="next" signature="()Lio/kubernetes/client/util/Watch$Response;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Watch" start="110" end="122" startBytecode="0" endBytecode="313" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java"/>
+      <Message>In method io.kubernetes.client.util.Watch.next()</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.Watch" start="110" end="122" startBytecode="0" endBytecode="313" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java" synthetic="true">
+      <Message>At Watch.java:[lines 110-122]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE" instanceHash="1346b0cc9748e86683cdbe383201e56e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread public/protected field</ShortMessage>
+    <LongMessage>Unread public/protected field: io.kubernetes.client.util.Watch$Response.status</LongMessage>
+    <Class classname="io.kubernetes.client.util.Watch$Response" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Watch$Response" start="50" end="60" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java">
+        <Message>At Watch.java:[lines 50-60]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Watch$Response</Message>
+    </Class>
+    <Field classname="io.kubernetes.client.util.Watch$Response" name="status" signature="Lio/kubernetes/client/models/V1Status;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Watch$Response" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java">
+        <Message>In Watch.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.Watch$Response.status</Message>
+    </Field>
+    <SourceLine classname="io.kubernetes.client.util.Watch$Response" primary="true" start="53" end="53" startBytecode="16" endBytecode="16" sourcefile="Watch.java" sourcepath="io/kubernetes/client/util/Watch.java">
+      <Message>At Watch.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS" instanceHash="4958b58f9cefa1a2c53439dbff964086" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="366">
+    <ShortMessage>Inconsistent synchronization</ShortMessage>
+    <LongMessage>Inconsistent synchronization of io.kubernetes.client.util.WebSocketStreamHandler.socket; locked 40% of time</LongMessage>
+    <Class classname="io.kubernetes.client.util.WebSocketStreamHandler" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" start="39" end="172" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+        <Message>At WebSocketStreamHandler.java:[lines 39-172]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.WebSocketStreamHandler</Message>
+    </Class>
+    <Field classname="io.kubernetes.client.util.WebSocketStreamHandler" name="socket" signature="Lcom/squareup/okhttp/ws/WebSocket;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+        <Message>In WebSocketStreamHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.WebSocketStreamHandler.socket</Message>
+    </Field>
+    <Int value="40" role="INT_SYNC_PERCENT">
+      <Message>Synchronized 40% of the time</Message>
+    </Int>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" primary="true" start="194" end="194" startBytecode="4" endBytecode="4" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at WebSocketStreamHandler.java:[line 194]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" start="210" end="210" startBytecode="111" endBytecode="111" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java" role="SOURCE_LINE_UNSYNC_ACCESS">
+      <Message>Unsynchronized access at WebSocketStreamHandler.java:[line 210]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" start="62" end="62" startBytecode="25" endBytecode="25" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at WebSocketStreamHandler.java:[line 62]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" start="197" end="197" startBytecode="43" endBytecode="43" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java" role="SOURCE_LINE_SYNC_ACCESS">
+      <Message>Synchronized access at WebSocketStreamHandler.java:[line 197]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE" instanceHash="bdcb24ad036f1744d3ced471f01aee63" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: io.kubernetes.client.util.WebSocketStreamHandler.protocol</LongMessage>
+    <Class classname="io.kubernetes.client.util.WebSocketStreamHandler" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" start="39" end="172" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+        <Message>At WebSocketStreamHandler.java:[lines 39-172]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.WebSocketStreamHandler</Message>
+    </Class>
+    <Field classname="io.kubernetes.client.util.WebSocketStreamHandler" name="protocol" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+        <Message>In WebSocketStreamHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.WebSocketStreamHandler.protocol</Message>
+    </Field>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler" primary="true" start="61" end="61" startBytecode="20" endBytecode="20" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+      <Message>At WebSocketStreamHandler.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WA_NOT_IN_LOOP" priority="2" rank="14" abbrev="Wa" category="MT_CORRECTNESS" instanceHash="606eee09d8a77011d5862f80366862b4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Wait not in loop</ShortMessage>
+    <LongMessage>Wait not in loop in io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream.write(byte[], int, int)</LongMessage>
+    <Class classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" start="178" end="212" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+        <Message>At WebSocketStreamHandler.java:[lines 178-212]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" name="write" signature="([BII)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" start="194" end="212" startBytecode="0" endBytecode="332" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java"/>
+      <Message>In method io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream.write(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" primary="true" start="200" end="200" startBytecode="53" endBytecode="53" sourcefile="WebSocketStreamHandler.java" sourcepath="io/kubernetes/client/util/WebSocketStreamHandler.java">
+      <Message>At WebSocketStreamHandler.java:[line 200]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e0fc13e31088ac628ff076f3c485c356" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.Yaml.load(File): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.kubernetes.client.util.Yaml" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="27" end="186" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java">
+        <Message>At Yaml.java:[lines 27-186]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Yaml</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Yaml" name="load" signature="(Ljava/io/File;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="117" end="117" startBytecode="0" endBytecode="53" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java"/>
+      <Message>In method io.kubernetes.client.util.Yaml.load(File)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.Yaml" primary="true" start="117" end="117" startBytecode="5" endBytecode="5" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java">
+      <Message>At Yaml.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="f8d661e8e5f61b5cc6226b2a195d2728" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.Yaml.loadAs(File, Class): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.kubernetes.client.util.Yaml" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="27" end="186" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java">
+        <Message>At Yaml.java:[lines 27-186]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Yaml</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Yaml" name="loadAs" signature="(Ljava/io/File;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="173" end="173" startBytecode="0" endBytecode="85" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java"/>
+      <Message>In method io.kubernetes.client.util.Yaml.loadAs(File, Class)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.Yaml" primary="true" start="173" end="173" startBytecode="8" endBytecode="8" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java">
+      <Message>At Yaml.java:[line 173]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="db03ce8f912fb180f0b2b7b53ccad254" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource</ShortMessage>
+    <LongMessage>io.kubernetes.client.util.Yaml.loadAs(File, Class) may fail to clean up java.io.Reader</LongMessage>
+    <Class classname="io.kubernetes.client.util.Yaml" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="27" end="186" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java">
+        <Message>At Yaml.java:[lines 27-186]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.Yaml</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.Yaml" name="loadAs" signature="(Ljava/io/File;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.Yaml" start="173" end="173" startBytecode="0" endBytecode="85" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java"/>
+      <Message>In method io.kubernetes.client.util.Yaml.loadAs(File, Class)</Message>
+    </Method>
+    <Class classname="java.io.Reader" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.Reader" start="82" end="417" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>At Reader.java:[lines 82-417]</Message>
+      </SourceLine>
+      <Message>Reference type java.io.Reader</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="io.kubernetes.client.util.Yaml" primary="true" start="173" end="173" startBytecode="8" endBytecode="8" sourcefile="Yaml.java" sourcepath="io/kubernetes/client/util/Yaml.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at Yaml.java:[line 173] is not discharged</Message>
+    </SourceLine>
+    <String value="{Reader x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {Reader x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="407f78bd6e231994e1ecc5203975f47e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of expiry, which is known to be non-null in io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator.isExpired(Map)</LongMessage>
+    <Class classname="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" start="23" end="53" sourcefile="AzureActiveDirectoryAuthenticator.java" sourcepath="io/kubernetes/client/util/authenticators/AzureActiveDirectoryAuthenticator.java">
+        <Message>At AzureActiveDirectoryAuthenticator.java:[lines 23-53]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" name="isExpired" signature="(Ljava/util/Map;)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" start="43" end="48" startBytecode="0" endBytecode="172" sourcefile="AzureActiveDirectoryAuthenticator.java" sourcepath="io/kubernetes/client/util/authenticators/AzureActiveDirectoryAuthenticator.java"/>
+      <Message>In method io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator.isExpired(Map)</Message>
+    </Method>
+    <LocalVariable name="expiry" register="3" pc="28" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from expiry</Message>
+    </LocalVariable>
+    <Method classname="java.util.Date" name="&lt;init&gt;" signature="(J)V" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.util.Date" start="180" end="182" startBytecode="0" endBytecode="69" sourcefile="Date.java" sourcepath="java/util/Date.java"/>
+      <Message>Return value of new java.util.Date(long) of type void</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" primary="true" start="45" end="45" startBytecode="29" endBytecode="29" sourcefile="AzureActiveDirectoryAuthenticator.java" sourcepath="io/kubernetes/client/util/authenticators/AzureActiveDirectoryAuthenticator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at AzureActiveDirectoryAuthenticator.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="8815ce478f03dc84a95d7c7f4e33dc96" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.kubernetes.client.util.credentials.ClientCertificateAuthentication.provide(ApiClient): new String(byte[])</LongMessage>
+    <Class classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="17" end="48" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+        <Message>At ClientCertificateAuthentication.java:[lines 17-48]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.credentials.ClientCertificateAuthentication</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" name="provide" signature="(Lio/kubernetes/client/ApiClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="28" end="48" startBytecode="0" endBytecode="304" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java"/>
+      <Message>In method io.kubernetes.client.util.credentials.ClientCertificateAuthentication.provide(ApiClient)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1439" end="1440" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true" start="28" end="28" startBytecode="8" endBytecode="8" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+      <Message>At ClientCertificateAuthentication.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ad408c9b652d0538ae49d4b73d579e43" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.util.credentials.ClientCertificateAuthentication(byte[], byte[]) may expose internal representation by storing an externally mutable object into ClientCertificateAuthentication.certificate</LongMessage>
+    <Class classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="17" end="48" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+        <Message>At ClientCertificateAuthentication.java:[lines 17-48]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.credentials.ClientCertificateAuthentication</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" name="&lt;init&gt;" signature="([B[B)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="21" end="24" startBytecode="0" endBytecode="88" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java"/>
+      <Message>In method new io.kubernetes.client.util.credentials.ClientCertificateAuthentication(byte[], byte[])</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" name="certificate" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+        <Message>In ClientCertificateAuthentication.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.credentials.ClientCertificateAuthentication.certificate</Message>
+    </Field>
+    <LocalVariable name="certificate" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named certificate</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true" start="22" end="22" startBytecode="6" endBytecode="6" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+      <Message>At ClientCertificateAuthentication.java:[line 22]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c5d4cdc539120f10e55dde4c8821261d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.kubernetes.client.util.credentials.ClientCertificateAuthentication(byte[], byte[]) may expose internal representation by storing an externally mutable object into ClientCertificateAuthentication.key</LongMessage>
+    <Class classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="17" end="48" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+        <Message>At ClientCertificateAuthentication.java:[lines 17-48]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.credentials.ClientCertificateAuthentication</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" name="&lt;init&gt;" signature="([B[B)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" start="21" end="24" startBytecode="0" endBytecode="88" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java"/>
+      <Message>In method new io.kubernetes.client.util.credentials.ClientCertificateAuthentication(byte[], byte[])</Message>
+    </Method>
+    <Field classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" name="key" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+        <Message>In ClientCertificateAuthentication.java</Message>
+      </SourceLine>
+      <Message>Field io.kubernetes.client.util.credentials.ClientCertificateAuthentication.key</Message>
+    </Field>
+    <LocalVariable name="key" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named key</Message>
+    </LocalVariable>
+    <SourceLine classname="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" primary="true" start="23" end="23" startBytecode="11" endBytecode="11" sourcefile="ClientCertificateAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java">
+      <Message>At ClientCertificateAuthentication.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a1d1a83fe093912cbae774eb45ad34b9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.kubernetes.client.util.credentials.KubeconfigAuthentication at new io.kubernetes.client.util.credentials.KubeconfigAuthentication(KubeConfig) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" start="26" end="49" sourcefile="KubeconfigAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/KubeconfigAuthentication.java">
+        <Message>At KubeconfigAuthentication.java:[lines 26-49]</Message>
+      </SourceLine>
+      <Message>In class io.kubernetes.client.util.credentials.KubeconfigAuthentication</Message>
+    </Class>
+    <Method classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" name="&lt;init&gt;" signature="(Lio/kubernetes/client/util/KubeConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" start="26" end="34" startBytecode="0" endBytecode="142" sourcefile="KubeconfigAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/KubeconfigAuthentication.java"/>
+      <Message>In method new io.kubernetes.client.util.credentials.KubeconfigAuthentication(KubeConfig)</Message>
+    </Method>
+    <SourceLine classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" primary="true" start="29" end="29" startBytecode="8" endBytecode="8" sourcefile="KubeconfigAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/KubeconfigAuthentication.java">
+      <Message>At KubeconfigAuthentication.java:[line 29]</Message>
+    </SourceLine>
+    <SourceLine classname="io.kubernetes.client.util.credentials.KubeconfigAuthentication" start="29" end="29" startBytecode="8" endBytecode="8" sourcefile="KubeconfigAuthentication.java" sourcepath="io/kubernetes/client/util/credentials/KubeconfigAuthentication.java">
+      <Message>At KubeconfigAuthentication.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="EXPERIMENTAL">
+    <Description>Experimental</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" abbrev="UrF" category="STYLE">
+    <ShortDescription>Unread public/protected field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RR_NOT_CHECKED" abbrev="RR" category="BAD_PRACTICE">
+    <ShortDescription>Method ignores results of InputStream.read()</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method ignores the return value of one of the variants of
+  <code>java.io.InputStream.read()</code> which can return multiple bytes.&nbsp;
+  If the return value is not checked, the caller will not be able to correctly
+  handle the case where fewer bytes were read than the caller requested.&nbsp;
+  This is a particularly insidious kind of bug, because in many programs,
+  reads from input streams usually do read the full amount of data requested,
+  causing the program to fail only sporadically.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OBL_UNSATISFIED_OBLIGATION" abbrev="OBL" category="EXPERIMENTAL">
+    <ShortDescription>Method may fail to clean up stream or resource</ShortDescription>
+    <Details><![CDATA[
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          For sending feedback, check:
+          </p>
+          <ul>
+            <li><a href="https://github.com/spotbugs/spotbugs/blob/master/.github/CONTRIBUTING.md">contributing guideline</a></li>
+            <li><a href="https://github.com/spotbugs/discuss/issues?q=">mailinglist</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>
+          (<a href="https://people.eecs.berkeley.edu/~necula/Papers/rte_oopsla04.pdf">PDF</a>),
+          for a description of the analysis technique.
+          </p>
+          
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_INVOKING_TOSTRING_ON_ARRAY" abbrev="USELESS_STRING" category="CORRECTNESS">
+    <ShortDescription>Invocation of toString on an array</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+The code invokes toString on an array, which will generate a fairly useless result
+such as [C@16f0472. Consider using Arrays.toString to convert the array into a readable
+String that gives the contents of the array. See Programming Puzzlers, chapter 3, puzzle 12.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IT_NO_SUCH_ELEMENT" abbrev="It" category="BAD_PRACTICE">
+    <ShortDescription>Iterator next() method cannot throw NoSuchElementException</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>java.util.Iterator</code> interface.&nbsp;
+  However, its <code>next()</code> method is not capable of throwing
+  <code>java.util.NoSuchElementException</code>.&nbsp; The <code>next()</code>
+  method should be changed so it throws <code>NoSuchElementException</code>
+  if is called when there are no more elements to return.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WA_NOT_IN_LOOP" abbrev="Wa" category="MT_CORRECTNESS">
+    <ShortDescription>Wait not in loop</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a call to <code>java.lang.Object.wait()</code>
+  which is not in a loop.&nbsp; If the monitor is used for multiple conditions,
+  the condition the caller intended to wait for might not be the one
+  that actually occurred.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_HARDCODED_ABSOLUTE_FILENAME" abbrev="DMI" category="STYLE">
+    <ShortDescription>Code contains a hard coded reference to an absolute pathname</ShortDescription>
+    <Details><![CDATA[
+
+<p>This code constructs a File object using a hard coded to an absolute pathname
+(e.g., <code>new File("/home/dannyc/workspace/j2ee/src/share/com/sun/enterprise/deployment");</code>
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="UW_UNCOND_WAIT" abbrev="UW" category="MT_CORRECTNESS">
+    <ShortDescription>Unconditional wait</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a call to <code>java.lang.Object.wait()</code> which
+    is not guarded by conditional control flow. The code should
+    verify that condition it intends to wait for is not already satisfied
+    before calling wait; any previous notifications will be ignored.
+  </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IS2_INCONSISTENT_SYNC" abbrev="IS" category="MT_CORRECTNESS">
+    <ShortDescription>Inconsistent synchronization</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The fields of this class appear to be accessed inconsistently with respect
+  to synchronization.&nbsp; This bug report indicates that the bug pattern detector
+  judged that
+  </p>
+  <ul>
+  <li> The class contains a mix of locked and unlocked accesses,</li>
+  <li> The class is <b>not</b> annotated as javax.annotation.concurrent.NotThreadSafe,</li>
+  <li> At least one locked access was performed by one of the class's own methods, and</li>
+  <li> The number of unsynchronized field accesses (reads and writes) was no more than
+       one third of all accesses, with writes being weighed twice as high as reads</li>
+  </ul>
+
+  <p> A typical bug matching this bug pattern is forgetting to synchronize
+  one of the methods in a class that is intended to be thread-safe.</p>
+
+  <p> You can select the nodes labeled "Unsynchronized access" to show the
+  code locations where the detector believed that a field was accessed
+  without synchronization.</p>
+
+  <p> Note that there are various sources of inaccuracy in this detector;
+  for example, the detector cannot statically detect all situations in which
+  a lock is held.&nbsp; Also, even when the detector is accurate in
+  distinguishing locked vs. unlocked accesses, the code in question may still
+  be correct.</p>
+
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OS_OPEN_STREAM" abbrev="OS" category="BAD_PRACTICE">
+    <ShortDescription>Method may fail to close stream</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="RR">
+    <Description>Method ignores results of InputStream.read()</Description>
+  </BugCode>
+  <BugCode abbrev="DMI" cweid="440">
+    <Description>Dubious method invocation</Description>
+  </BugCode>
+  <BugCode abbrev="UW">
+    <Description>Unconditional wait</Description>
+  </BugCode>
+  <BugCode abbrev="OS">
+    <Description>Stream not closed on all paths</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="Wa">
+    <Description>Wait not in loop</Description>
+  </BugCode>
+  <BugCode abbrev="IS" cweid="366">
+    <Description>Inconsistent synchronization</Description>
+  </BugCode>
+  <BugCode abbrev="USELESS_STRING">
+    <Description>Useless/non-informative string generated</Description>
+  </BugCode>
+  <BugCode abbrev="It">
+    <Description>Incorrect definition of Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="OBL">
+    <Description>Unsatisfied obligation to clean up stream or resource</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="67">
+    <MissingClass>com.google.common.base.Charsets</MissingClass>
+    <MissingClass>com.google.common.base.Preconditions</MissingClass>
+    <MissingClass>com.google.common.io.ByteStreams</MissingClass>
+    <MissingClass>com.google.common.io.CharStreams</MissingClass>
+    <MissingClass>com.google.common.net.HttpHeaders</MissingClass>
+    <MissingClass>com.google.common.primitives.Bytes</MissingClass>
+    <MissingClass>com.google.common.reflect.ClassPath</MissingClass>
+    <MissingClass>com.google.common.reflect.ClassPath$ClassInfo</MissingClass>
+    <MissingClass>com.google.gson.JsonParseException</MissingClass>
+    <MissingClass>com.google.gson.reflect.TypeToken</MissingClass>
+    <MissingClass>com.google.protobuf.AbstractMessage</MissingClass>
+    <MissingClass>com.google.protobuf.AbstractMessage$Builder</MissingClass>
+    <MissingClass>com.google.protobuf.ByteString</MissingClass>
+    <MissingClass>com.google.protobuf.Message</MissingClass>
+    <MissingClass>com.google.protobuf.Message$Builder</MissingClass>
+    <MissingClass>com.squareup.okhttp.Call</MissingClass>
+    <MissingClass>com.squareup.okhttp.Headers</MissingClass>
+    <MissingClass>com.squareup.okhttp.MediaType</MissingClass>
+    <MissingClass>com.squareup.okhttp.OkHttpClient</MissingClass>
+    <MissingClass>com.squareup.okhttp.Request</MissingClass>
+    <MissingClass>com.squareup.okhttp.Request$Builder</MissingClass>
+    <MissingClass>com.squareup.okhttp.RequestBody</MissingClass>
+    <MissingClass>com.squareup.okhttp.Response</MissingClass>
+    <MissingClass>com.squareup.okhttp.ResponseBody</MissingClass>
+    <MissingClass>com.squareup.okhttp.ws.WebSocket</MissingClass>
+    <MissingClass>com.squareup.okhttp.ws.WebSocketCall</MissingClass>
+    <MissingClass>com.squareup.okhttp.ws.WebSocketListener</MissingClass>
+    <MissingClass>io.kubernetes.client.ApiClient</MissingClass>
+    <MissingClass>io.kubernetes.client.ApiException</MissingClass>
+    <MissingClass>io.kubernetes.client.Configuration</MissingClass>
+    <MissingClass>io.kubernetes.client.JSON</MissingClass>
+    <MissingClass>io.kubernetes.client.Pair</MissingClass>
+    <MissingClass>io.kubernetes.client.ProgressRequestBody</MissingClass>
+    <MissingClass>io.kubernetes.client.ProgressRequestBody$ProgressRequestListener</MissingClass>
+    <MissingClass>io.kubernetes.client.ProgressResponseBody</MissingClass>
+    <MissingClass>io.kubernetes.client.ProgressResponseBody$ProgressListener</MissingClass>
+    <MissingClass>io.kubernetes.client.apis.CoreV1Api</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1Container</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1ObjectMeta</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1Pod</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1PodSpec</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1Status</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1StatusCause</MissingClass>
+    <MissingClass>io.kubernetes.client.models.V1StatusDetails</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Meta</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Meta$DeleteOptions</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Meta$Status</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Meta$Status$Builder</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Runtime</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Runtime$TypeMeta</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Runtime$TypeMeta$Builder</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Runtime$Unknown</MissingClass>
+    <MissingClass>io.kubernetes.client.proto.Runtime$Unknown$Builder</MissingClass>
+    <MissingClass>okio.Buffer</MissingClass>
+    <MissingClass>okio.BufferedSource</MissingClass>
+    <MissingClass>okio.ByteString</MissingClass>
+    <MissingClass>org.apache.commons.codec.binary.Base64</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.bouncycastle.jce.provider.BouncyCastleProvider</MissingClass>
+    <MissingClass>org.bouncycastle.openssl.PEMKeyPair</MissingClass>
+    <MissingClass>org.bouncycastle.openssl.PEMParser</MissingClass>
+    <MissingClass>org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.yaml.snakeyaml.Yaml</MissingClass>
+    <MissingClass>org.yaml.snakeyaml.constructor.BaseConstructor</MissingClass>
+    <MissingClass>org.yaml.snakeyaml.constructor.SafeConstructor</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:58 +0900" total_classes="36" referenced_classes="150" total_bugs="44" total_size="1274" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.84" clock_seconds="2.16" peak_mbytes="241.14" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="6" priority_2="27" priority_1="11">
+    <FileStats path="io/kubernetes/client/Attach.java" bugCount="1" size="46" bugHash="e27da1a64b3a2a77703a183dc8c1c84d"/>
+    <FileStats path="io/kubernetes/client/Exec.java" bugCount="6" size="147" bugHash="97988a97d0d037ae790a1e2cf8dcda23"/>
+    <FileStats path="io/kubernetes/client/KubernetesConstants.java" bugCount="0" size="7"/>
+    <FileStats path="io/kubernetes/client/PodLogs.java" bugCount="0" size="30"/>
+    <FileStats path="io/kubernetes/client/PortForward.java" bugCount="3" size="67" bugHash="2a69cb17c53fb0e41e4012dca5731289"/>
+    <FileStats path="io/kubernetes/client/ProtoClient.java" bugCount="1" size="106" bugHash="93259ca8b8c41c80015922d248811867"/>
+    <FileStats path="io/kubernetes/client/util/ClientBuilder.java" bugCount="6" size="97" bugHash="1e0fd973ce9898f0e0765701ed6a75fe"/>
+    <FileStats path="io/kubernetes/client/util/Config.java" bugCount="2" size="45" bugHash="9e17ac2f7000fb6ee7a5dc57df15452d"/>
+    <FileStats path="io/kubernetes/client/util/KubeConfig.java" bugCount="5" size="138" bugHash="3d156767505c1f9126634ed6f0702cc2"/>
+    <FileStats path="io/kubernetes/client/util/SSLUtils.java" bugCount="7" size="150" bugHash="2388bd758d193b0716e224f61dbbea36"/>
+    <FileStats path="io/kubernetes/client/util/Watch.java" bugCount="2" size="69" bugHash="c3d034181e8c822243afbde44995e1d8"/>
+    <FileStats path="io/kubernetes/client/util/WebSocketStreamHandler.java" bugCount="3" size="125" bugHash="6f19e16f05f08cfae71e595210b0e373"/>
+    <FileStats path="io/kubernetes/client/util/WebSockets.java" bugCount="0" size="56"/>
+    <FileStats path="io/kubernetes/client/util/Yaml.java" bugCount="3" size="73" bugHash="3fd139092c36c76244a0a45ea659fd06"/>
+    <FileStats path="io/kubernetes/client/util/authenticators/Authenticator.java" bugCount="0" size="5"/>
+    <FileStats path="io/kubernetes/client/util/authenticators/AzureActiveDirectoryAuthenticator.java" bugCount="1" size="20" bugHash="14eacf51e5a466c242a6e3feade800a8"/>
+    <FileStats path="io/kubernetes/client/util/authenticators/GCPAuthenticator.java" bugCount="0" size="17"/>
+    <FileStats path="io/kubernetes/client/util/credentials/AccessTokenAuthentication.java" bugCount="0" size="11"/>
+    <FileStats path="io/kubernetes/client/util/credentials/Authentication.java" bugCount="0" size="2"/>
+    <FileStats path="io/kubernetes/client/util/credentials/ClientCertificateAuthentication.java" bugCount="3" size="25" bugHash="099c0e13485319a7c1346aa488ee0070"/>
+    <FileStats path="io/kubernetes/client/util/credentials/KubeconfigAuthentication.java" bugCount="1" size="24" bugHash="af492cba8e09b37fbb8d2465302d4e14"/>
+    <FileStats path="io/kubernetes/client/util/credentials/UsernamePasswordAuthentication.java" bugCount="0" size="14"/>
+    <PackageStats package="io.kubernetes.client" total_bugs="11" total_types="12" total_size="403" priority_3="2" priority_2="8" priority_1="1">
+      <ClassStats class="io.kubernetes.client.Attach" sourceFile="Attach.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.Attach$AttachResult" sourceFile="Attach.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="io.kubernetes.client.Exec" sourceFile="Exec.java" interface="false" size="66" bugs="1" priority_1="1"/>
+      <ClassStats class="io.kubernetes.client.Exec$1" sourceFile="Exec.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.Exec$ExecProcess" sourceFile="Exec.java" interface="false" size="54" bugs="5" priority_3="2" priority_2="3"/>
+      <ClassStats class="io.kubernetes.client.Exec$ExecProcess$1" sourceFile="Exec.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.KubernetesConstants" sourceFile="KubernetesConstants.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.PodLogs" sourceFile="PodLogs.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.PortForward" sourceFile="PortForward.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.PortForward$PortForwardResult" sourceFile="PortForward.java" interface="false" size="38" bugs="3" priority_2="3"/>
+      <ClassStats class="io.kubernetes.client.ProtoClient" sourceFile="ProtoClient.java" interface="false" size="94" bugs="1" priority_2="1"/>
+      <ClassStats class="io.kubernetes.client.ProtoClient$ObjectOrStatus" sourceFile="ProtoClient.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.kubernetes.client.util" total_bugs="28" total_types="16" total_size="753" priority_3="3" priority_2="16" priority_1="9">
+      <ClassStats class="io.kubernetes.client.util.ClientBuilder" sourceFile="ClientBuilder.java" interface="false" size="97" bugs="6" priority_2="4" priority_1="2"/>
+      <ClassStats class="io.kubernetes.client.util.Config" sourceFile="Config.java" interface="false" size="45" bugs="2" priority_1="2"/>
+      <ClassStats class="io.kubernetes.client.util.KubeConfig" sourceFile="KubeConfig.java" interface="false" size="138" bugs="5" priority_3="1" priority_2="3" priority_1="1"/>
+      <ClassStats class="io.kubernetes.client.util.SSLUtils" sourceFile="SSLUtils.java" interface="false" size="100" bugs="6" priority_2="4" priority_1="2"/>
+      <ClassStats class="io.kubernetes.client.util.SSLUtils$Asn1Object" sourceFile="SSLUtils.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.SSLUtils$DerParser" sourceFile="SSLUtils.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="io.kubernetes.client.util.Watch" sourceFile="Watch.java" interface="false" size="49" bugs="1" priority_3="1"/>
+      <ClassStats class="io.kubernetes.client.util.Watch$1" sourceFile="Watch.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.Watch$Response" sourceFile="Watch.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="io.kubernetes.client.util.WebSocketStreamHandler" sourceFile="WebSocketStreamHandler.java" interface="false" size="83" bugs="1" priority_3="1"/>
+      <ClassStats class="io.kubernetes.client.util.WebSocketStreamHandler$State" sourceFile="WebSocketStreamHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.WebSocketStreamHandler$WebSocketOutputStream" sourceFile="WebSocketStreamHandler.java" interface="false" size="29" bugs="2" priority_2="2"/>
+      <ClassStats class="io.kubernetes.client.util.WebSockets" sourceFile="WebSockets.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.WebSockets$Listener" sourceFile="WebSockets.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.WebSockets$SocketListener" sourceFile="WebSockets.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.Yaml" sourceFile="Yaml.java" interface="false" size="73" bugs="3" priority_2="1" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="io.kubernetes.client.util.authenticators" total_bugs="1" total_types="3" total_size="42" priority_3="1">
+      <ClassStats class="io.kubernetes.client.util.authenticators.Authenticator" sourceFile="Authenticator.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.authenticators.AzureActiveDirectoryAuthenticator" sourceFile="AzureActiveDirectoryAuthenticator.java" interface="false" size="20" bugs="1" priority_3="1"/>
+      <ClassStats class="io.kubernetes.client.util.authenticators.GCPAuthenticator" sourceFile="GCPAuthenticator.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.kubernetes.client.util.credentials" total_bugs="4" total_types="5" total_size="76" priority_2="3" priority_1="1">
+      <ClassStats class="io.kubernetes.client.util.credentials.AccessTokenAuthentication" sourceFile="AccessTokenAuthentication.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.credentials.Authentication" sourceFile="Authentication.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="io.kubernetes.client.util.credentials.ClientCertificateAuthentication" sourceFile="ClientCertificateAuthentication.java" interface="false" size="25" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="io.kubernetes.client.util.credentials.KubeconfigAuthentication" sourceFile="KubeconfigAuthentication.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="io.kubernetes.client.util.credentials.UsernamePasswordAuthentication" sourceFile="UsernamePasswordAuthentication.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="307" invocations="959" avgMicrosecondsPerInvocation="320" maxMicrosecondsPerInvocation="13966" standardDeviationMicrosecondsPerInvocation="865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="107" invocations="150" avgMicrosecondsPerInvocation="713" maxMicrosecondsPerInvocation="8067" standardDeviationMicrosecondsPerInvocation="1411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="80" invocations="150" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="7052" standardDeviationMicrosecondsPerInvocation="1004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="74" invocations="615" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="2764" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="65" invocations="231" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="5525" standardDeviationMicrosecondsPerInvocation="539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="58" invocations="238" avgMicrosecondsPerInvocation="245" maxMicrosecondsPerInvocation="7870" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="54" invocations="230" avgMicrosecondsPerInvocation="237" maxMicrosecondsPerInvocation="2355" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="53" invocations="243" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="8276" standardDeviationMicrosecondsPerInvocation="594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="231" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="5511" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="47" invocations="230" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="3172" standardDeviationMicrosecondsPerInvocation="378"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="44" invocations="199" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="10197" standardDeviationMicrosecondsPerInvocation="746"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="38" invocations="36" avgMicrosecondsPerInvocation="1070" maxMicrosecondsPerInvocation="9615" standardDeviationMicrosecondsPerInvocation="2202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="37" invocations="967" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="2138" standardDeviationMicrosecondsPerInvocation="90"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="150" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="3549" standardDeviationMicrosecondsPerInvocation="457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="240" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="15919" standardDeviationMicrosecondsPerInvocation="1025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="248" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="10294" standardDeviationMicrosecondsPerInvocation="669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="150" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="3800" standardDeviationMicrosecondsPerInvocation="506"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="26" invocations="36" avgMicrosecondsPerInvocation="727" maxMicrosecondsPerInvocation="15861" standardDeviationMicrosecondsPerInvocation="2743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="23" invocations="36" avgMicrosecondsPerInvocation="650" maxMicrosecondsPerInvocation="2745" standardDeviationMicrosecondsPerInvocation="634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="150" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="1501" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="150" avgMicrosecondsPerInvocation="145" maxMicrosecondsPerInvocation="1636" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="849" avgMicrosecondsPerInvocation="25" maxMicrosecondsPerInvocation="692" standardDeviationMicrosecondsPerInvocation="54"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="150" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="1582" standardDeviationMicrosecondsPerInvocation="303"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="150" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="5212" standardDeviationMicrosecondsPerInvocation="451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="20" invocations="147" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="825" standardDeviationMicrosecondsPerInvocation="141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="19" invocations="36" avgMicrosecondsPerInvocation="531" maxMicrosecondsPerInvocation="12559" standardDeviationMicrosecondsPerInvocation="2039"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="17" invocations="150" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="7245" standardDeviationMicrosecondsPerInvocation="725"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="14" invocations="231" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="1063" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="3990" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="727" standardDeviationMicrosecondsPerInvocation="15"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

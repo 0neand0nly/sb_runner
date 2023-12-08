@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013465559" analysisTimestamp="1702015001156" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\dataease-plugin-common-1.2.jar</Jar>
+  </Project>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="5eac12c771cb9e94755a780628dcaac7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.dto.PluginSimpleTreeNode is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="io.dataease.plugins.common.dto.PluginSimpleTreeNode" primary="true" classAnnotationNames="io.dataease.plugins.common.annotation.PluginResultMap">
+      <SourceLine classname="io.dataease.plugins.common.dto.PluginSimpleTreeNode" start="7" end="13" sourcefile="PluginSimpleTreeNode.java" sourcepath="io/dataease/plugins/common/dto/PluginSimpleTreeNode.java">
+        <Message>At PluginSimpleTreeNode.java:[lines 7-13]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.dto.PluginSimpleTreeNode</Message>
+    </Class>
+    <SourceLine classname="io.dataease.plugins.common.dto.PluginSimpleTreeNode" start="7" end="13" sourcefile="PluginSimpleTreeNode.java" sourcepath="io/dataease/plugins/common/dto/PluginSimpleTreeNode.java" synthetic="true">
+      <Message>At PluginSimpleTreeNode.java:[lines 7-13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="e253562c882248caeb1bfc37d4c4362f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackConditionEntity is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackConditionEntity" primary="true" classAnnotationNames="io.dataease.plugins.common.annotation.PluginResultMap">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackConditionEntity" start="8" end="16" sourcefile="XpackConditionEntity.java" sourcepath="io/dataease/plugins/common/entity/XpackConditionEntity.java">
+        <Message>At XpackConditionEntity.java:[lines 8-16]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackConditionEntity</Message>
+    </Class>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackConditionEntity" start="8" end="16" sourcefile="XpackConditionEntity.java" sourcepath="io/dataease/plugins/common/entity/XpackConditionEntity.java" synthetic="true">
+      <Message>At XpackConditionEntity.java:[lines 8-16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b5a3b78741c8df9aabe84bf64f6802e8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridExample.getOredCriteria() may expose internal representation by returning XpackGridExample.oredCriteria</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridExample" primary="true" classAnnotationNames="io.dataease.plugins.common.annotation.PluginResultMap">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample" start="20" end="79" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>At XpackGridExample.java:[lines 20-79]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridExample</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridExample" name="getOredCriteria" signature="()Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="io.dataease.plugins.common.annotation.PluginResultMap">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample" start="49" end="49" startBytecode="0" endBytecode="46" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridExample.getOredCriteria()</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridExample" name="oredCriteria" signature="Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="io.dataease.plugins.common.annotation.PluginResultMap">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>In XpackGridExample.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridExample.oredCriteria</Message>
+    </Field>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample" primary="true" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+      <Message>At XpackGridExample.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="bfb9614ec7412f49fd77450fcbb4f6ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.getAllCriteria() may expose internal representation by returning XpackGridExample$GeneratedCriteria.criteria</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="85" end="170" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>At XpackGridExample.java:[lines 85-170]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" name="getAllCriteria" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="94" end="94" startBytecode="0" endBytecode="46" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.getAllCriteria()</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" name="criteria" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>In XpackGridExample.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.criteria</Message>
+    </Field>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true" start="94" end="94" startBytecode="4" endBytecode="4" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+      <Message>At XpackGridExample.java:[line 94]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="11544b05dcca9e4b9108d10832ebfdde" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.getCriteria() may expose internal representation by returning XpackGridExample$GeneratedCriteria.criteria</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="85" end="170" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>At XpackGridExample.java:[lines 85-170]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" name="getCriteria" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="98" end="98" startBytecode="0" endBytecode="46" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.getCriteria()</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" name="criteria" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>In XpackGridExample.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.criteria</Message>
+    </Field>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true" start="98" end="98" startBytecode="4" endBytecode="4" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+      <Message>At XpackGridExample.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="d010c8b90e0186a534d323b1b5175e97" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.addCondtion(XpackConditionEntity) where default case is missing</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="85" end="170" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+        <Message>At XpackGridExample.java:[lines 85-170]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" name="addCondtion" signature="(Lio/dataease/plugins/common/entity/XpackConditionEntity;)Lio/dataease/plugins/common/entity/XpackGridExample$Criteria;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" start="125" end="170" startBytecode="0" endBytecode="1128" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria.addCondtion(XpackConditionEntity)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" primary="true" start="130" end="167" startBytecode="320" endBytecode="773" sourcefile="XpackGridExample.java" sourcepath="io/dataease/plugins/common/entity/XpackGridExample.java">
+      <Message>At XpackGridExample.java:[lines 130-167]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="80da62af0a5c45737c60326052295658" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridRequest.getConditions() may expose internal representation by returning XpackGridRequest.conditions</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridRequest" name="getConditions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="12" end="12" startBytecode="0" endBytecode="46" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridRequest.getConditions()</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridRequest" name="conditions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>In XpackGridRequest.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridRequest.conditions</Message>
+    </Field>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true" start="12" end="12" startBytecode="4" endBytecode="4" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+      <Message>At XpackGridRequest.java:[line 12]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="386162143bca92d411b65be4daeebd90" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridRequest.getOrders() may expose internal representation by returning XpackGridRequest.orders</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridRequest" name="getOrders" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="14" end="14" startBytecode="0" endBytecode="46" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridRequest.getOrders()</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridRequest" name="orders" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>In XpackGridRequest.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridRequest.orders</Message>
+    </Field>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true" start="14" end="14" startBytecode="4" endBytecode="4" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+      <Message>At XpackGridRequest.java:[line 14]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="dc432de0928f97ebcc3bff01a42ff220" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridRequest.setConditions(List) may expose internal representation by storing an externally mutable object into XpackGridRequest.conditions</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridRequest" name="setConditions" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="9" startBytecode="0" endBytecode="75" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridRequest.setConditions(List)</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridRequest" name="conditions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>In XpackGridRequest.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridRequest.conditions</Message>
+    </Field>
+    <LocalVariable name="conditions" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named conditions</Message>
+    </LocalVariable>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true" start="9" end="9" startBytecode="2" endBytecode="2" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+      <Message>At XpackGridRequest.java:[line 9]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="462e8bf074057c38e99df8a33c0ef648" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridRequest.setOrders(List) may expose internal representation by storing an externally mutable object into XpackGridRequest.orders</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridRequest" name="setOrders" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="9" startBytecode="0" endBytecode="75" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridRequest.setOrders(List)</Message>
+    </Method>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridRequest" name="orders" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>In XpackGridRequest.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridRequest.orders</Message>
+    </Field>
+    <LocalVariable name="orders" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named orders</Message>
+    </LocalVariable>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true" start="9" end="9" startBytecode="2" endBytecode="2" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+      <Message>At XpackGridRequest.java:[line 9]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="6da9e5885185ca54bfcb03444103d42f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.entity.XpackGridRequest is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java" synthetic="true">
+      <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="1b7f2f006d865f50d40533711ffc614d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>XpackGridRequest.conditions not initialized in constructor and dereferenced in io.dataease.plugins.common.entity.XpackGridRequest.convertExample()</LongMessage>
+    <Class classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="9" end="27" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>At XpackGridRequest.java:[lines 9-27]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.entity.XpackGridRequest</Message>
+    </Class>
+    <Field classname="io.dataease.plugins.common.entity.XpackGridRequest" name="conditions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+        <Message>In XpackGridRequest.java</Message>
+      </SourceLine>
+      <Message>Field io.dataease.plugins.common.entity.XpackGridRequest.conditions</Message>
+    </Field>
+    <Method classname="io.dataease.plugins.common.entity.XpackGridRequest" name="convertExample" signature="()Lio/dataease/plugins/common/entity/XpackGridExample;" isStatic="false" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" start="17" end="27" startBytecode="0" endBytecode="184" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java"/>
+      <Message>In method io.dataease.plugins.common.entity.XpackGridRequest.convertExample()</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.entity.XpackGridRequest" primary="true" start="20" end="20" startBytecode="38" endBytecode="38" sourcefile="XpackGridRequest.java" sourcepath="io/dataease/plugins/common/entity/XpackGridRequest.java">
+      <Message>At XpackGridRequest.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE" instanceHash="3ddf02a7366a65839ed33f2ba8621121" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class) might ignore java.lang.Exception</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="setFieldValueByName" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="95" end="104" startBytecode="0" endBytecode="272" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="102" end="102" startBytecode="86" endBytecode="86" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 102]</Message>
+    </SourceLine>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="102" end="102" startBytecode="86" endBytecode="86" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="8579cebc9ab0cbc470bd0dd7ba552ade" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.dataease.plugins.common.util.PluginCommonUtil.getFieldValueByName(String, Object)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="getFieldValueByName" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="81" end="89" startBytecode="0" endBytecode="223" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.getFieldValueByName(String, Object)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="84" end="84" startBytecode="15" endBytecode="15" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="349678da43f47d863d1bbf1ed9605475" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.dataease.plugins.common.util.PluginCommonUtil.getMethod(Object, String, Class)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="getMethod" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="108" end="115" startBytecode="0" endBytecode="231" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.getMethod(Object, String, Class)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="111" end="111" startBytecode="15" endBytecode="15" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="f6782ccc515b6dd7eaa893eb79281059" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="setFieldValueByName" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="95" end="104" startBytecode="0" endBytecode="272" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="98" end="98" startBytecode="14" endBytecode="14" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e3983c10cf5cd14c6d4f1f4fc4941a79" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.dataease.plugins.common.util.PluginCommonUtil.readFileContent(File): new java.io.FileReader(File)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="readFileContent" signature="(Ljava/io/File;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="11" end="32" startBytecode="0" endBytecode="520" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.readFileContent(File)</Message>
+    </Method>
+    <Method classname="java.io.FileReader" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileReader" start="75" end="76" startBytecode="0" endBytecode="68" sourcefile="FileReader.java" sourcepath="java/io/FileReader.java"/>
+      <Message>Called method new java.io.FileReader(File)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="14" end="14" startBytecode="19" endBytecode="19" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 14]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="50cc3837649cce5dd8aea196bb6c0b23" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.dataease.plugins.common.util.PluginCommonUtil.readStreamContent(InputStream): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="readStreamContent" signature="(Ljava/io/InputStream;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="36" end="58" startBytecode="0" endBytecode="544" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.readStreamContent(InputStream)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="39" end="39" startBytecode="19" endBytecode="19" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="999c59c9c73ebe957a2ebaf0545e25a6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in io.dataease.plugins.common.util.PluginCommonUtil.getFieldValueByName(String, Object)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="getFieldValueByName" signature="(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="81" end="89" startBytecode="0" endBytecode="223" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.getFieldValueByName(String, Object)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="88" end="88" startBytecode="72" endBytecode="72" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="fb5149a2f87b868fba197bd922d15448" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in io.dataease.plugins.common.util.PluginCommonUtil.getMethod(Object, String, Class)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="getMethod" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Method;" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="108" end="115" startBytecode="0" endBytecode="231" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.getMethod(Object, String, Class)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="114" end="114" startBytecode="66" endBytecode="66" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="e7584660d009665507b8bef0d5d982e1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class)</LongMessage>
+    <Class classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="8" end="115" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+        <Message>At PluginCommonUtil.java:[lines 8-115]</Message>
+      </SourceLine>
+      <Message>In class io.dataease.plugins.common.util.PluginCommonUtil</Message>
+    </Class>
+    <Method classname="io.dataease.plugins.common.util.PluginCommonUtil" name="setFieldValueByName" signature="(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" start="95" end="104" startBytecode="0" endBytecode="272" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java"/>
+      <Message>In method io.dataease.plugins.common.util.PluginCommonUtil.setFieldValueByName(Object, String, Object, Class)</Message>
+    </Method>
+    <SourceLine classname="io.dataease.plugins.common.util.PluginCommonUtil" primary="true" start="102" end="102" startBytecode="86" endBytecode="86" sourcefile="PluginCommonUtil.java" sourcepath="io/dataease/plugins/common/util/PluginCommonUtil.java">
+      <Message>At PluginCommonUtil.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>org.springframework.beans.BeanUtils</MissingClass>
+    <MissingClass>org.springframework.util.CollectionUtils</MissingClass>
+    <MissingClass>org.springframework.util.StringUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:31:05 +0900" total_classes="15" referenced_classes="58" total_bugs="21" total_size="422" num_packages="7" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.02" clock_seconds="1.36" peak_mbytes="223.69" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="7" priority_2="12" priority_1="2">
+    <FileStats path="io/dataease/plugins/common/annotation/PluginResultMap.java" bugCount="0" size="2"/>
+    <FileStats path="io/dataease/plugins/common/constants/PluginSystemConstants.java" bugCount="0" size="17"/>
+    <FileStats path="io/dataease/plugins/common/dto/PluginSimpleTreeNode.java" bugCount="1" size="15" bugHash="c663c9f3e67de94580b513aba6575806"/>
+    <FileStats path="io/dataease/plugins/common/dto/PluginSysMenu.java" bugCount="0" size="90"/>
+    <FileStats path="io/dataease/plugins/common/entity/XpackConditionEntity.java" bugCount="1" size="19" bugHash="79202b3b360b8adff68327898f99f442"/>
+    <FileStats path="io/dataease/plugins/common/entity/XpackGridExample.java" bugCount="4" size="170" bugHash="d6d9641a4f29a28715360d07e33f9ebb"/>
+    <FileStats path="io/dataease/plugins/common/entity/XpackGridRequest.java" bugCount="6" size="24" bugHash="284ab879d89c7419363b7c545089f90e"/>
+    <FileStats path="io/dataease/plugins/common/mapper/PluginGridSql.java" bugCount="0" size="1"/>
+    <FileStats path="io/dataease/plugins/common/service/PluginMenuService.java" bugCount="0" size="9"/>
+    <FileStats path="io/dataease/plugins/common/util/PluginCommonUtil.java" bugCount="9" size="75" bugHash="b347c4bf9ea483b99fc7ebb42c3cbb9f"/>
+    <PackageStats package="io.dataease.plugins.common.annotation" total_bugs="0" total_types="1" total_size="2">
+      <ClassStats class="io.dataease.plugins.common.annotation.PluginResultMap" sourceFile="PluginResultMap.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.constants" total_bugs="0" total_types="3" total_size="17">
+      <ClassStats class="io.dataease.plugins.common.constants.PluginSystemConstants" sourceFile="PluginSystemConstants.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="io.dataease.plugins.common.constants.PluginSystemConstants$PRIVILEGE_VALUE" sourceFile="PluginSystemConstants.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.dataease.plugins.common.constants.PluginSystemConstants$WITH_EXTEND" sourceFile="PluginSystemConstants.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.dto" total_bugs="1" total_types="2" total_size="105" priority_3="1">
+      <ClassStats class="io.dataease.plugins.common.dto.PluginSimpleTreeNode" sourceFile="PluginSimpleTreeNode.java" interface="false" size="15" bugs="1" priority_3="1"/>
+      <ClassStats class="io.dataease.plugins.common.dto.PluginSysMenu" sourceFile="PluginSysMenu.java" interface="false" size="90" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.entity" total_bugs="11" total_types="6" total_size="213" priority_3="3" priority_2="8">
+      <ClassStats class="io.dataease.plugins.common.entity.XpackConditionEntity" sourceFile="XpackConditionEntity.java" interface="false" size="19" bugs="1" priority_3="1"/>
+      <ClassStats class="io.dataease.plugins.common.entity.XpackGridExample" sourceFile="XpackGridExample.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="io.dataease.plugins.common.entity.XpackGridExample$Criteria" sourceFile="XpackGridExample.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.dataease.plugins.common.entity.XpackGridExample$Criterion" sourceFile="XpackGridExample.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="io.dataease.plugins.common.entity.XpackGridExample$GeneratedCriteria" sourceFile="XpackGridExample.java" interface="false" size="61" bugs="3" priority_2="3"/>
+      <ClassStats class="io.dataease.plugins.common.entity.XpackGridRequest" sourceFile="XpackGridRequest.java" interface="false" size="24" bugs="6" priority_3="2" priority_2="4"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.mapper" total_bugs="0" total_types="1" total_size="1">
+      <ClassStats class="io.dataease.plugins.common.mapper.PluginGridSql" sourceFile="PluginGridSql.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.service" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="io.dataease.plugins.common.service.PluginMenuService" sourceFile="PluginMenuService.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.dataease.plugins.common.util" total_bugs="9" total_types="1" total_size="75" priority_3="3" priority_2="4" priority_1="2">
+      <ClassStats class="io.dataease.plugins.common.util.PluginCommonUtil" sourceFile="PluginCommonUtil.java" interface="false" size="75" bugs="9" priority_3="3" priority_2="4" priority_1="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="206" invocations="525" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="10055" standardDeviationMicrosecondsPerInvocation="843"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="60" invocations="58" avgMicrosecondsPerInvocation="1048" maxMicrosecondsPerInvocation="8359" standardDeviationMicrosecondsPerInvocation="1845"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="43" invocations="58" avgMicrosecondsPerInvocation="756" maxMicrosecondsPerInvocation="4713" standardDeviationMicrosecondsPerInvocation="1190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="41" invocations="128" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="32793" standardDeviationMicrosecondsPerInvocation="2883"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="38" invocations="259" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="2703" standardDeviationMicrosecondsPerInvocation="275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="33" invocations="127" avgMicrosecondsPerInvocation="266" maxMicrosecondsPerInvocation="7029" standardDeviationMicrosecondsPerInvocation="741"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="125" avgMicrosecondsPerInvocation="251" maxMicrosecondsPerInvocation="9207" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="31" invocations="125" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="3633" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="30" invocations="58" avgMicrosecondsPerInvocation="526" maxMicrosecondsPerInvocation="23630" standardDeviationMicrosecondsPerInvocation="3067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="28" invocations="532" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="2852" standardDeviationMicrosecondsPerInvocation="146"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="26" invocations="127" avgMicrosecondsPerInvocation="211" maxMicrosecondsPerInvocation="5356" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="25" invocations="121" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="3948" standardDeviationMicrosecondsPerInvocation="441"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="24" invocations="109" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="8758" standardDeviationMicrosecondsPerInvocation="885"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="22" invocations="122" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="3334" standardDeviationMicrosecondsPerInvocation="397"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="58" avgMicrosecondsPerInvocation="359" maxMicrosecondsPerInvocation="4468" standardDeviationMicrosecondsPerInvocation="693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="58" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="2785" standardDeviationMicrosecondsPerInvocation="635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="482" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="647" standardDeviationMicrosecondsPerInvocation="70"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="58" avgMicrosecondsPerInvocation="279" maxMicrosecondsPerInvocation="3216" standardDeviationMicrosecondsPerInvocation="532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="58" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="5150" standardDeviationMicrosecondsPerInvocation="694"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="14" invocations="53" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="1608" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="11" invocations="58" avgMicrosecondsPerInvocation="193" maxMicrosecondsPerInvocation="1297" standardDeviationMicrosecondsPerInvocation="277"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

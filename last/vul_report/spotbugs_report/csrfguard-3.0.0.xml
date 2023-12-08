@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013637740" analysisTimestamp="1702014971179" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\csrfguard-3.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="2573e42f2575a3de39158868fcafdfc2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.owasp.csrfguard.CsrfGuard.writeLandingPage(HttpServletRequest, HttpServletResponse): new java.io.PrintWriter(OutputStream)</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="writeLandingPage" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="457" end="523" startBytecode="0" endBytecode="742" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.writeLandingPage(HttpServletRequest, HttpServletResponse)</Message>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="128" end="129" startBytecode="0" endBytecode="62" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+      <Message>Called method new java.io.PrintWriter(OutputStream)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="515" end="515" startBytecode="316" endBytecode="316" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 515]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="bd42211cce235512aec24e6377bcd7e7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.CsrfGuard.getActions() may expose internal representation by returning CsrfGuard.actions</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="getActions" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="321" end="321" startBytecode="0" endBytecode="46" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.getActions()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.CsrfGuard" name="actions" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>In CsrfGuard.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.CsrfGuard.actions</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="321" end="321" startBytecode="4" endBytecode="4" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 321]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="c99069fe21098736d341fa37ebd61f00" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.CsrfGuard.getPrng() may expose internal representation by returning CsrfGuard.prng</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="getPrng" signature="()Ljava/security/SecureRandom;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="260" end="260" startBytecode="0" endBytecode="46" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.getPrng()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.CsrfGuard" name="prng" signature="Ljava/security/SecureRandom;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>In CsrfGuard.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.CsrfGuard.prng</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="260" end="260" startBytecode="4" endBytecode="4" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 260]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4a7e876d633eaaa7738d077339d5f54d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.CsrfGuard.getProtectedMethods() may expose internal representation by returning CsrfGuard.protectedMethods</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="getProtectedMethods" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="316" end="316" startBytecode="0" endBytecode="46" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.getProtectedMethods()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.CsrfGuard" name="protectedMethods" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>In CsrfGuard.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.CsrfGuard.protectedMethods</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="316" end="316" startBytecode="4" endBytecode="4" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 316]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ddda8f06c15ef9b79407903177b97989" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.CsrfGuard.getProtectedPages() may expose internal representation by returning CsrfGuard.protectedPages</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="getProtectedPages" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="308" end="308" startBytecode="0" endBytecode="46" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.getProtectedPages()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.CsrfGuard" name="protectedPages" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>In CsrfGuard.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.CsrfGuard.protectedPages</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="308" end="308" startBytecode="4" endBytecode="4" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 308]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="df356b679fc4b332b6959fa5cadbdd8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.CsrfGuard.getUnprotectedPages() may expose internal representation by returning CsrfGuard.unprotectedPages</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="getUnprotectedPages" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="312" end="312" startBytecode="0" endBytecode="46" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.getUnprotectedPages()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.CsrfGuard" name="unprotectedPages" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>In CsrfGuard.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.CsrfGuard.unprotectedPages</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="312" end="312" startBytecode="4" endBytecode="4" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 312]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="c83ef53feffa7d3cf78d0516ac4005bf" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="*	Parameter: %s = %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;*	Parameter: %s = %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="548" end="548" startBytecode="359" endBytecode="359" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 548]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="93586d1360f68b7fce890c13c8f4e655" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* Action: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* Action: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="543" end="543" startBytecode="285" endBytecode="285" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 543]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="f7382b09db0aaa347a3bb67a1ebd486e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* Ajax: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* Ajax: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="538" end="538" startBytecode="184" endBytecode="184" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 538]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="1c8bf15754a841e7138cffeb1fb7f635" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* Logger: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* Logger: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="532" end="532" startBytecode="49" endBytecode="49" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 532]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="3b3e556765ae6be061322c4d59a6a71" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* NewTokenLandingPage: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* NewTokenLandingPage: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="533" end="533" startBytecode="70" endBytecode="70" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 533]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="d580c256465b7ee79330dd46607203cb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* PRNG: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* PRNG: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="534" end="534" startBytecode="94" endBytecode="94" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 534]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="1c91a33b2f0413b5a158129e595dc967" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* Rotate: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* Rotate: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="539" end="539" startBytecode="208" endBytecode="208" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 539]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="16b4017de90b58823fac9283e0047f23" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* SessionKey: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* SessionKey: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="535" end="535" startBytecode="115" endBytecode="115" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 535]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="2388fd43298e6eb79ed1d738ae06ffff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* TokenLength: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* TokenLength: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="536" end="536" startBytecode="139" endBytecode="139" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 536]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="9103a2cda975f84632f263545f763be4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* TokenName: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* TokenName: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="537" end="537" startBytecode="160" endBytecode="160" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 537]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="VA_FORMAT_STRING_USES_NEWLINE" priority="2" rank="20" abbrev="FS" category="BAD_PRACTICE" instanceHash="338bb7af2db694a7652b8246825ed7a0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Format string should use %n rather than \n</ShortMessage>
+    <LongMessage>Format string should use %n rather than \n in org.owasp.csrfguard.CsrfGuard.toString()</LongMessage>
+    <Class classname="org.owasp.csrfguard.CsrfGuard" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="51" end="733" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+        <Message>At CsrfGuard.java:[lines 51-733]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.CsrfGuard</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.CsrfGuard" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.CsrfGuard" start="527" end="553" startBytecode="0" endBytecode="601" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java"/>
+      <Message>In method org.owasp.csrfguard.CsrfGuard.toString()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="format" signature="(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;" isStatic="true" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="4147" end="4147" startBytecode="0" endBytecode="67" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.format(String, Object[])</Message>
+    </Method>
+    <String value="* TokenPerPage: %s\r\n" role="STRING_FORMAT_STRING">
+      <Message>Format string &quot;* TokenPerPage: %s\r\n&quot;</Message>
+    </String>
+    <SourceLine classname="org.owasp.csrfguard.CsrfGuard" primary="true" start="540" end="540" startBytecode="232" endBytecode="232" sourcefile="CsrfGuard.java" sourcepath="org/owasp/csrfguard/CsrfGuard.java">
+      <Message>At CsrfGuard.java:[line 540]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="bd0114ec19a69639705d52733286da43" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.action.AbstractAction.getParameterMap() may expose internal representation by returning AbstractAction.parameters</LongMessage>
+    <Class classname="org.owasp.csrfguard.action.AbstractAction" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.action.AbstractAction" start="33" end="69" sourcefile="AbstractAction.java" sourcepath="org/owasp/csrfguard/action/AbstractAction.java">
+        <Message>At AbstractAction.java:[lines 33-69]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.action.AbstractAction</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.action.AbstractAction" name="getParameterMap" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.action.AbstractAction" start="69" end="69" startBytecode="0" endBytecode="46" sourcefile="AbstractAction.java" sourcepath="org/owasp/csrfguard/action/AbstractAction.java"/>
+      <Message>In method org.owasp.csrfguard.action.AbstractAction.getParameterMap()</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.action.AbstractAction" name="parameters" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.action.AbstractAction" sourcefile="AbstractAction.java" sourcepath="org/owasp/csrfguard/action/AbstractAction.java">
+        <Message>In AbstractAction.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.action.AbstractAction.parameters</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.action.AbstractAction" primary="true" start="69" end="69" startBytecode="4" endBytecode="4" sourcefile="AbstractAction.java" sourcepath="org/owasp/csrfguard/action/AbstractAction.java">
+      <Message>At AbstractAction.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9e173b8565da9c1150eee499d62e39b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.csrfguard.http.InterceptRedirectResponse(HttpServletResponse, HttpServletRequest, CsrfGuard) may expose internal representation by storing an externally mutable object into InterceptRedirectResponse.csrfGuard</LongMessage>
+    <Class classname="org.owasp.csrfguard.http.InterceptRedirectResponse" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.http.InterceptRedirectResponse" start="13" end="58" sourcefile="InterceptRedirectResponse.java" sourcepath="org/owasp/csrfguard/http/InterceptRedirectResponse.java">
+        <Message>At InterceptRedirectResponse.java:[lines 13-58]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.http.InterceptRedirectResponse</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.http.InterceptRedirectResponse" name="&lt;init&gt;" signature="(Ljavax/servlet/http/HttpServletResponse;Ljavax/servlet/http/HttpServletRequest;Lorg/owasp/csrfguard/CsrfGuard;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.http.InterceptRedirectResponse" start="20" end="24" startBytecode="0" endBytecode="117" sourcefile="InterceptRedirectResponse.java" sourcepath="org/owasp/csrfguard/http/InterceptRedirectResponse.java"/>
+      <Message>In method new org.owasp.csrfguard.http.InterceptRedirectResponse(HttpServletResponse, HttpServletRequest, CsrfGuard)</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.http.InterceptRedirectResponse" name="csrfGuard" signature="Lorg/owasp/csrfguard/CsrfGuard;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.http.InterceptRedirectResponse" sourcefile="InterceptRedirectResponse.java" sourcepath="org/owasp/csrfguard/http/InterceptRedirectResponse.java">
+        <Message>In InterceptRedirectResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.http.InterceptRedirectResponse.csrfGuard</Message>
+    </Field>
+    <LocalVariable name="csrfGuard" register="3" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named csrfGuard</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.csrfguard.http.InterceptRedirectResponse" primary="true" start="23" end="23" startBytecode="22" endBytecode="22" sourcefile="InterceptRedirectResponse.java" sourcepath="org/owasp/csrfguard/http/InterceptRedirectResponse.java">
+      <Message>At InterceptRedirectResponse.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DB_DUPLICATE_SWITCH_CLAUSES" priority="3" rank="20" abbrev="DB" category="STYLE" instanceHash="6766d63426823447f1a8334a776a7fba" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method uses the same code for two switch clauses</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.log.JavaLogger.log(LogLevel, Exception) uses the same code for two switch clauses</LongMessage>
+    <Class classname="org.owasp.csrfguard.log.JavaLogger" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="6" end="72" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+        <Message>At JavaLogger.java:[lines 6-72]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.log.JavaLogger</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.log.JavaLogger" name="log" signature="(Lorg/owasp/csrfguard/log/LogLevel;Ljava/lang/Exception;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="50" end="72" startBytecode="0" endBytecode="311" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java"/>
+      <Message>In method org.owasp.csrfguard.log.JavaLogger.log(LogLevel, Exception)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" primary="true" start="61" end="62" startBytecode="99" endBytecode="115" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+      <Message>At JavaLogger.java:[lines 61-62]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="64" end="65" startBytecode="116" endBytecode="132" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+      <Message>At JavaLogger.java:[lines 64-65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DB_DUPLICATE_SWITCH_CLAUSES" priority="3" rank="20" abbrev="DB" category="STYLE" instanceHash="8b611b5cd2ab176f8c4d40ab38d36eb3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method uses the same code for two switch clauses</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.log.JavaLogger.log(LogLevel, String) uses the same code for two switch clauses</LongMessage>
+    <Class classname="org.owasp.csrfguard.log.JavaLogger" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="6" end="72" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+        <Message>At JavaLogger.java:[lines 6-72]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.log.JavaLogger</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.log.JavaLogger" name="log" signature="(Lorg/owasp/csrfguard/log/LogLevel;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="19" end="41" startBytecode="0" endBytecode="269" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java"/>
+      <Message>In method org.owasp.csrfguard.log.JavaLogger.log(LogLevel, String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" primary="true" start="30" end="31" startBytecode="78" endBytecode="87" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+      <Message>At JavaLogger.java:[lines 30-31]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.csrfguard.log.JavaLogger" start="33" end="34" startBytecode="88" endBytecode="97" sourcefile="JavaLogger.java" sourcepath="org/owasp/csrfguard/log/JavaLogger.java">
+      <Message>At JavaLogger.java:[lines 33-34]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="2dc3d3c88fc6ace7e45886c447f9a3f9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.owasp.csrfguard.servlet.JavaScriptServlet.writeJavaScript(HttpServletRequest, HttpServletResponse): new java.io.PrintWriter(OutputStream)</LongMessage>
+    <Class classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="40" end="254" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+        <Message>At JavaScriptServlet.java:[lines 40-254]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.servlet.JavaScriptServlet</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.servlet.JavaScriptServlet" name="writeJavaScript" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="143" end="186" startBytecode="0" endBytecode="653" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java"/>
+      <Message>In method org.owasp.csrfguard.servlet.JavaScriptServlet.writeJavaScript(HttpServletRequest, HttpServletResponse)</Message>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="128" end="129" startBytecode="0" endBytecode="62" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+      <Message>Called method new java.io.PrintWriter(OutputStream)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true" start="178" end="178" startBytecode="302" endBytecode="302" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+      <Message>At JavaScriptServlet.java:[line 178]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="3baf3d2abd21f0e9aa5ac1f91cfa0880" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.owasp.csrfguard.servlet.JavaScriptServlet.writePageTokens(HttpServletRequest, HttpServletResponse): new java.io.PrintWriter(OutputStream)</LongMessage>
+    <Class classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="40" end="254" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+        <Message>At JavaScriptServlet.java:[lines 40-254]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.servlet.JavaScriptServlet</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.servlet.JavaScriptServlet" name="writePageTokens" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="117" end="140" startBytecode="0" endBytecode="389" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java"/>
+      <Message>In method org.owasp.csrfguard.servlet.JavaScriptServlet.writePageTokens(HttpServletRequest, HttpServletResponse)</Message>
+    </Method>
+    <Method classname="java.io.PrintWriter" name="&lt;init&gt;" signature="(Ljava/io/OutputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintWriter" start="128" end="129" startBytecode="0" endBytecode="62" sourcefile="PrintWriter.java" sourcepath="java/io/PrintWriter.java"/>
+      <Message>Called method new java.io.PrintWriter(OutputStream)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true" start="132" end="132" startBytecode="78" endBytecode="78" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+      <Message>At JavaScriptServlet.java:[line 132]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="20d81faa23d6b8df1fc64ed0423bec68" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.servlet.JavaScriptServlet.parsePageTokens(Map) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="40" end="254" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+        <Message>At JavaScriptServlet.java:[lines 40-254]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.servlet.JavaScriptServlet</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.servlet.JavaScriptServlet" name="parsePageTokens" signature="(Ljava/util/Map;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" start="189" end="205" startBytecode="0" endBytecode="282" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java"/>
+      <Message>In method org.owasp.csrfguard.servlet.JavaScriptServlet.parsePageTokens(Map)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.servlet.JavaScriptServlet" primary="true" start="194" end="194" startBytecode="43" endBytecode="43" sourcefile="JavaScriptServlet.java" sourcepath="org/owasp/csrfguard/servlet/JavaScriptServlet.java">
+      <Message>At JavaScriptServlet.java:[line 194]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="83397a62e0e6d9f89e46b1df695122e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.csrfguard.tag.ATag.setDynamicAttribute(String, String, Object)</LongMessage>
+    <Class classname="org.owasp.csrfguard.tag.ATag" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.ATag" start="41" end="109" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java">
+        <Message>At ATag.java:[lines 41-109]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.tag.ATag</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.tag.ATag" name="setDynamicAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.ATag" start="75" end="76" startBytecode="0" endBytecode="94" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java"/>
+      <Message>In method org.owasp.csrfguard.tag.ATag.setDynamicAttribute(String, String, Object)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.tag.ATag" primary="true" start="75" end="75" startBytecode="5" endBytecode="5" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java">
+      <Message>At ATag.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="8dd1e2af3fed68a45560aa842d793140" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.tag.ATag.buildStartHtml(String, String) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.owasp.csrfguard.tag.ATag" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.ATag" start="41" end="109" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java">
+        <Message>At ATag.java:[lines 41-109]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.tag.ATag</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.tag.ATag" name="buildStartHtml" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.ATag" start="79" end="109" startBytecode="0" endBytecode="397" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java"/>
+      <Message>In method org.owasp.csrfguard.tag.ATag.buildStartHtml(String, String)</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.tag.ATag" name="attributes" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.ATag" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java">
+        <Message>In ATag.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.tag.ATag.attributes</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.tag.ATag" primary="true" start="84" end="84" startBytecode="59" endBytecode="59" sourcefile="ATag.java" sourcepath="org/owasp/csrfguard/tag/ATag.java">
+      <Message>At ATag.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="c1edfd91aa3068b46f768083a7dc52f6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.csrfguard.tag.FormTag.setDynamicAttribute(String, String, Object)</LongMessage>
+    <Class classname="org.owasp.csrfguard.tag.FormTag" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.FormTag" start="41" end="103" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java">
+        <Message>At FormTag.java:[lines 41-103]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.tag.FormTag</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.tag.FormTag" name="setDynamicAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.FormTag" start="75" end="76" startBytecode="0" endBytecode="94" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java"/>
+      <Message>In method org.owasp.csrfguard.tag.FormTag.setDynamicAttribute(String, String, Object)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.csrfguard.tag.FormTag" primary="true" start="75" end="75" startBytecode="5" endBytecode="5" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java">
+      <Message>At FormTag.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="bc41cf17a9a9370e25f3aefe034300f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>org.owasp.csrfguard.tag.FormTag.buildStartHtml(String, String) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="org.owasp.csrfguard.tag.FormTag" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.FormTag" start="41" end="103" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java">
+        <Message>At FormTag.java:[lines 41-103]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.csrfguard.tag.FormTag</Message>
+    </Class>
+    <Method classname="org.owasp.csrfguard.tag.FormTag" name="buildStartHtml" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.FormTag" start="79" end="103" startBytecode="0" endBytecode="365" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java"/>
+      <Message>In method org.owasp.csrfguard.tag.FormTag.buildStartHtml(String, String)</Message>
+    </Method>
+    <Field classname="org.owasp.csrfguard.tag.FormTag" name="attributes" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.csrfguard.tag.FormTag" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java">
+        <Message>In FormTag.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.csrfguard.tag.FormTag.attributes</Message>
+    </Field>
+    <SourceLine classname="org.owasp.csrfguard.tag.FormTag" primary="true" start="84" end="84" startBytecode="59" endBytecode="59" sourcefile="FormTag.java" sourcepath="org/owasp/csrfguard/tag/FormTag.java">
+      <Message>At FormTag.java:[line 84]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="VA_FORMAT_STRING_USES_NEWLINE" abbrev="FS" category="BAD_PRACTICE">
+    <ShortDescription>Format string should use %n rather than \n</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This format string includes a newline character (\n). In format strings, it is generally
+ preferable to use %n, which will produce the platform-specific line separator.
+</p>
+
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="DB_DUPLICATE_SWITCH_CLAUSES" abbrev="DB" category="STYLE">
+    <ShortDescription>Method uses the same code for two switch clauses</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method uses the same code to implement two clauses of a switch statement.
+    This could be a case of duplicate code, but it might also indicate
+    a coding mistake.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="FS">
+    <Description>Format string problem</Description>
+  </BugCode>
+  <BugCode abbrev="DB">
+    <Description>Duplicate Branches</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.servlet.Filter</MissingClass>
+    <MissingClass>javax.servlet.FilterChain</MissingClass>
+    <MissingClass>javax.servlet.FilterConfig</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletConfig</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletContextEvent</MissingClass>
+    <MissingClass>javax.servlet.ServletContextListener</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponseWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionListener</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspException</MissingClass>
+    <MissingClass>javax.servlet.jsp.JspWriter</MissingClass>
+    <MissingClass>javax.servlet.jsp.PageContext</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.DynamicAttributes</MissingClass>
+    <MissingClass>javax.servlet.jsp.tagext.TagSupport</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:33:57 +0900" total_classes="35" referenced_classes="112" total_bugs="28" total_size="1160" num_packages="7" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.55" clock_seconds="1.92" peak_mbytes="246.31" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="4" priority_2="21" priority_1="3">
+    <FileStats path="org/owasp/csrfguard/CsrfGuard.java" bugCount="17" size="420" bugHash="623b7c8d88a825160221f86101cd2e14"/>
+    <FileStats path="org/owasp/csrfguard/CsrfGuardException.java" bugCount="0" size="11"/>
+    <FileStats path="org/owasp/csrfguard/CsrfGuardFilter.java" bugCount="0" size="30"/>
+    <FileStats path="org/owasp/csrfguard/CsrfGuardHttpSessionListener.java" bugCount="0" size="10"/>
+    <FileStats path="org/owasp/csrfguard/CsrfGuardServletContextListener.java" bugCount="0" size="40"/>
+    <FileStats path="org/owasp/csrfguard/action/AbstractAction.java" bugCount="1" size="23" bugHash="ef9ad2d72f86b383687c9fd6c67492ea"/>
+    <FileStats path="org/owasp/csrfguard/action/Empty.java" bugCount="0" size="6"/>
+    <FileStats path="org/owasp/csrfguard/action/Forward.java" bugCount="0" size="13"/>
+    <FileStats path="org/owasp/csrfguard/action/IAction.java" bugCount="0" size="7"/>
+    <FileStats path="org/owasp/csrfguard/action/Invalidate.java" bugCount="0" size="9"/>
+    <FileStats path="org/owasp/csrfguard/action/Log.java" bugCount="0" size="21"/>
+    <FileStats path="org/owasp/csrfguard/action/Redirect.java" bugCount="0" size="11"/>
+    <FileStats path="org/owasp/csrfguard/action/RequestAttribute.java" bugCount="0" size="8"/>
+    <FileStats path="org/owasp/csrfguard/action/Rotate.java" bugCount="0" size="33"/>
+    <FileStats path="org/owasp/csrfguard/action/SessionAttribute.java" bugCount="0" size="10"/>
+    <FileStats path="org/owasp/csrfguard/http/InterceptRedirectResponse.java" bugCount="1" size="29" bugHash="b1cea037cd8a447332600700ec25f881"/>
+    <FileStats path="org/owasp/csrfguard/log/ConsoleLogger.java" bugCount="0" size="20"/>
+    <FileStats path="org/owasp/csrfguard/log/ILogger.java" bugCount="0" size="5"/>
+    <FileStats path="org/owasp/csrfguard/log/JavaLogger.java" bugCount="2" size="49" bugHash="a691297255427ebb538cb6b8140be5fe"/>
+    <FileStats path="org/owasp/csrfguard/log/LogLevel.java" bugCount="0" size="19"/>
+    <FileStats path="org/owasp/csrfguard/servlet/JavaScriptServlet.java" bugCount="3" size="141" bugHash="127b8a1af91356c9a0505c26053cb7cf"/>
+    <FileStats path="org/owasp/csrfguard/tag/ATag.java" bugCount="2" size="45" bugHash="b66b389486fbab43bd88baa36e21dc69"/>
+    <FileStats path="org/owasp/csrfguard/tag/AbstractTag.java" bugCount="0" size="9"/>
+    <FileStats path="org/owasp/csrfguard/tag/AbstractUriTag.java" bugCount="0" size="11"/>
+    <FileStats path="org/owasp/csrfguard/tag/FormTag.java" bugCount="2" size="44" bugHash="07cda0d0fb44171c11131ca4e30fe8c2"/>
+    <FileStats path="org/owasp/csrfguard/tag/TokenNameTag.java" bugCount="0" size="11"/>
+    <FileStats path="org/owasp/csrfguard/tag/TokenTag.java" bugCount="0" size="15"/>
+    <FileStats path="org/owasp/csrfguard/tag/TokenValueTag.java" bugCount="0" size="14"/>
+    <FileStats path="org/owasp/csrfguard/util/BrowserEncoder.java" bugCount="0" size="36"/>
+    <FileStats path="org/owasp/csrfguard/util/RandomGenerator.java" bugCount="0" size="20"/>
+    <FileStats path="org/owasp/csrfguard/util/Streams.java" bugCount="0" size="20"/>
+    <FileStats path="org/owasp/csrfguard/util/Strings.java" bugCount="0" size="7"/>
+    <FileStats path="org/owasp/csrfguard/util/Writers.java" bugCount="0" size="13"/>
+    <PackageStats package="org.owasp.csrfguard" total_bugs="17" total_types="6" total_size="511" priority_2="16" priority_1="1">
+      <ClassStats class="org.owasp.csrfguard.CsrfGuard" sourceFile="CsrfGuard.java" interface="false" size="414" bugs="17" priority_2="16" priority_1="1"/>
+      <ClassStats class="org.owasp.csrfguard.CsrfGuard$SingletonHolder" sourceFile="CsrfGuard.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.CsrfGuardException" sourceFile="CsrfGuardException.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.CsrfGuardFilter" sourceFile="CsrfGuardFilter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.CsrfGuardHttpSessionListener" sourceFile="CsrfGuardHttpSessionListener.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.CsrfGuardServletContextListener" sourceFile="CsrfGuardServletContextListener.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.action" total_bugs="1" total_types="10" total_size="141" priority_2="1">
+      <ClassStats class="org.owasp.csrfguard.action.AbstractAction" sourceFile="AbstractAction.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.csrfguard.action.Empty" sourceFile="Empty.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.Forward" sourceFile="Forward.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.IAction" sourceFile="IAction.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.Invalidate" sourceFile="Invalidate.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.Log" sourceFile="Log.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.Redirect" sourceFile="Redirect.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.RequestAttribute" sourceFile="RequestAttribute.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.Rotate" sourceFile="Rotate.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.action.SessionAttribute" sourceFile="SessionAttribute.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.http" total_bugs="1" total_types="1" total_size="29" priority_2="1">
+      <ClassStats class="org.owasp.csrfguard.http.InterceptRedirectResponse" sourceFile="InterceptRedirectResponse.java" interface="false" size="29" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.log" total_bugs="2" total_types="5" total_size="93" priority_3="2">
+      <ClassStats class="org.owasp.csrfguard.log.ConsoleLogger" sourceFile="ConsoleLogger.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.log.ILogger" sourceFile="ILogger.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.log.JavaLogger" sourceFile="JavaLogger.java" interface="false" size="45" bugs="2" priority_3="2"/>
+      <ClassStats class="org.owasp.csrfguard.log.JavaLogger$1" sourceFile="JavaLogger.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.log.LogLevel" sourceFile="LogLevel.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.servlet" total_bugs="3" total_types="1" total_size="141" priority_2="1" priority_1="2">
+      <ClassStats class="org.owasp.csrfguard.servlet.JavaScriptServlet" sourceFile="JavaScriptServlet.java" interface="false" size="141" bugs="3" priority_2="1" priority_1="2"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.tag" total_bugs="4" total_types="7" total_size="149" priority_3="2" priority_2="2">
+      <ClassStats class="org.owasp.csrfguard.tag.ATag" sourceFile="ATag.java" interface="false" size="45" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.owasp.csrfguard.tag.AbstractTag" sourceFile="AbstractTag.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.tag.AbstractUriTag" sourceFile="AbstractUriTag.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.tag.FormTag" sourceFile="FormTag.java" interface="false" size="44" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.owasp.csrfguard.tag.TokenNameTag" sourceFile="TokenNameTag.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.tag.TokenTag" sourceFile="TokenTag.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.tag.TokenValueTag" sourceFile="TokenValueTag.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.csrfguard.util" total_bugs="0" total_types="5" total_size="96">
+      <ClassStats class="org.owasp.csrfguard.util.BrowserEncoder" sourceFile="BrowserEncoder.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.util.RandomGenerator" sourceFile="RandomGenerator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.util.Streams" sourceFile="Streams.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.util.Strings" sourceFile="Strings.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.owasp.csrfguard.util.Writers" sourceFile="Writers.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="274" invocations="863" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="8966" standardDeviationMicrosecondsPerInvocation="659"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="94" invocations="112" avgMicrosecondsPerInvocation="847" maxMicrosecondsPerInvocation="8754" standardDeviationMicrosecondsPerInvocation="1568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="71" invocations="112" avgMicrosecondsPerInvocation="635" maxMicrosecondsPerInvocation="6248" standardDeviationMicrosecondsPerInvocation="1143"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="67" invocations="443" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="2375" standardDeviationMicrosecondsPerInvocation="233"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="58" invocations="157" avgMicrosecondsPerInvocation="375" maxMicrosecondsPerInvocation="9018" standardDeviationMicrosecondsPerInvocation="892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="57" invocations="157" avgMicrosecondsPerInvocation="368" maxMicrosecondsPerInvocation="7776" standardDeviationMicrosecondsPerInvocation="801"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="51" invocations="162" avgMicrosecondsPerInvocation="314" maxMicrosecondsPerInvocation="6690" standardDeviationMicrosecondsPerInvocation="702"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="48" invocations="157" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="8902" standardDeviationMicrosecondsPerInvocation="830"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="42" invocations="162" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="5517" standardDeviationMicrosecondsPerInvocation="637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="36" invocations="157" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="5686" standardDeviationMicrosecondsPerInvocation="491"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="33" invocations="868" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="2062" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="179" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="15599" standardDeviationMicrosecondsPerInvocation="1169"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="118" avgMicrosecondsPerInvocation="277" maxMicrosecondsPerInvocation="4178" standardDeviationMicrosecondsPerInvocation="490"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="30" invocations="35" avgMicrosecondsPerInvocation="882" maxMicrosecondsPerInvocation="14994" standardDeviationMicrosecondsPerInvocation="2588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="112" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="4511" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="167" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="15691" standardDeviationMicrosecondsPerInvocation="1209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="25" invocations="112" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="16141" standardDeviationMicrosecondsPerInvocation="1518"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="22" invocations="112" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="2638" standardDeviationMicrosecondsPerInvocation="428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="796" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="601" standardDeviationMicrosecondsPerInvocation="59"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="112" avgMicrosecondsPerInvocation="183" maxMicrosecondsPerInvocation="1461" standardDeviationMicrosecondsPerInvocation="278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="19" invocations="167" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="13179" standardDeviationMicrosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="2308" standardDeviationMicrosecondsPerInvocation="334"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="112" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1244" standardDeviationMicrosecondsPerInvocation="243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="112" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="5960" standardDeviationMicrosecondsPerInvocation="574"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="15" invocations="157" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="1996" standardDeviationMicrosecondsPerInvocation="232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="15" invocations="112" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="5007" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="15" invocations="35" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="11785" standardDeviationMicrosecondsPerInvocation="1950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="11" invocations="112" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="1254" standardDeviationMicrosecondsPerInvocation="185"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="35" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="3158" standardDeviationMicrosecondsPerInvocation="597"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013334646" analysisTimestamp="1702018625985" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\pac4j-oidc-4.0.0-RC1.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="f80fc20b4e9ab2a3208a61b69422dbce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.client.OidcClient.getConfiguration() may expose internal representation by returning OidcClient.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.client.OidcClient" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" start="25" end="59" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+        <Message>At OidcClient.java:[lines 25-59]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.client.OidcClient</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.client.OidcClient" name="getConfiguration" signature="()Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" start="34" end="34" startBytecode="0" endBytecode="64" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java"/>
+      <Message>In method org.pac4j.oidc.client.OidcClient.getConfiguration()</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.client.OidcClient" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+        <Message>In OidcClient.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.client.OidcClient.configuration</Message>
+    </Field>
+    <SourceLine classname="org.pac4j.oidc.client.OidcClient" primary="true" start="34" end="34" startBytecode="4" endBytecode="4" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+      <Message>At OidcClient.java:[line 34]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8ca03c5b8d826a6917348f6ebf6bcf5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.client.OidcClient.setConfiguration(OidcConfiguration) may expose internal representation by storing an externally mutable object into OidcClient.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.client.OidcClient" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" start="25" end="59" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+        <Message>At OidcClient.java:[lines 25-59]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.client.OidcClient</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.client.OidcClient" name="setConfiguration" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" start="38" end="39" startBytecode="0" endBytecode="89" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java"/>
+      <Message>In method org.pac4j.oidc.client.OidcClient.setConfiguration(OidcConfiguration)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.client.OidcClient" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.client.OidcClient" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+        <Message>In OidcClient.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.client.OidcClient.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.client.OidcClient" primary="true" start="38" end="38" startBytecode="2" endBytecode="2" sourcefile="OidcClient.java" sourcepath="org/pac4j/oidc/client/OidcClient.java">
+      <Message>At OidcClient.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7ce9b7a56a3f2d4863fb0f7456ee0289" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.config.OidcConfiguration.getCustomParams() may expose internal representation by returning OidcConfiguration.customParams</LongMessage>
+    <Class classname="org.pac4j.oidc.config.OidcConfiguration" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" start="33" end="377" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+        <Message>At OidcConfiguration.java:[lines 33-377]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.config.OidcConfiguration</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.config.OidcConfiguration" name="getCustomParams" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" start="201" end="201" startBytecode="0" endBytecode="46" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java"/>
+      <Message>In method org.pac4j.oidc.config.OidcConfiguration.getCustomParams()</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.config.OidcConfiguration" name="customParams" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+        <Message>In OidcConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.config.OidcConfiguration.customParams</Message>
+    </Field>
+    <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" primary="true" start="201" end="201" startBytecode="4" endBytecode="4" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+      <Message>At OidcConfiguration.java:[line 201]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="97246488ba393cf01c6747b258911113" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.config.OidcConfiguration.setCustomParams(Map) may expose internal representation by storing an externally mutable object into OidcConfiguration.customParams</LongMessage>
+    <Class classname="org.pac4j.oidc.config.OidcConfiguration" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" start="33" end="377" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+        <Message>At OidcConfiguration.java:[lines 33-377]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.config.OidcConfiguration</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.config.OidcConfiguration" name="setCustomParams" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" start="209" end="211" startBytecode="0" endBytecode="89" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java"/>
+      <Message>In method org.pac4j.oidc.config.OidcConfiguration.setCustomParams(Map)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.config.OidcConfiguration" name="customParams" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+        <Message>In OidcConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.config.OidcConfiguration.customParams</Message>
+    </Field>
+    <LocalVariable name="customParams" register="1" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named customParams</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.config.OidcConfiguration" primary="true" start="210" end="210" startBytecode="8" endBytecode="8" sourcefile="OidcConfiguration.java" sourcepath="org/pac4j/oidc/config/OidcConfiguration.java">
+      <Message>At OidcConfiguration.java:[line 210]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c2ec92b5db5435f653a837ef55f94fb7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.credentials.authenticator.OidcAuthenticator(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcAuthenticator.client</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" start="45" end="195" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+        <Message>At OidcAuthenticator.java:[lines 45-195]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.authenticator.OidcAuthenticator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" start="61" end="114" startBytecode="0" endBytecode="653" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java"/>
+      <Message>In method new org.pac4j.oidc.credentials.authenticator.OidcAuthenticator(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" name="client" signature="Lorg/pac4j/oidc/client/OidcClient;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+        <Message>In OidcAuthenticator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.authenticator.OidcAuthenticator.client</Message>
+    </Field>
+    <LocalVariable name="client" register="2" pc="23" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named client</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" primary="true" start="65" end="65" startBytecode="23" endBytecode="23" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+      <Message>At OidcAuthenticator.java:[line 65]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="953b372eade2eab0a0a43abbe7d2f5b1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.credentials.authenticator.OidcAuthenticator(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcAuthenticator.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" start="45" end="195" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+        <Message>At OidcAuthenticator.java:[lines 45-195]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.authenticator.OidcAuthenticator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" start="61" end="114" startBytecode="0" endBytecode="653" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java"/>
+      <Message>In method new org.pac4j.oidc.credentials.authenticator.OidcAuthenticator(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+        <Message>In OidcAuthenticator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.authenticator.OidcAuthenticator.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" primary="true" start="64" end="64" startBytecode="18" endBytecode="18" sourcefile="OidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java">
+      <Message>At OidcAuthenticator.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="765d3cadfd2b2c096a187bc94a2896d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.getConfiguration() may expose internal representation by returning UserInfoOidcAuthenticator.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="37" end="107" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>At UserInfoOidcAuthenticator.java:[lines 37-107]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="getConfiguration" signature="()Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="102" end="102" startBytecode="0" endBytecode="46" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java"/>
+      <Message>In method org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.getConfiguration()</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>In UserInfoOidcAuthenticator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.configuration</Message>
+    </Field>
+    <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true" start="102" end="102" startBytecode="4" endBytecode="4" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+      <Message>At UserInfoOidcAuthenticator.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5229291785a76920b615b35bb8627bfd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator(OidcConfiguration) may expose internal representation by storing an externally mutable object into UserInfoOidcAuthenticator.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="37" end="107" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>At UserInfoOidcAuthenticator.java:[lines 37-107]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="45" end="47" startBytecode="0" endBytecode="69" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java"/>
+      <Message>In method new org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator(OidcConfiguration)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>In UserInfoOidcAuthenticator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true" start="46" end="46" startBytecode="6" endBytecode="6" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+      <Message>At UserInfoOidcAuthenticator.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="25b9ed5c76ac5e9075454576ed8b19fe" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.setConfiguration(OidcConfiguration) may expose internal representation by storing an externally mutable object into UserInfoOidcAuthenticator.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="37" end="107" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>At UserInfoOidcAuthenticator.java:[lines 37-107]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="setConfiguration" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" start="106" end="107" startBytecode="0" endBytecode="61" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java"/>
+      <Message>In method org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.setConfiguration(OidcConfiguration)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+        <Message>In UserInfoOidcAuthenticator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" primary="true" start="106" end="106" startBytecode="2" endBytecode="2" sourcefile="UserInfoOidcAuthenticator.java" sourcepath="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java">
+      <Message>At UserInfoOidcAuthenticator.java:[line 106]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9d1a64ad8180bec7da24aafef1a49974" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.credentials.extractor.OidcExtractor(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcExtractor.client</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" start="31" end="99" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>At OidcExtractor.java:[lines 31-99]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.extractor.OidcExtractor</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" start="37" end="42" startBytecode="0" endBytecode="108" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java"/>
+      <Message>In method new org.pac4j.oidc.credentials.extractor.OidcExtractor(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" name="client" signature="Lorg/pac4j/oidc/client/OidcClient;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>In OidcExtractor.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.extractor.OidcExtractor.client</Message>
+    </Field>
+    <LocalVariable name="client" register="2" pc="23" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named client</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true" start="41" end="41" startBytecode="23" endBytecode="23" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+      <Message>At OidcExtractor.java:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a1a689cc77b87836f6a78a6c78a50f00" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.credentials.extractor.OidcExtractor(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcExtractor.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" start="31" end="99" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>At OidcExtractor.java:[lines 31-99]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.extractor.OidcExtractor</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" start="37" end="42" startBytecode="0" endBytecode="108" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java"/>
+      <Message>In method new org.pac4j.oidc.credentials.extractor.OidcExtractor(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>In OidcExtractor.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.extractor.OidcExtractor.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true" start="40" end="40" startBytecode="18" endBytecode="18" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+      <Message>At OidcExtractor.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="3" rank="20" abbrev="UrF" category="STYLE" instanceHash="8f8a61c93985ecd61e1089fb45fe6c24" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread public/protected field</ShortMessage>
+    <LongMessage>Unread public/protected field: org.pac4j.oidc.credentials.extractor.OidcExtractor.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" start="31" end="99" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>At OidcExtractor.java:[lines 31-99]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.credentials.extractor.OidcExtractor</Message>
+    </Class>
+    <Field classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+        <Message>In OidcExtractor.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.credentials.extractor.OidcExtractor.configuration</Message>
+    </Field>
+    <SourceLine classname="org.pac4j.oidc.credentials.extractor.OidcExtractor" primary="true" start="40" end="40" startBytecode="18" endBytecode="18" sourcefile="OidcExtractor.java" sourcepath="org/pac4j/oidc/credentials/extractor/OidcExtractor.java">
+      <Message>At OidcExtractor.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f4f131540a320ddf9e4121f6cf34c8c5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.logout.OidcLogoutActionBuilder(OidcConfiguration) may expose internal representation by storing an externally mutable object into OidcLogoutActionBuilder.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" primary="true">
+      <SourceLine classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" start="34" end="79" sourcefile="OidcLogoutActionBuilder.java" sourcepath="org/pac4j/oidc/logout/OidcLogoutActionBuilder.java">
+        <Message>At OidcLogoutActionBuilder.java:[lines 34-79]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.logout.OidcLogoutActionBuilder</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" start="36" end="39" startBytecode="0" endBytecode="94" sourcefile="OidcLogoutActionBuilder.java" sourcepath="org/pac4j/oidc/logout/OidcLogoutActionBuilder.java"/>
+      <Message>In method new org.pac4j.oidc.logout.OidcLogoutActionBuilder(OidcConfiguration)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" sourcefile="OidcLogoutActionBuilder.java" sourcepath="org/pac4j/oidc/logout/OidcLogoutActionBuilder.java">
+        <Message>In OidcLogoutActionBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.logout.OidcLogoutActionBuilder.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="23" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.logout.OidcLogoutActionBuilder" primary="true" start="38" end="38" startBytecode="23" endBytecode="23" sourcefile="OidcLogoutActionBuilder.java" sourcepath="org/pac4j/oidc/logout/OidcLogoutActionBuilder.java">
+      <Message>At OidcLogoutActionBuilder.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3fc5ce385cd2cc9a3d4826e9ed5af21a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.profile.creator.OidcProfileCreator(OidcConfiguration) may expose internal representation by storing an externally mutable object into OidcProfileCreator.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" start="42" end="140" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+        <Message>At OidcProfileCreator.java:[lines 42-140]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.profile.creator.OidcProfileCreator</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" start="50" end="52" startBytecode="0" endBytecode="69" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java"/>
+      <Message>In method new org.pac4j.oidc.profile.creator.OidcProfileCreator(OidcConfiguration)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+        <Message>In OidcProfileCreator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.profile.creator.OidcProfileCreator.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" primary="true" start="51" end="51" startBytecode="6" endBytecode="6" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+      <Message>At OidcProfileCreator.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="af59779d41eee89a612710a4d52be840" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>OidcProfileCreator.tokenValidator not initialized in constructor and dereferenced in org.pac4j.oidc.profile.creator.OidcProfileCreator.create(OidcCredentials, WebContext)</LongMessage>
+    <Class classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" start="42" end="140" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+        <Message>At OidcProfileCreator.java:[lines 42-140]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.profile.creator.OidcProfileCreator</Message>
+    </Class>
+    <Field classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" name="tokenValidator" signature="Lorg/pac4j/oidc/profile/creator/TokenValidator;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+        <Message>In OidcProfileCreator.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.profile.creator.OidcProfileCreator.tokenValidator</Message>
+    </Field>
+    <Method classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" name="create" signature="(Lorg/pac4j/oidc/credentials/OidcCredentials;Lorg/pac4j/core/context/WebContext;)Ljava/util/Optional;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" start="68" end="140" startBytecode="0" endBytecode="1148" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java"/>
+      <Message>In method org.pac4j.oidc.profile.creator.OidcProfileCreator.create(OidcCredentials, WebContext)</Message>
+    </Method>
+    <SourceLine classname="org.pac4j.oidc.profile.creator.OidcProfileCreator" primary="true" start="93" end="93" startBytecode="142" endBytecode="142" sourcefile="OidcProfileCreator.java" sourcepath="org/pac4j/oidc/profile/creator/OidcProfileCreator.java">
+      <Message>At OidcProfileCreator.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ba7326b7ce9b4e082defa6c3ff9e93a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.redirect.OidcRedirectionActionBuilder(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcRedirectionActionBuilder.client</LongMessage>
+    <Class classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" start="31" end="117" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+        <Message>At OidcRedirectionActionBuilder.java:[lines 31-117]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.redirect.OidcRedirectionActionBuilder</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" start="39" end="66" startBytecode="0" endBytecode="332" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java"/>
+      <Message>In method new org.pac4j.oidc.redirect.OidcRedirectionActionBuilder(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" name="client" signature="Lorg/pac4j/oidc/client/OidcClient;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+        <Message>In OidcRedirectionActionBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.redirect.OidcRedirectionActionBuilder.client</Message>
+    </Field>
+    <LocalVariable name="client" register="2" pc="23" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named client</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" primary="true" start="43" end="43" startBytecode="23" endBytecode="23" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+      <Message>At OidcRedirectionActionBuilder.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="88e7b5582860f7d975f3e4644d4c436e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.pac4j.oidc.redirect.OidcRedirectionActionBuilder(OidcConfiguration, OidcClient) may expose internal representation by storing an externally mutable object into OidcRedirectionActionBuilder.configuration</LongMessage>
+    <Class classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" start="31" end="117" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+        <Message>At OidcRedirectionActionBuilder.java:[lines 31-117]</Message>
+      </SourceLine>
+      <Message>In class org.pac4j.oidc.redirect.OidcRedirectionActionBuilder</Message>
+    </Class>
+    <Method classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" name="&lt;init&gt;" signature="(Lorg/pac4j/oidc/config/OidcConfiguration;Lorg/pac4j/oidc/client/OidcClient;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" start="39" end="66" startBytecode="0" endBytecode="332" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java"/>
+      <Message>In method new org.pac4j.oidc.redirect.OidcRedirectionActionBuilder(OidcConfiguration, OidcClient)</Message>
+    </Method>
+    <Field classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" name="configuration" signature="Lorg/pac4j/oidc/config/OidcConfiguration;" isStatic="false" primary="true">
+      <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+        <Message>In OidcRedirectionActionBuilder.java</Message>
+      </SourceLine>
+      <Message>Field org.pac4j.oidc.redirect.OidcRedirectionActionBuilder.configuration</Message>
+    </Field>
+    <LocalVariable name="configuration" register="1" pc="18" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named configuration</Message>
+    </LocalVariable>
+    <SourceLine classname="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" primary="true" start="42" end="42" startBytecode="18" endBytecode="18" sourcefile="OidcRedirectionActionBuilder.java" sourcepath="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java">
+      <Message>At OidcRedirectionActionBuilder.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" abbrev="UrF" category="STYLE">
+    <ShortDescription>Unread public/protected field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="97">
+    <MissingClass>com.fasterxml.jackson.core.type.TypeReference</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.nimbusds.jose.JOSEException</MissingClass>
+    <MissingClass>com.nimbusds.jose.JWSAlgorithm</MissingClass>
+    <MissingClass>com.nimbusds.jose.proc.BadJOSEException</MissingClass>
+    <MissingClass>com.nimbusds.jose.proc.JWEKeySelector</MissingClass>
+    <MissingClass>com.nimbusds.jose.proc.JWSKeySelector</MissingClass>
+    <MissingClass>com.nimbusds.jose.util.DefaultResourceRetriever</MissingClass>
+    <MissingClass>com.nimbusds.jose.util.Resource</MissingClass>
+    <MissingClass>com.nimbusds.jose.util.ResourceRetriever</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWT</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWTClaimsSet</MissingClass>
+    <MissingClass>com.nimbusds.jwt.JWTParser</MissingClass>
+    <MissingClass>com.nimbusds.jwt.SignedJWT</MissingClass>
+    <MissingClass>com.nimbusds.jwt.proc.BadJWTException</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.AuthorizationCode</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.AuthorizationCodeGrant</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.AuthorizationGrant</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.ParseException</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.ResponseType</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.ResponseType$Value</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.TokenErrorResponse</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.TokenRequest</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.TokenResponse</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.auth.ClientAuthentication</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.auth.ClientAuthenticationMethod</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.auth.ClientSecretBasic</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.auth.ClientSecretPost</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.auth.Secret</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.http.HTTPRequest</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.http.HTTPResponse</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.id.ClientID</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.id.Issuer</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.id.State</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.token.AccessToken</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.token.BearerAccessToken</MissingClass>
+    <MissingClass>com.nimbusds.oauth2.sdk.token.RefreshToken</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.AuthenticationErrorResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.AuthenticationRequest</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.AuthenticationResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.AuthenticationResponseParser</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.AuthenticationSuccessResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.LogoutRequest</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.Nonce</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.OIDCResponseTypeValue</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.OIDCTokenResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.OIDCTokenResponseParser</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.UserInfoErrorResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.UserInfoRequest</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.UserInfoResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.UserInfoSuccessResponse</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.claims.IDTokenClaimsSet</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.claims.UserInfo</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.op.OIDCProviderMetadata</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.token.OIDCTokens</MissingClass>
+    <MissingClass>com.nimbusds.openid.connect.sdk.validators.IDTokenValidator</MissingClass>
+    <MissingClass>net.minidev.json.JSONArray</MissingClass>
+    <MissingClass>net.minidev.json.JSONObject</MissingClass>
+    <MissingClass>org.pac4j.core.authorization.generator.AuthorizationGenerator</MissingClass>
+    <MissingClass>org.pac4j.core.client.IndirectClient</MissingClass>
+    <MissingClass>org.pac4j.core.context.HttpConstants</MissingClass>
+    <MissingClass>org.pac4j.core.context.Pac4jConstants</MissingClass>
+    <MissingClass>org.pac4j.core.context.WebContext</MissingClass>
+    <MissingClass>org.pac4j.core.context.session.SessionStore</MissingClass>
+    <MissingClass>org.pac4j.core.credentials.Credentials</MissingClass>
+    <MissingClass>org.pac4j.core.credentials.TokenCredentials</MissingClass>
+    <MissingClass>org.pac4j.core.credentials.authenticator.Authenticator</MissingClass>
+    <MissingClass>org.pac4j.core.credentials.extractor.CredentialsExtractor</MissingClass>
+    <MissingClass>org.pac4j.core.exception.TechnicalException</MissingClass>
+    <MissingClass>org.pac4j.core.exception.http.ForbiddenAction</MissingClass>
+    <MissingClass>org.pac4j.core.exception.http.RedirectionActionHelper</MissingClass>
+    <MissingClass>org.pac4j.core.http.ajax.AjaxRequestResolver</MissingClass>
+    <MissingClass>org.pac4j.core.http.ajax.DefaultAjaxRequestResolver</MissingClass>
+    <MissingClass>org.pac4j.core.http.callback.PathParameterCallbackUrlResolver</MissingClass>
+    <MissingClass>org.pac4j.core.logout.GoogleLogoutActionBuilder</MissingClass>
+    <MissingClass>org.pac4j.core.logout.LogoutActionBuilder</MissingClass>
+    <MissingClass>org.pac4j.core.profile.AttributeLocation</MissingClass>
+    <MissingClass>org.pac4j.core.profile.BasicUserProfile</MissingClass>
+    <MissingClass>org.pac4j.core.profile.CommonProfile</MissingClass>
+    <MissingClass>org.pac4j.core.profile.ProfileHelper</MissingClass>
+    <MissingClass>org.pac4j.core.profile.UserProfile</MissingClass>
+    <MissingClass>org.pac4j.core.profile.converter.AttributeConverter</MissingClass>
+    <MissingClass>org.pac4j.core.profile.converter.Converters</MissingClass>
+    <MissingClass>org.pac4j.core.profile.creator.ProfileCreator</MissingClass>
+    <MissingClass>org.pac4j.core.profile.definition.CommonProfileDefinition</MissingClass>
+    <MissingClass>org.pac4j.core.profile.definition.ProfileDefinition</MissingClass>
+    <MissingClass>org.pac4j.core.profile.definition.ProfileDefinitionAware</MissingClass>
+    <MissingClass>org.pac4j.core.profile.jwt.AbstractJwtProfile</MissingClass>
+    <MissingClass>org.pac4j.core.profile.jwt.JwtClaims</MissingClass>
+    <MissingClass>org.pac4j.core.redirect.RedirectionActionBuilder</MissingClass>
+    <MissingClass>org.pac4j.core.state.StateGenerator</MissingClass>
+    <MissingClass>org.pac4j.core.state.StaticOrRandomStateGenerator</MissingClass>
+    <MissingClass>org.pac4j.core.util.CommonHelper</MissingClass>
+    <MissingClass>org.pac4j.core.util.HttpUtils</MissingClass>
+    <MissingClass>org.pac4j.core.util.InitializableObject</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:28:54 +0900" total_classes="29" referenced_classes="83" total_bugs="17" total_size="1089" num_packages="15" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.61" clock_seconds="1.83" peak_mbytes="241.90" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="2" priority_2="15">
+    <FileStats path="org/pac4j/oidc/authorization/generator/KeycloakRolesAuthorizationGenerator.java" bugCount="0" size="39"/>
+    <FileStats path="org/pac4j/oidc/client/AzureAdClient.java" bugCount="0" size="41"/>
+    <FileStats path="org/pac4j/oidc/client/GoogleOidcClient.java" bugCount="0" size="17"/>
+    <FileStats path="org/pac4j/oidc/client/KeycloakOidcClient.java" bugCount="0" size="16"/>
+    <FileStats path="org/pac4j/oidc/client/OidcClient.java" bugCount="2" size="29" bugHash="02ed7d23a42806cd051be86cca37ca89"/>
+    <FileStats path="org/pac4j/oidc/client/azuread/AzureAdIdTokenValidator.java" bugCount="0" size="20"/>
+    <FileStats path="org/pac4j/oidc/client/azuread/AzureAdResourceRetriever.java" bugCount="0" size="6"/>
+    <FileStats path="org/pac4j/oidc/config/AzureAdOidcConfiguration.java" bugCount="0" size="45"/>
+    <FileStats path="org/pac4j/oidc/config/KeycloakOidcConfiguration.java" bugCount="0" size="22"/>
+    <FileStats path="org/pac4j/oidc/config/OidcConfiguration.java" bugCount="2" size="214" bugHash="49bc9bf195db9efdc7277f39af507041"/>
+    <FileStats path="org/pac4j/oidc/credentials/OidcCredentials.java" bugCount="0" size="37"/>
+    <FileStats path="org/pac4j/oidc/credentials/authenticator/OidcAuthenticator.java" bugCount="2" size="92" bugHash="b6e6a1d3c5d89750bd7bf82d5f0de484"/>
+    <FileStats path="org/pac4j/oidc/credentials/authenticator/UserInfoOidcAuthenticator.java" bugCount="3" size="53" bugHash="ecc45f8ea75a54d3c3d73e78e98b6f0c"/>
+    <FileStats path="org/pac4j/oidc/credentials/extractor/OidcExtractor.java" bugCount="3" size="49" bugHash="8783c9cbaa726332e306d9ae13eda5af"/>
+    <FileStats path="org/pac4j/oidc/logout/OidcLogoutActionBuilder.java" bugCount="1" size="31" bugHash="aa06e17a8ab807b3e88a47528e0f9964"/>
+    <FileStats path="org/pac4j/oidc/profile/OidcProfile.java" bugCount="0" size="78"/>
+    <FileStats path="org/pac4j/oidc/profile/OidcProfileDefinition.java" bugCount="0" size="62"/>
+    <FileStats path="org/pac4j/oidc/profile/azuread/AzureAdProfile.java" bugCount="0" size="20"/>
+    <FileStats path="org/pac4j/oidc/profile/azuread/AzureAdProfileCreator.java" bugCount="0" size="9"/>
+    <FileStats path="org/pac4j/oidc/profile/azuread/AzureAdProfileDefinition.java" bugCount="0" size="15"/>
+    <FileStats path="org/pac4j/oidc/profile/azuread/AzureAdTokenValidator.java" bugCount="0" size="6"/>
+    <FileStats path="org/pac4j/oidc/profile/converter/OidcLongTimeConverter.java" bugCount="0" size="9"/>
+    <FileStats path="org/pac4j/oidc/profile/creator/OidcProfileCreator.java" bugCount="2" size="62" bugHash="6a7e67436f43af406e42b9fc23769c58"/>
+    <FileStats path="org/pac4j/oidc/profile/creator/TokenValidator.java" bugCount="0" size="53"/>
+    <FileStats path="org/pac4j/oidc/profile/google/GoogleOidcProfile.java" bugCount="0" size="4"/>
+    <FileStats path="org/pac4j/oidc/profile/keycloak/KeycloakOidcProfile.java" bugCount="0" size="4"/>
+    <FileStats path="org/pac4j/oidc/redirect/OidcRedirectionActionBuilder.java" bugCount="2" size="56" bugHash="e6d86b2141df660bb5b486b3c66b8a53"/>
+    <PackageStats package="org.pac4j.oidc.authorization.generator" total_bugs="0" total_types="1" total_size="39">
+      <ClassStats class="org.pac4j.oidc.authorization.generator.KeycloakRolesAuthorizationGenerator" sourceFile="KeycloakRolesAuthorizationGenerator.java" interface="false" size="39" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.client" total_bugs="2" total_types="5" total_size="103" priority_2="2">
+      <ClassStats class="org.pac4j.oidc.client.AzureAdClient" sourceFile="AzureAdClient.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.client.AzureAdClient$1" sourceFile="AzureAdClient.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.client.GoogleOidcClient" sourceFile="GoogleOidcClient.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.client.KeycloakOidcClient" sourceFile="KeycloakOidcClient.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.client.OidcClient" sourceFile="OidcClient.java" interface="false" size="29" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.client.azuread" total_bugs="0" total_types="2" total_size="26">
+      <ClassStats class="org.pac4j.oidc.client.azuread.AzureAdIdTokenValidator" sourceFile="AzureAdIdTokenValidator.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.client.azuread.AzureAdResourceRetriever" sourceFile="AzureAdResourceRetriever.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.config" total_bugs="2" total_types="3" total_size="281" priority_2="2">
+      <ClassStats class="org.pac4j.oidc.config.AzureAdOidcConfiguration" sourceFile="AzureAdOidcConfiguration.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.config.KeycloakOidcConfiguration" sourceFile="KeycloakOidcConfiguration.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.config.OidcConfiguration" sourceFile="OidcConfiguration.java" interface="false" size="214" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.credentials" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="org.pac4j.oidc.credentials.OidcCredentials" sourceFile="OidcCredentials.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.credentials.authenticator" total_bugs="5" total_types="3" total_size="145" priority_2="5">
+      <ClassStats class="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator" sourceFile="OidcAuthenticator.java" interface="false" size="86" bugs="2" priority_2="2"/>
+      <ClassStats class="org.pac4j.oidc.credentials.authenticator.OidcAuthenticator$ClientNoSecret" sourceFile="OidcAuthenticator.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.credentials.authenticator.UserInfoOidcAuthenticator" sourceFile="UserInfoOidcAuthenticator.java" interface="false" size="53" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.credentials.extractor" total_bugs="3" total_types="1" total_size="49" priority_3="1" priority_2="2">
+      <ClassStats class="org.pac4j.oidc.credentials.extractor.OidcExtractor" sourceFile="OidcExtractor.java" interface="false" size="49" bugs="3" priority_3="1" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.logout" total_bugs="1" total_types="1" total_size="31" priority_2="1">
+      <ClassStats class="org.pac4j.oidc.logout.OidcLogoutActionBuilder" sourceFile="OidcLogoutActionBuilder.java" interface="false" size="31" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile" total_bugs="0" total_types="2" total_size="140">
+      <ClassStats class="org.pac4j.oidc.profile.OidcProfile" sourceFile="OidcProfile.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.profile.OidcProfileDefinition" sourceFile="OidcProfileDefinition.java" interface="false" size="62" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile.azuread" total_bugs="0" total_types="4" total_size="50">
+      <ClassStats class="org.pac4j.oidc.profile.azuread.AzureAdProfile" sourceFile="AzureAdProfile.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.profile.azuread.AzureAdProfileCreator" sourceFile="AzureAdProfileCreator.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.profile.azuread.AzureAdProfileDefinition" sourceFile="AzureAdProfileDefinition.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.pac4j.oidc.profile.azuread.AzureAdTokenValidator" sourceFile="AzureAdTokenValidator.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile.converter" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="org.pac4j.oidc.profile.converter.OidcLongTimeConverter" sourceFile="OidcLongTimeConverter.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile.creator" total_bugs="2" total_types="2" total_size="115" priority_3="1" priority_2="1">
+      <ClassStats class="org.pac4j.oidc.profile.creator.OidcProfileCreator" sourceFile="OidcProfileCreator.java" interface="false" size="62" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.pac4j.oidc.profile.creator.TokenValidator" sourceFile="TokenValidator.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile.google" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.pac4j.oidc.profile.google.GoogleOidcProfile" sourceFile="GoogleOidcProfile.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.profile.keycloak" total_bugs="0" total_types="1" total_size="4">
+      <ClassStats class="org.pac4j.oidc.profile.keycloak.KeycloakOidcProfile" sourceFile="KeycloakOidcProfile.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.pac4j.oidc.redirect" total_bugs="2" total_types="1" total_size="56" priority_2="2">
+      <ClassStats class="org.pac4j.oidc.redirect.OidcRedirectionActionBuilder" sourceFile="OidcRedirectionActionBuilder.java" interface="false" size="56" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="218" invocations="841" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="9615" standardDeviationMicrosecondsPerInvocation="610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="80" invocations="83" avgMicrosecondsPerInvocation="972" maxMicrosecondsPerInvocation="9417" standardDeviationMicrosecondsPerInvocation="1618"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="61" invocations="83" avgMicrosecondsPerInvocation="742" maxMicrosecondsPerInvocation="6516" standardDeviationMicrosecondsPerInvocation="1206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="58" invocations="216" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="9313" standardDeviationMicrosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="54" invocations="481" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="2219" standardDeviationMicrosecondsPerInvocation="190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="48" invocations="216" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="6326" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="43" invocations="212" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="5013" standardDeviationMicrosecondsPerInvocation="462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="40" invocations="220" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="7391" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="38" invocations="216" avgMicrosecondsPerInvocation="178" maxMicrosecondsPerInvocation="4865" standardDeviationMicrosecondsPerInvocation="447"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="37" invocations="216" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="5546" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="154" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="5231" standardDeviationMicrosecondsPerInvocation="495"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="31" invocations="846" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="2411" standardDeviationMicrosecondsPerInvocation="107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="29" avgMicrosecondsPerInvocation="1021" maxMicrosecondsPerInvocation="14838" standardDeviationMicrosecondsPerInvocation="3152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="28" invocations="216" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="15947" standardDeviationMicrosecondsPerInvocation="1082"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="83" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="4883" standardDeviationMicrosecondsPerInvocation="661"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="83" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="17889" standardDeviationMicrosecondsPerInvocation="1950"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="204" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="10098" standardDeviationMicrosecondsPerInvocation="727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="23" invocations="83" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="7525" standardDeviationMicrosecondsPerInvocation="894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="691" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="878" standardDeviationMicrosecondsPerInvocation="73"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="23" invocations="29" avgMicrosecondsPerInvocation="800" maxMicrosecondsPerInvocation="10266" standardDeviationMicrosecondsPerInvocation="2429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="23" invocations="29" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="2977" standardDeviationMicrosecondsPerInvocation="723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="83" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="2145" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="83" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="1726" standardDeviationMicrosecondsPerInvocation="341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="83" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="5414" standardDeviationMicrosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="13" invocations="83" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="2903" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="2369" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="1115" standardDeviationMicrosecondsPerInvocation="28"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="11" invocations="29" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="3131" standardDeviationMicrosecondsPerInvocation="650"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="11" invocations="216" avgMicrosecondsPerInvocation="52" maxMicrosecondsPerInvocation="1049" standardDeviationMicrosecondsPerInvocation="116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="11" invocations="83" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="2270" standardDeviationMicrosecondsPerInvocation="478"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

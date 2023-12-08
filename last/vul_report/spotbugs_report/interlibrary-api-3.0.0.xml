@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013298247" analysisTimestamp="1702016152538" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\interlibrary-api-3.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="18606820c9df45763909a77453feb93c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.xbib.interlibrary.api.action.AbstractResponse.getMeta() may expose internal representation by returning AbstractResponse.meta</LongMessage>
+    <Class classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="19" end="56" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>At AbstractResponse.java:[lines 19-56]</Message>
+      </SourceLine>
+      <Message>In class org.xbib.interlibrary.api.action.AbstractResponse</Message>
+    </Class>
+    <Method classname="org.xbib.interlibrary.api.action.AbstractResponse" name="getMeta" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="56" end="56" startBytecode="0" endBytecode="64" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java"/>
+      <Message>In method org.xbib.interlibrary.api.action.AbstractResponse.getMeta()</Message>
+    </Method>
+    <Field classname="org.xbib.interlibrary.api.action.AbstractResponse" name="meta" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>In AbstractResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.xbib.interlibrary.api.action.AbstractResponse.meta</Message>
+    </Field>
+    <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+      <Message>At AbstractResponse.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8744f67d35d7d0412b62d45ed9df4fa5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.xbib.interlibrary.api.action.AbstractResponse.getRequest() may expose internal representation by returning AbstractResponse.request</LongMessage>
+    <Class classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="19" end="56" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>At AbstractResponse.java:[lines 19-56]</Message>
+      </SourceLine>
+      <Message>In class org.xbib.interlibrary.api.action.AbstractResponse</Message>
+    </Class>
+    <Method classname="org.xbib.interlibrary.api.action.AbstractResponse" name="getRequest" signature="()Lorg/xbib/interlibrary/api/action/Request;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="28" end="28" startBytecode="0" endBytecode="64" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java"/>
+      <Message>In method org.xbib.interlibrary.api.action.AbstractResponse.getRequest()</Message>
+    </Method>
+    <Field classname="org.xbib.interlibrary.api.action.AbstractResponse" name="request" signature="Lorg/xbib/interlibrary/api/action/Request;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>In AbstractResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.xbib.interlibrary.api.action.AbstractResponse.request</Message>
+    </Field>
+    <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true" start="28" end="28" startBytecode="4" endBytecode="4" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+      <Message>At AbstractResponse.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="365f54afd24c66cd3e23491f23826867" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xbib.interlibrary.api.action.AbstractResponse(Request, Response$Status, String) may expose internal representation by storing an externally mutable object into AbstractResponse.request</LongMessage>
+    <Class classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="19" end="56" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>At AbstractResponse.java:[lines 19-56]</Message>
+      </SourceLine>
+      <Message>In class org.xbib.interlibrary.api.action.AbstractResponse</Message>
+    </Class>
+    <Method classname="org.xbib.interlibrary.api.action.AbstractResponse" name="&lt;init&gt;" signature="(Lorg/xbib/interlibrary/api/action/Request;Lorg/xbib/interlibrary/api/action/Response$Status;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" start="19" end="24" startBytecode="0" endBytecode="150" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java"/>
+      <Message>In method new org.xbib.interlibrary.api.action.AbstractResponse(Request, Response$Status, String)</Message>
+    </Method>
+    <Field classname="org.xbib.interlibrary.api.action.AbstractResponse" name="request" signature="Lorg/xbib/interlibrary/api/action/Request;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+        <Message>In AbstractResponse.java</Message>
+      </SourceLine>
+      <Message>Field org.xbib.interlibrary.api.action.AbstractResponse.request</Message>
+    </Field>
+    <LocalVariable name="request" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named request</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xbib.interlibrary.api.action.AbstractResponse" primary="true" start="20" end="20" startBytecode="6" endBytecode="6" sourcefile="AbstractResponse.java" sourcepath="org/xbib/interlibrary/api/action/AbstractResponse.java">
+      <Message>At AbstractResponse.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="b7701852cb1059a863a2d39286502ade" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to future in org.xbib.interlibrary.api.action.ActionExecutor.waitForAll(long, Stream)</LongMessage>
+    <Class classname="org.xbib.interlibrary.api.action.ActionExecutor" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.ActionExecutor" start="23" end="138" sourcefile="ActionExecutor.java" sourcepath="org/xbib/interlibrary/api/action/ActionExecutor.java">
+        <Message>At ActionExecutor.java:[lines 23-138]</Message>
+      </SourceLine>
+      <Message>In class org.xbib.interlibrary.api.action.ActionExecutor</Message>
+    </Class>
+    <Method classname="org.xbib.interlibrary.api.action.ActionExecutor" name="waitForAll" signature="(JLjava/util/stream/Stream;)Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.xbib.interlibrary.api.action.ActionExecutor" start="126" end="138" startBytecode="0" endBytecode="41" sourcefile="ActionExecutor.java" sourcepath="org/xbib/interlibrary/api/action/ActionExecutor.java"/>
+      <Message>In method org.xbib.interlibrary.api.action.ActionExecutor.waitForAll(long, Stream)</Message>
+    </Method>
+    <LocalVariable name="future" register="7" pc="54" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named future</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xbib.interlibrary.api.action.ActionExecutor" primary="true" start="129" end="129" startBytecode="52" endBytecode="52" sourcefile="ActionExecutor.java" sourcepath="org/xbib/interlibrary/api/action/ActionExecutor.java">
+      <Message>At ActionExecutor.java:[line 129]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="future"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="1">
+    <MissingClass>org.xbib.content.settings.Settings</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:28:18 +0900" total_classes="34" referenced_classes="99" total_bugs="4" total_size="418" num_packages="3" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.89" clock_seconds="1.24" peak_mbytes="222.82" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="1" priority_2="3">
+    <FileStats path="org/xbib/interlibrary/api/BibliographicDescription.java" bugCount="0" size="8"/>
+    <FileStats path="org/xbib/interlibrary/api/Domain.java" bugCount="0" size="3"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryConfiguration.java" bugCount="0" size="7"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryConfigurationArguments.java" bugCount="0" size="4"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryConfigurationProvider.java" bugCount="0" size="2"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryGroup.java" bugCount="0" size="5"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryGroupArguments.java" bugCount="0" size="3"/>
+    <FileStats path="org/xbib/interlibrary/api/InterlibraryGroupProvider.java" bugCount="0" size="2"/>
+    <FileStats path="org/xbib/interlibrary/api/Library.java" bugCount="0" size="92"/>
+    <FileStats path="org/xbib/interlibrary/api/LibraryNotificationAddress.java" bugCount="0" size="5"/>
+    <FileStats path="org/xbib/interlibrary/api/LibraryPostalAddress.java" bugCount="0" size="2"/>
+    <FileStats path="org/xbib/interlibrary/api/LibrarySenderAddress.java" bugCount="0" size="7"/>
+    <FileStats path="org/xbib/interlibrary/api/LibraryService.java" bugCount="0" size="44"/>
+    <FileStats path="org/xbib/interlibrary/api/PackageInfo.java" bugCount="0" size="8"/>
+    <FileStats path="org/xbib/interlibrary/api/Place.java" bugCount="0" size="3"/>
+    <FileStats path="org/xbib/interlibrary/api/Requester.java" bugCount="0" size="7"/>
+    <FileStats path="org/xbib/interlibrary/api/action/AbstractRequest.java" bugCount="0" size="44"/>
+    <FileStats path="org/xbib/interlibrary/api/action/AbstractResponse.java" bugCount="3" size="29" bugHash="413d2c3992ff885da985c841414982b5"/>
+    <FileStats path="org/xbib/interlibrary/api/action/Action.java" bugCount="0" size="9"/>
+    <FileStats path="org/xbib/interlibrary/api/action/ActionContext.java" bugCount="0" size="9"/>
+    <FileStats path="org/xbib/interlibrary/api/action/ActionExecutor.java" bugCount="1" size="82" bugHash="38a644da253dc9fa55872a90cc878d95"/>
+    <FileStats path="org/xbib/interlibrary/api/action/ActionListener.java" bugCount="0" size="4"/>
+    <FileStats path="org/xbib/interlibrary/api/action/Request.java" bugCount="0" size="7"/>
+    <FileStats path="org/xbib/interlibrary/api/action/Response.java" bugCount="0" size="18"/>
+    <FileStats path="org/xbib/interlibrary/api/service/Service.java" bugCount="0" size="5"/>
+    <FileStats path="org/xbib/interlibrary/api/service/ServiceArguments.java" bugCount="0" size="7"/>
+    <FileStats path="org/xbib/interlibrary/api/service/ServiceProvider.java" bugCount="0" size="2"/>
+    <PackageStats package="org.xbib.interlibrary.api" total_bugs="0" total_types="22" total_size="202">
+      <ClassStats class="org.xbib.interlibrary.api.BibliographicDescription" sourceFile="BibliographicDescription.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Domain" sourceFile="Domain.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryConfiguration" sourceFile="InterlibraryConfiguration.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryConfigurationArguments" sourceFile="InterlibraryConfigurationArguments.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryConfigurationProvider" sourceFile="InterlibraryConfigurationProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryGroup" sourceFile="InterlibraryGroup.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryGroupArguments" sourceFile="InterlibraryGroupArguments.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.InterlibraryGroupProvider" sourceFile="InterlibraryGroupProvider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Library" sourceFile="Library.java" interface="true" size="57" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Library$InterlibraryComparator" sourceFile="Library.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Library$LastResortLibraryComparator" sourceFile="Library.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Library$NonInterlibraryComparator" sourceFile="Library.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryNotificationAddress" sourceFile="LibraryNotificationAddress.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryPostalAddress" sourceFile="LibraryPostalAddress.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibrarySenderAddress" sourceFile="LibrarySenderAddress.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryService" sourceFile="LibraryService.java" interface="true" size="23" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryService$PriorityComparator" sourceFile="LibraryService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryService$RandomizedKeyComparator" sourceFile="LibraryService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.LibraryService$SimpleKeyComparator" sourceFile="LibraryService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.PackageInfo" sourceFile="PackageInfo.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Place" sourceFile="Place.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.Requester" sourceFile="Requester.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xbib.interlibrary.api.action" total_bugs="4" total_types="9" total_size="202" priority_3="1" priority_2="3">
+      <ClassStats class="org.xbib.interlibrary.api.action.AbstractRequest" sourceFile="AbstractRequest.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.AbstractResponse" sourceFile="AbstractResponse.java" interface="false" size="29" bugs="3" priority_2="3"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.Action" sourceFile="Action.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.ActionContext" sourceFile="ActionContext.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.ActionExecutor" sourceFile="ActionExecutor.java" interface="false" size="82" bugs="1" priority_3="1"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.ActionListener" sourceFile="ActionListener.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.Request" sourceFile="Request.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.Response" sourceFile="Response.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.action.Response$Status" sourceFile="Response.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xbib.interlibrary.api.service" total_bugs="0" total_types="3" total_size="14">
+      <ClassStats class="org.xbib.interlibrary.api.service.Service" sourceFile="Service.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.service.ServiceArguments" sourceFile="ServiceArguments.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xbib.interlibrary.api.service.ServiceProvider" sourceFile="ServiceProvider.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="221" invocations="655" avgMicrosecondsPerInvocation="337" maxMicrosecondsPerInvocation="23681" standardDeviationMicrosecondsPerInvocation="1101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="62" invocations="99" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="8044" standardDeviationMicrosecondsPerInvocation="1464"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="99" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="5464" standardDeviationMicrosecondsPerInvocation="1019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="660" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="8167" standardDeviationMicrosecondsPerInvocation="339"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="36" invocations="214" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="3121" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="27" invocations="136" avgMicrosecondsPerInvocation="202" maxMicrosecondsPerInvocation="11724" standardDeviationMicrosecondsPerInvocation="1028"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="27" invocations="66" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="9245" standardDeviationMicrosecondsPerInvocation="1187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="25" invocations="66" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="7432" standardDeviationMicrosecondsPerInvocation="1031"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="24" invocations="608" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="791" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="23" invocations="99" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="16386" standardDeviationMicrosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="22" invocations="99" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="4464" standardDeviationMicrosecondsPerInvocation="610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="21" invocations="233" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="15186" standardDeviationMicrosecondsPerInvocation="993"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="20" invocations="66" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="3912" standardDeviationMicrosecondsPerInvocation="615"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="99" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="2364" standardDeviationMicrosecondsPerInvocation="478"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="17" invocations="66" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="5792" standardDeviationMicrosecondsPerInvocation="733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="16" invocations="66" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="6223" standardDeviationMicrosecondsPerInvocation="758"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="99" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="7627" standardDeviationMicrosecondsPerInvocation="783"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="15" invocations="60" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="2532" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="15" invocations="99" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="2449" standardDeviationMicrosecondsPerInvocation="347"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="13" invocations="99" avgMicrosecondsPerInvocation="133" maxMicrosecondsPerInvocation="1748" standardDeviationMicrosecondsPerInvocation="307"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="11" invocations="99" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="2956" standardDeviationMicrosecondsPerInvocation="351"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

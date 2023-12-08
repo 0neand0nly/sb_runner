@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013381105" analysisTimestamp="1702023778801" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-commons-velocity-10.10-rc-1.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6a61e8837e2ab3a38fa27522c62205c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xwiki.velocity.internal.jmx.JMXVelocityEngine(VelocityEngine) may expose internal representation by storing an externally mutable object into JMXVelocityEngine.engine</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" start="57" end="158" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java">
+        <Message>At JMXVelocityEngine.java:[lines 57-158]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.jmx.JMXVelocityEngine</Message>
+    </Class>
+    <Method classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" name="&lt;init&gt;" signature="(Lorg/xwiki/velocity/VelocityEngine;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" start="57" end="59" startBytecode="0" endBytecode="69" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java"/>
+      <Message>In method new org.xwiki.velocity.internal.jmx.JMXVelocityEngine(VelocityEngine)</Message>
+    </Method>
+    <Field classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" name="engine" signature="Lorg/xwiki/velocity/VelocityEngine;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java">
+        <Message>In JMXVelocityEngine.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.jmx.JMXVelocityEngine.engine</Message>
+    </Field>
+    <LocalVariable name="engine" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named engine</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" primary="true" start="58" end="58" startBytecode="6" endBytecode="6" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java">
+      <Message>At JMXVelocityEngine.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="f2a013f4cfb11915525820dec5392c75" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.xwiki.velocity.internal.jmx.JMXVelocityEngine.getTemplates()</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" start="57" end="158" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java">
+        <Message>At JMXVelocityEngine.java:[lines 57-158]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.jmx.JMXVelocityEngine</Message>
+    </Class>
+    <Method classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" name="getTemplates" signature="()Ljavax/management/openmbean/TabularData;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" start="67" end="100" startBytecode="0" endBytecode="566" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java"/>
+      <Message>In method org.xwiki.velocity.internal.jmx.JMXVelocityEngine.getTemplates()</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" primary="true" start="96" end="96" startBytecode="207" endBytecode="207" sourcefile="JMXVelocityEngine.java" sourcepath="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java">
+      <Message>At JMXVelocityEngine.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="23b283d3843364e8ae15e833ac0f51cc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_ALL is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" start="33" end="735" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>At VelocityParser.java:[lines 33-735]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.util.VelocityParser</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.internal.util.VelocityParser" name="VELOCITYDIRECTIVE_ALL" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>In VelocityParser.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_ALL</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true" start="58" end="58" startBytecode="47" endBytecode="47" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+      <Message>At VelocityParser.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="48cbf468825b928b70f354cc8c6a15e3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_BEGIN is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" start="33" end="735" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>At VelocityParser.java:[lines 33-735]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.util.VelocityParser</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.internal.util.VelocityParser" name="VELOCITYDIRECTIVE_BEGIN" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>In VelocityParser.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_BEGIN</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true" start="38" end="38" startBytecode="7" endBytecode="7" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+      <Message>At VelocityParser.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="27b08658655b102495d8ea90e7237ec4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_END is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" start="33" end="735" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>At VelocityParser.java:[lines 33-735]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.util.VelocityParser</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.internal.util.VelocityParser" name="VELOCITYDIRECTIVE_END" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>In VelocityParser.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_END</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true" start="43" end="43" startBytecode="17" endBytecode="17" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+      <Message>At VelocityParser.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="7ec4a22743e008253357c24d110116d5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_NOPARAM is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" start="33" end="735" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>At VelocityParser.java:[lines 33-735]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.util.VelocityParser</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.internal.util.VelocityParser" name="VELOCITYDIRECTIVE_NOPARAM" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>In VelocityParser.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_NOPARAM</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true" start="53" end="53" startBytecode="37" endBytecode="37" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+      <Message>At VelocityParser.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="3aec324442ac09cfe4f1dd83cd7b961e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_PARAM is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" start="33" end="735" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>At VelocityParser.java:[lines 33-735]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.internal.util.VelocityParser</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.internal.util.VelocityParser" name="VELOCITYDIRECTIVE_PARAM" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+        <Message>In VelocityParser.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.internal.util.VelocityParser.VELOCITYDIRECTIVE_PARAM</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.velocity.internal.util.VelocityParser" primary="true" start="48" end="48" startBytecode="27" endBytecode="27" sourcefile="VelocityParser.java" sourcepath="org/xwiki/velocity/internal/util/VelocityParser.java">
+      <Message>At VelocityParser.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="5229bf7495b487412dbc4b0f29f60787" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.xwiki.velocity.introspection.MethodArgumentsUberspector.convertArguments(Object, String, Object[]) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" start="53" end="188" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java">
+        <Message>At MethodArgumentsUberspector.java:[lines 53-188]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.introspection.MethodArgumentsUberspector</Message>
+    </Class>
+    <Method classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" name="convertArguments" signature="(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" start="146" end="157" startBytecode="0" endBytecode="233" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java"/>
+      <Message>In method org.xwiki.velocity.introspection.MethodArgumentsUberspector.convertArguments(Object, String, Object[])</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" primary="true" start="157" end="157" startBytecode="87" endBytecode="87" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java">
+      <Message>At MethodArgumentsUberspector.java:[line 157]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="42a73d83dc4cf8fc2c348ca99cb77cd5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MethodArgumentsUberspector.converterManager not initialized in constructor and dereferenced in org.xwiki.velocity.introspection.MethodArgumentsUberspector.convertArguments(Object[], Type[], boolean)</LongMessage>
+    <Class classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" start="53" end="188" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java">
+        <Message>At MethodArgumentsUberspector.java:[lines 53-188]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.introspection.MethodArgumentsUberspector</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" name="converterManager" signature="Lorg/xwiki/properties/ConverterManager;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java">
+        <Message>In MethodArgumentsUberspector.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.introspection.MethodArgumentsUberspector.converterManager</Message>
+    </Field>
+    <Method classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" name="convertArguments" signature="([Ljava/lang/Object;[Ljava/lang/reflect/Type;Z)[Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" start="172" end="188" startBytecode="0" endBytecode="273" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java"/>
+      <Message>In method org.xwiki.velocity.introspection.MethodArgumentsUberspector.convertArguments(Object[], Type[], boolean)</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.velocity.introspection.MethodArgumentsUberspector" primary="true" start="184" end="184" startBytecode="87" endBytecode="87" sourcefile="MethodArgumentsUberspector.java" sourcepath="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java">
+      <Message>At MethodArgumentsUberspector.java:[line 184]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="afabb5a7171eda15c1ec8c69bb71245" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>SecureUberspector.runtimeServices not initialized in constructor and dereferenced in org.xwiki.velocity.introspection.SecureUberspector.init()</LongMessage>
+    <Class classname="org.xwiki.velocity.introspection.SecureUberspector" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.SecureUberspector" start="38" end="81" sourcefile="SecureUberspector.java" sourcepath="org/xwiki/velocity/introspection/SecureUberspector.java">
+        <Message>At SecureUberspector.java:[lines 38-81]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.introspection.SecureUberspector</Message>
+    </Class>
+    <Field classname="org.xwiki.velocity.introspection.SecureUberspector" name="runtimeServices" signature="Lorg/apache/velocity/runtime/RuntimeServices;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.SecureUberspector" sourcefile="SecureUberspector.java" sourcepath="org/xwiki/velocity/introspection/SecureUberspector.java">
+        <Message>In SecureUberspector.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.velocity.introspection.SecureUberspector.runtimeServices</Message>
+    </Field>
+    <Method classname="org.xwiki.velocity.introspection.SecureUberspector" name="init" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.introspection.SecureUberspector" start="45" end="52" startBytecode="0" endBytecode="129" sourcefile="SecureUberspector.java" sourcepath="org/xwiki/velocity/introspection/SecureUberspector.java"/>
+      <Message>In method org.xwiki.velocity.introspection.SecureUberspector.init()</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.velocity.introspection.SecureUberspector" primary="true" start="46" end="46" startBytecode="4" endBytecode="4" sourcefile="SecureUberspector.java" sourcepath="org/xwiki/velocity/introspection/SecureUberspector.java">
+      <Message>At SecureUberspector.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" rank="14" abbrev="Nm" category="BAD_PRACTICE" instanceHash="5c26b7949b0b86aab9bcab482821fd7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names shouldn&apos;t shadow simple name of superclass</ShortMessage>
+    <LongMessage>The class name org.xwiki.velocity.tools.ComparisonDateTool shadows the simple name of the superclass org.apache.velocity.tools.generic.ComparisonDateTool</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.ComparisonDateTool" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.ComparisonDateTool" start="33" end="41" sourcefile="ComparisonDateTool.java" sourcepath="org/xwiki/velocity/tools/ComparisonDateTool.java">
+        <Message>At ComparisonDateTool.java:[lines 33-41]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.ComparisonDateTool</Message>
+    </Class>
+    <Class classname="org.apache.velocity.tools.generic.ComparisonDateTool">
+      <SourceLine classname="org.apache.velocity.tools.generic.ComparisonDateTool">
+        <Message>In &lt;Unknown&gt;</Message>
+      </SourceLine>
+      <Message>In class org.apache.velocity.tools.generic.ComparisonDateTool</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.velocity.tools.ComparisonDateTool" start="33" end="41" sourcefile="ComparisonDateTool.java" sourcepath="org/xwiki/velocity/tools/ComparisonDateTool.java" synthetic="true">
+      <Message>At ComparisonDateTool.java:[lines 33-41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" priority="1" rank="14" abbrev="Nm" category="BAD_PRACTICE" instanceHash="ef3b116208cfba906987fc5cfb0431a5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names shouldn&apos;t shadow simple name of superclass</ShortMessage>
+    <LongMessage>The class name org.xwiki.velocity.tools.EscapeTool shadows the simple name of the superclass org.apache.velocity.tools.generic.EscapeTool</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.EscapeTool" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.EscapeTool" start="50" end="257" sourcefile="EscapeTool.java" sourcepath="org/xwiki/velocity/tools/EscapeTool.java">
+        <Message>At EscapeTool.java:[lines 50-257]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.EscapeTool</Message>
+    </Class>
+    <Class classname="org.apache.velocity.tools.generic.EscapeTool">
+      <SourceLine classname="org.apache.velocity.tools.generic.EscapeTool">
+        <Message>In &lt;Unknown&gt;</Message>
+      </SourceLine>
+      <Message>In class org.apache.velocity.tools.generic.EscapeTool</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.velocity.tools.EscapeTool" start="50" end="257" sourcefile="EscapeTool.java" sourcepath="org/xwiki/velocity/tools/EscapeTool.java" synthetic="true">
+      <Message>At EscapeTool.java:[lines 50-257]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="8e34d03fa81bf5f9d6141c04505602dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.xwiki.velocity.tools.JSONTool$JSONArraySerializer be a _static_ inner class?</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.JSONTool$JSONArraySerializer" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.JSONTool$JSONArraySerializer" start="119" end="125" sourcefile="JSONTool.java" sourcepath="org/xwiki/velocity/tools/JSONTool.java">
+        <Message>At JSONTool.java:[lines 119-125]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.JSONTool$JSONArraySerializer</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.velocity.tools.JSONTool$JSONArraySerializer" start="119" end="125" sourcefile="JSONTool.java" sourcepath="org/xwiki/velocity/tools/JSONTool.java" synthetic="true">
+      <Message>At JSONTool.java:[lines 119-125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="3fd7e0a458425d359b86eb08a1376e26" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer be a _static_ inner class?</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer" start="110" end="116" sourcefile="JSONTool.java" sourcepath="org/xwiki/velocity/tools/JSONTool.java">
+        <Message>At JSONTool.java:[lines 110-116]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer" start="110" end="116" sourcefile="JSONTool.java" sourcepath="org/xwiki/velocity/tools/JSONTool.java" synthetic="true">
+      <Message>At JSONTool.java:[lines 110-116]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" instanceHash="407e006aefd7ba9715c7c36d3a825455" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Should be a static inner class</ShortMessage>
+    <LongMessage>Should org.xwiki.velocity.tools.RegexTool$RegexResult be a _static_ inner class?</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.RegexTool$RegexResult" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.RegexTool$RegexResult" start="62" end="89" sourcefile="RegexTool.java" sourcepath="org/xwiki/velocity/tools/RegexTool.java">
+        <Message>At RegexTool.java:[lines 62-89]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.RegexTool$RegexResult</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.velocity.tools.RegexTool$RegexResult" start="62" end="89" sourcefile="RegexTool.java" sourcepath="org/xwiki/velocity/tools/RegexTool.java" synthetic="true">
+      <Message>At RegexTool.java:[lines 62-89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="4ea3bf260ef7087473a10330f3f6235b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.xwiki.velocity.tools.nio.NIOTool.readAllBytes(Path) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.xwiki.velocity.tools.nio.NIOTool" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.nio.NIOTool" start="39" end="267" sourcefile="NIOTool.java" sourcepath="org/xwiki/velocity/tools/nio/NIOTool.java">
+        <Message>At NIOTool.java:[lines 39-267]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.velocity.tools.nio.NIOTool</Message>
+    </Class>
+    <Method classname="org.xwiki.velocity.tools.nio.NIOTool" name="readAllBytes" signature="(Ljava/nio/file/Path;)[B" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.velocity.tools.nio.NIOTool" start="168" end="170" startBytecode="0" endBytecode="97" sourcefile="NIOTool.java" sourcepath="org/xwiki/velocity/tools/nio/NIOTool.java"/>
+      <Message>In method org.xwiki.velocity.tools.nio.NIOTool.readAllBytes(Path)</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.velocity.tools.nio.NIOTool" primary="true" start="170" end="170" startBytecode="7" endBytecode="7" sourcefile="NIOTool.java" sourcepath="org/xwiki/velocity/tools/nio/NIOTool.java">
+      <Message>At NIOTool.java:[line 170]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names shouldn&apos;t shadow simple name of superclass</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class has a simple name that is identical to that of its superclass, except
+that its superclass is in a different package (e.g., <code>alpha.Foo</code> extends <code>beta.Foo</code>).
+This can be exceptionally confusing, create lots of situations in which you have to look at import statements
+to resolve references and creates many
+opportunities to accidentally define methods that do not override methods in their superclasses.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Should be a static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="77">
+    <MissingClass>com.fasterxml.jackson.core.JsonGenerator</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.JsonProcessingException</MissingClass>
+    <MissingClass>com.fasterxml.jackson.core.Version</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.JsonSerializer</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.Module</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.ObjectMapper</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.SerializerProvider</MissingClass>
+    <MissingClass>com.fasterxml.jackson.databind.module.SimpleModule</MissingClass>
+    <MissingClass>net.sf.json.JSONException</MissingClass>
+    <MissingClass>net.sf.json.JSONSerializer</MissingClass>
+    <MissingClass>org.apache.commons.codec.EncoderException</MissingClass>
+    <MissingClass>org.apache.commons.codec.net.BCodec</MissingClass>
+    <MissingClass>org.apache.commons.codec.net.QCodec</MissingClass>
+    <MissingClass>org.apache.commons.codec.net.QuotedPrintableCodec</MissingClass>
+    <MissingClass>org.apache.commons.collections.ExtendedProperties</MissingClass>
+    <MissingClass>org.apache.commons.collections4.CollectionUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.reflect.TypeUtils</MissingClass>
+    <MissingClass>org.apache.commons.text.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.http.NameValuePair</MissingClass>
+    <MissingClass>org.apache.http.client.utils.URLEncodedUtils</MissingClass>
+    <MissingClass>org.apache.velocity.VelocityContext</MissingClass>
+    <MissingClass>org.apache.velocity.app.VelocityEngine</MissingClass>
+    <MissingClass>org.apache.velocity.app.event.IncludeEventHandler</MissingClass>
+    <MissingClass>org.apache.velocity.context.Context</MissingClass>
+    <MissingClass>org.apache.velocity.context.InternalContextAdapter</MissingClass>
+    <MissingClass>org.apache.velocity.context.InternalContextAdapterImpl</MissingClass>
+    <MissingClass>org.apache.velocity.exception.MethodInvocationException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ParseErrorException</MissingClass>
+    <MissingClass>org.apache.velocity.exception.ResourceNotFoundException</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.RuntimeConstants</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.RuntimeServices</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.directive.Directive</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.directive.DirectiveConstants</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.directive.Scope</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.directive.StopCommand</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.log.Log</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.log.LogChute</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.parser.node.ASTBlock</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.parser.node.Node</MissingClass>
+    <MissingClass>org.apache.velocity.runtime.parser.node.SimpleNode</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.ComparisonDateTool</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.EscapeTool</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.ListTool</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.MathTool</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.NumberTool</MissingClass>
+    <MissingClass>org.apache.velocity.tools.generic.SortTool</MissingClass>
+    <MissingClass>org.apache.velocity.util.RuntimeServicesAware</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.AbstractChainableUberspector</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.Info</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.Introspector</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.SecureIntrospectorControl</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.SecureIntrospectorImpl</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.Uberspect</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.UberspectImpl</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.UberspectLoggable</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.VelMethod</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.VelPropertyGet</MissingClass>
+    <MissingClass>org.apache.velocity.util.introspection.VelPropertySet</MissingClass>
+    <MissingClass>org.json.JSONArray</MissingClass>
+    <MissingClass>org.json.JSONObject</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.xwiki.component.manager.ComponentLookupException</MissingClass>
+    <MissingClass>org.xwiki.component.manager.ComponentManager</MissingClass>
+    <MissingClass>org.xwiki.component.phase.Initializable</MissingClass>
+    <MissingClass>org.xwiki.component.phase.InitializationException</MissingClass>
+    <MissingClass>org.xwiki.configuration.ConfigurationSource</MissingClass>
+    <MissingClass>org.xwiki.context.ExecutionContext</MissingClass>
+    <MissingClass>org.xwiki.context.ExecutionContext$DeclarationBuilder</MissingClass>
+    <MissingClass>org.xwiki.context.ExecutionContextException</MissingClass>
+    <MissingClass>org.xwiki.context.ExecutionContextInitializer</MissingClass>
+    <MissingClass>org.xwiki.management.JMXBeanRegistration</MissingClass>
+    <MissingClass>org.xwiki.properties.ConverterManager</MissingClass>
+    <MissingClass>org.xwiki.text.StringUtils</MissingClass>
+    <MissingClass>org.xwiki.xml.XMLUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:41 +0900" total_classes="41" referenced_classes="151" total_bugs="16" total_size="1272" num_packages="8" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.72" clock_seconds="2.76" peak_mbytes="241.00" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="5" priority_2="9" priority_1="2">
+    <FileStats path="org/xwiki/velocity/VelocityConfiguration.java" bugCount="0" size="3"/>
+    <FileStats path="org/xwiki/velocity/VelocityContextFactory.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/velocity/VelocityContextInitializer.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/velocity/VelocityEngine.java" bugCount="0" size="7"/>
+    <FileStats path="org/xwiki/velocity/VelocityFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/velocity/VelocityManager.java" bugCount="0" size="7"/>
+    <FileStats path="org/xwiki/velocity/XWikiVelocityException.java" bugCount="0" size="8"/>
+    <FileStats path="org/xwiki/velocity/internal/DefaultVelocityConfiguration.java" bugCount="0" size="46"/>
+    <FileStats path="org/xwiki/velocity/internal/DefaultVelocityContextFactory.java" bugCount="0" size="33"/>
+    <FileStats path="org/xwiki/velocity/internal/DefaultVelocityEngine.java" bugCount="0" size="122"/>
+    <FileStats path="org/xwiki/velocity/internal/DefaultVelocityFactory.java" bugCount="0" size="25"/>
+    <FileStats path="org/xwiki/velocity/internal/ServicesVelocityContextInitializer.java" bugCount="0" size="7"/>
+    <FileStats path="org/xwiki/velocity/internal/VelocityExecutionContextInitializer.java" bugCount="0" size="17"/>
+    <FileStats path="org/xwiki/velocity/internal/jmx/JMXVelocityEngine.java" bugCount="2" size="51" bugHash="6c601a833b31d6cb11f77b0fe547728c"/>
+    <FileStats path="org/xwiki/velocity/internal/jmx/JMXVelocityEngineMBean.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/velocity/internal/log/AbstractSLF4JLogChute.java" bugCount="0" size="42"/>
+    <FileStats path="org/xwiki/velocity/internal/log/SLF4JLogChute.java" bugCount="0" size="14"/>
+    <FileStats path="org/xwiki/velocity/internal/util/InvalidVelocityException.java" bugCount="0" size="3"/>
+    <FileStats path="org/xwiki/velocity/internal/util/RestrictParseLocationEventHandler.java" bugCount="0" size="14"/>
+    <FileStats path="org/xwiki/velocity/internal/util/VelocityBlock.java" bugCount="0" size="33"/>
+    <FileStats path="org/xwiki/velocity/internal/util/VelocityParser.java" bugCount="5" size="263" bugHash="810e0efd8f608cbce92baa995151791a"/>
+    <FileStats path="org/xwiki/velocity/internal/util/VelocityParserContext.java" bugCount="0" size="19"/>
+    <FileStats path="org/xwiki/velocity/introspection/DeprecatedCheckUberspector.java" bugCount="0" size="41"/>
+    <FileStats path="org/xwiki/velocity/introspection/MethodArgumentsUberspector.java" bugCount="2" size="69" bugHash="3fbc0c006d64c11874731b309d4e4982"/>
+    <FileStats path="org/xwiki/velocity/introspection/SecureIntrospector.java" bugCount="0" size="32"/>
+    <FileStats path="org/xwiki/velocity/introspection/SecureUberspector.java" bugCount="1" size="21" bugHash="77700eae0e65500abe14f11611074ccb"/>
+    <FileStats path="org/xwiki/velocity/introspection/TryCatchDirective.java" bugCount="0" size="24"/>
+    <FileStats path="org/xwiki/velocity/tools/CSSIdentifierSerializer.java" bugCount="0" size="41"/>
+    <FileStats path="org/xwiki/velocity/tools/CollectionsTool.java" bugCount="0" size="73"/>
+    <FileStats path="org/xwiki/velocity/tools/ComparisonDateTool.java" bugCount="1" size="5" bugHash="ffc7ce5115774f3d9956090fd6f51aff"/>
+    <FileStats path="org/xwiki/velocity/tools/EscapeTool.java" bugCount="1" size="70" bugHash="cd2083158fa509822289667d55094040"/>
+    <FileStats path="org/xwiki/velocity/tools/JSONTool.java" bugCount="2" size="47" bugHash="1e1d2356003e63d9af122c467fb6c9ef"/>
+    <FileStats path="org/xwiki/velocity/tools/RegexTool.java" bugCount="1" size="45" bugHash="717d29b824f7f6ba9a16d32252c31fe2"/>
+    <FileStats path="org/xwiki/velocity/tools/URLTool.java" bugCount="0" size="15"/>
+    <FileStats path="org/xwiki/velocity/tools/nio/NIOTool.java" bugCount="1" size="53" bugHash="d68b1dfe7b0902ca017b754cd6c3f4e4"/>
+    <FileStats path="org/xwiki/velocity/tools/nio/WrappingDirectoryStream.java" bugCount="0" size="11"/>
+    <PackageStats package="org.xwiki.velocity" total_bugs="0" total_types="7" total_size="34">
+      <ClassStats class="org.xwiki.velocity.VelocityConfiguration" sourceFile="VelocityConfiguration.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.VelocityContextFactory" sourceFile="VelocityContextFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.VelocityContextInitializer" sourceFile="VelocityContextInitializer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.VelocityEngine" sourceFile="VelocityEngine.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.VelocityFactory" sourceFile="VelocityFactory.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.VelocityManager" sourceFile="VelocityManager.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.XWikiVelocityException" sourceFile="XWikiVelocityException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.internal" total_bugs="0" total_types="6" total_size="250">
+      <ClassStats class="org.xwiki.velocity.internal.DefaultVelocityConfiguration" sourceFile="DefaultVelocityConfiguration.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.DefaultVelocityContextFactory" sourceFile="DefaultVelocityContextFactory.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.DefaultVelocityEngine" sourceFile="DefaultVelocityEngine.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.DefaultVelocityFactory" sourceFile="DefaultVelocityFactory.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.ServicesVelocityContextInitializer" sourceFile="ServicesVelocityContextInitializer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.VelocityExecutionContextInitializer" sourceFile="VelocityExecutionContextInitializer.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.internal.jmx" total_bugs="2" total_types="2" total_size="53" priority_3="1" priority_2="1">
+      <ClassStats class="org.xwiki.velocity.internal.jmx.JMXVelocityEngine" sourceFile="JMXVelocityEngine.java" interface="false" size="51" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.velocity.internal.jmx.JMXVelocityEngineMBean" sourceFile="JMXVelocityEngineMBean.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.internal.log" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="org.xwiki.velocity.internal.log.AbstractSLF4JLogChute" sourceFile="AbstractSLF4JLogChute.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.log.SLF4JLogChute" sourceFile="SLF4JLogChute.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.internal.util" total_bugs="5" total_types="6" total_size="332" priority_2="5">
+      <ClassStats class="org.xwiki.velocity.internal.util.InvalidVelocityException" sourceFile="InvalidVelocityException.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.util.RestrictParseLocationEventHandler" sourceFile="RestrictParseLocationEventHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.util.VelocityBlock" sourceFile="VelocityBlock.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.util.VelocityBlock$VelocityType" sourceFile="VelocityBlock.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.internal.util.VelocityParser" sourceFile="VelocityParser.java" interface="false" size="263" bugs="5" priority_2="5"/>
+      <ClassStats class="org.xwiki.velocity.internal.util.VelocityParserContext" sourceFile="VelocityParserContext.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.introspection" total_bugs="3" total_types="6" total_size="187" priority_3="3">
+      <ClassStats class="org.xwiki.velocity.introspection.DeprecatedCheckUberspector" sourceFile="DeprecatedCheckUberspector.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.introspection.MethodArgumentsUberspector" sourceFile="MethodArgumentsUberspector.java" interface="false" size="54" bugs="2" priority_3="2"/>
+      <ClassStats class="org.xwiki.velocity.introspection.MethodArgumentsUberspector$ConvertingVelMethod" sourceFile="MethodArgumentsUberspector.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.introspection.SecureIntrospector" sourceFile="SecureIntrospector.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.introspection.SecureUberspector" sourceFile="SecureUberspector.java" interface="false" size="21" bugs="1" priority_3="1"/>
+      <ClassStats class="org.xwiki.velocity.introspection.TryCatchDirective" sourceFile="TryCatchDirective.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.tools" total_bugs="5" total_types="10" total_size="296" priority_2="3" priority_1="2">
+      <ClassStats class="org.xwiki.velocity.tools.CSSIdentifierSerializer" sourceFile="CSSIdentifierSerializer.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.tools.CollectionsTool" sourceFile="CollectionsTool.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.tools.ComparisonDateTool" sourceFile="ComparisonDateTool.java" interface="false" size="5" bugs="1" priority_1="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.EscapeTool" sourceFile="EscapeTool.java" interface="false" size="70" bugs="1" priority_1="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.JSONTool" sourceFile="JSONTool.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.tools.JSONTool$JSONArraySerializer" sourceFile="JSONTool.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.JSONTool$JSONObjectSerializer" sourceFile="JSONTool.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.RegexTool" sourceFile="RegexTool.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="org.xwiki.velocity.tools.RegexTool$RegexResult" sourceFile="RegexTool.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.URLTool" sourceFile="URLTool.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.velocity.tools.nio" total_bugs="1" total_types="2" total_size="64" priority_3="1">
+      <ClassStats class="org.xwiki.velocity.tools.nio.NIOTool" sourceFile="NIOTool.java" interface="false" size="53" bugs="1" priority_3="1"/>
+      <ClassStats class="org.xwiki.velocity.tools.nio.WrappingDirectoryStream" sourceFile="WrappingDirectoryStream.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="375" invocations="1134" avgMicrosecondsPerInvocation="330" maxMicrosecondsPerInvocation="24968" standardDeviationMicrosecondsPerInvocation="1054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="124" invocations="151" avgMicrosecondsPerInvocation="825" maxMicrosecondsPerInvocation="9167" standardDeviationMicrosecondsPerInvocation="1531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="114" invocations="715" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="2079" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="93" invocations="204" avgMicrosecondsPerInvocation="458" maxMicrosecondsPerInvocation="23883" standardDeviationMicrosecondsPerInvocation="1782"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="89" invocations="151" avgMicrosecondsPerInvocation="592" maxMicrosecondsPerInvocation="7363" standardDeviationMicrosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="83" invocations="200" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="3250" standardDeviationMicrosecondsPerInvocation="625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="78" invocations="198" avgMicrosecondsPerInvocation="394" maxMicrosecondsPerInvocation="6668" standardDeviationMicrosecondsPerInvocation="707"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="69" invocations="200" avgMicrosecondsPerInvocation="346" maxMicrosecondsPerInvocation="8504" standardDeviationMicrosecondsPerInvocation="742"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="61" invocations="204" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="5232" standardDeviationMicrosecondsPerInvocation="590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="56" invocations="200" avgMicrosecondsPerInvocation="280" maxMicrosecondsPerInvocation="7166" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="51" invocations="1147" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="3606" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="47" invocations="182" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2524" standardDeviationMicrosecondsPerInvocation="379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="42" invocations="263" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="16891" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="41" invocations="151" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="3458" standardDeviationMicrosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="38" invocations="151" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="14353" standardDeviationMicrosecondsPerInvocation="1328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="37" invocations="218" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="18619" standardDeviationMicrosecondsPerInvocation="1258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="36" invocations="41" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="11148" standardDeviationMicrosecondsPerInvocation="1769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInstanceLockOnSharedStaticData" totalMilliseconds="35" invocations="41" avgMicrosecondsPerInvocation="875" maxMicrosecondsPerInvocation="30629" standardDeviationMicrosecondsPerInvocation="4706"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="31" invocations="1003" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="1460" standardDeviationMicrosecondsPerInvocation="78"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="29" invocations="200" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="8970" standardDeviationMicrosecondsPerInvocation="665"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CrossSiteScripting" totalMilliseconds="29" invocations="41" avgMicrosecondsPerInvocation="728" maxMicrosecondsPerInvocation="24886" standardDeviationMicrosecondsPerInvocation="3821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="29" invocations="151" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="2349" standardDeviationMicrosecondsPerInvocation="306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="29" invocations="151" avgMicrosecondsPerInvocation="195" maxMicrosecondsPerInvocation="16416" standardDeviationMicrosecondsPerInvocation="1332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="26" invocations="151" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="3172" standardDeviationMicrosecondsPerInvocation="383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="25" invocations="151" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="1547" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="151" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="5039" standardDeviationMicrosecondsPerInvocation="462"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="22" invocations="41" avgMicrosecondsPerInvocation="540" maxMicrosecondsPerInvocation="7568" standardDeviationMicrosecondsPerInvocation="1256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="151" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2275" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="19" invocations="3223" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="605" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="17" invocations="151" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="1084" standardDeviationMicrosecondsPerInvocation="196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="17" invocations="41" avgMicrosecondsPerInvocation="423" maxMicrosecondsPerInvocation="9983" standardDeviationMicrosecondsPerInvocation="1678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="41" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="4352" standardDeviationMicrosecondsPerInvocation="741"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

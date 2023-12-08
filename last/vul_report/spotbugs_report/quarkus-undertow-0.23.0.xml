@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013349042" analysisTimestamp="1702018694171" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\quarkus-undertow-0.23.0.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="6986ac9c511f43b57f3ee90117e03c14" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper$1" start="40" end="52" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+        <Message>At RewriteCorrectingHandlerWrappers.java:[lines 40-52]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper$1</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" start="37" end="40" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+        <Message>At RewriteCorrectingHandlerWrappers.java:[lines 37-40]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" name="wrap" signature="(Lio/undertow/server/HttpHandler;)Lio/undertow/server/HttpHandler;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" start="40" end="40" startBytecode="0" endBytecode="61" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java"/>
+      <Message>In method io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper.wrap(HttpHandler)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" primary="true" start="40" end="40" startBytecode="6" endBytecode="6" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+      <Message>At RewriteCorrectingHandlerWrappers.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="bcf935df7cddeeac99bb5372a429bb27" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper$1" start="27" end="32" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+        <Message>At RewriteCorrectingHandlerWrappers.java:[lines 27-32]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper$1</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" start="23" end="27" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+        <Message>At RewriteCorrectingHandlerWrappers.java:[lines 23-27]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" name="wrap" signature="(Lio/undertow/server/HttpHandler;)Lio/undertow/server/HttpHandler;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" start="27" end="27" startBytecode="0" endBytecode="61" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java"/>
+      <Message>In method io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper.wrap(HttpHandler)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" primary="true" start="27" end="27" startBytecode="6" endBytecode="6" sourcefile="RewriteCorrectingHandlerWrappers.java" sourcepath="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java">
+      <Message>At RewriteCorrectingHandlerWrappers.java:[line 27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="c13feb93ef62e2f3d1a829314d184b40" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ServletRuntimeConfig.bufferSize not initialized in constructor and dereferenced in io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.ConfigRoot">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" start="11" end="11" sourcefile="ServletRuntimeConfig.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig.java">
+        <Message>At ServletRuntimeConfig.java:[line 11]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.ServletRuntimeConfig</Message>
+    </Class>
+    <Field classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" name="bufferSize" signature="Ljava/util/Optional;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.ConfigRoot">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" sourcefile="ServletRuntimeConfig.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig.java">
+        <Message>In ServletRuntimeConfig.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.ServletRuntimeConfig.bufferSize</Message>
+    </Field>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="startUndertow" signature="(Lio/quarkus/runtime/ShutdownContext;Ljava/util/concurrent/ExecutorService;Lio/undertow/servlet/api/DeploymentManager;Ljava/util/List;Lio/quarkus/vertx/http/runtime/HttpConfiguration;Lio/quarkus/undertow/runtime/ServletRuntimeConfig;)Lio/vertx/core/Handler;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="289" end="316" startBytecode="0" endBytecode="465" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="315" end="315" startBytecode="187" endBytecode="187" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 315]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="9d2d220b991fd8dbde51d4f0b28dd86a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>ServletRuntimeConfig.directBuffers not initialized in constructor and dereferenced in io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.ConfigRoot">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" start="11" end="11" sourcefile="ServletRuntimeConfig.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig.java">
+        <Message>At ServletRuntimeConfig.java:[line 11]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.ServletRuntimeConfig</Message>
+    </Class>
+    <Field classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" name="directBuffers" signature="Ljava/util/Optional;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.ConfigRoot">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig" sourcefile="ServletRuntimeConfig.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig.java">
+        <Message>In ServletRuntimeConfig.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.ServletRuntimeConfig.directBuffers</Message>
+    </Field>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="startUndertow" signature="(Lio/quarkus/runtime/ShutdownContext;Ljava/util/concurrent/ExecutorService;Lio/undertow/servlet/api/DeploymentManager;Ljava/util/List;Lio/quarkus/vertx/http/runtime/HttpConfiguration;Lio/quarkus/undertow/runtime/ServletRuntimeConfig;)Lio/vertx/core/Handler;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="289" end="316" startBytecode="0" endBytecode="465" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="314" end="314" startBytecode="159" endBytecode="159" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 314]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="bb246b18d68b9d8366165afbdbc250ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor" start="3" end="21" sourcefile="ServletRuntimeConfig$$accessor.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig$$accessor.java">
+        <Message>At ServletRuntimeConfig$$accessor.java:[lines 3-21]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor</Message>
+    </Class>
+    <SourceLine classname="io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor" start="3" end="21" sourcefile="ServletRuntimeConfig$$accessor.java" sourcepath="io/quarkus/undertow/runtime/ServletRuntimeConfig$$accessor.java" synthetic="true">
+      <Message>At ServletRuntimeConfig$$accessor.java:[lines 3-21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ac9a4a8df5a241e5efa6b33797d1aaca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.undertow.runtime.ServletSecurityInfoProxy.getHttpMethodSecurityInfo() may expose internal representation by returning ServletSecurityInfoProxy.httpMethodSecurityInfo</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" start="11" end="41" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+        <Message>At ServletSecurityInfoProxy.java:[lines 11-41]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.ServletSecurityInfoProxy</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" name="getHttpMethodSecurityInfo" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" start="19" end="19" startBytecode="0" endBytecode="46" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java"/>
+      <Message>In method io.quarkus.undertow.runtime.ServletSecurityInfoProxy.getHttpMethodSecurityInfo()</Message>
+    </Method>
+    <Field classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" name="httpMethodSecurityInfo" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+        <Message>In ServletSecurityInfoProxy.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.ServletSecurityInfoProxy.httpMethodSecurityInfo</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" primary="true" start="19" end="19" startBytecode="4" endBytecode="4" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+      <Message>At ServletSecurityInfoProxy.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="85fcd07e3d98dd740ab587d43d079a36" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.undertow.runtime.ServletSecurityInfoProxy.getRolesAllowed() may expose internal representation by returning ServletSecurityInfoProxy.rolesAllowed</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" start="11" end="41" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+        <Message>At ServletSecurityInfoProxy.java:[lines 11-41]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.ServletSecurityInfoProxy</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" name="getRolesAllowed" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" start="32" end="32" startBytecode="0" endBytecode="46" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java"/>
+      <Message>In method io.quarkus.undertow.runtime.ServletSecurityInfoProxy.getRolesAllowed()</Message>
+    </Method>
+    <Field classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" name="rolesAllowed" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+        <Message>In ServletSecurityInfoProxy.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.ServletSecurityInfoProxy.rolesAllowed</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" primary="true" start="32" end="32" startBytecode="4" endBytecode="4" sourcefile="ServletSecurityInfoProxy.java" sourcepath="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java">
+      <Message>At ServletSecurityInfoProxy.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" priority="2" rank="18" abbrev="DP" category="MALICIOUS_CODE" instanceHash="88bb5432825cf0a790b2cd40bd4f8e70" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Classloaders should only be created inside doPrivileged block</ShortMessage>
+    <LongMessage>io.quarkus.undertow.runtime.UndertowDeploymentRecorder.createDeployment(String, Set, Set, LaunchMode, ShutdownContext, String) creates a io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2 classloader, which should be performed within a doPrivileged block</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="createDeployment" signature="(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;Ljava/lang/String;)Lio/quarkus/runtime/RuntimeValue;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="131" end="179" startBytecode="0" endBytecode="774" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.createDeployment(String, Set, Set, LaunchMode, ShutdownContext, String)</Message>
+    </Method>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2" start="139" end="139" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[line 139]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2</Message>
+    </Class>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="139" end="139" startBytecode="71" endBytecode="71" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 139]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_STATIC_REP2" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="8dab42da41364e4d618479f6c030cb69" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>May expose internal static state by storing a mutable object into a static field</ShortMessage>
+    <LongMessage>io.quarkus.undertow.runtime.UndertowDeploymentRecorder.setHotDeploymentResources(List) may expose internal static state by storing a mutable object into a static field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.hotDeploymentResourcePaths</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="setHotDeploymentResources" signature="(Ljava/util/List;)V" isStatic="true" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="126" end="127" startBytecode="0" endBytecode="68" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.setHotDeploymentResources(List)</Message>
+    </Method>
+    <Field classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="hotDeploymentResourcePaths" signature="Ljava/util/List;" isStatic="true" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>In UndertowDeploymentRecorder.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.hotDeploymentResourcePaths</Message>
+    </Field>
+    <LocalVariable name="resources" register="0" pc="1" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named resources</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="126" end="126" startBytecode="1" endBytecode="1" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 126]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="6470303948ae05829d5e36a93a54e158" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2" start="139" end="139" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[line 139]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="createDeployment" signature="(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;Ljava/lang/String;)Lio/quarkus/runtime/RuntimeValue;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="131" end="179" startBytecode="0" endBytecode="774" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.createDeployment(String, Set, Set, LaunchMode, ShutdownContext, String)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="139" end="139" startBytecode="76" endBytecode="76" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 139]</Message>
+    </SourceLine>
+    <LocalVariable name="cl" register="8" pc="79" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named cl</Message>
+    </LocalVariable>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="2e9f81c308398dc7b697d108061a25be" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$3 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$3" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$3" start="169" end="177" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 169-177]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$3</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="createDeployment" signature="(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;Ljava/lang/String;)Lio/quarkus/runtime/RuntimeValue;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="131" end="179" startBytecode="0" endBytecode="774" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.createDeployment(String, Set, Set, LaunchMode, ShutdownContext, String)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="169" end="169" startBytecode="357" endBytecode="357" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="b8a8ddff720e5bf50a5168a044551f02" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$4 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$4" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$4" start="289" end="298" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 289-298]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$4</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="startUndertow" signature="(Lio/quarkus/runtime/ShutdownContext;Ljava/util/concurrent/ExecutorService;Lio/undertow/servlet/api/DeploymentManager;Ljava/util/List;Lio/quarkus/vertx/http/runtime/HttpConfiguration;Lio/quarkus/undertow/runtime/ServletRuntimeConfig;)Lio/vertx/core/Handler;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="289" end="316" startBytecode="0" endBytecode="465" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="289" end="289" startBytecode="7" endBytecode="7" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 289]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="402df3d64a471338741f87fe8e1f62ae" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$5 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$5" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$5" start="316" end="325" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 316-325]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$5</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="startUndertow" signature="(Lio/quarkus/runtime/ShutdownContext;Ljava/util/concurrent/ExecutorService;Lio/undertow/servlet/api/DeploymentManager;Ljava/util/List;Lio/quarkus/vertx/http/runtime/HttpConfiguration;Lio/quarkus/undertow/runtime/ServletRuntimeConfig;)Lio/vertx/core/Handler;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="289" end="316" startBytecode="0" endBytecode="465" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="316" end="316" startBytecode="215" endBytecode="215" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 316]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="ec2d1e7423c295f519551ad66894e4d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6" start="360" end="367" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 360-367]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="bootServletContainer" signature="(Lio/quarkus/runtime/RuntimeValue;Lio/quarkus/arc/runtime/BeanContainer;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;)Lio/undertow/servlet/api/DeploymentManager;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="339" end="399" startBytecode="0" endBytecode="589" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.bootServletContainer(RuntimeValue, BeanContainer, LaunchMode, ShutdownContext)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="360" end="360" startBytecode="209" endBytecode="209" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 360]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="a53cca6264af73823fafc262c087896a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$7 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$7" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$7" start="391" end="395" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 391-395]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$7</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="bootServletContainer" signature="(Lio/quarkus/runtime/RuntimeValue;Lio/quarkus/arc/runtime/BeanContainer;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;)Lio/undertow/servlet/api/DeploymentManager;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="339" end="399" startBytecode="0" endBytecode="589" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.bootServletContainer(RuntimeValue, BeanContainer, LaunchMode, ShutdownContext)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="391" end="391" startBytecode="274" endBytecode="274" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 391]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="22405318a4129a8418cbceb9825f6908" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8" start="412" end="475" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 412-475]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="setupRequestScope" signature="(Lio/quarkus/arc/runtime/BeanContainer;)Lio/undertow/servlet/ServletExtension;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="412" end="412" startBytecode="0" endBytecode="61" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.setupRequestScope(BeanContainer)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="412" end="412" startBytecode="6" endBytecode="6" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 412]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" instanceHash="f229ef41d21b1574cd5826b757e3e72a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.currentRoot from instance method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="startUndertow" signature="(Lio/quarkus/runtime/ShutdownContext;Ljava/util/concurrent/ExecutorService;Lio/undertow/servlet/api/DeploymentManager;Ljava/util/List;Lio/quarkus/vertx/http/runtime/HttpConfiguration;Lio/quarkus/undertow/runtime/ServletRuntimeConfig;)Lio/vertx/core/Handler;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="289" end="316" startBytecode="0" endBytecode="465" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.startUndertow(ShutdownContext, ExecutorService, DeploymentManager, List, HttpConfiguration, ServletRuntimeConfig)</Message>
+    </Method>
+    <Field classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="currentRoot" signature="Lio/undertow/server/HttpHandler;" isStatic="true" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>In UndertowDeploymentRecorder.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.currentRoot</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="309" end="309" startBytecode="129" endBytecode="129" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 309]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="e81bd5fef48caa8a3ff15229f8943d77" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.servletContext from instance method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.bootServletContainer(RuntimeValue, BeanContainer, LaunchMode, ShutdownContext)</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="83" end="486" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 83-486]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="bootServletContainer" signature="(Lio/quarkus/runtime/RuntimeValue;Lio/quarkus/arc/runtime/BeanContainer;Lio/quarkus/runtime/LaunchMode;Lio/quarkus/runtime/ShutdownContext;)Lio/undertow/servlet/api/DeploymentManager;" isStatic="false" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" start="339" end="399" startBytecode="0" endBytecode="589" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder.bootServletContainer(RuntimeValue, BeanContainer, LaunchMode, ShutdownContext)</Message>
+    </Method>
+    <Field classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" name="servletContext" signature="Ljavax/servlet/ServletContext;" isStatic="true" primary="true" classAnnotationNames="io.quarkus.runtime.annotations.Recorder">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>In UndertowDeploymentRecorder.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.undertow.runtime.UndertowDeploymentRecorder.servletContext</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" primary="true" start="390" end="390" startBytecode="264" endBytecode="264" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 390]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="5ccbcdd73337443095f8b335c55134c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor" start="3" end="5" sourcefile="UndertowDeploymentRecorder$$accessor.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder$$accessor.java">
+        <Message>At UndertowDeploymentRecorder$$accessor.java:[lines 3-5]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor</Message>
+    </Class>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor" start="3" end="5" sourcefile="UndertowDeploymentRecorder$$accessor.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder$$accessor.java" synthetic="true">
+      <Message>At UndertowDeploymentRecorder$$accessor.java:[lines 3-5]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" instanceHash="9269c5be55bc9db6c4797550659f61ef" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1.call(HttpServerExchange, Object)</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" start="418" end="469" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 418-469]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" name="call" signature="(Lio/undertow/server/HttpServerExchange;Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" start="422" end="469" startBytecode="0" endBytecode="107" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1.call(HttpServerExchange, Object)</Message>
+    </Method>
+    <LocalVariable name="exchange" register="1" pc="5" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from exchange</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" primary="true" start="423" end="423" startBytecode="8" endBytecode="8" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 423]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_RANDOM_USED_ONLY_ONCE" priority="1" rank="14" abbrev="DMI" category="BAD_PRACTICE" instanceHash="c7299fc05d7cfa1d882c89041d8f4271" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Random object created and used only once</ShortMessage>
+    <LongMessage>Random object created and used only once in io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator.createSessionId()</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" start="491" end="567" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+        <Message>At UndertowDeploymentRecorder.java:[lines 491-567]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" name="createSessionId" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" start="513" end="518" startBytecode="0" endBytecode="122" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator.createSessionId()</Message>
+    </Method>
+    <Method classname="java.security.SecureRandom" name="nextBytes" signature="([B)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.util.random.RandomSupport$RandomGeneratorProperties">
+      <SourceLine classname="java.security.SecureRandom" start="757" end="764" startBytecode="0" endBytecode="159" sourcefile="SecureRandom.java" sourcepath="java/security/SecureRandom.java"/>
+      <Message>Called method java.security.SecureRandom.nextBytes(byte[])</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" primary="true" start="517" end="517" startBytecode="30" endBytecode="30" sourcefile="UndertowDeploymentRecorder.java" sourcepath="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java">
+      <Message>At UndertowDeploymentRecorder.java:[line 517]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="13ec6322bfb5b9c64d858d2a057de1f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension$1" start="36" end="39" sourcefile="UndertowHandlersConfServletExtension.java" sourcepath="io/quarkus/undertow/runtime/UndertowHandlersConfServletExtension.java">
+        <Message>At UndertowHandlersConfServletExtension.java:[lines 36-39]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension$1</Message>
+    </Class>
+    <Class classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" start="19" end="45" sourcefile="UndertowHandlersConfServletExtension.java" sourcepath="io/quarkus/undertow/runtime/UndertowHandlersConfServletExtension.java">
+        <Message>At UndertowHandlersConfServletExtension.java:[lines 19-45]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension</Message>
+    </Class>
+    <Method classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" name="handleDeployment" signature="(Lio/undertow/servlet/api/DeploymentInfo;Ljavax/servlet/ServletContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" start="25" end="45" startBytecode="0" endBytecode="236" sourcefile="UndertowHandlersConfServletExtension.java" sourcepath="io/quarkus/undertow/runtime/UndertowHandlersConfServletExtension.java"/>
+      <Message>In method io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension.handleDeployment(DeploymentInfo, ServletContext)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" primary="true" start="36" end="36" startBytecode="58" endBytecode="58" sourcefile="UndertowHandlersConfServletExtension.java" sourcepath="io/quarkus/undertow/runtime/UndertowHandlersConfServletExtension.java">
+      <Message>At UndertowHandlersConfServletExtension.java:[line 36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DP_CREATE_CLASSLOADER_INSIDE_DO_PRIVILEGED" abbrev="DP" category="MALICIOUS_CODE">
+    <ShortDescription>Classloaders should only be created inside doPrivileged block</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code creates a classloader,  which needs permission if a security manage is installed.
+  If this code might be invoked by code that does not
+  have security permissions, then the classloader creation needs to occur inside a doPrivileged block.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_RANDOM_USED_ONLY_ONCE" abbrev="DMI" category="BAD_PRACTICE">
+    <ShortDescription>Random object created and used only once</ShortDescription>
+    <Details><![CDATA[
+
+<p> This code creates a java.util.Random object, uses it to generate one random number, and then discards
+the Random object. This produces mediocre quality random numbers and is inefficient.
+If possible, rewrite the code so that the Random object is created once and saved, and each time a new random number
+is required invoke a method on the existing Random object to obtain it.
+</p>
+
+<p>If it is important that the generated Random numbers not be guessable, you <em>must</em> not create a new Random for each random
+number; the values are too easily guessable. You should strongly consider using a java.security.SecureRandom instead
+(and avoid allocating a new SecureRandom for each random number needed).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_STATIC_REP2" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>May expose internal static state by storing a mutable object into a static field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into a static
+   field.
+   If unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="DMI" cweid="440">
+    <Description>Dubious method invocation</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="DP">
+    <Description>Use doPrivileged</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="100">
+    <MissingClass>io.netty.buffer.PooledByteBufAllocator</MissingClass>
+    <MissingClass>io.quarkus.arc.Arc</MissingClass>
+    <MissingClass>io.quarkus.arc.ArcContainer</MissingClass>
+    <MissingClass>io.quarkus.arc.ComputingCache</MissingClass>
+    <MissingClass>io.quarkus.arc.ContextInstanceHandle</MissingClass>
+    <MissingClass>io.quarkus.arc.ContextInstanceHandleImpl</MissingClass>
+    <MissingClass>io.quarkus.arc.InjectableBean</MissingClass>
+    <MissingClass>io.quarkus.arc.InjectableContext</MissingClass>
+    <MissingClass>io.quarkus.arc.InjectableContext$ContextState</MissingClass>
+    <MissingClass>io.quarkus.arc.InstanceHandle</MissingClass>
+    <MissingClass>io.quarkus.arc.ManagedContext</MissingClass>
+    <MissingClass>io.quarkus.arc.runtime.BeanContainer</MissingClass>
+    <MissingClass>io.quarkus.arc.runtime.BeanContainer$Factory</MissingClass>
+    <MissingClass>io.quarkus.arc.runtime.BeanContainer$Instance</MissingClass>
+    <MissingClass>io.quarkus.runtime.LaunchMode</MissingClass>
+    <MissingClass>io.quarkus.runtime.ObjectSubstitution</MissingClass>
+    <MissingClass>io.quarkus.runtime.RuntimeValue</MissingClass>
+    <MissingClass>io.quarkus.runtime.ShutdownContext</MissingClass>
+    <MissingClass>io.quarkus.runtime.TemplateHtmlBuilder</MissingClass>
+    <MissingClass>io.quarkus.runtime.configuration.MemorySize</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.HttpConfiguration</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.ServerLimitsConfig</MissingClass>
+    <MissingClass>io.undertow.Handlers</MissingClass>
+    <MissingClass>io.undertow.UndertowLogger</MissingClass>
+    <MissingClass>io.undertow.httpcore.BufferAllocator</MissingClass>
+    <MissingClass>io.undertow.httpcore.HttpExchange</MissingClass>
+    <MissingClass>io.undertow.httpcore.OutputChannel</MissingClass>
+    <MissingClass>io.undertow.httpcore.StatusCodes</MissingClass>
+    <MissingClass>io.undertow.server.DefaultExchangeHandler</MissingClass>
+    <MissingClass>io.undertow.server.HandlerWrapper</MissingClass>
+    <MissingClass>io.undertow.server.HttpHandler</MissingClass>
+    <MissingClass>io.undertow.server.HttpServerExchange</MissingClass>
+    <MissingClass>io.undertow.server.handlers.PathHandler</MissingClass>
+    <MissingClass>io.undertow.server.handlers.ResponseCodeHandler</MissingClass>
+    <MissingClass>io.undertow.server.handlers.builder.PredicatedHandlersParser</MissingClass>
+    <MissingClass>io.undertow.server.handlers.cache.DirectBufferCache</MissingClass>
+    <MissingClass>io.undertow.server.handlers.resource.CachingResourceManager</MissingClass>
+    <MissingClass>io.undertow.server.handlers.resource.ClassPathResourceManager</MissingClass>
+    <MissingClass>io.undertow.server.handlers.resource.PathResourceManager</MissingClass>
+    <MissingClass>io.undertow.server.handlers.resource.Resource</MissingClass>
+    <MissingClass>io.undertow.server.handlers.resource.ResourceManager</MissingClass>
+    <MissingClass>io.undertow.server.session.SessionIdGenerator</MissingClass>
+    <MissingClass>io.undertow.servlet.ExceptionLog</MissingClass>
+    <MissingClass>io.undertow.servlet.ServletExtension</MissingClass>
+    <MissingClass>io.undertow.servlet.Servlets</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ClassIntrospecter</MissingClass>
+    <MissingClass>io.undertow.servlet.api.Deployment</MissingClass>
+    <MissingClass>io.undertow.servlet.api.DeploymentInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.DeploymentManager</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ErrorPage</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ExceptionHandler</MissingClass>
+    <MissingClass>io.undertow.servlet.api.FilterInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.HttpMethodSecurityInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.InstanceFactory</MissingClass>
+    <MissingClass>io.undertow.servlet.api.InstanceHandle</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ListenerInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.SecurityInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.SecurityInfo$EmptyRoleSemantic</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ServletContainer</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ServletContainerInitializerInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ServletInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ServletSecurityInfo</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ThreadSetupHandler</MissingClass>
+    <MissingClass>io.undertow.servlet.api.ThreadSetupHandler$Action</MissingClass>
+    <MissingClass>io.undertow.servlet.api.TransportGuaranteeType</MissingClass>
+    <MissingClass>io.undertow.servlet.handlers.DefaultServlet</MissingClass>
+    <MissingClass>io.undertow.servlet.handlers.ServletChain</MissingClass>
+    <MissingClass>io.undertow.servlet.handlers.ServletPathMatch</MissingClass>
+    <MissingClass>io.undertow.servlet.handlers.ServletPathMatches</MissingClass>
+    <MissingClass>io.undertow.servlet.handlers.ServletRequestContext</MissingClass>
+    <MissingClass>io.undertow.servlet.spec.AsyncContextImpl</MissingClass>
+    <MissingClass>io.undertow.servlet.spec.HttpServletRequestImpl</MissingClass>
+    <MissingClass>io.undertow.util.AttachmentKey</MissingClass>
+    <MissingClass>io.undertow.util.MimeMappings</MissingClass>
+    <MissingClass>io.undertow.vertx.VertxHttpExchange</MissingClass>
+    <MissingClass>io.vertx.core.Handler</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpServerRequest</MissingClass>
+    <MissingClass>javax.enterprise.context.ContextNotActiveException</MissingClass>
+    <MissingClass>javax.enterprise.context.SessionScoped</MissingClass>
+    <MissingClass>javax.enterprise.context.spi.Contextual</MissingClass>
+    <MissingClass>javax.enterprise.context.spi.CreationalContext</MissingClass>
+    <MissingClass>javax.servlet.AsyncEvent</MissingClass>
+    <MissingClass>javax.servlet.AsyncListener</MissingClass>
+    <MissingClass>javax.servlet.DispatcherType</MissingClass>
+    <MissingClass>javax.servlet.MultipartConfigElement</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.ServletRequest</MissingClass>
+    <MissingClass>javax.servlet.ServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionEvent</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSessionListener</MissingClass>
+    <MissingClass>org.eclipse.microprofile.context.spi.ThreadContextProvider</MissingClass>
+    <MissingClass>org.jboss.logging.BasicLogger</MissingClass>
+    <MissingClass>org.jboss.logging.Logger</MissingClass>
+    <MissingClass>org.jboss.logging.Logger$Level</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:09 +0900" total_classes="42" referenced_classes="157" total_bugs="22" total_size="910" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.11" clock_seconds="1.96" peak_mbytes="238.50" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="12" priority_2="8" priority_1="2">
+    <FileStats path="io/quarkus/undertow/runtime/DelegatingResourceManager.java" bugCount="0" size="18"/>
+    <FileStats path="io/quarkus/undertow/runtime/HttpSessionContext.java" bugCount="0" size="110"/>
+    <FileStats path="io/quarkus/undertow/runtime/KnownPathResourceManager.java" bugCount="0" size="99"/>
+    <FileStats path="io/quarkus/undertow/runtime/QuarkusErrorServlet.java" bugCount="0" size="49"/>
+    <FileStats path="io/quarkus/undertow/runtime/QuarkusExceptionHandler.java" bugCount="0" size="34"/>
+    <FileStats path="io/quarkus/undertow/runtime/QuarkusInstanceFactory.java" bugCount="0" size="19"/>
+    <FileStats path="io/quarkus/undertow/runtime/RewriteCorrectingHandlerWrappers.java" bugCount="2" size="41" bugHash="e89e525a8ba049e065d065982fbc3ece"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletProducer.java" bugCount="0" size="7"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletRuntimeConfig$$accessor.java" bugCount="1" size="15" bugHash="2f58ecf5584d76cd4a8d806f61645a36"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletRuntimeConfig.java" bugCount="0" size="5"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletSecurityInfoProxy.java" bugCount="2" size="25" bugHash="bb7935b4875d576585546171b4bdf0c9"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletSecurityInfoSubstitution.java" bugCount="0" size="31"/>
+    <FileStats path="io/quarkus/undertow/runtime/ServletThreadContextProvider.java" bugCount="0" size="24"/>
+    <FileStats path="io/quarkus/undertow/runtime/UndertowDeploymentRecorder$$accessor.java" bugCount="1" size="5" bugHash="22442ad368ffd3363abe1f43194d0a37"/>
+    <FileStats path="io/quarkus/undertow/runtime/UndertowDeploymentRecorder.java" bugCount="15" size="407" bugHash="166e258462f0269654b3270baab31079"/>
+    <FileStats path="io/quarkus/undertow/runtime/UndertowHandlersConfServletExtension.java" bugCount="1" size="21" bugHash="8b174c895f9e7f0e268e44a1355eba6a"/>
+    <PackageStats package="io.quarkus.undertow.runtime" total_bugs="22" total_types="42" total_size="910" priority_3="12" priority_2="8" priority_1="2">
+      <ClassStats class="io.quarkus.undertow.runtime.DelegatingResourceManager" sourceFile="DelegatingResourceManager.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.HttpSessionContext" sourceFile="HttpSessionContext.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.HttpSessionContext$1" sourceFile="HttpSessionContext.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.HttpSessionContext$Key" sourceFile="HttpSessionContext.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.KnownPathResourceManager" sourceFile="KnownPathResourceManager.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.KnownPathResourceManager$1" sourceFile="KnownPathResourceManager.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.KnownPathResourceManager$DirectoryResource" sourceFile="KnownPathResourceManager.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.QuarkusErrorServlet" sourceFile="QuarkusErrorServlet.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.QuarkusExceptionHandler" sourceFile="QuarkusExceptionHandler.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.QuarkusInstanceFactory" sourceFile="QuarkusInstanceFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.QuarkusInstanceFactory$1" sourceFile="QuarkusInstanceFactory.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers" sourceFile="RewriteCorrectingHandlerWrappers.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper" sourceFile="RewriteCorrectingHandlerWrappers.java" interface="false" size="5" bugs="1" priority_3="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PostWrapper$1" sourceFile="RewriteCorrectingHandlerWrappers.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper" sourceFile="RewriteCorrectingHandlerWrappers.java" interface="false" size="5" bugs="1" priority_3="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.RewriteCorrectingHandlerWrappers$PreWrapper$1" sourceFile="RewriteCorrectingHandlerWrappers.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletProducer" sourceFile="ServletProducer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletRuntimeConfig" sourceFile="ServletRuntimeConfig.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletRuntimeConfig$$accessor" sourceFile="ServletRuntimeConfig$$accessor.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletSecurityInfoProxy" sourceFile="ServletSecurityInfoProxy.java" interface="false" size="25" bugs="2" priority_2="2"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletSecurityInfoSubstitution" sourceFile="ServletSecurityInfoSubstitution.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.ServletThreadContextProvider" sourceFile="ServletThreadContextProvider.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="185" bugs="13" priority_3="9" priority_2="3" priority_1="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$$accessor" sourceFile="UndertowDeploymentRecorder$$accessor.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$2" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$3" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$4" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$5" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$6$1$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$7" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$8$1$1$1" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$QuarkusSessionIdGenerator" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="49" bugs="1" priority_1="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$ServletContextSupplier" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowDeploymentRecorder$UndertowBufferAllocator" sourceFile="UndertowDeploymentRecorder.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension" sourceFile="UndertowHandlersConfServletExtension.java" interface="false" size="14" bugs="1" priority_3="1"/>
+      <ClassStats class="io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension$1" sourceFile="UndertowHandlersConfServletExtension.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="283" invocations="1121" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="15872" standardDeviationMicrosecondsPerInvocation="691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="109" invocations="157" avgMicrosecondsPerInvocation="695" maxMicrosecondsPerInvocation="10738" standardDeviationMicrosecondsPerInvocation="1476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="89" invocations="157" avgMicrosecondsPerInvocation="569" maxMicrosecondsPerInvocation="14954" standardDeviationMicrosecondsPerInvocation="1383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="80" invocations="689" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="1877" standardDeviationMicrosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="192" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="9203" standardDeviationMicrosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="51" invocations="190" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="3574" standardDeviationMicrosecondsPerInvocation="554"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="46" invocations="189" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="7565" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="43" invocations="266" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="10841" standardDeviationMicrosecondsPerInvocation="947"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="42" invocations="193" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="10361" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="39" invocations="157" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="5780" standardDeviationMicrosecondsPerInvocation="695"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="38" invocations="186" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="3320" standardDeviationMicrosecondsPerInvocation="388"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="1129" avgMicrosecondsPerInvocation="33" maxMicrosecondsPerInvocation="2292" standardDeviationMicrosecondsPerInvocation="91"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="35" invocations="190" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="6823" standardDeviationMicrosecondsPerInvocation="531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="964" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="7530" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="31" invocations="157" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="18723" standardDeviationMicrosecondsPerInvocation="1502"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="157" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="3493" standardDeviationMicrosecondsPerInvocation="477"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="26" invocations="157" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="5040" standardDeviationMicrosecondsPerInvocation="466"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="26" invocations="190" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="12924" standardDeviationMicrosecondsPerInvocation="935"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="25" invocations="157" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="2055" standardDeviationMicrosecondsPerInvocation="288"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="23" invocations="149" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="1729" standardDeviationMicrosecondsPerInvocation="302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="23" invocations="157" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="6114" standardDeviationMicrosecondsPerInvocation="680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="157" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="4602" standardDeviationMicrosecondsPerInvocation="465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="157" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="1324" standardDeviationMicrosecondsPerInvocation="243"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="16" invocations="42" avgMicrosecondsPerInvocation="390" maxMicrosecondsPerInvocation="3639" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="15" invocations="157" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="1248" standardDeviationMicrosecondsPerInvocation="179"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013440201" analysisTimestamp="1702023809308" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-commons-xml-4.1-milestone-1.jar</Jar>
+  </Project>
+  <BugInstance type="NM_SAME_SIMPLE_NAME_AS_INTERFACE" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="b95e9ae942bccad84e9f2b9a178db7fe" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names shouldn&apos;t shadow simple name of implemented interface</ShortMessage>
+    <LongMessage>The class name org.xwiki.xml.EntityResolver shadows the simple name of implemented interface org.xml.sax.EntityResolver</LongMessage>
+    <Class classname="org.xwiki.xml.EntityResolver" primary="true" classAnnotationNames="org.xwiki.component.annotation.Role">
+      <SourceLine classname="org.xwiki.xml.EntityResolver" sourcefile="EntityResolver.java" sourcepath="org/xwiki/xml/EntityResolver.java">
+        <Message>In EntityResolver.java</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.EntityResolver</Message>
+    </Class>
+    <Class classname="org.xml.sax.EntityResolver">
+      <SourceLine classname="org.xml.sax.EntityResolver" sourcefile="EntityResolver.java" sourcepath="org/xml/sax/EntityResolver.java">
+        <Message>In EntityResolver.java</Message>
+      </SourceLine>
+      <Message>In class org.xml.sax.EntityResolver</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.xml.EntityResolver" sourcefile="EntityResolver.java" sourcepath="org/xwiki/xml/EntityResolver.java" synthetic="true">
+      <Message>In EntityResolver.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="d96f5ebbe4ab9238f221b2dc8bd2e605" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.xwiki.xml.ExtractHandler at new org.xwiki.xml.ExtractHandler(int, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.xwiki.xml.ExtractHandler" primary="true">
+      <SourceLine classname="org.xwiki.xml.ExtractHandler" start="113" end="297" sourcefile="ExtractHandler.java" sourcepath="org/xwiki/xml/ExtractHandler.java">
+        <Message>At ExtractHandler.java:[lines 113-297]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.ExtractHandler</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.ExtractHandler" name="&lt;init&gt;" signature="(II)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.ExtractHandler" start="135" end="144" startBytecode="0" endBytecode="188" sourcefile="ExtractHandler.java" sourcepath="org/xwiki/xml/ExtractHandler.java"/>
+      <Message>In method new org.xwiki.xml.ExtractHandler(int, int)</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.ExtractHandler" primary="true" start="144" end="144" startBytecode="125" endBytecode="125" sourcefile="ExtractHandler.java" sourcepath="org/xwiki/xml/ExtractHandler.java">
+      <Message>At ExtractHandler.java:[line 144]</Message>
+    </SourceLine>
+    <SourceLine classname="org.xwiki.xml.ExtractHandler" start="144" end="144" startBytecode="125" endBytecode="125" sourcefile="ExtractHandler.java" sourcepath="org/xwiki/xml/ExtractHandler.java">
+      <Message>At ExtractHandler.java:[line 144]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="6a3879df0469c277b623bab6f78eb80e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.xwiki.xml.Sax2Dom at new org.xwiki.xml.Sax2Dom() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.xwiki.xml.Sax2Dom" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="81" end="292" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>At Sax2Dom.java:[lines 81-292]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.Sax2Dom</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.Sax2Dom" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="94" end="98" startBytecode="0" endBytecode="110" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java"/>
+      <Message>In method new org.xwiki.xml.Sax2Dom()</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" primary="true" start="98" end="98" startBytecode="137" endBytecode="137" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 98]</Message>
+    </SourceLine>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" start="98" end="98" startBytecode="137" endBytecode="137" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 98]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="5e6b1ebd01871783c88efa750440dff2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.xwiki.xml.Sax2Dom at new org.xwiki.xml.Sax2Dom(Node) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.xwiki.xml.Sax2Dom" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="81" end="292" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>At Sax2Dom.java:[lines 81-292]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.Sax2Dom</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.Sax2Dom" name="&lt;init&gt;" signature="(Lorg/w3c/dom/Node;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="105" end="117" startBytecode="0" endBytecode="212" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java"/>
+      <Message>In method new org.xwiki.xml.Sax2Dom(Node)</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" primary="true" start="109" end="109" startBytecode="38" endBytecode="38" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 109]</Message>
+    </SourceLine>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" start="109" end="109" startBytecode="38" endBytecode="38" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 109]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="291dd2cd2c79703ad554769b4a604c96" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.xwiki.xml.Sax2Dom.getRootNode() may expose internal representation by returning Sax2Dom.rootNode</LongMessage>
+    <Class classname="org.xwiki.xml.Sax2Dom" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="81" end="292" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>At Sax2Dom.java:[lines 81-292]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.Sax2Dom</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.Sax2Dom" name="getRootNode" signature="()Lorg/w3c/dom/Node;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="124" end="124" startBytecode="0" endBytecode="46" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java"/>
+      <Message>In method org.xwiki.xml.Sax2Dom.getRootNode()</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.Sax2Dom" name="rootNode" signature="Lorg/w3c/dom/Node;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>In Sax2Dom.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.Sax2Dom.rootNode</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" primary="true" start="124" end="124" startBytecode="4" endBytecode="4" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 124]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9924af5ccb5fc62ba52d92e4c99f242c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xwiki.xml.Sax2Dom(Node) may expose internal representation by storing an externally mutable object into Sax2Dom.document</LongMessage>
+    <Class classname="org.xwiki.xml.Sax2Dom" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="81" end="292" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>At Sax2Dom.java:[lines 81-292]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.Sax2Dom</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.Sax2Dom" name="&lt;init&gt;" signature="(Lorg/w3c/dom/Node;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="105" end="117" startBytecode="0" endBytecode="212" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java"/>
+      <Message>In method new org.xwiki.xml.Sax2Dom(Node)</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.Sax2Dom" name="document" signature="Lorg/w3c/dom/Document;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>In Sax2Dom.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.Sax2Dom.document</Message>
+    </Field>
+    <LocalVariable name="root" register="1" pc="27" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named root</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" primary="true" start="107" end="107" startBytecode="27" endBytecode="27" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 107]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9e32e34787f999f60aecf6064ebea8e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xwiki.xml.Sax2Dom(Node) may expose internal representation by storing an externally mutable object into Sax2Dom.rootNode</LongMessage>
+    <Class classname="org.xwiki.xml.Sax2Dom" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="81" end="292" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>At Sax2Dom.java:[lines 81-292]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.Sax2Dom</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.Sax2Dom" name="&lt;init&gt;" signature="(Lorg/w3c/dom/Node;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" start="105" end="117" startBytecode="0" endBytecode="212" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java"/>
+      <Message>In method new org.xwiki.xml.Sax2Dom(Node)</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.Sax2Dom" name="rootNode" signature="Lorg/w3c/dom/Node;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.Sax2Dom" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+        <Message>In Sax2Dom.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.Sax2Dom.rootNode</Message>
+    </Field>
+    <LocalVariable name="root" register="1" pc="32" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named root</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" primary="true" start="108" end="108" startBytecode="32" endBytecode="32" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java">
+      <Message>At Sax2Dom.java:[line 108]</Message>
+    </SourceLine>
+    <SourceLine classname="org.xwiki.xml.Sax2Dom" start="111" end="111" startBytecode="54" endBytecode="54" sourcefile="Sax2Dom.java" sourcepath="org/xwiki/xml/Sax2Dom.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at Sax2Dom.java:[line 111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="573ed05ea56d9c28eacd3fb472148a12" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.xwiki.xml.XMLUtils.transform(Source, Source)</LongMessage>
+    <Class classname="org.xwiki.xml.XMLUtils" primary="true">
+      <SourceLine classname="org.xwiki.xml.XMLUtils" start="55" end="417" sourcefile="XMLUtils.java" sourcepath="org/xwiki/xml/XMLUtils.java">
+        <Message>At XMLUtils.java:[lines 55-417]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.XMLUtils</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.XMLUtils" name="transform" signature="(Ljavax/xml/transform/Source;Ljavax/xml/transform/Source;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.xwiki.xml.XMLUtils" start="407" end="417" startBytecode="0" endBytecode="189" sourcefile="XMLUtils.java" sourcepath="org/xwiki/xml/XMLUtils.java"/>
+      <Message>In method org.xwiki.xml.XMLUtils.transform(Source, Source)</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.XMLUtils" primary="true" start="413" end="413" startBytecode="42" endBytecode="42" sourcefile="XMLUtils.java" sourcepath="org/xwiki/xml/XMLUtils.java">
+      <Message>At XMLUtils.java:[line 413]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="741ae30a6ed654cba26ef2d06d19a7db" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>org.xwiki.xml.internal.DefaultXMLReaderFactory.initialize() might ignore java.lang.Exception</LongMessage>
+    <Class classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="46" end="90" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+        <Message>At DefaultXMLReaderFactory.java:[lines 46-90]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.DefaultXMLReaderFactory</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" name="initialize" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="59" end="63" startBytecode="0" endBytecode="101" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java"/>
+      <Message>In method org.xwiki.xml.internal.DefaultXMLReaderFactory.initialize()</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" start="60" end="60" startBytecode="15" endBytecode="15" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+      <Message>At DefaultXMLReaderFactory.java:[line 60]</Message>
+    </SourceLine>
+    <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" start="60" end="60" startBytecode="15" endBytecode="15" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+      <Message>At DefaultXMLReaderFactory.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" instanceHash="fba221f5fed932454d80bbda6de6eda4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.xwiki.xml.internal.DefaultXMLReaderFactory.createXMLReader()</LongMessage>
+    <Class classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="46" end="90" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+        <Message>At DefaultXMLReaderFactory.java:[lines 46-90]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.DefaultXMLReaderFactory</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" name="createXMLReader" signature="()Lorg/xml/sax/XMLReader;" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="74" end="90" startBytecode="0" endBytecode="279" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java"/>
+      <Message>In method org.xwiki.xml.internal.DefaultXMLReaderFactory.createXMLReader()</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" start="82" end="82" startBytecode="95" endBytecode="95" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+      <Message>At DefaultXMLReaderFactory.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="b6f0ae793e3c31d3bdfac4c94c9b37e9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.xwiki.xml.internal.DefaultXMLReaderFactory.initialize()</LongMessage>
+    <Class classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="46" end="90" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+        <Message>At DefaultXMLReaderFactory.java:[lines 46-90]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.DefaultXMLReaderFactory</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" name="initialize" signature="()V" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" start="59" end="63" startBytecode="0" endBytecode="101" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java"/>
+      <Message>In method org.xwiki.xml.internal.DefaultXMLReaderFactory.initialize()</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.xml.internal.DefaultXMLReaderFactory" primary="true" start="60" end="60" startBytecode="15" endBytecode="15" sourcefile="DefaultXMLReaderFactory.java" sourcepath="org/xwiki/xml/internal/DefaultXMLReaderFactory.java">
+      <Message>At DefaultXMLReaderFactory.java:[line 60]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="a87d310f7505ee56e9e75700d19566d5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.getFilters() may expose internal representation by returning DefaultHTMLCleanerConfiguration.filters</LongMessage>
+    <Class classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="35" end="69" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>At DefaultHTMLCleanerConfiguration.java:[lines 35-69]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="getFilters" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="50" end="50" startBytecode="0" endBytecode="46" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java"/>
+      <Message>In method org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.getFilters()</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="filters" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>In DefaultHTMLCleanerConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.filters</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true" start="50" end="50" startBytecode="4" endBytecode="4" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+      <Message>At DefaultHTMLCleanerConfiguration.java:[line 50]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4ddde6a8c4bc65da3cb2e51428b04a9c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.getParameters() may expose internal representation by returning DefaultHTMLCleanerConfiguration.parameters</LongMessage>
+    <Class classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="35" end="69" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>At DefaultHTMLCleanerConfiguration.java:[lines 35-69]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="getParameters" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="56" end="56" startBytecode="0" endBytecode="46" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java"/>
+      <Message>In method org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.getParameters()</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="parameters" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>In DefaultHTMLCleanerConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.parameters</Message>
+    </Field>
+    <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+      <Message>At DefaultHTMLCleanerConfiguration.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7bf7d15853a2b0175d061c8a46a4bf1d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.setFilters(List) may expose internal representation by storing an externally mutable object into DefaultHTMLCleanerConfiguration.filters</LongMessage>
+    <Class classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="35" end="69" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>At DefaultHTMLCleanerConfiguration.java:[lines 35-69]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="setFilters" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="62" end="63" startBytecode="0" endBytecode="79" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java"/>
+      <Message>In method org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.setFilters(List)</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="filters" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>In DefaultHTMLCleanerConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.filters</Message>
+    </Field>
+    <LocalVariable name="filters" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named filters</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true" start="62" end="62" startBytecode="2" endBytecode="2" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+      <Message>At DefaultHTMLCleanerConfiguration.java:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7a0223cbb11c580102e44a6892afab2c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.setParameters(Map) may expose internal representation by storing an externally mutable object into DefaultHTMLCleanerConfiguration.parameters</LongMessage>
+    <Class classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="35" end="69" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>At DefaultHTMLCleanerConfiguration.java:[lines 35-69]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration</Message>
+    </Class>
+    <Method classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="setParameters" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" start="68" end="69" startBytecode="0" endBytecode="79" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java"/>
+      <Message>In method org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.setParameters(Map)</Message>
+    </Method>
+    <Field classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" name="parameters" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+        <Message>In DefaultHTMLCleanerConfiguration.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration.parameters</Message>
+    </Field>
+    <LocalVariable name="parameters" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named parameters</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" primary="true" start="68" end="68" startBytecode="2" endBytecode="2" sourcefile="DefaultHTMLCleanerConfiguration.java" sourcepath="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java">
+      <Message>At DefaultHTMLCleanerConfiguration.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="NM_SAME_SIMPLE_NAME_AS_INTERFACE" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names shouldn&apos;t shadow simple name of implemented interface</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class/interface has a simple name that is identical to that of an implemented/extended interface, except
+that the interface is in a different package (e.g., <code>alpha.Foo</code> extends <code>beta.Foo</code>).
+This can be exceptionally confusing, create lots of situations in which you have to look at import statements
+to resolve references and creates many
+opportunities to accidentally define methods that do not override methods in their superclasses.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="19">
+    <MissingClass>org.apache.commons.lang3.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.htmlcleaner.CleanerProperties</MissingClass>
+    <MissingClass>org.htmlcleaner.CleanerTransformations</MissingClass>
+    <MissingClass>org.htmlcleaner.CommentNode</MissingClass>
+    <MissingClass>org.htmlcleaner.ContentNode</MissingClass>
+    <MissingClass>org.htmlcleaner.HtmlCleaner</MissingClass>
+    <MissingClass>org.htmlcleaner.TagNode</MissingClass>
+    <MissingClass>org.htmlcleaner.TagTransformation</MissingClass>
+    <MissingClass>org.htmlcleaner.Utils</MissingClass>
+    <MissingClass>org.jdom.DocType</MissingClass>
+    <MissingClass>org.jdom.Document</MissingClass>
+    <MissingClass>org.jdom.input.DOMBuilder</MissingClass>
+    <MissingClass>org.jdom.output.Format</MissingClass>
+    <MissingClass>org.jdom.output.XMLOutputter</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>org.xwiki.component.phase.Initializable</MissingClass>
+    <MissingClass>org.xwiki.component.phase.InitializationException</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:30:40 +0900" total_classes="23" referenced_classes="104" total_bugs="15" total_size="925" num_packages="6" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.36" clock_seconds="1.68" peak_mbytes="237.16" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="3" priority_2="12">
+    <FileStats path="org/xwiki/xml/EntityResolver.java" bugCount="1" size="1" bugHash="39d68dda2db65220177ca3f3c7d1db62"/>
+    <FileStats path="org/xwiki/xml/ExtractHandler.java" bugCount="1" size="102" bugHash="b92c11fa78aa73a467411bed888c6f6f"/>
+    <FileStats path="org/xwiki/xml/Sax2Dom.java" bugCount="5" size="107" bugHash="920ddee8ef9b1145f2040c7a0ac57e55"/>
+    <FileStats path="org/xwiki/xml/XMLReaderFactory.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/xml/XMLUtils.java" bugCount="1" size="161" bugHash="8ffcb3280a93fecb3890688dfaca4a0d"/>
+    <FileStats path="org/xwiki/xml/html/HTMLCleaner.java" bugCount="0" size="4"/>
+    <FileStats path="org/xwiki/xml/html/HTMLCleanerConfiguration.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/xml/html/HTMLConstants.java" bugCount="0" size="65"/>
+    <FileStats path="org/xwiki/xml/html/HTMLUtils.java" bugCount="0" size="99"/>
+    <FileStats path="org/xwiki/xml/html/filter/AbstractHTMLFilter.java" bugCount="0" size="49"/>
+    <FileStats path="org/xwiki/xml/html/filter/ElementSelector.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/xml/html/filter/HTMLFilter.java" bugCount="0" size="2"/>
+    <FileStats path="org/xwiki/xml/internal/DefaultXMLReaderFactory.java" bugCount="3" size="20" bugHash="b6586e36526b4cbaef3117005645850c"/>
+    <FileStats path="org/xwiki/xml/internal/LocalEntityResolver.java" bugCount="0" size="23"/>
+    <FileStats path="org/xwiki/xml/internal/html/DefaultHTMLCleaner.java" bugCount="0" size="61"/>
+    <FileStats path="org/xwiki/xml/internal/html/DefaultHTMLCleanerConfiguration.java" bugCount="4" size="17" bugHash="e87793fb4edd9778bf5017b6bb6f1704"/>
+    <FileStats path="org/xwiki/xml/internal/html/XWikiDOMSerializer.java" bugCount="0" size="76"/>
+    <FileStats path="org/xwiki/xml/internal/html/filter/BodyFilter.java" bugCount="0" size="44"/>
+    <FileStats path="org/xwiki/xml/internal/html/filter/FontFilter.java" bugCount="0" size="43"/>
+    <FileStats path="org/xwiki/xml/internal/html/filter/ListFilter.java" bugCount="0" size="25"/>
+    <FileStats path="org/xwiki/xml/internal/html/filter/ListItemFilter.java" bugCount="0" size="16"/>
+    <PackageStats package="org.xwiki.xml" total_bugs="8" total_types="6" total_size="373" priority_3="1" priority_2="7">
+      <ClassStats class="org.xwiki.xml.EntityResolver" sourceFile="EntityResolver.java" interface="true" size="1" bugs="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.xml.ExtractHandler" sourceFile="ExtractHandler.java" interface="false" size="90" bugs="1" priority_2="1"/>
+      <ClassStats class="org.xwiki.xml.ExtractHandler$XMLTag" sourceFile="ExtractHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.Sax2Dom" sourceFile="Sax2Dom.java" interface="false" size="107" bugs="5" priority_2="5"/>
+      <ClassStats class="org.xwiki.xml.XMLReaderFactory" sourceFile="XMLReaderFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.XMLUtils" sourceFile="XMLUtils.java" interface="false" size="161" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.xml.html" total_bugs="0" total_types="5" total_size="174">
+      <ClassStats class="org.xwiki.xml.html.HTMLCleaner" sourceFile="HTMLCleaner.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.HTMLCleanerConfiguration" sourceFile="HTMLCleanerConfiguration.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.HTMLConstants" sourceFile="HTMLConstants.java" interface="true" size="65" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.HTMLUtils" sourceFile="HTMLUtils.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.HTMLUtils$XWikiXMLOutputter" sourceFile="HTMLUtils.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.xml.html.filter" total_bugs="0" total_types="3" total_size="53">
+      <ClassStats class="org.xwiki.xml.html.filter.AbstractHTMLFilter" sourceFile="AbstractHTMLFilter.java" interface="false" size="49" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.filter.ElementSelector" sourceFile="ElementSelector.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.html.filter.HTMLFilter" sourceFile="HTMLFilter.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.xml.internal" total_bugs="3" total_types="2" total_size="43" priority_3="2" priority_2="1">
+      <ClassStats class="org.xwiki.xml.internal.DefaultXMLReaderFactory" sourceFile="DefaultXMLReaderFactory.java" interface="false" size="20" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="org.xwiki.xml.internal.LocalEntityResolver" sourceFile="LocalEntityResolver.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.xml.internal.html" total_bugs="4" total_types="3" total_size="154" priority_2="4">
+      <ClassStats class="org.xwiki.xml.internal.html.DefaultHTMLCleaner" sourceFile="DefaultHTMLCleaner.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.internal.html.DefaultHTMLCleanerConfiguration" sourceFile="DefaultHTMLCleanerConfiguration.java" interface="false" size="17" bugs="4" priority_2="4"/>
+      <ClassStats class="org.xwiki.xml.internal.html.XWikiDOMSerializer" sourceFile="XWikiDOMSerializer.java" interface="false" size="76" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.xml.internal.html.filter" total_bugs="0" total_types="4" total_size="128">
+      <ClassStats class="org.xwiki.xml.internal.html.filter.BodyFilter" sourceFile="BodyFilter.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.internal.html.filter.FontFilter" sourceFile="FontFilter.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.internal.html.filter.ListFilter" sourceFile="ListFilter.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.xwiki.xml.internal.html.filter.ListItemFilter" sourceFile="ListItemFilter.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="161" invocations="775" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="14977" standardDeviationMicrosecondsPerInvocation="717"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="73" invocations="420" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="9523" standardDeviationMicrosecondsPerInvocation="501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="70" invocations="104" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="10762" standardDeviationMicrosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="65" invocations="108" avgMicrosecondsPerInvocation="608" maxMicrosecondsPerInvocation="9508" standardDeviationMicrosecondsPerInvocation="1217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="52" invocations="104" avgMicrosecondsPerInvocation="508" maxMicrosecondsPerInvocation="8002" standardDeviationMicrosecondsPerInvocation="1100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="52" invocations="111" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="6312" standardDeviationMicrosecondsPerInvocation="924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="48" invocations="114" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="5701" standardDeviationMicrosecondsPerInvocation="907"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="47" invocations="108" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="5624" standardDeviationMicrosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="46" invocations="108" avgMicrosecondsPerInvocation="433" maxMicrosecondsPerInvocation="3236" standardDeviationMicrosecondsPerInvocation="585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="32" invocations="781" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="2686" standardDeviationMicrosecondsPerInvocation="118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="32" invocations="89" avgMicrosecondsPerInvocation="361" maxMicrosecondsPerInvocation="2248" standardDeviationMicrosecondsPerInvocation="427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="31" invocations="108" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="6222" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="29" invocations="118" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="19130" standardDeviationMicrosecondsPerInvocation="1750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="104" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="4612" standardDeviationMicrosecondsPerInvocation="699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="186" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="9936" standardDeviationMicrosecondsPerInvocation="755"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="713" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="960" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="20" invocations="104" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="2963" standardDeviationMicrosecondsPerInvocation="513"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="17" invocations="104" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="3289" standardDeviationMicrosecondsPerInvocation="400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="104" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="5521" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="16" invocations="104" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="1792" standardDeviationMicrosecondsPerInvocation="319"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="104" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="2863" standardDeviationMicrosecondsPerInvocation="379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="14" invocations="23" avgMicrosecondsPerInvocation="644" maxMicrosecondsPerInvocation="3006" standardDeviationMicrosecondsPerInvocation="788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="108" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="1038" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DroppedException" totalMilliseconds="13" invocations="23" avgMicrosecondsPerInvocation="596" maxMicrosecondsPerInvocation="13499" standardDeviationMicrosecondsPerInvocation="2750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="13" invocations="23" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="6362" standardDeviationMicrosecondsPerInvocation="1769"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="23" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="3886" standardDeviationMicrosecondsPerInvocation="789"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013801378" analysisTimestamp="1702016223761" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\jetty-http-7.0.0.RC6.jar</Jar>
+  </Project>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="bf9b298f9cb3b1bde36681fbb05d6224" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.eclipse.jetty.http.HttpFields.addSetCookie(String, String, String, String, long, String, boolean, boolean, int)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="addSetCookie" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;ZZI)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="959" end="1023" startBytecode="0" endBytecode="641" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.addSetCookie(String, String, String, String, long, String, boolean, boolean, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="990" end="990" startBytecode="187" endBytecode="187" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 990]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" rank="20" abbrev="Bx" category="PERFORMANCE" instanceHash="88104f76a38124f40a0b7bf8cb1055c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.HttpFields.&lt;static initializer for HttpFields&gt;() invokes inefficient new Float(String) constructor; use Float.valueOf(String) instead</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="58" end="1186" startBytecode="0" endBytecode="782" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.&lt;static initializer for HttpFields&gt;()</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="574" end="576" startBytecode="0" endBytecode="72" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Called method new Float(String)</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Float;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="440" end="440" startBytecode="0" endBytecode="53" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Should call Float.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="1165" end="1165" startBytecode="353" endBytecode="353" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 1165]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1166" end="1166" startBytecode="365" endBytecode="365" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1166]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1173" end="1173" startBytecode="427" endBytecode="427" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1173]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1174" end="1174" startBytecode="445" endBytecode="445" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1174]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1175" end="1175" startBytecode="463" endBytecode="463" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1175]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1176" end="1176" startBytecode="481" endBytecode="481" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1176]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1177" end="1177" startBytecode="499" endBytecode="499" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1177]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1178" end="1178" startBytecode="517" endBytecode="517" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1178]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1179" end="1179" startBytecode="535" endBytecode="535" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1179]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1180" end="1180" startBytecode="553" endBytecode="553" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1180]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1181" end="1181" startBytecode="571" endBytecode="571" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1181]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1182" end="1182" startBytecode="589" endBytecode="589" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1182]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1183" end="1183" startBytecode="607" endBytecode="607" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpFields.java:[line 1183]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" rank="20" abbrev="Bx" category="PERFORMANCE" instanceHash="3233897b6edc2662364c5961d8b61f5c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.HttpFields.getQuality(String) invokes inefficient new Float(String) constructor; use Float.valueOf(String) instead</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="getQuality" signature="(Ljava/lang/String;)Ljava/lang/Float;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="1191" end="1218" startBytecode="0" endBytecode="317" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.getQuality(String)</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="574" end="576" startBytecode="0" endBytecode="72" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Called method new Float(String)</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Float;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="440" end="440" startBytecode="0" endBytecode="53" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Should call Float.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="1211" end="1211" startBytecode="126" endBytecode="126" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 1211]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RpC_REPEATED_CONDITIONAL_TEST" priority="3" rank="11" abbrev="RpC" category="CORRECTNESS" instanceHash="42b8a0dc6918591adf6cc99f106f4846" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Repeated conditional tests</ShortMessage>
+    <LongMessage>Repeated conditional test in org.eclipse.jetty.http.HttpFields.add(Buffer, Buffer, long)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="add" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;J)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="700" end="733" startBytecode="0" endBytecode="322" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.add(Buffer, Buffer, long)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="706" end="706" startBytecode="45" endBytecode="46" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 706]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="708" end="708" startBytecode="50" endBytecode="51" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 708]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RpC_REPEATED_CONDITIONAL_TEST" priority="3" rank="11" abbrev="RpC" category="CORRECTNESS" instanceHash="b1941d08af9b2b2a414e7b13b3120e13" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Repeated conditional tests</ShortMessage>
+    <LongMessage>Repeated conditional test in org.eclipse.jetty.http.HttpFields.remove(Buffer)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="remove" signature="(Lorg/eclipse/jetty/io/Buffer;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="754" end="764" startBytecode="0" endBytecode="114" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.remove(Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="756" end="756" startBytecode="12" endBytecode="12" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 756]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="758" end="758" startBytecode="16" endBytecode="16" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 758]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="91a639d13cd6bb0aed6db0bfa3367dd1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.eclipse.jetty.http.HttpFields$4 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields$4" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields$4" start="441" end="457" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 441-457]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.eclipse.jetty.http.HttpFields$4</Message>
+    </Class>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="getValues" signature="(Ljava/lang/String;)Ljava/util/Enumeration;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="434" end="439" startBytecode="0" endBytecode="115" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.getValues(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="439" end="439" startBytecode="24" endBytecode="24" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 439]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="79c3f82c383cfd6e61e8fc44561c4cad" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.eclipse.jetty.http.HttpFields$5 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields$5" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields$5" start="478" end="494" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 478-494]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.eclipse.jetty.http.HttpFields$5</Message>
+    </Class>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="getValues" signature="(Lorg/eclipse/jetty/io/Buffer;)Ljava/util/Enumeration;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="471" end="476" startBytecode="0" endBytecode="115" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.getValues(Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="476" end="476" startBytecode="24" endBytecode="24" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 476]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="ee3f868020feb9c87bc127de4657c4a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.eclipse.jetty.http.HttpFields$6 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpFields$6" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields$6" start="516" end="536" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 516-536]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.eclipse.jetty.http.HttpFields$6</Message>
+    </Class>
+    <Class classname="org.eclipse.jetty.http.HttpFields" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="55" end="1272" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+        <Message>At HttpFields.java:[lines 55-1272]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpFields</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpFields" name="getValues" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Enumeration;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpFields" start="511" end="514" startBytecode="0" endBytecode="124" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpFields.getValues(String, String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpFields" primary="true" start="514" end="514" startBytecode="19" endBytecode="19" sourcefile="HttpFields.java" sourcepath="org/eclipse/jetty/http/HttpFields.java">
+      <Message>At HttpFields.java:[line 514]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="f16cc5d817dc28ef2a5d24bf90eefa8e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.HttpGenerator.completeHeader(HttpFields, boolean): String.getBytes()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpGenerator" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="45" end="984" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java">
+        <Message>At HttpGenerator.java:[lines 45-984]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpGenerator</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpGenerator" name="completeHeader" signature="(Lorg/eclipse/jetty/http/HttpFields;Z)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="352" end="733" startBytecode="0" endBytecode="3079" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpGenerator.completeHeader(HttpFields, boolean)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" primary="true" start="702" end="702" startBytecode="1893" endBytecode="1893" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java">
+      <Message>At HttpGenerator.java:[line 702]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="713" end="713" startBytecode="1981" endBytecode="1981" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpGenerator.java:[line 713]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="720" end="720" startBytecode="2033" endBytecode="2033" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpGenerator.java:[line 720]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="4a8ffc7fa59dbc7f88bdb78e689ad9bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of values, which is known to be non-null in org.eclipse.jetty.http.HttpGenerator.completeHeader(HttpFields, boolean)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpGenerator" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="45" end="984" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java">
+        <Message>At HttpGenerator.java:[lines 45-984]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpGenerator</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpGenerator" name="completeHeader" signature="(Lorg/eclipse/jetty/http/HttpFields;Z)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="352" end="733" startBytecode="0" endBytecode="3079" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpGenerator.completeHeader(HttpFields, boolean)</Message>
+    </Method>
+    <LocalVariable name="values" register="13" pc="1015" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from values</Message>
+    </LocalVariable>
+    <Method classname="java.lang.String" name="split" signature="(Ljava/lang/String;)[Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" start="3203" end="3203" startBytecode="0" endBytecode="58" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Return value of String.split(String) of type String[]</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" primary="true" start="516" end="516" startBytecode="1017" endBytecode="1017" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at HttpGenerator.java:[line 516]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="83d0a55ad2f3e2c13b93a09f2a2a2751" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.HttpGenerator.flushBuffer() where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpGenerator" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="45" end="984" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java">
+        <Message>At HttpGenerator.java:[lines 45-984]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpGenerator</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpGenerator" name="flushBuffer" signature="()J" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" start="765" end="857" startBytecode="0" endBytecode="909" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpGenerator.flushBuffer()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpGenerator" primary="true" start="785" end="845" startBytecode="188" endBytecode="571" sourcefile="HttpGenerator.java" sourcepath="org/eclipse/jetty/http/HttpGenerator.java">
+      <Message>At HttpGenerator.java:[lines 785-845]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="87c4628b3eed28735ee369bc9a79d4b8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;(): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="33" end="106" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+        <Message>At HttpHeaderValues.java:[lines 33-106]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpHeaderValues</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpHeaderValues" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="59" end="106" startBytecode="0" endBytecode="494" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;()</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true" start="87" end="87" startBytecode="199" endBytecode="199" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+      <Message>At HttpHeaderValues.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="OS_OPEN_STREAM" priority="2" rank="16" abbrev="OS" category="BAD_PRACTICE" instanceHash="e2a1934fae098425e5446579c449d863" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to close stream</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;() may fail to close stream</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="33" end="106" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+        <Message>At HttpHeaderValues.java:[lines 33-106]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpHeaderValues</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpHeaderValues" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="59" end="106" startBytecode="0" endBytecode="120" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;()</Message>
+    </Method>
+    <Type descriptor="Ljava/io/Reader;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.io.Reader" start="82" end="417" sourcefile="Reader.java" sourcepath="java/io/Reader.java">
+        <Message>At Reader.java:[lines 82-417]</Message>
+      </SourceLine>
+      <Message>Need to close java.io.Reader </Message>
+    </Type>
+    <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true" start="87" end="87" startBytecode="190" endBytecode="190" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+      <Message>At HttpHeaderValues.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="6e512b4cc0bde9048b503d777341db08" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="33" end="106" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+        <Message>At HttpHeaderValues.java:[lines 33-106]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpHeaderValues</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpHeaderValues" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" start="59" end="106" startBytecode="0" endBytecode="494" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpHeaderValues.&lt;static initializer for HttpHeaderValues&gt;()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpHeaderValues" primary="true" start="101" end="101" startBytecode="260" endBytecode="260" sourcefile="HttpHeaderValues.java" sourcepath="org/eclipse/jetty/http/HttpHeaderValues.java">
+      <Message>At HttpHeaderValues.java:[line 101]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="bcb863ac4048d9c0376da98387f4defd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.HttpParser.parseNext() where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpParser" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpParser" start="63" end="1091" sourcefile="HttpParser.java" sourcepath="org/eclipse/jetty/http/HttpParser.java">
+        <Message>At HttpParser.java:[lines 63-1091]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpParser</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpParser" name="parseNext" signature="()J" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpParser" start="225" end="831" startBytecode="0" endBytecode="5091" sourcefile="HttpParser.java" sourcepath="org/eclipse/jetty/http/HttpParser.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpParser.parseNext()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpParser" primary="true" start="331" end="686" startBytecode="585" endBytecode="2839" sourcefile="HttpParser.java" sourcepath="org/eclipse/jetty/http/HttpParser.java">
+      <Message>At HttpParser.java:[lines 331-686]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_OOI_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="1a07b42d0e699f5ac5ac739f96fcc7c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be moved out of an interface and made package protected</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.HttpTokens.CRLF should be moved out of an interface and made package protected</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpTokens" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpTokens" start="26" end="26" sourcefile="HttpTokens.java" sourcepath="org/eclipse/jetty/http/HttpTokens.java">
+        <Message>At HttpTokens.java:[line 26]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpTokens</Message>
+    </Class>
+    <Field classname="org.eclipse.jetty.http.HttpTokens" name="CRLF" signature="[B" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpTokens" sourcefile="HttpTokens.java" sourcepath="org/eclipse/jetty/http/HttpTokens.java">
+        <Message>In HttpTokens.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.HttpTokens.CRLF</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.HttpTokens" primary="true" start="26" end="26" startBytecode="13" endBytecode="13" sourcefile="HttpTokens.java" sourcepath="org/eclipse/jetty/http/HttpTokens.java">
+      <Message>At HttpTokens.java:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="b911fead336577d2ee78109199b4b076" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.eclipse.jetty.http.HttpURI at new org.eclipse.jetty.http.HttpURI(String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpURI" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="44" end="594" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+        <Message>At HttpURI.java:[lines 44-594]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpURI</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpURI" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="89" end="93" startBytecode="0" endBytecode="146" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java"/>
+      <Message>In method new org.eclipse.jetty.http.HttpURI(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" primary="true" start="92" end="92" startBytecode="49" endBytecode="49" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 92]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="92" end="92" startBytecode="49" endBytecode="49" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="dda640613e7b4b8367f2f073fd40ba80" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.eclipse.jetty.http.HttpURI at new org.eclipse.jetty.http.HttpURI(byte[], int, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpURI" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="44" end="594" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+        <Message>At HttpURI.java:[lines 44-594]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpURI</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpURI" name="&lt;init&gt;" signature="([BII)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="96" end="98" startBytecode="0" endBytecode="137" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java"/>
+      <Message>In method new org.eclipse.jetty.http.HttpURI(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" primary="true" start="97" end="97" startBytecode="38" endBytecode="38" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 97]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="97" end="97" startBytecode="38" endBytecode="38" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="abc1a443454dd0c9fc3542f42fe2ca20" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in new org.eclipse.jetty.http.HttpURI(String): String.getBytes()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpURI" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="44" end="594" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+        <Message>At HttpURI.java:[lines 44-594]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpURI</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpURI" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="89" end="93" startBytecode="0" endBytecode="146" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java"/>
+      <Message>In method new org.eclipse.jetty.http.HttpURI(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" primary="true" start="91" end="91" startBytecode="40" endBytecode="40" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="a87bc364f3bb5a78e6a4a972c6b51d9f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.HttpURI.parse(String): String.getBytes()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpURI" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="44" end="594" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+        <Message>At HttpURI.java:[lines 44-594]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpURI</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpURI" name="parse" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="102" end="105" startBytecode="0" endBytecode="92" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpURI.parse(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" primary="true" start="102" end="102" startBytecode="1" endBytecode="1" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="b04145ade163cce0127612d725b80e02" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.HttpURI.parse2(byte[], int, int) where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.HttpURI" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="44" end="594" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+        <Message>At HttpURI.java:[lines 44-594]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.HttpURI</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.HttpURI" name="parse2" signature="([BII)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="115" end="409" startBytecode="0" endBytecode="1877" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java"/>
+      <Message>In method org.eclipse.jetty.http.HttpURI.parse2(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" primary="true" start="223" end="267" startBytecode="558" endBytecode="729" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java">
+      <Message>At HttpURI.java:[lines 223-267]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="276" end="300" startBytecode="735" endBytecode="825" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpURI.java:[lines 276-300]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.HttpURI" start="309" end="317" startBytecode="831" endBytecode="896" sourcefile="HttpURI.java" sourcepath="org/eclipse/jetty/http/HttpURI.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HttpURI.java:[lines 309-317]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1839bd0306d543c7f694e2f8d170cc58" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.MimeTypes.getMimeMap() may expose internal representation by returning MimeTypes._mimeMap</LongMessage>
+    <Class classname="org.eclipse.jetty.http.MimeTypes" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.MimeTypes" start="83" end="366" sourcefile="MimeTypes.java" sourcepath="org/eclipse/jetty/http/MimeTypes.java">
+        <Message>At MimeTypes.java:[lines 83-366]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.MimeTypes</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.MimeTypes" name="getMimeMap" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.MimeTypes" start="198" end="198" startBytecode="0" endBytecode="46" sourcefile="MimeTypes.java" sourcepath="org/eclipse/jetty/http/MimeTypes.java"/>
+      <Message>In method org.eclipse.jetty.http.MimeTypes.getMimeMap()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.MimeTypes" name="_mimeMap" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.MimeTypes" sourcefile="MimeTypes.java" sourcepath="org/eclipse/jetty/http/MimeTypes.java">
+        <Message>In MimeTypes.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.MimeTypes._mimeMap</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.MimeTypes" primary="true" start="198" end="198" startBytecode="4" endBytecode="4" sourcefile="MimeTypes.java" sourcepath="org/eclipse/jetty/http/MimeTypes.java">
+      <Message>At MimeTypes.java:[line 198]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="329ba376ac6e13f88bdd88eff736c8a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.PathMap.getMatch(String) may expose internal representation by returning PathMap._default</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="getMatch" signature="(Ljava/lang/String;)Lorg/eclipse/jetty/http/PathMap$Entry;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="222" end="255" startBytecode="0" endBytecode="303" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method org.eclipse.jetty.http.PathMap.getMatch(String)</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.PathMap" name="_default" signature="Lorg/eclipse/jetty/http/PathMap$Entry;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>In PathMap.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.PathMap._default</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="255" end="255" startBytecode="149" endBytecode="149" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 255]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b5032e07fc89498542634779eb275e85" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.PathMap.getMatch(String) may expose internal representation by returning PathMap._prefixDefault</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="getMatch" signature="(Ljava/lang/String;)Lorg/eclipse/jetty/http/PathMap$Entry;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="222" end="255" startBytecode="0" endBytecode="303" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method org.eclipse.jetty.http.PathMap.getMatch(String)</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.PathMap" name="_prefixDefault" signature="Lorg/eclipse/jetty/http/PathMap$Entry;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>In PathMap.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.PathMap._prefixDefault</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="243" end="243" startBytecode="92" endBytecode="92" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 243]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="a268caad3e2bc550e6b5c7d8ba39622" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method entrySet is called from constructor new org.eclipse.jetty.http.PathMap().</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="92" end="94" startBytecode="0" endBytecode="145" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method new org.eclipse.jetty.http.PathMap()</Message>
+    </Method>
+    <String value="entrySet">
+      <Message>Value entrySet</Message>
+    </String>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="93" end="93" startBytecode="61" endBytecode="61" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="428052fad9befe7184bc8628ffb2096b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method entrySet is called from constructor new org.eclipse.jetty.http.PathMap(int).</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="111" end="113" startBytecode="0" endBytecode="154" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method new org.eclipse.jetty.http.PathMap(int)</Message>
+    </Method>
+    <String value="entrySet">
+      <Message>Value entrySet</Message>
+    </String>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="112" end="112" startBytecode="60" endBytecode="60" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 112]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="b73952b2bd2fb721c1d7ad51cd53852e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method entrySet is called from constructor new org.eclipse.jetty.http.PathMap(Map).</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="119" end="122" startBytecode="0" endBytecode="162" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method new org.eclipse.jetty.http.PathMap(Map)</Message>
+    </Method>
+    <String value="entrySet">
+      <Message>Value entrySet</Message>
+    </String>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="121" end="121" startBytecode="64" endBytecode="64" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 121]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="2c5dcf8108c2408afb66bc9efd6dcf82" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method entrySet is called from constructor new org.eclipse.jetty.http.PathMap(boolean).</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="&lt;init&gt;" signature="(Z)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="101" end="104" startBytecode="0" endBytecode="164" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method new org.eclipse.jetty.http.PathMap(boolean)</Message>
+    </Method>
+    <String value="entrySet">
+      <Message>Value entrySet</Message>
+    </String>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="102" end="102" startBytecode="61" endBytecode="61" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="3" rank="19" abbrev="NP" category="STYLE" instanceHash="8c32cf10826f13cebd4fbd2cc145f981" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.eclipse.jetty.http.PathMap.getLazyMatches(String)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.PathMap" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="62" end="506" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+        <Message>At PathMap.java:[lines 62-506]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.PathMap</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.PathMap" name="getLazyMatches" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.PathMap" start="267" end="311" startBytecode="0" endBytecode="106" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java"/>
+      <Message>In method org.eclipse.jetty.http.PathMap.getLazyMatches(String)</Message>
+    </Method>
+    <LocalVariable name="entries" register="3" pc="3" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from entries</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" primary="true" start="270" end="270" startBytecode="6" endBytecode="6" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java">
+      <Message>At PathMap.java:[line 270]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.PathMap" start="277" end="277" startBytecode="33" endBytecode="33" sourcefile="PathMap.java" sourcepath="org/eclipse/jetty/http/PathMap.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at PathMap.java:[line 277]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="2c9b12fe5fc0ba8cd2bf7d52b374f592" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.security.B64Code.decode(String, String): new String(byte[])</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.B64Code" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="31" end="278" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+        <Message>At B64Code.java:[lines 31-278]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.B64Code</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.B64Code" name="decode" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="187" end="191" startBytecode="0" endBytecode="104" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java"/>
+      <Message>In method org.eclipse.jetty.http.security.B64Code.decode(String, String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1439" end="1440" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.B64Code" primary="true" start="190" end="190" startBytecode="17" endBytecode="17" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+      <Message>At B64Code.java:[line 190]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="b41a3b7235c1125d48b275358d34172" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.eclipse.jetty.http.security.B64Code.decode(char[]) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.B64Code" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="31" end="278" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+        <Message>At B64Code.java:[lines 31-278]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.B64Code</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.B64Code" name="decode" signature="([C)[B" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="208" end="278" startBytecode="0" endBytecode="846" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java"/>
+      <Message>In method org.eclipse.jetty.http.security.B64Code.decode(char[])</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.B64Code" primary="true" start="209" end="209" startBytecode="5" endBytecode="5" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+      <Message>At B64Code.java:[line 209]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="9f824ee44103697267b1e199c916bfdb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should org.eclipse.jetty.http.security.B64Code.encode(byte[]) return a zero length array rather than null?</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.B64Code" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="31" end="278" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+        <Message>At B64Code.java:[lines 31-278]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.B64Code</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.B64Code" name="encode" signature="([B)[C" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.B64Code" start="105" end="151" startBytecode="0" endBytecode="597" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java"/>
+      <Message>In method org.eclipse.jetty.http.security.B64Code.encode(byte[])</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.B64Code" primary="true" start="106" end="106" startBytecode="5" endBytecode="5" sourcefile="B64Code.java" sourcepath="org/eclipse/jetty/http/security/B64Code.java">
+      <Message>At B64Code.java:[line 106]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_INVOKING_TOSTRING_ON_ARRAY" priority="1" rank="8" abbrev="USELESS_STRING" category="CORRECTNESS" instanceHash="85236d2dfa8919ea49f8784c33834385" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Invocation of toString on an array</ShortMessage>
+    <LongMessage>Invocation of toString on Constraint._roles in org.eclipse.jetty.http.security.Constraint.toString()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Constraint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="39" end="205" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>At Constraint.java:[lines 39-205]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Constraint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Constraint" name="toString" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="205" end="205" startBytecode="0" endBytecode="151" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Constraint.toString()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.security.Constraint" name="_roles" signature="[Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>In Constraint.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.eclipse.jetty.http.security.Constraint._roles</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.security.Constraint" primary="true" start="205" end="205" startBytecode="52" endBytecode="52" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+      <Message>At Constraint.java:[line 205]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="c5440c5acb222a62a25885fbe7b0ce02" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.security.Constraint.getRoles() may expose internal representation by returning Constraint._roles</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Constraint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="39" end="205" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>At Constraint.java:[lines 39-205]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Constraint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Constraint" name="getRoles" signature="()[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="129" end="129" startBytecode="0" endBytecode="46" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Constraint.getRoles()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.security.Constraint" name="_roles" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>In Constraint.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.security.Constraint._roles</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.security.Constraint" primary="true" start="129" end="129" startBytecode="4" endBytecode="4" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+      <Message>At Constraint.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="61636a18f2054baaa7fd695f84f8d679" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.security.Constraint.setRoles(String[]) may expose internal representation by storing an externally mutable object into Constraint._roles</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Constraint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="39" end="205" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>At Constraint.java:[lines 39-205]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Constraint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Constraint" name="setRoles" signature="([Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="107" end="112" startBytecode="0" endBytecode="134" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Constraint.setRoles(String[])</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.security.Constraint" name="_roles" signature="[Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>In Constraint.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.security.Constraint._roles</Message>
+    </Field>
+    <LocalVariable name="roles" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named roles</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.http.security.Constraint" primary="true" start="107" end="107" startBytecode="2" endBytecode="2" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+      <Message>At Constraint.java:[line 107]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="56f2b740f25e6b1155081c5288f43fc2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.security.Constraint is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Constraint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="39" end="205" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java">
+        <Message>At Constraint.java:[lines 39-205]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Constraint</Message>
+    </Class>
+    <SourceLine classname="org.eclipse.jetty.http.security.Constraint" start="39" end="205" sourcefile="Constraint.java" sourcepath="org/eclipse/jetty/http/security/Constraint.java" synthetic="true">
+      <Message>At Constraint.java:[lines 39-205]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="9cde8087a3a178508eddcba279dc8ec4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.security.Credential$MD5.getDigest() may expose internal representation by returning Credential$MD5._digest</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="109" end="209" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>At Credential.java:[lines 109-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Credential$MD5</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Credential$MD5" name="getDigest" signature="()[B" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="125" end="125" startBytecode="0" endBytecode="46" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Credential$MD5.getDigest()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.security.Credential$MD5" name="_digest" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>In Credential.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.security.Credential$MD5._digest</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true" start="125" end="125" startBytecode="4" endBytecode="4" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+      <Message>At Credential.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="2663117efaddee2f56fd10b8906cc65c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.http.security.Credential$MD5.check(Object)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="109" end="209" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>At Credential.java:[lines 109-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Credential$MD5</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Credential$MD5" name="check" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="133" end="174" startBytecode="0" endBytecode="559" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Credential$MD5.check(Object)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true" start="171" end="171" startBytecode="259" endBytecode="259" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+      <Message>At Credential.java:[line 171]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="b6b50e0b10f3853f3d2b8da025f5d4e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.eclipse.jetty.http.security.Credential$MD5.digest(String)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="109" end="209" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>At Credential.java:[lines 109-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Credential$MD5</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Credential$MD5" name="digest" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="184" end="209" startBytecode="0" endBytecode="276" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Credential$MD5.digest(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true" start="206" end="206" startBytecode="94" endBytecode="94" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+      <Message>At Credential.java:[line 206]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="3" rank="20" abbrev="ST" category="STYLE" instanceHash="ce98bd630be4587bf4acedcfe1fd49e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field org.eclipse.jetty.http.security.Credential$MD5.__md from instance method org.eclipse.jetty.http.security.Credential$MD5.check(Object)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="109" end="209" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>At Credential.java:[lines 109-209]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Credential$MD5</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Credential$MD5" name="check" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" start="133" end="174" startBytecode="0" endBytecode="559" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Credential$MD5.check(Object)</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.security.Credential$MD5" name="__md" signature="Ljava/security/MessageDigest;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+        <Message>In Credential.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.security.Credential$MD5.__md</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.security.Credential$MD5" primary="true" start="141" end="141" startBytecode="55" endBytecode="55" sourcefile="Credential.java" sourcepath="org/eclipse/jetty/http/security/Credential.java">
+      <Message>At Credential.java:[line 141]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="d69a4a2a9e31c05dd6ed704b81a08774" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.security.Password.deobfuscate(String): new String(byte[], int, int)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="deobfuscate" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="161" end="174" startBytecode="0" endBytecode="257" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.deobfuscate(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1419" end="1420" startBytecode="0" endBytecode="86" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="174" end="174" startBytecode="102" endBytecode="102" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[line 174]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="67c99c5ae3c3d93cb575fe6286f223db" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.security.Password.getPassword(String, String, String): new String(byte[], int, int)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="getPassword" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/eclipse/jetty/http/security/Password;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="194" end="211" startBytecode="0" endBytecode="294" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.getPassword(String, String, String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1419" end="1420" startBytecode="0" endBytecode="86" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="203" end="203" startBytecode="100" endBytecode="100" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[line 203]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="5632049db99c2422001dd026d86ae393" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.security.Password.obfuscate(String): String.getBytes()</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="obfuscate" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="129" end="154" startBytecode="0" endBytecode="350" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.obfuscate(String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="130" end="130" startBytecode="9" endBytecode="9" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[line 130]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" priority="1" rank="14" abbrev="Eq" category="BAD_PRACTICE" instanceHash="47ae9d0e8d4629c9203bfa773366b3d2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Equals checks for incompatible operand</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.security.Password.equals(Object) checks for operand being a String</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="101" end="117" startBytecode="0" endBytecode="180" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.equals(Object)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="140" end="4659" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 140-4659]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="114" end="114" startBytecode="66" endBytecode="66" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="3" rank="14" abbrev="ES" category="BAD_PRACTICE" instanceHash="9e5501dfa83f7c2cdc2b7a47549f3828" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="597">
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in org.eclipse.jetty.http.security.Password.equals(Object)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="101" end="117" startBytecode="0" endBytecode="44" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.equals(Object)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="140" end="4659" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 140-4659]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <Field classname="org.eclipse.jetty.http.security.Password" name="_pw" signature="Ljava/lang/String;" isStatic="false" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>In Password.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field org.eclipse.jetty.http.security.Password._pw</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="111" end="111" startBytecode="34" endBytecode="34" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[line 111]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.SAW_CALL_TO_EQUALS" value="true"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="fda3365a5a753043783667518f565516" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.security.Password.obfuscate(String) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="obfuscate" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="129" end="154" startBytecode="0" endBytecode="350" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.obfuscate(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="145" end="147" startBytecode="122" endBytecode="123" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[lines 145-147]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" start="147" end="149" startBytecode="129" endBytecode="130" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at Password.java:[lines 147-149]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="9674cb631888538599f207b074252815" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.security.Password.obfuscate(String) where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.Password" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="62" end="232" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+        <Message>At Password.java:[lines 62-232]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.Password</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.Password" name="obfuscate" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.Password" start="129" end="154" startBytecode="0" endBytecode="350" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java"/>
+      <Message>In method org.eclipse.jetty.http.security.Password.obfuscate(String)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.Password" primary="true" start="142" end="149" startBytecode="90" endBytecode="136" sourcefile="Password.java" sourcepath="org/eclipse/jetty/http/security/Password.java">
+      <Message>At Password.java:[lines 142-149]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="fbc06b748e6e221651e6057d9024898b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.eclipse.jetty.http.security.UnixCrypt.crypt(String, String): new String(byte[], int, int)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.security.UnixCrypt" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.UnixCrypt" start="40" end="460" sourcefile="UnixCrypt.java" sourcepath="org/eclipse/jetty/http/security/UnixCrypt.java">
+        <Message>At UnixCrypt.java:[lines 40-460]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.security.UnixCrypt</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.security.UnixCrypt" name="crypt" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.security.UnixCrypt" start="414" end="448" startBytecode="0" endBytecode="475" sourcefile="UnixCrypt.java" sourcepath="org/eclipse/jetty/http/security/UnixCrypt.java"/>
+      <Message>In method org.eclipse.jetty.http.security.UnixCrypt.crypt(String, String)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1419" end="1420" startBytecode="0" endBytecode="86" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.security.UnixCrypt" primary="true" start="448" end="448" startBytecode="226" endBytecode="226" sourcefile="UnixCrypt.java" sourcepath="org/eclipse/jetty/http/security/UnixCrypt.java">
+      <Message>At UnixCrypt.java:[line 448]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="43c89f0ff0694811693c123d4ea86551" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint at new org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint(Buffers, SocketChannel, SelectorManager$SelectSet, SelectionKey, SSLEngine) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="&lt;init&gt;" signature="(Lorg/eclipse/jetty/io/Buffers;Ljava/nio/channels/SocketChannel;Lorg/eclipse/jetty/io/nio/SelectorManager$SelectSet;Ljava/nio/channels/SelectionKey;Ljavax/net/ssl/SSLEngine;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="75" end="89" startBytecode="0" endBytecode="322" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method new org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint(Buffers, SocketChannel, SelectorManager$SelectSet, SelectionKey, SSLEngine)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="75" end="75" startBytecode="7" endBytecode="7" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 75]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="75" end="75" startBytecode="7" endBytecode="7" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 75]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="62505992d003f5ebcb180083322660c3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.getSSLEngine() may expose internal representation by returning SslSelectChannelEndPoint._engine</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="getSSLEngine" signature="()Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="839" end="839" startBytecode="0" endBytecode="46" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.getSSLEngine()</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="_engine" signature="Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>In SslSelectChannelEndPoint.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint._engine</Message>
+    </Field>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="839" end="839" startBytecode="4" endBytecode="4" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 839]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="cd02a2066336ff837641f4bbc4204891" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint(Buffers, SocketChannel, SelectorManager$SelectSet, SelectionKey, SSLEngine) may expose internal representation by storing an externally mutable object into SslSelectChannelEndPoint._engine</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="&lt;init&gt;" signature="(Lorg/eclipse/jetty/io/Buffers;Ljava/nio/channels/SocketChannel;Lorg/eclipse/jetty/io/nio/SelectorManager$SelectSet;Ljava/nio/channels/SelectionKey;Ljavax/net/ssl/SSLEngine;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="75" end="89" startBytecode="0" endBytecode="322" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method new org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint(Buffers, SocketChannel, SelectorManager$SelectSet, SelectionKey, SSLEngine)</Message>
+    </Method>
+    <Field classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="_engine" signature="Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>In SslSelectChannelEndPoint.java</Message>
+      </SourceLine>
+      <Message>Field org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint._engine</Message>
+    </Field>
+    <LocalVariable name="engine" register="5" pc="49" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named engine</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="79" end="79" startBytecode="49" endBytecode="49" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" priority="2" rank="11" abbrev="RCN" category="CORRECTNESS" instanceHash="d6aba504f379585b680e8f9e5f998d29" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Nullcheck of value previously dereferenced</ShortMessage>
+    <LongMessage>Nullcheck of header at line 441 of value previously dereferenced in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer)</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="flush" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="413" end="529" startBytecode="0" endBytecode="1009" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer)</Message>
+    </Method>
+    <LocalVariable name="header" register="1" pc="127" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from header</Message>
+    </LocalVariable>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="414" end="414" startBytecode="4" endBytecode="4" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 414]</Message>
+    </SourceLine>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="441" end="441" startBytecode="128" endBytecode="128" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at SslSelectChannelEndPoint.java:[line 441]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="1" rank="15" abbrev="RV" category="STYLE" instanceHash="375be2e799409f861acf843b5d2910a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of java.nio.Buffer.position() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="fill" signature="(Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="252" end="395" startBytecode="0" endBytecode="977" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.fill(Buffer)</Message>
+    </Method>
+    <Method classname="java.nio.Buffer" name="position" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.nio.Buffer" start="298" end="298" startBytecode="0" endBytecode="46" sourcefile="Buffer.java" sourcepath="java/nio/Buffer.java"/>
+      <Message>Called method java.nio.Buffer.position()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="351" end="351" startBytecode="280" endBytecode="280" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 351]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="1" rank="15" abbrev="RV" category="STYLE" instanceHash="6d47c06b6d8479ce7f473ac54379be75" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Return value of method without side effect is ignored</ShortMessage>
+    <LongMessage>Return value of java.nio.Buffer.position() ignored, but method has no side effect</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="flush" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="413" end="529" startBytecode="0" endBytecode="1009" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer)</Message>
+    </Method>
+    <Method classname="java.nio.Buffer" name="position" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.nio.Buffer" start="298" end="298" startBytecode="0" endBytecode="46" sourcefile="Buffer.java" sourcepath="java/nio/Buffer.java"/>
+      <Message>Called method java.nio.Buffer.position()</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="500" end="500" startBytecode="369" endBytecode="369" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[line 500]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="ad3bd1440274da7c483ecaf5585a56c2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.fill(Buffer) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="fill" signature="(Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="252" end="395" startBytecode="0" endBytecode="977" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.fill(Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="359" end="361" startBytecode="398" endBytecode="401" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 359-361]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="f907de09054faaf64a5097e300ad6099" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="flush" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="413" end="529" startBytecode="0" endBytecode="1009" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="508" end="510" startBytecode="486" endBytecode="489" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 508-510]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="d6f1a5d0f33f8ec9ef7bb2e5dde5171f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.unwrap(ByteBuffer) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="unwrap" signature="(Ljava/nio/ByteBuffer;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="567" end="659" startBytecode="0" endBytecode="817" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.unwrap(ByteBuffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="653" end="656" startBytecode="463" endBytecode="466" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 653-656]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="791b5c486f35f9fb0a85922c41a33dc5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.wrap(Buffer) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="wrap" signature="(Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="763" end="814" startBytecode="0" endBytecode="719" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.wrap(Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="804" end="807" startBytecode="390" endBytecode="393" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 804-807]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_FALLTHROUGH" priority="2" rank="17" abbrev="SF" category="STYLE" instanceHash="2568910daee9968240ae176a061b64b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="484">
+    <ShortMessage>Switch statement found where one case falls through to the next case</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.wrap(Buffer, Buffer) where one case falls through to the next case</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="wrap" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="686" end="756" startBytecode="0" endBytecode="951" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.wrap(Buffer, Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="746" end="749" startBytecode="542" endBytecode="545" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 746-749]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="1b650c3e1410ae8bc8877e67fb789bea" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.fill(Buffer) where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="fill" signature="(Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="252" end="395" startBytecode="0" endBytecode="977" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.fill(Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="355" end="361" startBytecode="365" endBytecode="405" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 355-361]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="a8a40169edad63b2d2464f48113b5e0e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer) where default case is missing</LongMessage>
+    <Class classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="47" end="845" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+        <Message>At SslSelectChannelEndPoint.java:[lines 47-845]</Message>
+      </SourceLine>
+      <Message>In class org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint</Message>
+    </Class>
+    <Method classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" name="flush" signature="(Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;Lorg/eclipse/jetty/io/Buffer;)I" isStatic="false" primary="true">
+      <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" start="413" end="529" startBytecode="0" endBytecode="1009" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java"/>
+      <Message>In method org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint.flush(Buffer, Buffer, Buffer)</Message>
+    </Method>
+    <SourceLine classname="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" primary="true" start="504" end="510" startBytecode="454" endBytecode="493" sourcefile="SslSelectChannelEndPoint.java" sourcepath="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java">
+      <Message>At SslSelectChannelEndPoint.java:[lines 504-510]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" abbrev="RV" category="STYLE">
+    <ShortDescription>Return value of method without side effect is ignored</ShortDescription>
+    <Details><![CDATA[
+
+<p>This code calls a method and ignores the return value. However our analysis shows that
+the method (including its implementations in subclasses if any) does not produce any effect
+other than return value. Thus this call can be removed.
+</p>
+<p>We are trying to reduce the false positives as much as possible, but in some cases this warning might be wrong.
+Common false-positive cases include:</p>
+<p>- The method is designed to be overridden and produce a side effect in other projects which are out of the scope of the analysis.</p>
+<p>- The method is called to trigger the class loading which may have a side effect.</p>
+<p>- The method is called just to get some exception.</p>
+<p>If you feel that our assumption is incorrect, you can use a @CheckReturnValue annotation
+to instruct SpotBugs that ignoring the return value of this method is acceptable.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_FALLTHROUGH" abbrev="SF" category="STYLE" cweid="484">
+    <ShortDescription>Switch statement found where one case falls through to the next case</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where one case branch will fall through to the next case.
+  Usually you need to end this case with a break or return.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_INVOKING_TOSTRING_ON_ARRAY" abbrev="USELESS_STRING" category="CORRECTNESS">
+    <ShortDescription>Invocation of toString on an array</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+The code invokes toString on an array, which will generate a fairly useless result
+such as [C@16f0472. Consider using Arrays.toString to convert the array into a readable
+String that gives the contents of the array. See Programming Puzzlers, chapter 3, puzzle 12.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ES_COMPARING_STRINGS_WITH_EQ" abbrev="ES" category="BAD_PRACTICE">
+    <ShortDescription>Comparison of String objects using == or !=</ShortDescription>
+    <Details><![CDATA[
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" abbrev="RCN" category="CORRECTNESS">
+    <ShortDescription>Nullcheck of value previously dereferenced</ShortDescription>
+    <Details><![CDATA[
+
+<p> A value is checked here to see whether it is null, but this value cannot
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RpC_REPEATED_CONDITIONAL_TEST" abbrev="RpC" category="CORRECTNESS">
+    <ShortDescription>Repeated conditional tests</ShortDescription>
+    <Details><![CDATA[
+
+<p>The code contains a conditional test is performed twice, one right after the other
+(e.g., <code>x == 0 || x == 0</code>). Perhaps the second occurrence is intended to be something else
+(e.g., <code>x == 0 || y == 0</code>).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_FP_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Double(double)</code> is guaranteed to always result in a new object whereas
+      <code>Double.valueOf(double)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of <code>Double</code> and <code>Float</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS" abbrev="Eq" category="BAD_PRACTICE">
+    <ShortDescription>Equals checks for incompatible operand</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This equals method is checking to see if the argument is some incompatible type
+(i.e., a class that is neither a supertype nor subtype of the class that defines
+the equals method). For example, the Foo class might have an equals method
+that looks like:
+</p>
+<pre><code>public boolean equals(Object o) {
+    if (o instanceof Foo)
+        return name.equals(((Foo)o).name);
+    else if (o instanceof String)
+        return name.equals(o);
+    else return false;
+}
+</code></pre>
+
+<p>This is considered bad practice, as it makes it very hard to implement an equals method that
+is symmetric and transitive. Without those properties, very unexpected behaviors are possible.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_OOI_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be moved out of an interface and made package protected</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+ A final static field that is
+defined in an interface references a mutable
+   object such as an array or hashtable.
+   This mutable object could
+   be changed by malicious code or
+        by accident from another package.
+   To solve this, the field needs to be moved to a class
+   and made package protected
+   to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="OS_OPEN_STREAM" abbrev="OS" category="BAD_PRACTICE">
+    <ShortDescription>Method may fail to close stream</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method creates an IO stream object, does not assign it to any
+fields, pass it to other methods that might close it,
+or return it, and does not appear to close
+the stream on all paths out of the method.&nbsp; This may result in
+a file descriptor leak.&nbsp; It is generally a good
+idea to use a <code>finally</code> block to ensure that streams are
+closed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="RpC">
+    <Description>Repeated conditional test</Description>
+  </BugCode>
+  <BugCode abbrev="OS">
+    <Description>Stream not closed on all paths</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="USELESS_STRING">
+    <Description>Useless/non-informative string generated</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="ES" cweid="597">
+    <Description>Checking String equality using == or !=</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>org.eclipse.jetty.io.Buffer</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.BufferCache</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.BufferCache$CachedBuffer</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.BufferDateCache</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.BufferUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.Buffers</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.ByteArrayBuffer</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.EndPoint</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.EofException</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.ThreadLocalBuffers</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.View</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.View$CaseInsensitive</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.nio.NIOBuffer</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.nio.SelectChannelEndPoint</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.nio.SelectorManager</MissingClass>
+    <MissingClass>org.eclipse.jetty.io.nio.SelectorManager$SelectSet</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.LazyList</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.MultiMap</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.QuotedStringTokenizer</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.SingletonList</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.StringMap</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.StringUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.TypeUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.URIUtil</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.UrlEncoded</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.Utf8StringBuffer</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.Utf8StringBuilder</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.component.AbstractLifeCycle</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.log.Log</MissingClass>
+    <MissingClass>org.eclipse.jetty.util.log.Logger</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:36:41 +0900" total_classes="47" referenced_classes="189" total_bugs="61" total_size="4566" num_packages="3" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.66" clock_seconds="3.14" peak_mbytes="271.58" alloc_mbytes="4078.00" gc_seconds="0.07" priority_3="22" priority_2="26" priority_1="13">
+    <FileStats path="org/eclipse/jetty/http/AbstractGenerator.java" bugCount="0" size="215"/>
+    <FileStats path="org/eclipse/jetty/http/EncodedHttpURI.java" bugCount="0" size="76"/>
+    <FileStats path="org/eclipse/jetty/http/Generator.java" bugCount="0" size="27"/>
+    <FileStats path="org/eclipse/jetty/http/HttpBuffers.java" bugCount="0" size="79"/>
+    <FileStats path="org/eclipse/jetty/http/HttpContent.java" bugCount="0" size="8"/>
+    <FileStats path="org/eclipse/jetty/http/HttpCookie.java" bugCount="0" size="88"/>
+    <FileStats path="org/eclipse/jetty/http/HttpException.java" bugCount="0" size="31"/>
+    <FileStats path="org/eclipse/jetty/http/HttpFields.java" bugCount="8" size="710" bugHash="b1c974d8f717bd45629562874ce0fe6d"/>
+    <FileStats path="org/eclipse/jetty/http/HttpGenerator.java" bugCount="3" size="484" bugHash="f07aa2f050cb092c7e35584dc602fdd8"/>
+    <FileStats path="org/eclipse/jetty/http/HttpHeaderValues.java" bugCount="3" size="65" bugHash="7f4c2e91a0c7e004dbe4880da84582b1"/>
+    <FileStats path="org/eclipse/jetty/http/HttpHeaders.java" bugCount="0" size="238"/>
+    <FileStats path="org/eclipse/jetty/http/HttpMethods.java" bugCount="0" size="42"/>
+    <FileStats path="org/eclipse/jetty/http/HttpParser.java" bugCount="1" size="541" bugHash="2d116245e0c31434ae9df8aafec104a1"/>
+    <FileStats path="org/eclipse/jetty/http/HttpSchemes.java" bugCount="0" size="10"/>
+    <FileStats path="org/eclipse/jetty/http/HttpStatus.java" bugCount="0" size="203"/>
+    <FileStats path="org/eclipse/jetty/http/HttpTokens.java" bugCount="1" size="15" bugHash="ff0ff240b7b66a7c487cee42c29a24fb"/>
+    <FileStats path="org/eclipse/jetty/http/HttpURI.java" bugCount="5" size="307" bugHash="c7d198c67fe56c6f9e7746cec5b587c2"/>
+    <FileStats path="org/eclipse/jetty/http/HttpVersions.java" bugCount="0" size="18"/>
+    <FileStats path="org/eclipse/jetty/http/MimeTypes.java" bugCount="1" size="226" bugHash="5ae37af9657e03131a624beb6c93f137"/>
+    <FileStats path="org/eclipse/jetty/http/Parser.java" bugCount="0" size="6"/>
+    <FileStats path="org/eclipse/jetty/http/PathMap.java" bugCount="7" size="240" bugHash="942c5deffe63289d6071d60ab609e9cd"/>
+    <FileStats path="org/eclipse/jetty/http/security/B64Code.java" bugCount="3" size="111" bugHash="9786bdb888ab247a4763625367aac964"/>
+    <FileStats path="org/eclipse/jetty/http/security/Constraint.java" bugCount="4" size="72" bugHash="19ab4d177c853713af69ae62c7dcaa93"/>
+    <FileStats path="org/eclipse/jetty/http/security/Credential.java" bugCount="4" size="83" bugHash="c840acd1461c91150c218be49495a0a6"/>
+    <FileStats path="org/eclipse/jetty/http/security/Password.java" bugCount="7" size="86" bugHash="b87cf1540ef61ca36b92963091ea91da"/>
+    <FileStats path="org/eclipse/jetty/http/security/UnixCrypt.java" bugCount="1" size="200" bugHash="d6b3d0650a0a45bb63e9faacef79d71f"/>
+    <FileStats path="org/eclipse/jetty/http/ssl/SslSelectChannelEndPoint.java" bugCount="13" size="385" bugHash="d39f99266ed36b241d64971c14337d6d"/>
+    <PackageStats package="org.eclipse.jetty.http" total_bugs="29" total_types="37" total_size="3629" priority_3="15" priority_2="10" priority_1="4">
+      <ClassStats class="org.eclipse.jetty.http.AbstractGenerator" sourceFile="AbstractGenerator.java" interface="false" size="215" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.EncodedHttpURI" sourceFile="EncodedHttpURI.java" interface="false" size="76" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.Generator" sourceFile="Generator.java" interface="true" size="27" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpBuffers" sourceFile="HttpBuffers.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpBuffers$1" sourceFile="HttpBuffers.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpBuffers$2" sourceFile="HttpBuffers.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpContent" sourceFile="HttpContent.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpCookie" sourceFile="HttpCookie.java" interface="false" size="88" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpException" sourceFile="HttpException.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields" sourceFile="HttpFields.java" interface="false" size="411" bugs="8" priority_3="8"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$1" sourceFile="HttpFields.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$2" sourceFile="HttpFields.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$3" sourceFile="HttpFields.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$4" sourceFile="HttpFields.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$5" sourceFile="HttpFields.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$6" sourceFile="HttpFields.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$DateGenerator" sourceFile="HttpFields.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$DateParser" sourceFile="HttpFields.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpFields$Field" sourceFile="HttpFields.java" interface="false" size="112" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpGenerator" sourceFile="HttpGenerator.java" interface="false" size="476" bugs="3" priority_3="1" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpGenerator$1" sourceFile="HttpGenerator.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpGenerator$Status" sourceFile="HttpGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpHeaderValues" sourceFile="HttpHeaderValues.java" interface="false" size="65" bugs="3" priority_3="1" priority_2="1" priority_1="1"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpHeaders" sourceFile="HttpHeaders.java" interface="false" size="238" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpMethods" sourceFile="HttpMethods.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpParser" sourceFile="HttpParser.java" interface="false" size="529" bugs="1" priority_2="1"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpParser$EventHandler" sourceFile="HttpParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpSchemes" sourceFile="HttpSchemes.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpStatus" sourceFile="HttpStatus.java" interface="false" size="77" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpStatus$Code" sourceFile="HttpStatus.java" interface="false" size="126" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpTokens" sourceFile="HttpTokens.java" interface="true" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpURI" sourceFile="HttpURI.java" interface="false" size="307" bugs="5" priority_2="3" priority_1="2"/>
+      <ClassStats class="org.eclipse.jetty.http.HttpVersions" sourceFile="HttpVersions.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.MimeTypes" sourceFile="MimeTypes.java" interface="false" size="226" bugs="1" priority_2="1"/>
+      <ClassStats class="org.eclipse.jetty.http.Parser" sourceFile="Parser.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.PathMap" sourceFile="PathMap.java" interface="false" size="215" bugs="7" priority_3="5" priority_2="2"/>
+      <ClassStats class="org.eclipse.jetty.http.PathMap$Entry" sourceFile="PathMap.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.jetty.http.security" total_bugs="19" total_types="7" total_size="552" priority_3="7" priority_2="5" priority_1="7">
+      <ClassStats class="org.eclipse.jetty.http.security.B64Code" sourceFile="B64Code.java" interface="false" size="111" bugs="3" priority_3="2" priority_1="1"/>
+      <ClassStats class="org.eclipse.jetty.http.security.Constraint" sourceFile="Constraint.java" interface="false" size="72" bugs="4" priority_3="1" priority_2="2" priority_1="1"/>
+      <ClassStats class="org.eclipse.jetty.http.security.Credential" sourceFile="Credential.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.security.Credential$Crypt" sourceFile="Credential.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.security.Credential$MD5" sourceFile="Credential.java" interface="false" size="58" bugs="4" priority_3="3" priority_2="1"/>
+      <ClassStats class="org.eclipse.jetty.http.security.Password" sourceFile="Password.java" interface="false" size="86" bugs="7" priority_3="1" priority_2="2" priority_1="4"/>
+      <ClassStats class="org.eclipse.jetty.http.security.UnixCrypt" sourceFile="UnixCrypt.java" interface="false" size="200" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="org.eclipse.jetty.http.ssl" total_bugs="13" total_types="3" total_size="385" priority_2="11" priority_1="2">
+      <ClassStats class="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint" sourceFile="SslSelectChannelEndPoint.java" interface="false" size="372" bugs="13" priority_2="11" priority_1="2"/>
+      <ClassStats class="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint$1" sourceFile="SslSelectChannelEndPoint.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.eclipse.jetty.http.ssl.SslSelectChannelEndPoint$2" sourceFile="SslSelectChannelEndPoint.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="272" invocations="925" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="19950" standardDeviationMicrosecondsPerInvocation="882"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="168" invocations="439" avgMicrosecondsPerInvocation="382" maxMicrosecondsPerInvocation="16207" standardDeviationMicrosecondsPerInvocation="1363"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="164" invocations="426" avgMicrosecondsPerInvocation="385" maxMicrosecondsPerInvocation="13276" standardDeviationMicrosecondsPerInvocation="1257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="134" invocations="420" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="8927" standardDeviationMicrosecondsPerInvocation="850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="133" invocations="838" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="20097" standardDeviationMicrosecondsPerInvocation="854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="128" invocations="435" avgMicrosecondsPerInvocation="296" maxMicrosecondsPerInvocation="9324" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="126" invocations="420" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="18509" standardDeviationMicrosecondsPerInvocation="1195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="113" invocations="189" avgMicrosecondsPerInvocation="601" maxMicrosecondsPerInvocation="7081" standardDeviationMicrosecondsPerInvocation="1144"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="102" invocations="189" avgMicrosecondsPerInvocation="541" maxMicrosecondsPerInvocation="6191" standardDeviationMicrosecondsPerInvocation="1001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="76" invocations="322" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="13480" standardDeviationMicrosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="71" invocations="427" avgMicrosecondsPerInvocation="167" maxMicrosecondsPerInvocation="5998" standardDeviationMicrosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="476" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="15968" standardDeviationMicrosecondsPerInvocation="738"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="40" invocations="189" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="3506" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="37" invocations="189" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="10868" standardDeviationMicrosecondsPerInvocation="881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="37" invocations="189" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="6491" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="36" invocations="47" avgMicrosecondsPerInvocation="780" maxMicrosecondsPerInvocation="6670" standardDeviationMicrosecondsPerInvocation="1252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="35" invocations="426" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="2209" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="35" invocations="933" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="1964" standardDeviationMicrosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="33" invocations="476" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="5571" standardDeviationMicrosecondsPerInvocation="380"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="262" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="10424" standardDeviationMicrosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="189" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="15295" standardDeviationMicrosecondsPerInvocation="1110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="25" invocations="11713" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="7104" standardDeviationMicrosecondsPerInvocation="67"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="23" invocations="850" avgMicrosecondsPerInvocation="28" maxMicrosecondsPerInvocation="849" standardDeviationMicrosecondsPerInvocation="57"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="22" invocations="47" avgMicrosecondsPerInvocation="484" maxMicrosecondsPerInvocation="2650" standardDeviationMicrosecondsPerInvocation="759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="189" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="5207" standardDeviationMicrosecondsPerInvocation="393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="47" avgMicrosecondsPerInvocation="452" maxMicrosecondsPerInvocation="2107" standardDeviationMicrosecondsPerInvocation="494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="20" invocations="189" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1309" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="20" invocations="400" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1838" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="19" invocations="47" avgMicrosecondsPerInvocation="412" maxMicrosecondsPerInvocation="4933" standardDeviationMicrosecondsPerInvocation="833"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="18" invocations="189" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="1918" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="18" invocations="47" avgMicrosecondsPerInvocation="383" maxMicrosecondsPerInvocation="3336" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="17" invocations="189" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="1058" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="16" invocations="420" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="1019" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="16" invocations="47" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="2530" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="15" invocations="47" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="3508" standardDeviationMicrosecondsPerInvocation="617"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

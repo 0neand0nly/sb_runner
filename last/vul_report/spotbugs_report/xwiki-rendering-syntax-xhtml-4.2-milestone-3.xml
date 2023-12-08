@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013360025" analysisTimestamp="1702023892054" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-rendering-syntax-xhtml-4.2-milestone-3.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="98589053b233ba8bfb88bae44879e47" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer(XHTMLLinkRenderer, XHTMLImageRenderer, ListenerChain) may expose internal representation by storing an externally mutable object into XHTMLChainingRenderer.imageRenderer</LongMessage>
+    <Class classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" start="69" end="555" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+        <Message>At XHTMLChainingRenderer.java:[lines 69-555]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer</Message>
+    </Class>
+    <Method classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" name="&lt;init&gt;" signature="(Lorg/xwiki/rendering/internal/renderer/xhtml/link/XHTMLLinkRenderer;Lorg/xwiki/rendering/internal/renderer/xhtml/image/XHTMLImageRenderer;Lorg/xwiki/rendering/listener/chaining/ListenerChain;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" start="69" end="74" startBytecode="0" endBytecode="107" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java"/>
+      <Message>In method new org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer(XHTMLLinkRenderer, XHTMLImageRenderer, ListenerChain)</Message>
+    </Method>
+    <Field classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" name="imageRenderer" signature="Lorg/xwiki/rendering/internal/renderer/xhtml/image/XHTMLImageRenderer;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+        <Message>In XHTMLChainingRenderer.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer.imageRenderer</Message>
+    </Field>
+    <LocalVariable name="imageRenderer" register="2" pc="16" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named imageRenderer</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" primary="true" start="73" end="73" startBytecode="16" endBytecode="16" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+      <Message>At XHTMLChainingRenderer.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5327a2851d66aefed78d47d9374a083e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer(XHTMLLinkRenderer, XHTMLImageRenderer, ListenerChain) may expose internal representation by storing an externally mutable object into XHTMLChainingRenderer.linkRenderer</LongMessage>
+    <Class classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" start="69" end="555" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+        <Message>At XHTMLChainingRenderer.java:[lines 69-555]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer</Message>
+    </Class>
+    <Method classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" name="&lt;init&gt;" signature="(Lorg/xwiki/rendering/internal/renderer/xhtml/link/XHTMLLinkRenderer;Lorg/xwiki/rendering/internal/renderer/xhtml/image/XHTMLImageRenderer;Lorg/xwiki/rendering/listener/chaining/ListenerChain;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" start="69" end="74" startBytecode="0" endBytecode="107" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java"/>
+      <Message>In method new org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer(XHTMLLinkRenderer, XHTMLImageRenderer, ListenerChain)</Message>
+    </Method>
+    <Field classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" name="linkRenderer" signature="Lorg/xwiki/rendering/internal/renderer/xhtml/link/XHTMLLinkRenderer;" isStatic="false" primary="true">
+      <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+        <Message>In XHTMLChainingRenderer.java</Message>
+      </SourceLine>
+      <Message>Field org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer.linkRenderer</Message>
+    </Field>
+    <LocalVariable name="linkRenderer" register="1" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named linkRenderer</Message>
+    </LocalVariable>
+    <SourceLine classname="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" primary="true" start="72" end="72" startBytecode="11" endBytecode="11" sourcefile="XHTMLChainingRenderer.java" sourcepath="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java">
+      <Message>At XHTMLChainingRenderer.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="67">
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.xwiki.component.manager.ComponentLookupException</MissingClass>
+    <MissingClass>org.xwiki.component.manager.ComponentManager</MissingClass>
+    <MissingClass>org.xwiki.component.phase.Initializable</MissingClass>
+    <MissingClass>org.xwiki.component.phase.InitializationException</MissingClass>
+    <MissingClass>org.xwiki.rendering.configuration.RenderingConfiguration</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.parser.wikimodel.AbstractWikiModelParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.parser.wikimodel.DefaultXWikiGeneratorListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.parser.wikimodel.XWikiGeneratorListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.AbstractBlockRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.AbstractPrintRendererFactory</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.ParametersPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.Format</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.HeaderLevel</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.ImageListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.LinkListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.ListType</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.Listener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.MetaData</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.BlockStateChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.BlockStateChainingListener$Event</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.ChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.EmptyBlockChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.ListenerChain</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.MetaDataStateChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.reference.ResourceReference</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.reference.ResourceType</MissingClass>
+    <MissingClass>org.xwiki.rendering.parser.ParseException</MissingClass>
+    <MissingClass>org.xwiki.rendering.parser.ResourceReferenceParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.parser.StreamParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.AbstractChainingPrintRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.PrintRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.PrintRendererFactory</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.printer.DefaultWikiPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.printer.WikiPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.printer.XHTMLWikiPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.reference.ResourceReferenceSerializer</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.reference.ResourceReferenceTypeSerializer</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.reference.link.LinkLabelGenerator</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.reference.link.URILabelGenerator</MissingClass>
+    <MissingClass>org.xwiki.rendering.syntax.Syntax</MissingClass>
+    <MissingClass>org.xwiki.rendering.syntax.SyntaxType</MissingClass>
+    <MissingClass>org.xwiki.rendering.util.IdGenerator</MissingClass>
+    <MissingClass>org.xwiki.rendering.wiki.WikiModel</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.IWemListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.WikiParameter</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.WikiParameters</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.WikiReference</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.impl.WikiScannerContext</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.XhtmlParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.filter.AccumulationXMLFilter</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.filter.DTDXMLFilter</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.filter.XHTMLWhitespaceXMLFilter</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.CommentHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.DivisionTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.HeaderTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.ImgTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.ReferenceTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.SpanTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.TableDataTagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.handler.TagHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.impl.XhtmlHandler</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.impl.XhtmlHandler$TagStack</MissingClass>
+    <MissingClass>org.xwiki.rendering.wikimodel.xhtml.impl.XhtmlHandler$TagStack$TagContext</MissingClass>
+    <MissingClass>org.xwiki.xml.EntityResolver</MissingClass>
+    <MissingClass>org.xwiki.xml.XMLReaderFactory</MissingClass>
+    <MissingClass>org.xwiki.xml.XMLUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:20 +0900" total_classes="39" referenced_classes="75" total_bugs="2" total_size="1018" num_packages="5" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.02" clock_seconds="1.64" peak_mbytes="236.76" alloc_mbytes="4078.00" gc_seconds="0.02" priority_2="2">
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/XHTMLParser.java" bugCount="0" size="42"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XHTMLMarkerResourceReferenceParser.java" bugCount="0" size="15"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XHTMLXWikiGeneratorListener.java" bugCount="0" size="22"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiCommentHandler.java" bugCount="0" size="82"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiDivisionTagHandler.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiHeaderTagHandler.java" bugCount="0" size="12"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiImageTagHandler.java" bugCount="0" size="33"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiReferenceTagHandler.java" bugCount="0" size="63"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiSpanTagHandler.java" bugCount="0" size="25"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiTableDataTagHandler.java" bugCount="0" size="20"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiWikiReference.java" bugCount="0" size="12"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiXHTMLWhitespaceXMLFilter.java" bugCount="0" size="37"/>
+    <FileStats path="org/xwiki/rendering/internal/parser/xhtml/wikimodel/XWikiXMLReaderFactory.java" bugCount="0" size="16"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLBlockRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLChainingRenderer.java" bugCount="0" size="17"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLRenderer.java" bugCount="0" size="14"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLRendererFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLBlockRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLChainingRenderer.java" bugCount="2" size="241" bugHash="db35b5bc60276fc3376f1a91ac834403"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLMacroRenderer.java" bugCount="0" size="24"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLMarkerResourceReferenceSerializer.java" bugCount="0" size="18"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLRenderer.java" bugCount="0" size="14"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLRendererFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/image/AnnotatedXHTMLImageRenderer.java" bugCount="0" size="17"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/image/DefaultXHTMLImageRenderer.java" bugCount="0" size="38"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/image/XHTMLImageRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/AbstractXHTMLLinkTypeRenderer.java" bugCount="0" size="54"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/AnnotatedXHTMLLinkRenderer.java" bugCount="0" size="23"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/AttachmentXHTMLLinkTypeRenderer.java" bugCount="0" size="19"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/DefaultXHTMLLinkRenderer.java" bugCount="0" size="29"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/DefaultXHTMLLinkTypeRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/DocumentXHTMLLinkTypeRenderer.java" bugCount="0" size="53"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/InterWikiXHTMLLinkTypeRenderer.java" bugCount="0" size="11"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/MailtoXHTMLLinkTypeRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/PathXHTMLLinkTypeRenderer.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/UNCXHTMLLinkTypeRenderer.java" bugCount="0" size="7"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/XHTMLLinkRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/XHTMLLinkTypeRenderer.java" bugCount="0" size="4"/>
+    <PackageStats package="org.xwiki.rendering.internal.parser.xhtml" total_bugs="0" total_types="1" total_size="42">
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.XHTMLParser" sourceFile="XHTMLParser.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.parser.xhtml.wikimodel" total_bugs="0" total_types="12" total_size="342">
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XHTMLMarkerResourceReferenceParser" sourceFile="XHTMLMarkerResourceReferenceParser.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XHTMLXWikiGeneratorListener" sourceFile="XHTMLXWikiGeneratorListener.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiCommentHandler" sourceFile="XWikiCommentHandler.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiDivisionTagHandler" sourceFile="XWikiDivisionTagHandler.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiHeaderTagHandler" sourceFile="XWikiHeaderTagHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiImageTagHandler" sourceFile="XWikiImageTagHandler.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiReferenceTagHandler" sourceFile="XWikiReferenceTagHandler.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiSpanTagHandler" sourceFile="XWikiSpanTagHandler.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiTableDataTagHandler" sourceFile="XWikiTableDataTagHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiWikiReference" sourceFile="XWikiWikiReference.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiXHTMLWhitespaceXMLFilter" sourceFile="XWikiXHTMLWhitespaceXMLFilter.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.parser.xhtml.wikimodel.XWikiXMLReaderFactory" sourceFile="XWikiXMLReaderFactory.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml" total_bugs="2" total_types="11" total_size="350" priority_2="2">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLBlockRenderer" sourceFile="AnnotatedXHTMLBlockRenderer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLChainingRenderer" sourceFile="AnnotatedXHTMLChainingRenderer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLRenderer" sourceFile="AnnotatedXHTMLRenderer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLRendererFactory" sourceFile="AnnotatedXHTMLRendererFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLBlockRenderer" sourceFile="XHTMLBlockRenderer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer" sourceFile="XHTMLChainingRenderer.java" interface="false" size="237" bugs="2" priority_2="2"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer$1" sourceFile="XHTMLChainingRenderer.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLMacroRenderer" sourceFile="XHTMLMacroRenderer.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLMarkerResourceReferenceSerializer" sourceFile="XHTMLMarkerResourceReferenceSerializer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLRenderer" sourceFile="XHTMLRenderer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLRendererFactory" sourceFile="XHTMLRendererFactory.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml.image" total_bugs="0" total_types="3" total_size="61">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.image.AnnotatedXHTMLImageRenderer" sourceFile="AnnotatedXHTMLImageRenderer.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.image.DefaultXHTMLImageRenderer" sourceFile="DefaultXHTMLImageRenderer.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.image.XHTMLImageRenderer" sourceFile="XHTMLImageRenderer.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml.link" total_bugs="0" total_types="12" total_size="223">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.AbstractXHTMLLinkTypeRenderer" sourceFile="AbstractXHTMLLinkTypeRenderer.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.AnnotatedXHTMLLinkRenderer" sourceFile="AnnotatedXHTMLLinkRenderer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.AttachmentXHTMLLinkTypeRenderer" sourceFile="AttachmentXHTMLLinkTypeRenderer.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.DefaultXHTMLLinkRenderer" sourceFile="DefaultXHTMLLinkRenderer.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.DefaultXHTMLLinkTypeRenderer" sourceFile="DefaultXHTMLLinkTypeRenderer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.DocumentXHTMLLinkTypeRenderer" sourceFile="DocumentXHTMLLinkTypeRenderer.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.InterWikiXHTMLLinkTypeRenderer" sourceFile="InterWikiXHTMLLinkTypeRenderer.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.MailtoXHTMLLinkTypeRenderer" sourceFile="MailtoXHTMLLinkTypeRenderer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.PathXHTMLLinkTypeRenderer" sourceFile="PathXHTMLLinkTypeRenderer.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.UNCXHTMLLinkTypeRenderer" sourceFile="UNCXHTMLLinkTypeRenderer.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.XHTMLLinkRenderer" sourceFile="XHTMLLinkRenderer.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.XHTMLLinkTypeRenderer" sourceFile="XHTMLLinkTypeRenderer.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="186" invocations="676" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="8783" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="61" invocations="175" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="9647" standardDeviationMicrosecondsPerInvocation="892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="58" invocations="75" avgMicrosecondsPerInvocation="784" maxMicrosecondsPerInvocation="10881" standardDeviationMicrosecondsPerInvocation="1692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="347" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="2286" standardDeviationMicrosecondsPerInvocation="240"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="47" invocations="175" avgMicrosecondsPerInvocation="273" maxMicrosecondsPerInvocation="5881" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="44" invocations="175" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="7339" standardDeviationMicrosecondsPerInvocation="591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="38" invocations="175" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="6454" standardDeviationMicrosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="36" invocations="175" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="7129" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="35" invocations="75" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="4952" standardDeviationMicrosecondsPerInvocation="881"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="35" invocations="175" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="2159" standardDeviationMicrosecondsPerInvocation="291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="28" invocations="682" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="2288" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="151" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="1294" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="27" invocations="184" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="14791" standardDeviationMicrosecondsPerInvocation="1086"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="157" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="10020" standardDeviationMicrosecondsPerInvocation="813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="21" invocations="75" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="16119" standardDeviationMicrosecondsPerInvocation="1847"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="20" invocations="39" avgMicrosecondsPerInvocation="527" maxMicrosecondsPerInvocation="3772" standardDeviationMicrosecondsPerInvocation="653"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="75" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="5282" standardDeviationMicrosecondsPerInvocation="685"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="567" avgMicrosecondsPerInvocation="32" maxMicrosecondsPerInvocation="611" standardDeviationMicrosecondsPerInvocation="68"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="39" avgMicrosecondsPerInvocation="450" maxMicrosecondsPerInvocation="6064" standardDeviationMicrosecondsPerInvocation="1010"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="17" invocations="75" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="1658" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="75" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="4064" standardDeviationMicrosecondsPerInvocation="638"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="14" invocations="75" avgMicrosecondsPerInvocation="197" maxMicrosecondsPerInvocation="7041" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="13" invocations="2137" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="908" standardDeviationMicrosecondsPerInvocation="25"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="12" invocations="75" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="1711" standardDeviationMicrosecondsPerInvocation="299"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="75" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="2956" standardDeviationMicrosecondsPerInvocation="427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="11" invocations="175" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1070" standardDeviationMicrosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="11" invocations="39" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="1748" standardDeviationMicrosecondsPerInvocation="320"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

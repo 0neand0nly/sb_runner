@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013668066" analysisTimestamp="1702014209175" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\antisamy-1.5.3.jar</Jar>
+  </Project>
+  <BugInstance type="BC_UNCONFIRMED_CAST" priority="2" rank="17" abbrev="BC" category="STYLE" instanceHash="fcaaa40a8534e3ec88a8ac13bcd671aa" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from org.owasp.validator.html.Policy to org.owasp.validator.html.InternalPolicy in new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssHandler" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="68" end="521" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>At CssHandler.java:[lines 68-521]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssHandler</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssHandler" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;Ljava/util/LinkedList;Ljava/util/List;Ljava/lang/String;Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="140" end="148" startBytecode="0" endBytecode="39" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java"/>
+      <Message>In method new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle)</Message>
+    </Method>
+    <Type descriptor="Lorg/owasp/validator/html/Policy;" role="TYPE_FOUND">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>Actual type org.owasp.validator.html.Policy</Message>
+    </Type>
+    <Type descriptor="Lorg/owasp/validator/html/InternalPolicy;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="150" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+        <Message>At InternalPolicy.java:[lines 34-150]</Message>
+      </SourceLine>
+      <Message>Expected org.owasp.validator.html.InternalPolicy</Message>
+    </Type>
+    <LocalVariable name="policy" register="1" pc="21" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from policy</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssHandler" primary="true" start="141" end="141" startBytecode="22" endBytecode="22" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+      <Message>At CssHandler.java:[line 141]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="4ab69228ec97641635439d09a728228d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle) may expose internal representation by storing an externally mutable object into CssHandler.errorMessages</LongMessage>
+    <Class classname="org.owasp.validator.css.CssHandler" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="68" end="521" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>At CssHandler.java:[lines 68-521]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssHandler</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssHandler" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;Ljava/util/LinkedList;Ljava/util/List;Ljava/lang/String;Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="140" end="148" startBytecode="0" endBytecode="226" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java"/>
+      <Message>In method new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.css.CssHandler" name="errorMessages" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>In CssHandler.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.css.CssHandler.errorMessages</Message>
+    </Field>
+    <LocalVariable name="errorMessages" register="3" pc="30" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named errorMessages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssHandler" primary="true" start="142" end="142" startBytecode="30" endBytecode="30" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+      <Message>At CssHandler.java:[line 142]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="1ac00a86b7ab437370c6854487ee11f8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle) may expose internal representation by storing an externally mutable object into CssHandler.importedStyleSheets</LongMessage>
+    <Class classname="org.owasp.validator.css.CssHandler" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="68" end="521" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>At CssHandler.java:[lines 68-521]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssHandler</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssHandler" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;Ljava/util/LinkedList;Ljava/util/List;Ljava/lang/String;Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="140" end="148" startBytecode="0" endBytecode="226" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java"/>
+      <Message>In method new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.css.CssHandler" name="importedStyleSheets" signature="Ljava/util/LinkedList;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>In CssHandler.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.css.CssHandler.importedStyleSheets</Message>
+    </Field>
+    <LocalVariable name="embeddedStyleSheets" register="2" pc="53" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named embeddedStyleSheets</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssHandler" primary="true" start="145" end="145" startBytecode="53" endBytecode="53" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+      <Message>At CssHandler.java:[line 145]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="2f8e9f6e3d947cf99831aff85ae37ecc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle) may expose internal representation by storing an externally mutable object into CssHandler.messages</LongMessage>
+    <Class classname="org.owasp.validator.css.CssHandler" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="68" end="521" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>At CssHandler.java:[lines 68-521]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssHandler</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssHandler" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;Ljava/util/LinkedList;Ljava/util/List;Ljava/lang/String;Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="140" end="148" startBytecode="0" endBytecode="226" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java"/>
+      <Message>In method new org.owasp.validator.css.CssHandler(Policy, LinkedList, List, String, ResourceBundle)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.css.CssHandler" name="messages" signature="Ljava/util/ResourceBundle;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>In CssHandler.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.css.CssHandler.messages</Message>
+    </Field>
+    <LocalVariable name="messages" register="5" pc="36" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named messages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssHandler" primary="true" start="143" end="143" startBytecode="36" endBytecode="36" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+      <Message>At CssHandler.java:[line 143]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" instanceHash="8c14e1dec1d3bfde3b0dc8616d11e41e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in org.owasp.validator.css.CssHandler.importStyle(String, SACMediaList, String)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssHandler" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="68" end="521" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+        <Message>At CssHandler.java:[lines 68-521]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssHandler</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssHandler" name="importStyle" signature="(Ljava/lang/String;Lorg/w3c/css/sac/SACMediaList;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssHandler" start="217" end="281" startBytecode="0" endBytecode="140" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java"/>
+      <Message>In method org.owasp.validator.css.CssHandler.importStyle(String, SACMediaList, String)</Message>
+    </Method>
+    <LocalVariable name="uri" register="1" pc="53" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from uri</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssHandler" primary="true" start="228" end="228" startBytecode="54" endBytecode="54" sourcefile="CssHandler.java" sourcepath="org/owasp/validator/css/CssHandler.java">
+      <Message>At CssHandler.java:[line 228]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="cd16dd63e237ab9d938394f1cc0765bf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.css.CssScanner(InternalPolicy, ResourceBundle) may expose internal representation by storing an externally mutable object into CssScanner.messages</LongMessage>
+    <Class classname="org.owasp.validator.css.CssScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssScanner" start="65" end="283" sourcefile="CssScanner.java" sourcepath="org/owasp/validator/css/CssScanner.java">
+        <Message>At CssScanner.java:[lines 65-283]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssScanner" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/InternalPolicy;Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssScanner" start="84" end="87" startBytecode="0" endBytecode="103" sourcefile="CssScanner.java" sourcepath="org/owasp/validator/css/CssScanner.java"/>
+      <Message>In method new org.owasp.validator.css.CssScanner(InternalPolicy, ResourceBundle)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.css.CssScanner" name="messages" signature="Ljava/util/ResourceBundle;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssScanner" sourcefile="CssScanner.java" sourcepath="org/owasp/validator/css/CssScanner.java">
+        <Message>In CssScanner.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.css.CssScanner.messages</Message>
+    </Field>
+    <LocalVariable name="messages" register="2" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named messages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.css.CssScanner" primary="true" start="86" end="86" startBytecode="22" endBytecode="22" sourcefile="CssScanner.java" sourcepath="org/owasp/validator/css/CssScanner.java">
+      <Message>At CssScanner.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="e5096655951ae8c2e24ab441dd3a864e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.css.CssValidator.isValidProperty(String, LexicalUnit)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="isValidProperty" signature="(Ljava/lang/String;Lorg/w3c/css/sac/LexicalUnit;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="85" end="109" startBytecode="0" endBytecode="216" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.isValidProperty(String, LexicalUnit)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="89" end="89" startBytecode="14" endBytecode="14" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="36d5983855d0cb34569867b9408d469" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.css.CssValidator.validateCondition(AttributeCondition, AntiSamyPattern, AntiSamyPattern)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="validateCondition" signature="(Lorg/w3c/css/sac/AttributeCondition;Lorg/owasp/validator/html/model/AntiSamyPattern;Lorg/owasp/validator/html/model/AntiSamyPattern;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="274" end="275" startBytecode="0" endBytecode="116" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.validateCondition(AttributeCondition, AntiSamyPattern, AntiSamyPattern)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="274" end="274" startBytecode="4" endBytecode="4" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 274]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="c2dd8c7da4e268d582b1d434c288fff0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.css.CssValidator.validateSimpleSelector(SimpleSelector)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="validateSimpleSelector" signature="(Lorg/w3c/css/sac/SimpleSelector;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="186" end="187" startBytecode="0" endBytecode="109" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.validateSimpleSelector(SimpleSelector)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="186" end="186" startBytecode="4" endBytecode="4" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 186]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="d2b0fd3e0284a8adcd5ad669600d0d53" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.css.CssValidator.validateValue(Property, String)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="validateValue" signature="(Lorg/owasp/validator/html/model/Property;Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="290" end="326" startBytecode="0" endBytecode="413" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.validateValue(Property, String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="293" end="293" startBytecode="3" endBytecode="3" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 293]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="75e2b6315c16d7e55f5cda5352c84340" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in org.owasp.validator.css.CssValidator.isValidCondition(String, Condition)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="isValidCondition" signature="(Ljava/lang/String;Lorg/w3c/css/sac/Condition;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="206" end="249" startBytecode="0" endBytecode="349" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.isValidCondition(String, Condition)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="211" end="211" startBytecode="104" endBytecode="104" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 211]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="4a493b9e70e2e1d6c33837e80a73200" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in org.owasp.validator.css.CssValidator.isValidSelector(String, Selector)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="isValidSelector" signature="(Ljava/lang/String;Lorg/w3c/css/sac/Selector;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="129" end="166" startBytecode="0" endBytecode="325" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.isValidSelector(String, Selector)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="140" end="140" startBytecode="109" endBytecode="109" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 140]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" start="147" end="147" startBytecode="141" endBytecode="141" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CssValidator.java:[line 147]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" start="154" end="154" startBytecode="173" endBytecode="173" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at CssValidator.java:[line 154]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="eea0ae30258a7a63580b6cd4485fc4ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in org.owasp.validator.css.CssValidator.validateCondition(AttributeCondition, AntiSamyPattern, AntiSamyPattern)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="validateCondition" signature="(Lorg/w3c/css/sac/AttributeCondition;Lorg/owasp/validator/html/model/AntiSamyPattern;Lorg/owasp/validator/html/model/AntiSamyPattern;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="274" end="275" startBytecode="0" endBytecode="116" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.validateCondition(AttributeCondition, AntiSamyPattern, AntiSamyPattern)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="275" end="275" startBytecode="30" endBytecode="30" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 275]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="361ea0a2ebac77cdc9ff7449930450d1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in org.owasp.validator.css.CssValidator.validateSimpleSelector(SimpleSelector)</LongMessage>
+    <Class classname="org.owasp.validator.css.CssValidator" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="70" end="406" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+        <Message>At CssValidator.java:[lines 70-406]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.CssValidator</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.CssValidator" name="validateSimpleSelector" signature="(Lorg/w3c/css/sac/SimpleSelector;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.CssValidator" start="186" end="187" startBytecode="0" endBytecode="109" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java"/>
+      <Message>In method org.owasp.validator.css.CssValidator.validateSimpleSelector(SimpleSelector)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.CssValidator" primary="true" start="187" end="187" startBytecode="43" endBytecode="43" sourcefile="CssValidator.java" sourcepath="org/owasp/validator/css/CssValidator.java">
+      <Message>At CssValidator.java:[line 187]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="c244c05bd5e04cb2c96c638e92f6c987" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in org.owasp.validator.css.ExternalCssScanner.parseImportedStylesheets(LinkedList, CssHandler, ArrayList, int): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="org.owasp.validator.css.ExternalCssScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.css.ExternalCssScanner" start="53" end="173" sourcefile="ExternalCssScanner.java" sourcepath="org/owasp/validator/css/ExternalCssScanner.java">
+        <Message>At ExternalCssScanner.java:[lines 53-173]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.css.ExternalCssScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.css.ExternalCssScanner" name="parseImportedStylesheets" signature="(Ljava/util/LinkedList;Lorg/owasp/validator/css/CssHandler;Ljava/util/ArrayList;I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.css.ExternalCssScanner" start="76" end="173" startBytecode="0" endBytecode="843" sourcefile="ExternalCssScanner.java" sourcepath="org/owasp/validator/css/ExternalCssScanner.java"/>
+      <Message>In method org.owasp.validator.css.ExternalCssScanner.parseImportedStylesheets(LinkedList, CssHandler, ArrayList, int)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.css.ExternalCssScanner" primary="true" start="161" end="161" startBytecode="342" endBytecode="342" sourcefile="ExternalCssScanner.java" sourcepath="org/owasp/validator/css/ExternalCssScanner.java">
+      <Message>At ExternalCssScanner.java:[line 161]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="ef0270e1f3f132bdc504e498d5259c3b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.owasp.validator.html.AntiSamy.DOM isn&apos;t final but should be</LongMessage>
+    <Class classname="org.owasp.validator.html.AntiSamy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.AntiSamy" start="45" end="123" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+        <Message>At AntiSamy.java:[lines 45-123]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.AntiSamy</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.AntiSamy" name="DOM" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.AntiSamy" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+        <Message>In AntiSamy.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.AntiSamy.DOM</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.AntiSamy" primary="true" start="45" end="45" startBytecode="1" endBytecode="1" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+      <Message>At AntiSamy.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="9ad53eacf9e091c0675d2aed27fe1ee5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.owasp.validator.html.AntiSamy.SAX isn&apos;t final but should be</LongMessage>
+    <Class classname="org.owasp.validator.html.AntiSamy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.AntiSamy" start="45" end="123" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+        <Message>At AntiSamy.java:[lines 45-123]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.AntiSamy</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.AntiSamy" name="SAX" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.AntiSamy" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+        <Message>In AntiSamy.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.AntiSamy.SAX</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.AntiSamy" primary="true" start="46" end="46" startBytecode="5" endBytecode="5" sourcefile="AntiSamy.java" sourcepath="org/owasp/validator/html/AntiSamy.java">
+      <Message>At AntiSamy.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="9d658bba5fba5ee39f285c260bc857c2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.validator.html.CleanResults.getErrorMessages() may expose internal representation by returning CleanResults.errorMessages</LongMessage>
+    <Class classname="org.owasp.validator.html.CleanResults" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="47" end="121" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>At CleanResults.java:[lines 47-121]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.CleanResults</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.CleanResults" name="getErrorMessages" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="104" end="104" startBytecode="0" endBytecode="46" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java"/>
+      <Message>In method org.owasp.validator.html.CleanResults.getErrorMessages()</Message>
+    </Method>
+    <Field classname="org.owasp.validator.html.CleanResults" name="errorMessages" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>In CleanResults.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.CleanResults.errorMessages</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.CleanResults" primary="true" start="104" end="104" startBytecode="4" endBytecode="4" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+      <Message>At CleanResults.java:[line 104]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="eb7bdbb5f40a9cc146b950af5e7df184" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.html.CleanResults(long, String, DocumentFragment, List) may expose internal representation by storing an externally mutable object into CleanResults.errorMessages</LongMessage>
+    <Class classname="org.owasp.validator.html.CleanResults" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="47" end="121" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>At CleanResults.java:[lines 47-121]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.CleanResults</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.CleanResults" name="&lt;init&gt;" signature="(JLjava/lang/String;Lorg/w3c/dom/DocumentFragment;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="61" end="70" startBytecode="0" endBytecode="173" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java"/>
+      <Message>In method new org.owasp.validator.html.CleanResults(long, String, DocumentFragment, List)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.html.CleanResults" name="errorMessages" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>In CleanResults.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.CleanResults.errorMessages</Message>
+    </Field>
+    <LocalVariable name="errorMessages" register="5" pc="46" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named errorMessages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.html.CleanResults" primary="true" start="69" end="69" startBytecode="46" endBytecode="46" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+      <Message>At CleanResults.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3d5f59dc9359b61bdd9c2d1d2772aaba" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.html.CleanResults(long, Callable, DocumentFragment, List) may expose internal representation by storing an externally mutable object into CleanResults.errorMessages</LongMessage>
+    <Class classname="org.owasp.validator.html.CleanResults" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="47" end="121" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>At CleanResults.java:[lines 47-121]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.CleanResults</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.CleanResults" name="&lt;init&gt;" signature="(JLjava/util/concurrent/Callable;Lorg/w3c/dom/DocumentFragment;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="73" end="78" startBytecode="0" endBytecode="175" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java"/>
+      <Message>In method new org.owasp.validator.html.CleanResults(long, Callable, DocumentFragment, List)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.html.CleanResults" name="errorMessages" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>In CleanResults.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.CleanResults.errorMessages</Message>
+    </Field>
+    <LocalVariable name="errorMessages" register="5" pc="38" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named errorMessages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.html.CleanResults" primary="true" start="77" end="77" startBytecode="38" endBytecode="38" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+      <Message>At CleanResults.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="354a818cb0b31baa30974dfabe6060d8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.owasp.validator.html.CleanResults$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.owasp.validator.html.CleanResults$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.owasp.validator.html.CleanResults$1" start="64" end="66" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>At CleanResults.java:[lines 64-66]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.owasp.validator.html.CleanResults$1</Message>
+    </Class>
+    <Class classname="org.owasp.validator.html.CleanResults" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="47" end="121" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>At CleanResults.java:[lines 47-121]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.CleanResults</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.CleanResults" name="&lt;init&gt;" signature="(JLjava/lang/String;Lorg/w3c/dom/DocumentFragment;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" start="61" end="70" startBytecode="0" endBytecode="173" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java"/>
+      <Message>In method new org.owasp.validator.html.CleanResults(long, String, DocumentFragment, List)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.CleanResults" primary="true" start="64" end="64" startBytecode="37" endBytecode="37" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+      <Message>At CleanResults.java:[line 64]</Message>
+    </SourceLine>
+    <Field classname="org.owasp.validator.html.CleanResults" name="cleanHTML" signature="Ljava/util/concurrent/Callable;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.CleanResults" sourcefile="CleanResults.java" sourcepath="org/owasp/validator/html/CleanResults.java">
+        <Message>In CleanResults.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.CleanResults.cleanHTML</Message>
+    </Field>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="506e102034b51a2708620224d70bb8d7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.InternalPolicy at new org.owasp.validator.html.InternalPolicy(URL, Policy$ParseContext) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.InternalPolicy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="150" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+        <Message>At InternalPolicy.java:[lines 34-150]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.InternalPolicy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.InternalPolicy" name="&lt;init&gt;" signature="(Ljava/net/URL;Lorg/owasp/validator/html/Policy$ParseContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="50" startBytecode="0" endBytecode="282" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java"/>
+      <Message>In method new org.owasp.validator.html.InternalPolicy(URL, Policy$ParseContext)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.InternalPolicy" primary="true" start="35" end="35" startBytecode="5" endBytecode="5" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+      <Message>At InternalPolicy.java:[line 35]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="35" end="35" startBytecode="5" endBytecode="5" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+      <Message>At InternalPolicy.java:[line 35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="4abc2136328405c353068020676da122" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method determineMaxInputSize is called from constructor new org.owasp.validator.html.InternalPolicy(URL, Policy$ParseContext).</LongMessage>
+    <Class classname="org.owasp.validator.html.InternalPolicy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="150" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+        <Message>At InternalPolicy.java:[lines 34-150]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.InternalPolicy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.InternalPolicy" name="&lt;init&gt;" signature="(Ljava/net/URL;Lorg/owasp/validator/html/Policy$ParseContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="50" startBytecode="0" endBytecode="282" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java"/>
+      <Message>In method new org.owasp.validator.html.InternalPolicy(URL, Policy$ParseContext)</Message>
+    </Method>
+    <String value="determineMaxInputSize">
+      <Message>Value determineMaxInputSize</Message>
+    </String>
+    <SourceLine classname="org.owasp.validator.html.InternalPolicy" primary="true" start="35" end="35" startBytecode="7" endBytecode="7" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+      <Message>At InternalPolicy.java:[line 35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="939785b51e06946d2beb899ba44b0f02" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method determineMaxInputSize is called from constructor new org.owasp.validator.html.InternalPolicy(Policy, Map, Map).</LongMessage>
+    <Class classname="org.owasp.validator.html.InternalPolicy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="150" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+        <Message>At InternalPolicy.java:[lines 34-150]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.InternalPolicy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.InternalPolicy" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;Ljava/util/Map;Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="53" end="69" startBytecode="0" endBytecode="322" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java"/>
+      <Message>In method new org.owasp.validator.html.InternalPolicy(Policy, Map, Map)</Message>
+    </Method>
+    <String value="determineMaxInputSize">
+      <Message>Value determineMaxInputSize</Message>
+    </String>
+    <SourceLine classname="org.owasp.validator.html.InternalPolicy" primary="true" start="54" end="54" startBytecode="9" endBytecode="9" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+      <Message>At InternalPolicy.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a950dd6eb252884cd326d3dde31fb809" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.Policy at new org.owasp.validator.html.Policy(Policy$ParseContext) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy$ParseContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="202" end="210" startBytecode="0" endBytecode="173" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method new org.owasp.validator.html.Policy(Policy$ParseContext)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="203" end="203" startBytecode="16" endBytecode="16" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 203]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.Policy" start="203" end="203" startBytecode="16" endBytecode="16" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 203]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="5f98e606b640f1567be85e32c2f485b8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.getGlobalAttributeByName(String)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="getGlobalAttributeByName" signature="(Ljava/lang/String;)Lorg/owasp/validator/html/model/Attribute;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="713" end="713" startBytecode="0" endBytecode="68" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.getGlobalAttributeByName(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="713" end="713" startBytecode="5" endBytecode="5" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 713]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="9e1437a507d29a52e442955fbb5df591" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.getPropertyByName(String)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="getPropertyByName" signature="(Ljava/lang/String;)Lorg/owasp/validator/html/model/Property;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="132" end="132" startBytecode="0" endBytecode="68" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.getPropertyByName(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="132" end="132" startBytecode="5" endBytecode="5" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 132]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="8e23b127fd415842b42eaa2579ff9539" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.getTagAttributes(Map, Map, NodeList, String)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="getTagAttributes" signature="(Ljava/util/Map;Ljava/util/Map;Lorg/w3c/dom/NodeList;Ljava/lang/String;)Ljava/util/Map;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="614" end="664" startBytecode="0" endBytecode="607" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.getTagAttributes(Map, Map, NodeList, String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="619" end="619" startBytecode="43" endBytecode="43" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 619]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="7ef304c0281711d8a0919e850077a50b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.parseCSSRules(Element, Map, Map)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="parseCSSRules" signature="(Lorg/w3c/dom/Element;Ljava/util/Map;Ljava/util/Map;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="670" end="702" startBytecode="0" endBytecode="607" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.parseCSSRules(Element, Map, Map)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="699" end="699" startBytecode="247" endBytecode="247" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 699]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="114bff3e442ec71e07dd405a38b371df" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.parseCommonAttributes(Element, Map, Map)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="parseCommonAttributes" signature="(Lorg/w3c/dom/Element;Ljava/util/Map;Ljava/util/Map;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="494" end="514" startBytecode="0" endBytecode="397" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.parseCommonAttributes(Element, Map, Map)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="512" end="512" startBytecode="125" endBytecode="125" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 512]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="3661414aac8ae088c6880dcae1e934f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.parseGlobalAttributes(Element, Map, Map)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="parseGlobalAttributes" signature="(Lorg/w3c/dom/Element;Ljava/util/Map;Ljava/util/Map;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="462" end="474" startBytecode="0" endBytecode="273" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.parseGlobalAttributes(Element, Map, Map)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="466" end="466" startBytecode="44" endBytecode="44" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 466]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.Policy" start="469" end="469" startBytecode="65" endBytecode="65" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at Policy.java:[line 469]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="1ae350d14f689bfdc00b0eee20760e1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.Policy.parseTagRules(Element, Map, Map, Map)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="parseTagRules" signature="(Lorg/w3c/dom/Element;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="598" end="611" startBytecode="0" endBytecode="338" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.parseTagRules(Element, Map, Map, Map)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="609" end="609" startBytecode="98" endBytecode="98" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+      <Message>At Policy.java:[line 609]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="5738a656e287a74b30fab26fc27172df" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of elementsByTagName, which is known to be non-null in org.owasp.validator.html.Policy.getFirstChild(Element, String)</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy" name="getFirstChild" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="790" end="795" startBytecode="0" endBytecode="117" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy.getFirstChild(Element, String)</Message>
+    </Method>
+    <LocalVariable name="elementsByTagName" register="2" pc="14" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from elementsByTagName</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getElementsByTagName" signature="(Ljava/lang/String;)Lorg/w3c/dom/NodeList;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getElementsByTagName(String) of type org.w3c.dom.NodeList</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy" primary="true" start="792" end="792" startBytecode="15" endBytecode="15" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at Policy.java:[line 792]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="IT_NO_SUCH_ELEMENT" priority="3" rank="19" abbrev="It" category="BAD_PRACTICE" instanceHash="7ad0c0005fc6bee605a0a7bb1b75e974" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Iterator next() method cannot throw NoSuchElementException</ShortMessage>
+    <LongMessage>org.owasp.validator.html.Policy$1$1.next() cannot throw NoSuchElementException</LongMessage>
+    <Class classname="org.owasp.validator.html.Policy$1$1" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy$1$1" start="812" end="825" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 812-825]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.Policy$1$1</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.Policy$1$1" name="next" signature="()Lorg/w3c/dom/Element;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.Policy$1$1" start="821" end="821" startBytecode="0" endBytecode="68" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java"/>
+      <Message>In method org.owasp.validator.html.Policy$1$1.next()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.Policy$1$1" start="821" end="821" startBytecode="0" endBytecode="68" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java" synthetic="true">
+      <Message>At Policy.java:[line 821]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="2601c6dbf9171dd02ec3e7a7096d0559" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in new org.owasp.validator.html.TagMatcher(Iterable)</LongMessage>
+    <Class classname="org.owasp.validator.html.TagMatcher" primary="true">
+      <SourceLine classname="org.owasp.validator.html.TagMatcher" start="37" end="57" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java">
+        <Message>At TagMatcher.java:[lines 37-57]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.TagMatcher</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.TagMatcher" name="&lt;init&gt;" signature="(Ljava/lang/Iterable;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.TagMatcher" start="39" end="43" startBytecode="0" endBytecode="168" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java"/>
+      <Message>In method new org.owasp.validator.html.TagMatcher(Iterable)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.TagMatcher" primary="true" start="41" end="41" startBytecode="46" endBytecode="46" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java">
+      <Message>At TagMatcher.java:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="6a6bfc57f7a7b9c4f262cd2c837e29c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.TagMatcher.matches(String)</LongMessage>
+    <Class classname="org.owasp.validator.html.TagMatcher" primary="true">
+      <SourceLine classname="org.owasp.validator.html.TagMatcher" start="37" end="57" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java">
+        <Message>At TagMatcher.java:[lines 37-57]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.TagMatcher</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.TagMatcher" name="matches" signature="(Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.TagMatcher" start="53" end="53" startBytecode="0" endBytecode="65" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java"/>
+      <Message>In method org.owasp.validator.html.TagMatcher.matches(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.TagMatcher" primary="true" start="53" end="53" startBytecode="5" endBytecode="5" sourcefile="TagMatcher.java" sourcepath="org/owasp/validator/html/TagMatcher.java">
+      <Message>At TagMatcher.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="b67f4f224a8959ad6deb1ff5b69a323b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in new org.owasp.validator.html.model.Attribute(String, List, List, String, String)</LongMessage>
+    <Class classname="org.owasp.validator.html.model.Attribute" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Attribute" start="52" end="145" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java">
+        <Message>At Attribute.java:[lines 52-145]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.model.Attribute</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.model.Attribute" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Attribute" start="52" end="64" startBytecode="0" endBytecode="316" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java"/>
+      <Message>In method new org.owasp.validator.html.model.Attribute(String, List, List, String, String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.model.Attribute" primary="true" start="58" end="58" startBytecode="82" endBytecode="82" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java">
+      <Message>At Attribute.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="99d0b25866d2c2931718bc98833f4582" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.model.Attribute.matchesAllowedExpression(String)</LongMessage>
+    <Class classname="org.owasp.validator.html.model.Attribute" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Attribute" start="52" end="145" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java">
+        <Message>At Attribute.java:[lines 52-145]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.model.Attribute</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.model.Attribute" name="matchesAllowedExpression" signature="(Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Attribute" start="67" end="73" startBytecode="0" endBytecode="178" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java"/>
+      <Message>In method org.owasp.validator.html.model.Attribute.matchesAllowedExpression(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.model.Attribute" primary="true" start="67" end="67" startBytecode="1" endBytecode="1" sourcefile="Attribute.java" sourcepath="org/owasp/validator/html/model/Attribute.java">
+      <Message>At Attribute.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="63daef9972f8669eb88f7c531a6fd482" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.owasp.validator.html.model.Tag$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.owasp.validator.html.model.Tag$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.owasp.validator.html.model.Tag$1" start="95" end="97" sourcefile="Tag.java" sourcepath="org/owasp/validator/html/model/Tag.java">
+        <Message>At Tag.java:[lines 95-97]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.owasp.validator.html.model.Tag$1</Message>
+    </Class>
+    <Class classname="org.owasp.validator.html.model.Tag" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Tag" start="48" end="152" sourcefile="Tag.java" sourcepath="org/owasp/validator/html/model/Tag.java">
+        <Message>At Tag.java:[lines 48-152]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.model.Tag</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.model.Tag" name="getRegularExpression" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.model.Tag" start="88" end="108" startBytecode="0" endBytecode="315" sourcefile="Tag.java" sourcepath="org/owasp/validator/html/model/Tag.java"/>
+      <Message>In method org.owasp.validator.html.model.Tag.getRegularExpression()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.model.Tag" primary="true" start="95" end="95" startBytecode="98" endBytecode="98" sourcefile="Tag.java" sourcepath="org/owasp/validator/html/model/Tag.java">
+      <Message>At Tag.java:[line 95]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST" priority="2" rank="17" abbrev="BC" category="STYLE" instanceHash="83309f386e9d648825ec9fd61c08c308" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from org.owasp.validator.html.Policy to org.owasp.validator.html.InternalPolicy in new org.owasp.validator.html.scan.AbstractAntiSamyScanner(Policy)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="37" end="109" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+        <Message>At AbstractAntiSamyScanner.java:[lines 37-109]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AbstractAntiSamyScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" name="&lt;init&gt;" signature="(Lorg/owasp/validator/html/Policy;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="50" end="52" startBytecode="0" endBytecode="20" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java"/>
+      <Message>In method new org.owasp.validator.html.scan.AbstractAntiSamyScanner(Policy)</Message>
+    </Method>
+    <Type descriptor="Lorg/owasp/validator/html/Policy;" role="TYPE_FOUND">
+      <SourceLine classname="org.owasp.validator.html.Policy" start="64" end="833" sourcefile="Policy.java" sourcepath="org/owasp/validator/html/Policy.java">
+        <Message>At Policy.java:[lines 64-833]</Message>
+      </SourceLine>
+      <Message>Actual type org.owasp.validator.html.Policy</Message>
+    </Type>
+    <Type descriptor="Lorg/owasp/validator/html/InternalPolicy;" role="TYPE_EXPECTED">
+      <SourceLine classname="org.owasp.validator.html.InternalPolicy" start="34" end="150" sourcefile="InternalPolicy.java" sourcepath="org/owasp/validator/html/InternalPolicy.java">
+        <Message>At InternalPolicy.java:[lines 34-150]</Message>
+      </SourceLine>
+      <Message>Expected org.owasp.validator.html.InternalPolicy</Message>
+    </Type>
+    <LocalVariable name="policy" register="1" pc="33" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from policy</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true" start="51" end="51" startBytecode="34" endBytecode="34" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+      <Message>At AbstractAntiSamyScanner.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="38873186937d51d5d4d35d9657143fe3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.scan.AbstractAntiSamyScanner at new org.owasp.validator.html.scan.AbstractAntiSamyScanner() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="37" end="109" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+        <Message>At AbstractAntiSamyScanner.java:[lines 37-109]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AbstractAntiSamyScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="54" end="56" startBytecode="0" endBytecode="108" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java"/>
+      <Message>In method new org.owasp.validator.html.scan.AbstractAntiSamyScanner()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true" start="55" end="55" startBytecode="40" endBytecode="40" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+      <Message>At AbstractAntiSamyScanner.java:[line 55]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="55" end="55" startBytecode="40" endBytecode="40" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+      <Message>At AbstractAntiSamyScanner.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="3" rank="20" abbrev="UrF" category="STYLE" instanceHash="2ebfa6a814f8e7f8964d8bbcffde8328" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread public/protected field</ShortMessage>
+    <LongMessage>Unread public/protected field: org.owasp.validator.html.scan.AbstractAntiSamyScanner.locale</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" start="37" end="109" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+        <Message>At AbstractAntiSamyScanner.java:[lines 37-109]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AbstractAntiSamyScanner</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" name="locale" signature="Ljava/util/Locale;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+        <Message>In AbstractAntiSamyScanner.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.AbstractAntiSamyScanner.locale</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.scan.AbstractAntiSamyScanner" primary="true" start="40" end="40" startBytecode="19" endBytecode="19" sourcefile="AbstractAntiSamyScanner.java" sourcepath="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java">
+      <Message>At AbstractAntiSamyScanner.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="743c8a4dd27cb36b1a8fbc2d5dc078c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.scan.AntiSamyDOMScanner at new org.owasp.validator.html.scan.AntiSamyDOMScanner() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="62" end="850" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 62-850]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="95" end="96" startBytecode="0" endBytecode="91" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method new org.owasp.validator.html.scan.AntiSamyDOMScanner()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true" start="96" end="96" startBytecode="34" endBytecode="34" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 96]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="96" end="96" startBytecode="34" endBytecode="34" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 96]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="3cf75eb09c57da082f196d43e11f75ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.scan.AntiSamyDOMScanner.processAttributes(Element, String, Tag, int)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="62" end="850" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 62-850]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" name="processAttributes" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;Lorg/owasp/validator/html/model/Tag;I)Z" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="508" end="662" startBytecode="0" endBytecode="1054" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method org.owasp.validator.html.scan.AntiSamyDOMScanner.processAttributes(Element, String, Tag, int)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true" start="516" end="516" startBytecode="55" endBytecode="55" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 516]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="533" end="533" startBytecode="86" endBytecode="86" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at AntiSamyDOMScanner.java:[line 533]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="569" end="569" startBytecode="270" endBytecode="270" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at AntiSamyDOMScanner.java:[line 569]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="ff379b4fc9761926890d46b9e5af40ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.scan.AntiSamyDOMScanner.recursiveValidateTag(Node, int)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="62" end="850" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 62-850]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" name="recursiveValidateTag" signature="(Lorg/w3c/dom/Node;I)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="235" end="301" startBytecode="0" endBytecode="638" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method org.owasp.validator.html.scan.AntiSamyDOMScanner.recursiveValidateTag(Node, int)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true" start="271" end="271" startBytecode="135" endBytecode="135" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 271]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="12eb93348aee653f81965d07302ff510" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of nameValue, which is known to be non-null in org.owasp.validator.html.scan.AntiSamyDOMScanner.actionValidate(int, Element, Node, String, String, Tag, boolean, Tag, NodeList)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="62" end="850" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 62-850]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" name="actionValidate" signature="(ILorg/w3c/dom/Element;Lorg/w3c/dom/Node;Ljava/lang/String;Ljava/lang/String;Lorg/owasp/validator/html/model/Tag;ZLorg/owasp/validator/html/model/Tag;Lorg/w3c/dom/NodeList;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="341" end="389" startBytecode="0" endBytecode="451" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method org.owasp.validator.html.scan.AntiSamyDOMScanner.actionValidate(int, Element, Node, String, String, Tag, boolean, Tag, NodeList)</Message>
+    </Method>
+    <LocalVariable name="nameValue" register="10" pc="18" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from nameValue</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getAttribute" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getAttribute(String) of type String</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true" start="344" end="344" startBytecode="20" endBytecode="20" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at AntiSamyDOMScanner.java:[line 344]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="b5812c3794001836c2d82ca57f8341b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class org.owasp.validator.html.scan.AntiSamyDOMScanner$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$1" start="184" end="186" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 184-186]</Message>
+      </SourceLine>
+      <Message>Anonymous class org.owasp.validator.html.scan.AntiSamyDOMScanner$1</Message>
+    </Class>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="62" end="850" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 62-850]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" name="scan" signature="(Ljava/lang/String;)Lorg/owasp/validator/html/CleanResults;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" start="111" end="203" startBytecode="0" endBytecode="695" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method org.owasp.validator.html.scan.AntiSamyDOMScanner.scan(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner" primary="true" start="184" end="184" startBytecode="273" endBytecode="273" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 184]</Message>
+    </SourceLine>
+    <LocalVariable name="cleanHtml" register="12" pc="278" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named cleanHtml</Message>
+    </LocalVariable>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="eb11af3a52144e21c4a4e4136390c5b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem at new org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" start="75" end="85" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+        <Message>At AntiSamyDOMScanner.java:[lines 75-85]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" start="80" end="82" startBytecode="0" endBytecode="77" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java"/>
+      <Message>In method new org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" primary="true" start="77" end="77" startBytecode="4" endBytecode="4" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 77]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" start="77" end="77" startBytecode="4" endBytecode="4" sourcefile="AntiSamyDOMScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamyDOMScanner.java">
+      <Message>At AntiSamyDOMScanner.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="861c2cda109d3665aa2807d7ac7d350a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in org.owasp.validator.html.scan.AntiSamySAXScanner.scan(String)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamySAXScanner" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner" start="51" end="169" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java">
+        <Message>At AntiSamySAXScanner.java:[lines 51-169]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamySAXScanner</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamySAXScanner" name="scan" signature="(Ljava/lang/String;)Lorg/owasp/validator/html/CleanResults;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner" start="85" end="135" startBytecode="0" endBytecode="706" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java"/>
+      <Message>In method org.owasp.validator.html.scan.AntiSamySAXScanner.scan(String)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner" primary="true" start="134" end="134" startBytecode="377" endBytecode="377" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java">
+      <Message>At AntiSamySAXScanner.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="8341d7622f383b319b6f50aee47e1847" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem at new org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem(Transformer, SAXParser, MagicSAXFilter) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" start="55" end="73" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java">
+        <Message>At AntiSamySAXScanner.java:[lines 55-73]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" name="&lt;init&gt;" signature="(Ljavax/xml/transform/Transformer;Lorg/cyberneko/html/parsers/SAXParser;Lorg/owasp/validator/html/scan/MagicSAXFilter;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" start="60" end="73" startBytecode="0" endBytecode="226" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java"/>
+      <Message>In method new org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem(Transformer, SAXParser, MagicSAXFilter)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" primary="true" start="68" end="68" startBytecode="51" endBytecode="51" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java">
+      <Message>At AntiSamySAXScanner.java:[line 68]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" start="68" end="68" startBytecode="51" endBytecode="51" sourcefile="AntiSamySAXScanner.java" sourcepath="org/owasp/validator/html/scan/AntiSamySAXScanner.java">
+      <Message>At AntiSamySAXScanner.java:[line 68]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="aad35d69c722911822182c7259f8ec74" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.scan.Constants.&lt;static initializer for Constants&gt;()</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.Constants" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" start="32" end="69" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>At Constants.java:[lines 32-69]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.Constants</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.Constants" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" start="39" end="69" startBytecode="0" endBytecode="429" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java"/>
+      <Message>In method org.owasp.validator.html.scan.Constants.&lt;static initializer for Constants&gt;()</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.Constants" primary="true" start="54" end="54" startBytecode="201" endBytecode="201" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+      <Message>At Constants.java:[line 54]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.Constants" start="55" end="55" startBytecode="216" endBytecode="216" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at Constants.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="3" rank="20" abbrev="MS" category="MALICIOUS_CODE" instanceHash="f1758be98947e3c872ca2676652204fb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.owasp.validator.html.scan.Constants.big5CharsToEncodeSet is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.Constants" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" start="32" end="69" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>At Constants.java:[lines 32-69]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.Constants</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.scan.Constants" name="big5CharsToEncodeSet" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>In Constants.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.Constants.big5CharsToEncodeSet</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.scan.Constants" primary="true" start="69" end="69" startBytecode="298" endBytecode="298" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+      <Message>At Constants.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="b222988e25c0b057ad5451bcb3c668eb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.owasp.validator.html.scan.Constants.defaultAllowedEmptyTags isn&apos;t final but should be</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.Constants" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" start="32" end="69" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>At Constants.java:[lines 32-69]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.Constants</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.scan.Constants" name="defaultAllowedEmptyTags" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>In Constants.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.Constants.defaultAllowedEmptyTags</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.scan.Constants" primary="true" start="58" end="58" startBytecode="248" endBytecode="248" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+      <Message>At Constants.java:[line 58]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="9faf5f181266d4f29af71bdd6f3cda73" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>org.owasp.validator.html.scan.Constants.defaultRequiresClosingTags isn&apos;t final but should be</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.Constants" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" start="32" end="69" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>At Constants.java:[lines 32-69]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.Constants</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.scan.Constants" name="defaultRequiresClosingTags" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.Constants" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+        <Message>In Constants.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.Constants.defaultRequiresClosingTags</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.scan.Constants" primary="true" start="61" end="61" startBytecode="273" endBytecode="273" sourcefile="Constants.java" sourcepath="org/owasp/validator/html/scan/Constants.java">
+      <Message>At Constants.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="f447d6885914ed615a68df96fbab0b6b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in org.owasp.validator.html.scan.MagicSAXFilter.startElement(QName, XMLAttributes, Augmentations)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="61" end="400" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>At MagicSAXFilter.java:[lines 61-400]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.MagicSAXFilter</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.MagicSAXFilter" name="startElement" signature="(Lorg/apache/xerces/xni/QName;Lorg/apache/xerces/xni/XMLAttributes;Lorg/apache/xerces/xni/Augmentations;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="226" end="389" startBytecode="0" endBytecode="1814" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java"/>
+      <Message>In method org.owasp.validator.html.scan.MagicSAXFilter.startElement(QName, XMLAttributes, Augmentations)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true" start="226" end="226" startBytecode="4" endBytecode="4" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+      <Message>At MagicSAXFilter.java:[line 226]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="286" end="286" startBytecode="454" endBytecode="454" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at MagicSAXFilter.java:[line 286]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="308" end="308" startBytecode="611" endBytecode="611" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at MagicSAXFilter.java:[line 308]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="462ad1b365e61bf891013c1a026a8e4e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.owasp.validator.html.scan.MagicSAXFilter.getErrorMessages() may expose internal representation by returning MagicSAXFilter.errorMessages</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="61" end="400" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>At MagicSAXFilter.java:[lines 61-400]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.MagicSAXFilter</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.MagicSAXFilter" name="getErrorMessages" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="400" end="400" startBytecode="0" endBytecode="46" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java"/>
+      <Message>In method org.owasp.validator.html.scan.MagicSAXFilter.getErrorMessages()</Message>
+    </Method>
+    <Field classname="org.owasp.validator.html.scan.MagicSAXFilter" name="errorMessages" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>In MagicSAXFilter.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.MagicSAXFilter.errorMessages</Message>
+    </Field>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true" start="400" end="400" startBytecode="4" endBytecode="4" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+      <Message>At MagicSAXFilter.java:[line 400]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="2d99abfe7e70898a57978d4dc5b2f25" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new org.owasp.validator.html.scan.MagicSAXFilter(ResourceBundle) may expose internal representation by storing an externally mutable object into MagicSAXFilter.messages</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="61" end="400" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>At MagicSAXFilter.java:[lines 61-400]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.MagicSAXFilter</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.scan.MagicSAXFilter" name="&lt;init&gt;" signature="(Ljava/util/ResourceBundle;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="77" end="79" startBytecode="0" endBytecode="135" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java"/>
+      <Message>In method new org.owasp.validator.html.scan.MagicSAXFilter(ResourceBundle)</Message>
+    </Method>
+    <Field classname="org.owasp.validator.html.scan.MagicSAXFilter" name="messages" signature="Ljava/util/ResourceBundle;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>In MagicSAXFilter.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.MagicSAXFilter.messages</Message>
+    </Field>
+    <LocalVariable name="messages" register="1" pc="48" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named messages</Message>
+    </LocalVariable>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true" start="78" end="78" startBytecode="48" endBytecode="48" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+      <Message>At MagicSAXFilter.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="39540af6d77ba7c5e0fb2fdea1ff2005" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>MagicSAXFilter.policy not initialized in constructor and dereferenced in org.owasp.validator.html.scan.MagicSAXFilter.startElement(QName, XMLAttributes, Augmentations)</LongMessage>
+    <Class classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="61" end="400" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>At MagicSAXFilter.java:[lines 61-400]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.scan.MagicSAXFilter</Message>
+    </Class>
+    <Field classname="org.owasp.validator.html.scan.MagicSAXFilter" name="policy" signature="Lorg/owasp/validator/html/InternalPolicy;" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+        <Message>In MagicSAXFilter.java</Message>
+      </SourceLine>
+      <Message>Field org.owasp.validator.html.scan.MagicSAXFilter.policy</Message>
+    </Field>
+    <Method classname="org.owasp.validator.html.scan.MagicSAXFilter" name="startElement" signature="(Lorg/apache/xerces/xni/QName;Lorg/apache/xerces/xni/XMLAttributes;Lorg/apache/xerces/xni/Augmentations;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="226" end="389" startBytecode="0" endBytecode="1814" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java"/>
+      <Message>In method org.owasp.validator.html.scan.MagicSAXFilter.startElement(QName, XMLAttributes, Augmentations)</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" primary="true" start="257" end="257" startBytecode="186" endBytecode="186" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java">
+      <Message>At MagicSAXFilter.java:[line 257]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="227" end="227" startBytecode="15" endBytecode="15" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at MagicSAXFilter.java:[line 227]</Message>
+    </SourceLine>
+    <SourceLine classname="org.owasp.validator.html.scan.MagicSAXFilter" start="290" end="290" startBytecode="479" endBytecode="479" sourcefile="MagicSAXFilter.java" sourcepath="org/owasp/validator/html/scan/MagicSAXFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at MagicSAXFilter.java:[line 290]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="fc15d3e51ccf2af6bab684c4d57c98a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of nl, which is known to be non-null in org.owasp.validator.html.util.XMLUtil.getBooleanValue(Element, String)</LongMessage>
+    <Class classname="org.owasp.validator.html.util.XMLUtil" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="33" end="205" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java">
+        <Message>At XMLUtil.java:[lines 33-205]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.util.XMLUtil</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.util.XMLUtil" name="getBooleanValue" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="107" end="115" startBytecode="0" endBytecode="156" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java"/>
+      <Message>In method org.owasp.validator.html.util.XMLUtil.getBooleanValue(Element, String)</Message>
+    </Method>
+    <LocalVariable name="nl" register="3" pc="10" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from nl</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getElementsByTagName" signature="(Ljava/lang/String;)Lorg/w3c/dom/NodeList;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getElementsByTagName(String) of type org.w3c.dom.NodeList</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.util.XMLUtil" primary="true" start="110" end="110" startBytecode="11" endBytecode="11" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at XMLUtil.java:[line 110]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="6a2179bf4e84ddd241b6a1a27aaaa89" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of nl, which is known to be non-null in org.owasp.validator.html.util.XMLUtil.getBooleanValue(Element, String, boolean)</LongMessage>
+    <Class classname="org.owasp.validator.html.util.XMLUtil" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="33" end="205" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java">
+        <Message>At XMLUtil.java:[lines 33-205]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.util.XMLUtil</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.util.XMLUtil" name="getBooleanValue" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="128" end="146" startBytecode="0" endBytecode="198" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java"/>
+      <Message>In method org.owasp.validator.html.util.XMLUtil.getBooleanValue(Element, String, boolean)</Message>
+    </Method>
+    <LocalVariable name="nl" register="4" pc="11" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from nl</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getElementsByTagName" signature="(Ljava/lang/String;)Lorg/w3c/dom/NodeList;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getElementsByTagName(String) of type org.w3c.dom.NodeList</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.util.XMLUtil" primary="true" start="131" end="131" startBytecode="13" endBytecode="13" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at XMLUtil.java:[line 131]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="877da9d912f7b99bcd427adf8017e292" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of nl, which is known to be non-null in org.owasp.validator.html.util.XMLUtil.getTextValue(Element, String)</LongMessage>
+    <Class classname="org.owasp.validator.html.util.XMLUtil" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="33" end="205" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java">
+        <Message>At XMLUtil.java:[lines 33-205]</Message>
+      </SourceLine>
+      <Message>In class org.owasp.validator.html.util.XMLUtil</Message>
+    </Class>
+    <Method classname="org.owasp.validator.html.util.XMLUtil" name="getTextValue" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.owasp.validator.html.util.XMLUtil" start="84" end="94" startBytecode="0" endBytecode="178" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java"/>
+      <Message>In method org.owasp.validator.html.util.XMLUtil.getTextValue(Element, String)</Message>
+    </Method>
+    <LocalVariable name="nl" register="3" pc="10" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from nl</Message>
+    </LocalVariable>
+    <Method classname="org.w3c.dom.Element" name="getElementsByTagName" signature="(Ljava/lang/String;)Lorg/w3c/dom/NodeList;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="org.w3c.dom.Element" sourcefile="Element.java" sourcepath="org/w3c/dom/Element.java"/>
+      <Message>Return value of org.w3c.dom.Element.getElementsByTagName(String) of type org.w3c.dom.NodeList</Message>
+    </Method>
+    <SourceLine classname="org.owasp.validator.html.util.XMLUtil" primary="true" start="86" end="86" startBytecode="11" endBytecode="11" sourcefile="XMLUtil.java" sourcepath="org/owasp/validator/html/util/XMLUtil.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at XMLUtil.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" abbrev="UrF" category="STYLE">
+    <ShortDescription>Unread public/protected field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_UNCONFIRMED_CAST" abbrev="BC" category="STYLE">
+    <ShortDescription>Unchecked/unconfirmed cast</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This cast is unchecked, and not all instances of the type casted from can be cast to
+the type it is being cast to. Check that your program logic ensures that this
+cast will not fail.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NS_DANGEROUS_NON_SHORT_CIRCUIT" abbrev="NS" category="STYLE">
+    <ShortDescription>Potentially dangerous use of non-short-circuit logic</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code seems to be using non-short-circuit logic (e.g., &amp;
+or |)
+rather than short-circuit logic (&amp;&amp; or ||). In addition,
+it seem possible that, depending on the value of the left hand side, you might not
+want to evaluate the right hand side (because it would have side effects, could cause an exception
+or could be expensive.</p>
+<p>
+Non-short-circuit logic causes both sides of the expression
+to be evaluated even when the result can be inferred from
+knowing the left-hand side. This can be less efficient and
+can result in errors if the left-hand side guards cases
+when evaluating the right-hand side can generate an error.
+</p>
+
+<p>See <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.22.2">the Java
+Language Specification</a> for details.
+
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="IT_NO_SUCH_ELEMENT" abbrev="It" category="BAD_PRACTICE">
+    <ShortDescription>Iterator next() method cannot throw NoSuchElementException</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>java.util.Iterator</code> interface.&nbsp;
+  However, its <code>next()</code> method is not capable of throwing
+  <code>java.util.NoSuchElementException</code>.&nbsp; The <code>next()</code>
+  method should be changed so it throws <code>NoSuchElementException</code>
+  if is called when there are no more elements to return.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="NS">
+    <Description>Suspicious use of non-short-circuit boolean operator</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="It">
+    <Description>Incorrect definition of Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="43">
+    <MissingClass>org.apache.batik.css.parser.ParseException</MissingClass>
+    <MissingClass>org.apache.batik.css.parser.Parser</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpClient</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpConnectionManager</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpContentTooLargeException</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.HttpMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.methods.GetMethod</MissingClass>
+    <MissingClass>org.apache.commons.httpclient.params.HttpConnectionManagerParams</MissingClass>
+    <MissingClass>org.apache.xerces.dom.DocumentImpl</MissingClass>
+    <MissingClass>org.apache.xerces.util.AugmentationsImpl</MissingClass>
+    <MissingClass>org.apache.xerces.util.XMLAttributesImpl</MissingClass>
+    <MissingClass>org.apache.xerces.util.XMLStringBuffer</MissingClass>
+    <MissingClass>org.apache.xerces.xni.Augmentations</MissingClass>
+    <MissingClass>org.apache.xerces.xni.QName</MissingClass>
+    <MissingClass>org.apache.xerces.xni.XMLAttributes</MissingClass>
+    <MissingClass>org.apache.xerces.xni.XMLString</MissingClass>
+    <MissingClass>org.apache.xerces.xni.XNIException</MissingClass>
+    <MissingClass>org.apache.xerces.xni.parser.XMLDocumentFilter</MissingClass>
+    <MissingClass>org.apache.xml.serialize.ElementState</MissingClass>
+    <MissingClass>org.apache.xml.serialize.HTMLSerializer</MissingClass>
+    <MissingClass>org.apache.xml.serialize.HTMLdtd</MissingClass>
+    <MissingClass>org.apache.xml.serialize.OutputFormat</MissingClass>
+    <MissingClass>org.apache.xml.serialize.Printer</MissingClass>
+    <MissingClass>org.apache.xml.serialize.XHTMLSerializer</MissingClass>
+    <MissingClass>org.cyberneko.html.filters.DefaultFilter</MissingClass>
+    <MissingClass>org.cyberneko.html.parsers.DOMFragmentParser</MissingClass>
+    <MissingClass>org.cyberneko.html.parsers.SAXParser</MissingClass>
+    <MissingClass>org.w3c.css.sac.AttributeCondition</MissingClass>
+    <MissingClass>org.w3c.css.sac.CSSException</MissingClass>
+    <MissingClass>org.w3c.css.sac.CombinatorCondition</MissingClass>
+    <MissingClass>org.w3c.css.sac.Condition</MissingClass>
+    <MissingClass>org.w3c.css.sac.ConditionalSelector</MissingClass>
+    <MissingClass>org.w3c.css.sac.DescendantSelector</MissingClass>
+    <MissingClass>org.w3c.css.sac.DocumentHandler</MissingClass>
+    <MissingClass>org.w3c.css.sac.InputSource</MissingClass>
+    <MissingClass>org.w3c.css.sac.LexicalUnit</MissingClass>
+    <MissingClass>org.w3c.css.sac.NegativeCondition</MissingClass>
+    <MissingClass>org.w3c.css.sac.NegativeSelector</MissingClass>
+    <MissingClass>org.w3c.css.sac.SACMediaList</MissingClass>
+    <MissingClass>org.w3c.css.sac.Selector</MissingClass>
+    <MissingClass>org.w3c.css.sac.SelectorList</MissingClass>
+    <MissingClass>org.w3c.css.sac.SiblingSelector</MissingClass>
+    <MissingClass>org.w3c.css.sac.SimpleSelector</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:34:28 +0900" total_classes="37" referenced_classes="185" total_bugs="61" total_size="2131" num_packages="5" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.81" clock_seconds="3.10" peak_mbytes="253.50" alloc_mbytes="4078.00" gc_seconds="0.05" priority_3="34" priority_2="18" priority_1="9">
+    <FileStats path="org/owasp/validator/css/CssHandler.java" bugCount="5" size="129" bugHash="a552df51b0d1de72c6e132a8661cb95e"/>
+    <FileStats path="org/owasp/validator/css/CssScanner.java" bugCount="1" size="62" bugHash="81ad0c34f0459d9087394c8541d9bd48"/>
+    <FileStats path="org/owasp/validator/css/CssValidator.java" bugCount="8" size="98" bugHash="cf97ccef264213c0f42d988904bac818"/>
+    <FileStats path="org/owasp/validator/css/ExternalCssScanner.java" bugCount="1" size="44" bugHash="88247c7faa4ad6e7aa8e5d564f4cf2a2"/>
+    <FileStats path="org/owasp/validator/css/UnknownSelectorException.java" bugCount="0" size="8"/>
+    <FileStats path="org/owasp/validator/html/AntiSamy.java" bugCount="2" size="35" bugHash="5436a97e4c4c21e26d708bd48cce58bb"/>
+    <FileStats path="org/owasp/validator/html/CleanResults.java" bugCount="4" size="43" bugHash="e5dc74d760c6262c1a5a7bccd7b26784"/>
+    <FileStats path="org/owasp/validator/html/InternalPolicy.java" bugCount="3" size="90" bugHash="0d3f6f4bba160d7a859a82e687be0ebb"/>
+    <FileStats path="org/owasp/validator/html/Policy.java" bugCount="10" size="409" bugHash="0182f572651511b9cf548059c10d78c0"/>
+    <FileStats path="org/owasp/validator/html/PolicyException.java" bugCount="0" size="8"/>
+    <FileStats path="org/owasp/validator/html/ScanException.java" bugCount="0" size="8"/>
+    <FileStats path="org/owasp/validator/html/TagMatcher.java" bugCount="2" size="13" bugHash="58968c42cdd7a557026542fd9193c050"/>
+    <FileStats path="org/owasp/validator/html/model/AntiSamyPattern.java" bugCount="0" size="12"/>
+    <FileStats path="org/owasp/validator/html/model/Attribute.java" bugCount="2" size="59" bugHash="118953f3e96e2b46ebd29612b5d153ea"/>
+    <FileStats path="org/owasp/validator/html/model/Property.java" bugCount="0" size="20"/>
+    <FileStats path="org/owasp/validator/html/model/Tag.java" bugCount="1" size="54" bugHash="d6aeb2a8e8d38534a77be9a08a103f1d"/>
+    <FileStats path="org/owasp/validator/html/scan/ASHTMLSerializer.java" bugCount="0" size="30"/>
+    <FileStats path="org/owasp/validator/html/scan/ASXHTMLSerializer.java" bugCount="0" size="37"/>
+    <FileStats path="org/owasp/validator/html/scan/AbstractAntiSamyScanner.java" bugCount="3" size="53" bugHash="bf68ff96b36904663c24d965e3324cb6"/>
+    <FileStats path="org/owasp/validator/html/scan/AntiSamyDOMScanner.java" bugCount="6" size="358" bugHash="bb4ce23b5b09241972f00637c9ad25f2"/>
+    <FileStats path="org/owasp/validator/html/scan/AntiSamySAXScanner.java" bugCount="2" size="81" bugHash="a4646f8465b5828bcaa651ae30377bbc"/>
+    <FileStats path="org/owasp/validator/html/scan/Constants.java" bugCount="4" size="33" bugHash="eb6790143f8187b14b8356542b35a219"/>
+    <FileStats path="org/owasp/validator/html/scan/MagicSAXFilter.java" bugCount="4" size="219" bugHash="938635781acfdb1029337eff54f839da"/>
+    <FileStats path="org/owasp/validator/html/util/ErrorMessageUtil.java" bugCount="0" size="38"/>
+    <FileStats path="org/owasp/validator/html/util/HTMLEntityEncoder.java" bugCount="0" size="22"/>
+    <FileStats path="org/owasp/validator/html/util/URIUtils.java" bugCount="0" size="84"/>
+    <FileStats path="org/owasp/validator/html/util/XMLUtil.java" bugCount="3" size="84" bugHash="b67c39692fb3f0abf82179b048bdc094"/>
+    <PackageStats package="org.owasp.validator.css" total_bugs="15" total_types="5" total_size="341" priority_3="4" priority_2="6" priority_1="5">
+      <ClassStats class="org.owasp.validator.css.CssHandler" sourceFile="CssHandler.java" interface="false" size="129" bugs="5" priority_2="5"/>
+      <ClassStats class="org.owasp.validator.css.CssScanner" sourceFile="CssScanner.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.css.CssValidator" sourceFile="CssValidator.java" interface="false" size="98" bugs="8" priority_3="4" priority_1="4"/>
+      <ClassStats class="org.owasp.validator.css.ExternalCssScanner" sourceFile="ExternalCssScanner.java" interface="false" size="44" bugs="1" priority_1="1"/>
+      <ClassStats class="org.owasp.validator.css.UnknownSelectorException" sourceFile="UnknownSelectorException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.validator.html" total_bugs="21" total_types="11" total_size="606" priority_3="14" priority_2="5" priority_1="2">
+      <ClassStats class="org.owasp.validator.html.AntiSamy" sourceFile="AntiSamy.java" interface="false" size="35" bugs="2" priority_1="2"/>
+      <ClassStats class="org.owasp.validator.html.CleanResults" sourceFile="CleanResults.java" interface="false" size="35" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="org.owasp.validator.html.CleanResults$1" sourceFile="CleanResults.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.InternalPolicy" sourceFile="InternalPolicy.java" interface="false" size="90" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.html.Policy" sourceFile="Policy.java" interface="false" size="365" bugs="9" priority_3="8" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.html.Policy$1" sourceFile="Policy.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.Policy$1$1" sourceFile="Policy.java" interface="false" size="15" bugs="1" priority_3="1"/>
+      <ClassStats class="org.owasp.validator.html.Policy$ParseContext" sourceFile="Policy.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.PolicyException" sourceFile="PolicyException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.ScanException" sourceFile="ScanException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.TagMatcher" sourceFile="TagMatcher.java" interface="false" size="13" bugs="2" priority_3="2"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.validator.html.model" total_bugs="3" total_types="5" total_size="145" priority_3="3">
+      <ClassStats class="org.owasp.validator.html.model.AntiSamyPattern" sourceFile="AntiSamyPattern.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.model.Attribute" sourceFile="Attribute.java" interface="false" size="59" bugs="2" priority_3="2"/>
+      <ClassStats class="org.owasp.validator.html.model.Property" sourceFile="Property.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.model.Tag" sourceFile="Tag.java" interface="false" size="47" bugs="1" priority_3="1"/>
+      <ClassStats class="org.owasp.validator.html.model.Tag$1" sourceFile="Tag.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.validator.html.scan" total_bugs="19" total_types="12" total_size="811" priority_3="10" priority_2="7" priority_1="2">
+      <ClassStats class="org.owasp.validator.html.scan.ASHTMLSerializer" sourceFile="ASHTMLSerializer.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.scan.ASXHTMLSerializer" sourceFile="ASXHTMLSerializer.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.scan.AbstractAntiSamyScanner" sourceFile="AbstractAntiSamyScanner.java" interface="false" size="53" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="org.owasp.validator.html.scan.AntiSamyDOMScanner" sourceFile="AntiSamyDOMScanner.java" interface="false" size="338" bugs="5" priority_3="4" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.html.scan.AntiSamyDOMScanner$1" sourceFile="AntiSamyDOMScanner.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.scan.AntiSamyDOMScanner$CachedItem" sourceFile="AntiSamyDOMScanner.java" interface="false" size="12" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.html.scan.AntiSamySAXScanner" sourceFile="AntiSamySAXScanner.java" interface="false" size="60" bugs="1" priority_3="1"/>
+      <ClassStats class="org.owasp.validator.html.scan.AntiSamySAXScanner$CachedItem" sourceFile="AntiSamySAXScanner.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="org.owasp.validator.html.scan.Constants" sourceFile="Constants.java" interface="false" size="27" bugs="4" priority_3="2" priority_1="2"/>
+      <ClassStats class="org.owasp.validator.html.scan.Constants$1" sourceFile="Constants.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.scan.MagicSAXFilter" sourceFile="MagicSAXFilter.java" interface="false" size="206" bugs="4" priority_3="2" priority_2="2"/>
+      <ClassStats class="org.owasp.validator.html.scan.MagicSAXFilter$Ops" sourceFile="MagicSAXFilter.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.owasp.validator.html.util" total_bugs="3" total_types="4" total_size="228" priority_3="3">
+      <ClassStats class="org.owasp.validator.html.util.ErrorMessageUtil" sourceFile="ErrorMessageUtil.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.util.HTMLEntityEncoder" sourceFile="HTMLEntityEncoder.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.util.URIUtils" sourceFile="URIUtils.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="org.owasp.validator.html.util.XMLUtil" sourceFile="XMLUtil.java" interface="false" size="84" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="349" invocations="1044" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="24738" standardDeviationMicrosecondsPerInvocation="1014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="139" invocations="185" avgMicrosecondsPerInvocation="752" maxMicrosecondsPerInvocation="9907" standardDeviationMicrosecondsPerInvocation="1483"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="119" invocations="275" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="10416" standardDeviationMicrosecondsPerInvocation="1036"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="113" invocations="185" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="6614" standardDeviationMicrosecondsPerInvocation="1138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="110" invocations="727" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="3000" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="110" invocations="261" avgMicrosecondsPerInvocation="422" maxMicrosecondsPerInvocation="7733" standardDeviationMicrosecondsPerInvocation="765"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="103" invocations="257" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="4836" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="98" invocations="276" avgMicrosecondsPerInvocation="355" maxMicrosecondsPerInvocation="8207" standardDeviationMicrosecondsPerInvocation="878"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="92" invocations="258" avgMicrosecondsPerInvocation="357" maxMicrosecondsPerInvocation="7920" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="75" invocations="205" avgMicrosecondsPerInvocation="367" maxMicrosecondsPerInvocation="12493" standardDeviationMicrosecondsPerInvocation="988"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="68" invocations="261" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="8009" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="56" invocations="270" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="14648" standardDeviationMicrosecondsPerInvocation="1222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="1051" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="2724" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="45" invocations="37" avgMicrosecondsPerInvocation="1220" maxMicrosecondsPerInvocation="10486" standardDeviationMicrosecondsPerInvocation="1858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="44" invocations="185" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="3518" standardDeviationMicrosecondsPerInvocation="429"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="263" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="20801" standardDeviationMicrosecondsPerInvocation="1278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="40" invocations="185" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="12360" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="36" invocations="955" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="9597" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="33" invocations="185" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="2221" standardDeviationMicrosecondsPerInvocation="318"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="185" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="3548" standardDeviationMicrosecondsPerInvocation="412"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="28" invocations="185" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="2023" standardDeviationMicrosecondsPerInvocation="337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="261" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="1877" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="185" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="5263" standardDeviationMicrosecondsPerInvocation="426"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="24" invocations="7313" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="6301" standardDeviationMicrosecondsPerInvocation="74"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="23" invocations="99" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="1453" standardDeviationMicrosecondsPerInvocation="254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="21" invocations="37" avgMicrosecondsPerInvocation="570" maxMicrosecondsPerInvocation="2973" standardDeviationMicrosecondsPerInvocation="627"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="20" invocations="37" avgMicrosecondsPerInvocation="551" maxMicrosecondsPerInvocation="4512" standardDeviationMicrosecondsPerInvocation="857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="20" invocations="252" avgMicrosecondsPerInvocation="79" maxMicrosecondsPerInvocation="2476" standardDeviationMicrosecondsPerInvocation="187"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="19" invocations="37" avgMicrosecondsPerInvocation="539" maxMicrosecondsPerInvocation="3929" standardDeviationMicrosecondsPerInvocation="823"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="19" invocations="37" avgMicrosecondsPerInvocation="537" maxMicrosecondsPerInvocation="3865" standardDeviationMicrosecondsPerInvocation="692"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="19" invocations="185" avgMicrosecondsPerInvocation="103" maxMicrosecondsPerInvocation="3009" standardDeviationMicrosecondsPerInvocation="418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="18" invocations="37" avgMicrosecondsPerInvocation="509" maxMicrosecondsPerInvocation="5618" standardDeviationMicrosecondsPerInvocation="1080"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="18" invocations="185" avgMicrosecondsPerInvocation="101" maxMicrosecondsPerInvocation="1469" standardDeviationMicrosecondsPerInvocation="195"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="37" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="5020" standardDeviationMicrosecondsPerInvocation="1193"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

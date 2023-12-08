@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013291086" analysisTimestamp="1702018795702" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\sa-token-core-1.13.0.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_STATIC_REP2" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="6d2070ef84beda1e696ae4b4d1df081f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>May expose internal static state by storing a mutable object into a static field</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.setConfig(SaTokenConfig) may expose internal static state by storing a mutable object into a static field cn.dev33.satoken.SaTokenManager.config</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.SaTokenManager" name="setConfig" signature="(Lcn/dev33/satoken/config/SaTokenConfig;)V" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="36" end="40" startBytecode="0" endBytecode="80" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java"/>
+      <Message>In method cn.dev33.satoken.SaTokenManager.setConfig(SaTokenConfig)</Message>
+    </Method>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="config" signature="Lcn/dev33/satoken/config/SaTokenConfig;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.config</Message>
+    </Field>
+    <LocalVariable name="config" register="0" pc="1" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named config</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="36" end="36" startBytecode="1" endBytecode="1" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="5de119222ba2a88b74c5c98286ebefef" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Public static method may expose internal representation by returning a mutable object or array</ShortMessage>
+    <LongMessage>Public static cn.dev33.satoken.SaTokenManager.getConfig() may expose internal representation by returning SaTokenManager.config</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.SaTokenManager" name="getConfig" signature="()Lcn/dev33/satoken/config/SaTokenConfig;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="30" end="33" startBytecode="0" endBytecode="53" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java"/>
+      <Message>In method cn.dev33.satoken.SaTokenManager.getConfig()</Message>
+    </Method>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="config" signature="Lcn/dev33/satoken/config/SaTokenConfig;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.config</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="33" end="33" startBytecode="12" endBytecode="12" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="6d0c9060e8fabc39f6fd9b1c3eb41993" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.saTokenAction should be package protected</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenAction" signature="Lcn/dev33/satoken/action/SaTokenAction;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenAction</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java" synthetic="true">
+      <Message>In SaTokenManager.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="b0ac9385d5e69477f6dc155c19a83fda" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.saTokenCookie should be package protected</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenCookie" signature="Lcn/dev33/satoken/cookie/SaTokenCookie;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenCookie</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java" synthetic="true">
+      <Message>In SaTokenManager.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="2a43d9a0227e703766ce01a22997182c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.saTokenDao should be package protected</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenDao" signature="Lcn/dev33/satoken/dao/SaTokenDao;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenDao</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java" synthetic="true">
+      <Message>In SaTokenManager.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="323aa94f196a28e764d2714c60325e5f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.saTokenServlet should be package protected</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenServlet" signature="Lcn/dev33/satoken/servlet/SaTokenServlet;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenServlet</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java" synthetic="true">
+      <Message>In SaTokenManager.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="5e7de4516a5a08d6286f0203bc587b4d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.dev33.satoken.SaTokenManager.stpInterface should be package protected</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="stpInterface" signature="Lcn/dev33/satoken/stp/StpInterface;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.stpInterface</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java" synthetic="true">
+      <Message>In SaTokenManager.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="3ba774805902be6c21dfaed247c42191" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.SaTokenManager.saTokenAction is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenAction" signature="Lcn/dev33/satoken/action/SaTokenAction;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenAction</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="93" end="93" startBytecode="0" endBytecode="0" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 93]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="7fa897f15e3e4ac3274549c18edf148" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.SaTokenManager.saTokenCookie is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenCookie" signature="Lcn/dev33/satoken/cookie/SaTokenCookie;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenCookie</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="112" end="112" startBytecode="0" endBytecode="0" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 112]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="680b2552f08f231315323666b296775a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.SaTokenManager.saTokenDao is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenDao" signature="Lcn/dev33/satoken/dao/SaTokenDao;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenDao</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="52" end="52" startBytecode="0" endBytecode="0" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="fcb429272b3fac1e2129e1644c6049dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.SaTokenManager.saTokenServlet is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="saTokenServlet" signature="Lcn/dev33/satoken/servlet/SaTokenServlet;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.saTokenServlet</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="131" end="131" startBytecode="0" endBytecode="0" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 131]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="96dbc538247e8b356f87a6d9a051b22" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.SaTokenManager.stpInterface is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.SaTokenManager" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" start="22" end="143" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>At SaTokenManager.java:[lines 22-143]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.SaTokenManager</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.SaTokenManager" name="stpInterface" signature="Lcn/dev33/satoken/stp/StpInterface;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.SaTokenManager" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+        <Message>In SaTokenManager.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.SaTokenManager.stpInterface</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.SaTokenManager" primary="true" start="74" end="74" startBytecode="0" endBytecode="0" sourcefile="SaTokenManager.java" sourcepath="cn/dev33/satoken/SaTokenManager.java">
+      <Message>At SaTokenManager.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOOLEAN_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE" instanceHash="edcf9918f51e854384ba9b0acceaee90" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="131" end="131" startBytecode="204" endBytecode="204" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 131]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" rank="20" abbrev="Bx" category="PERFORMANCE" instanceHash="549f8f7b1fb50fa9cbd193132f019284" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient new Double(String) constructor; use Double.valueOf(String) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Double" start="732" end="734" startBytecode="0" endBytecode="72" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Called method new Double(String)</Message>
+    </Method>
+    <Method classname="java.lang.Double" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Double;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Double" start="614" end="614" startBytecode="0" endBytecode="53" sourcefile="Double.java" sourcepath="java/lang/Double.java"/>
+      <Message>Should call Double.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="129" end="129" startBytecode="173" endBytecode="173" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_FP_NUMBER_CTOR" priority="3" rank="20" abbrev="Bx" category="PERFORMANCE" instanceHash="987497d9f649351ffb303b648fb2356" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient new Float(String) constructor; use Float.valueOf(String) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="574" end="576" startBytecode="0" endBytecode="72" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Called method new Float(String)</Message>
+    </Method>
+    <Method classname="java.lang.Float" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Float;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Float" start="440" end="440" startBytecode="0" endBytecode="53" sourcefile="Float.java" sourcepath="java/lang/Float.java"/>
+      <Message>Should call Float.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="127" end="127" startBytecode="142" endBytecode="142" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 127]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="ddac76645e9ec319b1526771ad9c3153" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient new Integer(String) constructor; use Integer.valueOf(String) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1126" end="1128" startBytecode="0" endBytecode="74" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method new Integer(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Integer;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="999" end="999" startBytecode="0" endBytecode="51" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Should call Integer.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="121" end="121" startBytecode="49" endBytecode="49" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 121]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="9c737b518384b54f8ebe0e02a657aae3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient new Long(String) constructor; use Long.valueOf(String) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1347" end="1349" startBytecode="0" endBytecode="74" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Called method new Long(String)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Long;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1163" end="1163" startBytecode="0" endBytecode="51" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Should call Long.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="123" end="123" startBytecode="80" endBytecode="80" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 123]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE" instanceHash="91b6715278da5545fd4d94521e015c77" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method invokes inefficient Number constructor; use static valueOf instead</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class) invokes inefficient new Short(String) constructor; use Short.valueOf(String) instead</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="getObjectByClass" signature="(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="115" end="135" startBytecode="0" endBytecode="429" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.getObjectByClass(String, Class)</Message>
+    </Method>
+    <Method classname="java.lang.Short" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Short" start="376" end="378" startBytecode="0" endBytecode="74" sourcefile="Short.java" sourcepath="java/lang/Short.java"/>
+      <Message>Called method new Short(String)</Message>
+    </Method>
+    <Method classname="java.lang.Short" name="valueOf" signature="(Ljava/lang/String;)Ljava/lang/Short;" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Short" start="219" end="219" startBytecode="0" endBytecode="48" sourcefile="Short.java" sourcepath="java/lang/Short.java"/>
+      <Message>Should call Short.valueOf(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="125" end="125" startBytecode="111" endBytecode="111" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 125]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="c812351754e676faee9d557dd10aae18" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>cn.dev33.satoken.config.SaTokenConfigFactory.configPath isn&apos;t final but should be</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="configPath" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>In SaTokenConfigFactory.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.config.SaTokenConfigFactory.configPath</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="23" end="23" startBytecode="2" endBytecode="2" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UCF_USELESS_CONTROL_FLOW" priority="3" rank="20" abbrev="UCF" category="STYLE" instanceHash="94976904b4424a988c886dbe03b0782e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless control flow</ShortMessage>
+    <LongMessage>Useless control flow in cn.dev33.satoken.config.SaTokenConfigFactory.createConfig()</LongMessage>
+    <Class classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="18" end="135" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+        <Message>At SaTokenConfigFactory.java:[lines 18-135]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.config.SaTokenConfigFactory</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.config.SaTokenConfigFactory" name="createConfig" signature="()Lcn/dev33/satoken/config/SaTokenConfig;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" start="31" end="35" startBytecode="0" endBytecode="107" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java"/>
+      <Message>In method cn.dev33.satoken.config.SaTokenConfigFactory.createConfig()</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.config.SaTokenConfigFactory" primary="true" start="32" end="32" startBytecode="8" endBytecode="8" sourcefile="SaTokenConfigFactory.java" sourcepath="cn/dev33/satoken/config/SaTokenConfigFactory.java">
+      <Message>At SaTokenConfigFactory.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="10af155227523d9415e2de58f97a600b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method initRefreshTimer is called from constructor new cn.dev33.satoken.dao.SaTokenDaoDefaultImpl().</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="37" end="39" startBytecode="0" endBytecode="88" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java"/>
+      <Message>In method new cn.dev33.satoken.dao.SaTokenDaoDefaultImpl()</Message>
+    </Method>
+    <String value="initRefreshTimer">
+      <Message>Value initRefreshTimer</Message>
+    </String>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="38" end="38" startBytecode="27" endBytecode="27" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" priority="3" rank="19" abbrev="PA" category="BAD_PRACTICE" instanceHash="95d1bb0b221ed539d1c83e7c80fe6d5a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Mutable object-type field is public</ShortMessage>
+    <LongMessage>Mutable object-type field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.dataMap is public, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="dataMap" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>In SaTokenDaoDefaultImpl.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.dataMap</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="27" end="27" startBytecode="12" endBytecode="12" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 27]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" priority="3" rank="19" abbrev="PA" category="BAD_PRACTICE" instanceHash="515a7dd13e3a0110441fc89e3d1f1da8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Mutable object-type field is public</ShortMessage>
+    <LongMessage>Mutable object-type field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.expireMap is public, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="expireMap" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>In SaTokenDaoDefaultImpl.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.expireMap</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="32" end="32" startBytecode="23" endBytecode="23" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="4ae4ca98f19b8fbb9e18c6b1728926ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.refreshTimer is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="refreshTimer" signature="Ljava/util/Timer;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>In SaTokenDaoDefaultImpl.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.refreshTimer</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="185" end="185" startBytecode="1" endBytecode="1" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 185]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="a25095537b52b5c49509ddd4fd5a5762" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Long reference to constant in cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.clearKeyByTimeout(String)</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="clearKeyByTimeout" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="127" end="133" startBytecode="0" endBytecode="26" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java"/>
+      <Message>In method cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.clearKeyByTimeout(String)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Long;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Long" start="71" end="2010" sourcefile="Long.java" sourcepath="java/lang/Long.java">
+        <Message>At Long.java:[lines 71-2010]</Message>
+      </SourceLine>
+      <Message>Actual type Long</Message>
+    </Type>
+    <Field classname="cn.dev33.satoken.dao.SaTokenDao" name="NEVER_EXPIRE" signature="Ljava/lang/Long;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDao" sourcefile="SaTokenDao.java" sourcepath="cn/dev33/satoken/dao/SaTokenDao.java">
+        <Message>In SaTokenDao.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.dev33.satoken.dao.SaTokenDao.NEVER_EXPIRE</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="129" end="129" startBytecode="22" endBytecode="22" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="dd4ae7e9fa98c934ac7f908c7c8ee180" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Long reference to constant in cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.getKeyTimeout(String)</LongMessage>
+    <Class classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="27" end="216" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+        <Message>At SaTokenDaoDefaultImpl.java:[lines 27-216]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.dao.SaTokenDaoDefaultImpl</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" name="getKeyTimeout" signature="(Ljava/lang/String;)J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" start="140" end="159" startBytecode="0" endBytecode="45" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java"/>
+      <Message>In method cn.dev33.satoken.dao.SaTokenDaoDefaultImpl.getKeyTimeout(String)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Long;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Long" start="71" end="2010" sourcefile="Long.java" sourcepath="java/lang/Long.java">
+        <Message>At Long.java:[lines 71-2010]</Message>
+      </SourceLine>
+      <Message>Actual type Long</Message>
+    </Type>
+    <Field classname="cn.dev33.satoken.dao.SaTokenDao" name="NEVER_EXPIRE" signature="Ljava/lang/Long;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.dev33.satoken.dao.SaTokenDao" sourcefile="SaTokenDao.java" sourcepath="cn/dev33/satoken/dao/SaTokenDao.java">
+        <Message>In SaTokenDao.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.dev33.satoken.dao.SaTokenDao.NEVER_EXPIRE</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" primary="true" start="148" end="148" startBytecode="34" endBytecode="34" sourcefile="SaTokenDaoDefaultImpl.java" sourcepath="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java">
+      <Message>At SaTokenDaoDefaultImpl.java:[line 148]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="ff5e4b99a16c57f86a4e8f5abe8a9dfe" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection</ShortMessage>
+    <LongMessage>cn.dev33.satoken.exception.NotLoginException.ABNORMAL_LIST is a mutable collection</LongMessage>
+    <Class classname="cn.dev33.satoken.exception.NotLoginException" primary="true">
+      <SourceLine classname="cn.dev33.satoken.exception.NotLoginException" start="52" end="121" sourcefile="NotLoginException.java" sourcepath="cn/dev33/satoken/exception/NotLoginException.java">
+        <Message>At NotLoginException.java:[lines 52-121]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.exception.NotLoginException</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.exception.NotLoginException" name="ABNORMAL_LIST" signature="Ljava/util/List;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.exception.NotLoginException" sourcefile="NotLoginException.java" sourcepath="cn/dev33/satoken/exception/NotLoginException.java">
+        <Message>In NotLoginException.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.exception.NotLoginException.ABNORMAL_LIST</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.exception.NotLoginException" primary="true" start="52" end="52" startBytecode="32" endBytecode="32" sourcefile="NotLoginException.java" sourcepath="cn/dev33/satoken/exception/NotLoginException.java">
+      <Message>At NotLoginException.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b8458b350cb69180c4cc77331d39cb3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.dev33.satoken.session.SaSession.getDataMap() may expose internal representation by returning SaSession.dataMap</LongMessage>
+    <Class classname="cn.dev33.satoken.session.SaSession" primary="true">
+      <SourceLine classname="cn.dev33.satoken.session.SaSession" start="29" end="248" sourcefile="SaSession.java" sourcepath="cn/dev33/satoken/session/SaSession.java">
+        <Message>At SaSession.java:[lines 29-248]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.session.SaSession</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.session.SaSession" name="getDataMap" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.session.SaSession" start="226" end="226" startBytecode="0" endBytecode="46" sourcefile="SaSession.java" sourcepath="cn/dev33/satoken/session/SaSession.java"/>
+      <Message>In method cn.dev33.satoken.session.SaSession.getDataMap()</Message>
+    </Method>
+    <Field classname="cn.dev33.satoken.session.SaSession" name="dataMap" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.session.SaSession" sourcefile="SaSession.java" sourcepath="cn/dev33/satoken/session/SaSession.java">
+        <Message>In SaSession.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.session.SaSession.dataMap</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.session.SaSession" primary="true" start="226" end="226" startBytecode="4" endBytecode="4" sourcefile="SaSession.java" sourcepath="cn/dev33/satoken/session/SaSession.java">
+      <Message>At SaSession.java:[line 226]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="22dce36478bc2f6a7e10a3e12c83be25" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>cn.dev33.satoken.session.SaSessionCustomUtil.sessionKey isn&apos;t final but should be</LongMessage>
+    <Class classname="cn.dev33.satoken.session.SaSessionCustomUtil" primary="true">
+      <SourceLine classname="cn.dev33.satoken.session.SaSessionCustomUtil" start="11" end="71" sourcefile="SaSessionCustomUtil.java" sourcepath="cn/dev33/satoken/session/SaSessionCustomUtil.java">
+        <Message>At SaSessionCustomUtil.java:[lines 11-71]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.session.SaSessionCustomUtil</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.session.SaSessionCustomUtil" name="sessionKey" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.session.SaSessionCustomUtil" sourcefile="SaSessionCustomUtil.java" sourcepath="cn/dev33/satoken/session/SaSessionCustomUtil.java">
+        <Message>In SaSessionCustomUtil.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.session.SaSessionCustomUtil.sessionKey</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.session.SaSessionCustomUtil" primary="true" start="16" end="16" startBytecode="2" endBytecode="2" sourcefile="SaSessionCustomUtil.java" sourcepath="cn/dev33/satoken/session/SaSessionCustomUtil.java">
+      <Message>At SaSessionCustomUtil.java:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="46bca75c72547e9885bf513f84fa6ed8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.isLogin is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="isLogin" signature="Ljava/lang/Boolean;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.isLogin</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="73" end="73" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 73]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="6be2d0fb1196965eb1b526d1bce7141f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.loginDevice is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="loginDevice" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.loginDevice</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="171" end="171" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 171]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="cc3e556ee456f5e55d16fb1ed1286f94" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.loginId is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="loginId" signature="Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.loginId</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="87" end="87" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="4aef35a4b18dc37c58c74eeff6624953" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.loginKey is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="loginKey" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.loginKey</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="101" end="101" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 101]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="5e1d57bfacdbd1549887612ba52ffe7b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.sessionTimeout is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="sessionTimeout" signature="J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.sessionTimeout</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="129" end="129" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 129]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="782c040f87c6ccfe89ddf5dab4c4b668" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.tokenActivityTimeout is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="tokenActivityTimeout" signature="J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.tokenActivityTimeout</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="157" end="157" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 157]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="1be2127c728338b339698569bb20043d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.tokenName is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="tokenName" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.tokenName</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="45" end="45" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="a3f60770c4713e0aec954ecf94906796" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.tokenSessionTimeout is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="tokenSessionTimeout" signature="J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.tokenSessionTimeout</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="143" end="143" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 143]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="d780111550db271e7faea03a667a305b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.tokenTimeout is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="tokenTimeout" signature="J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.tokenTimeout</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="115" end="115" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="3e04646d256fe0a67c28839e7284d355" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.SaTokenInfo.tokenValue is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" start="9" end="186" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>At SaTokenInfo.java:[lines 9-186]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.SaTokenInfo</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.SaTokenInfo" name="tokenValue" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+        <Message>In SaTokenInfo.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.SaTokenInfo.tokenValue</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.SaTokenInfo" primary="true" start="59" end="59" startBytecode="1" endBytecode="1" sourcefile="SaTokenInfo.java" sourcepath="cn/dev33/satoken/stp/SaTokenInfo.java">
+      <Message>At SaTokenInfo.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="7cca5b336cfcec38b6903f7c5b14e30a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive cn.dev33.satoken.stp.StpLogic.getLoginIdAsInt()</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.StpLogic" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="38" end="1202" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+        <Message>At StpLogic.java:[lines 38-1202]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.StpLogic</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.stp.StpLogic" name="getLoginIdAsInt" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="424" end="424" startBytecode="0" endBytecode="55" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java"/>
+      <Message>In method cn.dev33.satoken.stp.StpLogic.getLoginIdAsInt()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.stp.StpLogic" primary="true" start="424" end="424" startBytecode="10" endBytecode="10" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+      <Message>At StpLogic.java:[line 424]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="e1301a9ad9388403e501b0f072a77647" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive cn.dev33.satoken.stp.StpLogic.getLoginIdAsLong()</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.StpLogic" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="38" end="1202" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+        <Message>At StpLogic.java:[lines 38-1202]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.StpLogic</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.stp.StpLogic" name="getLoginIdAsLong" signature="()J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="432" end="432" startBytecode="0" endBytecode="55" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java"/>
+      <Message>In method cn.dev33.satoken.stp.StpLogic.getLoginIdAsLong()</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1384" end="1384" startBytecode="0" endBytecode="46" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Called method Long.longValue()</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Long.parseLong(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.stp.StpLogic" primary="true" start="432" end="432" startBytecode="10" endBytecode="10" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+      <Message>At StpLogic.java:[line 432]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="2e6dc64d209ec5f9964458489f7b727b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive cn.dev33.satoken.stp.StpLogic.getTokenActivityTimeoutByToken(String)</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.StpLogic" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="38" end="1202" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+        <Message>At StpLogic.java:[lines 38-1202]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.StpLogic</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.stp.StpLogic" name="getTokenActivityTimeoutByToken" signature="(Ljava/lang/String;)J" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="738" end="761" startBytecode="0" endBytecode="290" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java"/>
+      <Message>In method cn.dev33.satoken.stp.StpLogic.getTokenActivityTimeoutByToken(String)</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Long" start="1384" end="1384" startBytecode="0" endBytecode="46" sourcefile="Long.java" sourcepath="java/lang/Long.java"/>
+      <Message>Called method Long.longValue()</Message>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Long.parseLong(String) instead</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.stp.StpLogic" primary="true" start="754" end="754" startBytecode="66" endBytecode="66" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+      <Message>At StpLogic.java:[line 754]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="490dcc427d0263c88d1853ba87a35dee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field cn.dev33.satoken.stp.StpLogic.loginKey is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.StpLogic" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" start="38" end="1202" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+        <Message>At StpLogic.java:[lines 38-1202]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.StpLogic</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.StpLogic" name="loginKey" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpLogic" sourcefile="StpLogic.java" sourcepath="cn/dev33/satoken/stp/StpLogic.java">
+        <Message>In StpLogic.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.StpLogic.loginKey</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.exception.NotRoleException" primary="true" start="43" end="43" startBytecode="5" endBytecode="5" sourcefile="NotRoleException.java" sourcepath="cn/dev33/satoken/exception/NotRoleException.java">
+      <Message>At NotRoleException.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="ac26e0dbfc7d3f4705921526a39f0ed4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>cn.dev33.satoken.stp.StpUtil.stpLogic isn&apos;t final but should be</LongMessage>
+    <Class classname="cn.dev33.satoken.stp.StpUtil" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpUtil" start="12" end="523" sourcefile="StpUtil.java" sourcepath="cn/dev33/satoken/stp/StpUtil.java">
+        <Message>At StpUtil.java:[lines 12-523]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.stp.StpUtil</Message>
+    </Class>
+    <Field classname="cn.dev33.satoken.stp.StpUtil" name="stpLogic" signature="Lcn/dev33/satoken/stp/StpLogic;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.stp.StpUtil" sourcefile="StpUtil.java" sourcepath="cn/dev33/satoken/stp/StpUtil.java">
+        <Message>In StpUtil.java</Message>
+      </SourceLine>
+      <Message>Field cn.dev33.satoken.stp.StpUtil.stpLogic</Message>
+    </Field>
+    <SourceLine classname="cn.dev33.satoken.stp.StpUtil" primary="true" start="17" end="17" startBytecode="9" endBytecode="9" sourcefile="StpUtil.java" sourcepath="cn/dev33/satoken/stp/StpUtil.java">
+      <Message>At StpUtil.java:[line 17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DMI_RANDOM_USED_ONLY_ONCE" priority="1" rank="14" abbrev="DMI" category="BAD_PRACTICE" instanceHash="afa9a3fc3ffbb33a7d62ce591404307" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Random object created and used only once</ShortMessage>
+    <LongMessage>Random object created and used only once in cn.dev33.satoken.util.SaTokenInsideUtil.getMarking28()</LongMessage>
+    <Class classname="cn.dev33.satoken.util.SaTokenInsideUtil" primary="true">
+      <SourceLine classname="cn.dev33.satoken.util.SaTokenInsideUtil" start="15" end="114" sourcefile="SaTokenInsideUtil.java" sourcepath="cn/dev33/satoken/util/SaTokenInsideUtil.java">
+        <Message>At SaTokenInsideUtil.java:[lines 15-114]</Message>
+      </SourceLine>
+      <Message>In class cn.dev33.satoken.util.SaTokenInsideUtil</Message>
+    </Class>
+    <Method classname="cn.dev33.satoken.util.SaTokenInsideUtil" name="getMarking28" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="cn.dev33.satoken.util.SaTokenInsideUtil" start="59" end="59" startBytecode="0" endBytecode="60" sourcefile="SaTokenInsideUtil.java" sourcepath="cn/dev33/satoken/util/SaTokenInsideUtil.java"/>
+      <Message>In method cn.dev33.satoken.util.SaTokenInsideUtil.getMarking28()</Message>
+    </Method>
+    <Method classname="java.util.Random" name="nextInt" signature="(I)I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.util.random.RandomSupport$RandomGeneratorProperties">
+      <SourceLine classname="java.util.Random" start="321" end="333" startBytecode="0" endBytecode="212" sourcefile="Random.java" sourcepath="java/util/Random.java"/>
+      <Message>Called method java.util.Random.nextInt(int)</Message>
+    </Method>
+    <SourceLine classname="cn.dev33.satoken.util.SaTokenInsideUtil" primary="true" start="59" end="59" startBytecode="27" endBytecode="27" sourcefile="SaTokenInsideUtil.java" sourcepath="cn/dev33/satoken/util/SaTokenInsideUtil.java">
+      <Message>At SaTokenInsideUtil.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PA_PUBLIC_MUTABLE_OBJECT_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Mutable object-type field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility of fields must be limited.
+    Making a mutable object-type field final does not prevent other classes from modifying the
+    contents of the object. However, in general, requiring that no fields are allowed to be public
+    is overkill and unrealistic. There may be usages for public fields: some public fields may
+    serve as "flags" that affect the behavior of the class. Such flag fields are expected to be
+    read by the current instance (or the current class, in case of static fields), but written by
+    others. If a field is both written by the methods of the current instance (or the current
+    class, in case of static fields) and from the outside, the code is suspicious. Consider making
+    these fields private and provide appropriate setters, if necessary. Please note that
+    constructors, initializers and finalizers are exceptions, if only they write the field inside
+    the class, the field is not considered as written by the class itself. In case of object-type
+    fields "writing" means calling methods whose name suggest modification.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_STATIC_REP2" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>May expose internal static state by storing a mutable object into a static field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into a static
+   field.
+   If unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RC_REF_COMPARISON_BAD_PRACTICE" abbrev="RC" category="BAD_PRACTICE">
+    <ShortDescription>Suspicious reference comparison to constant</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method compares a reference value to a constant using the == or != operator,
+where the correct way to compare instances of this type is generally
+with the equals() method.
+It is possible to create distinct instances that are equal but do not compare as == since
+they are different objects.
+Examples of classes which should generally
+not be compared by reference are java.lang.Integer, java.lang.Float, etc.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_EXPOSE_REP" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Public static method may expose internal representation by returning a mutable object or array</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A public static method returns a reference to a mutable object or
+   an array that is part of the static state of the class.
+   Any code that calls this method can freely modify
+   the underlying array.
+   One fix is to return a copy of the array.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   Consider wrapping this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_BOOLEAN_CTOR" abbrev="Dm" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient Boolean constructor; use Boolean.valueOf(...) instead</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Creating new instances of <code>java.lang.Boolean</code> wastes
+  memory, since <code>Boolean</code> objects are immutable and there are
+  only two useful values of this type.&nbsp; Use the <code>Boolean.valueOf()</code>
+  method (or Java 5 autoboxing) to create <code>Boolean</code> objects instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_FP_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient floating-point Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Double(double)</code> is guaranteed to always result in a new object whereas
+      <code>Double.valueOf(double)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of <code>Double</code> and <code>Float</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DMI_RANDOM_USED_ONLY_ONCE" abbrev="DMI" category="BAD_PRACTICE">
+    <ShortDescription>Random object created and used only once</ShortDescription>
+    <Details><![CDATA[
+
+<p> This code creates a java.util.Random object, uses it to generate one random number, and then discards
+the Random object. This produces mediocre quality random numbers and is inefficient.
+If possible, rewrite the code so that the Random object is created once and saved, and each time a new random number
+is required invoke a method on the existing Random object to obtain it.
+</p>
+
+<p>If it is important that the generated Random numbers not be guessable, you <em>must</em> not create a new Random for each random
+number; the values are too easily guessable. You should strongly consider using a java.security.SecureRandom instead
+(and avoid allocating a new SecureRandom for each random number needed).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_BOXED_PRIMITIVE_FOR_PARSING" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxing/unboxing to parse a primitive</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_NUMBER_CTOR" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Method invokes inefficient Number constructor; use static valueOf instead</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      Using <code>new Integer(int)</code> is guaranteed to always result in a new object whereas
+      <code>Integer.valueOf(int)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Values between -128 and 127 are guaranteed to have corresponding cached instances
+      and using <code>valueOf</code> is approximately 3.5 times faster than using constructor.
+      For values outside the constant range the performance of both styles is the same.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of
+      <code>Long</code>, <code>Integer</code>, <code>Short</code>, <code>Character</code>, and <code>Byte</code>.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UCF_USELESS_CONTROL_FLOW" abbrev="UCF" category="STYLE">
+    <ShortDescription>Useless control flow</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a useless control flow statement, where
+control flow continues onto the same place regardless of whether or not
+the branch is taken. For example,
+this is caused by having an empty statement
+block for an <code>if</code> statement:</p>
+<pre><code>if (argv.length == 0) {
+    // TODO: handle this case
+}
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="RC">
+    <Description>Questionable use of reference equality rather than calling equals</Description>
+  </BugCode>
+  <BugCode abbrev="DMI" cweid="440">
+    <Description>Dubious method invocation</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="UCF">
+    <Description>Useless control flow</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="3">
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:28:11 +0900" total_classes="37" referenced_classes="115" total_bugs="45" total_size="1397" num_packages="12" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.59" clock_seconds="1.94" peak_mbytes="243.97" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="6" priority_2="31" priority_1="8">
+    <FileStats path="cn/dev33/satoken/SaTokenManager.java" bugCount="12" size="79" bugHash="624126223fe76faed8a5bed15a3b5c2e"/>
+    <FileStats path="cn/dev33/satoken/action/SaTokenAction.java" bugCount="0" size="3"/>
+    <FileStats path="cn/dev33/satoken/action/SaTokenActionDefaultImpl.java" bugCount="0" size="20"/>
+    <FileStats path="cn/dev33/satoken/annotation/SaCheckLogin.java" bugCount="0" size="1"/>
+    <FileStats path="cn/dev33/satoken/annotation/SaCheckPermission.java" bugCount="0" size="3"/>
+    <FileStats path="cn/dev33/satoken/annotation/SaCheckRole.java" bugCount="0" size="3"/>
+    <FileStats path="cn/dev33/satoken/annotation/SaMode.java" bugCount="0" size="11"/>
+    <FileStats path="cn/dev33/satoken/config/SaTokenConfig.java" bugCount="0" size="102"/>
+    <FileStats path="cn/dev33/satoken/config/SaTokenConfigFactory.java" bugCount="8" size="65" bugHash="f71bcddc349557461dab83a377e82c90"/>
+    <FileStats path="cn/dev33/satoken/cookie/SaTokenCookie.java" bugCount="0" size="5"/>
+    <FileStats path="cn/dev33/satoken/cookie/SaTokenCookieDefaultImpl.java" bugCount="0" size="14"/>
+    <FileStats path="cn/dev33/satoken/cookie/SaTokenCookieUtil.java" bugCount="0" size="36"/>
+    <FileStats path="cn/dev33/satoken/dao/SaTokenDao.java" bugCount="0" size="19"/>
+    <FileStats path="cn/dev33/satoken/dao/SaTokenDaoDefaultImpl.java" bugCount="6" size="95" bugHash="9931c946a8b0146aa9e29bca1cc3dadb"/>
+    <FileStats path="cn/dev33/satoken/exception/NotLoginException.java" bugCount="1" size="41" bugHash="1a6ad703bdfca8efc6e9074cf2a4d66d"/>
+    <FileStats path="cn/dev33/satoken/exception/NotPermissionException.java" bugCount="0" size="16"/>
+    <FileStats path="cn/dev33/satoken/exception/NotRoleException.java" bugCount="1" size="16" bugHash="b16f83905c50994860c3052654dc52b3"/>
+    <FileStats path="cn/dev33/satoken/exception/SaTokenException.java" bugCount="0" size="8"/>
+    <FileStats path="cn/dev33/satoken/fun/IsRunFunction.java" bugCount="0" size="10"/>
+    <FileStats path="cn/dev33/satoken/fun/SaFunction.java" bugCount="0" size="2"/>
+    <FileStats path="cn/dev33/satoken/servlet/SaTokenServlet.java" bugCount="0" size="3"/>
+    <FileStats path="cn/dev33/satoken/servlet/SaTokenServletDefaultImpl.java" bugCount="0" size="7"/>
+    <FileStats path="cn/dev33/satoken/session/SaSession.java" bugCount="1" size="82" bugHash="ec4f88f5b091aa2e840fc091558ae5ca"/>
+    <FileStats path="cn/dev33/satoken/session/SaSessionCustomUtil.java" bugCount="1" size="21" bugHash="aa609864511c96299332762da2147c35"/>
+    <FileStats path="cn/dev33/satoken/session/TokenSign.java" bugCount="0" size="18"/>
+    <FileStats path="cn/dev33/satoken/stp/SaTokenInfo.java" bugCount="10" size="65" bugHash="7bc680422e5c56c85f9641c308c6caa9"/>
+    <FileStats path="cn/dev33/satoken/stp/StpInterface.java" bugCount="0" size="3"/>
+    <FileStats path="cn/dev33/satoken/stp/StpInterfaceDefaultImpl.java" bugCount="0" size="7"/>
+    <FileStats path="cn/dev33/satoken/stp/StpLogic.java" bugCount="3" size="424" bugHash="169c9dc7155f0ce394db896d24105809"/>
+    <FileStats path="cn/dev33/satoken/stp/StpUtil.java" bugCount="1" size="132" bugHash="4506d2e0e4c651719f2e431dbb65ea86"/>
+    <FileStats path="cn/dev33/satoken/util/SaTaskUtil.java" bugCount="0" size="29"/>
+    <FileStats path="cn/dev33/satoken/util/SaTokenConsts.java" bugCount="0" size="15"/>
+    <FileStats path="cn/dev33/satoken/util/SaTokenInsideUtil.java" bugCount="1" size="42" bugHash="eb5143067838aa1a6940a32dab980d0c"/>
+    <PackageStats package="cn.dev33.satoken" total_bugs="12" total_types="1" total_size="79" priority_2="12">
+      <ClassStats class="cn.dev33.satoken.SaTokenManager" sourceFile="SaTokenManager.java" interface="false" size="79" bugs="12" priority_2="12"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.action" total_bugs="0" total_types="2" total_size="23">
+      <ClassStats class="cn.dev33.satoken.action.SaTokenAction" sourceFile="SaTokenAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.action.SaTokenActionDefaultImpl" sourceFile="SaTokenActionDefaultImpl.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.annotation" total_bugs="0" total_types="4" total_size="18">
+      <ClassStats class="cn.dev33.satoken.annotation.SaCheckLogin" sourceFile="SaCheckLogin.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.annotation.SaCheckPermission" sourceFile="SaCheckPermission.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.annotation.SaCheckRole" sourceFile="SaCheckRole.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.annotation.SaMode" sourceFile="SaMode.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.config" total_bugs="8" total_types="2" total_size="167" priority_3="3" priority_2="4" priority_1="1">
+      <ClassStats class="cn.dev33.satoken.config.SaTokenConfig" sourceFile="SaTokenConfig.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.config.SaTokenConfigFactory" sourceFile="SaTokenConfigFactory.java" interface="false" size="65" bugs="8" priority_3="3" priority_2="4" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.cookie" total_bugs="0" total_types="3" total_size="55">
+      <ClassStats class="cn.dev33.satoken.cookie.SaTokenCookie" sourceFile="SaTokenCookie.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.cookie.SaTokenCookieDefaultImpl" sourceFile="SaTokenCookieDefaultImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.cookie.SaTokenCookieUtil" sourceFile="SaTokenCookieUtil.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.dao" total_bugs="6" total_types="3" total_size="114" priority_3="3" priority_2="3">
+      <ClassStats class="cn.dev33.satoken.dao.SaTokenDao" sourceFile="SaTokenDao.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl" sourceFile="SaTokenDaoDefaultImpl.java" interface="false" size="88" bugs="6" priority_3="3" priority_2="3"/>
+      <ClassStats class="cn.dev33.satoken.dao.SaTokenDaoDefaultImpl$1" sourceFile="SaTokenDaoDefaultImpl.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.exception" total_bugs="2" total_types="4" total_size="81" priority_2="1" priority_1="1">
+      <ClassStats class="cn.dev33.satoken.exception.NotLoginException" sourceFile="NotLoginException.java" interface="false" size="41" bugs="1" priority_1="1"/>
+      <ClassStats class="cn.dev33.satoken.exception.NotPermissionException" sourceFile="NotPermissionException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.exception.NotRoleException" sourceFile="NotRoleException.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.dev33.satoken.exception.SaTokenException" sourceFile="SaTokenException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.fun" total_bugs="0" total_types="2" total_size="12">
+      <ClassStats class="cn.dev33.satoken.fun.IsRunFunction" sourceFile="IsRunFunction.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.fun.SaFunction" sourceFile="SaFunction.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.servlet" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="cn.dev33.satoken.servlet.SaTokenServlet" sourceFile="SaTokenServlet.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.servlet.SaTokenServletDefaultImpl" sourceFile="SaTokenServletDefaultImpl.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.session" total_bugs="2" total_types="3" total_size="121" priority_2="1" priority_1="1">
+      <ClassStats class="cn.dev33.satoken.session.SaSession" sourceFile="SaSession.java" interface="false" size="82" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.dev33.satoken.session.SaSessionCustomUtil" sourceFile="SaSessionCustomUtil.java" interface="false" size="21" bugs="1" priority_1="1"/>
+      <ClassStats class="cn.dev33.satoken.session.TokenSign" sourceFile="TokenSign.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.stp" total_bugs="14" total_types="5" total_size="631" priority_2="10" priority_1="4">
+      <ClassStats class="cn.dev33.satoken.stp.SaTokenInfo" sourceFile="SaTokenInfo.java" interface="false" size="65" bugs="10" priority_2="10"/>
+      <ClassStats class="cn.dev33.satoken.stp.StpInterface" sourceFile="StpInterface.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.stp.StpInterfaceDefaultImpl" sourceFile="StpInterfaceDefaultImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.stp.StpLogic" sourceFile="StpLogic.java" interface="false" size="424" bugs="3" priority_1="3"/>
+      <ClassStats class="cn.dev33.satoken.stp.StpUtil" sourceFile="StpUtil.java" interface="false" size="132" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="cn.dev33.satoken.util" total_bugs="1" total_types="6" total_size="86" priority_1="1">
+      <ClassStats class="cn.dev33.satoken.util.SaTaskUtil" sourceFile="SaTaskUtil.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.util.SaTaskUtil$1" sourceFile="SaTaskUtil.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.util.SaTaskUtil$2" sourceFile="SaTaskUtil.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.util.SaTaskUtil$FunctionRunClass" sourceFile="SaTaskUtil.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.util.SaTokenConsts" sourceFile="SaTokenConsts.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cn.dev33.satoken.util.SaTokenInsideUtil" sourceFile="SaTokenInsideUtil.java" interface="false" size="42" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="261" invocations="808" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="15325" standardDeviationMicrosecondsPerInvocation="818"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="89" invocations="115" avgMicrosecondsPerInvocation="776" maxMicrosecondsPerInvocation="8731" standardDeviationMicrosecondsPerInvocation="1473"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="71" invocations="659" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="1998" standardDeviationMicrosecondsPerInvocation="180"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="69" invocations="322" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="11629" standardDeviationMicrosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="67" invocations="115" avgMicrosecondsPerInvocation="585" maxMicrosecondsPerInvocation="6347" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="63" invocations="324" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="7381" standardDeviationMicrosecondsPerInvocation="637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="56" invocations="322" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="5508" standardDeviationMicrosecondsPerInvocation="503"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="49" invocations="322" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="1979" standardDeviationMicrosecondsPerInvocation="259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="45" invocations="325" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="5519" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="42" invocations="322" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="5950" standardDeviationMicrosecondsPerInvocation="355"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="33" invocations="115" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="4366" standardDeviationMicrosecondsPerInvocation="598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="351" avgMicrosecondsPerInvocation="92" maxMicrosecondsPerInvocation="15997" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="31" invocations="813" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="2005" standardDeviationMicrosecondsPerInvocation="107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="178" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="10206" standardDeviationMicrosecondsPerInvocation="802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="27" invocations="115" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="17829" standardDeviationMicrosecondsPerInvocation="1656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="253" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="1537" standardDeviationMicrosecondsPerInvocation="178"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="759" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="771" standardDeviationMicrosecondsPerInvocation="61"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="115" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="2449" standardDeviationMicrosecondsPerInvocation="396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="20" invocations="37" avgMicrosecondsPerInvocation="566" maxMicrosecondsPerInvocation="6661" standardDeviationMicrosecondsPerInvocation="1139"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="20" invocations="115" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="4749" standardDeviationMicrosecondsPerInvocation="709"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="19" invocations="115" avgMicrosecondsPerInvocation="173" maxMicrosecondsPerInvocation="2176" standardDeviationMicrosecondsPerInvocation="324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="115" avgMicrosecondsPerInvocation="164" maxMicrosecondsPerInvocation="2019" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="115" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="5352" standardDeviationMicrosecondsPerInvocation="534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="17" invocations="115" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="2618" standardDeviationMicrosecondsPerInvocation="344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReadOfInstanceFieldInMethodInvokedByConstructorInSuperclass" totalMilliseconds="14" invocations="37" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="11280" standardDeviationMicrosecondsPerInvocation="1825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="322" avgMicrosecondsPerInvocation="42" maxMicrosecondsPerInvocation="1098" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="12" invocations="115" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="1539" standardDeviationMicrosecondsPerInvocation="222"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="37" avgMicrosecondsPerInvocation="298" maxMicrosecondsPerInvocation="3702" standardDeviationMicrosecondsPerInvocation="626"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

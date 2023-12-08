@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013483240" analysisTimestamp="1702023826967" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-rendering-macro-footnotes-15.0.jar</Jar>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="6ad8f0cf8b9e8bbde89c4516474ff762" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of footnoteResult, which is known to be non-null in org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.execute(FootnoteMacroParameters, String, MacroTransformationContext)</LongMessage>
+    <Class classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="56" end="231" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java">
+        <Message>At PutFootnotesMacro.java:[lines 56-231]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro</Message>
+    </Class>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="execute" signature="(Lorg/xwiki/rendering/macro/footnote/FootnoteMacroParameters;Ljava/lang/String;Lorg/xwiki/rendering/transformation/MacroTransformationContext;)Ljava/util/List;" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="108" end="140" startBytecode="0" endBytecode="668" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>In method org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.execute(FootnoteMacroParameters, String, MacroTransformationContext)</Message>
+    </Method>
+    <LocalVariable name="footnoteResult" register="8" pc="196" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from footnoteResult</Message>
+    </LocalVariable>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="processFootnote" signature="(Lorg/xwiki/rendering/block/MacroMarkerBlock;ILorg/xwiki/rendering/transformation/MacroTransformationContext;)Lorg/xwiki/rendering/block/ListItemBlock;" isStatic="false" role="METHOD_RETURN_VALUE_OF" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="156" end="168" startBytecode="0" endBytecode="213" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>Return value of org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.processFootnote(MacroMarkerBlock, int, MacroTransformationContext) of type org.xwiki.rendering.block.ListItemBlock</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" start="134" end="134" startBytecode="198" endBytecode="198" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at PutFootnotesMacro.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="16f0e517b28144e605adc6ce21b10421" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of footnoteBlock, which is known to be non-null in org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.processFootnote(MacroMarkerBlock, int, MacroTransformationContext)</LongMessage>
+    <Class classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="56" end="231" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java">
+        <Message>At PutFootnotesMacro.java:[lines 56-231]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro</Message>
+    </Class>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="processFootnote" signature="(Lorg/xwiki/rendering/block/MacroMarkerBlock;ILorg/xwiki/rendering/transformation/MacroTransformationContext;)Lorg/xwiki/rendering/block/ListItemBlock;" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="156" end="168" startBytecode="0" endBytecode="213" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>In method org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.processFootnote(MacroMarkerBlock, int, MacroTransformationContext)</Message>
+    </Method>
+    <LocalVariable name="footnoteBlock" register="6" pc="40" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from footnoteBlock</Message>
+    </LocalVariable>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="createFootnoteBlock" signature="(Ljava/lang/String;ILorg/xwiki/rendering/transformation/MacroTransformationContext;)Lorg/xwiki/rendering/block/ListItemBlock;" isStatic="false" role="METHOD_RETURN_VALUE_OF" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="218" end="231" startBytecode="0" endBytecode="381" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>Return value of org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.createFootnoteBlock(String, int, MacroTransformationContext) of type org.xwiki.rendering.block.ListItemBlock</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" start="164" end="164" startBytecode="42" endBytecode="42" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at PutFootnotesMacro.java:[line 164]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="3370885e0905ecb8736f97df9d07c363" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of referenceBlock, which is known to be non-null in org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.processFootnote(MacroMarkerBlock, int, MacroTransformationContext)</LongMessage>
+    <Class classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="56" end="231" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java">
+        <Message>At PutFootnotesMacro.java:[lines 56-231]</Message>
+      </SourceLine>
+      <Message>In class org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro</Message>
+    </Class>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="processFootnote" signature="(Lorg/xwiki/rendering/block/MacroMarkerBlock;ILorg/xwiki/rendering/transformation/MacroTransformationContext;)Lorg/xwiki/rendering/block/ListItemBlock;" isStatic="false" primary="true" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="156" end="168" startBytecode="0" endBytecode="213" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>In method org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.processFootnote(MacroMarkerBlock, int, MacroTransformationContext)</Message>
+    </Method>
+    <LocalVariable name="referenceBlock" register="5" pc="35" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from referenceBlock</Message>
+    </LocalVariable>
+    <Method classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" name="createFootnoteReferenceBlock" signature="(I)Lorg/xwiki/rendering/block/Block;" isStatic="false" role="METHOD_RETURN_VALUE_OF" classAnnotationNames="org.xwiki.component.annotation.Component,javax.inject.Named,javax.inject.Singleton">
+      <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" start="193" end="200" startBytecode="0" endBytecode="185" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java"/>
+      <Message>Return value of org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro.createFootnoteReferenceBlock(int) of type org.xwiki.rendering.block.Block</Message>
+    </Method>
+    <SourceLine classname="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" primary="true" start="164" end="164" startBytecode="37" endBytecode="37" sourcefile="PutFootnotesMacro.java" sourcepath="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at PutFootnotesMacro.java:[line 164]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="25">
+    <MissingClass>org.apache.commons.lang3.StringUtils</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.Block</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.Block$Axes</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.FormatBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.LinkBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.ListItemBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.MacroBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.MacroMarkerBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.NumberedListBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.SpaceBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.WordBlock</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.XDOM</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.match.BlockMatcher</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.match.ClassBlockMatcher</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.match.MacroBlockMatcher</MissingClass>
+    <MissingClass>org.xwiki.rendering.block.match.MacroMarkerBlockMatcher</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.Format</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.reference.DocumentResourceReference</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.reference.ResourceReference</MissingClass>
+    <MissingClass>org.xwiki.rendering.macro.AbstractMacro</MissingClass>
+    <MissingClass>org.xwiki.rendering.macro.MacroContentParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.macro.MacroExecutionException</MissingClass>
+    <MissingClass>org.xwiki.rendering.macro.descriptor.ContentDescriptor</MissingClass>
+    <MissingClass>org.xwiki.rendering.macro.descriptor.DefaultContentDescriptor</MissingClass>
+    <MissingClass>org.xwiki.rendering.transformation.MacroTransformationContext</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:31:23 +0900" total_classes="3" referenced_classes="27" total_bugs="3" total_size="109" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.59" clock_seconds="1.01" peak_mbytes="220.98" alloc_mbytes="4078.00" gc_seconds="0.01" priority_3="3">
+    <FileStats path="org/xwiki/rendering/internal/macro/footnote/FootnoteMacro.java" bugCount="0" size="26"/>
+    <FileStats path="org/xwiki/rendering/internal/macro/footnote/PutFootnotesMacro.java" bugCount="3" size="80" bugHash="d678cb88ca4a5035bfbc98813c2c3196"/>
+    <FileStats path="org/xwiki/rendering/macro/footnote/FootnoteMacroParameters.java" bugCount="0" size="3"/>
+    <PackageStats package="org.xwiki.rendering.internal.macro.footnote" total_bugs="3" total_types="2" total_size="106" priority_3="3">
+      <ClassStats class="org.xwiki.rendering.internal.macro.footnote.FootnoteMacro" sourceFile="FootnoteMacro.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.macro.footnote.PutFootnotesMacro" sourceFile="PutFootnotesMacro.java" interface="false" size="80" bugs="3" priority_3="3"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.macro.footnote" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="org.xwiki.rendering.macro.footnote.FootnoteMacroParameters" sourceFile="FootnoteMacroParameters.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="218" invocations="544" avgMicrosecondsPerInvocation="402" maxMicrosecondsPerInvocation="20419" standardDeviationMicrosecondsPerInvocation="1119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="49" invocations="27" avgMicrosecondsPerInvocation="1845" maxMicrosecondsPerInvocation="8281" standardDeviationMicrosecondsPerInvocation="2223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="35" invocations="136" avgMicrosecondsPerInvocation="258" maxMicrosecondsPerInvocation="2261" standardDeviationMicrosecondsPerInvocation="361"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="32" invocations="27" avgMicrosecondsPerInvocation="1213" maxMicrosecondsPerInvocation="5017" standardDeviationMicrosecondsPerInvocation="1372"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="549" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="1924" standardDeviationMicrosecondsPerInvocation="123"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="69" avgMicrosecondsPerInvocation="341" maxMicrosecondsPerInvocation="13160" standardDeviationMicrosecondsPerInvocation="1583"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="22" invocations="27" avgMicrosecondsPerInvocation="845" maxMicrosecondsPerInvocation="17898" standardDeviationMicrosecondsPerInvocation="3353"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="477" avgMicrosecondsPerInvocation="46" maxMicrosecondsPerInvocation="941" standardDeviationMicrosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="21" invocations="27" avgMicrosecondsPerInvocation="790" maxMicrosecondsPerInvocation="9389" standardDeviationMicrosecondsPerInvocation="1965"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="18" invocations="14" avgMicrosecondsPerInvocation="1331" maxMicrosecondsPerInvocation="9308" standardDeviationMicrosecondsPerInvocation="2430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="17" invocations="14" avgMicrosecondsPerInvocation="1277" maxMicrosecondsPerInvocation="14564" standardDeviationMicrosecondsPerInvocation="3697"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="17" invocations="27" avgMicrosecondsPerInvocation="653" maxMicrosecondsPerInvocation="5130" standardDeviationMicrosecondsPerInvocation="1020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="17" invocations="14" avgMicrosecondsPerInvocation="1237" maxMicrosecondsPerInvocation="7486" standardDeviationMicrosecondsPerInvocation="2033"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="15" invocations="27" avgMicrosecondsPerInvocation="591" maxMicrosecondsPerInvocation="2593" standardDeviationMicrosecondsPerInvocation="748"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="13" invocations="12" avgMicrosecondsPerInvocation="1094" maxMicrosecondsPerInvocation="3773" standardDeviationMicrosecondsPerInvocation="1275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="12" invocations="14" avgMicrosecondsPerInvocation="881" maxMicrosecondsPerInvocation="6425" standardDeviationMicrosecondsPerInvocation="1616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="12" invocations="14" avgMicrosecondsPerInvocation="874" maxMicrosecondsPerInvocation="7040" standardDeviationMicrosecondsPerInvocation="1742"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

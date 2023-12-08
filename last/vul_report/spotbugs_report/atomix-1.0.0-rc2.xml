@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013447384" analysisTimestamp="1702014213460" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\atomix-1.0.0-rc2.jar</Jar>
+  </Project>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="58618032dad70bc67b425072fc6f2d44" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive io.atomix.AtomixProperties.parseAddress(String)</LongMessage>
+    <Class classname="io.atomix.AtomixProperties" primary="true">
+      <SourceLine classname="io.atomix.AtomixProperties" start="38" end="76" sourcefile="AtomixProperties.java" sourcepath="io/atomix/AtomixProperties.java">
+        <Message>At AtomixProperties.java:[lines 38-76]</Message>
+      </SourceLine>
+      <Message>In class io.atomix.AtomixProperties</Message>
+    </Class>
+    <Method classname="io.atomix.AtomixProperties" name="parseAddress" signature="(Ljava/lang/String;)Lio/atomix/catalyst/transport/Address;" isStatic="false" primary="true">
+      <SourceLine classname="io.atomix.AtomixProperties" start="58" end="66" startBytecode="0" endBytecode="215" sourcefile="AtomixProperties.java" sourcepath="io/atomix/AtomixProperties.java"/>
+      <Message>In method io.atomix.AtomixProperties.parseAddress(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="io.atomix.AtomixProperties" primary="true" start="64" end="64" startBytecode="57" endBytecode="57" sourcefile="AtomixProperties.java" sourcepath="io/atomix/AtomixProperties.java">
+      <Message>At AtomixProperties.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="4ef23b39f9455cf972b694ca6e51483f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive io.atomix.ReplicaProperties.quorumHint()</LongMessage>
+    <Class classname="io.atomix.ReplicaProperties" primary="true">
+      <SourceLine classname="io.atomix.ReplicaProperties" start="58" end="247" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java">
+        <Message>At ReplicaProperties.java:[lines 58-247]</Message>
+      </SourceLine>
+      <Message>In class io.atomix.ReplicaProperties</Message>
+    </Class>
+    <Method classname="io.atomix.ReplicaProperties" name="quorumHint" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="io.atomix.ReplicaProperties" start="116" end="120" startBytecode="0" endBytecode="142" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java"/>
+      <Message>In method io.atomix.ReplicaProperties.quorumHint()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="io.atomix.ReplicaProperties" primary="true" start="118" end="118" startBytecode="18" endBytecode="18" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java">
+      <Message>At ReplicaProperties.java:[line 118]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="b207f2f8bec9c1724ebec1ab86a6e53d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.atomix.ReplicaProperties.quorumHint()</LongMessage>
+    <Class classname="io.atomix.ReplicaProperties" primary="true">
+      <SourceLine classname="io.atomix.ReplicaProperties" start="58" end="247" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java">
+        <Message>At ReplicaProperties.java:[lines 58-247]</Message>
+      </SourceLine>
+      <Message>In class io.atomix.ReplicaProperties</Message>
+    </Class>
+    <Method classname="io.atomix.ReplicaProperties" name="quorumHint" signature="()I" isStatic="false" primary="true">
+      <SourceLine classname="io.atomix.ReplicaProperties" start="116" end="120" startBytecode="0" endBytecode="142" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java"/>
+      <Message>In method io.atomix.ReplicaProperties.quorumHint()</Message>
+    </Method>
+    <SourceLine classname="io.atomix.ReplicaProperties" primary="true" start="120" end="120" startBytecode="27" endBytecode="27" sourcefile="ReplicaProperties.java" sourcepath="io/atomix/ReplicaProperties.java">
+      <Message>At ReplicaProperties.java:[line 120]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DM_BOXED_PRIMITIVE_FOR_PARSING" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxing/unboxing to parse a primitive</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="64">
+    <MissingClass>io.atomix.catalyst.serializer.SerializableTypeResolver</MissingClass>
+    <MissingClass>io.atomix.catalyst.serializer.Serializer</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.Address</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.Client</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.LocalServerRegistry</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.LocalTransport</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.Server</MissingClass>
+    <MissingClass>io.atomix.catalyst.transport.Transport</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.Assert</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.Builder</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.ConfigurationException</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.Listener</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.PropertiesReader</MissingClass>
+    <MissingClass>io.atomix.catalyst.util.QualifiedProperties</MissingClass>
+    <MissingClass>io.atomix.collections.DistributedMap</MissingClass>
+    <MissingClass>io.atomix.collections.DistributedMultiMap</MissingClass>
+    <MissingClass>io.atomix.collections.DistributedMultiMap$Config</MissingClass>
+    <MissingClass>io.atomix.collections.DistributedQueue</MissingClass>
+    <MissingClass>io.atomix.collections.DistributedSet</MissingClass>
+    <MissingClass>io.atomix.coordination.DistributedGroup</MissingClass>
+    <MissingClass>io.atomix.coordination.DistributedLock</MissingClass>
+    <MissingClass>io.atomix.copycat.Command</MissingClass>
+    <MissingClass>io.atomix.copycat.Query</MissingClass>
+    <MissingClass>io.atomix.copycat.client.ConnectionStrategies</MissingClass>
+    <MissingClass>io.atomix.copycat.client.ConnectionStrategy</MissingClass>
+    <MissingClass>io.atomix.copycat.client.CopycatClient</MissingClass>
+    <MissingClass>io.atomix.copycat.client.CopycatClient$Builder</MissingClass>
+    <MissingClass>io.atomix.copycat.client.CopycatClient$State</MissingClass>
+    <MissingClass>io.atomix.copycat.client.RecoveryStrategies</MissingClass>
+    <MissingClass>io.atomix.copycat.client.RecoveryStrategy</MissingClass>
+    <MissingClass>io.atomix.copycat.client.RetryStrategies</MissingClass>
+    <MissingClass>io.atomix.copycat.client.RetryStrategy</MissingClass>
+    <MissingClass>io.atomix.copycat.client.ServerSelectionStrategies</MissingClass>
+    <MissingClass>io.atomix.copycat.client.ServerSelectionStrategy</MissingClass>
+    <MissingClass>io.atomix.copycat.server.CopycatServer</MissingClass>
+    <MissingClass>io.atomix.copycat.server.CopycatServer$Builder</MissingClass>
+    <MissingClass>io.atomix.copycat.server.cluster.Cluster</MissingClass>
+    <MissingClass>io.atomix.copycat.server.cluster.Member</MissingClass>
+    <MissingClass>io.atomix.copycat.server.cluster.Member$Status</MissingClass>
+    <MissingClass>io.atomix.copycat.server.cluster.Member$Type</MissingClass>
+    <MissingClass>io.atomix.copycat.server.storage.Storage</MissingClass>
+    <MissingClass>io.atomix.copycat.server.storage.Storage$Builder</MissingClass>
+    <MissingClass>io.atomix.copycat.server.storage.StorageLevel</MissingClass>
+    <MissingClass>io.atomix.manager.ResourceClient</MissingClass>
+    <MissingClass>io.atomix.manager.ResourceClient$Builder</MissingClass>
+    <MissingClass>io.atomix.manager.ResourceManager</MissingClass>
+    <MissingClass>io.atomix.manager.ResourceManagerTypeResolver</MissingClass>
+    <MissingClass>io.atomix.manager.ResourceServer</MissingClass>
+    <MissingClass>io.atomix.manager.state.ResourceManagerState</MissingClass>
+    <MissingClass>io.atomix.messaging.DistributedMessageBus</MissingClass>
+    <MissingClass>io.atomix.messaging.DistributedMessageBus$Options</MissingClass>
+    <MissingClass>io.atomix.messaging.DistributedTaskQueue</MissingClass>
+    <MissingClass>io.atomix.messaging.DistributedTopic</MissingClass>
+    <MissingClass>io.atomix.resource.Resource</MissingClass>
+    <MissingClass>io.atomix.resource.Resource$Config</MissingClass>
+    <MissingClass>io.atomix.resource.Resource$Options</MissingClass>
+    <MissingClass>io.atomix.resource.ResourceRegistry</MissingClass>
+    <MissingClass>io.atomix.resource.ResourceType</MissingClass>
+    <MissingClass>io.atomix.resource.ResourceTypeResolver</MissingClass>
+    <MissingClass>io.atomix.resource.ServiceLoaderResourceResolver</MissingClass>
+    <MissingClass>io.atomix.variables.DistributedLong</MissingClass>
+    <MissingClass>io.atomix.variables.DistributedValue</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:30:47 +0900" total_classes="19" referenced_classes="84" total_bugs="3" total_size="893" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.86" clock_seconds="1.85" peak_mbytes="242.45" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="1" priority_1="2">
+    <FileStats path="io/atomix/Atomix.java" bugCount="0" size="146"/>
+    <FileStats path="io/atomix/AtomixClient.java" bugCount="0" size="44"/>
+    <FileStats path="io/atomix/AtomixProperties.java" bugCount="1" size="20" bugHash="73ffd603b92bcd19148ee98d27058311"/>
+    <FileStats path="io/atomix/AtomixReplica.java" bugCount="0" size="341"/>
+    <FileStats path="io/atomix/ClientProperties.java" bugCount="0" size="13"/>
+    <FileStats path="io/atomix/Quorum.java" bugCount="0" size="17"/>
+    <FileStats path="io/atomix/ReplicaProperties.java" bugCount="2" size="92" bugHash="0b3bef76559b6a894d5a69f6dcc40528"/>
+    <FileStats path="io/atomix/util/AtomixCopycatClient.java" bugCount="0" size="40"/>
+    <FileStats path="io/atomix/util/ClusterBalancer.java" bugCount="0" size="180"/>
+    <PackageStats package="io.atomix" total_bugs="3" total_types="17" total_size="673" priority_3="1" priority_1="2">
+      <ClassStats class="io.atomix.Atomix" sourceFile="Atomix.java" interface="false" size="146" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixClient" sourceFile="AtomixClient.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixClient$1" sourceFile="AtomixClient.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixClient$Builder" sourceFile="AtomixClient.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixProperties" sourceFile="AtomixProperties.java" interface="false" size="20" bugs="1" priority_1="1"/>
+      <ClassStats class="io.atomix.AtomixReplica" sourceFile="AtomixReplica.java" interface="false" size="115" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$1" sourceFile="AtomixReplica.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$Builder" sourceFile="AtomixReplica.java" interface="false" size="102" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedClient" sourceFile="AtomixReplica.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedClientTransport" sourceFile="AtomixReplica.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedCopycatClient" sourceFile="AtomixReplica.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedSelectionStrategy" sourceFile="AtomixReplica.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedServer" sourceFile="AtomixReplica.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.atomix.AtomixReplica$CombinedServerTransport" sourceFile="AtomixReplica.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.atomix.ClientProperties" sourceFile="ClientProperties.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.atomix.Quorum" sourceFile="Quorum.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="io.atomix.ReplicaProperties" sourceFile="ReplicaProperties.java" interface="false" size="92" bugs="2" priority_3="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="io.atomix.util" total_bugs="0" total_types="2" total_size="220">
+      <ClassStats class="io.atomix.util.AtomixCopycatClient" sourceFile="AtomixCopycatClient.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="io.atomix.util.ClusterBalancer" sourceFile="ClusterBalancer.java" interface="false" size="180" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="210" invocations="807" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="26634" standardDeviationMicrosecondsPerInvocation="1071"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="89" invocations="84" avgMicrosecondsPerInvocation="1064" maxMicrosecondsPerInvocation="18583" standardDeviationMicrosecondsPerInvocation="2428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="64" invocations="84" avgMicrosecondsPerInvocation="764" maxMicrosecondsPerInvocation="8551" standardDeviationMicrosecondsPerInvocation="1354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="52" invocations="259" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="4622" standardDeviationMicrosecondsPerInvocation="430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="51" invocations="257" avgMicrosecondsPerInvocation="201" maxMicrosecondsPerInvocation="6052" standardDeviationMicrosecondsPerInvocation="484"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="49" invocations="498" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="2171" standardDeviationMicrosecondsPerInvocation="182"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="47" invocations="19" avgMicrosecondsPerInvocation="2505" maxMicrosecondsPerInvocation="27391" standardDeviationMicrosecondsPerInvocation="6296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="46" invocations="259" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="7223" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="43" invocations="257" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="5303" standardDeviationMicrosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="39" invocations="84" avgMicrosecondsPerInvocation="474" maxMicrosecondsPerInvocation="18320" standardDeviationMicrosecondsPerInvocation="2012"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="39" invocations="818" avgMicrosecondsPerInvocation="48" maxMicrosecondsPerInvocation="2504" standardDeviationMicrosecondsPerInvocation="133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="38" invocations="259" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="6276" standardDeviationMicrosecondsPerInvocation="415"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="36" invocations="260" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="7400" standardDeviationMicrosecondsPerInvocation="492"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="84" avgMicrosecondsPerInvocation="387" maxMicrosecondsPerInvocation="10907" standardDeviationMicrosecondsPerInvocation="1257"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="30" invocations="259" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="16789" standardDeviationMicrosecondsPerInvocation="1041"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="29" invocations="84" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="18379" standardDeviationMicrosecondsPerInvocation="2005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="28" invocations="84" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="8640" standardDeviationMicrosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="28" invocations="154" avgMicrosecondsPerInvocation="184" maxMicrosecondsPerInvocation="10311" standardDeviationMicrosecondsPerInvocation="855"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="27" invocations="252" avgMicrosecondsPerInvocation="109" maxMicrosecondsPerInvocation="2144" standardDeviationMicrosecondsPerInvocation="223"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="24" invocations="695" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="874" standardDeviationMicrosecondsPerInvocation="85"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="84" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2683" standardDeviationMicrosecondsPerInvocation="436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="21" invocations="19" avgMicrosecondsPerInvocation="1112" maxMicrosecondsPerInvocation="17668" standardDeviationMicrosecondsPerInvocation="3905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="17" invocations="84" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="5428" standardDeviationMicrosecondsPerInvocation="656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="3038" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="686" standardDeviationMicrosecondsPerInvocation="20"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadEndOfStreamCheck" totalMilliseconds="15" invocations="19" avgMicrosecondsPerInvocation="810" maxMicrosecondsPerInvocation="12566" standardDeviationMicrosecondsPerInvocation="2788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="84" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="3551" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="14" invocations="19" avgMicrosecondsPerInvocation="764" maxMicrosecondsPerInvocation="5499" standardDeviationMicrosecondsPerInvocation="1411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="259" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="1207" standardDeviationMicrosecondsPerInvocation="131"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

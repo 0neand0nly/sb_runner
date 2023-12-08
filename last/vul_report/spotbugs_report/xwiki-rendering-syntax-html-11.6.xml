@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013386943" analysisTimestamp="1702023861604" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-rendering-syntax-html-11.6.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="7">
+    <MissingClass>org.xwiki.rendering.block.XDOM</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.parser.xhtml.XHTMLParser</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.Listener</MissingClass>
+    <MissingClass>org.xwiki.rendering.parser.ParseException</MissingClass>
+    <MissingClass>org.xwiki.rendering.syntax.Syntax</MissingClass>
+    <MissingClass>org.xwiki.xml.html.HTMLCleaner</MissingClass>
+    <MissingClass>org.xwiki.xml.html.HTMLUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:46 +0900" total_classes="1" referenced_classes="5" total_bugs="0" total_size="11" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.47" clock_seconds="0.61" peak_mbytes="165.93" alloc_mbytes="4078.00" gc_seconds="0.00">
+    <FileStats path="org/xwiki/rendering/internal/parser/html/HTMLParser.java" bugCount="0" size="11"/>
+    <PackageStats package="org.xwiki.rendering.internal.parser.html" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="org.xwiki.rendering.internal.parser.html.HTMLParser" sourceFile="HTMLParser.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="119" invocations="270" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="10128" standardDeviationMicrosecondsPerInvocation="1004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="24" invocations="29" avgMicrosecondsPerInvocation="849" maxMicrosecondsPerInvocation="6928" standardDeviationMicrosecondsPerInvocation="1341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="19" invocations="20" avgMicrosecondsPerInvocation="954" maxMicrosecondsPerInvocation="13867" standardDeviationMicrosecondsPerInvocation="3022"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="16" invocations="276" avgMicrosecondsPerInvocation="60" maxMicrosecondsPerInvocation="2320" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="16" invocations="4" avgMicrosecondsPerInvocation="4145" maxMicrosecondsPerInvocation="15753" standardDeviationMicrosecondsPerInvocation="6704"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="14" invocations="5" avgMicrosecondsPerInvocation="2954" maxMicrosecondsPerInvocation="10972" standardDeviationMicrosecondsPerInvocation="4067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="13" invocations="231" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="938" standardDeviationMicrosecondsPerInvocation="97"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013588254" analysisTimestamp="1702016145775" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\hutool-json-5.5.1.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="62963410b04899329886d7a6be598712" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONArray at new cn.hutool.json.JSONArray(JSONTokener) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONArray" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="36" end="658" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 36-658]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONArray</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONArray" name="&lt;init&gt;" signature="(Lcn/hutool/json/JSONTokener;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="122" end="124" startBytecode="0" endBytecode="69" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java"/>
+      <Message>In method new cn.hutool.json.JSONArray(JSONTokener)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONArray" primary="true" start="124" end="124" startBytecode="16" endBytecode="16" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 124]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONArray" start="124" end="124" startBytecode="16" endBytecode="16" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 124]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="b3426a6eecad7ea5901e519650d673c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONArray at new cn.hutool.json.JSONArray(CharSequence) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONArray" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="36" end="658" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 36-658]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONArray</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/CharSequence;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="133" end="135" startBytecode="0" endBytecode="69" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java"/>
+      <Message>In method new cn.hutool.json.JSONArray(CharSequence)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONArray" primary="true" start="135" end="135" startBytecode="9" endBytecode="9" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 135]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONArray" start="135" end="135" startBytecode="9" endBytecode="9" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 135]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f69ebe9096656a4fb673b87076a7098e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONArray at new cn.hutool.json.JSONArray(Object) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONArray" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="36" end="658" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 36-658]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONArray</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/Object;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="151" end="152" startBytecode="0" endBytecode="62" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java"/>
+      <Message>In method new cn.hutool.json.JSONArray(Object)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONArray" primary="true" start="152" end="152" startBytecode="9" endBytecode="9" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 152]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONArray" start="152" end="152" startBytecode="9" endBytecode="9" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 152]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f5a13dd110c60026a9fcfb21b410bc5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONArray at new cn.hutool.json.JSONArray(Object, JSONConfig) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONArray" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="36" end="658" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 36-658]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONArray</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/Object;Lcn/hutool/json/JSONConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="188" end="190" startBytecode="0" endBytecode="82" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java"/>
+      <Message>In method new cn.hutool.json.JSONArray(Object, JSONConfig)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONArray" primary="true" start="190" end="190" startBytecode="12" endBytecode="12" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 190]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONArray" start="190" end="190" startBytecode="12" endBytecode="12" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 190]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="35c013e8bb46e5ffdc8124c479c991b5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONArray at new cn.hutool.json.JSONArray(Object, boolean) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONArray" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="36" end="658" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 36-658]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONArray</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONArray" name="&lt;init&gt;" signature="(Ljava/lang/Object;Z)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONArray" start="169" end="170" startBytecode="0" endBytecode="78" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java"/>
+      <Message>In method new cn.hutool.json.JSONArray(Object, boolean)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONArray" primary="true" start="169" end="169" startBytecode="6" endBytecode="6" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 169]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONArray" start="169" end="169" startBytecode="6" endBytecode="6" sourcefile="JSONArray.java" sourcepath="cn/hutool/json/JSONArray.java">
+      <Message>At JSONArray.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_UNUSUAL" priority="2" rank="17" abbrev="Eq" category="STYLE" instanceHash="d8ef519931254a1f024b1abbe5384e39" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unusual equals method</ShortMessage>
+    <LongMessage>cn.hutool.json.JSONNull.equals(Object) is unusual</LongMessage>
+    <Class classname="cn.hutool.json.JSONNull" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONNull" start="13" end="44" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java">
+        <Message>At JSONNull.java:[lines 13-44]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONNull</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONNull" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONNull" start="33" end="33" startBytecode="0" endBytecode="78" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java"/>
+      <Message>In method cn.hutool.json.JSONNull.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONNull" start="33" end="33" startBytecode="0" endBytecode="78" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java" synthetic="true">
+      <Message>At JSONNull.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" rank="14" abbrev="HE" category="BAD_PRACTICE" instanceHash="5f0fb0fb4b23214ac827cf32dc23960a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class defines equals() and uses Object.hashCode()</ShortMessage>
+    <LongMessage>cn.hutool.json.JSONNull defines equals and uses Object.hashCode()</LongMessage>
+    <Class classname="cn.hutool.json.JSONNull" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONNull" start="13" end="44" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java">
+        <Message>At JSONNull.java:[lines 13-44]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONNull</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONNull" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONNull" start="33" end="33" startBytecode="0" endBytecode="78" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java"/>
+      <Message>In method cn.hutool.json.JSONNull.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONNull" start="33" end="33" startBytecode="0" endBytecode="78" sourcefile="JSONNull.java" sourcepath="cn/hutool/json/JSONNull.java" synthetic="true">
+      <Message>At JSONNull.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="9aa6f31ab149dbb89664ca13e0569159" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONObject at new cn.hutool.json.JSONObject(CharSequence, boolean) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONObject" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObject" start="43" end="762" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 43-762]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONObject</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/CharSequence;Z)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObject" start="253" end="254" startBytecode="0" endBytecode="78" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java"/>
+      <Message>In method new cn.hutool.json.JSONObject(CharSequence, boolean)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONObject" primary="true" start="254" end="254" startBytecode="124" endBytecode="124" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 254]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONObject" start="254" end="254" startBytecode="124" endBytecode="124" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 254]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="1d96b1a0b0f1e0f11ee5bd015d21740d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>new cn.hutool.json.JSONObject(Object, String[]) might ignore java.lang.Exception</LongMessage>
+    <Class classname="cn.hutool.json.JSONObject" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObject" start="43" end="762" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 43-762]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONObject</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONObject" name="&lt;init&gt;" signature="(Ljava/lang/Object;[Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObject" start="221" end="242" startBytecode="0" endBytecode="384" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java"/>
+      <Message>In method new cn.hutool.json.JSONObject(Object, String[])</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="cn.hutool.json.JSONObject" primary="true" start="237" end="237" startBytecode="116" endBytecode="116" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 237]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONObject" primary="true" start="237" end="237" startBytecode="116" endBytecode="116" sourcefile="JSONObject.java" sourcepath="cn/hutool/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 237]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="bbd227cdfe1fc3f834ab70de9b9c1c7c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.hutool.json.JSONObjectIter(Iterator) may expose internal representation by storing an externally mutable object into JSONObjectIter.iterator</LongMessage>
+    <Class classname="cn.hutool.json.JSONObjectIter" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObjectIter" start="15" end="21" sourcefile="JSONObjectIter.java" sourcepath="cn/hutool/json/JSONObjectIter.java">
+        <Message>At JSONObjectIter.java:[lines 15-21]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONObjectIter</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONObjectIter" name="&lt;init&gt;" signature="(Ljava/util/Iterator;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObjectIter" start="15" end="17" startBytecode="0" endBytecode="87" sourcefile="JSONObjectIter.java" sourcepath="cn/hutool/json/JSONObjectIter.java"/>
+      <Message>In method new cn.hutool.json.JSONObjectIter(Iterator)</Message>
+    </Method>
+    <Field classname="cn.hutool.json.JSONObjectIter" name="iterator" signature="Ljava/util/Iterator;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONObjectIter" sourcefile="JSONObjectIter.java" sourcepath="cn/hutool/json/JSONObjectIter.java">
+        <Message>In JSONObjectIter.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.json.JSONObjectIter.iterator</Message>
+    </Field>
+    <LocalVariable name="iterator" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named iterator</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.json.JSONObjectIter" primary="true" start="16" end="16" startBytecode="6" endBytecode="6" sourcefile="JSONObjectIter.java" sourcepath="cn/hutool/json/JSONObjectIter.java">
+      <Message>At JSONObjectIter.java:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="355ac0ffe005e4de720dc65c1594357a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.json.JSONTokener at new cn.hutool.json.JSONTokener(InputStream, JSONConfig) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.json.JSONTokener" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONTokener" start="58" end="443" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java">
+        <Message>At JSONTokener.java:[lines 58-443]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONTokener</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONTokener" name="&lt;init&gt;" signature="(Ljava/io/InputStream;Lcn/hutool/json/JSONConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONTokener" start="76" end="77" startBytecode="0" endBytecode="79" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java"/>
+      <Message>In method new cn.hutool.json.JSONTokener(InputStream, JSONConfig)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONTokener" primary="true" start="77" end="77" startBytecode="62" endBytecode="62" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java">
+      <Message>At JSONTokener.java:[line 77]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.JSONTokener" start="77" end="77" startBytecode="62" endBytecode="62" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java">
+      <Message>At JSONTokener.java:[line 77]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="93e295ee9c60247bb6e3314d18b12b6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in new cn.hutool.json.JSONTokener(InputStream, JSONConfig): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="cn.hutool.json.JSONTokener" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONTokener" start="58" end="443" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java">
+        <Message>At JSONTokener.java:[lines 58-443]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.JSONTokener</Message>
+    </Class>
+    <Method classname="cn.hutool.json.JSONTokener" name="&lt;init&gt;" signature="(Ljava/io/InputStream;Lcn/hutool/json/JSONConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.json.JSONTokener" start="76" end="77" startBytecode="0" endBytecode="79" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java"/>
+      <Message>In method new cn.hutool.json.JSONTokener(InputStream, JSONConfig)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="76" end="79" startBytecode="0" endBytecode="85" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.JSONTokener" primary="true" start="76" end="76" startBytecode="6" endBytecode="6" sourcefile="JSONTokener.java" sourcepath="cn/hutool/json/JSONTokener.java">
+      <Message>At JSONTokener.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="e007afcfe4d2c0675b03c5a695407827" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="BANG" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.BANG</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="140" end="140" startBytecode="11" endBytecode="11" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 140]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="728ecb195009928dc01f396ec2cc4bf4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="EQ" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.EQ</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="212" end="212" startBytecode="362" endBytecode="362" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 212]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="12cc43f6d888302481a8298bda6b4e2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="GT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.GT</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="168" end="168" startBytecode="156" endBytecode="156" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 168]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.XML" start="189" end="189" startBytecode="279" endBytecode="279" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 189]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.XML" start="235" end="235" startBytecode="491" endBytecode="491" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 235]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.XML" start="225" end="225" startBytecode="445" endBytecode="445" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 225]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="2fbb02ccf934c6002d9362638e54b397" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="LT" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.LT</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="166" end="166" startBytecode="142" endBytecode="142" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 166]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.XML" start="250" end="250" startBytecode="590" endBytecode="590" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 250]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="9799ebf1f4a85e50259da4c2d151a35e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="QUEST" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.QUEST</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="173" end="173" startBytecode="174" endBytecode="174" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 173]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RC_REF_COMPARISON_BAD_PRACTICE" priority="2" rank="16" abbrev="RC" category="BAD_PRACTICE" instanceHash="ef53f215eca16f56a420b6c6d969c86b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Suspicious reference comparison to constant</ShortMessage>
+    <LongMessage>Suspicious comparison of a Character reference to constant in cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="parse" signature="(Lcn/hutool/json/XMLTokener;Lcn/hutool/json/JSONObject;Ljava/lang/String;Z)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="136" end="265" startBytecode="0" endBytecode="314" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.parse(XMLTokener, JSONObject, String, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/Character;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Character" start="174" end="11388" sourcefile="Character.java" sourcepath="java/lang/Character.java">
+        <Message>At Character.java:[lines 174-11388]</Message>
+      </SourceLine>
+      <Message>Actual type Character</Message>
+    </Type>
+    <Field classname="cn.hutool.json.XML" name="SLASH" signature="Ljava/lang/Character;" isStatic="true" primary="true" role="FIELD_VALUE_OF">
+      <SourceLine classname="cn.hutool.json.XML" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>In XML.java</Message>
+      </SourceLine>
+      <Message>Value loaded from field cn.hutool.json.XML.SLASH</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="178" end="178" startBytecode="191" endBytecode="191" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 178]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.json.XML" start="223" end="223" startBytecode="435" endBytecode="435" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at XML.java:[line 223]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="f13d2623df43aa10e2753ede5e7ecf14" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>cn.hutool.json.XML.toXml(Object, String) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="cn.hutool.json.XML" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="15" end="397" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+        <Message>At XML.java:[lines 15-397]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XML</Message>
+    </Class>
+    <Method classname="cn.hutool.json.XML" name="toXml" signature="(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XML" start="293" end="396" startBytecode="0" endBytecode="1492" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java"/>
+      <Message>In method cn.hutool.json.XML.toXml(Object, String)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.json.XML" primary="true" start="318" end="318" startBytecode="90" endBytecode="90" sourcefile="XML.java" sourcepath="cn/hutool/json/XML.java">
+      <Message>At XML.java:[line 318]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="662ee57b153e7df8ad354602061e8f9e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>cn.hutool.json.XMLTokener.entity is a mutable collection which should be package protected</LongMessage>
+    <Class classname="cn.hutool.json.XMLTokener" primary="true">
+      <SourceLine classname="cn.hutool.json.XMLTokener" start="17" end="326" sourcefile="XMLTokener.java" sourcepath="cn/hutool/json/XMLTokener.java">
+        <Message>At XMLTokener.java:[lines 17-326]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.json.XMLTokener</Message>
+    </Class>
+    <Field classname="cn.hutool.json.XMLTokener" name="entity" signature="Ljava/util/HashMap;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.json.XMLTokener" sourcefile="XMLTokener.java" sourcepath="cn/hutool/json/XMLTokener.java">
+        <Message>In XMLTokener.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.json.XMLTokener.entity</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.json.XMLTokener" primary="true" start="17" end="17" startBytecode="9" endBytecode="9" sourcefile="XMLTokener.java" sourcepath="cn/hutool/json/XMLTokener.java">
+      <Message>At XMLTokener.java:[line 17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_UNUSUAL" abbrev="Eq" category="STYLE">
+    <ShortDescription>Unusual equals method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class doesn't do any of the patterns we recognize for checking that the type of the argument
+is compatible with the type of the <code>this</code> object. There might not be anything wrong with
+this code, but it is worth reviewing.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RC_REF_COMPARISON_BAD_PRACTICE" abbrev="RC" category="BAD_PRACTICE">
+    <ShortDescription>Suspicious reference comparison to constant</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method compares a reference value to a constant using the == or != operator,
+where the correct way to compare instances of this type is generally
+with the equals() method.
+It is possible to create distinct instances that are equal but do not compare as == since
+they are different objects.
+Examples of classes which should generally
+not be compared by reference are java.lang.Integer, java.lang.Float, etc.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="HE_EQUALS_USE_HASHCODE" abbrev="HE" category="BAD_PRACTICE">
+    <ShortDescription>Class defines equals() and uses Object.hashCode()</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class overrides <code>equals(Object)</code>, but does not
+  override <code>hashCode()</code>, and inherits the implementation of
+  <code>hashCode()</code> from <code>java.lang.Object</code> (which returns
+  the identity hash code, an arbitrary value assigned to the object
+  by the VM).&nbsp; Therefore, the class is very likely to violate the
+  invariant that equal objects must have equal hashcodes.</p>
+
+<p>If you don't think instances of this class will ever be inserted into a HashMap/HashTable,
+the recommended <code>hashCode</code> implementation to use is:</p>
+<pre><code>public int hashCode() {
+    assert false : "hashCode not designed";
+    return 42; // any arbitrary constant will do
+}
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="RC">
+    <Description>Questionable use of reference equality rather than calling equals</Description>
+  </BugCode>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="HE">
+    <Description>Equal objects must have equal hashcodes</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="31">
+    <MissingClass>cn.hutool.core.bean.BeanPath</MissingClass>
+    <MissingClass>cn.hutool.core.bean.BeanUtil</MissingClass>
+    <MissingClass>cn.hutool.core.bean.copier.BeanCopier</MissingClass>
+    <MissingClass>cn.hutool.core.bean.copier.CopyOptions</MissingClass>
+    <MissingClass>cn.hutool.core.collection.ArrayIter</MissingClass>
+    <MissingClass>cn.hutool.core.collection.CollUtil</MissingClass>
+    <MissingClass>cn.hutool.core.collection.CollectionUtil</MissingClass>
+    <MissingClass>cn.hutool.core.convert.Convert</MissingClass>
+    <MissingClass>cn.hutool.core.convert.ConvertException</MissingClass>
+    <MissingClass>cn.hutool.core.convert.Converter</MissingClass>
+    <MissingClass>cn.hutool.core.convert.ConverterRegistry</MissingClass>
+    <MissingClass>cn.hutool.core.convert.impl.ArrayConverter</MissingClass>
+    <MissingClass>cn.hutool.core.date.DateUtil</MissingClass>
+    <MissingClass>cn.hutool.core.date.TemporalAccessorUtil</MissingClass>
+    <MissingClass>cn.hutool.core.exceptions.ExceptionUtil</MissingClass>
+    <MissingClass>cn.hutool.core.getter.OptNullBasicTypeFromObjectGetter</MissingClass>
+    <MissingClass>cn.hutool.core.io.file.FileReader</MissingClass>
+    <MissingClass>cn.hutool.core.lang.TypeReference</MissingClass>
+    <MissingClass>cn.hutool.core.map.CaseInsensitiveLinkedMap</MissingClass>
+    <MissingClass>cn.hutool.core.map.CaseInsensitiveMap</MissingClass>
+    <MissingClass>cn.hutool.core.map.MapUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ArrayUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.CharUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ClassUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.EscapeUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.HexUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.NumberUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ObjectUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ReflectUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.StrUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.TypeUtil</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:33:08 +0900" total_classes="23" referenced_classes="122" total_bugs="20" total_size="1621" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.59" clock_seconds="2.17" peak_mbytes="250.59" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="1" priority_2="17" priority_1="2">
+    <FileStats path="cn/hutool/json/InternalJSONUtil.java" bugCount="0" size="106"/>
+    <FileStats path="cn/hutool/json/JSON.java" bugCount="0" size="22"/>
+    <FileStats path="cn/hutool/json/JSONArray.java" bugCount="5" size="243" bugHash="58c45b07b88a766de21f57ee9752bb42"/>
+    <FileStats path="cn/hutool/json/JSONConfig.java" bugCount="0" size="48"/>
+    <FileStats path="cn/hutool/json/JSONConverter.java" bugCount="0" size="29"/>
+    <FileStats path="cn/hutool/json/JSONException.java" bugCount="0" size="17"/>
+    <FileStats path="cn/hutool/json/JSONGetter.java" bugCount="0" size="32"/>
+    <FileStats path="cn/hutool/json/JSONNull.java" bugCount="2" size="11" bugHash="3c1aef74f29a59a113c3abde131cec14"/>
+    <FileStats path="cn/hutool/json/JSONObject.java" bugCount="2" size="287" bugHash="48cbcf66dd090d0b77560a6019b9c10d"/>
+    <FileStats path="cn/hutool/json/JSONObjectIter.java" bugCount="1" size="20" bugHash="3b243ed163bb1a02474f5a06ff54f564"/>
+    <FileStats path="cn/hutool/json/JSONStrFormater.java" bugCount="0" size="56"/>
+    <FileStats path="cn/hutool/json/JSONString.java" bugCount="0" size="2"/>
+    <FileStats path="cn/hutool/json/JSONSupport.java" bugCount="0" size="14"/>
+    <FileStats path="cn/hutool/json/JSONTokener.java" bugCount="2" size="183" bugHash="ff52b147fa6ce038a468382bb062899d"/>
+    <FileStats path="cn/hutool/json/JSONUtil.java" bugCount="0" size="205"/>
+    <FileStats path="cn/hutool/json/XML.java" bugCount="7" size="180" bugHash="b30e688d5e1d2dd5b3f89a5755199154"/>
+    <FileStats path="cn/hutool/json/XMLTokener.java" bugCount="1" size="131" bugHash="88025ae7a87f8acd7e840e7e66295dc9"/>
+    <FileStats path="cn/hutool/json/serialize/GlobalSerializeMapping.java" bugCount="0" size="29"/>
+    <FileStats path="cn/hutool/json/serialize/JSONArraySerializer.java" bugCount="0" size="1"/>
+    <FileStats path="cn/hutool/json/serialize/JSONDeserializer.java" bugCount="0" size="2"/>
+    <FileStats path="cn/hutool/json/serialize/JSONObjectSerializer.java" bugCount="0" size="1"/>
+    <FileStats path="cn/hutool/json/serialize/JSONSerializer.java" bugCount="0" size="2"/>
+    <PackageStats package="cn.hutool.json" total_bugs="20" total_types="18" total_size="1586" priority_3="1" priority_2="17" priority_1="2">
+      <ClassStats class="cn.hutool.json.InternalJSONUtil" sourceFile="InternalJSONUtil.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSON" sourceFile="JSON.java" interface="true" size="22" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONArray" sourceFile="JSONArray.java" interface="false" size="243" bugs="5" priority_2="5"/>
+      <ClassStats class="cn.hutool.json.JSONConfig" sourceFile="JSONConfig.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONConverter" sourceFile="JSONConverter.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONException" sourceFile="JSONException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONGetter" sourceFile="JSONGetter.java" interface="true" size="32" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONNull" sourceFile="JSONNull.java" interface="false" size="11" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="cn.hutool.json.JSONObject" sourceFile="JSONObject.java" interface="false" size="287" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="cn.hutool.json.JSONObjectIter" sourceFile="JSONObjectIter.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.hutool.json.JSONObjectIter$1" sourceFile="JSONObjectIter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONStrFormater" sourceFile="JSONStrFormater.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONString" sourceFile="JSONString.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONSupport" sourceFile="JSONSupport.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="cn.hutool.json.JSONTokener" sourceFile="JSONTokener.java" interface="false" size="183" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="cn.hutool.json.JSONUtil" sourceFile="JSONUtil.java" interface="false" size="205" bugs="0"/>
+      <ClassStats class="cn.hutool.json.XML" sourceFile="XML.java" interface="false" size="180" bugs="7" priority_2="7"/>
+      <ClassStats class="cn.hutool.json.XMLTokener" sourceFile="XMLTokener.java" interface="false" size="131" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="cn.hutool.json.serialize" total_bugs="0" total_types="5" total_size="35">
+      <ClassStats class="cn.hutool.json.serialize.GlobalSerializeMapping" sourceFile="GlobalSerializeMapping.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="cn.hutool.json.serialize.JSONArraySerializer" sourceFile="JSONArraySerializer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="cn.hutool.json.serialize.JSONDeserializer" sourceFile="JSONDeserializer.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="cn.hutool.json.serialize.JSONObjectSerializer" sourceFile="JSONObjectSerializer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="cn.hutool.json.serialize.JSONSerializer" sourceFile="JSONSerializer.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="232" invocations="880" avgMicrosecondsPerInvocation="264" maxMicrosecondsPerInvocation="11352" standardDeviationMicrosecondsPerInvocation="633"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="102" invocations="122" avgMicrosecondsPerInvocation="841" maxMicrosecondsPerInvocation="10360" standardDeviationMicrosecondsPerInvocation="1787"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="96" invocations="725" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="2370" standardDeviationMicrosecondsPerInvocation="216"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="79" invocations="276" avgMicrosecondsPerInvocation="288" maxMicrosecondsPerInvocation="11587" standardDeviationMicrosecondsPerInvocation="1019"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="77" invocations="122" avgMicrosecondsPerInvocation="632" maxMicrosecondsPerInvocation="11575" standardDeviationMicrosecondsPerInvocation="1403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="74" invocations="274" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="5716" standardDeviationMicrosecondsPerInvocation="604"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="62" invocations="273" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="5798" standardDeviationMicrosecondsPerInvocation="578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="58" invocations="269" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="3995" standardDeviationMicrosecondsPerInvocation="421"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="57" invocations="276" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="6776" standardDeviationMicrosecondsPerInvocation="636"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="46" invocations="274" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="6513" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="38" invocations="257" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="3141" standardDeviationMicrosecondsPerInvocation="325"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="887" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="2390" standardDeviationMicrosecondsPerInvocation="110"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="35" invocations="122" avgMicrosecondsPerInvocation="294" maxMicrosecondsPerInvocation="8224" standardDeviationMicrosecondsPerInvocation="919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="34" invocations="122" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="4428" standardDeviationMicrosecondsPerInvocation="584"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="32" invocations="122" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="11616" standardDeviationMicrosecondsPerInvocation="1290"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="31" invocations="282" avgMicrosecondsPerInvocation="112" maxMicrosecondsPerInvocation="13619" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="29" invocations="192" avgMicrosecondsPerInvocation="156" maxMicrosecondsPerInvocation="9408" standardDeviationMicrosecondsPerInvocation="722"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="29" invocations="23" avgMicrosecondsPerInvocation="1280" maxMicrosecondsPerInvocation="8826" standardDeviationMicrosecondsPerInvocation="2614"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="27" invocations="806" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="1093" standardDeviationMicrosecondsPerInvocation="79"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="25" invocations="122" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="5663" standardDeviationMicrosecondsPerInvocation="693"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="25" invocations="23" avgMicrosecondsPerInvocation="1116" maxMicrosecondsPerInvocation="18519" standardDeviationMicrosecondsPerInvocation="3740"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="23" invocations="122" avgMicrosecondsPerInvocation="196" maxMicrosecondsPerInvocation="1859" standardDeviationMicrosecondsPerInvocation="357"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="22" invocations="23" avgMicrosecondsPerInvocation="990" maxMicrosecondsPerInvocation="5648" standardDeviationMicrosecondsPerInvocation="1396"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="274" avgMicrosecondsPerInvocation="75" maxMicrosecondsPerInvocation="1487" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="18" invocations="122" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="1837" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="18" invocations="23" avgMicrosecondsPerInvocation="796" maxMicrosecondsPerInvocation="9992" standardDeviationMicrosecondsPerInvocation="2029"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="16" invocations="122" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="4584" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="16" invocations="5082" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="877" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="16" invocations="118" avgMicrosecondsPerInvocation="136" maxMicrosecondsPerInvocation="1183" standardDeviationMicrosecondsPerInvocation="184"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="15" invocations="122" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="1394" standardDeviationMicrosecondsPerInvocation="251"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="14" invocations="269" avgMicrosecondsPerInvocation="54" maxMicrosecondsPerInvocation="3054" standardDeviationMicrosecondsPerInvocation="214"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

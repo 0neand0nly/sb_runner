@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013346846" analysisTimestamp="1702017896280" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\netty-handler-4.0.0.Alpha8.jar</Jar>
+  </Project>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="e9c6d90a8a3a72803b1ce5961f8358a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.logging.LoggingHandler at new io.netty.handler.logging.LoggingHandler(LogLevel) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.logging.LoggingHandler" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="39" end="246" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+        <Message>At LoggingHandler.java:[lines 39-246]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.logging.LoggingHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.logging.LoggingHandler" name="&lt;init&gt;" signature="(Lio/netty/handler/logging/LogLevel;)V" isStatic="false" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="60" end="68" startBytecode="0" endBytecode="139" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java"/>
+      <Message>In method new io.netty.handler.logging.LoggingHandler(LogLevel)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" primary="true" start="62" end="62" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 62]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="62" end="62" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="edeb48516e77ef16fd682bb73afb4d90" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.logging.LoggingHandler at new io.netty.handler.logging.LoggingHandler(Class, LogLevel) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.logging.LoggingHandler" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="39" end="246" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+        <Message>At LoggingHandler.java:[lines 39-246]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.logging.LoggingHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.logging.LoggingHandler" name="&lt;init&gt;" signature="(Ljava/lang/Class;Lio/netty/handler/logging/LogLevel;)V" isStatic="false" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="83" end="93" startBytecode="0" endBytecode="190" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java"/>
+      <Message>In method new io.netty.handler.logging.LoggingHandler(Class, LogLevel)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" primary="true" start="85" end="85" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 85]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="85" end="85" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a680d2dea717e488e89d0bdbb71c0ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.logging.LoggingHandler at new io.netty.handler.logging.LoggingHandler(String, LogLevel) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.logging.LoggingHandler" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="39" end="246" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+        <Message>At LoggingHandler.java:[lines 39-246]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.logging.LoggingHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.logging.LoggingHandler" name="&lt;init&gt;" signature="(Ljava/lang/String;Lio/netty/handler/logging/LogLevel;)V" isStatic="false" primary="true" classAnnotationNames="io.netty.channel.ChannelHandler$Sharable">
+      <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="107" end="117" startBytecode="0" endBytecode="172" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java"/>
+      <Message>In method new io.netty.handler.logging.LoggingHandler(String, LogLevel)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" primary="true" start="109" end="109" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 109]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.logging.LoggingHandler" start="109" end="109" startBytecode="17" endBytecode="17" sourcefile="LoggingHandler.java" sourcepath="io/netty/handler/logging/LoggingHandler.java">
+      <Message>At LoggingHandler.java:[line 109]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="d6bf7762cfc907d32b253675b431c8f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.ssl.SslHandler at new io.netty.handler.ssl.SslHandler(SSLEngine, boolean, Executor) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="&lt;init&gt;" signature="(Ljavax/net/ssl/SSLEngine;ZLjava/util/concurrent/Executor;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="221" end="231" startBytecode="0" endBytecode="245" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method new io.netty.handler.ssl.SslHandler(SSLEngine, boolean, Executor)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="223" end="223" startBytecode="65" endBytecode="65" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 223]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" start="223" end="223" startBytecode="65" endBytecode="65" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 223]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="9ce0cc40ed2b675ac4ea500f0e0c2bf6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.netty.handler.ssl.SslHandler.ignoreException(Throwable)</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="ignoreException" signature="(Ljava/lang/Throwable;)Z" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="608" end="661" startBytecode="0" endBytecode="568" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.ignoreException(Throwable)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="609" end="609" startBytecode="31" endBytecode="31" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 609]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="87ac9cce18dba1676e863594202a7a27" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.netty.handler.ssl.SslHandler.getEngine() may expose internal representation by returning SslHandler.engine</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="getEngine" signature="()Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="277" end="277" startBytecode="0" endBytecode="46" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.getEngine()</Message>
+    </Method>
+    <Field classname="io.netty.handler.ssl.SslHandler" name="engine" signature="Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>In SslHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.netty.handler.ssl.SslHandler.engine</Message>
+    </Field>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="277" end="277" startBytecode="4" endBytecode="4" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 277]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="e9e12db4d854fe259bda137d27babcce" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.netty.handler.ssl.SslHandler.sslCloseFuture() may expose internal representation by returning SslHandler.sslCloseFuture</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="sslCloseFuture" signature="()Lio/netty/channel/ChannelFuture;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="373" end="373" startBytecode="0" endBytecode="46" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.sslCloseFuture()</Message>
+    </Method>
+    <Field classname="io.netty.handler.ssl.SslHandler" name="sslCloseFuture" signature="Lio/netty/handler/ssl/SslHandler$SSLEngineInboundCloseFuture;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>In SslHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.netty.handler.ssl.SslHandler.sslCloseFuture</Message>
+    </Field>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="373" end="373" startBytecode="4" endBytecode="4" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 373]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c69cbc759dbe8f320ccce03ee4332ae3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.netty.handler.ssl.SslHandler(SSLEngine, boolean, Executor) may expose internal representation by storing an externally mutable object into SslHandler.engine</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="&lt;init&gt;" signature="(Ljavax/net/ssl/SSLEngine;ZLjava/util/concurrent/Executor;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="221" end="231" startBytecode="0" endBytecode="245" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method new io.netty.handler.ssl.SslHandler(SSLEngine, boolean, Executor)</Message>
+    </Method>
+    <Field classname="io.netty.handler.ssl.SslHandler" name="engine" signature="Ljavax/net/ssl/SSLEngine;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>In SslHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.netty.handler.ssl.SslHandler.engine</Message>
+    </Field>
+    <LocalVariable name="engine" register="1" pc="82" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named engine</Message>
+    </LocalVariable>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="228" end="228" startBytecode="82" endBytecode="82" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 228]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="272d7cccdae7384a7c5eeed19d683215" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.ssl.SslHandler$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler$1" start="299" end="311" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 299-311]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.ssl.SslHandler$1</Message>
+    </Class>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="handshake" signature="(Lio/netty/channel/ChannelFuture;)Lio/netty/channel/ChannelFuture;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="295" end="336" startBytecode="0" endBytecode="221" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.handshake(ChannelFuture)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="299" end="299" startBytecode="27" endBytecode="27" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 299]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="6f90aa073ee5ea134a0005a4120624d0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.ssl.SslHandler$6 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler$6" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler$6" start="963" end="970" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 963-970]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.ssl.SslHandler$6</Message>
+    </Class>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="channelActive" signature="(Lio/netty/channel/ChannelHandlerContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="960" end="975" startBytecode="0" endBytecode="115" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.channelActive(ChannelHandlerContext)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="963" end="963" startBytecode="27" endBytecode="27" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 963]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="81499ec6f8095176c990e0883af8da57" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.ssl.SslHandler$7 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler$7" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler$7" start="988" end="995" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 988-995]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.ssl.SslHandler$7</Message>
+    </Class>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="safeClose" signature="(Lio/netty/channel/ChannelHandlerContext;Lio/netty/channel/ChannelFuture;Lio/netty/channel/ChannelFuture;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="980" end="1014" startBytecode="0" endBytecode="251" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.safeClose(ChannelHandlerContext, ChannelFuture, ChannelFuture)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="988" end="988" startBytecode="45" endBytecode="45" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 988]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="27462560f093e52aaba1a54363853d1d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.ssl.SslHandler$8 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.ssl.SslHandler$8" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler$8" start="1002" end="1012" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 1002-1012]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.ssl.SslHandler$8</Message>
+    </Class>
+    <Class classname="io.netty.handler.ssl.SslHandler" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="149" end="1014" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+        <Message>At SslHandler.java:[lines 149-1014]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.ssl.SslHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.ssl.SslHandler" name="safeClose" signature="(Lio/netty/channel/ChannelHandlerContext;Lio/netty/channel/ChannelFuture;Lio/netty/channel/ChannelFuture;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.ssl.SslHandler" start="980" end="1014" startBytecode="0" endBytecode="251" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java"/>
+      <Message>In method io.netty.handler.ssl.SslHandler.safeClose(ChannelHandlerContext, ChannelFuture, ChannelFuture)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.ssl.SslHandler" primary="true" start="1002" end="1002" startBytecode="78" endBytecode="78" sourcefile="SslHandler.java" sourcepath="io/netty/handler/ssl/SslHandler.java">
+      <Message>At SslHandler.java:[line 1002]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="5d1269344c04a88c4a0000615e47edc0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedFile at new io.netty.handler.stream.ChunkedFile(File) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="43" end="44" startBytecode="0" endBytecode="64" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(File)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="44" end="44" startBytecode="102" endBytecode="102" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 44]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="44" end="44" startBytecode="102" endBytecode="102" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="5809c6e540f2c8f276f7a1171772e716" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedFile at new io.netty.handler.stream.ChunkedFile(File, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/File;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="53" end="54" startBytecode="0" endBytecode="81" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(File, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="53" end="53" startBytecode="8" endBytecode="8" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 53]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="53" end="53" startBytecode="8" endBytecode="8" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="3e04872b63984809200736eb14e63c56" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedFile at new io.netty.handler.stream.ChunkedFile(RandomAccessFile) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/RandomAccessFile;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="60" end="61" startBytecode="0" endBytecode="64" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(RandomAccessFile)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="61" end="61" startBytecode="15" endBytecode="15" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 61]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="61" end="61" startBytecode="15" endBytecode="15" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="9c09a1483074a2f338c5c8bb5b68f43b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedFile at new io.netty.handler.stream.ChunkedFile(RandomAccessFile, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/RandomAccessFile;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="70" end="71" startBytecode="0" endBytecode="77" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(RandomAccessFile, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="70" end="70" startBytecode="8" endBytecode="8" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 70]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="70" end="70" startBytecode="8" endBytecode="8" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="5b29f7b2c5297264e7dd9a5d9578fad" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedFile at new io.netty.handler.stream.ChunkedFile(RandomAccessFile, long, long, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/RandomAccessFile;JJI)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="81" end="105" startBytecode="0" endBytecode="333" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(RandomAccessFile, long, long, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="83" end="83" startBytecode="11" endBytecode="11" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 83]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="83" end="83" startBytecode="11" endBytecode="11" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="685f0eb5686298c49ebb22a30e34642a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.netty.handler.stream.ChunkedFile(RandomAccessFile, long, long, int) may expose internal representation by storing an externally mutable object into ChunkedFile.file</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="31" end="153" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>At ChunkedFile.java:[lines 31-153]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedFile" name="&lt;init&gt;" signature="(Ljava/io/RandomAccessFile;JJI)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" start="81" end="105" startBytecode="0" endBytecode="333" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedFile(RandomAccessFile, long, long, int)</Message>
+    </Method>
+    <Field classname="io.netty.handler.stream.ChunkedFile" name="file" signature="Ljava/io/RandomAccessFile;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedFile" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+        <Message>In ChunkedFile.java</Message>
+      </SourceLine>
+      <Message>Field io.netty.handler.stream.ChunkedFile.file</Message>
+    </Field>
+    <LocalVariable name="file" register="1" pc="136" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named file</Message>
+    </LocalVariable>
+    <SourceLine classname="io.netty.handler.stream.ChunkedFile" primary="true" start="99" end="99" startBytecode="136" endBytecode="136" sourcefile="ChunkedFile.java" sourcepath="io/netty/handler/stream/ChunkedFile.java">
+      <Message>At ChunkedFile.java:[line 99]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="25f3b8b328417f129a77051321a025ab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioFile at new io.netty.handler.stream.ChunkedNioFile(File) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="45" end="46" startBytecode="0" endBytecode="71" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(File)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="45" end="45" startBytecode="10" endBytecode="10" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 45]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="45" end="45" startBytecode="10" endBytecode="10" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="1cf2f9e33e42490ea97674b6ef1648c2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioFile at new io.netty.handler.stream.ChunkedNioFile(File, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/io/File;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="55" end="56" startBytecode="0" endBytecode="82" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(File, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="55" end="55" startBytecode="15" endBytecode="15" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 55]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="55" end="55" startBytecode="15" endBytecode="15" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="eb3c8e2953a2627a916f1dd224482198" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioFile at new io.netty.handler.stream.ChunkedNioFile(FileChannel) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/nio/channels/FileChannel;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="62" end="63" startBytecode="0" endBytecode="64" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(FileChannel)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="63" end="63" startBytecode="16" endBytecode="16" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 63]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="63" end="63" startBytecode="16" endBytecode="16" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="b11bf6cd1d509f0b8ec1314386161f5d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioFile at new io.netty.handler.stream.ChunkedNioFile(FileChannel, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/nio/channels/FileChannel;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="72" end="73" startBytecode="0" endBytecode="77" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(FileChannel, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="72" end="72" startBytecode="8" endBytecode="8" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 72]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="72" end="72" startBytecode="8" endBytecode="8" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="20536173707314d21e9287956c87002e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioFile at new io.netty.handler.stream.ChunkedNioFile(FileChannel, long, long, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/nio/channels/FileChannel;JJI)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="84" end="109" startBytecode="0" endBytecode="345" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(FileChannel, long, long, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="86" end="86" startBytecode="11" endBytecode="11" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 86]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="86" end="86" startBytecode="11" endBytecode="11" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c4bb9ed33c93c04412df2e513fecfdb7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.netty.handler.stream.ChunkedNioFile(FileChannel, long, long, int) may expose internal representation by storing an externally mutable object into ChunkedNioFile.in</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioFile" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="33" end="163" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>At ChunkedNioFile.java:[lines 33-163]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioFile</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioFile" name="&lt;init&gt;" signature="(Ljava/nio/channels/FileChannel;JJI)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" start="84" end="109" startBytecode="0" endBytecode="345" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioFile(FileChannel, long, long, int)</Message>
+    </Method>
+    <Field classname="io.netty.handler.stream.ChunkedNioFile" name="in" signature="Ljava/nio/channels/FileChannel;" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+        <Message>In ChunkedNioFile.java</Message>
+      </SourceLine>
+      <Message>Field io.netty.handler.stream.ChunkedNioFile.in</Message>
+    </Field>
+    <LocalVariable name="in" register="1" pc="148" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named in</Message>
+    </LocalVariable>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioFile" primary="true" start="105" end="105" startBytecode="148" endBytecode="148" sourcefile="ChunkedNioFile.java" sourcepath="io/netty/handler/stream/ChunkedNioFile.java">
+      <Message>At ChunkedNioFile.java:[line 105]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="fc63e16ef101c84ffa9ead70507f9e17" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedNioStream at new io.netty.handler.stream.ChunkedNioStream(ReadableByteChannel, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedNioStream" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioStream" start="28" end="120" sourcefile="ChunkedNioStream.java" sourcepath="io/netty/handler/stream/ChunkedNioStream.java">
+        <Message>At ChunkedNioStream.java:[lines 28-120]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedNioStream</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedNioStream" name="&lt;init&gt;" signature="(Ljava/nio/channels/ReadableByteChannel;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedNioStream" start="53" end="65" startBytecode="0" endBytecode="198" sourcefile="ChunkedNioStream.java" sourcepath="io/netty/handler/stream/ChunkedNioStream.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedNioStream(ReadableByteChannel, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioStream" primary="true" start="55" end="55" startBytecode="17" endBytecode="17" sourcefile="ChunkedNioStream.java" sourcepath="io/netty/handler/stream/ChunkedNioStream.java">
+      <Message>At ChunkedNioStream.java:[line 55]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedNioStream" start="55" end="55" startBytecode="17" endBytecode="17" sourcefile="ChunkedNioStream.java" sourcepath="io/netty/handler/stream/ChunkedNioStream.java">
+      <Message>At ChunkedNioStream.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="76cffaf607e4790f6700700bfc95a65e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedStream at new io.netty.handler.stream.ChunkedStream(InputStream, int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedStream" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedStream" start="33" end="111" sourcefile="ChunkedStream.java" sourcepath="io/netty/handler/stream/ChunkedStream.java">
+        <Message>At ChunkedStream.java:[lines 33-111]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedStream</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedStream" name="&lt;init&gt;" signature="(Ljava/io/InputStream;I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedStream" start="54" end="70" startBytecode="0" endBytecode="212" sourcefile="ChunkedStream.java" sourcepath="io/netty/handler/stream/ChunkedStream.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedStream(InputStream, int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedStream" primary="true" start="56" end="56" startBytecode="17" endBytecode="17" sourcefile="ChunkedStream.java" sourcepath="io/netty/handler/stream/ChunkedStream.java">
+      <Message>At ChunkedStream.java:[line 56]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedStream" start="56" end="56" startBytecode="17" endBytecode="17" sourcefile="ChunkedStream.java" sourcepath="io/netty/handler/stream/ChunkedStream.java">
+      <Message>At ChunkedStream.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="82a468b8cf139bf79c91c3f45fead635" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedWriteHandler at new io.netty.handler.stream.ChunkedWriteHandler() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="69" end="356" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+        <Message>At ChunkedWriteHandler.java:[lines 69-356]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedWriteHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedWriteHandler" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="82" end="83" startBytecode="0" endBytecode="51" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedWriteHandler()</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true" start="82" end="82" startBytecode="2" endBytecode="2" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+      <Message>At ChunkedWriteHandler.java:[line 82]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="82" end="82" startBytecode="2" endBytecode="2" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+      <Message>At ChunkedWriteHandler.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="a06de22b81db402f333f168bedd596e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.stream.ChunkedWriteHandler at new io.netty.handler.stream.ChunkedWriteHandler(int) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="69" end="356" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+        <Message>At ChunkedWriteHandler.java:[lines 69-356]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedWriteHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedWriteHandler" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="85" end="91" startBytecode="0" endBytecode="158" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java"/>
+      <Message>In method new io.netty.handler.stream.ChunkedWriteHandler(int)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true" start="87" end="87" startBytecode="57" endBytecode="57" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+      <Message>At ChunkedWriteHandler.java:[line 87]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="87" end="87" startBytecode="57" endBytecode="57" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+      <Message>At ChunkedWriteHandler.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="d88da5b0087c6cdfb154afc92ed2cac7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.stream.ChunkedWriteHandler$2 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.stream.ChunkedWriteHandler$2" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler$2" start="243" end="247" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+        <Message>At ChunkedWriteHandler.java:[lines 243-247]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.stream.ChunkedWriteHandler$2</Message>
+    </Class>
+    <Class classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="69" end="356" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+        <Message>At ChunkedWriteHandler.java:[lines 69-356]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.stream.ChunkedWriteHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.stream.ChunkedWriteHandler" name="doFlush" signature="(Lio/netty/channel/ChannelHandlerContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" start="204" end="312" startBytecode="0" endBytecode="852" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java"/>
+      <Message>In method io.netty.handler.stream.ChunkedWriteHandler.doFlush(ChannelHandlerContext)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.stream.ChunkedWriteHandler" primary="true" start="243" end="243" startBytecode="194" endBytecode="194" sourcefile="ChunkedWriteHandler.java" sourcepath="io/netty/handler/stream/ChunkedWriteHandler.java">
+      <Message>At ChunkedWriteHandler.java:[line 243]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="f6b7e67a7b8fc336e2904590bf34df5c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.timeout.IdleStateEvent at new io.netty.handler.timeout.IdleStateEvent(IdleState, int, long) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.timeout.IdleStateEvent" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateEvent" start="32" end="66" sourcefile="IdleStateEvent.java" sourcepath="io/netty/handler/timeout/IdleStateEvent.java">
+        <Message>At IdleStateEvent.java:[lines 32-66]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.IdleStateEvent</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.IdleStateEvent" name="&lt;init&gt;" signature="(Lio/netty/handler/timeout/IdleState;IJ)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateEvent" start="32" end="47" startBytecode="0" endBytecode="228" sourcefile="IdleStateEvent.java" sourcepath="io/netty/handler/timeout/IdleStateEvent.java"/>
+      <Message>In method new io.netty.handler.timeout.IdleStateEvent(IdleState, int, long)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.IdleStateEvent" primary="true" start="34" end="34" startBytecode="17" endBytecode="17" sourcefile="IdleStateEvent.java" sourcepath="io/netty/handler/timeout/IdleStateEvent.java">
+      <Message>At IdleStateEvent.java:[line 34]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.timeout.IdleStateEvent" start="34" end="34" startBytecode="17" endBytecode="17" sourcefile="IdleStateEvent.java" sourcepath="io/netty/handler/timeout/IdleStateEvent.java">
+      <Message>At IdleStateEvent.java:[line 34]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c330222031749092d5c1caecd3e9c622" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.timeout.IdleStateHandler at new io.netty.handler.timeout.IdleStateHandler(long, long, long, TimeUnit) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.timeout.IdleStateHandler" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" start="115" end="338" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java">
+        <Message>At IdleStateHandler.java:[lines 115-338]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.IdleStateHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.IdleStateHandler" name="&lt;init&gt;" signature="(JJJLjava/util/concurrent/TimeUnit;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" start="180" end="201" startBytecode="0" endBytecode="265" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java"/>
+      <Message>In method new io.netty.handler.timeout.IdleStateHandler(long, long, long, TimeUnit)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" primary="true" start="183" end="183" startBytecode="18" endBytecode="18" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java">
+      <Message>At IdleStateHandler.java:[line 183]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" start="183" end="183" startBytecode="18" endBytecode="18" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java">
+      <Message>At IdleStateHandler.java:[line 183]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NS_DANGEROUS_NON_SHORT_CIRCUIT" priority="1" rank="15" abbrev="NS" category="STYLE" instanceHash="3e8d14bc849bbce7ab1c9d5690605aba" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Potentially dangerous use of non-short-circuit logic</ShortMessage>
+    <LongMessage>Potentially dangerous use of non-short-circuit logic in io.netty.handler.timeout.IdleStateHandler.beforeAdd(ChannelHandlerContext)</LongMessage>
+    <Class classname="io.netty.handler.timeout.IdleStateHandler" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" start="115" end="338" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java">
+        <Message>At IdleStateHandler.java:[lines 115-338]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.IdleStateHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.IdleStateHandler" name="beforeAdd" signature="(Lio/netty/channel/ChannelHandlerContext;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" start="229" end="237" startBytecode="0" endBytecode="100" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java"/>
+      <Message>In method io.netty.handler.timeout.IdleStateHandler.beforeAdd(ChannelHandlerContext)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.IdleStateHandler" primary="true" start="229" end="229" startBytecode="23" endBytecode="23" sourcefile="IdleStateHandler.java" sourcepath="io/netty/handler/timeout/IdleStateHandler.java">
+      <Message>At IdleStateHandler.java:[line 229]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="c8b12896db56ffb2d9d8329d67baa190" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.timeout.ReadTimeoutHandler at new io.netty.handler.timeout.ReadTimeoutHandler(long, TimeUnit) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.timeout.ReadTimeoutHandler" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.ReadTimeoutHandler" start="70" end="192" sourcefile="ReadTimeoutHandler.java" sourcepath="io/netty/handler/timeout/ReadTimeoutHandler.java">
+        <Message>At ReadTimeoutHandler.java:[lines 70-192]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.ReadTimeoutHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.ReadTimeoutHandler" name="&lt;init&gt;" signature="(JLjava/util/concurrent/TimeUnit;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.ReadTimeoutHandler" start="99" end="109" startBytecode="0" endBytecode="155" sourcefile="ReadTimeoutHandler.java" sourcepath="io/netty/handler/timeout/ReadTimeoutHandler.java"/>
+      <Message>In method new io.netty.handler.timeout.ReadTimeoutHandler(long, TimeUnit)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.ReadTimeoutHandler" primary="true" start="101" end="101" startBytecode="17" endBytecode="17" sourcefile="ReadTimeoutHandler.java" sourcepath="io/netty/handler/timeout/ReadTimeoutHandler.java">
+      <Message>At ReadTimeoutHandler.java:[line 101]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.timeout.ReadTimeoutHandler" start="101" end="101" startBytecode="17" endBytecode="17" sourcefile="ReadTimeoutHandler.java" sourcepath="io/netty/handler/timeout/ReadTimeoutHandler.java">
+      <Message>At ReadTimeoutHandler.java:[line 101]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="b16cd8a6664c6002f5a8710e7ea4740c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.netty.handler.timeout.WriteTimeoutHandler at new io.netty.handler.timeout.WriteTimeoutHandler(long, TimeUnit) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.netty.handler.timeout.WriteTimeoutHandler" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" start="81" end="140" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+        <Message>At WriteTimeoutHandler.java:[lines 81-140]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.WriteTimeoutHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.WriteTimeoutHandler" name="&lt;init&gt;" signature="(JLjava/util/concurrent/TimeUnit;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" start="92" end="102" startBytecode="0" endBytecode="155" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java"/>
+      <Message>In method new io.netty.handler.timeout.WriteTimeoutHandler(long, TimeUnit)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" primary="true" start="94" end="94" startBytecode="17" endBytecode="17" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+      <Message>At WriteTimeoutHandler.java:[line 94]</Message>
+    </SourceLine>
+    <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" start="94" end="94" startBytecode="17" endBytecode="17" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+      <Message>At WriteTimeoutHandler.java:[line 94]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="7d7da483778d8a87d0c91e0ac394b348" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.netty.handler.timeout.WriteTimeoutHandler$2 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.netty.handler.timeout.WriteTimeoutHandler$2" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler$2" start="123" end="127" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+        <Message>At WriteTimeoutHandler.java:[lines 123-127]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.netty.handler.timeout.WriteTimeoutHandler$2</Message>
+    </Class>
+    <Class classname="io.netty.handler.timeout.WriteTimeoutHandler" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" start="81" end="140" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+        <Message>At WriteTimeoutHandler.java:[lines 81-140]</Message>
+      </SourceLine>
+      <Message>In class io.netty.handler.timeout.WriteTimeoutHandler</Message>
+    </Class>
+    <Method classname="io.netty.handler.timeout.WriteTimeoutHandler" name="flush" signature="(Lio/netty/channel/ChannelHandlerContext;Lio/netty/channel/ChannelFuture;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" start="106" end="132" startBytecode="0" endBytecode="175" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java"/>
+      <Message>In method io.netty.handler.timeout.WriteTimeoutHandler.flush(ChannelHandlerContext, ChannelFuture)</Message>
+    </Method>
+    <SourceLine classname="io.netty.handler.timeout.WriteTimeoutHandler" primary="true" start="123" end="123" startBytecode="45" endBytecode="45" sourcefile="WriteTimeoutHandler.java" sourcepath="io/netty/handler/timeout/WriteTimeoutHandler.java">
+      <Message>At WriteTimeoutHandler.java:[line 123]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NS_DANGEROUS_NON_SHORT_CIRCUIT" abbrev="NS" category="STYLE">
+    <ShortDescription>Potentially dangerous use of non-short-circuit logic</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code seems to be using non-short-circuit logic (e.g., &amp;
+or |)
+rather than short-circuit logic (&amp;&amp; or ||). In addition,
+it seem possible that, depending on the value of the left hand side, you might not
+want to evaluate the right hand side (because it would have side effects, could cause an exception
+or could be expensive.</p>
+<p>
+Non-short-circuit logic causes both sides of the expression
+to be evaluated even when the result can be inferred from
+knowing the left-hand side. This can be less efficient and
+can result in errors if the left-hand side guards cases
+when evaluating the right-hand side can generate an error.
+</p>
+
+<p>See <a href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-15.html#jls-15.22.2">the Java
+Language Specification</a> for details.
+
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="NS">
+    <Description>Suspicious use of non-short-circuit boolean operator</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="29">
+    <MissingClass>io.netty.buffer.ByteBuf</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufAllocator</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufUtil</MissingClass>
+    <MissingClass>io.netty.buffer.ChannelBuf</MissingClass>
+    <MissingClass>io.netty.buffer.MessageBuf</MissingClass>
+    <MissingClass>io.netty.buffer.Unpooled</MissingClass>
+    <MissingClass>io.netty.buffer.UnsafeByteBuf</MissingClass>
+    <MissingClass>io.netty.channel.Channel</MissingClass>
+    <MissingClass>io.netty.channel.ChannelException</MissingClass>
+    <MissingClass>io.netty.channel.ChannelFlushFutureNotifier</MissingClass>
+    <MissingClass>io.netty.channel.ChannelFuture</MissingClass>
+    <MissingClass>io.netty.channel.ChannelFutureListener</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandler$Sharable</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandlerAdapter</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandlerContext</MissingClass>
+    <MissingClass>io.netty.channel.ChannelInboundByteHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelInboundMessageHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelOperationHandlerAdapter</MissingClass>
+    <MissingClass>io.netty.channel.ChannelOutboundByteHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelOutboundMessageHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelPipeline</MissingClass>
+    <MissingClass>io.netty.channel.ChannelStateHandlerAdapter</MissingClass>
+    <MissingClass>io.netty.channel.DefaultChannelFuture</MissingClass>
+    <MissingClass>io.netty.channel.EventExecutor</MissingClass>
+    <MissingClass>io.netty.logging.InternalLogLevel</MissingClass>
+    <MissingClass>io.netty.logging.InternalLogger</MissingClass>
+    <MissingClass>io.netty.logging.InternalLoggerFactory</MissingClass>
+    <MissingClass>io.netty.util.internal.DetectionUtil</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:06 +0900" total_classes="45" referenced_classes="127" total_bugs="35" total_size="1623" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.39" clock_seconds="1.94" peak_mbytes="241.56" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="7" priority_2="27" priority_1="1">
+    <FileStats path="io/netty/handler/logging/ByteLoggingHandler.java" bugCount="0" size="120"/>
+    <FileStats path="io/netty/handler/logging/LogLevel.java" bugCount="0" size="23"/>
+    <FileStats path="io/netty/handler/logging/LoggingHandler.java" bugCount="3" size="114" bugHash="c9fa40a439813fa1b414935345e58b5f"/>
+    <FileStats path="io/netty/handler/logging/MessageLoggingHandler.java" bugCount="0" size="55"/>
+    <FileStats path="io/netty/handler/ssl/ImmediateExecutor.java" bugCount="0" size="9"/>
+    <FileStats path="io/netty/handler/ssl/NotSslRecordException.java" bugCount="0" size="14"/>
+    <FileStats path="io/netty/handler/ssl/SslHandler.java" bugCount="9" size="510" bugHash="907e164a003a8633c86fcec8e0ecd7e3"/>
+    <FileStats path="io/netty/handler/stream/ChunkedByteInput.java" bugCount="0" size="1"/>
+    <FileStats path="io/netty/handler/stream/ChunkedFile.java" bugCount="6" size="57" bugHash="b2c2a6949c38e59eb5c308498a928d03"/>
+    <FileStats path="io/netty/handler/stream/ChunkedInput.java" bugCount="0" size="4"/>
+    <FileStats path="io/netty/handler/stream/ChunkedMessageInput.java" bugCount="0" size="1"/>
+    <FileStats path="io/netty/handler/stream/ChunkedNioFile.java" bugCount="6" size="63" bugHash="70b816704e28b24481bdda3cb51c2c03"/>
+    <FileStats path="io/netty/handler/stream/ChunkedNioStream.java" bugCount="1" size="52" bugHash="e19399b956605cf20ac4ce9c5dad0518"/>
+    <FileStats path="io/netty/handler/stream/ChunkedStream.java" bugCount="1" size="41" bugHash="48015bca0c200c0ed51de35bfdd5f546"/>
+    <FileStats path="io/netty/handler/stream/ChunkedWriteHandler.java" bugCount="3" size="202" bugHash="bb7bf5247b31d84eae82b9583038a1d7"/>
+    <FileStats path="io/netty/handler/timeout/IdleState.java" bugCount="0" size="13"/>
+    <FileStats path="io/netty/handler/timeout/IdleStateEvent.java" bugCount="1" size="24" bugHash="5bcb71af1dc4eec4be6f2f92398190ac"/>
+    <FileStats path="io/netty/handler/timeout/IdleStateHandler.java" bugCount="2" size="168" bugHash="dfa825b4a4a2fa4b16ce5743b42d8fee"/>
+    <FileStats path="io/netty/handler/timeout/ReadTimeoutException.java" bugCount="0" size="7"/>
+    <FileStats path="io/netty/handler/timeout/ReadTimeoutHandler.java" bugCount="1" size="85" bugHash="afa4f5e012e21e8d633297bfb5dbce98"/>
+    <FileStats path="io/netty/handler/timeout/TimeoutException.java" bugCount="0" size="6"/>
+    <FileStats path="io/netty/handler/timeout/WriteTimeoutException.java" bugCount="0" size="7"/>
+    <FileStats path="io/netty/handler/timeout/WriteTimeoutHandler.java" bugCount="2" size="47" bugHash="785dfa325682ee7461f02b778e820362"/>
+    <PackageStats package="io.netty.handler.logging" total_bugs="3" total_types="4" total_size="312" priority_2="3">
+      <ClassStats class="io.netty.handler.logging.ByteLoggingHandler" sourceFile="ByteLoggingHandler.java" interface="false" size="120" bugs="0"/>
+      <ClassStats class="io.netty.handler.logging.LogLevel" sourceFile="LogLevel.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="io.netty.handler.logging.LoggingHandler" sourceFile="LoggingHandler.java" interface="false" size="114" bugs="3" priority_2="3"/>
+      <ClassStats class="io.netty.handler.logging.MessageLoggingHandler" sourceFile="MessageLoggingHandler.java" interface="false" size="55" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.netty.handler.ssl" total_bugs="9" total_types="13" total_size="533" priority_3="5" priority_2="4">
+      <ClassStats class="io.netty.handler.ssl.ImmediateExecutor" sourceFile="ImmediateExecutor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.NotSslRecordException" sourceFile="NotSslRecordException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler" sourceFile="SslHandler.java" interface="false" size="372" bugs="9" priority_3="5" priority_2="4"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$1" sourceFile="SslHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$2" sourceFile="SslHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$3" sourceFile="SslHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$4" sourceFile="SslHandler.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$5" sourceFile="SslHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$6" sourceFile="SslHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$7" sourceFile="SslHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$8" sourceFile="SslHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$9" sourceFile="SslHandler.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.netty.handler.ssl.SslHandler$SSLEngineInboundCloseFuture" sourceFile="SslHandler.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.netty.handler.stream" total_bugs="17" total_types="13" total_size="421" priority_3="1" priority_2="16">
+      <ClassStats class="io.netty.handler.stream.ChunkedByteInput" sourceFile="ChunkedByteInput.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedFile" sourceFile="ChunkedFile.java" interface="false" size="57" bugs="6" priority_2="6"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedInput" sourceFile="ChunkedInput.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedMessageInput" sourceFile="ChunkedMessageInput.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedNioFile" sourceFile="ChunkedNioFile.java" interface="false" size="63" bugs="6" priority_2="6"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedNioStream" sourceFile="ChunkedNioStream.java" interface="false" size="52" bugs="1" priority_2="1"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedStream" sourceFile="ChunkedStream.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler" sourceFile="ChunkedWriteHandler.java" interface="false" size="150" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler$1" sourceFile="ChunkedWriteHandler.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler$2" sourceFile="ChunkedWriteHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler$3" sourceFile="ChunkedWriteHandler.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler$4" sourceFile="ChunkedWriteHandler.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.netty.handler.stream.ChunkedWriteHandler$5" sourceFile="ChunkedWriteHandler.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.netty.handler.timeout" total_bugs="6" total_types="15" total_size="357" priority_3="1" priority_2="4" priority_1="1">
+      <ClassStats class="io.netty.handler.timeout.IdleState" sourceFile="IdleState.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateEvent" sourceFile="IdleStateEvent.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateHandler" sourceFile="IdleStateHandler.java" interface="false" size="97" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateHandler$1" sourceFile="IdleStateHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateHandler$AllIdleTimeoutTask" sourceFile="IdleStateHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateHandler$ReaderIdleTimeoutTask" sourceFile="IdleStateHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.IdleStateHandler$WriterIdleTimeoutTask" sourceFile="IdleStateHandler.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.ReadTimeoutException" sourceFile="ReadTimeoutException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.ReadTimeoutHandler" sourceFile="ReadTimeoutHandler.java" interface="false" size="65" bugs="1" priority_2="1"/>
+      <ClassStats class="io.netty.handler.timeout.ReadTimeoutHandler$ReadTimeoutTask" sourceFile="ReadTimeoutHandler.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.TimeoutException" sourceFile="TimeoutException.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.WriteTimeoutException" sourceFile="WriteTimeoutException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.WriteTimeoutHandler" sourceFile="WriteTimeoutHandler.java" interface="false" size="26" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="io.netty.handler.timeout.WriteTimeoutHandler$1" sourceFile="WriteTimeoutHandler.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.netty.handler.timeout.WriteTimeoutHandler$2" sourceFile="WriteTimeoutHandler.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="220" invocations="862" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="9592" standardDeviationMicrosecondsPerInvocation="657"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="77" invocations="276" avgMicrosecondsPerInvocation="282" maxMicrosecondsPerInvocation="12720" standardDeviationMicrosecondsPerInvocation="968"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="77" invocations="127" avgMicrosecondsPerInvocation="608" maxMicrosecondsPerInvocation="8015" standardDeviationMicrosecondsPerInvocation="1239"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="72" invocations="272" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="6115" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="64" invocations="275" avgMicrosecondsPerInvocation="233" maxMicrosecondsPerInvocation="6453" standardDeviationMicrosecondsPerInvocation="581"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="60" invocations="127" avgMicrosecondsPerInvocation="476" maxMicrosecondsPerInvocation="6222" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="60" invocations="261" avgMicrosecondsPerInvocation="230" maxMicrosecondsPerInvocation="2348" standardDeviationMicrosecondsPerInvocation="328"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="59" invocations="533" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="2501" standardDeviationMicrosecondsPerInvocation="209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="58" invocations="272" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="6802" standardDeviationMicrosecondsPerInvocation="538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="50" invocations="272" avgMicrosecondsPerInvocation="185" maxMicrosecondsPerInvocation="6871" standardDeviationMicrosecondsPerInvocation="456"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="40" invocations="45" avgMicrosecondsPerInvocation="893" maxMicrosecondsPerInvocation="11445" standardDeviationMicrosecondsPerInvocation="1896"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="35" invocations="230" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2239" standardDeviationMicrosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="275" avgMicrosecondsPerInvocation="127" maxMicrosecondsPerInvocation="15675" standardDeviationMicrosecondsPerInvocation="945"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="32" invocations="869" avgMicrosecondsPerInvocation="36" maxMicrosecondsPerInvocation="2104" standardDeviationMicrosecondsPerInvocation="94"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="29" invocations="127" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="6088" standardDeviationMicrosecondsPerInvocation="647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="205" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="9208" standardDeviationMicrosecondsPerInvocation="668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="127" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="2035" standardDeviationMicrosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="20" invocations="3321" avgMicrosecondsPerInvocation="6" maxMicrosecondsPerInvocation="5607" standardDeviationMicrosecondsPerInvocation="101"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="19" invocations="127" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="2366" standardDeviationMicrosecondsPerInvocation="370"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="785" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="641" standardDeviationMicrosecondsPerInvocation="50"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="17" invocations="272" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="1264" standardDeviationMicrosecondsPerInvocation="149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="127" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="6220" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="127" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="1204" standardDeviationMicrosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="15" invocations="45" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="10187" standardDeviationMicrosecondsPerInvocation="1500"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="15" invocations="45" avgMicrosecondsPerInvocation="334" maxMicrosecondsPerInvocation="2126" standardDeviationMicrosecondsPerInvocation="479"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="14" invocations="127" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="3142" standardDeviationMicrosecondsPerInvocation="345"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="13" invocations="45" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="6321" standardDeviationMicrosecondsPerInvocation="927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="12" invocations="127" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="2357" standardDeviationMicrosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="12" invocations="275" avgMicrosecondsPerInvocation="44" maxMicrosecondsPerInvocation="1719" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="11" invocations="45" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="2961" standardDeviationMicrosecondsPerInvocation="465"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

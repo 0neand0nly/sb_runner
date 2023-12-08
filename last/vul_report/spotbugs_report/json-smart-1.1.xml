@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013727802" analysisTimestamp="1702016923044" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\json-smart-1.1.jar</Jar>
+  </Project>
+  <BugInstance type="RI_REDUNDANT_INTERFACES" priority="3" rank="20" abbrev="RI" category="STYLE" instanceHash="cb008eaee7dbe0bf8507702cdf21657d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class implements same interface as superclass</ShortMessage>
+    <LongMessage>Class net.minidev.json.JSONArray implements same interface as superclass</LongMessage>
+    <Class classname="net.minidev.json.JSONArray" primary="true">
+      <SourceLine classname="net.minidev.json.JSONArray" start="28" end="139" sourcefile="JSONArray.java" sourcepath="net/minidev/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 28-139]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONArray</Message>
+    </Class>
+    <Class classname="java.util.List" role="INTERFACE_TYPE">
+      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 441-1068]</Message>
+      </SourceLine>
+      <Message>Interface java.util.List</Message>
+    </Class>
+    <SourceLine classname="net.minidev.json.JSONArray" start="28" end="139" sourcefile="JSONArray.java" sourcepath="net/minidev/json/JSONArray.java" synthetic="true">
+      <Message>At JSONArray.java:[lines 28-139]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_BOOLEAN_RETURN_NULL" priority="2" rank="14" abbrev="NP" category="BAD_PRACTICE" instanceHash="ce188ac6a5bedb734324c9b2e3db7450" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method with Boolean return type returns explicit null</ShortMessage>
+    <LongMessage>net.minidev.json.JSONNavi.asBooleanObj() has Boolean return type and returns explicit null</LongMessage>
+    <Class classname="net.minidev.json.JSONNavi" primary="true">
+      <SourceLine classname="net.minidev.json.JSONNavi" start="36" end="632" sourcefile="JSONNavi.java" sourcepath="net/minidev/json/JSONNavi.java">
+        <Message>At JSONNavi.java:[lines 36-632]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONNavi</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONNavi" name="asBooleanObj" signature="()Ljava/lang/Boolean;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JSONNavi" start="355" end="359" startBytecode="0" endBytecode="104" sourcefile="JSONNavi.java" sourcepath="net/minidev/json/JSONNavi.java"/>
+      <Message>In method net.minidev.json.JSONNavi.asBooleanObj()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JSONNavi" primary="true" start="356" end="356" startBytecode="8" endBytecode="8" sourcefile="JSONNavi.java" sourcepath="net/minidev/json/JSONNavi.java">
+      <Message>At JSONNavi.java:[line 356]</Message>
+    </SourceLine>
+    <SourceLine classname="net.minidev.json.JSONNavi" start="359" end="359" startBytecode="28" endBytecode="28" sourcefile="JSONNavi.java" sourcepath="net/minidev/json/JSONNavi.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONNavi.java:[line 359]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_VACUOUS_INSTANCEOF" priority="2" rank="17" abbrev="BC" category="STYLE" instanceHash="a96d20343b53a63baff7a25cc16f1aad" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="571">
+    <ShortMessage>instanceof will always return true</ShortMessage>
+    <LongMessage>instanceof will always return true for all non-null values in net.minidev.json.JSONObject.merge(JSONArray, Object), since all net.minidev.json.JSONArray are instances of net.minidev.json.JSONArray</LongMessage>
+    <Class classname="net.minidev.json.JSONObject" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="33" end="259" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 33-259]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONObject</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONObject" name="merge" signature="(Lnet/minidev/json/JSONArray;Ljava/lang/Object;)Lnet/minidev/json/JSONArray;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="233" end="238" startBytecode="0" endBytecode="17" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java"/>
+      <Message>In method net.minidev.json.JSONObject.merge(JSONArray, Object)</Message>
+    </Method>
+    <Type descriptor="Lnet/minidev/json/JSONArray;" role="TYPE_FOUND">
+      <SourceLine classname="net.minidev.json.JSONArray" start="28" end="139" sourcefile="JSONArray.java" sourcepath="net/minidev/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 28-139]</Message>
+      </SourceLine>
+      <Message>Actual type net.minidev.json.JSONArray</Message>
+    </Type>
+    <Type descriptor="Lnet/minidev/json/JSONArray;" role="TYPE_EXPECTED">
+      <SourceLine classname="net.minidev.json.JSONArray" start="28" end="139" sourcefile="JSONArray.java" sourcepath="net/minidev/json/JSONArray.java">
+        <Message>At JSONArray.java:[lines 28-139]</Message>
+      </SourceLine>
+      <Message>Expected net.minidev.json.JSONArray</Message>
+    </Type>
+    <SourceLine classname="net.minidev.json.JSONObject" primary="true" start="235" end="235" startBytecode="7" endBytecode="7" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 235]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIO_SUPERFLUOUS_INSTANCEOF" priority="3" rank="10" abbrev="SIO" category="CORRECTNESS" instanceHash="295a278d5270e1709342587c6af6f231" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unnecessary type check done using instanceof operator</ShortMessage>
+    <LongMessage>net.minidev.json.JSONObject.merge(JSONArray, Object) does an unnecessary type check using instanceof operator when it can be determined statically</LongMessage>
+    <Class classname="net.minidev.json.JSONObject" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="33" end="259" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 33-259]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONObject</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONObject" name="merge" signature="(Lnet/minidev/json/JSONArray;Ljava/lang/Object;)Lnet/minidev/json/JSONArray;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="233" end="238" startBytecode="0" endBytecode="101" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java"/>
+      <Message>In method net.minidev.json.JSONObject.merge(JSONArray, Object)</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JSONObject" primary="true" start="235" end="235" startBytecode="7" endBytecode="7" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 235]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="8e8d1e4de3813b47b860d249396929a9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>net.minidev.json.JSONObject.merge(JSONObject, JSONObject) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="net.minidev.json.JSONObject" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="33" end="259" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+        <Message>At JSONObject.java:[lines 33-259]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONObject</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONObject" name="merge" signature="(Lnet/minidev/json/JSONObject;Lnet/minidev/json/JSONObject;)Lnet/minidev/json/JSONObject;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONObject" start="207" end="229" startBytecode="0" endBytecode="394" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java"/>
+      <Message>In method net.minidev.json.JSONObject.merge(JSONObject, JSONObject)</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JSONObject" primary="true" start="210" end="210" startBytecode="37" endBytecode="37" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java">
+      <Message>At JSONObject.java:[line 210]</Message>
+    </SourceLine>
+    <SourceLine classname="net.minidev.json.JSONObject" start="227" end="227" startBytecode="199" endBytecode="199" sourcefile="JSONObject.java" sourcepath="net/minidev/json/JSONObject.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONObject.java:[line 227]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="c19b9feed6f8ee82d2e3cc201e5763b6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.JSONStyle(int)</LongMessage>
+    <Class classname="net.minidev.json.JSONStyle" primary="true">
+      <SourceLine classname="net.minidev.json.JSONStyle" start="32" end="109" sourcefile="JSONStyle.java" sourcepath="net/minidev/json/JSONStyle.java">
+        <Message>At JSONStyle.java:[lines 32-109]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONStyle</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONStyle" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JSONStyle" start="48" end="73" startBytecode="0" endBytecode="271" sourcefile="JSONStyle.java" sourcepath="net/minidev/json/JSONStyle.java"/>
+      <Message>In method new net.minidev.json.JSONStyle(int)</Message>
+    </Method>
+    <String value="0x8 (8)">
+      <Message>Value 0x8 (8)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.JSONStyle" primary="true" start="54" end="54" startBytecode="53" endBytecode="53" sourcefile="JSONStyle.java" sourcepath="net/minidev/json/JSONStyle.java">
+      <Message>At JSONStyle.java:[line 54]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="de59014a815fa3dfcdded1d7f46f3f66" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: net.minidev.json.JSONStyler.out</LongMessage>
+    <Class classname="net.minidev.json.JSONStyler" primary="true">
+      <SourceLine classname="net.minidev.json.JSONStyler" start="27" end="119" sourcefile="JSONStyler.java" sourcepath="net/minidev/json/JSONStyler.java">
+        <Message>At JSONStyler.java:[lines 27-119]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONStyler</Message>
+    </Class>
+    <Field classname="net.minidev.json.JSONStyler" name="out" signature="Ljava/lang/Appendable;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JSONStyler" sourcefile="JSONStyler.java" sourcepath="net/minidev/json/JSONStyler.java">
+        <Message>In JSONStyler.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.JSONStyler.out</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.JSONStyler" primary="true" start="42" end="42" startBytecode="2" endBytecode="2" sourcefile="JSONStyler.java" sourcepath="net/minidev/json/JSONStyler.java">
+      <Message>At JSONStyler.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="718356ff05be94a7b741e2ee22a3edd5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONValue" name="writeJSONString" signature="(Ljava/lang/Object;Ljava/lang/Appendable;Lnet/minidev/json/JSONStyle;)V" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="445" end="635" startBytecode="0" endBytecode="2592" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java"/>
+      <Message>In method net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</Message>
+    </Method>
+    <String value="0x1 (1)">
+      <Message>Value 0x1 (1)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="603" end="603" startBytecode="1200" endBytecode="1200" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 603]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="f9f8ec4cf92e579fb4f5b4d57e79cbac" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONValue" name="writeJSONString" signature="(Ljava/lang/Object;Ljava/lang/Appendable;Lnet/minidev/json/JSONStyle;)V" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="445" end="635" startBytecode="0" endBytecode="2592" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java"/>
+      <Message>In method net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</Message>
+    </Method>
+    <String value="0x98 (152)">
+      <Message>Value 0x98 (152)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="600" end="600" startBytecode="1187" endBytecode="1187" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 600]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE" instanceHash="b302d31918c62842e91bf926ffdb4bf9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="391">
+    <ShortMessage>Method might ignore exception</ShortMessage>
+    <LongMessage>net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle) might ignore java.lang.Exception</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONValue" name="writeJSONString" signature="(Ljava/lang/Object;Ljava/lang/Appendable;Lnet/minidev/json/JSONStyle;)V" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="445" end="635" startBytecode="0" endBytecode="2592" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java"/>
+      <Message>In method net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</Message>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception" start="55" end="124" sourcefile="Exception.java" sourcepath="java/lang/Exception.java">
+        <Message>At Exception.java:[lines 55-124]</Message>
+      </SourceLine>
+      <Message>Exception class java.lang.Exception</Message>
+    </Class>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="611" end="611" startBytecode="1242" endBytecode="1242" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 611]</Message>
+    </SourceLine>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="611" end="611" startBytecode="1242" endBytecode="1242" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 611]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="dc0a1f4dd7179bd6a63bec14b3907e0f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>net.minidev.json.JSONValue.COMPRESSION isn&apos;t final but should be</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Field classname="net.minidev.json.JSONValue" name="COMPRESSION" signature="Lnet/minidev/json/JSONStyle;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>In JSONValue.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.JSONValue.COMPRESSION</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="53" end="53" startBytecode="3" endBytecode="3" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 53]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="a54b3145d47832004dc1403e93643e85" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in net.minidev.json.JSONValue.compress(String, JSONStyle)</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONValue" name="compress" signature="(Ljava/lang/String;Lnet/minidev/json/JSONStyle;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="233" end="239" startBytecode="0" endBytecode="172" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java"/>
+      <Message>In method net.minidev.json.JSONValue.compress(String, JSONStyle)</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="238" end="238" startBytecode="46" endBytecode="46" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 238]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="7bcc67003c6ab4203b60e0e2f82f3c3f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</LongMessage>
+    <Class classname="net.minidev.json.JSONValue" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="49" end="714" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+        <Message>At JSONValue.java:[lines 49-714]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JSONValue</Message>
+    </Class>
+    <Method classname="net.minidev.json.JSONValue" name="writeJSONString" signature="(Ljava/lang/Object;Ljava/lang/Appendable;Lnet/minidev/json/JSONStyle;)V" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.JSONValue" start="445" end="635" startBytecode="0" endBytecode="2592" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java"/>
+      <Message>In method net.minidev.json.JSONValue.writeJSONString(Object, Appendable, JSONStyle)</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JSONValue" primary="true" start="611" end="611" startBytecode="1242" endBytecode="1242" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java">
+      <Message>At JSONValue.java:[line 611]</Message>
+    </SourceLine>
+    <SourceLine classname="net.minidev.json.JSONValue" start="631" end="631" startBytecode="1364" endBytecode="1364" sourcefile="JSONValue.java" sourcepath="net/minidev/json/JSONValue.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at JSONValue.java:[line 631]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="1" rank="9" abbrev="ES" category="BAD_PRACTICE" instanceHash="af58188626fb6158ae5281978687547b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="597">
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in net.minidev.json.JStylerObj$MPAgressive.mustBeProtect(String)</LongMessage>
+    <Class classname="net.minidev.json.JStylerObj$MPAgressive" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" start="83" end="158" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+        <Message>At JStylerObj.java:[lines 83-158]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JStylerObj$MPAgressive</Message>
+    </Class>
+    <Method classname="net.minidev.json.JStylerObj$MPAgressive" name="mustBeProtect" signature="(Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" start="85" end="158" startBytecode="0" endBytecode="201" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java"/>
+      <Message>In method net.minidev.json.JStylerObj$MPAgressive.mustBeProtect(String)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="140" end="4659" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 140-4659]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <LocalVariable name="s" register="1" pc="21" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from s</Message>
+    </LocalVariable>
+    <Method classname="java.lang.String" name="trim" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" start="3536" end="3538" startBytecode="0" endBytecode="117" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Return value of String.trim() of type String</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" primary="true" start="91" end="91" startBytecode="22" endBytecode="22" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+      <Message>At JStylerObj.java:[line 91]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.DYNAMIC_AND_UNKNOWN" value="true"/>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_CONDITION" priority="1" rank="14" abbrev="UC" category="STYLE" instanceHash="50da5e7018ddeeea69935b03840fcf46" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Condition has no effect</ShortMessage>
+    <LongMessage>Useless condition: it&apos;s known that ch != &apos;e&apos; at this point</LongMessage>
+    <Class classname="net.minidev.json.JStylerObj$MPAgressive" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" start="83" end="158" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+        <Message>At JStylerObj.java:[lines 83-158]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JStylerObj$MPAgressive</Message>
+    </Class>
+    <Method classname="net.minidev.json.JStylerObj$MPAgressive" name="mustBeProtect" signature="(Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" start="85" end="158" startBytecode="0" endBytecode="705" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java"/>
+      <Message>In method net.minidev.json.JStylerObj$MPAgressive.mustBeProtect(String)</Message>
+    </Method>
+    <String value="ch != &apos;e&apos;">
+      <Message>Value ch != &apos;e&apos;</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" start="132" end="132" startBytecode="242" endBytecode="242" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java" role="SOURCE_UNREACHABLE_CODE">
+      <Message>Unreachable code at JStylerObj.java:[line 132]</Message>
+    </SourceLine>
+    <SourceLine classname="net.minidev.json.JStylerObj$MPAgressive" primary="true" start="130" end="130" startBytecode="237" endBytecode="237" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+      <Message>At JStylerObj.java:[line 130]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ES_COMPARING_STRINGS_WITH_EQ" priority="1" rank="9" abbrev="ES" category="BAD_PRACTICE" instanceHash="58b64f0bb3e3cb448b6fb7fe7dcec142" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="597">
+    <ShortMessage>Comparison of String objects using == or !=</ShortMessage>
+    <LongMessage>Comparison of String objects using == or != in net.minidev.json.JStylerObj$MPSimple.mustBeProtect(String)</LongMessage>
+    <Class classname="net.minidev.json.JStylerObj$MPSimple" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPSimple" start="44" end="79" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+        <Message>At JStylerObj.java:[lines 44-79]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.JStylerObj$MPSimple</Message>
+    </Class>
+    <Method classname="net.minidev.json.JStylerObj$MPSimple" name="mustBeProtect" signature="(Ljava/lang/String;)Z" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.JStylerObj$MPSimple" start="53" end="79" startBytecode="0" endBytecode="69" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java"/>
+      <Message>In method net.minidev.json.JStylerObj$MPSimple.mustBeProtect(String)</Message>
+    </Method>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.String" start="140" end="4659" sourcefile="String.java" sourcepath="java/lang/String.java">
+        <Message>At String.java:[lines 140-4659]</Message>
+      </SourceLine>
+      <Message>Actual type String</Message>
+    </Type>
+    <LocalVariable name="s" register="1" pc="21" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from s</Message>
+    </LocalVariable>
+    <Method classname="java.lang.String" name="trim" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.String" start="3536" end="3538" startBytecode="0" endBytecode="117" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Return value of String.trim() of type String</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.JStylerObj$MPSimple" primary="true" start="58" end="58" startBytecode="22" endBytecode="22" sourcefile="JStylerObj.java" sourcepath="net/minidev/json/JStylerObj.java">
+      <Message>At JStylerObj.java:[line 58]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.RefComparisonWarningProperty.DYNAMIC_AND_UNKNOWN" value="true"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="8a391ff6604ae6ee0588663e7edc3b72" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>net.minidev.json.parser.ContentHandlerDumy.HANDLER isn&apos;t final but should be</LongMessage>
+    <Class classname="net.minidev.json.parser.ContentHandlerDumy" primary="true">
+      <SourceLine classname="net.minidev.json.parser.ContentHandlerDumy" start="20" end="63" sourcefile="ContentHandlerDumy.java" sourcepath="net/minidev/json/parser/ContentHandlerDumy.java">
+        <Message>At ContentHandlerDumy.java:[lines 20-63]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.ContentHandlerDumy</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.ContentHandlerDumy" name="HANDLER" signature="Lnet/minidev/json/parser/ContentHandlerDumy;" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.parser.ContentHandlerDumy" sourcefile="ContentHandlerDumy.java" sourcepath="net/minidev/json/parser/ContentHandlerDumy.java">
+        <Message>In ContentHandlerDumy.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.ContentHandlerDumy.HANDLER</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.parser.ContentHandlerDumy" primary="true" start="21" end="21" startBytecode="7" endBytecode="7" sourcefile="ContentHandlerDumy.java" sourcepath="net/minidev/json/parser/ContentHandlerDumy.java">
+      <Message>At ContentHandlerDumy.java:[line 21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="e9644fe56d77aec5bb92b2ba1ac95f59" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field net.minidev.json.parser.FakeContainerFactory.list is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="net.minidev.json.parser.FakeContainerFactory" primary="true">
+      <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" start="31" end="66" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+        <Message>At FakeContainerFactory.java:[lines 31-66]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.FakeContainerFactory</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.FakeContainerFactory" name="list" signature="Lnet/minidev/json/parser/FakeContainerFactory$FackList;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+        <Message>In FakeContainerFactory.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.FakeContainerFactory.list</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" primary="true" start="37" end="37" startBytecode="1" endBytecode="1" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+      <Message>At FakeContainerFactory.java:[line 37]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="a46619763852c4f9cb75dff59c06b3b7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field net.minidev.json.parser.FakeContainerFactory.map is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="net.minidev.json.parser.FakeContainerFactory" primary="true">
+      <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" start="31" end="66" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+        <Message>At FakeContainerFactory.java:[lines 31-66]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.FakeContainerFactory</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.FakeContainerFactory" name="map" signature="Lnet/minidev/json/parser/FakeContainerFactory$FackMap;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+        <Message>In FakeContainerFactory.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.FakeContainerFactory.map</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.parser.FakeContainerFactory" primary="true" start="44" end="44" startBytecode="1" endBytecode="1" sourcefile="FakeContainerFactory.java" sourcepath="net/minidev/json/parser/FakeContainerFactory.java">
+      <Message>At FakeContainerFactory.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="9d5e41aa07bcc89cdb145fcbbfd5a8f9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>net.minidev.json.parser.JSONParser.DEFAULT_PERMISSIVE_MODE isn&apos;t final but should be</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParser" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParser" start="105" end="238" sourcefile="JSONParser.java" sourcepath="net/minidev/json/parser/JSONParser.java">
+        <Message>At JSONParser.java:[lines 105-238]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParser</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParser" name="DEFAULT_PERMISSIVE_MODE" signature="I" isStatic="true" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParser" sourcefile="JSONParser.java" sourcepath="net/minidev/json/parser/JSONParser.java">
+        <Message>In JSONParser.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParser.DEFAULT_PERMISSIVE_MODE</Message>
+    </Field>
+    <SourceLine classname="net.minidev.json.parser.JSONParser" primary="true" start="105" end="105" startBytecode="15" endBytecode="15" sourcefile="JSONParser.java" sourcepath="net/minidev/json/parser/JSONParser.java">
+      <Message>At JSONParser.java:[line 105]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="c2856ee137a7c652112249900c3ed2e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x1 (1)">
+      <Message>Value 0x1 (1)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="87" end="87" startBytecode="51" endBytecode="51" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 87]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="389ca684c2be9d89616b790172e492f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x10 (16)">
+      <Message>Value 0x10 (16)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="89" end="89" startBytecode="83" endBytecode="83" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 89]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="a608bd55aceae7c47f405b78e83fc5a2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x2 (2)">
+      <Message>Value 0x2 (2)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="86" end="86" startBytecode="36" endBytecode="36" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="bbe38b512606fc1927622711e2daaf31" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x20 (32)">
+      <Message>Value 0x20 (32)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="90" end="90" startBytecode="99" endBytecode="99" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="15e6169f843a54bd04681097a448b99" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x4 (4)">
+      <Message>Value 0x4 (4)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="85" end="85" startBytecode="21" endBytecode="21" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="42168142b320fbcee0046ab457dd18d1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x40 (64)">
+      <Message>Value 0x40 (64)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="91" end="91" startBytecode="115" endBytecode="115" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="6d62fa5a20c1091370ce5519035f3e85" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x8 (8)">
+      <Message>Value 0x8 (8)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="88" end="88" startBytecode="67" endBytecode="67" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BIT_SIGNED_CHECK" priority="3" rank="19" abbrev="BIT" category="BAD_PRACTICE" instanceHash="8509ff39631c181d3ec2b69ba3385a1d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Check for sign of bitwise operation</ShortMessage>
+    <LongMessage>Check for sign of bitwise operation in new net.minidev.json.parser.JSONParserBase(int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="&lt;init&gt;" signature="(I)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="84" end="94" startBytecode="0" endBytecode="256" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method new net.minidev.json.parser.JSONParserBase(int)</Message>
+    </Method>
+    <String value="0x80 (128)">
+      <Message>Value 0x80 (128)</Message>
+    </String>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="92" end="92" startBytecode="132" endBytecode="132" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" priority="2" rank="7" abbrev="INT" category="CORRECTNESS" instanceHash="c00c0c13897a08773faeefedaa09fc60" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Bad comparison of nonnegative value with negative constant or zero</ShortMessage>
+    <LongMessage>Bad comparison of nonnegative value with 0 in net.minidev.json.parser.JSONParserBase.checkControleChar()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserBase" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="46" end="611" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+        <Message>At JSONParserBase.java:[lines 46-611]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserBase</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserBase" name="checkControleChar" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserBase" start="97" end="109" startBytecode="0" endBytecode="215" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserBase.checkControleChar()</Message>
+    </Method>
+    <Int value="0" role="INT_VALUE">
+      <Message>Value 0</Message>
+    </Int>
+    <LocalVariable name="c" register="3" pc="33" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named c</Message>
+    </LocalVariable>
+    <SourceLine classname="net.minidev.json.parser.JSONParserBase" primary="true" start="102" end="102" startBytecode="33" endBytecode="33" sourcefile="JSONParserBase.java" sourcepath="net/minidev/json/parser/JSONParserBase.java">
+      <Message>At JSONParserBase.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="74736fd6afaafe68b847140f3da2d54c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in net.minidev.json.parser.JSONParserByteArray.extractString(int, int): new String(byte[], int, int)</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserByteArray" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserByteArray" start="29" end="92" sourcefile="JSONParserByteArray.java" sourcepath="net/minidev/json/parser/JSONParserByteArray.java">
+        <Message>At JSONParserByteArray.java:[lines 29-92]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserByteArray</Message>
+    </Class>
+    <Method classname="net.minidev.json.parser.JSONParserByteArray" name="extractString" signature="(II)V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserByteArray" start="59" end="60" startBytecode="0" endBytecode="85" sourcefile="JSONParserByteArray.java" sourcepath="net/minidev/json/parser/JSONParserByteArray.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserByteArray.extractString(int, int)</Message>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([BII)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1419" end="1420" startBytecode="0" endBytecode="86" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method new String(byte[], int, int)</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserByteArray" primary="true" start="59" end="59" startBytecode="13" endBytecode="13" sourcefile="JSONParserByteArray.java" sourcepath="net/minidev/json/parser/JSONParserByteArray.java">
+      <Message>At JSONParserByteArray.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="44f0518e09a389827e3f5eac6be9d371" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserInputStream.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserInputStream.read()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserInputStream" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="33" end="87" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>At JSONParserInputStream.java:[lines 33-87]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserInputStream</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserInputStream" name="in" signature="Ljava/io/InputStream;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>In JSONParserInputStream.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserInputStream.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserInputStream" name="read" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="64" end="68" startBytecode="0" endBytecode="98" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserInputStream.read()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" primary="true" start="64" end="64" startBytecode="4" endBytecode="4" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+      <Message>At JSONParserInputStream.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="eb57d84cfc058f5c07f0bc82f9733ff4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserInputStream.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserInputStream.readNoEnd()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserInputStream" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="33" end="87" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>At JSONParserInputStream.java:[lines 33-87]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserInputStream</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserInputStream" name="in" signature="Ljava/io/InputStream;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>In JSONParserInputStream.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserInputStream.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserInputStream" name="readNoEnd" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="82" end="87" startBytecode="0" endBytecode="104" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserInputStream.readNoEnd()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" primary="true" start="82" end="82" startBytecode="4" endBytecode="4" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+      <Message>At JSONParserInputStream.java:[line 82]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="fc07fec987a09a8f02e4d8703486c75f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserInputStream.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserInputStream.readS()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserInputStream" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="33" end="87" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>At JSONParserInputStream.java:[lines 33-87]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserInputStream</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserInputStream" name="in" signature="Ljava/io/InputStream;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+        <Message>In JSONParserInputStream.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserInputStream.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserInputStream" name="readS" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" start="71" end="79" startBytecode="0" endBytecode="125" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserInputStream.readS()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserInputStream" primary="true" start="72" end="72" startBytecode="15" endBytecode="15" sourcefile="JSONParserInputStream.java" sourcepath="net/minidev/json/parser/JSONParserInputStream.java">
+      <Message>At JSONParserInputStream.java:[line 72]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="71bb4479b81dcbe8b622fdbdf0718362" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserReader.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserReader.read()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserReader" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="33" end="86" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>At JSONParserReader.java:[lines 33-86]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserReader</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserReader" name="in" signature="Ljava/io/Reader;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>In JSONParserReader.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserReader.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserReader" name="read" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="63" end="67" startBytecode="0" endBytecode="98" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserReader.read()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserReader" primary="true" start="63" end="63" startBytecode="4" endBytecode="4" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+      <Message>At JSONParserReader.java:[line 63]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="3f57157e33636c970e20adff4fc28dee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserReader.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserReader.readNoEnd()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserReader" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="33" end="86" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>At JSONParserReader.java:[lines 33-86]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserReader</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserReader" name="in" signature="Ljava/io/Reader;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>In JSONParserReader.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserReader.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserReader" name="readNoEnd" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="81" end="86" startBytecode="0" endBytecode="104" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserReader.readNoEnd()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserReader" primary="true" start="81" end="81" startBytecode="4" endBytecode="4" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+      <Message>At JSONParserReader.java:[line 81]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="6ccc2e9a0410c6937efb469c0ae70f80" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>JSONParserReader.in not initialized in constructor and dereferenced in net.minidev.json.parser.JSONParserReader.readS()</LongMessage>
+    <Class classname="net.minidev.json.parser.JSONParserReader" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="33" end="86" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>At JSONParserReader.java:[lines 33-86]</Message>
+      </SourceLine>
+      <Message>In class net.minidev.json.parser.JSONParserReader</Message>
+    </Class>
+    <Field classname="net.minidev.json.parser.JSONParserReader" name="in" signature="Ljava/io/Reader;" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+        <Message>In JSONParserReader.java</Message>
+      </SourceLine>
+      <Message>Field net.minidev.json.parser.JSONParserReader.in</Message>
+    </Field>
+    <Method classname="net.minidev.json.parser.JSONParserReader" name="readS" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="net.minidev.json.parser.JSONParserReader" start="70" end="78" startBytecode="0" endBytecode="125" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java"/>
+      <Message>In method net.minidev.json.parser.JSONParserReader.readS()</Message>
+    </Method>
+    <SourceLine classname="net.minidev.json.parser.JSONParserReader" primary="true" start="71" end="71" startBytecode="15" endBytecode="15" sourcefile="JSONParserReader.java" sourcepath="net/minidev/json/parser/JSONParserReader.java">
+      <Message>At JSONParserReader.java:[line 71]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="RI_REDUNDANT_INTERFACES" abbrev="RI" category="STYLE">
+    <ShortDescription>Class implements same interface as superclass</ShortDescription>
+    <Details><![CDATA[
+   
+    <p>
+    This class declares that it implements an interface that is also implemented by a superclass.
+    This is redundant because once a superclass implements an interface, all subclasses by default also
+    implement this interface. It may point out that the inheritance hierarchy has changed since
+    this class was created, and consideration should be given to the ownership of
+    the interface's implementation.
+    </p>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_BOOLEAN_RETURN_NULL" abbrev="NP" category="BAD_PRACTICE">
+    <ShortDescription>Method with Boolean return type returns explicit null</ShortDescription>
+    <Details><![CDATA[
+       
+       <p>
+    A method that returns either Boolean.TRUE, Boolean.FALSE or null is an accident waiting to happen.
+    This method can be invoked as though it returned a value of type boolean, and
+    the compiler will insert automatic unboxing of the Boolean value. If a null value is returned,
+    this will result in a NullPointerException.
+       </p>
+       
+       ]]></Details>
+  </BugPattern>
+  <BugPattern type="ES_COMPARING_STRINGS_WITH_EQ" abbrev="ES" category="BAD_PRACTICE">
+    <ShortDescription>Comparison of String objects using == or !=</ShortDescription>
+    <Details><![CDATA[
+
+  <p>This code compares <code>java.lang.String</code> objects for reference
+equality using the == or != operators.
+Unless both strings are either constants in a source file, or have been
+interned using the <code>String.intern()</code> method, the same string
+value may be represented by two different String objects. Consider
+using the <code>equals(Object)</code> method instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BIT_SIGNED_CHECK" abbrev="BIT" category="BAD_PRACTICE">
+    <ShortDescription>Check for sign of bitwise operation</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method compares an expression such as
+<code>((event.detail &amp; SWT.SELECTED) &gt; 0)</code>.
+Using bit arithmetic and then comparing with the greater than operator can
+lead to unexpected results (of course depending on the value of
+SWT.SELECTED). If SWT.SELECTED is a negative number, this is a candidate
+for a bug. Even when SWT.SELECTED is not negative, it seems good practice
+to use '!= 0' instead of '&gt; 0'.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIO_SUPERFLUOUS_INSTANCEOF" abbrev="SIO" category="CORRECTNESS">
+    <ShortDescription>Unnecessary type check done using instanceof operator</ShortDescription>
+    <Details><![CDATA[
+
+<p> Type check performed using the instanceof operator where it can be statically determined whether the object
+is of the type requested. </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DE_MIGHT_IGNORE" abbrev="DE" category="BAD_PRACTICE">
+    <ShortDescription>Method might ignore exception</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method might ignore an exception.&nbsp; In general, exceptions
+  should be handled or reported in some way, or they should be thrown
+  out of the method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="INT_BAD_COMPARISON_WITH_NONNEGATIVE_VALUE" abbrev="INT" category="CORRECTNESS">
+    <ShortDescription>Bad comparison of nonnegative value with negative constant or zero</ShortDescription>
+    <Details><![CDATA[
+
+<p> This code compares a value that is guaranteed to be non-negative with a negative constant or zero.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UC_USELESS_CONDITION" abbrev="UC" category="STYLE">
+    <ShortDescription>Condition has no effect</ShortDescription>
+    <Details><![CDATA[
+
+<p>This condition always produces the same result as the value of the involved variable that was narrowed before.
+Probably something else was meant or the condition can be removed.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_VACUOUS_INSTANCEOF" abbrev="BC" category="STYLE" cweid="571">
+    <ShortDescription>instanceof will always return true</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instanceof test will always return true (unless the value being tested is null).
+Although this is safe, make sure it isn't
+an indication of some misunderstanding or some other logic error.
+If you really want to test the value for being null, perhaps it would be clearer to do
+better to do a null test rather than an instanceof test.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="DE" cweid="391">
+    <Description>Dropped or ignored exception</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="BIT">
+    <Description>Suspicious bitwise logical expression</Description>
+  </BugCode>
+  <BugCode abbrev="ES" cweid="597">
+    <Description>Checking String equality using == or !=</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <BugCode abbrev="INT">
+    <Description>Suspicious integer expression</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="RI">
+    <Description>Redundant Interfaces</Description>
+  </BugCode>
+  <BugCode abbrev="SIO">
+    <Description>Superfluous instanceof</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:35:27 +0900" total_classes="39" referenced_classes="173" total_bugs="36" total_size="2098" num_packages="2" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.77" clock_seconds="2.29" peak_mbytes="244.47" alloc_mbytes="4078.00" gc_seconds="0.04" priority_3="22" priority_2="7" priority_1="7">
+    <FileStats path="net/minidev/json/JSONArray.java" bugCount="1" size="47" bugHash="a9ec4b4de4072ccb03e1d4b6452d760e"/>
+    <FileStats path="net/minidev/json/JSONAware.java" bugCount="0" size="2"/>
+    <FileStats path="net/minidev/json/JSONAwareEx.java" bugCount="0" size="2"/>
+    <FileStats path="net/minidev/json/JSONNavi.java" bugCount="1" size="318" bugHash="537802bcea5c17475ba6c12b9aa4e819"/>
+    <FileStats path="net/minidev/json/JSONObject.java" bugCount="3" size="104" bugHash="e10907d7eef44a35f238c3ed72b72b93"/>
+    <FileStats path="net/minidev/json/JSONStreamAware.java" bugCount="0" size="2"/>
+    <FileStats path="net/minidev/json/JSONStreamAwareEx.java" bugCount="0" size="2"/>
+    <FileStats path="net/minidev/json/JSONStyle.java" bugCount="1" size="54" bugHash="fd34faf482a5206522761896d7d502b8"/>
+    <FileStats path="net/minidev/json/JSONStyler.java" bugCount="1" size="59" bugHash="9ad02a7f25beaabc43b3d256a1d138ca"/>
+    <FileStats path="net/minidev/json/JSONUtil.java" bugCount="0" size="41"/>
+    <FileStats path="net/minidev/json/JSONValue.java" bugCount="6" size="278" bugHash="8ad0ca6816bf9d5735dec4ce2e95c4fb"/>
+    <FileStats path="net/minidev/json/JStylerObj.java" bugCount="3" size="212" bugHash="cd8aa85f9ca58fbebb934a5428cae8ba"/>
+    <FileStats path="net/minidev/json/parser/ContainerFactory.java" bugCount="0" size="22"/>
+    <FileStats path="net/minidev/json/parser/ContentHandler.java" bugCount="0" size="10"/>
+    <FileStats path="net/minidev/json/parser/ContentHandlerCompressor.java" bugCount="0" size="73"/>
+    <FileStats path="net/minidev/json/parser/ContentHandlerDumy.java" bugCount="1" size="24" bugHash="aca4f7498925ee83e7e482655def0225"/>
+    <FileStats path="net/minidev/json/parser/FakeContainerFactory.java" bugCount="2" size="31" bugHash="3e659b7e59d4bc623245e4517ce2820f"/>
+    <FileStats path="net/minidev/json/parser/JSONParser.java" bugCount="1" size="78" bugHash="1b63ecd497e4a82803100233e604ea37"/>
+    <FileStats path="net/minidev/json/parser/JSONParserBase.java" bugCount="9" size="375" bugHash="16d0977c2a10aebe1b80217916c4f61a"/>
+    <FileStats path="net/minidev/json/parser/JSONParserByteArray.java" bugCount="1" size="37" bugHash="e0802d49c1d94d894a39035fe02a0888"/>
+    <FileStats path="net/minidev/json/parser/JSONParserInputStream.java" bugCount="3" size="31" bugHash="7b184a4dc3857f3430bc815288917bfc"/>
+    <FileStats path="net/minidev/json/parser/JSONParserMemory.java" bugCount="0" size="83"/>
+    <FileStats path="net/minidev/json/parser/JSONParserReader.java" bugCount="3" size="31" bugHash="32879450fd106236e0c77673ec45cff2"/>
+    <FileStats path="net/minidev/json/parser/JSONParserStream.java" bugCount="0" size="69"/>
+    <FileStats path="net/minidev/json/parser/JSONParserString.java" bugCount="0" size="34"/>
+    <FileStats path="net/minidev/json/parser/ParseException.java" bugCount="0" size="79"/>
+    <PackageStats package="net.minidev.json" total_bugs="16" total_types="20" total_size="1121" priority_3="8" priority_2="4" priority_1="4">
+      <ClassStats class="net.minidev.json.JSONArray" sourceFile="JSONArray.java" interface="false" size="47" bugs="1" priority_3="1"/>
+      <ClassStats class="net.minidev.json.JSONAware" sourceFile="JSONAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.minidev.json.JSONAwareEx" sourceFile="JSONAwareEx.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.minidev.json.JSONNavi" sourceFile="JSONNavi.java" interface="false" size="318" bugs="1" priority_2="1"/>
+      <ClassStats class="net.minidev.json.JSONObject" sourceFile="JSONObject.java" interface="false" size="104" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="net.minidev.json.JSONStreamAware" sourceFile="JSONStreamAware.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.minidev.json.JSONStreamAwareEx" sourceFile="JSONStreamAwareEx.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.minidev.json.JSONStyle" sourceFile="JSONStyle.java" interface="false" size="54" bugs="1" priority_3="1"/>
+      <ClassStats class="net.minidev.json.JSONStyler" sourceFile="JSONStyler.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="net.minidev.json.JSONUtil" sourceFile="JSONUtil.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="net.minidev.json.JSONValue" sourceFile="JSONValue.java" interface="false" size="278" bugs="6" priority_3="5" priority_1="1"/>
+      <ClassStats class="net.minidev.json.JStylerObj" sourceFile="JStylerObj.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$1" sourceFile="JStylerObj.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$Escape4Web" sourceFile="JStylerObj.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$EscapeLT" sourceFile="JStylerObj.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$MPAgressive" sourceFile="JStylerObj.java" interface="false" size="61" bugs="2" priority_1="2"/>
+      <ClassStats class="net.minidev.json.JStylerObj$MPSimple" sourceFile="JStylerObj.java" interface="false" size="28" bugs="1" priority_1="1"/>
+      <ClassStats class="net.minidev.json.JStylerObj$MPTrue" sourceFile="JStylerObj.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$MustProtect" sourceFile="JStylerObj.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="net.minidev.json.JStylerObj$StringProtector" sourceFile="JStylerObj.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="net.minidev.json.parser" total_bugs="20" total_types="19" total_size="977" priority_3="14" priority_2="3" priority_1="3">
+      <ClassStats class="net.minidev.json.parser.ContainerFactory" sourceFile="ContainerFactory.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ContainerFactory$1" sourceFile="ContainerFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ContainerFactory$2" sourceFile="ContainerFactory.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ContentHandler" sourceFile="ContentHandler.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ContentHandlerCompressor" sourceFile="ContentHandlerCompressor.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ContentHandlerDumy" sourceFile="ContentHandlerDumy.java" interface="false" size="24" bugs="1" priority_1="1"/>
+      <ClassStats class="net.minidev.json.parser.FakeContainerFactory" sourceFile="FakeContainerFactory.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="net.minidev.json.parser.FakeContainerFactory$FackList" sourceFile="FakeContainerFactory.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.FakeContainerFactory$FackMap" sourceFile="FakeContainerFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.JSONParser" sourceFile="JSONParser.java" interface="false" size="78" bugs="1" priority_1="1"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserBase" sourceFile="JSONParserBase.java" interface="false" size="346" bugs="9" priority_3="8" priority_2="1"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserBase$MSB" sourceFile="JSONParserBase.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserByteArray" sourceFile="JSONParserByteArray.java" interface="false" size="37" bugs="1" priority_1="1"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserInputStream" sourceFile="JSONParserInputStream.java" interface="false" size="31" bugs="3" priority_3="3"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserMemory" sourceFile="JSONParserMemory.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserReader" sourceFile="JSONParserReader.java" interface="false" size="31" bugs="3" priority_3="3"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserStream" sourceFile="JSONParserStream.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.JSONParserString" sourceFile="JSONParserString.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="net.minidev.json.parser.ParseException" sourceFile="ParseException.java" interface="false" size="79" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="202" invocations="798" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="8823" standardDeviationMicrosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="101" invocations="173" avgMicrosecondsPerInvocation="586" maxMicrosecondsPerInvocation="8969" standardDeviationMicrosecondsPerInvocation="1349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="90" invocations="731" avgMicrosecondsPerInvocation="123" maxMicrosecondsPerInvocation="2184" standardDeviationMicrosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="85" invocations="311" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="8331" standardDeviationMicrosecondsPerInvocation="864"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="84" invocations="297" avgMicrosecondsPerInvocation="285" maxMicrosecondsPerInvocation="8433" standardDeviationMicrosecondsPerInvocation="804"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="80" invocations="305" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="12550" standardDeviationMicrosecondsPerInvocation="942"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="78" invocations="297" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="10515" standardDeviationMicrosecondsPerInvocation="848"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="73" invocations="296" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="5942" standardDeviationMicrosecondsPerInvocation="527"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="70" invocations="173" avgMicrosecondsPerInvocation="410" maxMicrosecondsPerInvocation="6879" standardDeviationMicrosecondsPerInvocation="870"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="53" invocations="297" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="10436" standardDeviationMicrosecondsPerInvocation="637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="40" invocations="238" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="4807" standardDeviationMicrosecondsPerInvocation="401"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="38" invocations="322" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="18804" standardDeviationMicrosecondsPerInvocation="1049"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="38" invocations="803" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="6903" standardDeviationMicrosecondsPerInvocation="260"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="37" invocations="173" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="5038" standardDeviationMicrosecondsPerInvocation="556"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="35" invocations="39" avgMicrosecondsPerInvocation="911" maxMicrosecondsPerInvocation="26865" standardDeviationMicrosecondsPerInvocation="4221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="173" avgMicrosecondsPerInvocation="187" maxMicrosecondsPerInvocation="5445" standardDeviationMicrosecondsPerInvocation="645"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="210" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="11004" standardDeviationMicrosecondsPerInvocation="792"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="28" invocations="322" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="3856" standardDeviationMicrosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="26" invocations="39" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="5653" standardDeviationMicrosecondsPerInvocation="1027"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="22" invocations="173" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="5160" standardDeviationMicrosecondsPerInvocation="445"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="756" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="605" standardDeviationMicrosecondsPerInvocation="58"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="21" invocations="173" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="7266" standardDeviationMicrosecondsPerInvocation="763"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="20" invocations="297" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="2648" standardDeviationMicrosecondsPerInvocation="203"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="20" invocations="173" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="1669" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="20" invocations="39" avgMicrosecondsPerInvocation="518" maxMicrosecondsPerInvocation="4663" standardDeviationMicrosecondsPerInvocation="914"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="19" invocations="173" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="1911" standardDeviationMicrosecondsPerInvocation="221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="15" invocations="39" avgMicrosecondsPerInvocation="408" maxMicrosecondsPerInvocation="2887" standardDeviationMicrosecondsPerInvocation="582"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="15" invocations="39" avgMicrosecondsPerInvocation="404" maxMicrosecondsPerInvocation="5558" standardDeviationMicrosecondsPerInvocation="1262"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="173" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="4534" standardDeviationMicrosecondsPerInvocation="369"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="14" invocations="9049" avgMicrosecondsPerInvocation="1" maxMicrosecondsPerInvocation="1103" standardDeviationMicrosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="13" invocations="173" avgMicrosecondsPerInvocation="80" maxMicrosecondsPerInvocation="1341" standardDeviationMicrosecondsPerInvocation="191"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="12" invocations="291" avgMicrosecondsPerInvocation="43" maxMicrosecondsPerInvocation="1293" standardDeviationMicrosecondsPerInvocation="114"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IncompatMask" totalMilliseconds="12" invocations="39" avgMicrosecondsPerInvocation="312" maxMicrosecondsPerInvocation="4818" standardDeviationMicrosecondsPerInvocation="832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="11" invocations="39" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="2370" standardDeviationMicrosecondsPerInvocation="414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="11" invocations="39" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="3254" standardDeviationMicrosecondsPerInvocation="579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="11" invocations="173" avgMicrosecondsPerInvocation="67" maxMicrosecondsPerInvocation="1360" standardDeviationMicrosecondsPerInvocation="161"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

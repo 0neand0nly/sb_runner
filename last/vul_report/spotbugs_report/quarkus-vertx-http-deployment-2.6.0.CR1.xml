@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013575543" analysisTimestamp="1702018710889" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\quarkus-vertx-http-deployment-2.6.0.CR1.jar</Jar>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="d4c2430bce05e048548b489898b8c7ab" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" start="166" end="190" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>At StaticResourcesProcessor.java:[lines 166-190]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" start="38" end="196" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>At StaticResourcesProcessor.java:[lines 38-196]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.StaticResourcesProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" name="collectKnownPaths" signature="(Ljava/nio/file/Path;Ljava/util/Set;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" start="166" end="196" startBytecode="0" endBytecode="155" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.StaticResourcesProcessor.collectKnownPaths(Path, Set)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" primary="true" start="166" end="166" startBytecode="8" endBytecode="8" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+      <Message>At StaticResourcesProcessor.java:[line 166]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="c880d6f74c1a0bdc3bf32a19be2c57f0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
+    <LongMessage>Possible null pointer dereference in io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1.visitFile(Path, BasicFileAttributes) due to return value of called method</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" start="166" end="190" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>At StaticResourcesProcessor.java:[lines 166-190]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" name="visitFile" signature="(Ljava/nio/file/Path;Ljava/nio/file/attribute/BasicFileAttributes;)Ljava/nio/file/FileVisitResult;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" start="170" end="190" startBytecode="0" endBytecode="389" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1.visitFile(Path, BasicFileAttributes)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="6" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" primary="true" start="170" end="170" startBytecode="6" endBytecode="6" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at StaticResourcesProcessor.java:[line 170]</Message>
+    </SourceLine>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" start="170" end="170" startBytecode="1" endBytecode="1" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at StaticResourcesProcessor.java:[line 170]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="6c0bb1bb2e075262057f002165f6bcb3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem.getEntries() may expose internal representation by returning StaticResourcesProcessor$StaticResourcesBuildItem.entries</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" start="44" end="57" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>At StaticResourcesProcessor.java:[lines 44-57]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" name="getEntries" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" start="49" end="49" startBytecode="0" endBytecode="46" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem.getEntries()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" name="entries" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>In StaticResourcesProcessor.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem.entries</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" primary="true" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+      <Message>At StaticResourcesProcessor.java:[line 49]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5b967370e0806e8d70b4815392a65ca4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem(Set) may expose internal representation by storing an externally mutable object into StaticResourcesProcessor$StaticResourcesBuildItem.entries</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" start="44" end="57" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>At StaticResourcesProcessor.java:[lines 44-57]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" name="&lt;init&gt;" signature="(Ljava/util/Set;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" start="44" end="46" startBytecode="0" endBytecode="87" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem(Set)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" name="entries" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+        <Message>In StaticResourcesProcessor.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem.entries</Message>
+    </Field>
+    <LocalVariable name="entries" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named entries</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" primary="true" start="45" end="45" startBytecode="6" endBytecode="6" sourcefile="StaticResourcesProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java">
+      <Message>At StaticResourcesProcessor.java:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="f8624b3f293bd25bc9426ae4db851934" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig from instance method io.quarkus.vertx.http.deployment.VertxHttpProcessor.finalizeRouter(VertxHttpRecorder, BeanContainerBuildItem, CoreVertxBuildItem, LaunchModeBuildItem, List, List, VertxWebRouterBuildItem, HttpRootPathBuildItem, NonApplicationRootPathBuildItem, HttpBuildTimeConfig, List, BodyHandlerBuildItem, BuildProducer, ShutdownConfig, LiveReloadConfig, CoreVertxBuildItem, ExecutorBuildItem)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" start="68" end="367" sourcefile="VertxHttpProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor.java">
+        <Message>At VertxHttpProcessor.java:[lines 68-367]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.VertxHttpProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" name="finalizeRouter" signature="(Lio/quarkus/vertx/http/runtime/VertxHttpRecorder;Lio/quarkus/arc/deployment/BeanContainerBuildItem;Lio/quarkus/vertx/core/deployment/CoreVertxBuildItem;Lio/quarkus/deployment/builditem/LaunchModeBuildItem;Ljava/util/List;Ljava/util/List;Lio/quarkus/vertx/http/deployment/VertxWebRouterBuildItem;Lio/quarkus/vertx/http/deployment/HttpRootPathBuildItem;Lio/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem;Lio/quarkus/vertx/http/runtime/HttpBuildTimeConfig;Ljava/util/List;Lio/quarkus/vertx/http/deployment/BodyHandlerBuildItem;Lio/quarkus/deployment/annotations/BuildProducer;Lio/quarkus/runtime/shutdown/ShutdownConfig;Lio/quarkus/runtime/LiveReloadConfig;Lio/quarkus/vertx/core/deployment/CoreVertxBuildItem;Lio/quarkus/deployment/builditem/ExecutorBuildItem;)Lio/quarkus/deployment/builditem/ServiceStartBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" start="235" end="288" startBytecode="0" endBytecode="1127" sourcefile="VertxHttpProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.VertxHttpProcessor.finalizeRouter(VertxHttpRecorder, BeanContainerBuildItem, CoreVertxBuildItem, LaunchModeBuildItem, List, List, VertxWebRouterBuildItem, HttpRootPathBuildItem, NonApplicationRootPathBuildItem, HttpBuildTimeConfig, List, BodyHandlerBuildItem, BuildProducer, ShutdownConfig, LiveReloadConfig, CoreVertxBuildItem, ExecutorBuildItem)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" name="liveReloadConfig" signature="Lio/quarkus/runtime/LiveReloadConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+        <Message>In HttpRemoteDevClientProvider.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" primary="true" start="246" end="246" startBytecode="65" endBytecode="65" sourcefile="VertxHttpProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor.java">
+      <Message>At VertxHttpProcessor.java:[line 246]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="1e0a25d9fd27df4ce34070b461d5ed4f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor" start="3" end="5" sourcefile="VertxHttpProcessor$$accessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor$$accessor.java">
+        <Message>At VertxHttpProcessor$$accessor.java:[lines 3-5]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor</Message>
+    </Class>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor" start="3" end="5" sourcefile="VertxHttpProcessor$$accessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor$$accessor.java" synthetic="true">
+      <Message>At VertxHttpProcessor$$accessor.java:[lines 3-5]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="1742abc56b3496f057dd3d2f5281da88" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session at new io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session(HttpRemoteDevClient, RemoteDevState, Function, Supplier) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" start="67" end="281" sourcefile="HttpRemoteDevClient.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient.java">
+        <Message>At HttpRemoteDevClient.java:[lines 67-281]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" name="&lt;init&gt;" signature="(Lio/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient;Lio/quarkus/dev/spi/RemoteDevState;Ljava/util/function/Function;Ljava/util/function/Supplier;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" start="81" end="90" startBytecode="0" endBytecode="248" sourcefile="HttpRemoteDevClient.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session(HttpRemoteDevClient, RemoteDevState, Function, Supplier)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" primary="true" start="86" end="86" startBytecode="69" endBytecode="69" sourcefile="HttpRemoteDevClient.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient.java">
+      <Message>At HttpRemoteDevClient.java:[line 86]</Message>
+    </SourceLine>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" start="86" end="86" startBytecode="69" endBytecode="69" sourcefile="HttpRemoteDevClient.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient.java">
+      <Message>At HttpRemoteDevClient.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="1" rank="6" abbrev="LI" category="MT_CORRECTNESS" instanceHash="4433706d14eaa1e487d97ddcdf12382c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization and update of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization and update of static field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig in io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.getClient()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" start="12" end="35" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+        <Message>At HttpRemoteDevClientProvider.java:[lines 12-35]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" name="getClient" signature="()Ljava/util/Optional;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" start="23" end="34" startBytecode="0" endBytecode="42" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.getClient()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" name="liveReloadConfig" signature="Lio/quarkus/runtime/LiveReloadConfig;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+        <Message>In HttpRemoteDevClientProvider.java</Message>
+      </SourceLine>
+      <Message>On field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" primary="true" start="23" end="24" startBytecode="0" endBytecode="13" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+      <Message>At HttpRemoteDevClientProvider.java:[lines 23-24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" priority="2" rank="16" abbrev="PA" category="BAD_PRACTICE" instanceHash="9e8b4ae03ce4b0fa7907f520f269e0a7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Primitive field is public</ShortMessage>
+    <LongMessage>Primitive field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" start="12" end="35" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+        <Message>At HttpRemoteDevClientProvider.java:[lines 12-35]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider</Message>
+    </Class>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" name="liveReloadConfig" signature="Lio/quarkus/runtime/LiveReloadConfig;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" sourcefile="HttpRemoteDevClientProvider.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java">
+        <Message>In HttpRemoteDevClientProvider.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider.liveReloadConfig</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.VertxHttpProcessor" primary="true" start="246" end="246" startBytecode="65" endBytecode="65" sourcefile="VertxHttpProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/VertxHttpProcessor.java">
+      <Message>At VertxHttpProcessor.java:[line 246]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="3fbc5a619c9d18352f4665f112ec58dc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to lines in io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.setConfig(String)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="42" end="273" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 42-273]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" name="setConfig" signature="(Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="226" end="241" startBytecode="0" endBytecode="48" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.setConfig(String)</Message>
+    </Method>
+    <LocalVariable name="lines" register="3" pc="13" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named lines</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true" start="228" end="228" startBytecode="12" endBytecode="12" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 228]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="lines"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="8f531224fd7f4055f8ad6a1a01fd5b29" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to profile in io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.setConfig(String)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="42" end="273" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 42-273]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" name="setConfig" signature="(Ljava/lang/String;)V" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="226" end="241" startBytecode="0" endBytecode="48" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.setConfig(String)</Message>
+    </Method>
+    <LocalVariable name="profile" register="2" pc="8" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named profile</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true" start="227" end="227" startBytecode="7" endBytecode="7" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 227]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="profile"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="1ced1c53d38a557059a1314a0c3d44a8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.getConfig(): String.getBytes()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="42" end="273" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 42-273]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" name="getConfig" signature="()[B" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="160" end="175" startBytecode="0" endBytecode="254" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.getConfig()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true" start="169" end="169" startBytecode="61" endBytecode="61" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="727e128ef6f4eac4bb14f5b78281fee3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.dev.config.CurrentConfig.EDITOR from instance method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.handleRequests(BuildProducer, Optional)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="42" end="273" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 42-273]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" name="handleRequests" signature="(Lio/quarkus/deployment/annotations/BuildProducer;Ljava/util/Optional;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" start="116" end="121" startBytecode="0" endBytecode="128" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor.handleRequests(BuildProducer, Optional)</Message>
+    </Method>
+    <Field classname="io.quarkus.dev.config.CurrentConfig" name="EDITOR" signature="Ljava/util/function/Consumer;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.dev.config.CurrentConfig">
+        <Message>In &lt;Unknown&gt;</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.dev.config.CurrentConfig.EDITOR</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" primary="true" start="116" end="116" startBytecode="5" endBytecode="5" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 116]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="33874d22a493af45ad45758a385debae" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to properties in io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1.handlePost(RoutingContext, MultiMap)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" start="78" end="107" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 78-107]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" name="handlePost" signature="(Lio/vertx/ext/web/RoutingContext;Lio/vertx/core/MultiMap;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" start="81" end="107" startBytecode="0" endBytecode="99" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1.handlePost(RoutingContext, MultiMap)</Message>
+    </Method>
+    <LocalVariable name="properties" register="4" pc="237" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named properties</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" primary="true" start="103" end="103" startBytecode="235" endBytecode="235" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 103]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="properties"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="9d6a70ae0a0dd12176243b8590709d81" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1.handlePost(RoutingContext, MultiMap)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" start="78" end="107" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+        <Message>At ConfigEditorProcessor.java:[lines 78-107]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" name="handlePost" signature="(Lio/vertx/ext/web/RoutingContext;Lio/vertx/core/MultiMap;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" start="81" end="107" startBytecode="0" endBytecode="619" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1.handlePost(RoutingContext, MultiMap)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" primary="true" start="99" end="99" startBytecode="203" endBytecode="203" sourcefile="ConfigEditorProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java">
+      <Message>At ConfigEditorProcessor.java:[line 99]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="7e76e168eb2423cda885edee9b6da1ed" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.console.DevConsole$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole$1" start="163" end="171" sourcefile="DevConsole.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsole.java">
+        <Message>At DevConsole.java:[lines 163-171]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.console.DevConsole$1</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" start="36" end="230" sourcefile="DevConsole.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsole.java">
+        <Message>At DevConsole.java:[lines 36-230]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsole</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" name="renderTemplate" signature="(Lio/vertx/ext/web/RoutingContext;Lio/quarkus/qute/TemplateInstance;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" start="159" end="174" startBytecode="0" endBytecode="206" sourcefile="DevConsole.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsole.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsole.renderTemplate(RoutingContext, TemplateInstance)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" primary="true" start="163" end="163" startBytecode="74" endBytecode="74" sourcefile="DevConsole.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsole.java">
+      <Message>At DevConsole.java:[line 163]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="9f5d3a34ef7b74bdff8d6fe5122601e8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.dev.config.CurrentConfig.EDITOR from instance method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler.handleFailedInitialStart()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" start="6" end="11" sourcefile="DevConsoleFailedStartHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleFailedStartHandler.java">
+        <Message>At DevConsoleFailedStartHandler.java:[lines 6-11]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" name="handleFailedInitialStart" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" start="9" end="11" startBytecode="0" endBytecode="61" sourcefile="DevConsoleFailedStartHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleFailedStartHandler.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler.handleFailedInitialStart()</Message>
+    </Method>
+    <Field classname="io.quarkus.dev.config.CurrentConfig" name="EDITOR" signature="Ljava/util/function/Consumer;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.dev.config.CurrentConfig">
+        <Message>In &lt;Unknown&gt;</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.dev.config.CurrentConfig.EDITOR</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" primary="true" start="10" end="10" startBytecode="8" endBytecode="8" sourcefile="DevConsoleFailedStartHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleFailedStartHandler.java">
+      <Message>At DevConsoleFailedStartHandler.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE" instanceHash="251b5640a0d771272d9b31fbf5ff8bca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler.QUARKUS_DEV_CONSOLE isn&apos;t final but should be</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" start="40" end="169" sourcefile="DevConsoleHttpHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleHttpHandler.java">
+        <Message>At DevConsoleHttpHandler.java:[lines 40-169]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler</Message>
+    </Class>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" name="QUARKUS_DEV_CONSOLE" signature="Lio/quarkus/netty/runtime/virtual/VirtualAddress;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" sourcefile="DevConsoleHttpHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleHttpHandler.java">
+        <Message>In DevConsoleHttpHandler.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler.QUARKUS_DEV_CONSOLE</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" primary="true" start="43" end="43" startBytecode="17" endBytecode="17" sourcefile="DevConsoleHttpHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleHttpHandler.java">
+      <Message>At DevConsoleHttpHandler.java:[line 43]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="bf2df391b77e0e087cece8c21933d029" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to c in io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.openBrowser(HttpRootPathBuildItem, NonApplicationRootPathBuildItem, String, String, String)</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="openBrowser" signature="(Lio/quarkus/vertx/http/deployment/HttpRootPathBuildItem;Lio/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="478" end="512" startBytecode="0" endBytecode="107" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.openBrowser(HttpRootPathBuildItem, NonApplicationRootPathBuildItem, String, String, String)</Message>
+    </Method>
+    <LocalVariable name="c" register="7" pc="48" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named c</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="485" end="485" startBytecode="46" endBytecode="46" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 485]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="c"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_UPDATE_STATIC" priority="1" rank="6" abbrev="LI" category="MT_CORRECTNESS" instanceHash="c129df2c70ecf585a19e0a87eda3899a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="543">
+    <ShortMessage>Incorrect lazy initialization and update of static field</ShortMessage>
+    <LongMessage>Incorrect lazy initialization and update of static field io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.virtualBootstrap in io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.initializeVirtual()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="initializeVirtual" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="141" end="221" startBytecode="0" endBytecode="56" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.initializeVirtual()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="virtualBootstrap" signature="Lio/netty/bootstrap/ServerBootstrap;" isStatic="true" primary="true" role="FIELD_ON">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>In DevConsoleProcessor.java</Message>
+      </SourceLine>
+      <Message>On field io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.virtualBootstrap</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="141" end="164" startBytecode="0" endBytecode="47" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[lines 141-164]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" instanceHash="f46e4cbae46d38ad92a415cc755d3a28" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.locateTemplate(String, Map) concatenates strings using + in a loop</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="locateTemplate" signature="(Ljava/lang/String;Ljava/util/Map;)Ljava/util/Optional;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="660" end="677" startBytecode="0" endBytecode="290" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.locateTemplate(String, Map)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="664" end="664" startBytecode="42" endBytecode="42" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 664]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="3b6b72acb9eae5f45f38547d46c79802" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.openBrowser(HttpRootPathBuildItem, NonApplicationRootPathBuildItem, String, String, String) where default case is missing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="openBrowser" signature="(Lio/quarkus/vertx/http/deployment/HttpRootPathBuildItem;Lio/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="478" end="512" startBytecode="0" endBytecode="544" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.openBrowser(HttpRootPathBuildItem, NonApplicationRootPathBuildItem, String, String, String)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="495" end="506" startBytecode="105" endBytecode="217" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[lines 495-506]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="c7f2c9412d519e845d10f9826c4ea91d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$6 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$6" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$6" start="598" end="616" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 598-616]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$6</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="buildEngine" signature="(Ljava/util/List;Ljava/util/List;Lio/quarkus/deployment/pkg/builditem/BuildSystemTargetBuildItem;Ljava/util/Optional;Lio/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem;Ljava/util/List;Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/qute/Engine;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="521" end="645" startBytecode="0" endBytecode="947" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.buildEngine(List, List, BuildSystemTargetBuildItem, Optional, NonApplicationRootPathBuildItem, List, LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="598" end="598" startBytecode="350" endBytecode="350" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 598]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="bb1310761fdbb77add04f7668e48fd80" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$7 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$7" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$7" start="619" end="633" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 619-633]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$7</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="buildEngine" signature="(Ljava/util/List;Ljava/util/List;Lio/quarkus/deployment/pkg/builditem/BuildSystemTargetBuildItem;Ljava/util/Optional;Lio/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem;Ljava/util/List;Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/qute/Engine;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="521" end="645" startBytecode="0" endBytecode="947" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.buildEngine(List, List, BuildSystemTargetBuildItem, Optional, NonApplicationRootPathBuildItem, List, LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="619" end="619" startBytecode="364" endBytecode="364" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 619]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="5b893e2a7cb941ed1a69d4faf8012ab1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$9 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$9" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$9" start="765" end="788" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 765-788]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$9</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="125" end="792" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 125-792]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="scanTemplates" signature="(Ljava/nio/file/FileSystem;Ljava/nio/file/Path;Ljava/lang/Iterable;Lio/quarkus/deployment/annotations/BuildProducer;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" start="749" end="792" startBytecode="0" endBytecode="430" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.scanTemplates(FileSystem, Path, Iterable, BuildProducer)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" primary="true" start="765" end="765" startBytecode="167" endBytecode="167" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 765]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="92812c9f8c7ab3dbea0f0c8e60f7541a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.virtualBootstrap from instance method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1.run()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" start="147" end="162" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 147-162]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" start="150" end="162" startBytecode="0" endBytecode="167" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1.run()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" name="virtualBootstrap" signature="Lio/netty/bootstrap/ServerBootstrap;" isStatic="true" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>In DevConsoleProcessor.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor.virtualBootstrap</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" primary="true" start="150" end="150" startBytecode="1" endBytecode="1" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+      <Message>At DevConsoleProcessor.java:[line 150]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="48f97b4066554869a900e5bb76b6e35c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
+    <LongMessage>Possible null pointer dereference in new io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction(BuildSystemTargetBuildItem, Optional, LaunchModeBuildItem) due to return value of called method</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" start="852" end="989" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java">
+        <Message>At DevConsoleProcessor.java:[lines 852-989]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" name="&lt;init&gt;" signature="(Lio/quarkus/deployment/pkg/builditem/BuildSystemTargetBuildItem;Ljava/util/Optional;Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" start="862" end="866" startBytecode="0" endBytecode="220" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction(BuildSystemTargetBuildItem, Optional, LaunchModeBuildItem)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="21" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" primary="true" start="864" end="864" startBytecode="21" endBytecode="21" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java" role="SOURCE_LINE_DEREF">
+      <Message>Dereferenced at DevConsoleProcessor.java:[line 864]</Message>
+    </SourceLine>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" start="864" end="864" startBytecode="14" endBytecode="14" sourcefile="DevConsoleProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at DevConsoleProcessor.java:[line 864]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="326935b7a5943b164f9c5fe3e8ef31ca" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem.getVariants() may expose internal representation by returning DevTemplateVariantsBuildItem.variants</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" start="15" end="20" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+        <Message>At DevTemplateVariantsBuildItem.java:[lines 15-20]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" name="getVariants" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" start="20" end="20" startBytecode="0" endBytecode="46" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem.getVariants()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" name="variants" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+        <Message>In DevTemplateVariantsBuildItem.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem.variants</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" primary="true" start="20" end="20" startBytecode="4" endBytecode="4" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+      <Message>At DevTemplateVariantsBuildItem.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="bca9e0332b962461ed82c0f7c095d763" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem(Map) may expose internal representation by storing an externally mutable object into DevTemplateVariantsBuildItem.variants</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" start="15" end="20" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+        <Message>At DevTemplateVariantsBuildItem.java:[lines 15-20]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" start="15" end="17" startBytecode="0" endBytecode="87" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem(Map)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" name="variants" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+        <Message>In DevTemplateVariantsBuildItem.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem.variants</Message>
+    </Field>
+    <LocalVariable name="variants" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named variants</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" primary="true" start="16" end="16" startBytecode="6" endBytecode="6" sourcefile="DevTemplateVariantsBuildItem.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java">
+      <Message>At DevTemplateVariantsBuildItem.java:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="bf6f4ffec97bc180b3a85586f273ce78" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1.run()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" start="71" end="89" sourcefile="OpenIdeHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/OpenIdeHandler.java">
+        <Message>At OpenIdeHandler.java:[lines 71-89]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" name="run" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" start="74" end="89" startBytecode="0" endBytecode="332" sourcefile="OpenIdeHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/OpenIdeHandler.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1.run()</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" primary="true" start="86" end="86" startBytecode="135" endBytecode="135" sourcefile="OpenIdeHandler.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/console/OpenIdeHandler.java">
+      <Message>At OpenIdeHandler.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b2a6380e9e95d0e03a34adda9cc5345c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getFailing() may expose internal representation by returning ClassResult.failing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="getFailing" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="52" end="52" startBytecode="0" endBytecode="46" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getFailing()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="failing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.failing</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="52" end="52" startBytecode="4" endBytecode="4" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="17517b6aba6bb0ad63f16e0d4022798b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getPassing() may expose internal representation by returning ClassResult.passing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="getPassing" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="48" end="48" startBytecode="0" endBytecode="46" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getPassing()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="passing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.passing</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="48" end="48" startBytecode="4" endBytecode="4" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="b7d0b303e9783402c458a80b8c824091" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getSkipped() may expose internal representation by returning ClassResult.skipped</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="getSkipped" signature="()Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="56" end="56" startBytecode="0" endBytecode="46" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.getSkipped()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="skipped" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.skipped</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="56" end="56" startBytecode="4" endBytecode="4" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 56]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="f1ef7d7ac1e16fb99f2368f45f2fcb7f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List) may expose internal representation by storing an externally mutable object into ClassResult.failing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="16" end="29" startBytecode="0" endBytecode="372" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="failing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.failing</Message>
+    </Field>
+    <LocalVariable name="failing" register="3" pc="16" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named failing</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="19" end="19" startBytecode="16" endBytecode="16" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="80e44e86e9f6a0a30409480b455d20e3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List) may expose internal representation by storing an externally mutable object into ClassResult.passing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="16" end="29" startBytecode="0" endBytecode="372" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="passing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.passing</Message>
+    </Field>
+    <LocalVariable name="passing" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named passing</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="18" end="18" startBytecode="11" endBytecode="11" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6e9dda9158a7dac339a80f16304849f3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List) may expose internal representation by storing an externally mutable object into ClassResult.skipped</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="16" end="29" startBytecode="0" endBytecode="372" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.tests.ClassResult(String, List, List, List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="skipped" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.skipped</Message>
+    </Field>
+    <LocalVariable name="skipped" register="4" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named skipped</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="20" end="20" startBytecode="22" endBytecode="22" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="ab0be22913aa9029191f25fc411abc5a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setFailing(List) may expose internal representation by storing an externally mutable object into ClassResult.failing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="setFailing" signature="(Ljava/util/List;)Lio/quarkus/vertx/http/deployment/devmode/tests/ClassResult;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="74" end="75" startBytecode="0" endBytecode="80" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setFailing(List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="failing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.failing</Message>
+    </Field>
+    <LocalVariable name="failing" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named failing</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="74" end="74" startBytecode="2" endBytecode="2" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 74]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="9a2762b30de19b7d1291eb106910477f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setPassing(List) may expose internal representation by storing an externally mutable object into ClassResult.passing</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="setPassing" signature="(Ljava/util/List;)Lio/quarkus/vertx/http/deployment/devmode/tests/ClassResult;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="69" end="70" startBytecode="0" endBytecode="80" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setPassing(List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="passing" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.passing</Message>
+    </Field>
+    <LocalVariable name="passing" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named passing</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="69" end="69" startBytecode="2" endBytecode="2" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d1d970024e0abbaf8604922077919657" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setSkipped(List) may expose internal representation by storing an externally mutable object into ClassResult.skipped</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="setSkipped" signature="(Ljava/util/List;)Lio/quarkus/vertx/http/deployment/devmode/tests/ClassResult;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="79" end="80" startBytecode="0" endBytecode="80" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.setSkipped(List)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="skipped" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>In ClassResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.skipped</Message>
+    </Field>
+    <LocalVariable name="skipped" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named skipped</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true" start="79" end="79" startBytecode="2" endBytecode="2" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+      <Message>At ClassResult.java:[line 79]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" instanceHash="19a9ebc4dd9692458f6d631b37c66a1b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class defines compareTo(...) and uses Object.equals()</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.ClassResult defines compareTo(ClassResult) and uses Object.equals()</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="9" end="90" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java">
+        <Message>At ClassResult.java:[lines 9-90]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.ClassResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" name="compareTo" signature="(Lio/quarkus/vertx/http/deployment/devmode/tests/ClassResult;)I" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="90" end="90" startBytecode="0" endBytecode="63" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.ClassResult.compareTo(ClassResult)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" start="90" end="90" startBytecode="0" endBytecode="63" sourcefile="ClassResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java" synthetic="true">
+      <Message>At ClassResult.java:[line 90]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="572645bfb3318024dc827ecdca7fec81" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.getResults() may expose internal representation by returning SuiteResult.results</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="8" end="21" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>At SuiteResult.java:[lines 8-21]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="getResults" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="16" end="16" startBytecode="0" endBytecode="46" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.getResults()</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="results" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>In SuiteResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.results</Message>
+    </Field>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true" start="16" end="16" startBytecode="4" endBytecode="4" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+      <Message>At SuiteResult.java:[line 16]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="c60f83b382e82bb5719d76668992244" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult(Map) may expose internal representation by storing an externally mutable object into SuiteResult.results</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="8" end="21" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>At SuiteResult.java:[lines 8-21]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="&lt;init&gt;" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="11" end="13" startBytecode="0" endBytecode="87" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java"/>
+      <Message>In method new io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult(Map)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="results" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>In SuiteResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.results</Message>
+    </Field>
+    <LocalVariable name="results" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named results</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true" start="12" end="12" startBytecode="6" endBytecode="6" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+      <Message>At SuiteResult.java:[line 12]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d05232b2295d05107cd9a3ba5a0843a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.setResults(Map) may expose internal representation by storing an externally mutable object into SuiteResult.results</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="8" end="21" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>At SuiteResult.java:[lines 8-21]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="setResults" signature="(Ljava/util/Map;)Lio/quarkus/vertx/http/deployment/devmode/tests/SuiteResult;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" start="20" end="21" startBytecode="0" endBytecode="80" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.setResults(Map)</Message>
+    </Method>
+    <Field classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" name="results" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+        <Message>In SuiteResult.java</Message>
+      </SourceLine>
+      <Message>Field io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult.results</Message>
+    </Field>
+    <LocalVariable name="results" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named results</Message>
+    </LocalVariable>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" primary="true" start="20" end="20" startBytecode="2" endBytecode="2" sourcefile="SuiteResult.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java">
+      <Message>At SuiteResult.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="9f86c3431497d312a277804c240aa002" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$10 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$10" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$10" start="234" end="238" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 234-238]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$10</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="forceRestart" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="231" end="234" startBytecode="0" endBytecode="101" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.forceRestart(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="234" end="234" startBytecode="26" endBytecode="26" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 234]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="bb8d2209680ac2388835b4dabd013ae0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$2 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$2" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$2" start="110" end="122" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 110-122]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$2</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="toggleTestRunner" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;Lio/quarkus/deployment/annotations/BuildProducer;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="106" end="133" startBytecode="0" endBytecode="200" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.toggleTestRunner(LaunchModeBuildItem, BuildProducer)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="110" end="110" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 110]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="6097cddf6b6641cf11d646a6f7ae25a2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$3 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$3" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$3" start="124" end="131" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 124-131]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$3</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="toggleTestRunner" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;Lio/quarkus/deployment/annotations/BuildProducer;)V" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="106" end="133" startBytecode="0" endBytecode="200" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.toggleTestRunner(LaunchModeBuildItem, BuildProducer)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="124" end="124" startBytecode="55" endBytecode="55" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 124]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="ef2609bdf5eba3c95f077c231d1927d6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$4 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$4" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$4" start="145" end="149" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 145-149]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$4</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="runAllTests" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="141" end="145" startBytecode="0" endBytecode="141" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.runAllTests(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="145" end="145" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 145]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="2bd5f9b6bd4803efc33c6b2c91418be4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$5 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$5" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$5" start="159" end="167" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 159-167]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$5</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="toggleTestOutput" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="155" end="159" startBytecode="0" endBytecode="141" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.toggleTestOutput(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="159" end="159" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 159]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="27414c9f41efa6a31766b4806aa1562d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$6 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$6" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$6" start="177" end="181" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 177-181]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$6</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="runFailedTests" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="173" end="177" startBytecode="0" endBytecode="141" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.runFailedTests(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="177" end="177" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 177]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="b6294b3f9db1de905f97f7d8c1cfd33e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$7 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$7" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$7" start="191" end="195" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 191-195]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$7</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="printfailures" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="187" end="191" startBytecode="0" endBytecode="141" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.printfailures(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="191" end="191" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 191]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="9e9a1bbb05374f4f6c0111964167145f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$8 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$8" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$8" start="201" end="208" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 201-208]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$8</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="toggleInstrumentation" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="201" end="201" startBytecode="0" endBytecode="71" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.toggleInstrumentation(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="201" end="201" startBytecode="13" endBytecode="13" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 201]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="abcfc707fd6f758844250e90087a5f4e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$9 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$9" role="CLASS_ANONYMOUS">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$9" start="218" end="225" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 218-225]</Message>
+      </SourceLine>
+      <Message>Anonymous class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$9</Message>
+    </Class>
+    <Class classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="33" end="269" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+        <Message>At TestsProcessor.java:[lines 33-269]</Message>
+      </SourceLine>
+      <Message>In class io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor</Message>
+    </Class>
+    <Method classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" name="toggleLiveReloadEnabled" signature="(Lio/quarkus/deployment/builditem/LaunchModeBuildItem;)Lio/quarkus/devconsole/spi/DevConsoleRouteBuildItem;" isStatic="false" primary="true">
+      <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" start="214" end="218" startBytecode="0" endBytecode="141" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java"/>
+      <Message>In method io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor.toggleLiveReloadEnabled(LaunchModeBuildItem)</Message>
+    </Method>
+    <SourceLine classname="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" primary="true" start="218" end="218" startBytecode="29" endBytecode="29" sourcefile="TestsProcessor.java" sourcepath="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java">
+      <Message>At TestsProcessor.java:[line 218]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="MT_CORRECTNESS">
+    <Description>Multithreaded correctness</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="PA_PUBLIC_PRIMITIVE_ATTRIBUTE" abbrev="PA" category="BAD_PRACTICE">
+    <ShortDescription>Primitive field is public</ShortDescription>
+    <Details><![CDATA[
+      
+    <p>
+    <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ01-J.+Limit+accessibility+of+fields">SEI CERT rule OBJ01-J</a> requires that accessibility to fields must be limited.
+    Otherwise, the values of the fields may be manipulated from outside the class, which may be unexpected or
+    undesired behaviour.
+    In general, requiring that no fields are allowed to be public is overkill and unrealistic. Even
+    the rule mentions that final fields may be public. Besides final fields, there may be other
+    usages for public fields: some public fields may serve as "flags" that affect the behavior of
+    the class. Such flag fields are expected to be read by the current instance (or the current
+    class, in case of static fields), but written by others. If a field is both written by the
+    methods of the current instance (or the current class, in case of static fields) and from the
+    outside, the code is suspicious. Consider making these fields private and provide appropriate
+    setters, if necessary. Please note that constructors, initializers and finalizers are
+    exceptions, if only they write the field inside the class, the field is not considered as
+    written by the class itself.</p>
+    
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
+    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 5) explicitly.</p>
+
+<p> For example:</p>
+<pre><code>// This is bad
+String s = "";
+for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+}
+
+// This is better
+StringBuffer buf = new StringBuffer();
+for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+}
+String s = buf.toString();
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Possible null pointer dereference due to return value of called method</ShortDescription>
+    <Details><![CDATA[
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This <code>public static</code> or <code>protected static</code> field is not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="LI_LAZY_INIT_UPDATE_STATIC" abbrev="LI" category="MT_CORRECTNESS" cweid="543">
+    <ShortDescription>Incorrect lazy initialization and update of static field</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains an unsynchronized lazy initialization of a static field.
+After the field is set, the object stored into that location is further updated or accessed.
+The setting of the field is visible to other threads as soon as it is set. If the
+further accesses in the method that set the field serve to initialize the object, then
+you have a <em>very serious</em> multithreading bug, unless something else prevents
+any other thread from accessing the stored object until it is fully initialized.
+</p>
+<p>Even if you feel confident that the method is never called by multiple
+threads, it might be better to not set the static field until the value
+you are setting it to is fully populated/initialized.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_COMPARETO_USE_OBJECT_EQUALS" abbrev="Eq" category="BAD_PRACTICE">
+    <ShortDescription>Class defines compareTo(...) and uses Object.equals()</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class defines a <code>compareTo(...)</code> method but inherits its
+  <code>equals()</code> method from <code>java.lang.Object</code>.
+    Generally, the value of compareTo should return zero if and only if
+    equals returns true. If this is violated, weird and unpredictable
+    failures will occur in classes such as PriorityQueue.
+    In Java 5 the PriorityQueue.remove method uses the compareTo method,
+    while in Java 6 it uses the equals method.</p>
+
+<p>From the JavaDoc for the compareTo method in the Comparable interface:
+<blockquote>
+It is strongly recommended, but not strictly required that <code>(x.compareTo(y)==0) == (x.equals(y))</code>.
+Generally speaking, any class that implements the Comparable interface and violates this condition
+should clearly indicate this fact. The recommended language
+is "Note: this class has a natural ordering that is inconsistent with equals."
+</blockquote></p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="PA">
+    <Description>Public Attribute</Description>
+  </BugCode>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="SBSC">
+    <Description>String concatenation in loop using + operator</Description>
+  </BugCode>
+  <BugCode abbrev="LI">
+    <Description>Unsynchronized Lazy Initialization</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="236">
+    <MissingClass>io.netty.bootstrap.ServerBootstrap</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBuf</MissingClass>
+    <MissingClass>io.netty.buffer.Unpooled</MissingClass>
+    <MissingClass>io.netty.channel.Channel</MissingClass>
+    <MissingClass>io.netty.channel.ChannelFuture</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandler</MissingClass>
+    <MissingClass>io.netty.channel.ChannelHandlerContext</MissingClass>
+    <MissingClass>io.netty.channel.ChannelInitializer</MissingClass>
+    <MissingClass>io.netty.channel.ChannelPipeline</MissingClass>
+    <MissingClass>io.netty.channel.EventLoopGroup</MissingClass>
+    <MissingClass>io.netty.channel.FileRegion</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.DefaultHttpRequest</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.DefaultLastHttpContent</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpContent</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpHeaderNames</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpHeaders</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpMethod</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpResponse</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpResponseStatus</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.HttpVersion</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.LastHttpContent</MissingClass>
+    <MissingClass>io.netty.util.ReferenceCountUtil</MissingClass>
+    <MissingClass>io.quarkus.arc.config.ConfigProperties</MissingClass>
+    <MissingClass>io.quarkus.arc.config.ConfigProperties$NamingStrategy</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.AdditionalBeanBuildItem</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.AdditionalBeanBuildItem$Builder</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.ArcConfig</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.BeanContainerBuildItem</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.BeanContainerListenerBuildItem</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.SyntheticBeanBuildItem</MissingClass>
+    <MissingClass>io.quarkus.arc.deployment.SyntheticBeanBuildItem$ExtendedBeanConfigurator</MissingClass>
+    <MissingClass>io.quarkus.arc.processor.BeanConfiguratorBase</MissingClass>
+    <MissingClass>io.quarkus.arc.processor.BuiltinScope</MissingClass>
+    <MissingClass>io.quarkus.arc.processor.ScopeInfo</MissingClass>
+    <MissingClass>io.quarkus.arc.runtime.BeanContainer</MissingClass>
+    <MissingClass>io.quarkus.arc.runtime.BeanContainerListener</MissingClass>
+    <MissingClass>io.quarkus.bootstrap.classloading.QuarkusClassLoader</MissingClass>
+    <MissingClass>io.quarkus.bootstrap.runner.QuarkusEntryPoint</MissingClass>
+    <MissingClass>io.quarkus.builder.BuildException</MissingClass>
+    <MissingClass>io.quarkus.builder.Version</MissingClass>
+    <MissingClass>io.quarkus.builder.item.BuildItem</MissingClass>
+    <MissingClass>io.quarkus.builder.item.MultiBuildItem</MissingClass>
+    <MissingClass>io.quarkus.builder.item.SimpleBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.ApplicationArchive</MissingClass>
+    <MissingClass>io.quarkus.deployment.Capabilities</MissingClass>
+    <MissingClass>io.quarkus.deployment.Capability</MissingClass>
+    <MissingClass>io.quarkus.deployment.annotations.BuildProducer</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ApplicationArchivesBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ApplicationStartBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ConfigDescriptionBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.DevServicesLauncherConfigResultBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ExecutorBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.LaunchModeBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.LiveReloadBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.LogCategoryBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.RunTimeConfigurationSourceBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ServiceStartBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ShutdownContextBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.ShutdownListenerBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.WebSocketLogHandlerBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.nativeimage.NativeImageResourceBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.nativeimage.ReflectiveClassBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.nativeimage.RuntimeInitializedClassBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.builditem.nativeimage.ServiceProviderBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.console.ConsoleCommand</MissingClass>
+    <MissingClass>io.quarkus.deployment.console.ConsoleCommand$HelpState</MissingClass>
+    <MissingClass>io.quarkus.deployment.console.ConsoleStateManager</MissingClass>
+    <MissingClass>io.quarkus.deployment.console.ConsoleStateManager$ConsoleContext</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.RuntimeUpdatesProcessor</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.remote.RemoteDevClient</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.remote.RemoteDevClient$SyncResult</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.remote.RemoteDevClientProvider</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.testing.TestClassResult</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.testing.TestResult</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.testing.TestRunResults</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.testing.TestSupport</MissingClass>
+    <MissingClass>io.quarkus.deployment.dev.testing.TestSupport$RunStatus</MissingClass>
+    <MissingClass>io.quarkus.deployment.ide.EffectiveIdeBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.ide.Ide</MissingClass>
+    <MissingClass>io.quarkus.deployment.logging.LogCleanupFilterBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.pkg.builditem.BuildSystemTargetBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.pkg.builditem.CurateOutcomeBuildItem</MissingClass>
+    <MissingClass>io.quarkus.deployment.util.ArtifactInfoUtil</MissingClass>
+    <MissingClass>io.quarkus.deployment.util.IoUtil</MissingClass>
+    <MissingClass>io.quarkus.deployment.util.UriNormalizationUtil</MissingClass>
+    <MissingClass>io.quarkus.deployment.util.WebJarUtil</MissingClass>
+    <MissingClass>io.quarkus.dev.config.CurrentConfig</MissingClass>
+    <MissingClass>io.quarkus.dev.console.DevConsoleManager</MissingClass>
+    <MissingClass>io.quarkus.dev.console.DevConsoleRequest</MissingClass>
+    <MissingClass>io.quarkus.dev.console.DevConsoleResponse</MissingClass>
+    <MissingClass>io.quarkus.dev.spi.DeploymentFailedStartHandler</MissingClass>
+    <MissingClass>io.quarkus.dev.spi.DevModeType</MissingClass>
+    <MissingClass>io.quarkus.dev.spi.HotReplacementContext</MissingClass>
+    <MissingClass>io.quarkus.dev.spi.RemoteDevState</MissingClass>
+    <MissingClass>io.quarkus.devconsole.runtime.spi.DevConsolePostHandler</MissingClass>
+    <MissingClass>io.quarkus.devconsole.runtime.spi.FlashScopeUtil</MissingClass>
+    <MissingClass>io.quarkus.devconsole.spi.DevConsoleRouteBuildItem</MissingClass>
+    <MissingClass>io.quarkus.devconsole.spi.DevConsoleRuntimeTemplateInfoBuildItem</MissingClass>
+    <MissingClass>io.quarkus.devconsole.spi.DevConsoleTemplateInfoBuildItem</MissingClass>
+    <MissingClass>io.quarkus.fs.util.ZipUtils</MissingClass>
+    <MissingClass>io.quarkus.kubernetes.spi.KubernetesPortBuildItem</MissingClass>
+    <MissingClass>io.quarkus.maven.dependency.GACTV</MissingClass>
+    <MissingClass>io.quarkus.maven.dependency.ResolvedDependency</MissingClass>
+    <MissingClass>io.quarkus.netty.runtime.virtual.VirtualAddress</MissingClass>
+    <MissingClass>io.quarkus.netty.runtime.virtual.VirtualChannel</MissingClass>
+    <MissingClass>io.quarkus.netty.runtime.virtual.VirtualClientConnection</MissingClass>
+    <MissingClass>io.quarkus.netty.runtime.virtual.VirtualResponseHandler</MissingClass>
+    <MissingClass>io.quarkus.netty.runtime.virtual.VirtualServerChannel</MissingClass>
+    <MissingClass>io.quarkus.qute.Engine</MissingClass>
+    <MissingClass>io.quarkus.qute.EngineBuilder</MissingClass>
+    <MissingClass>io.quarkus.qute.EvalContext</MissingClass>
+    <MissingClass>io.quarkus.qute.Expression</MissingClass>
+    <MissingClass>io.quarkus.qute.HtmlEscaper</MissingClass>
+    <MissingClass>io.quarkus.qute.NamespaceResolver</MissingClass>
+    <MissingClass>io.quarkus.qute.NamespaceResolver$Builder</MissingClass>
+    <MissingClass>io.quarkus.qute.RawString</MissingClass>
+    <MissingClass>io.quarkus.qute.ReflectionValueResolver</MissingClass>
+    <MissingClass>io.quarkus.qute.ResultMapper</MissingClass>
+    <MissingClass>io.quarkus.qute.Results</MissingClass>
+    <MissingClass>io.quarkus.qute.Results$NotFound</MissingClass>
+    <MissingClass>io.quarkus.qute.SectionHelperFactory</MissingClass>
+    <MissingClass>io.quarkus.qute.Template</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateException</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateInstance</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateLocator</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateLocator$TemplateLocation</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateNode</MissingClass>
+    <MissingClass>io.quarkus.qute.TemplateNode$Origin</MissingClass>
+    <MissingClass>io.quarkus.qute.UserTagSectionHelper</MissingClass>
+    <MissingClass>io.quarkus.qute.UserTagSectionHelper$Factory</MissingClass>
+    <MissingClass>io.quarkus.qute.ValueResolver</MissingClass>
+    <MissingClass>io.quarkus.qute.ValueResolvers</MissingClass>
+    <MissingClass>io.quarkus.qute.Variant</MissingClass>
+    <MissingClass>io.quarkus.runtime.LaunchMode</MissingClass>
+    <MissingClass>io.quarkus.runtime.LiveReloadConfig</MissingClass>
+    <MissingClass>io.quarkus.runtime.RuntimeValue</MissingClass>
+    <MissingClass>io.quarkus.runtime.ShutdownContext</MissingClass>
+    <MissingClass>io.quarkus.runtime.TemplateHtmlBuilder</MissingClass>
+    <MissingClass>io.quarkus.runtime.annotations.ConfigPhase</MissingClass>
+    <MissingClass>io.quarkus.runtime.configuration.ConfigInstantiator</MissingClass>
+    <MissingClass>io.quarkus.runtime.configuration.ProfileManager</MissingClass>
+    <MissingClass>io.quarkus.runtime.shutdown.ShutdownConfig</MissingClass>
+    <MissingClass>io.quarkus.runtime.shutdown.ShutdownListener</MissingClass>
+    <MissingClass>io.quarkus.runtime.util.ClassPathUtils</MissingClass>
+    <MissingClass>io.quarkus.runtime.util.HashUtil</MissingClass>
+    <MissingClass>io.quarkus.utilities.OS</MissingClass>
+    <MissingClass>io.quarkus.vertx.core.deployment.CoreVertxBuildItem</MissingClass>
+    <MissingClass>io.quarkus.vertx.core.deployment.EventLoopCountBuildItem</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.deployment.spi.AdditionalStaticResourceBuildItem</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.AuthConfig</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.BasicRoute</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.CurrentRequestProducer</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.CurrentVertxRequest</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.FormAuthConfig</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.HandlerConsumer</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.HandlerType</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.HttpBuildTimeConfig</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.HttpHostConfigSource</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.PolicyConfig</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.QuarkusHttpHeaders</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.StaticResourcesRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.VertxHttpRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.attribute.ExchangeAttributeBuilder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.cors.CORSRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.ArcDevRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.ConfigDescription</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.ConfigDescriptionsManager</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.ConfigDescriptionsRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.DevConsoleFilter</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.DevConsoleRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.HasDevServicesSupplier</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.Json</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.Json$JsonObjectBuilder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.RedirectHandler</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.RemoteSyncHandler</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.RouteDescription</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.devmode.RuntimeDevConsoleRoute</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.filters.Filters</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.filters.Filters$SimpleFilter</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.filters.GracefulShutdownFilter</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.logstream.LogStreamRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.AuthenticatedHttpSecurityPolicy</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.BasicAuthenticationMechanism</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.DenySecurityPolicy</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.FormAuthenticationMechanism</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.HttpAuthenticationMechanism</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.HttpAuthenticator</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.HttpAuthorizer</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.HttpSecurityRecorder</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.MtlsAuthenticationMechanism</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.PathMatchingHttpSecurityPolicy</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.PermitSecurityPolicy</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.RolesAllowedHttpSecurityPolicy</MissingClass>
+    <MissingClass>io.quarkus.vertx.http.runtime.security.SupplierImpl</MissingClass>
+    <MissingClass>io.smallrye.common.classloader.ClassPathUtils</MissingClass>
+    <MissingClass>io.vertx.core.Future</MissingClass>
+    <MissingClass>io.vertx.core.Handler</MissingClass>
+    <MissingClass>io.vertx.core.MultiMap</MissingClass>
+    <MissingClass>io.vertx.core.Vertx</MissingClass>
+    <MissingClass>io.vertx.core.VertxOptions</MissingClass>
+    <MissingClass>io.vertx.core.buffer.Buffer</MissingClass>
+    <MissingClass>io.vertx.core.file.FileSystemOptions</MissingClass>
+    <MissingClass>io.vertx.core.http.ClientAuth</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpHeaders</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpMethod</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpServerOptions</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpServerRequest</MissingClass>
+    <MissingClass>io.vertx.core.http.HttpServerResponse</MissingClass>
+    <MissingClass>io.vertx.core.http.impl.Http1xServerConnection</MissingClass>
+    <MissingClass>io.vertx.core.http.impl.Http1xServerRequest</MissingClass>
+    <MissingClass>io.vertx.core.http.impl.HttpServerConnection</MissingClass>
+    <MissingClass>io.vertx.core.impl.ContextInternal</MissingClass>
+    <MissingClass>io.vertx.core.impl.EventLoopContext</MissingClass>
+    <MissingClass>io.vertx.core.impl.VertxBuilder</MissingClass>
+    <MissingClass>io.vertx.core.impl.VertxImpl</MissingClass>
+    <MissingClass>io.vertx.core.impl.VertxInternal</MissingClass>
+    <MissingClass>io.vertx.core.impl.VertxThread</MissingClass>
+    <MissingClass>io.vertx.core.json.JsonObject</MissingClass>
+    <MissingClass>io.vertx.core.metrics.MetricsOptions</MissingClass>
+    <MissingClass>io.vertx.core.net.impl.SSLHelper</MissingClass>
+    <MissingClass>io.vertx.core.net.impl.VertxHandler</MissingClass>
+    <MissingClass>io.vertx.core.net.impl.transport.Transport</MissingClass>
+    <MissingClass>io.vertx.core.spi.VertxThreadFactory</MissingClass>
+    <MissingClass>io.vertx.core.spi.metrics.HttpServerMetrics</MissingClass>
+    <MissingClass>io.vertx.ext.web.Route</MissingClass>
+    <MissingClass>io.vertx.ext.web.Router</MissingClass>
+    <MissingClass>io.vertx.ext.web.RoutingContext</MissingClass>
+    <MissingClass>io.vertx.ext.web.handler.BodyHandler</MissingClass>
+    <MissingClass>io.vertx.mutiny.ext.web.Router</MissingClass>
+    <MissingClass>javax.inject.Singleton</MissingClass>
+    <MissingClass>org.eclipse.microprofile.config.Config</MissingClass>
+    <MissingClass>org.eclipse.microprofile.config.ConfigProvider</MissingClass>
+    <MissingClass>org.jboss.logging.Logger</MissingClass>
+    <MissingClass>org.junit.platform.engine.TestExecutionResult</MissingClass>
+    <MissingClass>org.junit.platform.engine.TestExecutionResult$Status</MissingClass>
+    <MissingClass>org.yaml.snakeyaml.Yaml</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:32:55 +0900" total_classes="80" referenced_classes="204" total_bugs="52" total_size="2690" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.09" clock_seconds="2.86" peak_mbytes="267.37" alloc_mbytes="4078.00" gc_seconds="0.06" priority_3="16" priority_2="31" priority_1="5">
+    <FileStats path="io/quarkus/vertx/http/deployment/BodyHandlerBuildItem.java" bugCount="0" size="8"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/DefaultRouteBuildItem.java" bugCount="0" size="14"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/FilterBuildItem.java" bugCount="0" size="19"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/HttpRootPathBuildItem.java" bugCount="0" size="96"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/HttpSecurityPolicyBuildItem.java" bugCount="0" size="12"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/HttpSecurityProcessor.java" bugCount="0" size="72"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/InitialRouterBuildItem.java" bugCount="0" size="12"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/NonApplicationRootPathBuildItem.java" bugCount="0" size="109"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/RequireBodyHandlerBuildItem.java" bugCount="0" size="3"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/RequireVirtualHttpBuildItem.java" bugCount="0" size="13"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/RouteBuildItem.java" bugCount="0" size="115"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/SecurityInformationBuildItem.java" bugCount="0" size="40"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/StaticResourcesProcessor.java" bugCount="4" size="105" bugHash="6504d4fce5a30412df8e40549b3a57a8"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/VertxHttpProcessor$$accessor.java" bugCount="1" size="5" bugHash="47239253a371628d6101c44177b6e3b1"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/VertxHttpProcessor.java" bugCount="2" size="157" bugHash="e966ab766ed312db341ed0ee620e9435"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/VertxWebRouterBuildItem.java" bugCount="0" size="20"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/WebsocketSubProtocolsBuildItem.java" bugCount="0" size="8"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/ArcDevProcessor.java" bugCount="0" size="44"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClient.java" bugCount="1" size="179" bugHash="5e30968de7195c22887aa436e012bc4c"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/HttpRemoteDevClientProvider.java" bugCount="1" size="17" bugHash="f92344f46afa20b0962c883e75b8349c"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/NotFoundPageDisplayableEndpointBuildItem.java" bugCount="0" size="26"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/RouteDescriptionBuildItem.java" bugCount="0" size="14"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/ConfigEditorProcessor.java" bugCount="6" size="165" bugHash="3a10fc4084fa3aa26d9d571907153dc3"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/ConfiguredPathInfo.java" bugCount="0" size="20"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevConsole.java" bugCount="1" size="162" bugHash="5109079a171388b809d7c84ae0510878"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleFailedStartHandler.java" bugCount="1" size="7" bugHash="d6a5af94dbab5638f167b694ee0c8a0b"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleHttpHandler.java" bugCount="1" size="97" bugHash="f9f2f770a9853261333e4486801df845"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevConsoleProcessor.java" bugCount="9" size="585" bugHash="05e41428fd5a5ce1ff2d36c136fa3ddf"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevTemplatePathBuildItem.java" bugCount="0" size="22"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevTemplateVariantsBuildItem.java" bugCount="2" size="8" bugHash="b2fd715a55abed01e73c3925d09f34e7"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/DevUIConfig.java" bugCount="0" size="4"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/FlashScopeHandler.java" bugCount="0" size="8"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/JsonObjectValueResolver.java" bugCount="0" size="22"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/MultiMapValueResolver.java" bugCount="0" size="26"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/console/OpenIdeHandler.java" bugCount="1" size="63" bugHash="5a773242641bbdc63999a2a3a475667e"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/tests/ClassResult.java" bugCount="10" size="61" bugHash="7f170fcde122087b08d75e8fb881f608"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/tests/Result.java" bugCount="0" size="50"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/tests/SuiteResult.java" bugCount="3" size="14" bugHash="ec23e896d25fb898e212c3576435d9d5"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/tests/TestStatus.java" bugCount="0" size="79"/>
+    <FileStats path="io/quarkus/vertx/http/deployment/devmode/tests/TestsProcessor.java" bugCount="9" size="209" bugHash="c1364bdb22f0795c55b4f5d481095e66"/>
+    <PackageStats package="io.quarkus.vertx.http.deployment" total_bugs="7" total_types="26" total_size="808" priority_3="1" priority_2="6">
+      <ClassStats class="io.quarkus.vertx.http.deployment.BodyHandlerBuildItem" sourceFile="BodyHandlerBuildItem.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.DefaultRouteBuildItem" sourceFile="DefaultRouteBuildItem.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.FilterBuildItem" sourceFile="FilterBuildItem.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.HttpRootPathBuildItem" sourceFile="HttpRootPathBuildItem.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.HttpRootPathBuildItem$Builder" sourceFile="HttpRootPathBuildItem.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.HttpSecurityPolicyBuildItem" sourceFile="HttpSecurityPolicyBuildItem.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.HttpSecurityProcessor" sourceFile="HttpSecurityProcessor.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.InitialRouterBuildItem" sourceFile="InitialRouterBuildItem.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.NonApplicationRootPathBuildItem" sourceFile="NonApplicationRootPathBuildItem.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.NonApplicationRootPathBuildItem$Builder" sourceFile="NonApplicationRootPathBuildItem.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.RequireBodyHandlerBuildItem" sourceFile="RequireBodyHandlerBuildItem.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.RequireVirtualHttpBuildItem" sourceFile="RequireVirtualHttpBuildItem.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.RouteBuildItem" sourceFile="RouteBuildItem.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.RouteBuildItem$Builder" sourceFile="RouteBuildItem.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.RouteBuildItem$RouteType" sourceFile="RouteBuildItem.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.SecurityInformationBuildItem" sourceFile="SecurityInformationBuildItem.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.SecurityInformationBuildItem$OpenIDConnectInformation" sourceFile="SecurityInformationBuildItem.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.SecurityInformationBuildItem$SecurityModel" sourceFile="SecurityInformationBuildItem.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.StaticResourcesProcessor" sourceFile="StaticResourcesProcessor.java" interface="false" size="47" bugs="1" priority_3="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$1" sourceFile="StaticResourcesProcessor.java" interface="false" size="23" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem" sourceFile="StaticResourcesProcessor.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.StaticResourcesProcessor$StaticResourcesBuildItem$Entry" sourceFile="StaticResourcesProcessor.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.VertxHttpProcessor" sourceFile="VertxHttpProcessor.java" interface="false" size="157" bugs="2" priority_2="2"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.VertxHttpProcessor$$accessor" sourceFile="VertxHttpProcessor$$accessor.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.VertxWebRouterBuildItem" sourceFile="VertxWebRouterBuildItem.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.WebsocketSubProtocolsBuildItem" sourceFile="WebsocketSubProtocolsBuildItem.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.quarkus.vertx.http.deployment.devmode" total_bugs="2" total_types="6" total_size="280" priority_2="1" priority_1="1">
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.ArcDevProcessor" sourceFile="ArcDevProcessor.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient" sourceFile="HttpRemoteDevClient.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClient$Session" sourceFile="HttpRemoteDevClient.java" interface="false" size="159" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.HttpRemoteDevClientProvider" sourceFile="HttpRemoteDevClientProvider.java" interface="false" size="17" bugs="1" priority_1="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.NotFoundPageDisplayableEndpointBuildItem" sourceFile="NotFoundPageDisplayableEndpointBuildItem.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.RouteDescriptionBuildItem" sourceFile="RouteDescriptionBuildItem.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="io.quarkus.vertx.http.deployment.devmode.console" total_bugs="21" total_types="32" total_size="1189" priority_3="6" priority_2="11" priority_1="4">
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor" sourceFile="ConfigEditorProcessor.java" interface="false" size="135" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.ConfigEditorProcessor$1" sourceFile="ConfigEditorProcessor.java" interface="false" size="30" bugs="2" priority_3="1" priority_1="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.ConfiguredPathInfo" sourceFile="ConfiguredPathInfo.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsole" sourceFile="DevConsole.java" interface="false" size="151" bugs="1" priority_3="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsole$1" sourceFile="DevConsole.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleFailedStartHandler" sourceFile="DevConsoleFailedStartHandler.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler" sourceFile="DevConsoleHttpHandler.java" interface="false" size="40" bugs="1" priority_1="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleHttpHandler$NettyResponseHandler" sourceFile="DevConsoleHttpHandler.java" interface="false" size="57" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor" sourceFile="DevConsoleProcessor.java" interface="false" size="320" bugs="7" priority_3="3" priority_2="3" priority_1="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$1" sourceFile="DevConsoleProcessor.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$10" sourceFile="DevConsoleProcessor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$2" sourceFile="DevConsoleProcessor.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$2$1" sourceFile="DevConsoleProcessor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$3" sourceFile="DevConsoleProcessor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$4" sourceFile="DevConsoleProcessor.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$5" sourceFile="DevConsoleProcessor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$6" sourceFile="DevConsoleProcessor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$7" sourceFile="DevConsoleProcessor.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$8" sourceFile="DevConsoleProcessor.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$9" sourceFile="DevConsoleProcessor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$DetectPackageFileVisitor" sourceFile="DevConsoleProcessor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$HistoryHandlerBuildItem" sourceFile="DevConsoleProcessor.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$IdeInfoContextFunction" sourceFile="DevConsoleProcessor.java" interface="false" size="90" bugs="1" priority_2="1"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevConsoleProcessor$JavaDocResolver" sourceFile="DevConsoleProcessor.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevTemplatePathBuildItem" sourceFile="DevTemplatePathBuildItem.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevTemplateVariantsBuildItem" sourceFile="DevTemplateVariantsBuildItem.java" interface="false" size="8" bugs="2" priority_2="2"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.DevUIConfig" sourceFile="DevUIConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.FlashScopeHandler" sourceFile="FlashScopeHandler.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.JsonObjectValueResolver" sourceFile="JsonObjectValueResolver.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.MultiMapValueResolver" sourceFile="MultiMapValueResolver.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler" sourceFile="OpenIdeHandler.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.console.OpenIdeHandler$1" sourceFile="OpenIdeHandler.java" interface="false" size="22" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="io.quarkus.vertx.http.deployment.devmode.tests" total_bugs="22" total_types="16" total_size="413" priority_3="9" priority_2="13">
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.ClassResult" sourceFile="ClassResult.java" interface="false" size="61" bugs="10" priority_2="10"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.Result" sourceFile="Result.java" interface="false" size="50" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.SuiteResult" sourceFile="SuiteResult.java" interface="false" size="14" bugs="3" priority_2="3"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestStatus" sourceFile="TestStatus.java" interface="false" size="79" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor" sourceFile="TestsProcessor.java" interface="false" size="70" bugs="9" priority_3="9"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$1" sourceFile="TestsProcessor.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$10" sourceFile="TestsProcessor.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$11" sourceFile="TestsProcessor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$2" sourceFile="TestsProcessor.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$3" sourceFile="TestsProcessor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$4" sourceFile="TestsProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$5" sourceFile="TestsProcessor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$6" sourceFile="TestsProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$7" sourceFile="TestsProcessor.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$8" sourceFile="TestsProcessor.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.quarkus.vertx.http.deployment.devmode.tests.TestsProcessor$9" sourceFile="TestsProcessor.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="300" invocations="1379" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="10115" standardDeviationMicrosecondsPerInvocation="593"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="117" invocations="204" avgMicrosecondsPerInvocation="577" maxMicrosecondsPerInvocation="5279" standardDeviationMicrosecondsPerInvocation="1020"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="116" invocations="466" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="6813" standardDeviationMicrosecondsPerInvocation="611"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="107" invocations="420" avgMicrosecondsPerInvocation="254" maxMicrosecondsPerInvocation="7973" standardDeviationMicrosecondsPerInvocation="571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="102" invocations="472" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="12246" standardDeviationMicrosecondsPerInvocation="719"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="100" invocations="204" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="5469" standardDeviationMicrosecondsPerInvocation="913"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="96" invocations="460" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="8721" standardDeviationMicrosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="92" invocations="918" avgMicrosecondsPerInvocation="100" maxMicrosecondsPerInvocation="2076" standardDeviationMicrosecondsPerInvocation="156"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="80" invocations="473" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="6706" standardDeviationMicrosecondsPerInvocation="486"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="63" invocations="374" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="3571" standardDeviationMicrosecondsPerInvocation="351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="61" invocations="466" avgMicrosecondsPerInvocation="132" maxMicrosecondsPerInvocation="6457" standardDeviationMicrosecondsPerInvocation="336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="52" invocations="80" avgMicrosecondsPerInvocation="660" maxMicrosecondsPerInvocation="13019" standardDeviationMicrosecondsPerInvocation="2164"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="396" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="13833" standardDeviationMicrosecondsPerInvocation="837"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="41" invocations="1404" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="2100" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="39" invocations="204" avgMicrosecondsPerInvocation="191" maxMicrosecondsPerInvocation="1799" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="466" avgMicrosecondsPerInvocation="77" maxMicrosecondsPerInvocation="13101" standardDeviationMicrosecondsPerInvocation="613"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="34" invocations="204" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="1925" standardDeviationMicrosecondsPerInvocation="273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="30" invocations="80" avgMicrosecondsPerInvocation="384" maxMicrosecondsPerInvocation="3574" standardDeviationMicrosecondsPerInvocation="591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="30" invocations="80" avgMicrosecondsPerInvocation="377" maxMicrosecondsPerInvocation="9647" standardDeviationMicrosecondsPerInvocation="1102"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="29" invocations="204" avgMicrosecondsPerInvocation="143" maxMicrosecondsPerInvocation="2739" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="26" invocations="204" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="14419" standardDeviationMicrosecondsPerInvocation="1008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="26" invocations="204" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="1535" standardDeviationMicrosecondsPerInvocation="215"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="466" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="1207" standardDeviationMicrosecondsPerInvocation="126"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="24" invocations="1078" avgMicrosecondsPerInvocation="22" maxMicrosecondsPerInvocation="754" standardDeviationMicrosecondsPerInvocation="53"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="204" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="6457" standardDeviationMicrosecondsPerInvocation="469"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="23" invocations="204" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="2345" standardDeviationMicrosecondsPerInvocation="270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="21" invocations="9640" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="574" standardDeviationMicrosecondsPerInvocation="9"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUncalledPrivateMethods" totalMilliseconds="18" invocations="80" avgMicrosecondsPerInvocation="232" maxMicrosecondsPerInvocation="1519" standardDeviationMicrosecondsPerInvocation="236"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="18" invocations="204" avgMicrosecondsPerInvocation="90" maxMicrosecondsPerInvocation="1056" standardDeviationMicrosecondsPerInvocation="170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="18" invocations="80" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="2387" standardDeviationMicrosecondsPerInvocation="408"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="17" invocations="80" avgMicrosecondsPerInvocation="213" maxMicrosecondsPerInvocation="4788" standardDeviationMicrosecondsPerInvocation="565"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="80" avgMicrosecondsPerInvocation="188" maxMicrosecondsPerInvocation="3938" standardDeviationMicrosecondsPerInvocation="455"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="14" invocations="396" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="1014" standardDeviationMicrosecondsPerInvocation="81"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="14" invocations="80" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="1401" standardDeviationMicrosecondsPerInvocation="245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="12" invocations="80" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="3420" standardDeviationMicrosecondsPerInvocation="461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="12" invocations="80" avgMicrosecondsPerInvocation="161" maxMicrosecondsPerInvocation="1633" standardDeviationMicrosecondsPerInvocation="284"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="12" invocations="204" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="1849" standardDeviationMicrosecondsPerInvocation="277"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

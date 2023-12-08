@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013635045" analysisTimestamp="1702023730627" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\warnings-1.20.jar</Jar>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" instanceHash="da90d292b35b699cdbf45d6d691634e6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method may fail to clean up stream or resource</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.AbstractPackageDetector.detectPackageName(String) may fail to clean up java.io.InputStream</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.AbstractPackageDetector" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractPackageDetector" start="12" end="26" sourcefile="AbstractPackageDetector.java" sourcepath="hudson/plugins/warnings/util/AbstractPackageDetector.java">
+        <Message>At AbstractPackageDetector.java:[lines 12-26]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.AbstractPackageDetector</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.AbstractPackageDetector" name="detectPackageName" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractPackageDetector" start="19" end="26" startBytecode="0" endBytecode="120" sourcefile="AbstractPackageDetector.java" sourcepath="hudson/plugins/warnings/util/AbstractPackageDetector.java"/>
+      <Message>In method hudson.plugins.warnings.util.AbstractPackageDetector.detectPackageName(String)</Message>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" start="61" end="786" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java">
+        <Message>At InputStream.java:[lines 61-786]</Message>
+      </SourceLine>
+      <Message>Reference type java.io.InputStream</Message>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING">
+      <Message>1 instances of obligation remaining</Message>
+    </Int>
+    <SourceLine classname="hudson.plugins.warnings.util.AbstractPackageDetector" primary="true" start="20" end="20" startBytecode="21" endBytecode="21" sourcefile="AbstractPackageDetector.java" sourcepath="hudson/plugins/warnings/util/AbstractPackageDetector.java" role="SOURCE_LINE_OBLIGATION_CREATED">
+      <Message>Obligation to clean up resource created at AbstractPackageDetector.java:[line 20] is not discharged</Message>
+    </SourceLine>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS">
+      <Message>Remaining obligations: {InputStream x 1}</Message>
+    </String>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ae0f8a619233ea00e4d85a7a74e5bf1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.AbstractResultAction.getHealthReportBuilder() may expose internal representation by returning AbstractResultAction.healthReportBuilder</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.AbstractResultAction" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" start="39" end="294" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+        <Message>At AbstractResultAction.java:[lines 39-294]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.AbstractResultAction</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.AbstractResultAction" name="getHealthReportBuilder" signature="()Lhudson/plugins/warnings/util/HealthReportBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" start="99" end="102" startBytecode="0" endBytecode="90" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java"/>
+      <Message>In method hudson.plugins.warnings.util.AbstractResultAction.getHealthReportBuilder()</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.AbstractResultAction" name="healthReportBuilder" signature="Lhudson/plugins/warnings/util/HealthReportBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+        <Message>In AbstractResultAction.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.AbstractResultAction.healthReportBuilder</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" primary="true" start="102" end="102" startBytecode="22" endBytecode="22" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+      <Message>At AbstractResultAction.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8af1a7eb9f7f35ab8a496680131e4963" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.AbstractResultAction(AbstractBuild, HealthReportBuilder) may expose internal representation by storing an externally mutable object into AbstractResultAction.healthReportBuilder</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.AbstractResultAction" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" start="39" end="294" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+        <Message>At AbstractResultAction.java:[lines 39-294]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.AbstractResultAction</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.AbstractResultAction" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/HealthReportBuilder;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" start="76" end="79" startBytecode="0" endBytecode="116" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java"/>
+      <Message>In method new hudson.plugins.warnings.util.AbstractResultAction(AbstractBuild, HealthReportBuilder)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.AbstractResultAction" name="healthReportBuilder" signature="Lhudson/plugins/warnings/util/HealthReportBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+        <Message>In AbstractResultAction.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.AbstractResultAction.healthReportBuilder</Message>
+    </Field>
+    <LocalVariable name="healthReportBuilder" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named healthReportBuilder</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.AbstractResultAction" primary="true" start="78" end="78" startBytecode="11" endBytecode="11" sourcefile="AbstractResultAction.java" sourcepath="hudson/plugins/warnings/util/AbstractResultAction.java">
+      <Message>At AbstractResultAction.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="558c9c1e89f95c44c6222f3c18c5bb09" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.AnnotationsBuildResult.getModules() may expose internal representation by returning AnnotationsBuildResult.modules</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.AnnotationsBuildResult" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AnnotationsBuildResult" start="35" end="457" sourcefile="AnnotationsBuildResult.java" sourcepath="hudson/plugins/warnings/util/AnnotationsBuildResult.java">
+        <Message>At AnnotationsBuildResult.java:[lines 35-457]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.AnnotationsBuildResult</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.AnnotationsBuildResult" name="getModules" signature="()Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AnnotationsBuildResult" start="186" end="186" startBytecode="0" endBytecode="46" sourcefile="AnnotationsBuildResult.java" sourcepath="hudson/plugins/warnings/util/AnnotationsBuildResult.java"/>
+      <Message>In method hudson.plugins.warnings.util.AnnotationsBuildResult.getModules()</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.AnnotationsBuildResult" name="modules" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.AnnotationsBuildResult" sourcefile="AnnotationsBuildResult.java" sourcepath="hudson/plugins/warnings/util/AnnotationsBuildResult.java">
+        <Message>In AnnotationsBuildResult.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.AnnotationsBuildResult.modules</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.AnnotationsBuildResult" primary="true" start="186" end="186" startBytecode="4" endBytecode="4" sourcefile="AnnotationsBuildResult.java" sourcepath="hudson/plugins/warnings/util/AnnotationsBuildResult.java">
+      <Message>At AnnotationsBuildResult.java:[line 186]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="12f6ea4bd8694f561561e64a02dd90bd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.ChartRenderer.doStatistics(StaplerRequest, StaplerResponse, AnnotationContainer)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.ChartRenderer" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ChartRenderer" start="22" end="109" sourcefile="ChartRenderer.java" sourcepath="hudson/plugins/warnings/util/ChartRenderer.java">
+        <Message>At ChartRenderer.java:[lines 22-109]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.ChartRenderer</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.ChartRenderer" name="doStatistics" signature="(Lorg/kohsuke/stapler/StaplerRequest;Lorg/kohsuke/stapler/StaplerResponse;Lhudson/plugins/warnings/util/model/AnnotationContainer;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ChartRenderer" start="38" end="64" startBytecode="0" endBytecode="450" sourcefile="ChartRenderer.java" sourcepath="hudson/plugins/warnings/util/ChartRenderer.java"/>
+      <Message>In method hudson.plugins.warnings.util.ChartRenderer.doStatistics(StaplerRequest, StaplerResponse, AnnotationContainer)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.ChartRenderer" primary="true" start="46" end="46" startBytecode="107" endBytecode="107" sourcefile="ChartRenderer.java" sourcepath="hudson/plugins/warnings/util/ChartRenderer.java">
+      <Message>At ChartRenderer.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="6d66eeb7fccd11e2b2360290cdb1e5eb" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.DetailBuilder.createDetails(String, AbstractBuild, AnnotationContainer, String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.DetailBuilder" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.DetailBuilder" start="16" end="102" sourcefile="DetailBuilder.java" sourcepath="hudson/plugins/warnings/util/DetailBuilder.java">
+        <Message>At DetailBuilder.java:[lines 16-102]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.DetailBuilder</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.DetailBuilder" name="createDetails" signature="(Ljava/lang/String;Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/model/AnnotationContainer;Ljava/lang/String;)Ljava/lang/Object;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.DetailBuilder" start="75" end="102" startBytecode="0" endBytecode="549" sourcefile="DetailBuilder.java" sourcepath="hudson/plugins/warnings/util/DetailBuilder.java"/>
+      <Message>In method hudson.plugins.warnings.util.DetailBuilder.createDetails(String, AbstractBuild, AnnotationContainer, String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.DetailBuilder" primary="true" start="80" end="80" startBytecode="53" endBytecode="53" sourcefile="DetailBuilder.java" sourcepath="hudson/plugins/warnings/util/DetailBuilder.java">
+      <Message>At DetailBuilder.java:[line 80]</Message>
+    </SourceLine>
+    <SourceLine classname="hudson.plugins.warnings.util.DetailBuilder" start="83" end="83" startBytecode="89" endBytecode="89" sourcefile="DetailBuilder.java" sourcepath="hudson/plugins/warnings/util/DetailBuilder.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at DetailBuilder.java:[line 83]</Message>
+    </SourceLine>
+    <SourceLine classname="hudson.plugins.warnings.util.DetailBuilder" start="86" end="86" startBytecode="125" endBytecode="125" sourcefile="DetailBuilder.java" sourcepath="hudson/plugins/warnings/util/DetailBuilder.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at DetailBuilder.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="ce697eaec5bdb3f6893a90d1cba01b87" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.ErrorDetail.getErrors() may expose internal representation by returning ErrorDetail.errors</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.ErrorDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" start="27" end="52" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+        <Message>At ErrorDetail.java:[lines 27-52]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.ErrorDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.ErrorDetail" name="getErrors" signature="()Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" start="52" end="52" startBytecode="0" endBytecode="46" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java"/>
+      <Message>In method hudson.plugins.warnings.util.ErrorDetail.getErrors()</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.ErrorDetail" name="errors" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+        <Message>In ErrorDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.ErrorDetail.errors</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" primary="true" start="52" end="52" startBytecode="4" endBytecode="4" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+      <Message>At ErrorDetail.java:[line 52]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="31204e0f70fc1c09f256d956e73237f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.ErrorDetail(AbstractBuild, Collection) may expose internal representation by storing an externally mutable object into ErrorDetail.errors</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.ErrorDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" start="27" end="52" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+        <Message>At ErrorDetail.java:[lines 27-52]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.ErrorDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.ErrorDetail" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Ljava/util/Collection;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" start="27" end="30" startBytecode="0" endBytecode="116" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java"/>
+      <Message>In method new hudson.plugins.warnings.util.ErrorDetail(AbstractBuild, Collection)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.ErrorDetail" name="errors" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+        <Message>In ErrorDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.ErrorDetail.errors</Message>
+    </Field>
+    <LocalVariable name="errors" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named errors</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.ErrorDetail" primary="true" start="29" end="29" startBytecode="11" endBytecode="11" sourcefile="ErrorDetail.java" sourcepath="hudson/plugins/warnings/util/ErrorDetail.java">
+      <Message>At ErrorDetail.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fa85b4e8c6ee587561418d730be981f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.FileDetail.getFile(int) may expose internal representation by returning FileDetail.file</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.FileDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="31" end="67" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>At FileDetail.java:[lines 31-67]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.FileDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.FileDetail" name="getFile" signature="(I)Lhudson/plugins/warnings/util/model/WorkspaceFile;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="61" end="61" startBytecode="0" endBytecode="56" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java"/>
+      <Message>In method hudson.plugins.warnings.util.FileDetail.getFile(int)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.FileDetail" name="file" signature="Lhudson/plugins/warnings/util/model/WorkspaceFile;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>In FileDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.FileDetail.file</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.FileDetail" primary="true" start="61" end="61" startBytecode="4" endBytecode="4" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+      <Message>At FileDetail.java:[line 61]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4f17496ad894ff3debf2e1a1c5f98e49" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>hudson.plugins.warnings.util.FileDetail.getFile(String) may expose internal representation by returning FileDetail.file</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.FileDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="31" end="67" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>At FileDetail.java:[lines 31-67]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.FileDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.FileDetail" name="getFile" signature="(Ljava/lang/String;)Lhudson/plugins/warnings/util/model/WorkspaceFile;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="67" end="67" startBytecode="0" endBytecode="56" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java"/>
+      <Message>In method hudson.plugins.warnings.util.FileDetail.getFile(String)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.FileDetail" name="file" signature="Lhudson/plugins/warnings/util/model/WorkspaceFile;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>In FileDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.FileDetail.file</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.FileDetail" primary="true" start="67" end="67" startBytecode="4" endBytecode="4" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+      <Message>At FileDetail.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3cd67111641b3305152e9589e5ed0a25" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.FileDetail(AbstractBuild, WorkspaceFile, String) may expose internal representation by storing an externally mutable object into FileDetail.file</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.FileDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="31" end="67" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>At FileDetail.java:[lines 31-67]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.FileDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.FileDetail" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/model/WorkspaceFile;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" start="31" end="33" startBytecode="0" endBytecode="116" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java"/>
+      <Message>In method new hudson.plugins.warnings.util.FileDetail(AbstractBuild, WorkspaceFile, String)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.FileDetail" name="file" signature="Lhudson/plugins/warnings/util/model/WorkspaceFile;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FileDetail" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+        <Message>In FileDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.FileDetail.file</Message>
+    </Field>
+    <LocalVariable name="file" register="2" pc="15" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named file</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.FileDetail" primary="true" start="32" end="32" startBytecode="15" endBytecode="15" sourcefile="FileDetail.java" sourcepath="hudson/plugins/warnings/util/FileDetail.java">
+      <Message>At FileDetail.java:[line 32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="2a4c84843cfe529b04511ed1c7da261c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.FilesParser(PrintStream, String, AnnotationParser, boolean, boolean) may expose internal representation by storing an externally mutable object into FilesParser.logger</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.FilesParser" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FilesParser" start="22" end="157" sourcefile="FilesParser.java" sourcepath="hudson/plugins/warnings/util/FilesParser.java">
+        <Message>At FilesParser.java:[lines 22-157]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.FilesParser</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.FilesParser" name="&lt;init&gt;" signature="(Ljava/io/PrintStream;Ljava/lang/String;Lhudson/plugins/warnings/util/AnnotationParser;ZZ)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FilesParser" start="50" end="56" startBytecode="0" endBytecode="147" sourcefile="FilesParser.java" sourcepath="hudson/plugins/warnings/util/FilesParser.java"/>
+      <Message>In method new hudson.plugins.warnings.util.FilesParser(PrintStream, String, AnnotationParser, boolean, boolean)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.FilesParser" name="logger" signature="Ljava/io/PrintStream;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.FilesParser" sourcefile="FilesParser.java" sourcepath="hudson/plugins/warnings/util/FilesParser.java">
+        <Message>In FilesParser.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.FilesParser.logger</Message>
+    </Field>
+    <LocalVariable name="logger" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named logger</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.FilesParser" primary="true" start="51" end="51" startBytecode="6" endBytecode="6" sourcefile="FilesParser.java" sourcepath="hudson/plugins/warnings/util/FilesParser.java">
+      <Message>At FilesParser.java:[line 51]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="69effa0224c451e3e729faf27ee21e63" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.HealthAwareMavenReporter.validateHealthiness(String, String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" start="87" end="440" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java">
+        <Message>At HealthAwareMavenReporter.java:[lines 87-440]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.HealthAwareMavenReporter</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" name="validateHealthiness" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" start="111" end="123" startBytecode="0" endBytecode="171" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java"/>
+      <Message>In method hudson.plugins.warnings.util.HealthAwareMavenReporter.validateHealthiness(String, String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" primary="true" start="113" end="113" startBytecode="19" endBytecode="19" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java">
+      <Message>At HealthAwareMavenReporter.java:[line 113]</Message>
+    </SourceLine>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" start="114" end="114" startBytecode="30" endBytecode="30" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HealthAwareMavenReporter.java:[line 114]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="b31c97debf6ba12f4e2d4bd0109e4729" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.HealthAwareMavenReporter.validateThreshold(String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" start="87" end="440" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java">
+        <Message>At HealthAwareMavenReporter.java:[lines 87-440]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.HealthAwareMavenReporter</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" name="validateThreshold" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" start="132" end="143" startBytecode="0" endBytecode="128" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java"/>
+      <Message>In method hudson.plugins.warnings.util.HealthAwareMavenReporter.validateThreshold(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwareMavenReporter" primary="true" start="134" end="134" startBytecode="12" endBytecode="12" sourcefile="HealthAwareMavenReporter.java" sourcepath="hudson/plugins/warnings/util/HealthAwareMavenReporter.java">
+      <Message>At HealthAwareMavenReporter.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="5053014d4b3821c618b48dca175bf3b3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.HealthAwarePublisher.validateHealthiness(String, String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.HealthAwarePublisher" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="93" end="455" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java">
+        <Message>At HealthAwarePublisher.java:[lines 93-455]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.HealthAwarePublisher</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.HealthAwarePublisher" name="validateHealthiness" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="117" end="129" startBytecode="0" endBytecode="171" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java"/>
+      <Message>In method hudson.plugins.warnings.util.HealthAwarePublisher.validateHealthiness(String, String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" primary="true" start="119" end="119" startBytecode="19" endBytecode="19" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java">
+      <Message>At HealthAwarePublisher.java:[line 119]</Message>
+    </SourceLine>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="120" end="120" startBytecode="30" endBytecode="30" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HealthAwarePublisher.java:[line 120]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="32985f79b88bb1c1a1cbf486528691ea" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.HealthAwarePublisher.validateThreshold(String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.HealthAwarePublisher" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="93" end="455" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java">
+        <Message>At HealthAwarePublisher.java:[lines 93-455]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.HealthAwarePublisher</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.HealthAwarePublisher" name="validateThreshold" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="138" end="149" startBytecode="0" endBytecode="128" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java"/>
+      <Message>In method hudson.plugins.warnings.util.HealthAwarePublisher.validateThreshold(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" primary="true" start="140" end="140" startBytecode="12" endBytecode="12" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java">
+      <Message>At HealthAwarePublisher.java:[line 140]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="3" rank="20" abbrev="UPM" category="PERFORMANCE" instanceHash="d40eadb992af46ab2be9f5fcf5fce5b0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Private method is never called</ShortMessage>
+    <LongMessage>Private method hudson.plugins.warnings.util.HealthAwarePublisher.replaceRemoteReferencesWithLocalFiles(File, VirtualChannel, Collection) is never called</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.HealthAwarePublisher" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="93" end="455" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java">
+        <Message>At HealthAwarePublisher.java:[lines 93-455]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.HealthAwarePublisher</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.HealthAwarePublisher" name="replaceRemoteReferencesWithLocalFiles" signature="(Ljava/io/File;Lhudson/remoting/VirtualChannel;Ljava/util/Collection;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="202" end="213" startBytecode="0" endBytecode="323" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java"/>
+      <Message>In method hudson.plugins.warnings.util.HealthAwarePublisher.replaceRemoteReferencesWithLocalFiles(File, VirtualChannel, Collection)</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.HealthAwarePublisher" start="202" end="213" startBytecode="0" endBytecode="323" sourcefile="HealthAwarePublisher.java" sourcepath="hudson/plugins/warnings/util/HealthAwarePublisher.java" synthetic="true">
+      <Message>At HealthAwarePublisher.java:[lines 202-213]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="5e3c82f97f25303f17b9cde010d6cc95" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name hudson.plugins.warnings.util.Messages.Errors() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.Messages" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="12" end="349" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java">
+        <Message>At Messages.java:[lines 12-349]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.Messages</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.Messages" name="Errors" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="261" end="261" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java"/>
+      <Message>In method hudson.plugins.warnings.util.Messages.Errors()</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.Messages" start="261" end="261" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java" synthetic="true">
+      <Message>At Messages.java:[line 261]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="98bf6ec9a152fec284a0c156f4888bac" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name hudson.plugins.warnings.util.Messages.HighPriority() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.Messages" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="12" end="349" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java">
+        <Message>At Messages.java:[lines 12-349]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.Messages</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.Messages" name="HighPriority" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="117" end="117" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java"/>
+      <Message>In method hudson.plugins.warnings.util.Messages.HighPriority()</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.Messages" start="117" end="117" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java" synthetic="true">
+      <Message>At Messages.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="f5262d98362308a6018f5189ef31059" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name hudson.plugins.warnings.util.Messages.LowPriority() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.Messages" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="12" end="349" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java">
+        <Message>At Messages.java:[lines 12-349]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.Messages</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.Messages" name="LowPriority" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="309" end="309" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java"/>
+      <Message>In method hudson.plugins.warnings.util.Messages.LowPriority()</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.Messages" start="309" end="309" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java" synthetic="true">
+      <Message>At Messages.java:[line 309]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="a2514b306d281837dd14051d9bbd78c9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name hudson.plugins.warnings.util.Messages.NormalPriority() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.Messages" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="12" end="349" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java">
+        <Message>At Messages.java:[lines 12-349]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.Messages</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.Messages" name="NormalPriority" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.Messages" start="245" end="245" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java"/>
+      <Message>In method hudson.plugins.warnings.util.Messages.NormalPriority()</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.Messages" start="245" end="245" startBytecode="0" endBytecode="36" sourcefile="Messages.java" sourcepath="hudson/plugins/warnings/util/Messages.java" synthetic="true">
+      <Message>At Messages.java:[line 245]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5b4beaa7c3bfee98259e64961436614a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.ModuleDetail(AbstractBuild, MavenModule, String) may expose internal representation by storing an externally mutable object into ModuleDetail.module</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.ModuleDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ModuleDetail" start="28" end="56" sourcefile="ModuleDetail.java" sourcepath="hudson/plugins/warnings/util/ModuleDetail.java">
+        <Message>At ModuleDetail.java:[lines 28-56]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.ModuleDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.ModuleDetail" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/model/MavenModule;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ModuleDetail" start="28" end="30" startBytecode="0" endBytecode="116" sourcefile="ModuleDetail.java" sourcepath="hudson/plugins/warnings/util/ModuleDetail.java"/>
+      <Message>In method new hudson.plugins.warnings.util.ModuleDetail(AbstractBuild, MavenModule, String)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.ModuleDetail" name="module" signature="Lhudson/plugins/warnings/util/model/MavenModule;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ModuleDetail" sourcefile="ModuleDetail.java" sourcepath="hudson/plugins/warnings/util/ModuleDetail.java">
+        <Message>In ModuleDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.ModuleDetail.module</Message>
+    </Field>
+    <LocalVariable name="module" register="2" pc="15" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named module</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.ModuleDetail" primary="true" start="29" end="29" startBytecode="15" endBytecode="15" sourcefile="ModuleDetail.java" sourcepath="hudson/plugins/warnings/util/ModuleDetail.java">
+      <Message>At ModuleDetail.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="d6be6f634a02b274ecafcfd1594f22bd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.PackageDetail(AbstractBuild, JavaPackage, String) may expose internal representation by storing an externally mutable object into PackageDetail.javaPackage</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.PackageDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.PackageDetail" start="28" end="44" sourcefile="PackageDetail.java" sourcepath="hudson/plugins/warnings/util/PackageDetail.java">
+        <Message>At PackageDetail.java:[lines 28-44]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.PackageDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.PackageDetail" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/model/JavaPackage;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.PackageDetail" start="28" end="30" startBytecode="0" endBytecode="116" sourcefile="PackageDetail.java" sourcepath="hudson/plugins/warnings/util/PackageDetail.java"/>
+      <Message>In method new hudson.plugins.warnings.util.PackageDetail(AbstractBuild, JavaPackage, String)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.PackageDetail" name="javaPackage" signature="Lhudson/plugins/warnings/util/model/JavaPackage;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.PackageDetail" sourcefile="PackageDetail.java" sourcepath="hudson/plugins/warnings/util/PackageDetail.java">
+        <Message>In PackageDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.PackageDetail.javaPackage</Message>
+    </Field>
+    <LocalVariable name="javaPackage" register="2" pc="15" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named javaPackage</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.PackageDetail" primary="true" start="29" end="29" startBytecode="15" endBytecode="15" sourcefile="PackageDetail.java" sourcepath="hudson/plugins/warnings/util/PackageDetail.java">
+      <Message>At PackageDetail.java:[line 29]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3308375aa3fb0984ac415d6298bd9877" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new hudson.plugins.warnings.util.SourceDetail(AbstractBuild, FileAnnotation) may expose internal representation by storing an externally mutable object into SourceDetail.annotation</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.SourceDetail" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.SourceDetail" start="47" end="241" sourcefile="SourceDetail.java" sourcepath="hudson/plugins/warnings/util/SourceDetail.java">
+        <Message>At SourceDetail.java:[lines 47-241]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.SourceDetail</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.SourceDetail" name="&lt;init&gt;" signature="(Lhudson/model/AbstractBuild;Lhudson/plugins/warnings/util/model/FileAnnotation;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.SourceDetail" start="57" end="63" startBytecode="0" endBytecode="143" sourcefile="SourceDetail.java" sourcepath="hudson/plugins/warnings/util/SourceDetail.java"/>
+      <Message>In method new hudson.plugins.warnings.util.SourceDetail(AbstractBuild, FileAnnotation)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.SourceDetail" name="annotation" signature="Lhudson/plugins/warnings/util/model/FileAnnotation;" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.SourceDetail" sourcefile="SourceDetail.java" sourcepath="hudson/plugins/warnings/util/SourceDetail.java">
+        <Message>In SourceDetail.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.SourceDetail.annotation</Message>
+    </Field>
+    <LocalVariable name="annotation" register="2" pc="17" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named annotation</Message>
+    </LocalVariable>
+    <SourceLine classname="hudson.plugins.warnings.util.SourceDetail" primary="true" start="59" end="59" startBytecode="17" endBytecode="17" sourcefile="SourceDetail.java" sourcepath="hudson/plugins/warnings/util/SourceDetail.java">
+      <Message>At SourceDetail.java:[line 59]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="50ae8182c5b3938fe4a62e6100efd7b9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive hudson.plugins.warnings.util.ThresholdValidator.check()</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.ThresholdValidator" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ThresholdValidator" start="31" end="49" sourcefile="ThresholdValidator.java" sourcepath="hudson/plugins/warnings/util/ThresholdValidator.java">
+        <Message>At ThresholdValidator.java:[lines 31-49]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.ThresholdValidator</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.ThresholdValidator" name="check" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.ThresholdValidator" start="37" end="49" startBytecode="0" endBytecode="159" sourcefile="ThresholdValidator.java" sourcepath="hudson/plugins/warnings/util/ThresholdValidator.java"/>
+      <Message>In method hudson.plugins.warnings.util.ThresholdValidator.check()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.ThresholdValidator" primary="true" start="40" end="40" startBytecode="23" endBytecode="23" sourcefile="ThresholdValidator.java" sourcepath="hudson/plugins/warnings/util/ThresholdValidator.java">
+      <Message>At ThresholdValidator.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" instanceHash="9f0342696c65b5f957c1edc6aa9b3d30" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Boxing/unboxing to parse a primitive</ShortMessage>
+    <LongMessage>Boxing/unboxing to parse a primitive new hudson.plugins.warnings.util.TrendReportSize(String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.TrendReportSize" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.TrendReportSize" start="21" end="40" sourcefile="TrendReportSize.java" sourcepath="hudson/plugins/warnings/util/TrendReportSize.java">
+        <Message>At TrendReportSize.java:[lines 21-40]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.TrendReportSize</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.TrendReportSize" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.TrendReportSize" start="21" end="32" startBytecode="0" endBytecode="145" sourcefile="TrendReportSize.java" sourcepath="hudson/plugins/warnings/util/TrendReportSize.java"/>
+      <Message>In method new hudson.plugins.warnings.util.TrendReportSize(String)</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED" classAnnotationNames="jdk.internal.ValueBased">
+      <SourceLine classname="java.lang.Integer" start="1154" end="1154" startBytecode="0" endBytecode="46" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+      <Message>Called method Integer.intValue()</Message>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL" classAnnotationNames="jdk.internal.ValueBased">
+      <Message>Should call Integer.parseInt(String) instead</Message>
+    </Method>
+    <SourceLine classname="hudson.plugins.warnings.util.TrendReportSize" primary="true" start="25" end="25" startBytecode="21" endBytecode="21" sourcefile="TrendReportSize.java" sourcepath="hudson/plugins/warnings/util/TrendReportSize.java">
+      <Message>At TrendReportSize.java:[line 25]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="4fbedd495ca41b80608e76f6369cf8ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field hudson.plugins.warnings.util.model.AbstractAnnotation.currentKey from instance method new hudson.plugins.warnings.util.model.AbstractAnnotation(Priority, String, int, int, String, String)</LongMessage>
+    <Class classname="hudson.plugins.warnings.util.model.AbstractAnnotation" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.model.AbstractAnnotation" start="19" end="301" sourcefile="AbstractAnnotation.java" sourcepath="hudson/plugins/warnings/util/model/AbstractAnnotation.java">
+        <Message>At AbstractAnnotation.java:[lines 19-301]</Message>
+      </SourceLine>
+      <Message>In class hudson.plugins.warnings.util.model.AbstractAnnotation</Message>
+    </Class>
+    <Method classname="hudson.plugins.warnings.util.model.AbstractAnnotation" name="&lt;init&gt;" signature="(Lhudson/plugins/warnings/util/model/Priority;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.model.AbstractAnnotation" start="64" end="75" startBytecode="0" endBytecode="222" sourcefile="AbstractAnnotation.java" sourcepath="hudson/plugins/warnings/util/model/AbstractAnnotation.java"/>
+      <Message>In method new hudson.plugins.warnings.util.model.AbstractAnnotation(Priority, String, int, int, String, String)</Message>
+    </Method>
+    <Field classname="hudson.plugins.warnings.util.model.AbstractAnnotation" name="currentKey" signature="J" isStatic="true" primary="true">
+      <SourceLine classname="hudson.plugins.warnings.util.model.AbstractAnnotation" sourcefile="AbstractAnnotation.java" sourcepath="hudson/plugins/warnings/util/model/AbstractAnnotation.java">
+        <Message>In AbstractAnnotation.java</Message>
+      </SourceLine>
+      <Message>Field hudson.plugins.warnings.util.model.AbstractAnnotation.currentKey</Message>
+    </Field>
+    <SourceLine classname="hudson.plugins.warnings.util.model.AbstractAnnotation" primary="true" start="70" end="70" startBytecode="42" endBytecode="42" sourcefile="AbstractAnnotation.java" sourcepath="hudson/plugins/warnings/util/model/AbstractAnnotation.java">
+      <Message>At AbstractAnnotation.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="EXPERIMENTAL">
+    <Description>Experimental</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_BOXED_PRIMITIVE_FOR_PARSING" abbrev="Bx" category="PERFORMANCE">
+    <ShortDescription>Boxing/unboxing to parse a primitive</ShortDescription>
+    <Details><![CDATA[
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_METHOD_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Method names should start with a lower case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UPM_UNCALLED_PRIVATE_METHOD" abbrev="UPM" category="PERFORMANCE">
+    <ShortDescription>Private method is never called</ShortDescription>
+    <Details><![CDATA[
+
+<p> This private method is never called. Although it is
+possible that the method will be invoked through reflection,
+it is more likely that the method is never used, and should be
+removed.
+</p>
+
+]]></Details>
+  </BugPattern>
+  <BugPattern type="OBL_UNSATISFIED_OBLIGATION" abbrev="OBL" category="EXPERIMENTAL">
+    <ShortDescription>Method may fail to clean up stream or resource</ShortDescription>
+    <Details><![CDATA[
+          
+          <p>
+          This method may fail to clean up (close, dispose of) a stream,
+          database object, or other
+          resource requiring an explicit cleanup operation.
+          </p>
+
+          <p>
+          In general, if a method opens a stream or other resource,
+          the method should use a try/finally block to ensure that
+          the stream or resource is cleaned up before the method
+          returns.
+          </p>
+
+          <p>
+          This bug pattern is essentially the same as the
+          OS_OPEN_STREAM and ODR_OPEN_DATABASE_RESOURCE
+          bug patterns, but is based on a different
+          (and hopefully better) static analysis technique.
+          We are interested is getting feedback about the
+          usefulness of this bug pattern.
+          For sending feedback, check:
+          </p>
+          <ul>
+            <li><a href="https://github.com/spotbugs/spotbugs/blob/master/.github/CONTRIBUTING.md">contributing guideline</a></li>
+            <li><a href="https://github.com/spotbugs/discuss/issues?q=">mailinglist</a></li>
+          </ul>
+
+          <p>
+          In particular,
+          the false-positive suppression heuristics for this
+          bug pattern have not been extensively tuned, so
+          reports about false positives are helpful to us.
+          </p>
+
+          <p>
+          See Weimer and Necula, <i>Finding and Preventing Run-Time Error Handling Mistakes</i>
+          (<a href="https://people.eecs.berkeley.edu/~necula/Papers/rte_oopsla04.pdf">PDF</a>),
+          for a description of the analysis technique.
+          </p>
+          
+      ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <BugCode abbrev="UPM">
+    <Description>Private method is never called</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="Bx">
+    <Description>Questionable Boxing of primitive value</Description>
+  </BugCode>
+  <BugCode abbrev="OBL">
+    <Description>Unsatisfied obligation to clean up stream or resource</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="90">
+    <MissingClass>com.thoughtworks.xstream.XStream</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.converters.Converter</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.converters.SingleValueConverter</MissingClass>
+    <MissingClass>com.thoughtworks.xstream.converters.basic.AbstractSingleValueConverter</MissingClass>
+    <MissingClass>de.java2html.converter.JavaSource2HTMLConverter</MissingClass>
+    <MissingClass>de.java2html.javasource.JavaSource</MissingClass>
+    <MissingClass>de.java2html.javasource.JavaSourceParser</MissingClass>
+    <MissingClass>de.java2html.options.JavaSourceConversionOptions</MissingClass>
+    <MissingClass>hudson.FilePath</MissingClass>
+    <MissingClass>hudson.FilePath$FileCallable</MissingClass>
+    <MissingClass>hudson.Launcher</MissingClass>
+    <MissingClass>hudson.Plugin</MissingClass>
+    <MissingClass>hudson.Util</MissingClass>
+    <MissingClass>hudson.XmlFile</MissingClass>
+    <MissingClass>hudson.maven.AbstractMavenProject</MissingClass>
+    <MissingClass>hudson.maven.MavenBuild</MissingClass>
+    <MissingClass>hudson.maven.MavenBuildProxy</MissingClass>
+    <MissingClass>hudson.maven.MavenBuildProxy$BuildCallable</MissingClass>
+    <MissingClass>hudson.maven.MavenReporter</MissingClass>
+    <MissingClass>hudson.maven.MavenReporterDescriptor</MissingClass>
+    <MissingClass>hudson.maven.MojoInfo</MissingClass>
+    <MissingClass>hudson.model.AbstractBuild</MissingClass>
+    <MissingClass>hudson.model.AbstractProject</MissingClass>
+    <MissingClass>hudson.model.Action</MissingClass>
+    <MissingClass>hudson.model.BuildListener</MissingClass>
+    <MissingClass>hudson.model.Descriptor</MissingClass>
+    <MissingClass>hudson.model.Descriptor$FormException</MissingClass>
+    <MissingClass>hudson.model.HealthReport</MissingClass>
+    <MissingClass>hudson.model.HealthReportingAction</MissingClass>
+    <MissingClass>hudson.model.ModelObject</MissingClass>
+    <MissingClass>hudson.model.Project</MissingClass>
+    <MissingClass>hudson.model.Result</MissingClass>
+    <MissingClass>hudson.model.Run</MissingClass>
+    <MissingClass>hudson.remoting.VirtualChannel</MissingClass>
+    <MissingClass>hudson.tasks.Ant</MissingClass>
+    <MissingClass>hudson.tasks.BuildStep</MissingClass>
+    <MissingClass>hudson.tasks.BuildStep$PublisherList</MissingClass>
+    <MissingClass>hudson.tasks.BuildStepDescriptor</MissingClass>
+    <MissingClass>hudson.tasks.Builder</MissingClass>
+    <MissingClass>hudson.tasks.Maven</MissingClass>
+    <MissingClass>hudson.tasks.Publisher</MissingClass>
+    <MissingClass>hudson.util.ChartUtil</MissingClass>
+    <MissingClass>hudson.util.ChartUtil$NumberOnlyBuildLabel</MissingClass>
+    <MissingClass>hudson.util.ColorPalette</MissingClass>
+    <MissingClass>hudson.util.DataSetBuilder</MissingClass>
+    <MissingClass>hudson.util.DescribableList</MissingClass>
+    <MissingClass>hudson.util.FormFieldValidator</MissingClass>
+    <MissingClass>hudson.util.FormFieldValidator$WorkspaceFileMask</MissingClass>
+    <MissingClass>hudson.util.ShiftedCategoryAxis</MissingClass>
+    <MissingClass>hudson.util.StackedAreaRenderer2</MissingClass>
+    <MissingClass>hudson.util.StringConverter2</MissingClass>
+    <MissingClass>hudson.util.XStream2</MissingClass>
+    <MissingClass>javax.servlet.ServletException</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>net.sf.json.JSONObject</MissingClass>
+    <MissingClass>org.apache.commons.digester.Digester</MissingClass>
+    <MissingClass>org.apache.commons.io.IOUtils</MissingClass>
+    <MissingClass>org.apache.commons.io.LineIterator</MissingClass>
+    <MissingClass>org.apache.commons.lang.ObjectUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringEscapeUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.StringUtils</MissingClass>
+    <MissingClass>org.apache.commons.lang.exception.ExceptionUtils</MissingClass>
+    <MissingClass>org.apache.maven.project.MavenProject</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildException</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.FileSet</MissingClass>
+    <MissingClass>org.jfree.chart.ChartFactory</MissingClass>
+    <MissingClass>org.jfree.chart.JFreeChart</MissingClass>
+    <MissingClass>org.jfree.chart.annotations.CategoryAnnotation</MissingClass>
+    <MissingClass>org.jfree.chart.annotations.CategoryLineAnnotation</MissingClass>
+    <MissingClass>org.jfree.chart.annotations.CategoryTextAnnotation</MissingClass>
+    <MissingClass>org.jfree.chart.axis.CategoryAxis</MissingClass>
+    <MissingClass>org.jfree.chart.axis.CategoryLabelPositions</MissingClass>
+    <MissingClass>org.jfree.chart.axis.NumberAxis</MissingClass>
+    <MissingClass>org.jfree.chart.axis.TickUnitSource</MissingClass>
+    <MissingClass>org.jfree.chart.plot.CategoryPlot</MissingClass>
+    <MissingClass>org.jfree.chart.plot.PlotOrientation</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.CategoryItemRenderer</MissingClass>
+    <MissingClass>org.jfree.chart.renderer.category.StackedAreaRenderer</MissingClass>
+    <MissingClass>org.jfree.data.Range</MissingClass>
+    <MissingClass>org.jfree.data.category.CategoryDataset</MissingClass>
+    <MissingClass>org.jfree.data.general.DatasetUtilities</MissingClass>
+    <MissingClass>org.jfree.ui.RectangleInsets</MissingClass>
+    <MissingClass>org.jvnet.localizer.Localizable</MissingClass>
+    <MissingClass>org.jvnet.localizer.ResourceBundleHolder</MissingClass>
+    <MissingClass>org.kohsuke.stapler.Ancestor</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerProxy</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerRequest</MissingClass>
+    <MissingClass>org.kohsuke.stapler.StaplerResponse</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:33:55 +0900" total_classes="88" referenced_classes="174" total_bugs="27" total_size="2783" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.89" clock_seconds="2.63" peak_mbytes="249.75" alloc_mbytes="4078.00" gc_seconds="0.05" priority_3="1" priority_2="18" priority_1="8">
+    <FileStats path="hudson/plugins/warnings/Messages.java" bugCount="0" size="62"/>
+    <FileStats path="hudson/plugins/warnings/ResultSummary.java" bugCount="0" size="33"/>
+    <FileStats path="hudson/plugins/warnings/WarningsDescriptor.java" bugCount="0" size="18"/>
+    <FileStats path="hudson/plugins/warnings/WarningsPlugin.java" bugCount="0" size="6"/>
+    <FileStats path="hudson/plugins/warnings/WarningsProjectAction.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/WarningsPublisher.java" bugCount="0" size="34"/>
+    <FileStats path="hudson/plugins/warnings/WarningsResult.java" bugCount="0" size="29"/>
+    <FileStats path="hudson/plugins/warnings/WarningsResultAction.java" bugCount="0" size="23"/>
+    <FileStats path="hudson/plugins/warnings/WarningsResultBuilder.java" bugCount="0" size="13"/>
+    <FileStats path="hudson/plugins/warnings/parser/AntEclipseParser.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/parser/AntJavacParser.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/parser/FileWarningsParser.java" bugCount="0" size="13"/>
+    <FileStats path="hudson/plugins/warnings/parser/GccParser.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/parser/HpiCompileParser.java" bugCount="0" size="8"/>
+    <FileStats path="hudson/plugins/warnings/parser/InvalidsParser.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/parser/JavaDocParser.java" bugCount="0" size="8"/>
+    <FileStats path="hudson/plugins/warnings/parser/JavacParser.java" bugCount="0" size="8"/>
+    <FileStats path="hudson/plugins/warnings/parser/MavenParser.java" bugCount="0" size="9"/>
+    <FileStats path="hudson/plugins/warnings/parser/MsBuildParser.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/parser/ParserRegistry.java" bugCount="0" size="42"/>
+    <FileStats path="hudson/plugins/warnings/parser/RegexpParser.java" bugCount="0" size="37"/>
+    <FileStats path="hudson/plugins/warnings/parser/SunCParser.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/parser/Warning.java" bugCount="0" size="13"/>
+    <FileStats path="hudson/plugins/warnings/parser/WarningsParser.java" bugCount="0" size="2"/>
+    <FileStats path="hudson/plugins/warnings/util/AbortException.java" bugCount="0" size="8"/>
+    <FileStats path="hudson/plugins/warnings/util/AbstractAnnotationsDetail.java" bugCount="0" size="23"/>
+    <FileStats path="hudson/plugins/warnings/util/AbstractAreaRenderer.java" bugCount="0" size="15"/>
+    <FileStats path="hudson/plugins/warnings/util/AbstractPackageDetector.java" bugCount="1" size="10" bugHash="b7a51df2abca6e897b60d0874456ee1c"/>
+    <FileStats path="hudson/plugins/warnings/util/AbstractProjectAction.java" bugCount="0" size="86"/>
+    <FileStats path="hudson/plugins/warnings/util/AbstractResultAction.java" bugCount="2" size="93" bugHash="c9ab7e0637349d1353bfb309109582d7"/>
+    <FileStats path="hudson/plugins/warnings/util/AnnotationDifferencer.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/util/AnnotationParser.java" bugCount="0" size="3"/>
+    <FileStats path="hudson/plugins/warnings/util/AnnotationsBuildResult.java" bugCount="1" size="148" bugHash="d3a59d64cddb0b60d5c10a5d02e96594"/>
+    <FileStats path="hudson/plugins/warnings/util/AttributeDetail.java" bugCount="0" size="9"/>
+    <FileStats path="hudson/plugins/warnings/util/BuildResult.java" bugCount="0" size="42"/>
+    <FileStats path="hudson/plugins/warnings/util/ChartBuilder.java" bugCount="0" size="70"/>
+    <FileStats path="hudson/plugins/warnings/util/ChartRenderer.java" bugCount="1" size="36" bugHash="414e77055123035994b8ef315de67072"/>
+    <FileStats path="hudson/plugins/warnings/util/CsharpNamespaceDetector.java" bugCount="0" size="18"/>
+    <FileStats path="hudson/plugins/warnings/util/DetailBuilder.java" bugCount="1" size="36" bugHash="b421523e3bfcea6e9f92428a326c2b1a"/>
+    <FileStats path="hudson/plugins/warnings/util/ErrorDetail.java" bugCount="2" size="14" bugHash="0b62df05562fa987ef4077aed50767f4"/>
+    <FileStats path="hudson/plugins/warnings/util/FileDetail.java" bugCount="3" size="19" bugHash="d0e67069cebd5a0e7df0844613bb8f7d"/>
+    <FileStats path="hudson/plugins/warnings/util/FileFinder.java" bugCount="0" size="24"/>
+    <FileStats path="hudson/plugins/warnings/util/FileInputStreamFactory.java" bugCount="0" size="2"/>
+    <FileStats path="hudson/plugins/warnings/util/FilesParser.java" bugCount="1" size="59" bugHash="350951cf46045d63bfbfdd3f2e9d1657"/>
+    <FileStats path="hudson/plugins/warnings/util/FixedWarningsDetail.java" bugCount="0" size="7"/>
+    <FileStats path="hudson/plugins/warnings/util/HealthAwareMavenReporter.java" bugCount="2" size="134" bugHash="f18b6331f12aa2d37fdc0b57445698e8"/>
+    <FileStats path="hudson/plugins/warnings/util/HealthAwarePublisher.java" bugCount="3" size="132" bugHash="3fe6785e849086a05c33bbe3e684e959"/>
+    <FileStats path="hudson/plugins/warnings/util/HealthReportBuilder.java" bugCount="0" size="117"/>
+    <FileStats path="hudson/plugins/warnings/util/JavaPackageDetector.java" bugCount="0" size="20"/>
+    <FileStats path="hudson/plugins/warnings/util/Messages.java" bugCount="4" size="90" bugHash="be6c4e6f6119cb4ff46258be8b35e405"/>
+    <FileStats path="hudson/plugins/warnings/util/ModuleDetail.java" bugCount="1" size="13" bugHash="c17cb0f99966608658be15f89ec75af3"/>
+    <FileStats path="hudson/plugins/warnings/util/ModuleDetector.java" bugCount="0" size="98"/>
+    <FileStats path="hudson/plugins/warnings/util/NewWarningsDetail.java" bugCount="0" size="7"/>
+    <FileStats path="hudson/plugins/warnings/util/PackageDetail.java" bugCount="1" size="11" bugHash="44d69d8ff3118123845f40311b2fc93b"/>
+    <FileStats path="hudson/plugins/warnings/util/PackageDetector.java" bugCount="0" size="4"/>
+    <FileStats path="hudson/plugins/warnings/util/ParserResult.java" bugCount="0" size="87"/>
+    <FileStats path="hudson/plugins/warnings/util/PluginDescriptor.java" bugCount="0" size="20"/>
+    <FileStats path="hudson/plugins/warnings/util/PrioritiesAreaRenderer.java" bugCount="0" size="15"/>
+    <FileStats path="hudson/plugins/warnings/util/PrioritiesDetail.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/util/PriorityDetailFactory.java" bugCount="0" size="18"/>
+    <FileStats path="hudson/plugins/warnings/util/ReporterDescriptor.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/util/ResultAction.java" bugCount="0" size="8"/>
+    <FileStats path="hudson/plugins/warnings/util/ResultAreaRenderer.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/util/SourceDetail.java" bugCount="1" size="100" bugHash="9ed923edd4b50c14b3922b05442a2d72"/>
+    <FileStats path="hudson/plugins/warnings/util/TabDetail.java" bugCount="0" size="11"/>
+    <FileStats path="hudson/plugins/warnings/util/ThresholdValidator.java" bugCount="1" size="15" bugHash="23767c1251f5a2d57ad9b0a4ee61755c"/>
+    <FileStats path="hudson/plugins/warnings/util/ToolTipBuilder.java" bugCount="0" size="10"/>
+    <FileStats path="hudson/plugins/warnings/util/ToolTipProvider.java" bugCount="0" size="3"/>
+    <FileStats path="hudson/plugins/warnings/util/TrendReportSize.java" bugCount="1" size="14" bugHash="204b34f21380f52ecd54de86b2ee4f3e"/>
+    <FileStats path="hudson/plugins/warnings/util/model/AbstractAnnotation.java" bugCount="1" size="135" bugHash="c0214d70ecd164995c812b018fdab4c1"/>
+    <FileStats path="hudson/plugins/warnings/util/model/AnnotationContainer.java" bugCount="0" size="282"/>
+    <FileStats path="hudson/plugins/warnings/util/model/AnnotationProvider.java" bugCount="0" size="15"/>
+    <FileStats path="hudson/plugins/warnings/util/model/AnnotationStream.java" bugCount="0" size="9"/>
+    <FileStats path="hudson/plugins/warnings/util/model/DefaultAnnotationContainer.java" bugCount="0" size="18"/>
+    <FileStats path="hudson/plugins/warnings/util/model/FileAnnotation.java" bugCount="0" size="16"/>
+    <FileStats path="hudson/plugins/warnings/util/model/JavaPackage.java" bugCount="0" size="12"/>
+    <FileStats path="hudson/plugins/warnings/util/model/JavaProject.java" bugCount="0" size="38"/>
+    <FileStats path="hudson/plugins/warnings/util/model/LineRange.java" bugCount="0" size="41"/>
+    <FileStats path="hudson/plugins/warnings/util/model/MavenModule.java" bugCount="0" size="24"/>
+    <FileStats path="hudson/plugins/warnings/util/model/Priority.java" bugCount="0" size="35"/>
+    <FileStats path="hudson/plugins/warnings/util/model/WorkspaceFile.java" bugCount="0" size="24"/>
+    <PackageStats package="hudson.plugins.warnings" total_bugs="0" total_types="9" total_size="229">
+      <ClassStats class="hudson.plugins.warnings.Messages" sourceFile="Messages.java" interface="false" size="62" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.ResultSummary" sourceFile="ResultSummary.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsDescriptor" sourceFile="WarningsDescriptor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsPlugin" sourceFile="WarningsPlugin.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsProjectAction" sourceFile="WarningsProjectAction.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsPublisher" sourceFile="WarningsPublisher.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsResult" sourceFile="WarningsResult.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsResultAction" sourceFile="WarningsResultAction.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.WarningsResultBuilder" sourceFile="WarningsResultBuilder.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.warnings.parser" total_bugs="0" total_types="16" total_size="209">
+      <ClassStats class="hudson.plugins.warnings.parser.AntEclipseParser" sourceFile="AntEclipseParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.AntJavacParser" sourceFile="AntJavacParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.FileWarningsParser" sourceFile="FileWarningsParser.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.GccParser" sourceFile="GccParser.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.HpiCompileParser" sourceFile="HpiCompileParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.InvalidsParser" sourceFile="InvalidsParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.JavaDocParser" sourceFile="JavaDocParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.JavacParser" sourceFile="JavacParser.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.MavenParser" sourceFile="MavenParser.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.MsBuildParser" sourceFile="MsBuildParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.ParserRegistry" sourceFile="ParserRegistry.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.ParserRegistry$ExcludeFilter" sourceFile="ParserRegistry.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.RegexpParser" sourceFile="RegexpParser.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.SunCParser" sourceFile="SunCParser.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.Warning" sourceFile="Warning.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.parser.WarningsParser" sourceFile="WarningsParser.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.warnings.util" total_bugs="26" total_types="49" total_size="1696" priority_3="1" priority_2="17" priority_1="8">
+      <ClassStats class="hudson.plugins.warnings.util.AbortException" sourceFile="AbortException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AbstractAnnotationsDetail" sourceFile="AbstractAnnotationsDetail.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AbstractAreaRenderer" sourceFile="AbstractAreaRenderer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AbstractPackageDetector" sourceFile="AbstractPackageDetector.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.AbstractProjectAction" sourceFile="AbstractProjectAction.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AbstractResultAction" sourceFile="AbstractResultAction.java" interface="false" size="93" bugs="2" priority_2="2"/>
+      <ClassStats class="hudson.plugins.warnings.util.AnnotationDifferencer" sourceFile="AnnotationDifferencer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AnnotationParser" sourceFile="AnnotationParser.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.AnnotationsBuildResult" sourceFile="AnnotationsBuildResult.java" interface="false" size="148" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.AttributeDetail" sourceFile="AttributeDetail.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.BuildResult" sourceFile="BuildResult.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ChartBuilder" sourceFile="ChartBuilder.java" interface="false" size="70" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ChartRenderer" sourceFile="ChartRenderer.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.CsharpNamespaceDetector" sourceFile="CsharpNamespaceDetector.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.DetailBuilder" sourceFile="DetailBuilder.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.ErrorDetail" sourceFile="ErrorDetail.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="hudson.plugins.warnings.util.FileDetail" sourceFile="FileDetail.java" interface="false" size="19" bugs="3" priority_2="3"/>
+      <ClassStats class="hudson.plugins.warnings.util.FileFinder" sourceFile="FileFinder.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.FileInputStreamFactory" sourceFile="FileInputStreamFactory.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.FilesParser" sourceFile="FilesParser.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.FixedWarningsDetail" sourceFile="FixedWarningsDetail.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.HealthAwareMavenReporter" sourceFile="HealthAwareMavenReporter.java" interface="false" size="118" bugs="2" priority_1="2"/>
+      <ClassStats class="hudson.plugins.warnings.util.HealthAwareMavenReporter$1" sourceFile="HealthAwareMavenReporter.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.HealthAwareMavenReporter$2" sourceFile="HealthAwareMavenReporter.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.HealthAwarePublisher" sourceFile="HealthAwarePublisher.java" interface="false" size="132" bugs="3" priority_3="1" priority_1="2"/>
+      <ClassStats class="hudson.plugins.warnings.util.HealthReportBuilder" sourceFile="HealthReportBuilder.java" interface="false" size="117" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.JavaPackageDetector" sourceFile="JavaPackageDetector.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.Messages" sourceFile="Messages.java" interface="false" size="90" bugs="4" priority_2="4"/>
+      <ClassStats class="hudson.plugins.warnings.util.ModuleDetail" sourceFile="ModuleDetail.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.ModuleDetector" sourceFile="ModuleDetector.java" interface="false" size="91" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ModuleDetector$1" sourceFile="ModuleDetector.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ModuleDetector$DefaultFileInputStreamFactory" sourceFile="ModuleDetector.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.NewWarningsDetail" sourceFile="NewWarningsDetail.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.PackageDetail" sourceFile="PackageDetail.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.PackageDetector" sourceFile="PackageDetector.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ParserResult" sourceFile="ParserResult.java" interface="false" size="87" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.PluginDescriptor" sourceFile="PluginDescriptor.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.PrioritiesAreaRenderer" sourceFile="PrioritiesAreaRenderer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.PrioritiesDetail" sourceFile="PrioritiesDetail.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.PriorityDetailFactory" sourceFile="PriorityDetailFactory.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ReporterDescriptor" sourceFile="ReporterDescriptor.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ResultAction" sourceFile="ResultAction.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ResultAreaRenderer" sourceFile="ResultAreaRenderer.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.SourceDetail" sourceFile="SourceDetail.java" interface="false" size="100" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.TabDetail" sourceFile="TabDetail.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ThresholdValidator" sourceFile="ThresholdValidator.java" interface="false" size="15" bugs="1" priority_1="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.ToolTipBuilder" sourceFile="ToolTipBuilder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.ToolTipProvider" sourceFile="ToolTipProvider.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.TrendReportSize" sourceFile="TrendReportSize.java" interface="false" size="14" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="hudson.plugins.warnings.util.model" total_bugs="1" total_types="14" total_size="649" priority_2="1">
+      <ClassStats class="hudson.plugins.warnings.util.model.AbstractAnnotation" sourceFile="AbstractAnnotation.java" interface="false" size="135" bugs="1" priority_2="1"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.AnnotationContainer" sourceFile="AnnotationContainer.java" interface="false" size="267" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.AnnotationContainer$Hierarchy" sourceFile="AnnotationContainer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.AnnotationProvider" sourceFile="AnnotationProvider.java" interface="true" size="15" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.AnnotationStream" sourceFile="AnnotationStream.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.DefaultAnnotationContainer" sourceFile="DefaultAnnotationContainer.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.FileAnnotation" sourceFile="FileAnnotation.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.JavaPackage" sourceFile="JavaPackage.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.JavaProject" sourceFile="JavaProject.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.LineRange" sourceFile="LineRange.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.MavenModule" sourceFile="MavenModule.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.Priority" sourceFile="Priority.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.Priority$PriorityConverter" sourceFile="Priority.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="hudson.plugins.warnings.util.model.WorkspaceFile" sourceFile="WorkspaceFile.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="253" invocations="1012" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="11170" standardDeviationMicrosecondsPerInvocation="667"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="106" invocations="174" avgMicrosecondsPerInvocation="612" maxMicrosecondsPerInvocation="5387" standardDeviationMicrosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="98" invocations="586" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="4637" standardDeviationMicrosecondsPerInvocation="286"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="91" invocations="575" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="7291" standardDeviationMicrosecondsPerInvocation="356"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="91" invocations="599" avgMicrosecondsPerInvocation="152" maxMicrosecondsPerInvocation="8259" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="85" invocations="174" avgMicrosecondsPerInvocation="489" maxMicrosecondsPerInvocation="4226" standardDeviationMicrosecondsPerInvocation="819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="83" invocations="967" avgMicrosecondsPerInvocation="86" maxMicrosecondsPerInvocation="3527" standardDeviationMicrosecondsPerInvocation="179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="82" invocations="605" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="8830" standardDeviationMicrosecondsPerInvocation="411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="76" invocations="584" avgMicrosecondsPerInvocation="131" maxMicrosecondsPerInvocation="4918" standardDeviationMicrosecondsPerInvocation="255"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="71" invocations="586" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="7068" standardDeviationMicrosecondsPerInvocation="316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="54" invocations="481" avgMicrosecondsPerInvocation="113" maxMicrosecondsPerInvocation="2279" standardDeviationMicrosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="40" invocations="646" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="14040" standardDeviationMicrosecondsPerInvocation="562"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="36" invocations="1018" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="3015" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="36" invocations="174" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="1797" standardDeviationMicrosecondsPerInvocation="349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="288" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="10289" standardDeviationMicrosecondsPerInvocation="621"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="30" invocations="88" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="4645" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="30" invocations="88" avgMicrosecondsPerInvocation="349" maxMicrosecondsPerInvocation="13232" standardDeviationMicrosecondsPerInvocation="1403"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="28" invocations="174" avgMicrosecondsPerInvocation="163" maxMicrosecondsPerInvocation="15852" standardDeviationMicrosecondsPerInvocation="1249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="26" invocations="174" avgMicrosecondsPerInvocation="154" maxMicrosecondsPerInvocation="1108" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="24" invocations="174" avgMicrosecondsPerInvocation="142" maxMicrosecondsPerInvocation="2912" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="24" invocations="586" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="1165" standardDeviationMicrosecondsPerInvocation="85"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="24" invocations="88" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="3276" standardDeviationMicrosecondsPerInvocation="718"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="24" invocations="88" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="10608" standardDeviationMicrosecondsPerInvocation="1142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="88" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="7229" standardDeviationMicrosecondsPerInvocation="811"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="174" avgMicrosecondsPerInvocation="129" maxMicrosecondsPerInvocation="1324" standardDeviationMicrosecondsPerInvocation="190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="874" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="432" standardDeviationMicrosecondsPerInvocation="49"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="21" invocations="7176" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="894" standardDeviationMicrosecondsPerInvocation="13"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="21" invocations="174" avgMicrosecondsPerInvocation="122" maxMicrosecondsPerInvocation="1326" standardDeviationMicrosecondsPerInvocation="248"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="20" invocations="174" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="3884" standardDeviationMicrosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="19" invocations="88" avgMicrosecondsPerInvocation="219" maxMicrosecondsPerInvocation="1446" standardDeviationMicrosecondsPerInvocation="269"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="18" invocations="88" avgMicrosecondsPerInvocation="209" maxMicrosecondsPerInvocation="4831" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="15" invocations="174" avgMicrosecondsPerInvocation="88" maxMicrosecondsPerInvocation="824" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="15" invocations="88" avgMicrosecondsPerInvocation="172" maxMicrosecondsPerInvocation="1885" standardDeviationMicrosecondsPerInvocation="285"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="14" invocations="88" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="3615" standardDeviationMicrosecondsPerInvocation="431"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="14" invocations="574" avgMicrosecondsPerInvocation="24" maxMicrosecondsPerInvocation="555" standardDeviationMicrosecondsPerInvocation="43"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="13" invocations="88" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="1312" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison" totalMilliseconds="12" invocations="88" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="1474" standardDeviationMicrosecondsPerInvocation="230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="12" invocations="88" avgMicrosecondsPerInvocation="141" maxMicrosecondsPerInvocation="4909" standardDeviationMicrosecondsPerInvocation="555"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="12" invocations="88" avgMicrosecondsPerInvocation="139" maxMicrosecondsPerInvocation="1159" standardDeviationMicrosecondsPerInvocation="211"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="12" invocations="575" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="624" standardDeviationMicrosecondsPerInvocation="36"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="11" invocations="174" avgMicrosecondsPerInvocation="68" maxMicrosecondsPerInvocation="1011" standardDeviationMicrosecondsPerInvocation="126"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

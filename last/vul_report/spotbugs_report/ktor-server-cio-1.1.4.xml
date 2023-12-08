@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013579711" analysisTimestamp="1702017716558" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\ktor-server-cio-1.1.4.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="9ebd4c0054f892398e55585b1f256514" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>io.ktor.server.cio.CIOApplicationCall.getResponse() may expose internal representation by returning CIOApplicationCall.response</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationCall" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationCall" start="10" end="28" sourcefile="CIOApplicationCall.kt" sourcepath="io/ktor/server/cio/CIOApplicationCall.kt">
+        <Message>At CIOApplicationCall.kt:[lines 10-28]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationCall</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationCall" name="getResponse" signature="()Lio/ktor/server/cio/CIOApplicationResponse;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationCall" start="21" end="21" startBytecode="0" endBytecode="46" sourcefile="CIOApplicationCall.kt" sourcepath="io/ktor/server/cio/CIOApplicationCall.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationCall.getResponse()</Message>
+    </Method>
+    <Field classname="io.ktor.server.cio.CIOApplicationCall" name="response" signature="Lio/ktor/server/cio/CIOApplicationResponse;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationCall" sourcefile="CIOApplicationCall.kt" sourcepath="io/ktor/server/cio/CIOApplicationCall.kt">
+        <Message>In CIOApplicationCall.kt</Message>
+      </SourceLine>
+      <Message>Field io.ktor.server.cio.CIOApplicationCall.response</Message>
+    </Field>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationCall" primary="true" start="21" end="21" startBytecode="4" endBytecode="4" sourcefile="CIOApplicationCall.kt" sourcepath="io/ktor/server/cio/CIOApplicationCall.kt">
+      <Message>At CIOApplicationCall.kt:[line 21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="f0e5c64e7463b68220d92e64560a0e2c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to connectors in io.ktor.server.cio.CIOApplicationEngine$serverJob$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" start="43" end="157" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 43-157]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$serverJob$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" start="43" end="72" startBytecode="0" endBytecode="214" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationEngine$serverJob$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="connectors" register="3" pc="479" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named connectors</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" primary="true" start="43" end="43" startBytecode="478" endBytecode="478" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 43]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="connectors"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="43478553d3cc649774c885332c5e0eb7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L3 in io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" start="45" end="47" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 45-47]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" start="45" end="47" startBytecode="0" endBytecode="20" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="3" pc="3" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 3</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" primary="true" start="45" end="45" startBytecode="3" endBytecode="3" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 45]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="3" rank="15" abbrev="UwF" category="CORRECTNESS" instanceHash="3df3b05006caa3b62ce4bd611f36f3c4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unwritten field</ShortMessage>
+    <LongMessage>Unwritten field: io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1.label</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" start="45" end="47" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 45-47]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1</Message>
+    </Class>
+    <Field classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" name="label" signature="I" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>In CIOApplicationEngine.kt</Message>
+      </SourceLine>
+      <Message>Field io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1.label</Message>
+    </Field>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" primary="true" start="45" end="45" startBytecode="5" endBytecode="5" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 45]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="8cf37c0357eb5abf71b6ef417401b235" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L3 in io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" start="69" end="71" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 69-71]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" start="69" end="71" startBytecode="0" endBytecode="25" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="?" register="3" pc="3" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 3</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" primary="true" start="69" end="69" startBytecode="3" endBytecode="3" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 69]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="3" rank="15" abbrev="UwF" category="CORRECTNESS" instanceHash="438a40490c263cbe8fa4dd28e854e9d6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unwritten field</ShortMessage>
+    <LongMessage>Unwritten field: io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5.label</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" start="69" end="71" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 69-71]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5</Message>
+    </Class>
+    <Field classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" name="label" signature="I" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>In CIOApplicationEngine.kt</Message>
+      </SourceLine>
+      <Message>Field io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5.label</Message>
+    </Field>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" primary="true" start="69" end="69" startBytecode="5" endBytecode="5" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 69]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="205ba22456d15636381b122a9a3d30d9" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to result in io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" start="107" end="127" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 107-127]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" start="107" end="127" startBytecode="0" endBytecode="103" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="result" register="3" pc="181" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named result</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" primary="true" start="107" end="107" startBytecode="180" endBytecode="180" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 107]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="result"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" instanceHash="931831f57794cef25d1d1807c64f414b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Load of known null value</ShortMessage>
+    <LongMessage>Load of known null value in io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" start="107" end="127" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+        <Message>At CIOApplicationEngine.kt:[lines 107-127]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" start="107" end="127" startBytecode="0" endBytecode="103" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1.invokeSuspend(Object)</Message>
+    </Method>
+    <LocalVariable name="result" register="3" pc="151" role="LOCAL_VARIABLE_VALUE_OF">
+      <Message>Value loaded from result</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" primary="true" start="118" end="118" startBytecode="152" endBytecode="152" sourcefile="CIOApplicationEngine.kt" sourcepath="io/ktor/server/cio/CIOApplicationEngine.kt">
+      <Message>At CIOApplicationEngine.kt:[line 118]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="46d148815ea654fdcc6b42d5e1abcaad" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in io.ktor.server.cio.CIOApplicationRequest.getCookies()</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationRequest" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" start="10" end="52" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+        <Message>At CIOApplicationRequest.kt:[lines 10-52]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationRequest</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationRequest" name="getCookies" signature="()Lio/ktor/request/RequestCookies;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" startBytecode="0" endBytecode="14" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationRequest.getCookies()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="6" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" startBytecode="6" endBytecode="6" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+      <Message>In CIOApplicationRequest.kt</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="faea585a407ae7a9fce97988077041b2" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to $L2 in io.ktor.server.cio.CIOApplicationRequest.getQueryParameters()</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationRequest" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" start="10" end="52" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+        <Message>At CIOApplicationRequest.kt:[lines 10-52]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationRequest</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationRequest" name="getQueryParameters" signature="()Lio/ktor/http/Parameters;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" startBytecode="0" endBytecode="14" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationRequest.getQueryParameters()</Message>
+    </Method>
+    <LocalVariable name="?" register="2" pc="6" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register 2</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest" startBytecode="6" endBytecode="6" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+      <Message>In CIOApplicationRequest.kt</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.COPY_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="?"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="9e85fb688411ecfaa37da1ce1f5b035a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of Object.toString(), which is known to be non-null in io.ktor.server.cio.CIOApplicationRequest$local$1.getHost()</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationRequest$local$1" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" start="27" end="47" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+        <Message>At CIOApplicationRequest.kt:[lines 27-47]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationRequest$local$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationRequest$local$1" name="getHost" signature="()Ljava/lang/String;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" start="38" end="38" startBytecode="0" endBytecode="102" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationRequest$local$1.getHost()</Message>
+    </Method>
+    <Method classname="java.lang.Object" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.Object" start="256" end="256" startBytecode="0" endBytecode="77" sourcefile="Object.java" sourcepath="java/lang/Object.java"/>
+      <Message>Return value of Object.toString() of type String</Message>
+    </Method>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" primary="true" start="38" end="38" startBytecode="23" endBytecode="23" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at CIOApplicationRequest.kt:[line 38]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" instanceHash="fe23b3c7b45727acba2efbc053b020c7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Redundant nullcheck of value known to be non-null</ShortMessage>
+    <LongMessage>Redundant nullcheck of Object.toString(), which is known to be non-null in io.ktor.server.cio.CIOApplicationRequest$local$1.getPort()</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationRequest$local$1" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" start="27" end="47" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt">
+        <Message>At CIOApplicationRequest.kt:[lines 27-47]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationRequest$local$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationRequest$local$1" name="getPort" signature="()I" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" start="41" end="41" startBytecode="0" endBytecode="110" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationRequest$local$1.getPort()</Message>
+    </Method>
+    <Method classname="java.lang.Object" name="toString" signature="()Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="java.lang.Object" start="256" end="256" startBytecode="0" endBytecode="77" sourcefile="Object.java" sourcepath="java/lang/Object.java"/>
+      <Message>Return value of Object.toString() of type String</Message>
+    </Method>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationRequest$local$1" primary="true" start="41" end="41" startBytecode="23" endBytecode="23" sourcefile="CIOApplicationRequest.kt" sourcepath="io/ktor/server/cio/CIOApplicationRequest.kt" role="SOURCE_REDUNDANT_NULL_CHECK">
+      <Message>Redundant null check at CIOApplicationRequest.kt:[line 41]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="bb6006e2e24492b464c9a3270c62247a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to bytes in io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondFromBytes" signature="([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="92" end="92" startBytecode="0" endBytecode="142" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</Message>
+    </Method>
+    <LocalVariable name="bytes" register="1" pc="298" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named bytes</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="92" end="92" startBytecode="297" endBytecode="297" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 92]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="bytes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.MANY_STORES" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="667b02184265a9dd41cbf82c2b0b98da" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to channel in io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondFromBytes" signature="([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="92" end="92" startBytecode="0" endBytecode="142" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</Message>
+    </Method>
+    <LocalVariable name="channel" register="3" pc="289" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named channel</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="92" end="92" startBytecode="288" endBytecode="288" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 92]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="channel"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="aefa61052be9191342bf02052295dae7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to this in io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondFromBytes" signature="([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="92" end="92" startBytecode="0" endBytecode="142" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</Message>
+    </Method>
+    <LocalVariable name="this" register="0" pc="307" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named this</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="92" end="92" startBytecode="306" endBytecode="306" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 92]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="this"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.MANY_STORES" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="89246f28a860edb9b4e35dc0c240e75b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to content in io.ktor.server.cio.CIOApplicationResponse.respondNoContent(OutgoingContent$NoContent, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondNoContent" signature="(Lio/ktor/http/content/OutgoingContent$NoContent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="101" end="104" startBytecode="0" endBytecode="74" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondNoContent(OutgoingContent$NoContent, Continuation)</Message>
+    </Method>
+    <LocalVariable name="content" register="1" pc="135" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named content</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="101" end="101" startBytecode="134" endBytecode="134" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 101]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="content"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="398866e1ac71f59f8f4952834278e3a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to content in io.ktor.server.cio.CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondOutgoingContent" signature="(Lio/ktor/http/content/OutgoingContent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="106" end="110" startBytecode="0" endBytecode="116" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation)</Message>
+    </Method>
+    <LocalVariable name="content" register="1" pc="229" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named content</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="106" end="106" startBytecode="228" endBytecode="228" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 106]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="content"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="db70a6a5c3611fb9e0b3ad61b9907bf0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to this in io.ktor.server.cio.CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondOutgoingContent" signature="(Lio/ktor/http/content/OutgoingContent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="106" end="110" startBytecode="0" endBytecode="116" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation)</Message>
+    </Method>
+    <LocalVariable name="this" register="0" pc="238" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named this</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="106" end="106" startBytecode="237" endBytecode="237" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 106]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="this"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="f207632cd01cbbfb29bbfa31526ed0d7" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to this in io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondUpgrade" signature="(Lio/ktor/http/content/OutgoingContent$ProtocolUpgrade;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="82" end="82" startBytecode="0" endBytecode="170" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</Message>
+    </Method>
+    <LocalVariable name="this" register="0" pc="370" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named this</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="82" end="82" startBytecode="369" endBytecode="369" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 82]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="this"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.MANY_STORES" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="f69d0048e84813c00bfa957dd76e1baa" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to upgrade in io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondUpgrade" signature="(Lio/ktor/http/content/OutgoingContent$ProtocolUpgrade;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="82" end="82" startBytecode="0" endBytecode="170" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</Message>
+    </Method>
+    <LocalVariable name="upgrade" register="1" pc="361" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named upgrade</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="82" end="82" startBytecode="360" endBytecode="360" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 82]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="upgrade"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.MANY_STORES" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="94591fa872779734ad640181522f2d5d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to upgradedJob in io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondUpgrade" signature="(Lio/ktor/http/content/OutgoingContent$ProtocolUpgrade;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="82" end="82" startBytecode="0" endBytecode="170" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</Message>
+    </Method>
+    <LocalVariable name="upgradedJob" register="3" pc="352" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named upgradedJob</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="82" end="82" startBytecode="351" endBytecode="351" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 82]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="upgradedJob"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.TWO_STORES_MULTIPLE_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="3" rank="20" abbrev="DLS" category="STYLE" instanceHash="974f9b804436bf0c9b610066868a7980" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to this in io.ktor.server.cio.CIOApplicationResponse.responseChannel(Continuation)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="12" end="144" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>At CIOApplicationResponse.kt:[lines 12-144]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="responseChannel" signature="(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="77" end="77" startBytecode="0" endBytecode="83" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse.responseChannel(Continuation)</Message>
+    </Method>
+    <LocalVariable name="this" register="0" pc="163" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named this</Message>
+    </LocalVariable>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" primary="true" start="77" end="77" startBytecode="162" endBytecode="162" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>At CIOApplicationResponse.kt:[line 77]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IN_JSP_PAGE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.IS_PARAMETER" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="this"/>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_PARAM_VIOLATION" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="a83554159e165d295bf92ed053b785fd" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null to a non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of CIOApplicationResponse.respondFromBytes(byte[], Continuation) in io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>In CIOApplicationResponse.kt</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1.invokeSuspend(Object)</Message>
+    </Method>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondFromBytes" signature="([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="92" end="92" startBytecode="0" endBytecode="545" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>Called method io.ktor.server.cio.CIOApplicationResponse.respondFromBytes(byte[], Continuation)</Message>
+    </Method>
+    <Int value="1" role="INT_NULL_ARG">
+      <Message>Argument 1 is definitely null but must not be null</Message>
+    </Int>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" startBytecode="22" endBytecode="22" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>In CIOApplicationResponse.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_PARAM_VIOLATION" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="accc095a8d4ee6ae39b67707d7bd7d69" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null to a non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of CIOApplicationResponse.respondNoContent(OutgoingContent$NoContent, Continuation) in io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>In CIOApplicationResponse.kt</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1.invokeSuspend(Object)</Message>
+    </Method>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondNoContent" signature="(Lio/ktor/http/content/OutgoingContent$NoContent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="101" end="104" startBytecode="0" endBytecode="306" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>Called method io.ktor.server.cio.CIOApplicationResponse.respondNoContent(OutgoingContent$NoContent, Continuation)</Message>
+    </Method>
+    <Int value="1" role="INT_NULL_ARG">
+      <Message>Argument 1 is definitely null but must not be null</Message>
+    </Int>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" startBytecode="22" endBytecode="22" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>In CIOApplicationResponse.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_PARAM_VIOLATION" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="ce3887909aba2e93cd5790286d749130" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null to a non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation) in io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>In CIOApplicationResponse.kt</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1.invokeSuspend(Object)</Message>
+    </Method>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondOutgoingContent" signature="(Lio/ktor/http/content/OutgoingContent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="106" end="110" startBytecode="0" endBytecode="426" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>Called method io.ktor.server.cio.CIOApplicationResponse.respondOutgoingContent(OutgoingContent, Continuation)</Message>
+    </Method>
+    <Int value="1" role="INT_NULL_ARG">
+      <Message>Argument 1 is definitely null but must not be null</Message>
+    </Int>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" startBytecode="22" endBytecode="22" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>In CIOApplicationResponse.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NONNULL_PARAM_VIOLATION" priority="1" rank="6" abbrev="NP" category="CORRECTNESS" instanceHash="4063b0bfad67d50405fcd7ef6240471d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Method call passes null to a non-null parameter</ShortMessage>
+    <LongMessage>Null passed for non-null parameter of CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation) in io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+        <Message>In CIOApplicationResponse.kt</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1</Message>
+    </Class>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.Metadata,kotlin.coroutines.jvm.internal.DebugMetadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>In method io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1.invokeSuspend(Object)</Message>
+    </Method>
+    <Method classname="io.ktor.server.cio.CIOApplicationResponse" name="respondUpgrade" signature="(Lio/ktor/http/content/OutgoingContent$ProtocolUpgrade;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED" classAnnotationNames="kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse" start="82" end="82" startBytecode="0" endBytecode="622" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt"/>
+      <Message>Called method io.ktor.server.cio.CIOApplicationResponse.respondUpgrade(OutgoingContent$ProtocolUpgrade, Continuation)</Message>
+    </Method>
+    <Int value="1" role="INT_NULL_ARG">
+      <Message>Argument 1 is definitely null but must not be null</Message>
+    </Int>
+    <SourceLine classname="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" startBytecode="22" endBytecode="22" sourcefile="CIOApplicationResponse.kt" sourcepath="io/ktor/server/cio/CIOApplicationResponse.kt">
+      <Message>In CIOApplicationResponse.kt</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="951732da3a298248e43c9ae8ef52e13b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>HttpServerKt$httpServer$acceptJob$1.p$ not initialized in constructor and dereferenced in io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1.invokeSuspend(Object)</LongMessage>
+    <Class classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" start="87" end="121" sourcefile="HttpServer.kt" sourcepath="io/ktor/server/cio/HttpServer.kt">
+        <Message>At HttpServer.kt:[lines 87-121]</Message>
+      </SourceLine>
+      <Message>In class io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1</Message>
+    </Class>
+    <Field classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" name="p$" signature="Lkotlinx/coroutines/CoroutineScope;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" sourcefile="HttpServer.kt" sourcepath="io/ktor/server/cio/HttpServer.kt">
+        <Message>In HttpServer.kt</Message>
+      </SourceLine>
+      <Message>Field io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1.p$</Message>
+    </Field>
+    <Method classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" name="invokeSuspend" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" primary="true" classAnnotationNames="kotlin.coroutines.jvm.internal.DebugMetadata,kotlin.Metadata">
+      <SourceLine classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" start="87" end="121" startBytecode="0" endBytecode="1457" sourcefile="HttpServer.kt" sourcepath="io/ktor/server/cio/HttpServer.kt"/>
+      <Message>In method io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1.invokeSuspend(Object)</Message>
+    </Method>
+    <SourceLine classname="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" primary="true" start="91" end="91" startBytecode="128" endBytecode="128" sourcefile="HttpServer.kt" sourcepath="io/ktor/server/cio/HttpServer.kt">
+      <Message>At HttpServer.kt:[line 91]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NONNULL_PARAM_VIOLATION" abbrev="NP" category="CORRECTNESS">
+    <ShortDescription>Method call passes null to a non-null parameter</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This method passes a null value as the parameter of a method which
+    must be non-null. Either this parameter has been explicitly marked
+    as @Nonnull, or analysis has determined that this parameter is
+    always dereferenced.
+      </p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UWF_UNWRITTEN_FIELD" abbrev="UwF" category="CORRECTNESS">
+    <ShortDescription>Unwritten field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never written.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_LOAD_OF_KNOWN_NULL_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Load of known null value</ShortDescription>
+    <Details><![CDATA[
+
+  <p> The variable referenced at this point is known to be null due to an earlier
+   check against null. Although this is valid, it might be a mistake (perhaps you
+intended to refer to a different variable, or perhaps the earlier check to see if the
+variable is null should have been a check to see if it was non-null).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" abbrev="RCN" category="STYLE">
+    <ShortDescription>Redundant nullcheck of value known to be non-null</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="RCN" cweid="476">
+    <Description>Redundant comparison to null</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="112">
+    <MissingClass>io.ktor.application.Application</MissingClass>
+    <MissingClass>io.ktor.application.ApplicationCall</MissingClass>
+    <MissingClass>io.ktor.application.ApplicationEvents</MissingClass>
+    <MissingClass>io.ktor.application.DefaultApplicationEventsKt</MissingClass>
+    <MissingClass>io.ktor.application.EventDefinition</MissingClass>
+    <MissingClass>io.ktor.config.ApplicationConfig</MissingClass>
+    <MissingClass>io.ktor.config.ApplicationConfigValue</MissingClass>
+    <MissingClass>io.ktor.http.Headers</MissingClass>
+    <MissingClass>io.ktor.http.HttpHeaders</MissingClass>
+    <MissingClass>io.ktor.http.HttpMethod</MissingClass>
+    <MissingClass>io.ktor.http.HttpMethod$Companion</MissingClass>
+    <MissingClass>io.ktor.http.HttpStatusCode</MissingClass>
+    <MissingClass>io.ktor.http.HttpStatusCode$Companion</MissingClass>
+    <MissingClass>io.ktor.http.Parameters</MissingClass>
+    <MissingClass>io.ktor.http.Parameters$Companion</MissingClass>
+    <MissingClass>io.ktor.http.QueryKt</MissingClass>
+    <MissingClass>io.ktor.http.RequestConnectionPoint</MissingClass>
+    <MissingClass>io.ktor.http.cio.CIOHeaders</MissingClass>
+    <MissingClass>io.ktor.http.cio.ChunkedTransferEncodingKt</MissingClass>
+    <MissingClass>io.ktor.http.cio.HttpHeadersMap</MissingClass>
+    <MissingClass>io.ktor.http.cio.PipelineKt</MissingClass>
+    <MissingClass>io.ktor.http.cio.Request</MissingClass>
+    <MissingClass>io.ktor.http.cio.RequestResponseBuilder</MissingClass>
+    <MissingClass>io.ktor.http.cio.internals.WeakTimeoutQueue</MissingClass>
+    <MissingClass>io.ktor.http.content.OutgoingContent</MissingClass>
+    <MissingClass>io.ktor.http.content.OutgoingContent$NoContent</MissingClass>
+    <MissingClass>io.ktor.http.content.OutgoingContent$ProtocolUpgrade</MissingClass>
+    <MissingClass>io.ktor.network.selector.ActorSelectorManager</MissingClass>
+    <MissingClass>io.ktor.network.selector.SelectorManager</MissingClass>
+    <MissingClass>io.ktor.network.sockets.AReadable</MissingClass>
+    <MissingClass>io.ktor.network.sockets.ASocket</MissingClass>
+    <MissingClass>io.ktor.network.sockets.AWritable</MissingClass>
+    <MissingClass>io.ktor.network.sockets.BuildersKt</MissingClass>
+    <MissingClass>io.ktor.network.sockets.ServerSocket</MissingClass>
+    <MissingClass>io.ktor.network.sockets.Socket</MissingClass>
+    <MissingClass>io.ktor.network.sockets.SocketBuilder</MissingClass>
+    <MissingClass>io.ktor.network.sockets.SocketsKt</MissingClass>
+    <MissingClass>io.ktor.network.sockets.TcpSocketBuilder</MissingClass>
+    <MissingClass>io.ktor.request.ApplicationRequest</MissingClass>
+    <MissingClass>io.ktor.request.RequestCookies</MissingClass>
+    <MissingClass>io.ktor.response.ApplicationResponse</MissingClass>
+    <MissingClass>io.ktor.response.ResponseHeaders</MissingClass>
+    <MissingClass>io.ktor.server.engine.ApplicationEngine</MissingClass>
+    <MissingClass>io.ktor.server.engine.ApplicationEngineEnvironment</MissingClass>
+    <MissingClass>io.ktor.server.engine.ApplicationEngineFactory</MissingClass>
+    <MissingClass>io.ktor.server.engine.BaseApplicationCall</MissingClass>
+    <MissingClass>io.ktor.server.engine.BaseApplicationEngine</MissingClass>
+    <MissingClass>io.ktor.server.engine.BaseApplicationEngine$Configuration</MissingClass>
+    <MissingClass>io.ktor.server.engine.BaseApplicationRequest</MissingClass>
+    <MissingClass>io.ktor.server.engine.BaseApplicationResponse</MissingClass>
+    <MissingClass>io.ktor.server.engine.CommandLineKt</MissingClass>
+    <MissingClass>io.ktor.server.engine.ConnectorType</MissingClass>
+    <MissingClass>io.ktor.server.engine.ConnectorType$Companion</MissingClass>
+    <MissingClass>io.ktor.server.engine.EngineConnectorConfig</MissingClass>
+    <MissingClass>io.ktor.server.engine.EnginePipeline</MissingClass>
+    <MissingClass>io.ktor.util.DispatcherWithShutdown</MissingClass>
+    <MissingClass>io.ktor.util.LoggingKt</MissingClass>
+    <MissingClass>io.ktor.util.pipeline.Pipeline</MissingClass>
+    <MissingClass>kotlin.Lazy</MissingClass>
+    <MissingClass>kotlin.LazyKt</MissingClass>
+    <MissingClass>kotlin.LazyThreadSafetyMode</MissingClass>
+    <MissingClass>kotlin.ResultKt</MissingClass>
+    <MissingClass>kotlin.Unit</MissingClass>
+    <MissingClass>kotlin.collections.CollectionsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.Continuation</MissingClass>
+    <MissingClass>kotlin.coroutines.CoroutineContext</MissingClass>
+    <MissingClass>kotlin.coroutines.CoroutineContext$Element</MissingClass>
+    <MissingClass>kotlin.coroutines.CoroutineContext$Key</MissingClass>
+    <MissingClass>kotlin.coroutines.intrinsics.IntrinsicsKt</MissingClass>
+    <MissingClass>kotlin.coroutines.jvm.internal.Boxing</MissingClass>
+    <MissingClass>kotlin.coroutines.jvm.internal.ContinuationImpl</MissingClass>
+    <MissingClass>kotlin.coroutines.jvm.internal.SuspendLambda</MissingClass>
+    <MissingClass>kotlin.io.CloseableKt</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function0</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function1</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function2</MissingClass>
+    <MissingClass>kotlin.jvm.functions.Function6</MissingClass>
+    <MissingClass>kotlin.jvm.internal.DefaultConstructorMarker</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Intrinsics</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Lambda</MissingClass>
+    <MissingClass>kotlin.jvm.internal.PropertyReference1</MissingClass>
+    <MissingClass>kotlin.jvm.internal.PropertyReference1Impl</MissingClass>
+    <MissingClass>kotlin.jvm.internal.Reflection</MissingClass>
+    <MissingClass>kotlin.reflect.KDeclarationContainer</MissingClass>
+    <MissingClass>kotlin.reflect.KProperty</MissingClass>
+    <MissingClass>kotlin.text.StringsKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.BuildersKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.CompletableDeferred</MissingClass>
+    <MissingClass>kotlinx.coroutines.CompletableDeferredKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineDispatcher</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineExceptionHandler</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineExceptionHandler$DefaultImpls</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineName</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineScope</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineScopeKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.CoroutineStart</MissingClass>
+    <MissingClass>kotlinx.coroutines.Deferred</MissingClass>
+    <MissingClass>kotlinx.coroutines.Dispatchers</MissingClass>
+    <MissingClass>kotlinx.coroutines.DisposableHandle</MissingClass>
+    <MissingClass>kotlinx.coroutines.Job</MissingClass>
+    <MissingClass>kotlinx.coroutines.Job$DefaultImpls</MissingClass>
+    <MissingClass>kotlinx.coroutines.JobKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.SupervisorKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.TimeoutKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.io.ByteReadChannel</MissingClass>
+    <MissingClass>kotlinx.coroutines.io.ByteWriteChannel</MissingClass>
+    <MissingClass>kotlinx.coroutines.io.ByteWriteChannelKt</MissingClass>
+    <MissingClass>kotlinx.coroutines.io.ReaderJob</MissingClass>
+    <MissingClass>kotlinx.coroutines.scheduling.ExperimentalCoroutineDispatcher</MissingClass>
+    <MissingClass>kotlinx.io.core.ByteReadPacket</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:32:59 +0900" total_classes="43" referenced_classes="105" total_bugs="27" total_size="713" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.38" clock_seconds="1.78" peak_mbytes="239.04" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="21" priority_2="2" priority_1="4">
+    <FileStats path="io/ktor/server/cio/CIO.kt" bugCount="0" size="8"/>
+    <FileStats path="io/ktor/server/cio/CIOApplicationCall.kt" bugCount="1" size="18" bugHash="a99a52c0cd71197e2bec7fae2b599f93"/>
+    <FileStats path="io/ktor/server/cio/CIOApplicationEngine.kt" bugCount="7" size="217" bugHash="23cf83d4d963ff1ee1d27388d680d3b6"/>
+    <FileStats path="io/ktor/server/cio/CIOApplicationRequest.kt" bugCount="4" size="61" bugHash="e38bf6c315e001e8bfb0502a053a9c8e"/>
+    <FileStats path="io/ktor/server/cio/CIOApplicationResponse.kt" bugCount="14" size="208" bugHash="847784014a596f31236857fd4771ca5b"/>
+    <FileStats path="io/ktor/server/cio/EngineMain.kt" bugCount="0" size="40"/>
+    <FileStats path="io/ktor/server/cio/HttpServer.kt" bugCount="1" size="161" bugHash="4345e0663bb3572dc5278f1351ce04f5"/>
+    <PackageStats package="io.ktor.server.cio" total_bugs="27" total_types="43" total_size="713" priority_3="21" priority_2="2" priority_1="4">
+      <ClassStats class="io.ktor.server.cio.CIO" sourceFile="CIO.kt" interface="false" size="8" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationCall" sourceFile="CIOApplicationCall.kt" interface="false" size="18" bugs="1" priority_2="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine" sourceFile="CIOApplicationEngine.kt" interface="false" size="49" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$Configuration" sourceFile="CIOApplicationEngine.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$serverJob$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="34" bugs="1" priority_3="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="2" priority_3="2"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$serverJob$1$5" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="2" priority_3="2"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="22" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1$forceShutdown$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$shutdownServer$1$result$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$start$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$start$2" sourceFile="CIOApplicationEngine.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$startConnector$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="15" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationEngine$startConnector$1$1" sourceFile="CIOApplicationEngine.kt" interface="false" size="24" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationRequest" sourceFile="CIOApplicationRequest.kt" interface="false" size="26" bugs="2" priority_3="2"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationRequest$cookies$2" sourceFile="CIOApplicationRequest.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationRequest$local$1" sourceFile="CIOApplicationRequest.kt" interface="false" size="18" bugs="2" priority_3="2"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationRequest$queryParameters$2" sourceFile="CIOApplicationRequest.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse" sourceFile="CIOApplicationResponse.kt" interface="false" size="76" bugs="10" priority_3="10"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$headers$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="33" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$preparedBodyChannel$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="12" bugs="1" priority_1="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondFromBytes$2" sourceFile="CIOApplicationResponse.kt" interface="false" size="13" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondNoContent$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="11" bugs="1" priority_1="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondOutgoingContent$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="11" bugs="1" priority_1="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="12" bugs="1" priority_1="1"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$respondUpgrade$2" sourceFile="CIOApplicationResponse.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$responseChannel$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="10" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.CIOApplicationResponse$sendResponseMessage$1" sourceFile="CIOApplicationResponse.kt" interface="false" size="12" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.DevelopmentEngine" sourceFile="EngineMain.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.EngineMain" sourceFile="EngineMain.kt" interface="false" size="19" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.EngineMain$main$1" sourceFile="EngineMain.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.EngineMain$main$engine$1" sourceFile="EngineMain.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServer" sourceFile="HttpServer.kt" interface="false" size="9" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt" sourceFile="HttpServer.kt" interface="false" size="29" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$1" sourceFile="HttpServer.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$2" sourceFile="HttpServer.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$3" sourceFile="HttpServer.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1" sourceFile="HttpServer.kt" interface="false" size="43" bugs="1" priority_3="1"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$acceptJob$1$1$1" sourceFile="HttpServer.kt" interface="false" size="7" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerKt$httpServer$serverJob$1" sourceFile="HttpServer.kt" interface="false" size="11" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.HttpServerSettings" sourceFile="HttpServer.kt" interface="false" size="22" bugs="0"/>
+      <ClassStats class="io.ktor.server.cio.KtorUncaughtExceptionHandler" sourceFile="HttpServer.kt" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="182" invocations="712" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="26128" standardDeviationMicrosecondsPerInvocation="1099"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="64" invocations="192" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="8108" standardDeviationMicrosecondsPerInvocation="978"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="60" invocations="105" avgMicrosecondsPerInvocation="577" maxMicrosecondsPerInvocation="7341" standardDeviationMicrosecondsPerInvocation="1165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="55" invocations="176" avgMicrosecondsPerInvocation="317" maxMicrosecondsPerInvocation="4129" standardDeviationMicrosecondsPerInvocation="512"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="54" invocations="190" avgMicrosecondsPerInvocation="287" maxMicrosecondsPerInvocation="5534" standardDeviationMicrosecondsPerInvocation="586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="50" invocations="191" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="4233" standardDeviationMicrosecondsPerInvocation="580"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="46" invocations="190" avgMicrosecondsPerInvocation="246" maxMicrosecondsPerInvocation="6595" standardDeviationMicrosecondsPerInvocation="649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="45" invocations="105" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="3518" standardDeviationMicrosecondsPerInvocation="680"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="43" invocations="364" avgMicrosecondsPerInvocation="118" maxMicrosecondsPerInvocation="2078" standardDeviationMicrosecondsPerInvocation="217"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="42" invocations="184" avgMicrosecondsPerInvocation="228" maxMicrosecondsPerInvocation="4078" standardDeviationMicrosecondsPerInvocation="463"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="30" invocations="190" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="17861" standardDeviationMicrosecondsPerInvocation="1291"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="29" invocations="43" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="12710" standardDeviationMicrosecondsPerInvocation="1949"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="29" invocations="722" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="2188" standardDeviationMicrosecondsPerInvocation="108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="28" invocations="43" avgMicrosecondsPerInvocation="668" maxMicrosecondsPerInvocation="12565" standardDeviationMicrosecondsPerInvocation="1966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="160" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="2775" standardDeviationMicrosecondsPerInvocation="343"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="26" invocations="209" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="10587" standardDeviationMicrosecondsPerInvocation="754"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="23" invocations="105" avgMicrosecondsPerInvocation="220" maxMicrosecondsPerInvocation="3108" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="21" invocations="105" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="8891" standardDeviationMicrosecondsPerInvocation="874"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="19" invocations="551" avgMicrosecondsPerInvocation="35" maxMicrosecondsPerInvocation="684" standardDeviationMicrosecondsPerInvocation="71"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="17" invocations="43" avgMicrosecondsPerInvocation="405" maxMicrosecondsPerInvocation="1962" standardDeviationMicrosecondsPerInvocation="374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="105" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="1026" standardDeviationMicrosecondsPerInvocation="196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="15" invocations="43" avgMicrosecondsPerInvocation="360" maxMicrosecondsPerInvocation="5669" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="14" invocations="43" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="2210" standardDeviationMicrosecondsPerInvocation="471"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="14" invocations="105" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="2101" standardDeviationMicrosecondsPerInvocation="342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="13" invocations="190" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="1503" standardDeviationMicrosecondsPerInvocation="159"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="13" invocations="105" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="4492" standardDeviationMicrosecondsPerInvocation="449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="105" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="1928" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="12" invocations="43" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="11217" standardDeviationMicrosecondsPerInvocation="1687"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="3980" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="599" standardDeviationMicrosecondsPerInvocation="17"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

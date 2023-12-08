@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013495644" analysisTimestamp="1702016137888" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\hutool-http-4.2.1.jar</Jar>
+  </Project>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" instanceHash="58d726929013b5d434715fd325a91ae6" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is final but declares protected field</ShortMessage>
+    <LongMessage>Class cn.hutool.http.GlobalHeaders is final but declares protected field cn.hutool.http.GlobalHeaders.headers</LongMessage>
+    <Class classname="cn.hutool.http.GlobalHeaders" primary="true">
+      <SourceLine classname="cn.hutool.http.GlobalHeaders" start="20" end="206" sourcefile="GlobalHeaders.java" sourcepath="cn/hutool/http/GlobalHeaders.java">
+        <Message>At GlobalHeaders.java:[lines 20-206]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.GlobalHeaders</Message>
+    </Class>
+    <Field classname="cn.hutool.http.GlobalHeaders" name="headers" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.GlobalHeaders" sourcefile="GlobalHeaders.java" sourcepath="cn/hutool/http/GlobalHeaders.java">
+        <Message>In GlobalHeaders.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.GlobalHeaders.headers</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.GlobalHeaders" sourcefile="GlobalHeaders.java" sourcepath="cn/hutool/http/GlobalHeaders.java" synthetic="true">
+      <Message>In GlobalHeaders.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="b3cfe7791771a54c16fd3da6c0e0ce96" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in cn.hutool.http.HTMLFilter.processTag(String)</LongMessage>
+    <Class classname="cn.hutool.http.HTMLFilter" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="40" end="525" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+        <Message>At HTMLFilter.java:[lines 40-525]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HTMLFilter</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HTMLFilter" name="processTag" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="331" end="414" startBytecode="0" endBytecode="1154" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java"/>
+      <Message>In method cn.hutool.http.HTMLFilter.processTag(String)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HTMLFilter" primary="true" start="333" end="333" startBytecode="20" endBytecode="20" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+      <Message>At HTMLFilter.java:[line 333]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.http.HTMLFilter" start="347" end="347" startBytecode="134" endBytecode="134" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HTMLFilter.java:[line 347]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.http.HTMLFilter" start="370" end="370" startBytecode="307" endBytecode="307" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at HTMLFilter.java:[line 370]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" instanceHash="f423bc7ae1d45f9a6c4d8945fbf9f30e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>cn.hutool.http.HTMLFilter.processTag(String) concatenates strings using + in a loop</LongMessage>
+    <Class classname="cn.hutool.http.HTMLFilter" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="40" end="525" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+        <Message>At HTMLFilter.java:[lines 40-525]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HTMLFilter</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HTMLFilter" name="processTag" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="331" end="414" startBytecode="0" endBytecode="1154" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java"/>
+      <Message>In method cn.hutool.http.HTMLFilter.processTag(String)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HTMLFilter" primary="true" start="381" end="381" startBytecode="356" endBytecode="356" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+      <Message>At HTMLFilter.java:[line 381]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" instanceHash="5c39564f602f2248da507114178b95a5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Inefficient use of keySet iterator instead of entrySet iterator</ShortMessage>
+    <LongMessage>cn.hutool.http.HTMLFilter.checkTags(String) makes inefficient use of keySet iterator instead of entrySet iterator</LongMessage>
+    <Class classname="cn.hutool.http.HTMLFilter" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="40" end="525" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+        <Message>At HTMLFilter.java:[lines 40-525]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HTMLFilter</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HTMLFilter" name="checkTags" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" start="285" end="305" startBytecode="0" endBytecode="371" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java"/>
+      <Message>In method cn.hutool.http.HTMLFilter.checkTags(String)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HTMLFilter" name="vTagCounts" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HTMLFilter" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+        <Message>In HTMLFilter.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HTMLFilter.vTagCounts</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HTMLFilter" primary="true" start="300" end="300" startBytecode="112" endBytecode="112" sourcefile="HTMLFilter.java" sourcepath="cn/hutool/http/HTMLFilter.java">
+      <Message>At HTMLFilter.java:[line 300]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="217b88544ae3ed154995c6abd8ea8fb4" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.http.HttpConnection at new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.http.HttpConnection" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="40" end="600" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>At HttpConnection.java:[lines 40-600]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpConnection</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpConnection" name="&lt;init&gt;" signature="(Ljava/net/URL;Lcn/hutool/http/Method;Ljavax/net/ssl/HostnameVerifier;Ljavax/net/ssl/SSLSocketFactory;ILjava/net/Proxy;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="161" end="176" startBytecode="0" endBytecode="320" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java"/>
+      <Message>In method new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HttpConnection" primary="true" start="169" end="169" startBytecode="63" endBytecode="63" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 169]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.http.HttpConnection" start="169" end="169" startBytecode="63" endBytecode="63" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 169]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="54949e06a5cd9c961ff144c196854edf" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpConnection.getHttpURLConnection() may expose internal representation by returning HttpConnection.conn</LongMessage>
+    <Class classname="cn.hutool.http.HttpConnection" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="40" end="600" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>At HttpConnection.java:[lines 40-600]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpConnection</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpConnection" name="getHttpURLConnection" signature="()Ljava/net/HttpURLConnection;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="259" end="259" startBytecode="0" endBytecode="46" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java"/>
+      <Message>In method cn.hutool.http.HttpConnection.getHttpURLConnection()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpConnection" name="conn" signature="Ljava/net/HttpURLConnection;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>In HttpConnection.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpConnection.conn</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpConnection" primary="true" start="259" end="259" startBytecode="4" endBytecode="4" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 259]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4eef5dd61a258c673161aaf602ab8373" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpConnection.getProxy() may expose internal representation by returning HttpConnection.proxy</LongMessage>
+    <Class classname="cn.hutool.http.HttpConnection" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="40" end="600" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>At HttpConnection.java:[lines 40-600]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpConnection</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpConnection" name="getProxy" signature="()Ljava/net/Proxy;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="250" end="250" startBytecode="0" endBytecode="46" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java"/>
+      <Message>In method cn.hutool.http.HttpConnection.getProxy()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpConnection" name="proxy" signature="Ljava/net/Proxy;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>In HttpConnection.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpConnection.proxy</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpConnection" primary="true" start="250" end="250" startBytecode="4" endBytecode="4" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 250]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="dc79aff536c955e0f1cdc57d0897bd42" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy) may expose internal representation by storing an externally mutable object into HttpConnection.proxy</LongMessage>
+    <Class classname="cn.hutool.http.HttpConnection" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="40" end="600" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>At HttpConnection.java:[lines 40-600]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpConnection</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpConnection" name="&lt;init&gt;" signature="(Ljava/net/URL;Lcn/hutool/http/Method;Ljavax/net/ssl/HostnameVerifier;Ljavax/net/ssl/SSLSocketFactory;ILjava/net/Proxy;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="161" end="176" startBytecode="0" endBytecode="320" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java"/>
+      <Message>In method new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpConnection" name="proxy" signature="Ljava/net/Proxy;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>In HttpConnection.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpConnection.proxy</Message>
+    </Field>
+    <LocalVariable name="proxy" register="6" pc="30" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named proxy</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.HttpConnection" primary="true" start="164" end="164" startBytecode="30" endBytecode="30" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 164]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="MC" category="MALICIOUS_CODE" instanceHash="1979a9a03a7280a510fb6b2782e50d42" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>An overridable method is called from a constructor</ShortMessage>
+    <LongMessage>Overridable method initConn is called from constructor new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy).</LongMessage>
+    <Class classname="cn.hutool.http.HttpConnection" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="40" end="600" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+        <Message>At HttpConnection.java:[lines 40-600]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpConnection</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpConnection" name="&lt;init&gt;" signature="(Ljava/net/URL;Lcn/hutool/http/Method;Ljavax/net/ssl/HostnameVerifier;Ljavax/net/ssl/SSLSocketFactory;ILjava/net/Proxy;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpConnection" start="161" end="176" startBytecode="0" endBytecode="320" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java"/>
+      <Message>In method new cn.hutool.http.HttpConnection(URL, Method, HostnameVerifier, SSLSocketFactory, int, Proxy)</Message>
+    </Method>
+    <String value="initConn">
+      <Message>Value initConn</Message>
+    </String>
+    <SourceLine classname="cn.hutool.http.HttpConnection" primary="true" start="175" end="175" startBytecode="77" endBytecode="77" sourcefile="HttpConnection.java" sourcepath="cn/hutool/http/HttpConnection.java">
+      <Message>At HttpConnection.java:[line 175]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="ceb4b302179f9e6c20e0ef0589e79697" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in cn.hutool.http.HttpRequest.&lt;static initializer for HttpRequest&gt;(): String.getBytes()</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="&lt;clinit&gt;" signature="()V" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="68" startBytecode="0" endBytecode="113" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.&lt;static initializer for HttpRequest&gt;()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="55" end="55" startBytecode="41" endBytecode="41" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="5418c768540afed280d6251e39afd68b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.fileForm() may expose internal representation by returning HttpRequest.fileForm</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="fileForm" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="576" end="576" startBytecode="0" endBytecode="46" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.fileForm()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="fileForm" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.fileForm</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="576" end="576" startBytecode="4" endBytecode="4" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 576]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d3972ffc19ee7b44591c14ee86dead24" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.form() may expose internal representation by returning HttpRequest.form</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="form" signature="()Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="566" end="566" startBytecode="0" endBytecode="46" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.form()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="form" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.form</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="566" end="566" startBytecode="4" endBytecode="4" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 566]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="dc5340dd263f17c9b715abe3f9266715" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.body(byte[]) may expose internal representation by storing an externally mutable object into HttpRequest.bodyBytes</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="body" signature="([B)Lcn/hutool/http/HttpRequest;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="650" end="651" startBytecode="0" endBytecode="62" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.body(byte[])</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="bodyBytes" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.bodyBytes</Message>
+    </Field>
+    <LocalVariable name="bodyBytes" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named bodyBytes</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="650" end="650" startBytecode="2" endBytecode="2" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 650]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="fb2ea9f66404ac6dd4ae29893805b416" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.setProxy(Proxy) may expose internal representation by storing an externally mutable object into HttpRequest.proxy</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="setProxy" signature="(Ljava/net/Proxy;)Lcn/hutool/http/HttpRequest;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="736" end="737" startBytecode="0" endBytecode="62" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.setProxy(Proxy)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="proxy" signature="Ljava/net/Proxy;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.proxy</Message>
+    </Field>
+    <LocalVariable name="proxy" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named proxy</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="736" end="736" startBytecode="2" endBytecode="2" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 736]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="1eee57540c742f0debfb5f61b2d9f0c0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.setUrlHandler(URLStreamHandler) may expose internal representation by storing an externally mutable object into HttpRequest.urlHandler</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="setUrlHandler" signature="(Ljava/net/URLStreamHandler;)Lcn/hutool/http/HttpRequest;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="247" end="248" startBytecode="0" endBytecode="62" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.setUrlHandler(URLStreamHandler)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="urlHandler" signature="Ljava/net/URLStreamHandler;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.urlHandler</Message>
+    </Field>
+    <LocalVariable name="urlHandler" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named urlHandler</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="247" end="247" startBytecode="2" endBytecode="2" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 247]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_EXPOSE_REP" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="b24271f7885a839edf069a9bdc0fa403" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Public static method may expose internal representation by returning a mutable object or array</ShortMessage>
+    <LongMessage>Public static cn.hutool.http.HttpRequest.getCookieManager() may expose internal representation by returning HttpRequest.cookieManager</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpRequest" name="getCookieManager" signature="()Ljava/net/CookieManager;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="76" end="76" startBytecode="0" endBytecode="27" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java"/>
+      <Message>In method cn.hutool.http.HttpRequest.getCookieManager()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpRequest" name="cookieManager" signature="Ljava/net/CookieManager;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.cookieManager</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="76" end="76" startBytecode="3" endBytecode="3" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="cf5852da5353d4354b8fe6906167bd68" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpRequest.cookieManager should be package protected</LongMessage>
+    <Class classname="cn.hutool.http.HttpRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" start="54" end="1058" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>At HttpRequest.java:[lines 54-1058]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpRequest</Message>
+    </Class>
+    <Field classname="cn.hutool.http.HttpRequest" name="cookieManager" signature="Ljava/net/CookieManager;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpRequest" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+        <Message>In HttpRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpRequest.cookieManager</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpRequest" primary="true" start="66" end="66" startBytecode="64" endBytecode="64" sourcefile="HttpRequest.java" sourcepath="cn/hutool/http/HttpRequest.java">
+      <Message>At HttpRequest.java:[line 66]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="e446d214992c21c8301c8e0182b5a0e5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in cn.hutool.http.HttpResponse.init(): String.getBytes()</LongMessage>
+    <Class classname="cn.hutool.http.HttpResponse" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpResponse" start="58" end="432" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java">
+        <Message>At HttpResponse.java:[lines 58-432]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpResponse</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpResponse" name="init" signature="()Lcn/hutool/http/HttpResponse;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpResponse" start="331" end="360" startBytecode="0" endBytecode="421" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java"/>
+      <Message>In method cn.hutool.http.HttpResponse.init()</Message>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="1807" end="1807" startBytecode="0" endBytecode="56" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+      <Message>Called method String.getBytes()</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HttpResponse" primary="true" start="349" end="349" startBytecode="131" endBytecode="131" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java">
+      <Message>At HttpResponse.java:[line 349]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="d86550aa7a841fe9bf7c30e1c2ad13d5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpResponse.bodyBytes() may expose internal representation by returning HttpBase.bodyBytes</LongMessage>
+    <Class classname="cn.hutool.http.HttpResponse" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpResponse" start="58" end="432" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java">
+        <Message>At HttpResponse.java:[lines 58-432]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpResponse</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpResponse" name="bodyBytes" signature="()[B" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpResponse" start="186" end="187" startBytecode="0" endBytecode="55" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java"/>
+      <Message>In method cn.hutool.http.HttpResponse.bodyBytes()</Message>
+    </Method>
+    <Field classname="cn.hutool.http.HttpBase" name="bodyBytes" signature="[B" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpBase" sourcefile="HttpBase.java" sourcepath="cn/hutool/http/HttpBase.java">
+        <Message>In HttpBase.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.HttpBase.bodyBytes</Message>
+    </Field>
+    <SourceLine classname="cn.hutool.http.HttpResponse" primary="true" start="187" end="187" startBytecode="9" endBytecode="9" sourcefile="HttpResponse.java" sourcepath="cn/hutool/http/HttpResponse.java">
+      <Message>At HttpResponse.java:[line 187]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N" instanceHash="adcbbc4c0adaa42f6b28189e077078e7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider using Locale parameterized version of invoked method</ShortMessage>
+    <LongMessage>Use of non-localized String.toUpperCase() or String.toLowerCase() in cn.hutool.http.HttpUtil.isHttps(String)</LongMessage>
+    <Class classname="cn.hutool.http.HttpUtil" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpUtil" start="41" end="900" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java">
+        <Message>At HttpUtil.java:[lines 41-900]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpUtil</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpUtil" name="isHttps" signature="(Ljava/lang/String;)Z" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpUtil" start="163" end="163" startBytecode="0" endBytecode="51" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java"/>
+      <Message>In method cn.hutool.http.HttpUtil.isHttps(String)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HttpUtil" primary="true" start="163" end="163" startBytecode="1" endBytecode="1" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java">
+      <Message>At HttpUtil.java:[line 163]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="RV_CHECK_FOR_POSITIVE_INDEXOF" priority="3" rank="20" abbrev="RV" category="STYLE" instanceHash="3ac510ef3c2fdc717d4995240ff14b3" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="440">
+    <ShortMessage>Method checks to see if result of String.indexOf is positive</ShortMessage>
+    <LongMessage>cn.hutool.http.HttpUtil.getMultistageReverseProxyIp(String) checks to see if result of String.indexOf is positive</LongMessage>
+    <Class classname="cn.hutool.http.HttpUtil" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpUtil" start="41" end="900" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java">
+        <Message>At HttpUtil.java:[lines 41-900]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.HttpUtil</Message>
+    </Class>
+    <Method classname="cn.hutool.http.HttpUtil" name="getMultistageReverseProxyIp" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="cn.hutool.http.HttpUtil" start="775" end="784" startBytecode="0" endBytecode="222" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java"/>
+      <Message>In method cn.hutool.http.HttpUtil.getMultistageReverseProxyIp(String)</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.HttpUtil" primary="true" start="775" end="775" startBytecode="10" endBytecode="10" sourcefile="HttpUtil.java" sourcepath="cn/hutool/http/HttpUtil.java">
+      <Message>At HttpUtil.java:[line 775]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="1a4c8367d4d603f9c737e69dd4dab252" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.http.ssl.AndroidSupportSSLFactory at new cn.hutool.http.ssl.AndroidSupportSSLFactory() will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" start="22" end="26" sourcefile="AndroidSupportSSLFactory.java" sourcepath="cn/hutool/http/ssl/AndroidSupportSSLFactory.java">
+        <Message>At AndroidSupportSSLFactory.java:[lines 22-26]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.AndroidSupportSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" start="25" end="26" startBytecode="0" endBytecode="53" sourcefile="AndroidSupportSSLFactory.java" sourcepath="cn/hutool/http/ssl/AndroidSupportSSLFactory.java"/>
+      <Message>In method new cn.hutool.http.ssl.AndroidSupportSSLFactory()</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" primary="true" start="26" end="26" startBytecode="10" endBytecode="10" sourcefile="AndroidSupportSSLFactory.java" sourcepath="cn/hutool/http/ssl/AndroidSupportSSLFactory.java">
+      <Message>At AndroidSupportSSLFactory.java:[line 26]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.http.ssl.AndroidSupportSSLFactory" start="26" end="26" startBytecode="10" endBytecode="10" sourcefile="AndroidSupportSSLFactory.java" sourcepath="cn/hutool/http/ssl/AndroidSupportSSLFactory.java">
+      <Message>At AndroidSupportSSLFactory.java:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="1971ed9fdcf92cc37cb30fe602b2b048" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket()</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="()Ljava/net/Socket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="48" end="50" startBytecode="0" endBytecode="9" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket()</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="48" end="48" startBytecode="7" endBytecode="7" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="c40d8e36d4b6fcf8b254cb9dd0543c51" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(String, int)</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="(Ljava/lang/String;I)Ljava/net/Socket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="62" end="64" startBytecode="0" endBytecode="11" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(String, int)</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="62" end="62" startBytecode="9" endBytecode="9" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="a35b49fdb276b840c0852abc0173fa56" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(String, int, InetAddress, int)</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="(Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="70" end="72" startBytecode="0" endBytecode="13" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(String, int, InetAddress, int)</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="70" end="70" startBytecode="12" endBytecode="12" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 70]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="78c113bbbde486bdef48676c570b563c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(InetAddress, int)</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="(Ljava/net/InetAddress;I)Ljava/net/Socket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="78" end="80" startBytecode="0" endBytecode="11" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(InetAddress, int)</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="78" end="78" startBytecode="9" endBytecode="9" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 78]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="f99b902b6bca731b9d106b2f865b22e7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(InetAddress, int, InetAddress, int)</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="(Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/Socket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="86" end="88" startBytecode="0" endBytecode="13" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(InetAddress, int, InetAddress, int)</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="86" end="86" startBytecode="12" endBytecode="12" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" priority="3" rank="20" abbrev="BC" category="STYLE" instanceHash="2963026242e0c8af70a811fc60852710" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unchecked/unconfirmed cast of return value from method</ShortMessage>
+    <LongMessage>Unchecked/unconfirmed cast from java.net.Socket to javax.net.ssl.SSLSocket of return value in cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(Socket, String, int, boolean)</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="createSocket" signature="(Ljava/net/Socket;Ljava/lang/String;IZ)Ljavax/net/ssl/SSLSocket;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="55" end="57" startBytecode="0" endBytecode="13" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method cn.hutool.http.ssl.CustomProtocolsSSLFactory.createSocket(Socket, String, int, boolean)</Message>
+    </Method>
+    <Type descriptor="Ljava/net/Socket;" role="TYPE_FOUND">
+      <SourceLine classname="java.net.Socket" start="102" end="1916" sourcefile="Socket.java" sourcepath="java/net/Socket.java">
+        <Message>At Socket.java:[lines 102-1916]</Message>
+      </SourceLine>
+      <Message>Actual type java.net.Socket</Message>
+    </Type>
+    <Type descriptor="Ljavax/net/ssl/SSLSocket;" role="TYPE_EXPECTED">
+      <SourceLine classname="javax.net.ssl.SSLSocket" start="203" end="888" sourcefile="SSLSocket.java" sourcepath="javax/net/ssl/SSLSocket.java">
+        <Message>At SSLSocket.java:[lines 203-888]</Message>
+      </SourceLine>
+      <Message>Expected javax.net.ssl.SSLSocket</Message>
+    </Type>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="55" end="55" startBytecode="12" endBytecode="12" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="CT_CONSTRUCTOR_THROW" priority="2" rank="16" abbrev="CT" category="BAD_PRACTICE" instanceHash="988b81508d4ac6cfae1f9804fb54719e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Be wary of letting constructors throw exceptions.</ShortMessage>
+    <LongMessage>Exception thrown in class cn.hutool.http.ssl.CustomProtocolsSSLFactory at new cn.hutool.http.ssl.CustomProtocolsSSLFactory(String[]) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.</LongMessage>
+    <Class classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="18" end="98" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+        <Message>At CustomProtocolsSSLFactory.java:[lines 18-98]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.CustomProtocolsSSLFactory</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" name="&lt;init&gt;" signature="([Ljava/lang/String;)V" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="31" end="34" startBytecode="0" endBytecode="83" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java"/>
+      <Message>In method new cn.hutool.http.ssl.CustomProtocolsSSLFactory(String[])</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" primary="true" start="34" end="34" startBytecode="28" endBytecode="28" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 34]</Message>
+    </SourceLine>
+    <SourceLine classname="cn.hutool.http.ssl.CustomProtocolsSSLFactory" start="34" end="34" startBytecode="28" endBytecode="28" sourcefile="CustomProtocolsSSLFactory.java" sourcepath="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java">
+      <Message>At CustomProtocolsSSLFactory.java:[line 34]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" instanceHash="3815689d1e7952177f8aedeb7e9d86bd" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Consider returning a zero length array rather than null</ShortMessage>
+    <LongMessage>Should cn.hutool.http.ssl.DefaultTrustManager.getAcceptedIssuers() return a zero length array rather than null?</LongMessage>
+    <Class classname="cn.hutool.http.ssl.DefaultTrustManager" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.DefaultTrustManager" start="13" end="26" sourcefile="DefaultTrustManager.java" sourcepath="cn/hutool/http/ssl/DefaultTrustManager.java">
+        <Message>At DefaultTrustManager.java:[lines 13-26]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.DefaultTrustManager</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.DefaultTrustManager" name="getAcceptedIssuers" signature="()[Ljava/security/cert/X509Certificate;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.DefaultTrustManager" start="17" end="17" startBytecode="0" endBytecode="43" sourcefile="DefaultTrustManager.java" sourcepath="cn/hutool/http/ssl/DefaultTrustManager.java"/>
+      <Message>In method cn.hutool.http.ssl.DefaultTrustManager.getAcceptedIssuers()</Message>
+    </Method>
+    <SourceLine classname="cn.hutool.http.ssl.DefaultTrustManager" primary="true" start="17" end="17" startBytecode="1" endBytecode="1" sourcefile="DefaultTrustManager.java" sourcepath="cn/hutool/http/ssl/DefaultTrustManager.java">
+      <Message>At DefaultTrustManager.java:[line 17]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="4d0da92fe6d9794790818c1f468f839f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.ssl.SSLSocketFactoryBuilder.setSecureRandom(SecureRandom) may expose internal representation by storing an externally mutable object into SSLSocketFactoryBuilder.secureRandom</LongMessage>
+    <Class classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" start="20" end="111" sourcefile="SSLSocketFactoryBuilder.java" sourcepath="cn/hutool/http/ssl/SSLSocketFactoryBuilder.java">
+        <Message>At SSLSocketFactoryBuilder.java:[lines 20-111]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.ssl.SSLSocketFactoryBuilder</Message>
+    </Class>
+    <Method classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" name="setSecureRandom" signature="(Ljava/security/SecureRandom;)Lcn/hutool/http/ssl/SSLSocketFactoryBuilder;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" start="96" end="99" startBytecode="0" endBytecode="80" sourcefile="SSLSocketFactoryBuilder.java" sourcepath="cn/hutool/http/ssl/SSLSocketFactoryBuilder.java"/>
+      <Message>In method cn.hutool.http.ssl.SSLSocketFactoryBuilder.setSecureRandom(SecureRandom)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" name="secureRandom" signature="Ljava/security/SecureRandom;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" sourcefile="SSLSocketFactoryBuilder.java" sourcepath="cn/hutool/http/ssl/SSLSocketFactoryBuilder.java">
+        <Message>In SSLSocketFactoryBuilder.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.ssl.SSLSocketFactoryBuilder.secureRandom</Message>
+    </Field>
+    <LocalVariable name="secureRandom" register="1" pc="7" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named secureRandom</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.ssl.SSLSocketFactoryBuilder" primary="true" start="97" end="97" startBytecode="7" endBytecode="7" sourcefile="SSLSocketFactoryBuilder.java" sourcepath="cn/hutool/http/ssl/SSLSocketFactoryBuilder.java">
+      <Message>At SSLSocketFactoryBuilder.java:[line 97]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EQ_DOESNT_OVERRIDE_EQUALS" priority="2" rank="17" abbrev="Eq" category="STYLE" instanceHash="ffb297823f9abc8cb48585802f865c6c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class doesn&apos;t override equals in superclass</ShortMessage>
+    <LongMessage>cn.hutool.http.useragent.Browser doesn&apos;t override UserAgentInfo.equals(Object)</LongMessage>
+    <Class classname="cn.hutool.http.useragent.Browser" primary="true">
+      <SourceLine classname="cn.hutool.http.useragent.Browser" start="18" end="82" sourcefile="Browser.java" sourcepath="cn/hutool/http/useragent/Browser.java">
+        <Message>At Browser.java:[lines 18-82]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.useragent.Browser</Message>
+    </Class>
+    <SourceLine classname="cn.hutool.http.useragent.Browser" primary="true" start="1" end="1" startBytecode="0" endBytecode="0" sourcefile="Browser.java" sourcepath="cn/hutool/http/useragent/Browser.java">
+      <Message>At Browser.java:[line 1]</Message>
+    </SourceLine>
+    <Method classname="cn.hutool.http.useragent.UserAgentInfo" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true" role="METHOD_DID_YOU_MEAN_TO_OVERRIDE">
+      <SourceLine classname="cn.hutool.http.useragent.UserAgentInfo" start="90" end="107" startBytecode="0" endBytecode="192" sourcefile="UserAgentInfo.java" sourcepath="cn/hutool/http/useragent/UserAgentInfo.java"/>
+      <Message>Did you intend to override cn.hutool.http.useragent.UserAgentInfo.equals(Object)</Message>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="621d1d27b3328464729fb56772eb4a0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>cn.hutool.http.webservice.SoapRequest.setParams(Map) may expose internal representation by storing an externally mutable object into SoapRequest.params</LongMessage>
+    <Class classname="cn.hutool.http.webservice.SoapRequest" primary="true">
+      <SourceLine classname="cn.hutool.http.webservice.SoapRequest" start="23" end="160" sourcefile="SoapRequest.java" sourcepath="cn/hutool/http/webservice/SoapRequest.java">
+        <Message>At SoapRequest.java:[lines 23-160]</Message>
+      </SourceLine>
+      <Message>In class cn.hutool.http.webservice.SoapRequest</Message>
+    </Class>
+    <Method classname="cn.hutool.http.webservice.SoapRequest" name="setParams" signature="(Ljava/util/Map;)Lcn/hutool/http/webservice/SoapRequest;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.webservice.SoapRequest" start="102" end="103" startBytecode="0" endBytecode="80" sourcefile="SoapRequest.java" sourcepath="cn/hutool/http/webservice/SoapRequest.java"/>
+      <Message>In method cn.hutool.http.webservice.SoapRequest.setParams(Map)</Message>
+    </Method>
+    <Field classname="cn.hutool.http.webservice.SoapRequest" name="params" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="cn.hutool.http.webservice.SoapRequest" sourcefile="SoapRequest.java" sourcepath="cn/hutool/http/webservice/SoapRequest.java">
+        <Message>In SoapRequest.java</Message>
+      </SourceLine>
+      <Message>Field cn.hutool.http.webservice.SoapRequest.params</Message>
+    </Field>
+    <LocalVariable name="params" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named params</Message>
+    </LocalVariable>
+    <SourceLine classname="cn.hutool.http.webservice.SoapRequest" primary="true" start="102" end="102" startBytecode="2" endBytecode="2" sourcefile="SoapRequest.java" sourcepath="cn/hutool/http/webservice/SoapRequest.java">
+      <Message>At SoapRequest.java:[line 102]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="RV_CHECK_FOR_POSITIVE_INDEXOF" abbrev="RV" category="STYLE">
+    <ShortDescription>Method checks to see if result of String.indexOf is positive</ShortDescription>
+    <Details><![CDATA[
+
+   <p> The method invokes String.indexOf and checks to see if the result is positive or non-positive.
+   It is much more typical to check to see if the result is negative or non-negative. It is
+   positive only if the substring checked for occurs at some place other than at the beginning of
+   the String.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="WMI_WRONG_MAP_ITERATOR" abbrev="WMI" category="PERFORMANCE">
+    <ShortDescription>Inefficient use of keySet iterator instead of entrySet iterator</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        ]]></Details>
+  </BugPattern>
+  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
+    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 5) explicitly.</p>
+
+<p> For example:</p>
+<pre><code>// This is bad
+String s = "";
+for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+}
+
+// This is better
+StringBuffer buf = new StringBuffer();
+for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+}
+String s = buf.toString();
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_EXPOSE_REP" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Public static method may expose internal representation by returning a mutable object or array</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A public static method returns a reference to a mutable object or
+   an array that is part of the static state of the class.
+   Any code that calls this method can freely modify
+   the underlying array.
+   One fix is to return a copy of the array.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CT_CONSTRUCTOR_THROW" abbrev="CT" category="BAD_PRACTICE">
+    <ShortDescription>Be wary of letting constructors throw exceptions.</ShortDescription>
+    <Details><![CDATA[
+      
+            <p>Classes that throw exceptions in their constructors are vulnerable to Finalizer attacks</p>
+
+            <p>A finalizer attack can be prevented, by declaring the class final, using an empty finalizer declared as final, or by a clever use of a private constructor.</p>
+
+            <p>See <a href="https://wiki.sei.cmu.edu/confluence/display/java/OBJ11-J.+Be+wary+of+letting+constructors+throw+exceptions"><code>SEI CERT Rule OBJ-11</code></a>
+            for more information.
+            </p>
+            
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="BC_UNCONFIRMED_CAST_OF_RETURN_VALUE" abbrev="BC" category="STYLE">
+    <ShortDescription>Unchecked/unconfirmed cast of return value from method</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This code performs an unchecked cast of the return value of a method.
+The code might be calling the method in such a way that the cast is guaranteed to be
+safe, but SpotBugs is unable to verify that the cast is safe.  Check that your program logic ensures that this
+cast will not fail.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" abbrev="PZLA" category="STYLE">
+    <ShortDescription>Consider returning a zero length array rather than null</ShortDescription>
+    <Details><![CDATA[
+
+<p> It is often a better design to
+return a length zero array rather than a null reference to indicate that there
+are no results (i.e., an empty list of results).
+This way, no explicit check for null is needed by clients of the method.</p>
+
+<p>On the other hand, using null to indicate
+"there is no answer to this question" is probably appropriate.
+For example, <code>File.listFiles()</code> returns an empty list
+if given a directory containing no files, and returns null if the file
+is not a directory.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR" abbrev="MC" category="MALICIOUS_CODE">
+    <ShortDescription>An overridable method is called from a constructor</ShortDescription>
+    <Details><![CDATA[
+      <p>
+      Calling an overridable method during in a constructor may result in the use of uninitialized data. It may also
+      leak the this reference of the partially constructed object. Only static, final or private methods should be
+      invoked from a constructor.</p>
+      <p>
+      See SEI CERT rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/MET05-J.+Ensure+that+constructors+do+not+call+overridable+methods">MET05-J. Ensure that constructors do not call overridable methods</a>.
+      </p>
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EQ_DOESNT_OVERRIDE_EQUALS" abbrev="Eq" category="STYLE">
+    <ShortDescription>Class doesn&apos;t override equals in superclass</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class extends a class that defines an equals method and adds fields, but doesn't
+define an equals method itself. Thus, equality on instances of this class will
+ignore the identity of the subclass and the added fields. Be sure this is what is intended,
+and that you don't need to override the equals method. Even if you don't need to override
+the equals method, consider overriding it anyway to document the fact
+that the equals method for the subclass just return the result of
+invoking super.equals(o).
+  </p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="CI_CONFUSED_INHERITANCE" abbrev="CI" category="STYLE">
+    <ShortDescription>Class is final but declares protected field</ShortDescription>
+    <Details><![CDATA[
+      
+      <p>
+      This class is declared to be final, but declares fields to be protected. Since the class
+      is final, it cannot be derived from, and the use of protected is confusing. The access
+      modifier for the field should be changed to private or public to represent the true
+      use for the field.
+      </p>
+      
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_CONVERT_CASE" abbrev="Dm" category="I18N">
+    <ShortDescription>Consider using Locale parameterized version of invoked method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A String is being converted to upper or lowercase, using the platform's default encoding. This may
+      result in improper conversions when used with international characters. Use the </p>
+      <ul>
+    <li>String.toUpperCase( Locale l )</li>
+    <li>String.toLowerCase( Locale l )</li>
+    </ul>
+      <p>versions instead.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="BC">
+    <Description>Bad casts of object references</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="RV" cweid="440">
+    <Description>Bad use of return value from method</Description>
+  </BugCode>
+  <BugCode abbrev="CI">
+    <Description>Confused Inheritance</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="Eq">
+    <Description>Problems with implementation of equals()</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <BugCode abbrev="CT">
+    <Description>Constructor throws</Description>
+  </BugCode>
+  <BugCode abbrev="WMI">
+    <Description>Inefficient Map Iterator</Description>
+  </BugCode>
+  <BugCode abbrev="MC">
+    <Description>Dangerous call to overridable method</Description>
+  </BugCode>
+  <BugCode abbrev="SBSC">
+    <Description>String concatenation in loop using + operator</Description>
+  </BugCode>
+  <BugCode abbrev="PZLA">
+    <Description>Prefer zero length arrays to null to indicate no results</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="30">
+    <MissingClass>cn.hutool.core.codec.Base64</MissingClass>
+    <MissingClass>cn.hutool.core.collection.CollUtil</MissingClass>
+    <MissingClass>cn.hutool.core.collection.CollectionUtil</MissingClass>
+    <MissingClass>cn.hutool.core.convert.Convert</MissingClass>
+    <MissingClass>cn.hutool.core.io.FastByteArrayOutputStream</MissingClass>
+    <MissingClass>cn.hutool.core.io.FileUtil</MissingClass>
+    <MissingClass>cn.hutool.core.io.IORuntimeException</MissingClass>
+    <MissingClass>cn.hutool.core.io.IoUtil</MissingClass>
+    <MissingClass>cn.hutool.core.io.StreamProgress</MissingClass>
+    <MissingClass>cn.hutool.core.io.resource.BytesResource</MissingClass>
+    <MissingClass>cn.hutool.core.io.resource.FileResource</MissingClass>
+    <MissingClass>cn.hutool.core.io.resource.MultiFileResource</MissingClass>
+    <MissingClass>cn.hutool.core.io.resource.MultiResource</MissingClass>
+    <MissingClass>cn.hutool.core.io.resource.Resource</MissingClass>
+    <MissingClass>cn.hutool.core.lang.Assert</MissingClass>
+    <MissingClass>cn.hutool.core.map.CaseInsensitiveMap</MissingClass>
+    <MissingClass>cn.hutool.core.map.MapUtil</MissingClass>
+    <MissingClass>cn.hutool.core.text.StrBuilder</MissingClass>
+    <MissingClass>cn.hutool.core.util.ArrayUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.CharsetUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ObjectUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.RandomUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.ReUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.StrUtil</MissingClass>
+    <MissingClass>cn.hutool.core.util.URLUtil</MissingClass>
+    <MissingClass>cn.hutool.json.JSON</MissingClass>
+    <MissingClass>cn.hutool.log.Log</MissingClass>
+    <MissingClass>cn.hutool.log.LogFactory</MissingClass>
+    <MissingClass>cn.hutool.log.StaticLog</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:31:35 +0900" total_classes="30" referenced_classes="150" total_bugs="33" total_size="2072" num_packages="5" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="2.09" clock_seconds="2.74" peak_mbytes="262.16" alloc_mbytes="4078.00" gc_seconds="0.06" priority_3="12" priority_2="19" priority_1="2">
+    <FileStats path="cn/hutool/http/ContentType.java" bugCount="0" size="35"/>
+    <FileStats path="cn/hutool/http/GlobalHeaders.java" bugCount="1" size="70" bugHash="4b1d5ea6db8b7469271d9ce6d68028e7"/>
+    <FileStats path="cn/hutool/http/HTMLFilter.java" bugCount="3" size="331" bugHash="a21b30e53f3de28463ed5ff0df9872d8"/>
+    <FileStats path="cn/hutool/http/Header.java" bugCount="0" size="63"/>
+    <FileStats path="cn/hutool/http/HtmlUtil.java" bugCount="0" size="69"/>
+    <FileStats path="cn/hutool/http/HttpBase.java" bugCount="0" size="93"/>
+    <FileStats path="cn/hutool/http/HttpConnection.java" bugCount="5" size="162" bugHash="a4fc21ebdac148fb8d99caf0dc44c74d"/>
+    <FileStats path="cn/hutool/http/HttpException.java" bugCount="0" size="17"/>
+    <FileStats path="cn/hutool/http/HttpRequest.java" bugCount="8" size="336" bugHash="bb5b64f56a85ea162106bfdb79c290d5"/>
+    <FileStats path="cn/hutool/http/HttpResponse.java" bugCount="2" size="143" bugHash="d704f7c7eb4e658a2752146af8ff4182"/>
+    <FileStats path="cn/hutool/http/HttpStatus.java" bugCount="0" size="39"/>
+    <FileStats path="cn/hutool/http/HttpUtil.java" bugCount="2" size="284" bugHash="f7db4022151c96da258afe27f16e0316"/>
+    <FileStats path="cn/hutool/http/Method.java" bugCount="0" size="17"/>
+    <FileStats path="cn/hutool/http/Status.java" bugCount="0" size="36"/>
+    <FileStats path="cn/hutool/http/cookie/ThreadLocalCookieStore.java" bugCount="0" size="30"/>
+    <FileStats path="cn/hutool/http/ssl/AndroidSupportSSLFactory.java" bugCount="1" size="7" bugHash="a4ed1b45a96c9da4d3f67f658b74b94a"/>
+    <FileStats path="cn/hutool/http/ssl/CustomProtocolsSSLFactory.java" bugCount="7" size="41" bugHash="0e8a50bd5c39f410db2c8d5c8c3f2170"/>
+    <FileStats path="cn/hutool/http/ssl/DefaultTrustManager.java" bugCount="1" size="9" bugHash="67774adfefee2dd8cd4284bc2af6065a"/>
+    <FileStats path="cn/hutool/http/ssl/SSLSocketFactoryBuilder.java" bugCount="1" size="39" bugHash="af91b3111015e9232693c0b03e5f959b"/>
+    <FileStats path="cn/hutool/http/ssl/TrustAnyHostnameVerifier.java" bugCount="0" size="5"/>
+    <FileStats path="cn/hutool/http/useragent/Browser.java" bugCount="1" size="19" bugHash="c6d2a8f2fbae6adbfb35b7892764c5c7"/>
+    <FileStats path="cn/hutool/http/useragent/Engine.java" bugCount="0" size="9"/>
+    <FileStats path="cn/hutool/http/useragent/OS.java" bugCount="0" size="9"/>
+    <FileStats path="cn/hutool/http/useragent/Platform.java" bugCount="0" size="15"/>
+    <FileStats path="cn/hutool/http/useragent/UserAgent.java" bugCount="0" size="45"/>
+    <FileStats path="cn/hutool/http/useragent/UserAgentInfo.java" bugCount="0" size="41"/>
+    <FileStats path="cn/hutool/http/useragent/UserAgentParser.java" bugCount="0" size="45"/>
+    <FileStats path="cn/hutool/http/useragent/UserAgentUtil.java" bugCount="0" size="5"/>
+    <FileStats path="cn/hutool/http/webservice/SoapRequest.java" bugCount="1" size="58" bugHash="79e48ac98f62e475562f1904c06e92cd"/>
+    <PackageStats package="cn.hutool.http" total_bugs="21" total_types="14" total_size="1695" priority_3="5" priority_2="14" priority_1="2">
+      <ClassStats class="cn.hutool.http.ContentType" sourceFile="ContentType.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="cn.hutool.http.GlobalHeaders" sourceFile="GlobalHeaders.java" interface="false" size="70" bugs="1" priority_3="1"/>
+      <ClassStats class="cn.hutool.http.HTMLFilter" sourceFile="HTMLFilter.java" interface="false" size="331" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="cn.hutool.http.Header" sourceFile="Header.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="cn.hutool.http.HtmlUtil" sourceFile="HtmlUtil.java" interface="false" size="69" bugs="0"/>
+      <ClassStats class="cn.hutool.http.HttpBase" sourceFile="HttpBase.java" interface="false" size="93" bugs="0"/>
+      <ClassStats class="cn.hutool.http.HttpConnection" sourceFile="HttpConnection.java" interface="false" size="162" bugs="5" priority_3="1" priority_2="4"/>
+      <ClassStats class="cn.hutool.http.HttpException" sourceFile="HttpException.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cn.hutool.http.HttpRequest" sourceFile="HttpRequest.java" interface="false" size="336" bugs="8" priority_2="7" priority_1="1"/>
+      <ClassStats class="cn.hutool.http.HttpResponse" sourceFile="HttpResponse.java" interface="false" size="143" bugs="2" priority_2="1" priority_1="1"/>
+      <ClassStats class="cn.hutool.http.HttpStatus" sourceFile="HttpStatus.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="cn.hutool.http.HttpUtil" sourceFile="HttpUtil.java" interface="false" size="284" bugs="2" priority_3="2"/>
+      <ClassStats class="cn.hutool.http.Method" sourceFile="Method.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="cn.hutool.http.Status" sourceFile="Status.java" interface="true" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.hutool.http.cookie" total_bugs="0" total_types="2" total_size="30">
+      <ClassStats class="cn.hutool.http.cookie.ThreadLocalCookieStore" sourceFile="ThreadLocalCookieStore.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="cn.hutool.http.cookie.ThreadLocalCookieStore$1" sourceFile="ThreadLocalCookieStore.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.hutool.http.ssl" total_bugs="10" total_types="5" total_size="101" priority_3="7" priority_2="3">
+      <ClassStats class="cn.hutool.http.ssl.AndroidSupportSSLFactory" sourceFile="AndroidSupportSSLFactory.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.hutool.http.ssl.CustomProtocolsSSLFactory" sourceFile="CustomProtocolsSSLFactory.java" interface="false" size="41" bugs="7" priority_3="6" priority_2="1"/>
+      <ClassStats class="cn.hutool.http.ssl.DefaultTrustManager" sourceFile="DefaultTrustManager.java" interface="false" size="9" bugs="1" priority_3="1"/>
+      <ClassStats class="cn.hutool.http.ssl.SSLSocketFactoryBuilder" sourceFile="SSLSocketFactoryBuilder.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.hutool.http.ssl.TrustAnyHostnameVerifier" sourceFile="TrustAnyHostnameVerifier.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.hutool.http.useragent" total_bugs="1" total_types="8" total_size="188" priority_2="1">
+      <ClassStats class="cn.hutool.http.useragent.Browser" sourceFile="Browser.java" interface="false" size="19" bugs="1" priority_2="1"/>
+      <ClassStats class="cn.hutool.http.useragent.Engine" sourceFile="Engine.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.OS" sourceFile="OS.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.Platform" sourceFile="Platform.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.UserAgent" sourceFile="UserAgent.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.UserAgentInfo" sourceFile="UserAgentInfo.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.UserAgentParser" sourceFile="UserAgentParser.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="cn.hutool.http.useragent.UserAgentUtil" sourceFile="UserAgentUtil.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="cn.hutool.http.webservice" total_bugs="1" total_types="1" total_size="58" priority_2="1">
+      <ClassStats class="cn.hutool.http.webservice.SoapRequest" sourceFile="SoapRequest.java" interface="false" size="58" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="289" invocations="1047" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="8819" standardDeviationMicrosecondsPerInvocation="609"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="121" invocations="150" avgMicrosecondsPerInvocation="811" maxMicrosecondsPerInvocation="16103" standardDeviationMicrosecondsPerInvocation="1819"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="101" invocations="747" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="2559" standardDeviationMicrosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="100" invocations="367" avgMicrosecondsPerInvocation="275" maxMicrosecondsPerInvocation="8397" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="89" invocations="150" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="6754" standardDeviationMicrosecondsPerInvocation="1084"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="87" invocations="365" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="11703" standardDeviationMicrosecondsPerInvocation="708"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="87" invocations="372" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="9382" standardDeviationMicrosecondsPerInvocation="753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="84" invocations="372" avgMicrosecondsPerInvocation="226" maxMicrosecondsPerInvocation="7865" standardDeviationMicrosecondsPerInvocation="563"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="79" invocations="366" avgMicrosecondsPerInvocation="218" maxMicrosecondsPerInvocation="7667" standardDeviationMicrosecondsPerInvocation="572"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="56" invocations="367" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="6124" standardDeviationMicrosecondsPerInvocation="360"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="53" invocations="150" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="10137" standardDeviationMicrosecondsPerInvocation="1098"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="48" invocations="310" avgMicrosecondsPerInvocation="155" maxMicrosecondsPerInvocation="3520" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="42" invocations="150" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="11460" standardDeviationMicrosecondsPerInvocation="1116"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="41" invocations="1055" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="2432" standardDeviationMicrosecondsPerInvocation="98"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="40" invocations="30" avgMicrosecondsPerInvocation="1358" maxMicrosecondsPerInvocation="31132" standardDeviationMicrosecondsPerInvocation="5541"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="36" invocations="239" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="13001" standardDeviationMicrosecondsPerInvocation="858"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="35" invocations="367" avgMicrosecondsPerInvocation="97" maxMicrosecondsPerInvocation="15261" standardDeviationMicrosecondsPerInvocation="798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="31" invocations="150" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="2708" standardDeviationMicrosecondsPerInvocation="416"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="26" invocations="965" avgMicrosecondsPerInvocation="27" maxMicrosecondsPerInvocation="693" standardDeviationMicrosecondsPerInvocation="56"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="26" invocations="367" avgMicrosecondsPerInvocation="72" maxMicrosecondsPerInvocation="2525" standardDeviationMicrosecondsPerInvocation="202"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="26" invocations="30" avgMicrosecondsPerInvocation="868" maxMicrosecondsPerInvocation="11014" standardDeviationMicrosecondsPerInvocation="2395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="24" invocations="30" avgMicrosecondsPerInvocation="823" maxMicrosecondsPerInvocation="4327" standardDeviationMicrosecondsPerInvocation="1006"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="24" invocations="150" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="2748" standardDeviationMicrosecondsPerInvocation="346"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="23" invocations="150" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="7391" standardDeviationMicrosecondsPerInvocation="624"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="22" invocations="150" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="1731" standardDeviationMicrosecondsPerInvocation="264"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="20" invocations="150" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="2048" standardDeviationMicrosecondsPerInvocation="315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="20" invocations="150" avgMicrosecondsPerInvocation="135" maxMicrosecondsPerInvocation="6055" standardDeviationMicrosecondsPerInvocation="610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="20" invocations="30" avgMicrosecondsPerInvocation="669" maxMicrosecondsPerInvocation="5387" standardDeviationMicrosecondsPerInvocation="1046"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.obl.ObligationAnalysis" totalMilliseconds="16" invocations="153" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="1311" standardDeviationMicrosecondsPerInvocation="167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteRecursiveLoop" totalMilliseconds="16" invocations="30" avgMicrosecondsPerInvocation="542" maxMicrosecondsPerInvocation="9522" standardDeviationMicrosecondsPerInvocation="1703"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="15" invocations="7602" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="678" standardDeviationMicrosecondsPerInvocation="11"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="14" invocations="365" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="1090" standardDeviationMicrosecondsPerInvocation="84"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="14" invocations="367" avgMicrosecondsPerInvocation="38" maxMicrosecondsPerInvocation="4692" standardDeviationMicrosecondsPerInvocation="256"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="13" invocations="30" avgMicrosecondsPerInvocation="457" maxMicrosecondsPerInvocation="2610" standardDeviationMicrosecondsPerInvocation="668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="13" invocations="30" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="3763" standardDeviationMicrosecondsPerInvocation="856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="13" invocations="30" avgMicrosecondsPerInvocation="436" maxMicrosecondsPerInvocation="2676" standardDeviationMicrosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="13" invocations="30" avgMicrosecondsPerInvocation="434" maxMicrosecondsPerInvocation="4012" standardDeviationMicrosecondsPerInvocation="912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.MethodReturnCheck" totalMilliseconds="12" invocations="30" avgMicrosecondsPerInvocation="431" maxMicrosecondsPerInvocation="4023" standardDeviationMicrosecondsPerInvocation="797"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

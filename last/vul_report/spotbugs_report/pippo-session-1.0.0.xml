@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013261525" analysisTimestamp="1702018637258" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\pippo-session-1.0.0.jar</Jar>
+  </Project>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" instanceHash="2d5b3057d7c2d1ff218c94b77c16ef9f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortMessage>
+    <LongMessage>ro.pippo.session.SessionData is Serializable; consider declaring a serialVersionUID</LongMessage>
+    <Class classname="ro.pippo.session.SessionData" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionData" start="42" end="130" sourcefile="SessionData.java" sourcepath="ro/pippo/session/SessionData.java">
+        <Message>At SessionData.java:[lines 42-130]</Message>
+      </SourceLine>
+      <Message>In class ro.pippo.session.SessionData</Message>
+    </Class>
+    <SourceLine classname="ro.pippo.session.SessionData" start="42" end="130" sourcefile="SessionData.java" sourcepath="ro/pippo/session/SessionData.java" synthetic="true">
+      <Message>At SessionData.java:[lines 42-130]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3d02bd633407f568218e9b82df03c955" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>ro.pippo.session.SessionHttpServletRequest.getSession(boolean) may expose internal representation by returning SessionHttpServletRequest.currentSession</LongMessage>
+    <Class classname="ro.pippo.session.SessionHttpServletRequest" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" start="26" end="135" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java">
+        <Message>At SessionHttpServletRequest.java:[lines 26-135]</Message>
+      </SourceLine>
+      <Message>In class ro.pippo.session.SessionHttpServletRequest</Message>
+    </Class>
+    <Method classname="ro.pippo.session.SessionHttpServletRequest" name="getSession" signature="(Z)Ljavax/servlet/http/HttpSession;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" start="41" end="64" startBytecode="0" endBytecode="249" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java"/>
+      <Message>In method ro.pippo.session.SessionHttpServletRequest.getSession(boolean)</Message>
+    </Method>
+    <Field classname="ro.pippo.session.SessionHttpServletRequest" name="currentSession" signature="Lro/pippo/session/PippoHttpSession;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java">
+        <Message>In SessionHttpServletRequest.java</Message>
+      </SourceLine>
+      <Message>Field ro.pippo.session.SessionHttpServletRequest.currentSession</Message>
+    </Field>
+    <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" primary="true" start="42" end="42" startBytecode="11" endBytecode="11" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java">
+      <Message>At SessionHttpServletRequest.java:[line 42]</Message>
+    </SourceLine>
+    <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" start="53" end="53" startBytecode="65" endBytecode="65" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at SessionHttpServletRequest.java:[line 53]</Message>
+    </SourceLine>
+    <SourceLine classname="ro.pippo.session.SessionHttpServletRequest" start="64" end="64" startBytecode="95" endBytecode="95" sourcefile="SessionHttpServletRequest.java" sourcepath="ro/pippo/session/SessionHttpServletRequest.java" role="SOURCE_LINE_ANOTHER_INSTANCE">
+      <Message>Another occurrence at SessionHttpServletRequest.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="fe1eb2603055a3ccd6c23d4b93802297" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>ro.pippo.session.SessionManager.getSessionDataStorage() may expose internal representation by returning SessionManager.sessionDataStorage</LongMessage>
+    <Class classname="ro.pippo.session.SessionManager" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" start="27" end="44" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+        <Message>At SessionManager.java:[lines 27-44]</Message>
+      </SourceLine>
+      <Message>In class ro.pippo.session.SessionManager</Message>
+    </Class>
+    <Method classname="ro.pippo.session.SessionManager" name="getSessionDataStorage" signature="()Lro/pippo/session/SessionDataStorage;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" start="40" end="40" startBytecode="0" endBytecode="46" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java"/>
+      <Message>In method ro.pippo.session.SessionManager.getSessionDataStorage()</Message>
+    </Method>
+    <Field classname="ro.pippo.session.SessionManager" name="sessionDataStorage" signature="Lro/pippo/session/SessionDataStorage;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+        <Message>In SessionManager.java</Message>
+      </SourceLine>
+      <Message>Field ro.pippo.session.SessionManager.sessionDataStorage</Message>
+    </Field>
+    <SourceLine classname="ro.pippo.session.SessionManager" primary="true" start="40" end="40" startBytecode="4" endBytecode="4" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+      <Message>At SessionManager.java:[line 40]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="50c9836359818d851332be979011a769" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ro.pippo.session.SessionManager(SessionDataStorage, SessionStrategy) may expose internal representation by storing an externally mutable object into SessionManager.sessionDataStorage</LongMessage>
+    <Class classname="ro.pippo.session.SessionManager" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" start="27" end="44" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+        <Message>At SessionManager.java:[lines 27-44]</Message>
+      </SourceLine>
+      <Message>In class ro.pippo.session.SessionManager</Message>
+    </Class>
+    <Method classname="ro.pippo.session.SessionManager" name="&lt;init&gt;" signature="(Lro/pippo/session/SessionDataStorage;Lro/pippo/session/SessionStrategy;)V" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" start="34" end="37" startBytecode="0" endBytecode="88" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java"/>
+      <Message>In method new ro.pippo.session.SessionManager(SessionDataStorage, SessionStrategy)</Message>
+    </Method>
+    <Field classname="ro.pippo.session.SessionManager" name="sessionDataStorage" signature="Lro/pippo/session/SessionDataStorage;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionManager" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+        <Message>In SessionManager.java</Message>
+      </SourceLine>
+      <Message>Field ro.pippo.session.SessionManager.sessionDataStorage</Message>
+    </Field>
+    <LocalVariable name="sessionDataStorage" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named sessionDataStorage</Message>
+    </LocalVariable>
+    <SourceLine classname="ro.pippo.session.SessionManager" primary="true" start="35" end="35" startBytecode="6" endBytecode="6" sourcefile="SessionManager.java" sourcepath="ro/pippo/session/SessionManager.java">
+      <Message>At SessionManager.java:[line 35]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE" instanceHash="655367253e8d07da8853c4aaf618c272" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Could be refactored into a named static inner class</ShortMessage>
+    <LongMessage>The class ro.pippo.session.SessionRequestResponseFactory$1 could be refactored into a named _static_ inner class</LongMessage>
+    <Class classname="ro.pippo.session.SessionRequestResponseFactory$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="ro.pippo.session.SessionRequestResponseFactory$1" start="42" end="47" sourcefile="SessionRequestResponseFactory.java" sourcepath="ro/pippo/session/SessionRequestResponseFactory.java">
+        <Message>At SessionRequestResponseFactory.java:[lines 42-47]</Message>
+      </SourceLine>
+      <Message>Anonymous class ro.pippo.session.SessionRequestResponseFactory$1</Message>
+    </Class>
+    <Class classname="ro.pippo.session.SessionRequestResponseFactory" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionRequestResponseFactory" start="34" end="51" sourcefile="SessionRequestResponseFactory.java" sourcepath="ro/pippo/session/SessionRequestResponseFactory.java">
+        <Message>At SessionRequestResponseFactory.java:[lines 34-51]</Message>
+      </SourceLine>
+      <Message>In class ro.pippo.session.SessionRequestResponseFactory</Message>
+    </Class>
+    <Method classname="ro.pippo.session.SessionRequestResponseFactory" name="createRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Lro/pippo/core/Response;)Lro/pippo/core/Request;" isStatic="false" primary="true">
+      <SourceLine classname="ro.pippo.session.SessionRequestResponseFactory" start="41" end="51" startBytecode="0" endBytecode="115" sourcefile="SessionRequestResponseFactory.java" sourcepath="ro/pippo/session/SessionRequestResponseFactory.java"/>
+      <Message>In method ro.pippo.session.SessionRequestResponseFactory.createRequest(HttpServletRequest, Response)</Message>
+    </Method>
+    <SourceLine classname="ro.pippo.session.SessionRequestResponseFactory" primary="true" start="42" end="42" startBytecode="23" endBytecode="23" sourcefile="SessionRequestResponseFactory.java" sourcepath="ro/pippo/session/SessionRequestResponseFactory.java">
+      <Message>At SessionRequestResponseFactory.java:[line 42]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SIC_INNER_SHOULD_BE_STATIC_ANON" abbrev="SIC" category="PERFORMANCE">
+    <ShortDescription>Could be refactored into a named static inner class</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+  made into a <em>static</em> inner class. Since anonymous inner
+classes cannot be marked as static, doing this will require refactoring
+the inner class so that it is a named inner class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_NO_SERIALVERSIONID" abbrev="SnVI" category="BAD_PRACTICE">
+    <ShortDescription>Class is Serializable, but doesn&apos;t define serialVersionUID</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="SnVI">
+    <Description>Serializable class with no Version ID</Description>
+  </BugCode>
+  <BugCode abbrev="SIC">
+    <Description>Inner class could be made static</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="14">
+    <MissingClass>javax.servlet.ServletContext</MissingClass>
+    <MissingClass>javax.servlet.http.Cookie</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequestWrapper</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>ro.pippo.core.Application</MissingClass>
+    <MissingClass>ro.pippo.core.PippoRuntimeException</MissingClass>
+    <MissingClass>ro.pippo.core.RequestResponseFactory</MissingClass>
+    <MissingClass>ro.pippo.core.Response</MissingClass>
+    <MissingClass>ro.pippo.core.ResponseFinalizeListener</MissingClass>
+    <MissingClass>ro.pippo.core.ResponseFinalizeListenerList</MissingClass>
+    <MissingClass>ro.pippo.core.util.CookieUtils</MissingClass>
+    <MissingClass>ro.pippo.core.util.CryptoUtils</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:27:41 +0900" total_classes="19" referenced_classes="62" total_bugs="5" total_size="411" num_packages="1" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.00" clock_seconds="1.27" peak_mbytes="223.67" alloc_mbytes="4078.00" gc_seconds="0.02" priority_3="2" priority_2="3">
+    <FileStats path="ro/pippo/session/BaseEncryptor.java" bugCount="0" size="18"/>
+    <FileStats path="ro/pippo/session/CookieSessionStrategy.java" bugCount="0" size="25"/>
+    <FileStats path="ro/pippo/session/DefaultEncryptor.java" bugCount="0" size="4"/>
+    <FileStats path="ro/pippo/session/EncryptedSessionDataTranscoder.java" bugCount="0" size="65"/>
+    <FileStats path="ro/pippo/session/Encryptor.java" bugCount="0" size="3"/>
+    <FileStats path="ro/pippo/session/MemorySessionDataStorage.java" bugCount="0" size="23"/>
+    <FileStats path="ro/pippo/session/PippoHttpSession.java" bugCount="0" size="81"/>
+    <FileStats path="ro/pippo/session/SerializationSessionDataTranscoder.java" bugCount="0" size="18"/>
+    <FileStats path="ro/pippo/session/SessionData.java" bugCount="1" size="59" bugHash="8fd53c4efae1042da2e944fcba4cb382"/>
+    <FileStats path="ro/pippo/session/SessionDataStorage.java" bugCount="0" size="5"/>
+    <FileStats path="ro/pippo/session/SessionDataTranscoder.java" bugCount="0" size="3"/>
+    <FileStats path="ro/pippo/session/SessionHttpServletRequest.java" bugCount="1" size="67" bugHash="4930d9be0041384e7699233cefd48981"/>
+    <FileStats path="ro/pippo/session/SessionManager.java" bugCount="2" size="18" bugHash="9a04efaa606615dbaeef67b81f4d51e6"/>
+    <FileStats path="ro/pippo/session/SessionRequestResponseFactory.java" bugCount="1" size="18" bugHash="87e78c2ba8b13091039f1104f27c3b00"/>
+    <FileStats path="ro/pippo/session/SessionStrategy.java" bugCount="0" size="4"/>
+    <PackageStats package="ro.pippo.session" total_bugs="5" total_types="19" total_size="411" priority_3="2" priority_2="3">
+      <ClassStats class="ro.pippo.session.BaseEncryptor" sourceFile="BaseEncryptor.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ro.pippo.session.CookieSessionStrategy" sourceFile="CookieSessionStrategy.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="ro.pippo.session.DefaultEncryptor" sourceFile="DefaultEncryptor.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="ro.pippo.session.EncryptedSessionDataTranscoder" sourceFile="EncryptedSessionDataTranscoder.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="ro.pippo.session.EncryptedSessionDataTranscoder$1" sourceFile="EncryptedSessionDataTranscoder.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ro.pippo.session.EncryptedSessionDataTranscoder$Builder" sourceFile="EncryptedSessionDataTranscoder.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="ro.pippo.session.Encryptor" sourceFile="Encryptor.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ro.pippo.session.MemorySessionDataStorage" sourceFile="MemorySessionDataStorage.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="ro.pippo.session.PippoHttpSession" sourceFile="PippoHttpSession.java" interface="false" size="81" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SerializationSessionDataTranscoder" sourceFile="SerializationSessionDataTranscoder.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SessionData" sourceFile="SessionData.java" interface="false" size="59" bugs="1" priority_3="1"/>
+      <ClassStats class="ro.pippo.session.SessionDataStorage" sourceFile="SessionDataStorage.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SessionDataTranscoder" sourceFile="SessionDataTranscoder.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SessionHttpServletRequest" sourceFile="SessionHttpServletRequest.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="ro.pippo.session.SessionHttpServletRequest$1" sourceFile="SessionHttpServletRequest.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SessionManager" sourceFile="SessionManager.java" interface="false" size="18" bugs="2" priority_2="2"/>
+      <ClassStats class="ro.pippo.session.SessionRequestResponseFactory" sourceFile="SessionRequestResponseFactory.java" interface="false" size="10" bugs="1" priority_3="1"/>
+      <ClassStats class="ro.pippo.session.SessionRequestResponseFactory$1" sourceFile="SessionRequestResponseFactory.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="ro.pippo.session.SessionStrategy" sourceFile="SessionStrategy.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="205" invocations="720" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="9840" standardDeviationMicrosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="54" invocations="62" avgMicrosecondsPerInvocation="882" maxMicrosecondsPerInvocation="8011" standardDeviationMicrosecondsPerInvocation="1669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="278" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="3621" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="40" invocations="62" avgMicrosecondsPerInvocation="652" maxMicrosecondsPerInvocation="5844" standardDeviationMicrosecondsPerInvocation="1140"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="36" invocations="107" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="29132" standardDeviationMicrosecondsPerInvocation="2798"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="28" invocations="727" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="2343" standardDeviationMicrosecondsPerInvocation="107"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="26" invocations="96" avgMicrosecondsPerInvocation="278" maxMicrosecondsPerInvocation="4727" standardDeviationMicrosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="26" invocations="96" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="8797" standardDeviationMicrosecondsPerInvocation="924"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="24" invocations="96" avgMicrosecondsPerInvocation="259" maxMicrosecondsPerInvocation="2913" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="23" invocations="117" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="10429" standardDeviationMicrosecondsPerInvocation="976"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindReturnRef" totalMilliseconds="23" invocations="19" avgMicrosecondsPerInvocation="1222" maxMicrosecondsPerInvocation="20757" standardDeviationMicrosecondsPerInvocation="4610"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="22" invocations="663" avgMicrosecondsPerInvocation="34" maxMicrosecondsPerInvocation="920" standardDeviationMicrosecondsPerInvocation="76"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="21" invocations="96" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="6066" standardDeviationMicrosecondsPerInvocation="639"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="19" invocations="96" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="5408" standardDeviationMicrosecondsPerInvocation="560"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="19" invocations="96" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="2111" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="18" invocations="62" avgMicrosecondsPerInvocation="301" maxMicrosecondsPerInvocation="4556" standardDeviationMicrosecondsPerInvocation="671"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="62" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="3853" standardDeviationMicrosecondsPerInvocation="652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="13" invocations="62" avgMicrosecondsPerInvocation="221" maxMicrosecondsPerInvocation="6066" standardDeviationMicrosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="11" invocations="62" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="1522" standardDeviationMicrosecondsPerInvocation="322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="11" invocations="77" avgMicrosecondsPerInvocation="151" maxMicrosecondsPerInvocation="1290" standardDeviationMicrosecondsPerInvocation="210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="11" invocations="62" avgMicrosecondsPerInvocation="179" maxMicrosecondsPerInvocation="1166" standardDeviationMicrosecondsPerInvocation="278"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

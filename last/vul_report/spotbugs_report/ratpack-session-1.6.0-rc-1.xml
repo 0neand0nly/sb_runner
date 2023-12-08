@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013580828" analysisTimestamp="1702018733013" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\ratpack-session-1.6.0-rc-1.jar</Jar>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a13bef2cda8700dbaee235156934c705" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ratpack.session.clientside.internal.ClientSideSessionStore(Provider, Provider, Signer, Crypto, ByteBufAllocator, SessionCookieConfig, ClientSideSessionConfig) may expose internal representation by storing an externally mutable object into ClientSideSessionStore.config</LongMessage>
+    <Class classname="ratpack.session.clientside.internal.ClientSideSessionStore" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" start="79" end="341" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+        <Message>At ClientSideSessionStore.java:[lines 79-341]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.clientside.internal.ClientSideSessionStore</Message>
+    </Class>
+    <Method classname="ratpack.session.clientside.internal.ClientSideSessionStore" name="&lt;init&gt;" signature="(Ljavax/inject/Provider;Ljavax/inject/Provider;Lratpack/session/clientside/Signer;Lratpack/session/clientside/Crypto;Lio/netty/buffer/ByteBufAllocator;Lratpack/session/SessionCookieConfig;Lratpack/session/clientside/ClientSideSessionConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" start="79" end="90" startBytecode="0" endBytecode="255" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java"/>
+      <Message>In method new ratpack.session.clientside.internal.ClientSideSessionStore(Provider, Provider, Signer, Crypto, ByteBufAllocator, SessionCookieConfig, ClientSideSessionConfig)</Message>
+    </Method>
+    <Field classname="ratpack.session.clientside.internal.ClientSideSessionStore" name="config" signature="Lratpack/session/clientside/ClientSideSessionConfig;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+        <Message>In ClientSideSessionStore.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.clientside.internal.ClientSideSessionStore.config</Message>
+    </Field>
+    <LocalVariable name="config" register="7" pc="40" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named config</Message>
+    </LocalVariable>
+    <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" primary="true" start="86" end="86" startBytecode="40" endBytecode="40" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+      <Message>At ClientSideSessionStore.java:[line 86]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="da1ddf011788645e52c52c305e7a45ff" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ratpack.session.clientside.internal.ClientSideSessionStore(Provider, Provider, Signer, Crypto, ByteBufAllocator, SessionCookieConfig, ClientSideSessionConfig) may expose internal representation by storing an externally mutable object into ClientSideSessionStore.cookieConfig</LongMessage>
+    <Class classname="ratpack.session.clientside.internal.ClientSideSessionStore" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" start="79" end="341" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+        <Message>At ClientSideSessionStore.java:[lines 79-341]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.clientside.internal.ClientSideSessionStore</Message>
+    </Class>
+    <Method classname="ratpack.session.clientside.internal.ClientSideSessionStore" name="&lt;init&gt;" signature="(Ljavax/inject/Provider;Ljavax/inject/Provider;Lratpack/session/clientside/Signer;Lratpack/session/clientside/Crypto;Lio/netty/buffer/ByteBufAllocator;Lratpack/session/SessionCookieConfig;Lratpack/session/clientside/ClientSideSessionConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" start="79" end="90" startBytecode="0" endBytecode="255" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java"/>
+      <Message>In method new ratpack.session.clientside.internal.ClientSideSessionStore(Provider, Provider, Signer, Crypto, ByteBufAllocator, SessionCookieConfig, ClientSideSessionConfig)</Message>
+    </Method>
+    <Field classname="ratpack.session.clientside.internal.ClientSideSessionStore" name="cookieConfig" signature="Lratpack/session/SessionCookieConfig;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+        <Message>In ClientSideSessionStore.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.clientside.internal.ClientSideSessionStore.cookieConfig</Message>
+    </Field>
+    <LocalVariable name="cookieConfig" register="6" pc="34" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named cookieConfig</Message>
+    </LocalVariable>
+    <SourceLine classname="ratpack.session.clientside.internal.ClientSideSessionStore" primary="true" start="85" end="85" startBytecode="34" endBytecode="34" sourcefile="ClientSideSessionStore.java" sourcepath="ratpack/session/clientside/internal/ClientSideSessionStore.java">
+      <Message>At ClientSideSessionStore.java:[line 85]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" instanceHash="d412dff4bb2029463bc3989481730e4a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="396">
+    <ShortMessage>Exception is caught when Exception is not thrown</ShortMessage>
+    <LongMessage>Exception is caught when Exception is not thrown in ratpack.session.clientside.internal.DefaultCrypto.decrypt(ByteBuf, ByteBufAllocator)</LongMessage>
+    <Class classname="ratpack.session.clientside.internal.DefaultCrypto" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.DefaultCrypto" start="39" end="119" sourcefile="DefaultCrypto.java" sourcepath="ratpack/session/clientside/internal/DefaultCrypto.java">
+        <Message>At DefaultCrypto.java:[lines 39-119]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.clientside.internal.DefaultCrypto</Message>
+    </Class>
+    <Method classname="ratpack.session.clientside.internal.DefaultCrypto" name="decrypt" signature="(Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBufAllocator;)Lio/netty/buffer/ByteBuf;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.DefaultCrypto" start="87" end="119" startBytecode="0" endBytecode="541" sourcefile="DefaultCrypto.java" sourcepath="ratpack/session/clientside/internal/DefaultCrypto.java"/>
+      <Message>In method ratpack.session.clientside.internal.DefaultCrypto.decrypt(ByteBuf, ByteBufAllocator)</Message>
+    </Method>
+    <SourceLine classname="ratpack.session.clientside.internal.DefaultCrypto" primary="true" start="115" end="115" startBytecode="169" endBytecode="169" sourcefile="DefaultCrypto.java" sourcepath="ratpack/session/clientside/internal/DefaultCrypto.java">
+      <Message>At DefaultCrypto.java:[line 115]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="34e991812ab89c7d5a8a89b153acdda6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ratpack.session.clientside.internal.DefaultSigner(SecretKeySpec) may expose internal representation by storing an externally mutable object into DefaultSigner.secretKeySpec</LongMessage>
+    <Class classname="ratpack.session.clientside.internal.DefaultSigner" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.DefaultSigner" start="32" end="42" sourcefile="DefaultSigner.java" sourcepath="ratpack/session/clientside/internal/DefaultSigner.java">
+        <Message>At DefaultSigner.java:[lines 32-42]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.clientside.internal.DefaultSigner</Message>
+    </Class>
+    <Method classname="ratpack.session.clientside.internal.DefaultSigner" name="&lt;init&gt;" signature="(Ljavax/crypto/spec/SecretKeySpec;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.DefaultSigner" start="32" end="34" startBytecode="0" endBytecode="69" sourcefile="DefaultSigner.java" sourcepath="ratpack/session/clientside/internal/DefaultSigner.java"/>
+      <Message>In method new ratpack.session.clientside.internal.DefaultSigner(SecretKeySpec)</Message>
+    </Method>
+    <Field classname="ratpack.session.clientside.internal.DefaultSigner" name="secretKeySpec" signature="Ljavax/crypto/spec/SecretKeySpec;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.clientside.internal.DefaultSigner" sourcefile="DefaultSigner.java" sourcepath="ratpack/session/clientside/internal/DefaultSigner.java">
+        <Message>In DefaultSigner.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.clientside.internal.DefaultSigner.secretKeySpec</Message>
+    </Field>
+    <LocalVariable name="secretKeySpec" register="1" pc="6" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named secretKeySpec</Message>
+    </LocalVariable>
+    <SourceLine classname="ratpack.session.clientside.internal.DefaultSigner" primary="true" start="33" end="33" startBytecode="6" endBytecode="6" sourcefile="DefaultSigner.java" sourcepath="ratpack/session/clientside/internal/DefaultSigner.java">
+      <Message>At DefaultSigner.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="a1cc49325ef08ce5d0b4bc6e3cb99c38" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ratpack.session.internal.CookieBasedSessionId(Request, Response, SessionIdGenerator, SessionCookieConfig) may expose internal representation by storing an externally mutable object into CookieBasedSessionId.cookieConfig</LongMessage>
+    <Class classname="ratpack.session.internal.CookieBasedSessionId" primary="true">
+      <SourceLine classname="ratpack.session.internal.CookieBasedSessionId" start="42" end="117" sourcefile="CookieBasedSessionId.java" sourcepath="ratpack/session/internal/CookieBasedSessionId.java">
+        <Message>At CookieBasedSessionId.java:[lines 42-117]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.internal.CookieBasedSessionId</Message>
+    </Class>
+    <Method classname="ratpack.session.internal.CookieBasedSessionId" name="&lt;init&gt;" signature="(Lratpack/http/Request;Lratpack/http/Response;Lratpack/session/SessionIdGenerator;Lratpack/session/SessionCookieConfig;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.CookieBasedSessionId" start="42" end="47" startBytecode="0" endBytecode="127" sourcefile="CookieBasedSessionId.java" sourcepath="ratpack/session/internal/CookieBasedSessionId.java"/>
+      <Message>In method new ratpack.session.internal.CookieBasedSessionId(Request, Response, SessionIdGenerator, SessionCookieConfig)</Message>
+    </Method>
+    <Field classname="ratpack.session.internal.CookieBasedSessionId" name="cookieConfig" signature="Lratpack/session/SessionCookieConfig;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.CookieBasedSessionId" sourcefile="CookieBasedSessionId.java" sourcepath="ratpack/session/internal/CookieBasedSessionId.java">
+        <Message>In CookieBasedSessionId.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.internal.CookieBasedSessionId.cookieConfig</Message>
+    </Field>
+    <LocalVariable name="cookieConfig" register="4" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named cookieConfig</Message>
+    </LocalVariable>
+    <SourceLine classname="ratpack.session.internal.CookieBasedSessionId" primary="true" start="46" end="46" startBytecode="22" endBytecode="22" sourcefile="CookieBasedSessionId.java" sourcepath="ratpack/session/internal/CookieBasedSessionId.java">
+      <Message>At CookieBasedSessionId.java:[line 46]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="3a6888df6cc2051c97c549030fcb1120" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new ratpack.session.internal.DefaultSession(SessionId, ByteBufAllocator, SessionStore, Response, SessionSerializer, JavaSessionSerializer) may expose internal representation by storing an externally mutable object into DefaultSession.storeAdapter</LongMessage>
+    <Class classname="ratpack.session.internal.DefaultSession" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession" start="38" end="257" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>At DefaultSession.java:[lines 38-257]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.internal.DefaultSession</Message>
+    </Class>
+    <Method classname="ratpack.session.internal.DefaultSession" name="&lt;init&gt;" signature="(Lratpack/session/SessionId;Lio/netty/buffer/ByteBufAllocator;Lratpack/session/SessionStore;Lratpack/http/Response;Lratpack/session/SessionSerializer;Lratpack/session/JavaSessionSerializer;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession" start="142" end="149" startBytecode="0" endBytecode="195" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java"/>
+      <Message>In method new ratpack.session.internal.DefaultSession(SessionId, ByteBufAllocator, SessionStore, Response, SessionSerializer, JavaSessionSerializer)</Message>
+    </Method>
+    <Field classname="ratpack.session.internal.DefaultSession" name="storeAdapter" signature="Lratpack/session/SessionStore;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>In DefaultSession.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.internal.DefaultSession.storeAdapter</Message>
+    </Field>
+    <LocalVariable name="storeAdapter" register="3" pc="36" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named storeAdapter</Message>
+    </LocalVariable>
+    <SourceLine classname="ratpack.session.internal.DefaultSession" primary="true" start="145" end="145" startBytecode="36" endBytecode="36" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+      <Message>At DefaultSession.java:[line 145]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_PREVENT_EXT_OBJ_OVERWRITE" priority="3" rank="19" abbrev="Se" category="BAD_PRACTICE" instanceHash="86e7389bf070a5662ffd8ae086c386d8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Prevent overwriting of externalizable objects</ShortMessage>
+    <LongMessage>Any caller can reset the value of the object by using the readExternal() method.</LongMessage>
+    <Class classname="ratpack.session.internal.DefaultSession$SerializedForm" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" start="60" end="139" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>At DefaultSession.java:[lines 60-139]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.internal.DefaultSession$SerializedForm</Message>
+    </Class>
+    <Method classname="ratpack.session.internal.DefaultSession$SerializedForm" name="readExternal" signature="(Ljava/io/ObjectInput;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" start="112" end="139" startBytecode="0" endBytecode="526" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java"/>
+      <Message>In method ratpack.session.internal.DefaultSession$SerializedForm.readExternal(ObjectInput)</Message>
+    </Method>
+    <Field classname="ratpack.session.internal.DefaultSession$SerializedForm" name="entries" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>In DefaultSession.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.internal.DefaultSession$SerializedForm.entries</Message>
+    </Field>
+    <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" primary="true" start="117" end="117" startBytecode="30" endBytecode="30" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+      <Message>At DefaultSession.java:[line 117]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE" instanceHash="fb021677c7b0e80ff4706d62233d3b23" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Field not initialized in constructor but dereferenced without null check</ShortMessage>
+    <LongMessage>DefaultSession$SerializedForm.entries not initialized in constructor and dereferenced in ratpack.session.internal.DefaultSession$SerializedForm.writeExternal(ObjectOutput)</LongMessage>
+    <Class classname="ratpack.session.internal.DefaultSession$SerializedForm" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" start="60" end="139" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>At DefaultSession.java:[lines 60-139]</Message>
+      </SourceLine>
+      <Message>In class ratpack.session.internal.DefaultSession$SerializedForm</Message>
+    </Class>
+    <Field classname="ratpack.session.internal.DefaultSession$SerializedForm" name="entries" signature="Ljava/util/Map;" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+        <Message>In DefaultSession.java</Message>
+      </SourceLine>
+      <Message>Field ratpack.session.internal.DefaultSession$SerializedForm.entries</Message>
+    </Field>
+    <Method classname="ratpack.session.internal.DefaultSession$SerializedForm" name="writeExternal" signature="(Ljava/io/ObjectOutput;)V" isStatic="false" primary="true">
+      <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" start="81" end="108" startBytecode="0" endBytecode="456" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java"/>
+      <Message>In method ratpack.session.internal.DefaultSession$SerializedForm.writeExternal(ObjectOutput)</Message>
+    </Method>
+    <SourceLine classname="ratpack.session.internal.DefaultSession$SerializedForm" primary="true" start="83" end="83" startBytecode="12" endBytecode="12" sourcefile="DefaultSession.java" sourcepath="ratpack/session/internal/DefaultSession.java">
+      <Message>At DefaultSession.java:[line 83]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" abbrev="UwF" category="STYLE">
+    <ShortDescription>Field not initialized in constructor but dereferenced without null check</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never initialized within any constructor, and is therefore could be null after
+the object is constructed. Elsewhere, it is loaded and dereferenced without a null check.
+This could be a either an error or a questionable design, since
+it means a null pointer exception will be generated if that field is dereferenced
+before being initialized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="REC_CATCH_EXCEPTION" abbrev="REC" category="STYLE" cweid="396">
+    <ShortDescription>Exception is caught when Exception is not thrown</ShortDescription>
+    <Details><![CDATA[
+  
+  <p>
+  This method uses a try-catch block that catches Exception objects, but Exception is not
+  thrown within the try block, and RuntimeException is not explicitly caught.  It is a common bug pattern to
+  say try { ... } catch (Exception e) { something } as a shorthand for catching a number of types of exception
+  each of whose catch blocks is identical, but this construct also accidentally catches RuntimeException as well,
+  masking potential bugs.
+  </p>
+  <p>A better approach is to either explicitly catch the specific exceptions that are thrown,
+  or to explicitly catch RuntimeException exception, rethrow it, and then catch all non-Runtime Exceptions, as shown below:</p>
+<pre><code>try {
+    ...
+} catch (RuntimeException e) {
+    throw e;
+} catch (Exception e) {
+    ... deal with all non-runtime exceptions ...
+}
+</code></pre>
+  
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_PREVENT_EXT_OBJ_OVERWRITE" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Prevent overwriting of externalizable objects</ShortDescription>
+    <Details><![CDATA[
+      
+  <p>The <code>readExternal()</code> method must be declared as public and is not protected from malicious callers, so the code permits any caller to reset the value of the object at any time.</p>
+  <p>To prevent overwriting of externalizable objects, you can use a Boolean flag that is set after the instance fields have been populated. You can also protect against race conditions by synchronizing on a private lock object.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="REC">
+    <Description>RuntimeException capture</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="UwF">
+    <Description>Unwritten field</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="50">
+    <MissingClass>com.google.common.base.Function</MissingClass>
+    <MissingClass>com.google.common.base.Predicate</MissingClass>
+    <MissingClass>com.google.common.cache.Cache</MissingClass>
+    <MissingClass>com.google.common.cache.CacheBuilder</MissingClass>
+    <MissingClass>com.google.common.cache.RemovalListener</MissingClass>
+    <MissingClass>com.google.common.cache.RemovalNotification</MissingClass>
+    <MissingClass>com.google.common.collect.FluentIterable</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableList</MissingClass>
+    <MissingClass>com.google.common.collect.ImmutableSortedMap</MissingClass>
+    <MissingClass>com.google.common.collect.Iterables</MissingClass>
+    <MissingClass>com.google.common.collect.Ordering</MissingClass>
+    <MissingClass>com.google.inject.Binder</MissingClass>
+    <MissingClass>com.google.inject.Key</MissingClass>
+    <MissingClass>com.google.inject.Provider</MissingClass>
+    <MissingClass>com.google.inject.Scope</MissingClass>
+    <MissingClass>com.google.inject.Scopes</MissingClass>
+    <MissingClass>com.google.inject.TypeLiteral</MissingClass>
+    <MissingClass>com.google.inject.binder.AnnotatedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.LinkedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.binder.ScopedBindingBuilder</MissingClass>
+    <MissingClass>com.google.inject.name.Named</MissingClass>
+    <MissingClass>com.google.inject.name.Names</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBuf</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufAllocator</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufInputStream</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufOutputStream</MissingClass>
+    <MissingClass>io.netty.buffer.ByteBufUtil</MissingClass>
+    <MissingClass>io.netty.buffer.Unpooled</MissingClass>
+    <MissingClass>io.netty.handler.codec.base64.Base64</MissingClass>
+    <MissingClass>io.netty.handler.codec.base64.Base64Dialect</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.cookie.Cookie</MissingClass>
+    <MissingClass>io.netty.handler.codec.http.cookie.DefaultCookie</MissingClass>
+    <MissingClass>io.netty.util.AsciiString</MissingClass>
+    <MissingClass>io.netty.util.CharsetUtil</MissingClass>
+    <MissingClass>javax.inject.Provider</MissingClass>
+    <MissingClass>org.slf4j.Logger</MissingClass>
+    <MissingClass>org.slf4j.LoggerFactory</MissingClass>
+    <MissingClass>ratpack.exec.Operation</MissingClass>
+    <MissingClass>ratpack.exec.Promise</MissingClass>
+    <MissingClass>ratpack.func.Action</MissingClass>
+    <MissingClass>ratpack.func.Block</MissingClass>
+    <MissingClass>ratpack.func.Factory</MissingClass>
+    <MissingClass>ratpack.func.Function</MissingClass>
+    <MissingClass>ratpack.guice.ConfigurableModule</MissingClass>
+    <MissingClass>ratpack.http.Request</MissingClass>
+    <MissingClass>ratpack.http.Response</MissingClass>
+    <MissingClass>ratpack.server.Service</MissingClass>
+    <MissingClass>ratpack.server.StopEvent</MissingClass>
+    <MissingClass>ratpack.util.Exceptions</MissingClass>
+    <MissingClass>ratpack.util.Types</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:33:00 +0900" total_classes="31" referenced_classes="109" total_bugs="8" total_size="1026" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="1.55" clock_seconds="1.86" peak_mbytes="242.65" alloc_mbytes="4078.00" gc_seconds="0.03" priority_3="3" priority_2="5">
+    <FileStats path="ratpack/session/JavaSessionSerializer.java" bugCount="0" size="1"/>
+    <FileStats path="ratpack/session/Session.java" bugCount="0" size="81"/>
+    <FileStats path="ratpack/session/SessionCookieConfig.java" bugCount="0" size="60"/>
+    <FileStats path="ratpack/session/SessionData.java" bugCount="0" size="67"/>
+    <FileStats path="ratpack/session/SessionId.java" bugCount="0" size="3"/>
+    <FileStats path="ratpack/session/SessionIdGenerator.java" bugCount="0" size="2"/>
+    <FileStats path="ratpack/session/SessionKey.java" bugCount="0" size="16"/>
+    <FileStats path="ratpack/session/SessionModule.java" bugCount="0" size="40"/>
+    <FileStats path="ratpack/session/SessionSerializer.java" bugCount="0" size="3"/>
+    <FileStats path="ratpack/session/SessionStore.java" bugCount="0" size="5"/>
+    <FileStats path="ratpack/session/clientside/ClientSideSessionConfig.java" bugCount="0" size="56"/>
+    <FileStats path="ratpack/session/clientside/ClientSideSessionModule.java" bugCount="0" size="13"/>
+    <FileStats path="ratpack/session/clientside/Crypto.java" bugCount="0" size="3"/>
+    <FileStats path="ratpack/session/clientside/Signer.java" bugCount="0" size="2"/>
+    <FileStats path="ratpack/session/clientside/internal/ClientSideSessionStore.java" bugCount="2" size="207" bugHash="693c556e61b2002bd234a30e405fc384"/>
+    <FileStats path="ratpack/session/clientside/internal/DefaultCrypto.java" bugCount="1" size="62" bugHash="b637f17adf6bd670042240f60188d7e6"/>
+    <FileStats path="ratpack/session/clientside/internal/DefaultSigner.java" bugCount="1" size="13" bugHash="09a956d50328fa9363f8a5ca90d95c5a"/>
+    <FileStats path="ratpack/session/clientside/internal/NoCrypto.java" bugCount="0" size="13"/>
+    <FileStats path="ratpack/session/internal/CookieBasedSessionId.java" bugCount="1" size="59" bugHash="e98fc66d0e4e9db0f787278abb6f88a9"/>
+    <FileStats path="ratpack/session/internal/DefaultSession.java" bugCount="3" size="232" bugHash="9677736e4d9d841c618ffd7c2c92d004"/>
+    <FileStats path="ratpack/session/internal/DefaultSessionIdGenerator.java" bugCount="0" size="7"/>
+    <FileStats path="ratpack/session/internal/DefaultSessionKey.java" bugCount="0" size="25"/>
+    <FileStats path="ratpack/session/internal/JavaBuiltinSessionSerializer.java" bugCount="0" size="15"/>
+    <FileStats path="ratpack/session/internal/LocalMemorySessionStore.java" bugCount="0" size="41"/>
+    <PackageStats package="ratpack.session" total_bugs="0" total_types="11" total_size="278">
+      <ClassStats class="ratpack.session.JavaSessionSerializer" sourceFile="JavaSessionSerializer.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="ratpack.session.Session" sourceFile="Session.java" interface="true" size="81" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionCookieConfig" sourceFile="SessionCookieConfig.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionData" sourceFile="SessionData.java" interface="true" size="67" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionId" sourceFile="SessionId.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionIdGenerator" sourceFile="SessionIdGenerator.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionKey" sourceFile="SessionKey.java" interface="true" size="16" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionModule" sourceFile="SessionModule.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionModule$1" sourceFile="SessionModule.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionSerializer" sourceFile="SessionSerializer.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ratpack.session.SessionStore" sourceFile="SessionStore.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ratpack.session.clientside" total_bugs="0" total_types="4" total_size="74">
+      <ClassStats class="ratpack.session.clientside.ClientSideSessionConfig" sourceFile="ClientSideSessionConfig.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="ratpack.session.clientside.ClientSideSessionModule" sourceFile="ClientSideSessionModule.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="ratpack.session.clientside.Crypto" sourceFile="Crypto.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="ratpack.session.clientside.Signer" sourceFile="Signer.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ratpack.session.clientside.internal" total_bugs="4" total_types="6" total_size="295" priority_3="1" priority_2="3">
+      <ClassStats class="ratpack.session.clientside.internal.ClientSideSessionStore" sourceFile="ClientSideSessionStore.java" interface="false" size="177" bugs="2" priority_2="2"/>
+      <ClassStats class="ratpack.session.clientside.internal.ClientSideSessionStore$CookieOrdering" sourceFile="ClientSideSessionStore.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ratpack.session.clientside.internal.ClientSideSessionStore$CookieStorage" sourceFile="ClientSideSessionStore.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ratpack.session.clientside.internal.DefaultCrypto" sourceFile="DefaultCrypto.java" interface="false" size="62" bugs="1" priority_3="1"/>
+      <ClassStats class="ratpack.session.clientside.internal.DefaultSigner" sourceFile="DefaultSigner.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="ratpack.session.clientside.internal.NoCrypto" sourceFile="NoCrypto.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="ratpack.session.internal" total_bugs="4" total_types="10" total_size="379" priority_3="2" priority_2="2">
+      <ClassStats class="ratpack.session.internal.CookieBasedSessionId" sourceFile="CookieBasedSessionId.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="ratpack.session.internal.DefaultSession" sourceFile="DefaultSession.java" interface="false" size="103" bugs="1" priority_2="1"/>
+      <ClassStats class="ratpack.session.internal.DefaultSession$1" sourceFile="DefaultSession.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.DefaultSession$Data" sourceFile="DefaultSession.java" interface="false" size="56" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.DefaultSession$SerializedForm" sourceFile="DefaultSession.java" interface="false" size="61" bugs="2" priority_3="2"/>
+      <ClassStats class="ratpack.session.internal.DefaultSession$State" sourceFile="DefaultSession.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.DefaultSessionIdGenerator" sourceFile="DefaultSessionIdGenerator.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.DefaultSessionKey" sourceFile="DefaultSessionKey.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.JavaBuiltinSessionSerializer" sourceFile="JavaBuiltinSessionSerializer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="ratpack.session.internal.LocalMemorySessionStore" sourceFile="LocalMemorySessionStore.java" interface="false" size="41" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="254" invocations="798" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="14107" standardDeviationMicrosecondsPerInvocation="825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="80" invocations="109" avgMicrosecondsPerInvocation="735" maxMicrosecondsPerInvocation="10323" standardDeviationMicrosecondsPerInvocation="1510"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="77" invocations="246" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="9023" standardDeviationMicrosecondsPerInvocation="1005"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="63" invocations="109" avgMicrosecondsPerInvocation="583" maxMicrosecondsPerInvocation="6464" standardDeviationMicrosecondsPerInvocation="1053"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="53" invocations="245" avgMicrosecondsPerInvocation="216" maxMicrosecondsPerInvocation="3568" standardDeviationMicrosecondsPerInvocation="425"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="51" invocations="437" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="1957" standardDeviationMicrosecondsPerInvocation="204"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="50" invocations="246" avgMicrosecondsPerInvocation="205" maxMicrosecondsPerInvocation="8643" standardDeviationMicrosecondsPerInvocation="630"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="43" invocations="246" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="6338" standardDeviationMicrosecondsPerInvocation="519"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="41" invocations="246" avgMicrosecondsPerInvocation="169" maxMicrosecondsPerInvocation="4072" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="39" invocations="246" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="8168" standardDeviationMicrosecondsPerInvocation="537"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="34" invocations="109" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="25898" standardDeviationMicrosecondsPerInvocation="2467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="32" invocations="273" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="14668" standardDeviationMicrosecondsPerInvocation="891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="31" invocations="808" avgMicrosecondsPerInvocation="39" maxMicrosecondsPerInvocation="2023" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="198" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="12984" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="28" invocations="197" avgMicrosecondsPerInvocation="146" maxMicrosecondsPerInvocation="1912" standardDeviationMicrosecondsPerInvocation="249"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="109" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="5786" standardDeviationMicrosecondsPerInvocation="623"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ConstructorThrow" totalMilliseconds="21" invocations="31" avgMicrosecondsPerInvocation="703" maxMicrosecondsPerInvocation="3038" standardDeviationMicrosecondsPerInvocation="806"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="21" invocations="109" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="2093" standardDeviationMicrosecondsPerInvocation="394"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="20" invocations="691" avgMicrosecondsPerInvocation="29" maxMicrosecondsPerInvocation="575" standardDeviationMicrosecondsPerInvocation="60"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="18" invocations="109" avgMicrosecondsPerInvocation="165" maxMicrosecondsPerInvocation="1497" standardDeviationMicrosecondsPerInvocation="267"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="16" invocations="31" avgMicrosecondsPerInvocation="543" maxMicrosecondsPerInvocation="12225" standardDeviationMicrosecondsPerInvocation="2141"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="16" invocations="109" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="1358" standardDeviationMicrosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="109" avgMicrosecondsPerInvocation="147" maxMicrosecondsPerInvocation="5569" standardDeviationMicrosecondsPerInvocation="547"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="15" invocations="109" avgMicrosecondsPerInvocation="138" maxMicrosecondsPerInvocation="2957" standardDeviationMicrosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="14" invocations="31" avgMicrosecondsPerInvocation="473" maxMicrosecondsPerInvocation="3619" standardDeviationMicrosecondsPerInvocation="839"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CheckRelaxingNullnessAnnotation" totalMilliseconds="13" invocations="31" avgMicrosecondsPerInvocation="425" maxMicrosecondsPerInvocation="3806" standardDeviationMicrosecondsPerInvocation="729"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="12" invocations="3503" avgMicrosecondsPerInvocation="3" maxMicrosecondsPerInvocation="762" standardDeviationMicrosecondsPerInvocation="21"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="12" invocations="246" avgMicrosecondsPerInvocation="49" maxMicrosecondsPerInvocation="1148" standardDeviationMicrosecondsPerInvocation="116"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

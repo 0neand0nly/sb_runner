@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.8.1" sequence="0" timestamp="1702013347887" analysisTimestamp="1702023855634" release="">
+  <Project projectName="">
+    <Jar>vul_jar\\xwiki-rendering-syntax-annotatedxhtml-14.2.1.jar</Jar>
+  </Project>
+  <Errors errors="0" missingClasses="23">
+    <MissingClass>javax.inject.Provider</MissingClass>
+    <MissingClass>org.xwiki.component.phase.Initializable</MissingClass>
+    <MissingClass>org.xwiki.component.phase.InitializationException</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.parser.xhtml.wikimodel.XHTMLXWikiGeneratorListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.AbstractBlockRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.AbstractPrintRendererFactory</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.ParametersPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.xhtml.XHTMLChainingRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.xhtml.image.XHTMLImageRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.renderer.xhtml.link.XHTMLLinkRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.internal.xhtml.XHTML10SyntaxProvider</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.MetaData</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.BlockStateChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.ChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.EmptyBlockChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.ListenerChain</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.chaining.MetaDataStateChainingListener</MissingClass>
+    <MissingClass>org.xwiki.rendering.listener.reference.ResourceReference</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.AbstractChainingPrintRenderer</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.printer.XHTMLWikiPrinter</MissingClass>
+    <MissingClass>org.xwiki.rendering.renderer.reference.ResourceReferenceSerializer</MissingClass>
+    <MissingClass>org.xwiki.rendering.syntax.Syntax</MissingClass>
+    <MissingClass>org.xwiki.rendering.syntax.SyntaxType</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 8 Dec 2023 14:29:07 +0900" total_classes="9" referenced_classes="33" total_bugs="0" total_size="147" num_packages="4" java_version="17.0.9" vm_version="17.0.9+11-LTS-201" cpu_seconds="0.69" clock_seconds="0.99" peak_mbytes="221.57" alloc_mbytes="4078.00" gc_seconds="0.01">
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLBlockRenderer.java" bugCount="0" size="6"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLChainingRenderer.java" bugCount="0" size="23"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLRenderer.java" bugCount="0" size="14"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/AnnotatedXHTMLRendererFactory.java" bugCount="0" size="5"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLMacroRenderer.java" bugCount="0" size="25"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/XHTMLMetaDataRenderer.java" bugCount="0" size="19"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/image/AnnotatedXHTMLImageRenderer.java" bugCount="0" size="19"/>
+    <FileStats path="org/xwiki/rendering/internal/renderer/xhtml/link/AnnotatedXHTMLLinkRenderer.java" bugCount="0" size="23"/>
+    <FileStats path="org/xwiki/rendering/internal/xhtml/AnnotatedXHTML10SyntaxProvider.java" bugCount="0" size="13"/>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml" total_bugs="0" total_types="6" total_size="92">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLBlockRenderer" sourceFile="AnnotatedXHTMLBlockRenderer.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLChainingRenderer" sourceFile="AnnotatedXHTMLChainingRenderer.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLRenderer" sourceFile="AnnotatedXHTMLRenderer.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.AnnotatedXHTMLRendererFactory" sourceFile="AnnotatedXHTMLRendererFactory.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLMacroRenderer" sourceFile="XHTMLMacroRenderer.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.XHTMLMetaDataRenderer" sourceFile="XHTMLMetaDataRenderer.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml.image" total_bugs="0" total_types="1" total_size="19">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.image.AnnotatedXHTMLImageRenderer" sourceFile="AnnotatedXHTMLImageRenderer.java" interface="false" size="19" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.renderer.xhtml.link" total_bugs="0" total_types="1" total_size="23">
+      <ClassStats class="org.xwiki.rendering.internal.renderer.xhtml.link.AnnotatedXHTMLLinkRenderer" sourceFile="AnnotatedXHTMLLinkRenderer.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.xwiki.rendering.internal.xhtml" total_bugs="0" total_types="1" total_size="13">
+      <ClassStats class="org.xwiki.rendering.internal.xhtml.AnnotatedXHTML10SyntaxProvider" sourceFile="AnnotatedXHTML10SyntaxProvider.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="197" invocations="554" avgMicrosecondsPerInvocation="356" maxMicrosecondsPerInvocation="11410" standardDeviationMicrosecondsPerInvocation="894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="48" invocations="33" avgMicrosecondsPerInvocation="1466" maxMicrosecondsPerInvocation="8644" standardDeviationMicrosecondsPerInvocation="2057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="34" invocations="163" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="1947" standardDeviationMicrosecondsPerInvocation="317"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="31" invocations="33" avgMicrosecondsPerInvocation="969" maxMicrosecondsPerInvocation="4142" standardDeviationMicrosecondsPerInvocation="1209"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="30" invocations="73" avgMicrosecondsPerInvocation="415" maxMicrosecondsPerInvocation="18697" standardDeviationMicrosecondsPerInvocation="2176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="26" invocations="559" avgMicrosecondsPerInvocation="47" maxMicrosecondsPerInvocation="2475" standardDeviationMicrosecondsPerInvocation="133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="21" invocations="33" avgMicrosecondsPerInvocation="640" maxMicrosecondsPerInvocation="16214" standardDeviationMicrosecondsPerInvocation="2762"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="18" invocations="487" avgMicrosecondsPerInvocation="37" maxMicrosecondsPerInvocation="668" standardDeviationMicrosecondsPerInvocation="72"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="18" invocations="33" avgMicrosecondsPerInvocation="545" maxMicrosecondsPerInvocation="4780" standardDeviationMicrosecondsPerInvocation="918"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="17" invocations="36" avgMicrosecondsPerInvocation="498" maxMicrosecondsPerInvocation="13670" standardDeviationMicrosecondsPerInvocation="2232"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="17" invocations="36" avgMicrosecondsPerInvocation="495" maxMicrosecondsPerInvocation="7125" standardDeviationMicrosecondsPerInvocation="1179"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="17" invocations="35" avgMicrosecondsPerInvocation="498" maxMicrosecondsPerInvocation="8090" standardDeviationMicrosecondsPerInvocation="1337"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="33" avgMicrosecondsPerInvocation="492" maxMicrosecondsPerInvocation="3250" standardDeviationMicrosecondsPerInvocation="759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="15" invocations="36" avgMicrosecondsPerInvocation="441" maxMicrosecondsPerInvocation="7023" standardDeviationMicrosecondsPerInvocation="1205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="13" invocations="36" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="6922" standardDeviationMicrosecondsPerInvocation="1131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="12" invocations="33" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="5255" standardDeviationMicrosecondsPerInvocation="923"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="12" invocations="36" avgMicrosecondsPerInvocation="343" maxMicrosecondsPerInvocation="6362" standardDeviationMicrosecondsPerInvocation="1024"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="11" invocations="35" avgMicrosecondsPerInvocation="329" maxMicrosecondsPerInvocation="2819" standardDeviationMicrosecondsPerInvocation="599"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="11" invocations="33" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="5354" standardDeviationMicrosecondsPerInvocation="919"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
